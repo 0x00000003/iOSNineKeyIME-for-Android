@@ -1,0 +1,5 @@
+{
+  "pass": false,
+  "scope": "instrumentation assertions failed; no stale result consumed",
+  "tested_apk_sha256": "8cc7f259e15fdb68e6a1ab3ed4d64fad1c9ea82a49131f11e404c094e6b2fc40"
+}

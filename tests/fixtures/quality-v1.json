@@ -1,0 +1,613 @@
+{
+  "version": "quality-v1",
+  "seed": 1,
+  "scope": "fixed synthetic acceptance corpus; frozen before any measurements; rank-only reports, no candidate dumps",
+  "thresholds": {
+    "word_top5_min": 95,
+    "sentence_top5_min": 16
+  },
+  "words": [
+    {
+      "id": "w001",
+      "expected": "你好",
+      "pinyin": "nihao"
+    },
+    {
+      "id": "w002",
+      "expected": "世界",
+      "pinyin": "shijie"
+    },
+    {
+      "id": "w003",
+      "expected": "中国",
+      "pinyin": "zhongguo"
+    },
+    {
+      "id": "w004",
+      "expected": "北京",
+      "pinyin": "beijing"
+    },
+    {
+      "id": "w005",
+      "expected": "上海",
+      "pinyin": "shanghai"
+    },
+    {
+      "id": "w006",
+      "expected": "广州",
+      "pinyin": "guangzhou"
+    },
+    {
+      "id": "w007",
+      "expected": "深圳",
+      "pinyin": "shenzhen"
+    },
+    {
+      "id": "w008",
+      "expected": "杭州",
+      "pinyin": "hangzhou"
+    },
+    {
+      "id": "w009",
+      "expected": "南京",
+      "pinyin": "nanjing"
+    },
+    {
+      "id": "w010",
+      "expected": "成都",
+      "pinyin": "chengdu"
+    },
+    {
+      "id": "w011",
+      "expected": "重庆",
+      "pinyin": "chongqing"
+    },
+    {
+      "id": "w012",
+      "expected": "武汉",
+      "pinyin": "wuhan"
+    },
+    {
+      "id": "w013",
+      "expected": "西安",
+      "pinyin": "xian"
+    },
+    {
+      "id": "w014",
+      "expected": "天津",
+      "pinyin": "tianjin"
+    },
+    {
+      "id": "w015",
+      "expected": "长沙",
+      "pinyin": "changsha"
+    },
+    {
+      "id": "w016",
+      "expected": "朋友",
+      "pinyin": "pengyou"
+    },
+    {
+      "id": "w017",
+      "expected": "家人",
+      "pinyin": "jiaren"
+    },
+    {
+      "id": "w018",
+      "expected": "孩子",
+      "pinyin": "haizi"
+    },
+    {
+      "id": "w019",
+      "expected": "父母",
+      "pinyin": "fumu"
+    },
+    {
+      "id": "w020",
+      "expected": "老师",
+      "pinyin": "laoshi"
+    },
+    {
+      "id": "w021",
+      "expected": "学生",
+      "pinyin": "xuesheng"
+    },
+    {
+      "id": "w022",
+      "expected": "学校",
+      "pinyin": "xuexiao"
+    },
+    {
+      "id": "w023",
+      "expected": "公司",
+      "pinyin": "gongsi"
+    },
+    {
+      "id": "w024",
+      "expected": "工作",
+      "pinyin": "gongzuo"
+    },
+    {
+      "id": "w025",
+      "expected": "生活",
+      "pinyin": "shenghuo"
+    },
+    {
+      "id": "w026",
+      "expected": "学习",
+      "pinyin": "xuexi"
+    },
+    {
+      "id": "w027",
+      "expected": "时间",
+      "pinyin": "shijian"
+    },
+    {
+      "id": "w028",
+      "expected": "今天",
+      "pinyin": "jintian"
+    },
+    {
+      "id": "w029",
+      "expected": "明天",
+      "pinyin": "mingtian"
+    },
+    {
+      "id": "w030",
+      "expected": "昨天",
+      "pinyin": "zuotian"
+    },
+    {
+      "id": "w031",
+      "expected": "早上",
+      "pinyin": "zaoshang"
+    },
+    {
+      "id": "w032",
+      "expected": "晚上",
+      "pinyin": "wanshang"
+    },
+    {
+      "id": "w033",
+      "expected": "天气",
+      "pinyin": "tianqi"
+    },
+    {
+      "id": "w034",
+      "expected": "太阳",
+      "pinyin": "taiyang"
+    },
+    {
+      "id": "w035",
+      "expected": "月亮",
+      "pinyin": "yueliang"
+    },
+    {
+      "id": "w036",
+      "expected": "星星",
+      "pinyin": "xingxing"
+    },
+    {
+      "id": "w037",
+      "expected": "下雨",
+      "pinyin": "xiayu"
+    },
+    {
+      "id": "w038",
+      "expected": "春天",
+      "pinyin": "chuntian"
+    },
+    {
+      "id": "w039",
+      "expected": "夏天",
+      "pinyin": "xiatian"
+    },
+    {
+      "id": "w040",
+      "expected": "秋天",
+      "pinyin": "qiutian"
+    },
+    {
+      "id": "w041",
+      "expected": "冬天",
+      "pinyin": "dongtian"
+    },
+    {
+      "id": "w042",
+      "expected": "电脑",
+      "pinyin": "diannao"
+    },
+    {
+      "id": "w043",
+      "expected": "手机",
+      "pinyin": "shouji"
+    },
+    {
+      "id": "w044",
+      "expected": "键盘",
+      "pinyin": "jianpan"
+    },
+    {
+      "id": "w045",
+      "expected": "屏幕",
+      "pinyin": "pingmu"
+    },
+    {
+      "id": "w046",
+      "expected": "软件",
+      "pinyin": "ruanjian"
+    },
+    {
+      "id": "w047",
+      "expected": "系统",
+      "pinyin": "xitong"
+    },
+    {
+      "id": "w048",
+      "expected": "网络",
+      "pinyin": "wangluo"
+    },
+    {
+      "id": "w049",
+      "expected": "数据",
+      "pinyin": "shuju"
+    },
+    {
+      "id": "w050",
+      "expected": "安全",
+      "pinyin": "anquan"
+    },
+    {
+      "id": "w051",
+      "expected": "城市",
+      "pinyin": "chengshi"
+    },
+    {
+      "id": "w052",
+      "expected": "道路",
+      "pinyin": "daolu"
+    },
+    {
+      "id": "w053",
+      "expected": "汽车",
+      "pinyin": "qiche"
+    },
+    {
+      "id": "w054",
+      "expected": "火车",
+      "pinyin": "huoche"
+    },
+    {
+      "id": "w055",
+      "expected": "飞机",
+      "pinyin": "feiji"
+    },
+    {
+      "id": "w056",
+      "expected": "地铁",
+      "pinyin": "ditie"
+    },
+    {
+      "id": "w057",
+      "expected": "公交",
+      "pinyin": "gongjiao"
+    },
+    {
+      "id": "w058",
+      "expected": "车站",
+      "pinyin": "chezhan"
+    },
+    {
+      "id": "w059",
+      "expected": "机场",
+      "pinyin": "jichang"
+    },
+    {
+      "id": "w060",
+      "expected": "医院",
+      "pinyin": "yiyuan"
+    },
+    {
+      "id": "w061",
+      "expected": "医生",
+      "pinyin": "yisheng"
+    },
+    {
+      "id": "w062",
+      "expected": "健康",
+      "pinyin": "jiankang"
+    },
+    {
+      "id": "w063",
+      "expected": "运动",
+      "pinyin": "yundong"
+    },
+    {
+      "id": "w064",
+      "expected": "跑步",
+      "pinyin": "paobu"
+    },
+    {
+      "id": "w065",
+      "expected": "游泳",
+      "pinyin": "youyong"
+    },
+    {
+      "id": "w066",
+      "expected": "音乐",
+      "pinyin": "yinyue"
+    },
+    {
+      "id": "w067",
+      "expected": "电影",
+      "pinyin": "dianying"
+    },
+    {
+      "id": "w068",
+      "expected": "故事",
+      "pinyin": "gushi"
+    },
+    {
+      "id": "w069",
+      "expected": "小说",
+      "pinyin": "xiaoshuo"
+    },
+    {
+      "id": "w070",
+      "expected": "历史",
+      "pinyin": "lishi"
+    },
+    {
+      "id": "w071",
+      "expected": "科学",
+      "pinyin": "kexue"
+    },
+    {
+      "id": "w072",
+      "expected": "文化",
+      "pinyin": "wenhua"
+    },
+    {
+      "id": "w073",
+      "expected": "语言",
+      "pinyin": "yuyan"
+    },
+    {
+      "id": "w074",
+      "expected": "文字",
+      "pinyin": "wenzi"
+    },
+    {
+      "id": "w075",
+      "expected": "问题",
+      "pinyin": "wenti"
+    },
+    {
+      "id": "w076",
+      "expected": "答案",
+      "pinyin": "daan"
+    },
+    {
+      "id": "w077",
+      "expected": "方法",
+      "pinyin": "fangfa"
+    },
+    {
+      "id": "w078",
+      "expected": "计划",
+      "pinyin": "jihua"
+    },
+    {
+      "id": "w079",
+      "expected": "目标",
+      "pinyin": "mubiao"
+    },
+    {
+      "id": "w080",
+      "expected": "结果",
+      "pinyin": "jieguo"
+    },
+    {
+      "id": "w081",
+      "expected": "开始",
+      "pinyin": "kaishi"
+    },
+    {
+      "id": "w082",
+      "expected": "结束",
+      "pinyin": "jieshu"
+    },
+    {
+      "id": "w083",
+      "expected": "成功",
+      "pinyin": "chenggong"
+    },
+    {
+      "id": "w084",
+      "expected": "失败",
+      "pinyin": "shibai"
+    },
+    {
+      "id": "w085",
+      "expected": "快乐",
+      "pinyin": "kuaile"
+    },
+    {
+      "id": "w086",
+      "expected": "幸福",
+      "pinyin": "xingfu"
+    },
+    {
+      "id": "w087",
+      "expected": "希望",
+      "pinyin": "xiwang"
+    },
+    {
+      "id": "w088",
+      "expected": "梦想",
+      "pinyin": "mengxiang"
+    },
+    {
+      "id": "w089",
+      "expected": "勇气",
+      "pinyin": "yongqi"
+    },
+    {
+      "id": "w090",
+      "expected": "力量",
+      "pinyin": "liliang"
+    },
+    {
+      "id": "w091",
+      "expected": "漂亮",
+      "pinyin": "piaoliang"
+    },
+    {
+      "id": "w092",
+      "expected": "美丽",
+      "pinyin": "meili"
+    },
+    {
+      "id": "w093",
+      "expected": "简单",
+      "pinyin": "jiandan"
+    },
+    {
+      "id": "w094",
+      "expected": "复杂",
+      "pinyin": "fuza"
+    },
+    {
+      "id": "w095",
+      "expected": "重要",
+      "pinyin": "zhongyao"
+    },
+    {
+      "id": "w096",
+      "expected": "特别",
+      "pinyin": "tebie"
+    },
+    {
+      "id": "w097",
+      "expected": "喜欢",
+      "pinyin": "xihuan"
+    },
+    {
+      "id": "w098",
+      "expected": "知道",
+      "pinyin": "zhidao"
+    },
+    {
+      "id": "w099",
+      "expected": "谢谢",
+      "pinyin": "xiexie"
+    },
+    {
+      "id": "w100",
+      "expected": "再见",
+      "pinyin": "zaijian"
+    }
+  ],
+  "sentences": [
+    {
+      "id": "s001",
+      "expected": "今天天气很好",
+      "pinyin": "jintiantianqihenhao"
+    },
+    {
+      "id": "s002",
+      "expected": "我们一起去公园",
+      "pinyin": "womenyiqiqugongyuan"
+    },
+    {
+      "id": "s003",
+      "expected": "我喜欢学习中文",
+      "pinyin": "woxihuanxuexizhongwen"
+    },
+    {
+      "id": "s004",
+      "expected": "明天早上见",
+      "pinyin": "mingtianzaoshangjian"
+    },
+    {
+      "id": "s005",
+      "expected": "请问现在几点",
+      "pinyin": "qingwenxianzaijidian"
+    },
+    {
+      "id": "s006",
+      "expected": "这个问题很重要",
+      "pinyin": "zhegewentihenzhongyao"
+    },
+    {
+      "id": "s007",
+      "expected": "他正在认真工作",
+      "pinyin": "tazhengzairenzhengongzuo"
+    },
+    {
+      "id": "s008",
+      "expected": "我们需要一个计划",
+      "pinyin": "womenxuyaoyigejihua"
+    },
+    {
+      "id": "s009",
+      "expected": "孩子们在学校学习",
+      "pinyin": "haizimenzaixuexiaoxuexi"
+    },
+    {
+      "id": "s010",
+      "expected": "希望大家身体健康",
+      "pinyin": "xiwangdajiashentijiankang"
+    },
+    {
+      "id": "s011",
+      "expected": "周末一起看电影",
+      "pinyin": "zhoumoyiqikandianying"
+    },
+    {
+      "id": "s012",
+      "expected": "这是一段美好的回忆",
+      "pinyin": "zheshiyiduanmeihaodehuiyi"
+    },
+    {
+      "id": "s013",
+      "expected": "我想买一本新书",
+      "pinyin": "woxiangmaiyibenxinshu"
+    },
+    {
+      "id": "s014",
+      "expected": "请把手机放在桌子上",
+      "pinyin": "qingbashoujifangzaizhuozishang"
+    },
+    {
+      "id": "s015",
+      "expected": "回家的路上注意安全",
+      "pinyin": "huijiadelushangzhuyianquan"
+    },
+    {
+      "id": "s016",
+      "expected": "我们明天继续讨论",
+      "pinyin": "womenmingtianjixutaolun"
+    },
+    {
+      "id": "s017",
+      "expected": "谢谢你的帮助",
+      "pinyin": "xiexienidebangzhu"
+    },
+    {
+      "id": "s018",
+      "expected": "每天坚持运动",
+      "pinyin": "meitianjianchiyundong"
+    },
+    {
+      "id": "s019",
+      "expected": "他对科学很感兴趣",
+      "pinyin": "taduikexuehenganxingqu"
+    },
+    {
+      "id": "s020",
+      "expected": "新的故事就要开始了",
+      "pinyin": "xindegushijiuyaokaishile"
+    }
+  ]
+}

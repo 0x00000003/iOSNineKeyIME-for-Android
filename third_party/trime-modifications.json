@@ -25,7 +25,7 @@
     {
       "path": "app/src/main/AndroidManifest.xml",
       "upstream_sha256": "2ddc51e4df8026d06cbf64f480b2db3f23924e54c8a53091d53b49df25586a31",
-      "modified_sha256": "86d0a595ea797ed8908191e253af37279d882a627c52ffa6dbf3ebf0cf7a2022"
+      "modified_sha256": "8a544d46c0d83b53267ea17d23a84cef3db6853e2d2dd5463831f3b332dc21c4"
     },
     {
       "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",

@@ -32,3 +32,6 @@
 | 021 | 2026-10-23 | Accepted for compatibility | 原Wanxiang LTS模型不打包，采用固定lotem/rime-octagram-data 20260712 compact词数据模型，明确README命名授权与LGPL许可证据；质量R08/R10不预判 | runtime独立模型SHA/size预算，完整分发对应源与NOTICE仍在M4/M6 |
 | 022 | 2026-10-23 | Accepted | clearComposition只清当前组合，不能当作字段切换清历史；需要销毁native session并按隐私schema重建 | history/property/raw/commit均有真机断言；用户库不因此清除；未来服务与探针必须共享串行原生所有权 |
 | 023 | 2026-10-23 | Probe boundary | 损坏公共资源隔离版本目录并从固定APK重建，不递归删除/改写学习profile；错误仅有限安全码 | Pixel/API36损坏+恢复+重新打开引擎通过；不能替代清学习、备份或完整IME安全验收 |
+
+| 024 | 2026-10-23 | Provisional, refines001/010 | M1底座已在host/Pixel/API36实际加载模型/Lua与T9；M2继承固定Trime LifecycleInputMethodService复用生命周期/JNI，采用受测独立Controller/薄服务，不继承TrimeInputMethodService | 原服务onCreate无条件创建RimeDaemon、AppPrefs、主题/剪贴板/外部同步等路径，与最小默认Application不兼容。避免为临时前端重新引入共享路径副作用；不是重写Rime。旧前端保持不注册，M4继续剥离/audit。系统服务需用户设置启用后实测 |
+| 025 | 2026-10-23 | Accepted for WIP | 真实IME和合成探针共用native排他租约；私密字段只持租约不调用native，普通关闭屏障完成后再观察零写 | 该屏障已组件实测，未覆盖系统IME全生命周期；不把普通待完成写入误说成私密输入写入或安全全PASS |

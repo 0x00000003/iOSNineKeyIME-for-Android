@@ -73,4 +73,17 @@ class TouchProtocolTest : StringSpec({
         t.startSession(2)
         t.accessibilityActivate("2", 1) shouldBe null
     }
+
+    "dynamic candidate update cancels its old touch but retains static delete repeat" {
+        val delete = KeyBox("delete",50f,0f,100f,50f,true)
+        val old = KeyBox("candidate-1",0f,0f,50f,50f)
+        val next = KeyBox("candidate-2",0f,0f,50f,50f)
+        val touch = TouchProtocol(HitMap(listOf(old,delete)))
+        touch.startSession(1);touch.down(0,20f,20f,0)
+        touch.updateMap(HitMap(listOf(next,delete)))
+        touch.up(0,20f,20f) shouldBe null
+        touch.down(0,70f,20f,0);touch.updateMap(HitMap(listOf(old,delete)))
+        touch.tick(400)?.key shouldBe "delete"
+        touch.up(0,70f,20f) shouldBe null
+    }
 })

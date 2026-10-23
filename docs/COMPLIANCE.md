@@ -25,3 +25,7 @@
 
 ## M6分发核对
 检查APK对应源码/资源版本与NOTICE一致；完整源码和依赖获取方式可重建；所有字体/图标/词库/model许可齐全；没有未授权data仓库工具；没有签名私钥、个人输入或用户词库；清楚列出视觉与算法差异。公开项目名/包名可另定，当前iOSNineKeyIME为内部开发名，不表示Apple关联。
+
+## 当前开发检查点增量
+
+M1/M2已有实际APK；早期“没有APK/只研究”保留为初始化历史。当前模型为固定lotem compact LGPL数据、Lua仅自写marker，原Wanxiang LTS gram不打包。原生插件/嵌入Lua/字体授权及逐文件SHA增量见third_party和M1 probe-4记录。AboutLibraries自动JSON有136依赖和许可ID，不能替代逐项传递版权/对应源审计；完整M4/M6分发检查仍未通过，现不对外发布。薄服务/状态/视图修改继续GPL-3.0-or-later，来源补丁账更新；没有Apple素材。

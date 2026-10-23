@@ -11,14 +11,16 @@ import org.json.JSONObject
 /** All calls are on one worker. Uses only baked-in synthetic input, never a host editor. */
 object ProbeRunner {
     @Synchronized
-    fun rebuildPublicResources(context: Context) {
+    fun rebuildPublicResources(context: Context) = dev.local.iosninekeyime.engine.NativeEngineLease.exclusive {
         ProbeResources.quarantineCurrent(context)
         val shared = ProbeResources.deploy(context)
         ProbeModelResources.deploy(context, shared)
     }
 
     @Synchronized
-    fun run(context: Context): JSONObject {
+    fun run(context: Context): JSONObject = dev.local.iosninekeyime.engine.NativeEngineLease.exclusive { runExclusive(context) }
+
+    private fun runExclusive(context: Context): JSONObject {
         val result = JSONObject().put("scope", "M1 pinned-resource JNI compatibility; not IME/visual/privacy/quality acceptance")
             .put("model_bundled", BuildConfig.PROBE_MODEL_ENABLED).put("model_sha256", BuildConfig.PROBE_MODEL_SHA256)
         val start = System.nanoTime()

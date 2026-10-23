@@ -1,0 +1,23 @@
+{
+  "scope": "serial JNI/controller/real EditText component; NOT enabled IME, system lifecycle or all-path privacy acceptance",
+  "fast_keys_preserved": true,
+  "single_commit_and_idle_punctuation": true,
+  "confirm_then_single_punctuation": true,
+  "cancel_drops_queued_input": true,
+  "new_private_field_rejects_old_candidate": true,
+  "sensitive_context_reads": 0,
+  "probe_excluded_during_private_session": true,
+  "normal_profile_positive_userdb": true,
+  "normal_profile_unchanged_after_privacy_barrier": true,
+  "ended_field_ignores_input": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "0c37b879f79848a2beba1e2984c3e4b1",
+  "tested_apk_sha256": "d3bf7f8e0e0628acd863b43aeadec9df313efcc16ba40b7fb5b5f835ba7964dd",
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "controller",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

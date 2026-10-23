@@ -51,3 +51,11 @@ M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通
 前一提交bde02ac。本轮将明确命名授权的Rime compact模型加入固定运行时资产；未集成数据仓库工具。发现clearComposition不清提交前文，新增原生session重建与元数据计数，通过并发会话对照定位学习排名混杂。旧FAIL保留，新控制保持2→1/重启1门槛。最终debug05da4739在Pixel/离线首装模拟器native-only与public-resource-recovery均PASS；损坏固定数据可重建且不改既有学习库，editor-only仍FAIL。
 
 45 app/49 state JVM、debug/release assemble/lint及两APK静态权限/实际备份XML PASS。工具链补官方SDK/JDK制品来源与固定版本检查；依赖清单补Lua/原生插件/字体/数据模型授权，修正librime旧版本。AboutLibraries联合导出触发Gradle任务输出依赖校验FAIL，保留失败并将CSV单独指定项目内输出目录后重跑PASS，未关闭校验。完整发布合规与干净重建仍未通过。详见M1记录第五检查点。无远端操作；下一步继续独立M2串行引擎/状态集成，不宣称M1全门禁或应用完成。
+
+## 2026-10-23 — 串行控制器、临时键盘视图与服务（WIP）
+
+前一提交d9a8466。新增纯Controller、全局native租约与单worker JNI adapter；真实五键在部署前进入队列保序，部分提交与后续标点沿唯一HostEditorAdapter输出，宿主阻塞显式重试并拒绝跨字段。重复删除不排队堆积。薄服务复用Trime生命周期基类及已测JNI；旧高耦合前端不注册，具体偏离记录ADR024。临时键盘有中/英大小写/数字/符号/候选展开分页、系统切换与隐私入口；参考图缺失仍BLOCKED，未声称iOS布局事实。
+
+最终48 app/61 state JVM、两套lint/assemble、两实际APK静态门禁PASS。debug3556212b在Pixel/模拟器view/controller与损坏恢复PASS；full native PASS但editor仍R04 FAIL。实际触控首轮无fresh结果，第二轮定位到嵌入EditText失焦导致DEL无效，恢复fixture焦点后相同要求通过。新视图同帧重建后立即measure/layout匹配HitMap，测试不再依赖长按时waitForIdle。保留失败。未执行系统设置授权/默认切换，服务生命周期未验收；R04与M5未解。见M2记录及USER_GUIDE。
+
+测量前固定R08质量语料100词/20句；不按后续结果更换目标或下调门槛。下一步运行host/Android固定语料与独立学习/上下文对照，继续完整安全/许可审计，开发记录。

@@ -34,3 +34,7 @@ Trime 3.3.12 固定 librime 子模块正好是 1.17.0 对应 commit，同时带 
 
 ## 源码快照导入的构建适配
 上游NativeAppConventionPlugin读取子库git describe；无嵌套.git时必须从provenance锁生成版本常量，避免误取本仓库版本。ProjectExtensions还读取builder/remote/时间，M1改为显式固定值，禁止为绕过构建而添加远端。具体已核对字段见UPSTREAM。
+
+## M2薄服务实现偏离（ADR024）
+
+实际TrimeInputMethodService.onCreate直接依赖全局AppPrefs/RimeDaemon/主题/剪贴板和旧外部路径链路；为保留受测离线边界，薄服务继承同源LifecycleInputMethodService，复用Rime JNI和librime而不注册旧复杂前端。SerialRimeEngine单worker+全进程租约，KeyboardController连接真实HostEditorAdapter与临时NineKeyView。敏感field不调用引擎且保留租约防探针进入；field/end/hide失效回调。完整系统生命周期与多宿主测试仍未跑，不等于已适用日用。界面暂只取前100候选，显示分页不等于完整native分页协议。

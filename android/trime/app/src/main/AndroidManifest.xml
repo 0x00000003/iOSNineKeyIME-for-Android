@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-FileCopyrightText: 2015 - 2024 Rime community
      SPDX-License-Identifier: GPL-3.0-or-later
-     Project modification: M1 probe surface only; legacy Trime components omitted. -->
+     Project modification: Thin offline IME surface; legacy Trime components omitted. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission tools:node="removeAll" />
@@ -12,7 +12,7 @@
         android:fullBackupContent="@xml/ime_backup_rules"
         android:dataExtractionRules="@xml/ime_data_extraction_rules"
         android:usesCleartextTraffic="false"
-        android:label="九键 M1 兼容性探针"
+        android:label="离线九键（开发检查点）"
         android:theme="@android:style/Theme.Material.Light.NoActionBar"
         tools:node="replace">
         <activity android:name="dev.local.iosninekeyime.probe.ProbeActivity" android:exported="true">
@@ -21,5 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name="dev.local.iosninekeyime.ime.NineKeyInputMethodService"
+            android:exported="true" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter><action android:name="android.view.InputMethod" /></intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/ninekey_method" />
+        </service>
     </application>
 </manifest>

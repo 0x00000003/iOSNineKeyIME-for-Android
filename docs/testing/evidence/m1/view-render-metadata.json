@@ -1,0 +1,14 @@
+[
+  {
+    "target": "pixel",
+    "local_ignored_path": "artifacts/m2/pixel-provisional-view.png",
+    "sha256": "5903a79882690d3527dd987716ff546e0a7e0125daa5d7f7119e4e6688b0c520",
+    "scope": "Android View.draw bitmap of own synthetic keyboard ONLY; not OS screenshot or iOS comparison"
+  },
+  {
+    "target": "emulator",
+    "local_ignored_path": "artifacts/m2/emulator-provisional-view.png",
+    "sha256": "da296f50db8b1b56533d5e18bd3e743d28d6b055bd74d611ce63616f1e210c35",
+    "scope": "Android View.draw bitmap of own synthetic keyboard ONLY; not OS screenshot or iOS comparison"
+  }
+]

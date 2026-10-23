@@ -1,6 +1,6 @@
 # 当前状态
 
-日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`bde02ac`，本轮补丁见Git与下列记录；开发记录。
+日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`d9a8466`，本轮补丁见Git与下列记录；开发记录。
 
 | 项目 | 真实状态 | 证据/范围 |
 | --- | --- | --- |
@@ -33,3 +33,11 @@
 同一05da4739 debug在Pixel和专用离线首装API36模拟器native-only PASS：真实grammar加载、Lua、三组多音节/部分提交、正常学习和无学习对照均通过。已证明clearComposition保留20条提交历史；新增native session reset真正清掉历史/property，学习排名在无前文的新会话控制下2→1、重启1。原未控制前文测试FAIL保留；并发新会话对照排除“关闭DB才刷新”的解释，未降低原排名断言。见model-final-*-native及compact-*-control.json。
 
 资源损坏恢复同哈希两设备PASS：独立篡改本项目公共资源/模型即拒绝，隔离重建固定数据；已有profile全部字节/mtime不变（Pixel15个、模拟器2个），同进程重新打开引擎成功。不是清除学习功能或完整备份验收。Pixel一次debug双profile14398ms（资源1546ms、首profile引擎ready4224ms）；模拟器离线首装4315ms（652/1273ms），不算P02 release20次成绩。editor-only两设备仍FAIL，敏感预存组合音标4/5，不能掩盖。当前仍是探针，无IME服务；继续M1许可/可重建与M2受控串行适配组件，M5缺图BLOCKED。
+
+第六检查点（当前制品，以本段为准）：M2临时键盘与薄服务已编译，debug `3556212b2bf9c37b2c9ccb6e32d0f5eed5ad2f33d7b28b05d6a3b3e94d8b3aa7`，unsigned release `a647402ed38dfff9a2218228435943f7e40be65882f9a155264d110f8f022075`。48 app / 61 state单测、debug/release lint与构建PASS，两实际APK静态权限/备份XML PASS。忽略冻结artifacts/m2/m2-*及SHA256SUMS。未启用/切换系统IME，服务生命周期和多宿主仍BLOCKED/NOT_RUN，不称M2完成。
+
+串行controller新增回调/输入屏障、128事件有界内存队列、同字段显式宿主重试、同步切字段中止旧标点尾巴；单workerJNI适配持全局租约（含私密预留，不调用native），探针/修复与实际会话互斥；敏感元数据由EditorPolicy。视图用同一HitMap绘制/触控，候选带session/revision/index；布局更新取消旧候选触控但保留静态长删，重复删不在异步屏障后积压。注册服务受BIND_INPUT_METHOD保护，未启用；复用Trime LifecycleInputMethodService/JNI，避开旧前端默认prefs/daemon/剪贴板和共享存储初始化，见ADR024。
+
+同3556212b debug在Pixel与模拟器view/controller PASS：真实MotionEvent五键快输、滑出取消、一次提交/空闲标点、确认追加标点、取消队列、私密零上下文读取/正常profile不变、探针互斥，以及长删切字段后停止。view触控首轮受阻、第二轮因测试重挂EditText未恢复焦点而DEL不生效；保留两轮FAIL后修复fixture焦点，原断言不变。full scope两设备**FAIL**：native部分PASS，editor部分仍为R04预存组合音标4/5。资源损坏恢复同哈希两设备PASS。View.draw只渲染自有合成键盘的PNG位于忽略artifacts/m2（不是系统截图/参考对比）。
+
+另已在测量前冻结R08 100词/20句合成语料quality-v1 SHA256 `6d44fe6d9e9c1e8f9c40ffe535ccefd71c0943845bd1b45cde1d4f6452512566`，暂未执行/未报告质量成绩。继续M3独立引擎测量、M4审计/清学习与设置；等待系统设置启用的系统IME和缺失原图不冒称通过。

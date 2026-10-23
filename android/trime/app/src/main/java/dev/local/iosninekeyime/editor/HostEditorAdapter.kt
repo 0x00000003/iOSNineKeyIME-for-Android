@@ -14,7 +14,7 @@ import dev.local.iosninekeyime.state.HostCommitGate
 enum class EditResult { ACCEPTED, DELEGATED, UNAVAILABLE, STALE, CONTEXT_LIMIT }
 
 /** Owner-thread adapter; the service must pass only its current field's connection. No logging/IO. */
-class HostEditorAdapter {
+class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit) = { { } }) {
     private var session = 0L
     private var active = false
     private var connection: InputConnection? = null
@@ -43,7 +43,13 @@ class HostEditorAdapter {
     private fun commitToConnection(text: String): Boolean {
         val editor = connection ?: return false
         editor.beginBatchEdit()
-        return try { editor.commitText(text, 1) } finally { editor.endBatchEdit() }
+        val finishAttempt = onCommitAttempt(text.length)
+        return try {
+            editor.commitText(text, 1).also { finishAttempt(it) }
+        } catch (_:RuntimeException) {
+            finishAttempt(false)
+            false
+        } finally { editor.endBatchEdit() }
     }
 
     fun delete(expectedSession: Long): EditResult {

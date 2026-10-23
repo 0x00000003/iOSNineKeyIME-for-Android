@@ -35,7 +35,7 @@ class HitMap(val keys: List<KeyBox>) {
 data class KeyActivation(val session: Long, val key: String, val repeated: Boolean)
 
 /** One pointer owns a gesture. Leaving a key or changing a field permanently cancels it. */
-class TouchProtocol(private val map: HitMap) {
+class TouchProtocol(private var map: HitMap) {
     private data class Press(val session: Long, val pointer: Int, val key: KeyBox, var due: Long,
                              var repeated: Boolean = false, var cancelled: Boolean = false)
     private var session = 0L
@@ -64,6 +64,11 @@ class TouchProtocol(private val map: HitMap) {
         p.repeated = true
         p.due = timeMs + 60 // No catch-up burst after a paused UI thread.
         return KeyActivation(session, p.key.id, true)
+    }
+    /** Static keys may keep their long press; changed/removed candidate IDs cancel it. */
+    fun updateMap(next: HitMap) {
+        press?.let { p -> if (next.keys.none { it == p.key }) p.cancelled = true }
+        map = next
     }
     fun cancel() { press = null }
     fun accessibilityActivate(key: String, expectedSession: Long): KeyActivation? =
