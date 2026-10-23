@@ -1,0 +1,428 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-23T16:55:44.984537+00:00",
+  "selection_status": "research-pinned; compatibility and artifact licensing pending",
+  "runtime_assets": [],
+  "projects": {
+    "trime": {
+      "repository": "osfans/trime",
+      "requested_repository": "osfans/trime",
+      "repository_api": "https://api.github.com/repos/osfans/trime",
+      "ref": "v3.3.12",
+      "commit": "e09ac7114fa067904ed358e82d499516cb423ff4",
+      "commit_date": "2026-09-01T12:58:50Z",
+      "license_metadata": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "latest_release": "v3.3.12",
+      "latest_release_published": "2026-09-01T13:05:44Z",
+      "role": "candidate only; not integrated",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/LICENSE",
+          "local_path": "docs/reference/upstream/trime/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147
+        },
+        {
+          "path": ".gitmodules",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/.gitmodules",
+          "local_path": "docs/reference/upstream/trime/.gitmodules",
+          "sha256": "192d68768717e8a7043ecba527dc1398db6eb531a7d44de114b296b2c8565233",
+          "bytes": 1306
+        },
+        {
+          "path": "gradle/libs.versions.toml",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/gradle/libs.versions.toml",
+          "local_path": "docs/reference/upstream/trime/gradle/libs.versions.toml",
+          "sha256": "7082eba2e094a9cf42c2c96ffd7c95324342f4d79925878fc14b51857689838c",
+          "bytes": 4857
+        },
+        {
+          "path": "gradle/wrapper/gradle-wrapper.properties",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/gradle/wrapper/gradle-wrapper.properties",
+          "local_path": "docs/reference/upstream/trime/gradle/wrapper/gradle-wrapper.properties",
+          "sha256": "618587c28dc74aafdbe935d103a69dbf65f03945b4ff00b4663e8210ea1b101a",
+          "bytes": 252
+        },
+        {
+          "path": "app/src/main/AndroidManifest.xml",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/app/src/main/AndroidManifest.xml",
+          "local_path": "docs/reference/upstream/trime/app/src/main/AndroidManifest.xml",
+          "sha256": "2ddc51e4df8026d06cbf64f480b2db3f23924e54c8a53091d53b49df25586a31",
+          "bytes": 4010
+        },
+        {
+          "path": "app/build.gradle.kts",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/app/build.gradle.kts",
+          "local_path": "docs/reference/upstream/trime/app/build.gradle.kts",
+          "sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
+          "bytes": 5816
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/README.md",
+          "local_path": "docs/reference/upstream/trime/README.md",
+          "sha256": "a2fd576cd6f1c05690194bf291eda5e6b5f41b35bf25bf574681a3f0e74d5d08",
+          "bytes": 7490
+        },
+        {
+          "path": "build.gradle.kts",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build.gradle.kts",
+          "local_path": "docs/reference/upstream/trime/build.gradle.kts",
+          "sha256": "abda7ce4b0ba075d9b369d87fa5df37cdcbbd881547366cd3f7518ccaa088d95",
+          "bytes": 959
+        },
+        {
+          "path": "app/src/main/jni/CMakeLists.txt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/app/src/main/jni/CMakeLists.txt",
+          "local_path": "docs/reference/upstream/trime/app/src/main/jni/CMakeLists.txt",
+          "sha256": "b9acb57cd5ec8e2b3204c4cff1ff9d7fb799679747fd5052cee8b172b8ed8f47",
+          "bytes": 1549
+        },
+        {
+          "path": "PRIVACY.md",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/PRIVACY.md",
+          "local_path": "docs/reference/upstream/trime/PRIVACY.md",
+          "sha256": "39f596b0eb796879826d335ab88b3f9218991cb22311e79fd8cb27916bfb5b11",
+          "bytes": 931
+        },
+        {
+          "path": "app/src/main/assets/shared/trime.yaml",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/app/src/main/assets/shared/trime.yaml",
+          "local_path": "docs/reference/upstream/trime/app/src/main/assets/shared/trime.yaml",
+          "sha256": "44d29a6ace16ca9f59b3d6bc32b457a8ce41f8b080d94fdbe67e8d89900983f6",
+          "bytes": 78253
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/AndroidAppConventionPlugin.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/AndroidAppConventionPlugin.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/AndroidAppConventionPlugin.kt",
+          "sha256": "9b8c7de3610938309096ba42428055fe0ba1de4ea6a0750a164c3f8a062c9cc8",
+          "bytes": 2668
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/NativeAppConventionPlugin.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/NativeAppConventionPlugin.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/NativeAppConventionPlugin.kt",
+          "sha256": "6960c8387d931c72236f36af450af653cc02a83b15fbc5cb3b69e10157fd7420",
+          "bytes": 1286
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/NativeBaseConventionPlugin.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/NativeBaseConventionPlugin.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/NativeBaseConventionPlugin.kt",
+          "sha256": "95cb9b48165a47762ad5feb21eee19c4a4c50ceff12dd0c2c122478aa717d794",
+          "bytes": 2084
+        },
+        {
+          "path": "app/src/main/jni/cmake/Rime.cmake",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/app/src/main/jni/cmake/Rime.cmake",
+          "local_path": "docs/reference/upstream/trime/app/src/main/jni/cmake/Rime.cmake",
+          "sha256": "426aeba2827f25decd606587f14aaff057178dbbcb76ef8ef26b1f394635d270",
+          "bytes": 1190
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/Versions.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/Versions.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/Versions.kt",
+          "sha256": "8c0d50d456dc7a50dbeaf28405e37cf8789200e7fa3f87f8063accde06b5dfc2",
+          "bytes": 282
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/ProjectExtensions.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/ProjectExtensions.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/ProjectExtensions.kt",
+          "sha256": "d2135f7be515a0083afaa6fb171428ba36841496b3152cbeefe2fa260b89fca1",
+          "bytes": 3379
+        },
+        {
+          "path": "build-logic/convention/src/main/kotlin/AndroidBaseConventionPlugin.kt",
+          "url": "https://raw.githubusercontent.com/osfans/trime/e09ac7114fa067904ed358e82d499516cb423ff4/build-logic/convention/src/main/kotlin/AndroidBaseConventionPlugin.kt",
+          "local_path": "docs/reference/upstream/trime/build-logic/convention/src/main/kotlin/AndroidBaseConventionPlugin.kt",
+          "sha256": "e7e4a33f0da5fde33f7680ff2ad60b2d97791b39a264951c13c1680d4f3b8789",
+          "bytes": 819
+        }
+      ],
+      "submodules": [
+        {
+          "path": "app/data/rime/essay",
+          "commit": "0766c929ec3e578c2c80861e988decd3703a1c3d"
+        },
+        {
+          "path": "app/data/rime/luna-pinyin",
+          "commit": "46acf03142c12b5aeed7002675046bf7255eed35"
+        },
+        {
+          "path": "app/data/rime/prelude",
+          "commit": "3803f09458072e03b9ed396692ce7e1d35c88c95"
+        },
+        {
+          "path": "app/data/rime/stroke",
+          "commit": "7c9874c6b2e0b94947653e9a7de6f99623ff27e4"
+        },
+        {
+          "path": "app/src/main/jni/OpenCC",
+          "commit": "907bfcbbd3aae86ff04bc8eaca67c8af03108ddf"
+        },
+        {
+          "path": "app/src/main/jni/librime",
+          "commit": "33e78140250125871856cdc5b42ddc6a5fcd3cd4"
+        },
+        {
+          "path": "app/src/main/jni/librime-lua",
+          "commit": "68f9c364a2d25a04c7d4794981d7c796b05ab627"
+        },
+        {
+          "path": "app/src/main/jni/librime-lua-deps",
+          "commit": "9c53b362229766a97b83683b9541c46679118a90"
+        },
+        {
+          "path": "app/src/main/jni/librime-octagram",
+          "commit": "bd12863f45fbbd5c7db06d5ec8be8987b10253bf"
+        },
+        {
+          "path": "app/src/main/jni/librime-predict",
+          "commit": "67c2881914a0242fc14ec7d6877782771b75800c"
+        },
+        {
+          "path": "app/src/main/jni/snappy",
+          "commit": "32ded457c0b1fe78ceb8397632c416568d6714a0"
+        }
+      ]
+    },
+    "wanxiang": {
+      "repository": "amzxyz/rime-wanxiang",
+      "requested_repository": "amzxyz/rime-wanxiang",
+      "repository_api": "https://api.github.com/repos/amzxyz/rime-wanxiang",
+      "ref": "v18.1.7",
+      "commit": "89075fe7b870dcf80249dfa0ece7474f1a960d91",
+      "commit_date": "2026-10-20T13:16:07Z",
+      "license_metadata": {
+        "key": "cc-by-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx_id": "CC-BY-4.0",
+        "url": "https://api.github.com/licenses/cc-by-4.0",
+        "node_id": "MDc6TGljZW5zZTI1"
+      },
+      "latest_release": "v18.1.7",
+      "latest_release_published": "2026-10-20T13:18:36Z",
+      "role": "candidate only; not integrated",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/LICENSE",
+          "local_path": "docs/reference/upstream/wanxiang/LICENSE",
+          "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+          "bytes": 18656
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/README.md",
+          "local_path": "docs/reference/upstream/wanxiang/README.md",
+          "sha256": "32af277792c7dab236d8fd39932f88dfa54626b1b3e2392b10ff21f76ea666b8",
+          "bytes": 6753
+        },
+        {
+          "path": "wanxiang_t9.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang_t9.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang_t9.schema.yaml",
+          "sha256": "c69c978bd32138d43ee7661a89e7ceb901d058362ae251a0566e5b4c983a40e2",
+          "bytes": 20842
+        },
+        {
+          "path": "wanxiang.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang.schema.yaml",
+          "sha256": "cac4de78acf77bac62f3082e8e43ec7e1c2ca25807d45bf43873a0710fedf2e3",
+          "bytes": 37422
+        },
+        {
+          "path": "wanxiang.dict.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang.dict.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang.dict.yaml",
+          "sha256": "8c61a89f522a911eecfbe7807c44d06f17845c5859358992d80023b69402a092",
+          "bytes": 1311
+        },
+        {
+          "path": "default.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/default.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/default.yaml",
+          "sha256": "15b8b58741e6e325ccab201990fb48ba56879ceabd634789a39e0ae56a2e70bc",
+          "bytes": 6390
+        },
+        {
+          "path": "custom/wanxiang.custom.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/custom/wanxiang.custom.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/custom/wanxiang.custom.yaml",
+          "sha256": "a4e074f55b7a6ea072083e730dc8292878c0b2bfc93ad3fb7a10b6420797f179",
+          "bytes": 2201
+        },
+        {
+          "path": "wanxiang_t9i.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang_t9i.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang_t9i.schema.yaml",
+          "sha256": "307b66e96011c85a67e15ee4d346eaa3aeac48e8cf8dee5b4e4bd2f6c6efdeff",
+          "bytes": 20971
+        },
+        {
+          "path": "wanxiang_abbrev_t9.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang_abbrev_t9.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang_abbrev_t9.schema.yaml",
+          "sha256": "d54a04d1cfb8cf6170f2767a1cea1cc6b660729669682fdbaf10f207ce4321b0",
+          "bytes": 711
+        },
+        {
+          "path": "wanxiang_abbrev_t9.dict.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang_abbrev_t9.dict.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang_abbrev_t9.dict.yaml",
+          "sha256": "7b0335e92e836f519bdb57e76b9c223ee84599ae808ae2601da9329153ed8fd0",
+          "bytes": 239
+        },
+        {
+          "path": "wanxiang_phrase_t9.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/wanxiang_phrase_t9.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/wanxiang_phrase_t9.schema.yaml",
+          "sha256": "cf22e457aedd4a3de1b65d84f559bbe20a414d881da456d947d0d8a18f4f8848",
+          "bytes": 785
+        },
+        {
+          "path": "lua/wanxiang/context_reorder.lua",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/lua/wanxiang/context_reorder.lua",
+          "local_path": "docs/reference/upstream/wanxiang/lua/wanxiang/context_reorder.lua",
+          "sha256": "d11b37eba4260d6531a14390a688ac4a89390fae5fc6263f684f95139b252003",
+          "bytes": 28881
+        },
+        {
+          "path": "lua/wanxiang/input_statistics.lua",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/lua/wanxiang/input_statistics.lua",
+          "local_path": "docs/reference/upstream/wanxiang/lua/wanxiang/input_statistics.lua",
+          "sha256": "ba4c8e1be82d7901d9037844f965a498e881611532f4f5ecabc278144b1f0295",
+          "bytes": 32266
+        },
+        {
+          "path": "custom/wanxiang_lite.dict.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/custom/wanxiang_lite.dict.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/custom/wanxiang_lite.dict.yaml",
+          "sha256": "2a5e58758f4c1f780959680ed5a2a8094d7b14d9f1a593f553e03b6452c69b0f",
+          "bytes": 1386
+        },
+        {
+          "path": "custom/wanxiang_lite.schema.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/custom/wanxiang_lite.schema.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/custom/wanxiang_lite.schema.yaml",
+          "sha256": "be5cc8d15b427d4a0bfd5bc5a6aa7461d6480d47840986108f7023512d223098",
+          "bytes": 32285
+        },
+        {
+          "path": "custom/wanxiang_lite.custom.yaml",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang/89075fe7b870dcf80249dfa0ece7474f1a960d91/custom/wanxiang_lite.custom.yaml",
+          "local_path": "docs/reference/upstream/wanxiang/custom/wanxiang_lite.custom.yaml",
+          "sha256": "9d45b201bc4793472c4ec282617eac6f64303bc2b6842709469b22255a3bf36c",
+          "bytes": 1575
+        }
+      ]
+    },
+    "librime": {
+      "repository": "rime/librime",
+      "requested_repository": "rime/librime",
+      "repository_api": "https://api.github.com/repos/rime/librime",
+      "ref": "1.17.0",
+      "commit": "33e78140250125871856cdc5b42ddc6a5fcd3cd4",
+      "commit_date": "2026-06-05T11:32:44Z",
+      "license_metadata": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "latest_release": "1.17.0",
+      "latest_release_published": "2026-06-06T03:33:02Z",
+      "role": "candidate only; not integrated",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/rime/librime/33e78140250125871856cdc5b42ddc6a5fcd3cd4/LICENSE",
+          "local_path": "docs/reference/upstream/librime/LICENSE",
+          "sha256": "f67d27a6d2d586fcfed4b4c886a83747095396a39b6641e18e855086be2ec400",
+          "bytes": 1513
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/rime/librime/33e78140250125871856cdc5b42ddc6a5fcd3cd4/README.md",
+          "local_path": "docs/reference/upstream/librime/README.md",
+          "sha256": "12fc39f18c9f115dd31c89a4d2b3b690e68c60a92200312cc8d34abc1ed774c6",
+          "bytes": 6135
+        }
+      ]
+    },
+    "wanxiang-data": {
+      "repository": "amzxyz/rime-wanxiang-data",
+      "requested_repository": "amzxyz/RIME-LMDG",
+      "repository_api": "https://api.github.com/repositories/880034560",
+      "ref": "wanxiang",
+      "commit": "52328d36137a68ea9f9b6855a895ac0417b6b6a1",
+      "commit_date": "2026-10-23T16:18:03Z",
+      "license_metadata": {
+        "key": "cc-by-4.0",
+        "name": "Creative Commons Attribution 4.0 International",
+        "spdx_id": "CC-BY-4.0",
+        "url": "https://api.github.com/licenses/cc-by-4.0",
+        "node_id": "MDc6TGljZW5zZTI1"
+      },
+      "latest_release": "tool",
+      "latest_release_published": "2026-10-23T16:21:59Z",
+      "role": "candidate only; not integrated",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang-data/52328d36137a68ea9f9b6855a895ac0417b6b6a1/LICENSE",
+          "local_path": "docs/reference/upstream/wanxiang-data/LICENSE",
+          "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+          "bytes": 18656
+        },
+        {
+          "path": "README.md",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang-data/52328d36137a68ea9f9b6855a895ac0417b6b6a1/README.md",
+          "local_path": "docs/reference/upstream/wanxiang-data/README.md",
+          "sha256": "ea2fb86ab29fa939c54665d8fa74f88a10ba06e4e1a274b2eda0c95ededcf263",
+          "bytes": 12219
+        },
+        {
+          "path": "LICENSE-SCOPE.md",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang-data/52328d36137a68ea9f9b6855a895ac0417b6b6a1/LICENSE-SCOPE.md",
+          "local_path": "docs/reference/upstream/wanxiang-data/LICENSE-SCOPE.md",
+          "sha256": "41ba4ac41b6a28a117c172dd22fc8cf31ff3902f79737cc22e22b9412af624f4",
+          "bytes": 1196
+        },
+        {
+          "path": "NOTICE.md",
+          "url": "https://raw.githubusercontent.com/amzxyz/rime-wanxiang-data/52328d36137a68ea9f9b6855a895ac0417b6b6a1/NOTICE.md",
+          "local_path": "docs/reference/upstream/wanxiang-data/NOTICE.md",
+          "sha256": "1561426f87cf20ebf47922b9eb904c3f2ae817ac32d8129f7eecd20f338aaa66",
+          "bytes": 2492
+        }
+      ]
+    }
+  },
+  "model_candidate": {
+    "repository": "amzxyz/rime-wanxiang-data",
+    "tag": "LTS",
+    "release_id": 268075342,
+    "release_published_at": "2025-12-07T07:13:21Z",
+    "asset_id": 655157355,
+    "name": "wanxiang-lts-zh-hans.gram",
+    "bytes": 398497836,
+    "url": "https://github.com/amzxyz/rime-wanxiang-data/releases/download/LTS/wanxiang-lts-zh-hans.gram",
+    "publisher_digest": "sha256:9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
+    "downloaded": false,
+    "compatibility_verified": false,
+    "license_status": "asset scope and attribution to verify before bundling"
+  }
+}

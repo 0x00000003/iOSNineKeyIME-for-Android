@@ -1,0 +1,5 @@
+$ git diff --cached --check -- . :(exclude)docs/reference/upstream/**
+exit_code=0
+(no output)
+
+Scope: authored project files. Original upstream evidence is preserved byte-for-byte and independently hash-verified.

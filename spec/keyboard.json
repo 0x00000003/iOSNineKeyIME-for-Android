@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "provisional-no-reference-images",
+  "target": "Pixel 9 Pro",
+  "reference": "iPhone 13 Chinese Simplified Pinyin nine-key; iOS version unknown",
+  "mapping": {
+    "2": "ABC",
+    "3": "DEF",
+    "4": "GHI",
+    "5": "JKL",
+    "6": "MNO",
+    "7": "PQRS",
+    "8": "TUV",
+    "9": "WXYZ"
+  },
+  "provisional_core_rows": [
+    [
+      "punctuation",
+      "2",
+      "3"
+    ],
+    [
+      "4",
+      "5",
+      "6"
+    ],
+    [
+      "7",
+      "8",
+      "9"
+    ]
+  ],
+  "idle_punctuation": [
+    "，",
+    "。",
+    "？",
+    "！",
+    "、",
+    "：",
+    "；",
+    "……"
+  ],
+  "defaults": {
+    "candidate_bar_dp": 44,
+    "key_row_dp": 52,
+    "gap_dp": 6,
+    "outer_padding_dp": 6,
+    "corner_radius_dp": 6,
+    "key_label_sp": 18,
+    "min_touch_height_dp": 48,
+    "delete_repeat_delay_ms": 400,
+    "delete_repeat_interval_ms": 60
+  },
+  "bar_policy": {
+    "chinese_idle": "punctuation",
+    "composing": "candidates-or-pending",
+    "nonempty_no_candidates": "no-results",
+    "partial_commit": "candidates",
+    "full_commit": "punctuation",
+    "delete_to_empty": "punctuation",
+    "password": "masked-direct-input",
+    "post_commit_prediction_default": false
+  },
+  "measurement_status": "all dimensions and visual arrangement await original screenshots"
+}

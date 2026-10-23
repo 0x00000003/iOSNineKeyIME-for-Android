@@ -1,0 +1,3078 @@
+{
+  "sha": "33e78140250125871856cdc5b42ddc6a5fcd3cd4",
+  "url": "https://api.github.com/repos/rime/librime/git/trees/33e78140250125871856cdc5b42ddc6a5fcd3cd4",
+  "tree": [
+    {
+      "path": ".clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cb45537d3c5ac202afd977d746cb7ec869e4ce9",
+      "size": 43,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5cb45537d3c5ac202afd977d746cb7ec869e4ce9"
+    },
+    {
+      "path": ".dockerignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "378eac25d311703f3f2cd456d8036da525cd0366",
+      "size": 6,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/378eac25d311703f3f2cd456d8036da525cd0366"
+    },
+    {
+      "path": ".git-blame-ignore-revs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6fb0e3eb3152aba44c259596e58486c4e1dfebd",
+      "size": 157,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c6fb0e3eb3152aba44c259596e58486c4e1dfebd"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "288399d77f7eafd1e6dec1e1c3d2f73bcc61336c",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/288399d77f7eafd1e6dec1e1c3d2f73bcc61336c"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "054d5571871faa07d245baf5ee2a04b6d7601200",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/054d5571871faa07d245baf5ee2a04b6d7601200"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c39f1f087476c7aaace945d6e5a13254b413762",
+      "size": 918,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6c39f1f087476c7aaace945d6e5a13254b413762"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99d680b0ab430eee5b7c7b49241df938840b8777",
+      "size": 29,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/99d680b0ab430eee5b7c7b49241df938840b8777"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-request.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11fc491ef1dae316f2b06bbb40eaba9c757fdfd1",
+      "size": 604,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/11fc491ef1dae316f2b06bbb40eaba9c757fdfd1"
+    },
+    {
+      "path": ".github/pull-request-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54f83459013afef45410ea0fd7610370b9df9a8e",
+      "size": 423,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/54f83459013afef45410ea0fd7610370b9df9a8e"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2b57946504ec7b6de861dbc7aca6f4ee3a938681",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/2b57946504ec7b6de861dbc7aca6f4ee3a938681"
+    },
+    {
+      "path": ".github/workflows/commit-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94c5dd863421fa8784ed37309cd36edc3d3dca0d",
+      "size": 896,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/94c5dd863421fa8784ed37309cd36edc3d3dca0d"
+    },
+    {
+      "path": ".github/workflows/docker-build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "918635ad99c4bc5292af329d6af3e5402314f9ce",
+      "size": 264,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/918635ad99c4bc5292af329d6af3e5402314f9ce"
+    },
+    {
+      "path": ".github/workflows/linux-build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84e4403826426f5f5ce1b1bb7cbe522ae2c95af4",
+      "size": 813,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/84e4403826426f5f5ce1b1bb7cbe522ae2c95af4"
+    },
+    {
+      "path": ".github/workflows/macos-build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0e0cfc06ec50d8d3dd7efa8ef7af898ed28b0c3",
+      "size": 2853,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f0e0cfc06ec50d8d3dd7efa8ef7af898ed28b0c3"
+    },
+    {
+      "path": ".github/workflows/release-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60dbd918df64c7c04adb2fa27ba1a447a0c430ff",
+      "size": 1485,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/60dbd918df64c7c04adb2fa27ba1a447a0c430ff"
+    },
+    {
+      "path": ".github/workflows/windows-build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6845f08f0669f55ac755869e2f6fc6066c74a7c8",
+      "size": 5547,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6845f08f0669f55ac755869e2f6fc6066c74a7c8"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2da97842444710ff17bf79c198a66198c569d44",
+      "size": 146,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a2da97842444710ff17bf79c198a66198c569d44"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca546c4ef6a63ac63a7628596eb556dfd2abe476",
+      "size": 540,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ca546c4ef6a63ac63a7628596eb556dfd2abe476"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1ef4f74f3f8e10492a7842bb0fef8ef8f6e2b48",
+      "size": 58638,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d1ef4f74f3f8e10492a7842bb0fef8ef8f6e2b48"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a76fb7c67fb2dc2565112e5323c486550e8fe06",
+      "size": 8987,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6a76fb7c67fb2dc2565112e5323c486550e8fe06"
+    },
+    {
+      "path": "Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f9e07f9fd3c7cd1cefd0b581e10b10313051453",
+      "size": 723,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5f9e07f9fd3c7cd1cefd0b581e10b10313051453"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f05b7c297121afc7e6115d8e4eada27d049894a1",
+      "size": 1513,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f05b7c297121afc7e6115d8e4eada27d049894a1"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9e3eb9f92585430fc53d3fd49b67d72e4bc2ea1",
+      "size": 2938,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f9e3eb9f92585430fc53d3fd49b67d72e4bc2ea1"
+    },
+    {
+      "path": "README-mac.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b953bea9cb85336c193955b5d8ec97cb0ffee1f",
+      "size": 3094,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5b953bea9cb85336c193955b5d8ec97cb0ffee1f"
+    },
+    {
+      "path": "README-windows.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ee314dbc49a75fa7f8c1d4d21948762df5433b",
+      "size": 1928,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/87ee314dbc49a75fa7f8c1d4d21948762df5433b"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df63123d09d63fa721bace411b67a2366e1d60f7",
+      "size": 6135,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/df63123d09d63fa721bace411b67a2366e1d60f7"
+    },
+    {
+      "path": "action-install-clang-format.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fa9f5eedec05d20a886d4fc798d62ac0c148d182",
+      "size": 230,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fa9f5eedec05d20a886d4fc798d62ac0c148d182"
+    },
+    {
+      "path": "action-install-linux.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "45fbd90ef5e0e22906abfdb46d977fd73fb49a9b",
+      "size": 453,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/45fbd90ef5e0e22906abfdb46d977fd73fb49a9b"
+    },
+    {
+      "path": "action-install-plugins-macos.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d8888c59e5f205d77fbb991a2295a6150b963c6c",
+      "size": 691,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d8888c59e5f205d77fbb991a2295a6150b963c6c"
+    },
+    {
+      "path": "action-install-plugins-windows.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "323def4f935de6e25859b1d130f1b181341e8269",
+      "size": 1307,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/323def4f935de6e25859b1d130f1b181341e8269"
+    },
+    {
+      "path": "bin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b"
+    },
+    {
+      "path": "bin/.placeholder",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "build.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cda373257981045903330a7eeff0a370d2822e5",
+      "size": 5829,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3cda373257981045903330a7eeff0a370d2822e5"
+    },
+    {
+      "path": "bump-version.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0a27383df5509a2f43289097e1fc33a5f42c5650",
+      "size": 506,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0a27383df5509a2f43289097e1fc33a5f42c5650"
+    },
+    {
+      "path": "cliff.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b67037787cd79ac13bc0bb2c7928b5171c0c283",
+      "size": 1291,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3b67037787cd79ac13bc0bb2c7928b5171c0c283"
+    },
+    {
+      "path": "cmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3eed17984b1cc300ea335d202317ac574332cb72",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/3eed17984b1cc300ea335d202317ac574332cb72"
+    },
+    {
+      "path": "cmake/AddRCInfo.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c6db8b982e36fe36eaba8b25f71d75abde327bc",
+      "size": 2499,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5c6db8b982e36fe36eaba8b25f71d75abde327bc"
+    },
+    {
+      "path": "cmake/FindGflags.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c20b9abd205fab6035b1e9af9c9d6149694eb928",
+      "size": 887,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c20b9abd205fab6035b1e9af9c9d6149694eb928"
+    },
+    {
+      "path": "cmake/FindGlog.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a15c54a3099d1bb504e185f594d9329814fb2d",
+      "size": 846,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d0a15c54a3099d1bb504e185f594d9329814fb2d"
+    },
+    {
+      "path": "cmake/FindIconv.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76f276968344bd482b215e2635a340aa7fa801a5",
+      "size": 1233,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/76f276968344bd482b215e2635a340aa7fa801a5"
+    },
+    {
+      "path": "cmake/FindLevelDb.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c3cefc300ff68b638087c52e7fe9c2f49d69821",
+      "size": 907,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7c3cefc300ff68b638087c52e7fe9c2f49d69821"
+    },
+    {
+      "path": "cmake/FindMarisa.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a9851b4366bfb2dcd71d2fe56be8784e2c6aec0",
+      "size": 880,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9a9851b4366bfb2dcd71d2fe56be8784e2c6aec0"
+    },
+    {
+      "path": "cmake/FindOpencc.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea7f40707a7589c3d19e327b286defffb0064641",
+      "size": 877,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ea7f40707a7589c3d19e327b286defffb0064641"
+    },
+    {
+      "path": "cmake/FindYamlCpp.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "462ce247b3a8c15738b650a0cbb9b8105b46bab9",
+      "size": 1116,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/462ce247b3a8c15738b650a0cbb9b8105b46bab9"
+    },
+    {
+      "path": "cmake/RimeConfig.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35d9955d653488bc96c4919ef7886727e4abe641",
+      "size": 1040,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/35d9955d653488bc96c4919ef7886727e4abe641"
+    },
+    {
+      "path": "cmake/c_flag_overrides.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73fde7ff904f1c1ac983b26caaed54c5c1168741",
+      "size": 392,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/73fde7ff904f1c1ac983b26caaed54c5c1168741"
+    },
+    {
+      "path": "cmake/cmake_uninstall.cmake.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f4fe1c05f9ae837b0d9b0dab20a23022005edb1",
+      "size": 1102,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2f4fe1c05f9ae837b0d9b0dab20a23022005edb1"
+    },
+    {
+      "path": "cmake/cxx_flag_overrides.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "635489e3d3d4b94b2262209f4895c76c6eb70150",
+      "size": 561,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/635489e3d3d4b94b2262209f4895c76c6eb70150"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e5f2fd3742e92a361c90479fe0f0a4bcc04ac3b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/9e5f2fd3742e92a361c90479fe0f0a4bcc04ac3b"
+    },
+    {
+      "path": "data/minimal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3eb7d7c0e229a856cb2ebf35075d13844c413fca",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/3eb7d7c0e229a856cb2ebf35075d13844c413fca"
+    },
+    {
+      "path": "data/minimal/cangjie5.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1a0c4b668903879725334c389253d3d67c984b7",
+      "size": 789090,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c1a0c4b668903879725334c389253d3d67c984b7"
+    },
+    {
+      "path": "data/minimal/cangjie5.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c922e1c36a20c29018ab882907416be6c118dfb9",
+      "size": 2357,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c922e1c36a20c29018ab882907416be6c118dfb9"
+    },
+    {
+      "path": "data/minimal/default.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "186665c291fcd403e551be0083370327717a0c45",
+      "size": 4224,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/186665c291fcd403e551be0083370327717a0c45"
+    },
+    {
+      "path": "data/minimal/essay.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af34eeb5c4ad57f41b0ff23276d96a4c90161a9f",
+      "size": 3798869,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/af34eeb5c4ad57f41b0ff23276d96a4c90161a9f"
+    },
+    {
+      "path": "data/minimal/luna_pinyin.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19181e3c3e609f075f0f2ceaf6c97d52d241ad96",
+      "size": 282450,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/19181e3c3e609f075f0f2ceaf6c97d52d241ad96"
+    },
+    {
+      "path": "data/minimal/luna_pinyin.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0366dbac55b8e0792239458e166c1d4eb3e9f4f4",
+      "size": 3685,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0366dbac55b8e0792239458e166c1d4eb3e9f4f4"
+    },
+    {
+      "path": "data/minimal/symbols.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e9dbd1ff72cd5e9bc55ea24538f97b454508d5",
+      "size": 24410,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a3e9dbd1ff72cd5e9bc55ea24538f97b454508d5"
+    },
+    {
+      "path": "data/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60b07e6ac4b89114fafcd17ec8b21f92134e9250",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/60b07e6ac4b89114fafcd17ec8b21f92134e9250"
+    },
+    {
+      "path": "data/test/config_circular_dependency_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02688e7ad9455643299da9d77849a83978c4cca2",
+      "size": 104,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/02688e7ad9455643299da9d77849a83978c4cca2"
+    },
+    {
+      "path": "data/test/config_compiler_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18e2badcb3565c0cedd2cf402b6e028fae4d1612",
+      "size": 768,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/18e2badcb3565c0cedd2cf402b6e028fae4d1612"
+    },
+    {
+      "path": "data/test/config_dependency_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3856269ae632cb6fb97dcdafafbf4138c62742ba",
+      "size": 407,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3856269ae632cb6fb97dcdafafbf4138c62742ba"
+    },
+    {
+      "path": "data/test/config_merge_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c570a46bba408bf2e9f6a8b447707a661955771",
+      "size": 1332,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3c570a46bba408bf2e9f6a8b447707a661955771"
+    },
+    {
+      "path": "data/test/config_optional_reference_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92b74b6f8ef226526bf1f3224f758aedfa09a0f1",
+      "size": 182,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/92b74b6f8ef226526bf1f3224f758aedfa09a0f1"
+    },
+    {
+      "path": "data/test/config_test.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b400d6c63b3e7238be3150abde8cae9cafa2144",
+      "size": 384,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9b400d6c63b3e7238be3150abde8cae9cafa2144"
+    },
+    {
+      "path": "data/test/dictionary_test.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e362b147ec43de4265795ee0f116cea2326640a",
+      "size": 89530,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7e362b147ec43de4265795ee0f116cea2326640a"
+    },
+    {
+      "path": "data/test/starcraft.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95245cb257ce1197483c6a39d37feab874dba3c9",
+      "size": 396,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/95245cb257ce1197483c6a39d37feab874dba3c9"
+    },
+    {
+      "path": "deps.mk",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d692b9bbf3242ae0b6820fedbe68b4d180249dcf",
+      "size": 2496,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d692b9bbf3242ae0b6820fedbe68b4d180249dcf"
+    },
+    {
+      "path": "deps",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9292f7aa7c53d469c183c1ec8609096d7541da8b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/9292f7aa7c53d469c183c1ec8609096d7541da8b"
+    },
+    {
+      "path": "deps/glog",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "7b134a5c82c0c0b5698bb6bf7a835b230c5638e4"
+    },
+    {
+      "path": "deps/googletest",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "f8d7d77c06936315286eb55f8de22cd23c188571"
+    },
+    {
+      "path": "deps/leveldb",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "99b3c03b3284f5886f9ef9a4ef703d57373e61be"
+    },
+    {
+      "path": "deps/marisa-trie",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "3e87d53b78e15f2f43783d5e376561a8c9722051"
+    },
+    {
+      "path": "deps/opencc",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "556ed22496d650bd0b13b6c163be9814637970ae"
+    },
+    {
+      "path": "deps/yaml-cpp",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "2f86d13775d119edbb69af52e5f566fd65c6953b"
+    },
+    {
+      "path": "doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ecb70cb3023ef15b513bb8d1208d6b2b88b60c1a",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/ecb70cb3023ef15b513bb8d1208d6b2b88b60c1a"
+    },
+    {
+      "path": "doc/Doxyfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "357a0edd0e86596475bdf2349fb95701452b1b28",
+      "size": 100807,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/357a0edd0e86596475bdf2349fb95701452b1b28"
+    },
+    {
+      "path": "doc/rime-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aead153bc5dbe6351d12efb0f99adda26541f961",
+      "size": 5341,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/aead153bc5dbe6351d12efb0f99adda26541f961"
+    },
+    {
+      "path": "env.bat.template",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20a268557df2e22c160a2d41113a330aedf4a77d",
+      "size": 530,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/20a268557df2e22c160a2d41113a330aedf4a77d"
+    },
+    {
+      "path": "env.vs2019.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20a268557df2e22c160a2d41113a330aedf4a77d",
+      "size": 530,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/20a268557df2e22c160a2d41113a330aedf4a77d"
+    },
+    {
+      "path": "env.vs2022.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8cd3c490b9f97c8cd474e6f9847bce112e5ef3",
+      "size": 530,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1b8cd3c490b9f97c8cd474e6f9847bce112e5ef3"
+    },
+    {
+      "path": "include",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cee0427267ca3736ce0fbfa27d38f8648860431d",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/cee0427267ca3736ce0fbfa27d38f8648860431d"
+    },
+    {
+      "path": "include/COPYING.darts-clone",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd30e91fb1e027a5224875e140ad97aa11620934",
+      "size": 1481,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cd30e91fb1e027a5224875e140ad97aa11620934"
+    },
+    {
+      "path": "include/X11",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a10b33c1e1360de16a7dfaf5775f970f46f6cc52",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/a10b33c1e1360de16a7dfaf5775f970f46f6cc52"
+    },
+    {
+      "path": "include/X11/keysym.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "641b25bf22506c24f3b6c6dc75b7122373c1e841",
+      "size": 2755,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/641b25bf22506c24f3b6c6dc75b7122373c1e841"
+    },
+    {
+      "path": "include/X11/keysymdef.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec125a65a707500c41fdc0c2bc58be804d10c1f6",
+      "size": 168221,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ec125a65a707500c41fdc0c2bc58be804d10c1f6"
+    },
+    {
+      "path": "include/darts.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18bf988baba70b2b886b243de5105b566c982414",
+      "size": 51103,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/18bf988baba70b2b886b243de5105b566c982414"
+    },
+    {
+      "path": "include/utf8.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82b13f59f983c57ea5bba18bcb58f836eaba8d5e",
+      "size": 1521,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/82b13f59f983c57ea5bba18bcb58f836eaba8d5e"
+    },
+    {
+      "path": "include/utf8",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ffcac785a04deb518b16a9248e3647ef4e237a34",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/ffcac785a04deb518b16a9248e3647ef4e237a34"
+    },
+    {
+      "path": "include/utf8/checked.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "512dcc2fbac82c55afb24f1ffc99d677b2a8e86a",
+      "size": 11564,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/512dcc2fbac82c55afb24f1ffc99d677b2a8e86a"
+    },
+    {
+      "path": "include/utf8/core.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34371ee31c8c3f48dc86c74991bc74230d08d3a7",
+      "size": 13381,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/34371ee31c8c3f48dc86c74991bc74230d08d3a7"
+    },
+    {
+      "path": "include/utf8/cpp17.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32a77ce307509e393bf54f83f352b42e4ec1066c",
+      "size": 3322,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/32a77ce307509e393bf54f83f352b42e4ec1066c"
+    },
+    {
+      "path": "include/utf8/unchecked.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79818393c539984f304093c082b791e2b4018d64",
+      "size": 10017,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/79818393c539984f304093c082b791e2b4018d64"
+    },
+    {
+      "path": "install-boost.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d2d199d06279f50988072e56ad73de5f607516f",
+      "size": 666,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0d2d199d06279f50988072e56ad73de5f607516f"
+    },
+    {
+      "path": "install-boost.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "77adc197851e01feb2a91c5223771f56743e3add",
+      "size": 1474,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/77adc197851e01feb2a91c5223771f56743e3add"
+    },
+    {
+      "path": "install-plugins.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "719b07c5e5019c03b2d89a339aa05681530b081f",
+      "size": 1276,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/719b07c5e5019c03b2d89a339aa05681530b081f"
+    },
+    {
+      "path": "lib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b"
+    },
+    {
+      "path": "lib/.placeholder",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c74e39e0ff63c40093c4426a4b04f8b9cfc6e21",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/9c74e39e0ff63c40093c4426a4b04f8b9cfc6e21"
+    },
+    {
+      "path": "plugins/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09af61330cb6099e1421f125e6e696a8b02564f2",
+      "size": 2393,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/09af61330cb6099e1421f125e6e696a8b02564f2"
+    },
+    {
+      "path": "plugins/plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8220b8d3dc0e787bde2130b5208f6a66d3fcd3c2",
+      "size": 189,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8220b8d3dc0e787bde2130b5208f6a66d3fcd3c2"
+    },
+    {
+      "path": "plugins/plugins_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8492cfe87ebc9a2483fbde16c54234dd69859c17",
+      "size": 3728,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8492cfe87ebc9a2483fbde16c54234dd69859c17"
+    },
+    {
+      "path": "rime-new-plugin.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2975f74f2596264ae52850a6a6f380290c7435c6",
+      "size": 2140,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2975f74f2596264ae52850a6a6f380290c7435c6"
+    },
+    {
+      "path": "rime.pc.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a8c5431839873727f0fab590caa7ac50077dcd2",
+      "size": 253,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1a8c5431839873727f0fab590caa7ac50077dcd2"
+    },
+    {
+      "path": "sample",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e60fdf9ca251626253d289ac3267472ef28c3cf",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/2e60fdf9ca251626253d289ac3267472ef28c3cf"
+    },
+    {
+      "path": "sample/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "882030e212ff690565008d8a30a34b2c0594d944",
+      "size": 1481,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/882030e212ff690565008d8a30a34b2c0594d944"
+    },
+    {
+      "path": "sample/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b274df54b01539a84c872079597d7582a9caa4",
+      "size": 2741,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/33b274df54b01539a84c872079597d7582a9caa4"
+    },
+    {
+      "path": "sample/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ecff8ff73c4aaf9b54ae855bfcc1e7ce5ab4867",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/7ecff8ff73c4aaf9b54ae855bfcc1e7ce5ab4867"
+    },
+    {
+      "path": "sample/src/sample_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "321d313d814d274011c867fc8262b4dff977398e",
+      "size": 541,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/321d313d814d274011c867fc8262b4dff977398e"
+    },
+    {
+      "path": "sample/src/trivial_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "633fc95e78513a2305468336c70b88bfa61ae291",
+      "size": 2283,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/633fc95e78513a2305468336c70b88bfa61ae291"
+    },
+    {
+      "path": "sample/src/trivial_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64b25aef11fbf8eb7b4374f5672e775dd193715e",
+      "size": 760,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/64b25aef11fbf8eb7b4374f5672e775dd193715e"
+    },
+    {
+      "path": "sample/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c80595b430a26731740750c3ee0f0d515219b7c",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/4c80595b430a26731740750c3ee0f0d515219b7c"
+    },
+    {
+      "path": "sample/test/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4955a026f7a77307109c1e601020abb95bfd1bb3",
+      "size": 462,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4955a026f7a77307109c1e601020abb95bfd1bb3"
+    },
+    {
+      "path": "sample/test/sample_test_main.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8dc99b137e932a87944d42462020064c480b774",
+      "size": 274,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d8dc99b137e932a87944d42462020064c480b774"
+    },
+    {
+      "path": "sample/test/trivial_translator_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "173f14e9ddb5311da1932ddaa4f9327fc4c8be0f",
+      "size": 1509,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/173f14e9ddb5311da1932ddaa4f9327fc4c8be0f"
+    },
+    {
+      "path": "sample/tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed2c87d073b464229f0f41d544bf77a8aee44fc6",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/ed2c87d073b464229f0f41d544bf77a8aee44fc6"
+    },
+    {
+      "path": "sample/tools/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33e01f5b7efde4dbc3a3893590712b08224ec78e",
+      "size": 497,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/33e01f5b7efde4dbc3a3893590712b08224ec78e"
+    },
+    {
+      "path": "sample/tools/default.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0eeffe5ff474072390a9324a9fb6802ebbb6f30",
+      "size": 2701,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d0eeffe5ff474072390a9324a9fb6802ebbb6f30"
+    },
+    {
+      "path": "sample/tools/sample.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f08e3e5caf42ea6c06062547c717ee04d383a1e",
+      "size": 569,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7f08e3e5caf42ea6c06062547c717ee04d383a1e"
+    },
+    {
+      "path": "sample/tools/sample_console.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07264488c8daf7c2f64e08ac576a5eb8b94a9c6d",
+      "size": 4802,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/07264488c8daf7c2f64e08ac576a5eb8b94a9c6d"
+    },
+    {
+      "path": "sample/travis-install.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a49afddeacb3847abc5461173c5a6faa9d0dd9a0",
+      "size": 264,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a49afddeacb3847abc5461173c5a6faa9d0dd9a0"
+    },
+    {
+      "path": "share",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/4a19f9e56fbf0a0a2e7bcef39daadc0adfd71f9b"
+    },
+    {
+      "path": "share/.placeholder",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16dda9f19b2b33f0090ea3bf2b4182d227b3ce60",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/16dda9f19b2b33f0090ea3bf2b4182d227b3ce60"
+    },
+    {
+      "path": "src/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8faa61f89c661c7dcb73b85e149696147fb3c552",
+      "size": 5586,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8faa61f89c661c7dcb73b85e149696147fb3c552"
+    },
+    {
+      "path": "src/rime.rc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbe507ccdefbbae9b0166a4313c7a61f021f2942",
+      "size": 1810,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/dbe507ccdefbbae9b0166a4313c7a61f021f2942"
+    },
+    {
+      "path": "src/rime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ea5f4390f39fcc569504004ecfa64c7465c081d",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/1ea5f4390f39fcc569504004ecfa64c7465c081d"
+    },
+    {
+      "path": "src/rime/algo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63fb7ec5a61026d8caf44be5c6693d88cd938a8b",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/63fb7ec5a61026d8caf44be5c6693d88cd938a8b"
+    },
+    {
+      "path": "src/rime/algo/algebra.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3aedf41ea068a151ac06610f8bba249ab04f1ed",
+      "size": 3582,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c3aedf41ea068a151ac06610f8bba249ab04f1ed"
+    },
+    {
+      "path": "src/rime/algo/algebra.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a034da9d68913ba6d4ff636939408b08a7530ae4",
+      "size": 889,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a034da9d68913ba6d4ff636939408b08a7530ae4"
+    },
+    {
+      "path": "src/rime/algo/calculus.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "504f8dad5655b0679830607ad713a5c38340d4d1",
+      "size": 6168,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/504f8dad5655b0679830607ad713a5c38340d4d1"
+    },
+    {
+      "path": "src/rime/algo/calculus.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eece2c1bc7c0b35293439ddc262f39a9d76100a",
+      "size": 2022,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9eece2c1bc7c0b35293439ddc262f39a9d76100a"
+    },
+    {
+      "path": "src/rime/algo/dynamics.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3db4286af2ac01d7c31b2678601329098aa528a1",
+      "size": 483,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3db4286af2ac01d7c31b2678601329098aa528a1"
+    },
+    {
+      "path": "src/rime/algo/encoder.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64290424a83fe0ef6a084fd9237a51aed17e5a7c",
+      "size": 10554,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/64290424a83fe0ef6a084fd9237a51aed17e5a7c"
+    },
+    {
+      "path": "src/rime/algo/encoder.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f3dcc48ee708eb52e5d06a6be828fc884b8590f",
+      "size": 2980,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0f3dcc48ee708eb52e5d06a6be828fc884b8590f"
+    },
+    {
+      "path": "src/rime/algo/fs.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61be7c4f102059e9c99a2d9bffb51b9666657ff7",
+      "size": 458,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/61be7c4f102059e9c99a2d9bffb51b9666657ff7"
+    },
+    {
+      "path": "src/rime/algo/spelling.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25ed7511f59c52bd143509b71012fd40973190c",
+      "size": 996,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a25ed7511f59c52bd143509b71012fd40973190c"
+    },
+    {
+      "path": "src/rime/algo/spelling.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5242f6d5745eb0a0107fe28b12cce1f63b9a314e",
+      "size": 1094,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5242f6d5745eb0a0107fe28b12cce1f63b9a314e"
+    },
+    {
+      "path": "src/rime/algo/strings.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acbb040ae9f5bdb0460b2f59a13d03578c38d440",
+      "size": 989,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/acbb040ae9f5bdb0460b2f59a13d03578c38d440"
+    },
+    {
+      "path": "src/rime/algo/strings.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "222476d2fadf9e97af1725982b9ab1f2d7e0d5ac",
+      "size": 1050,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/222476d2fadf9e97af1725982b9ab1f2d7e0d5ac"
+    },
+    {
+      "path": "src/rime/algo/syllabifier.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7ed6b797398316e709aba86f441599d91c03fed",
+      "size": 10982,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b7ed6b797398316e709aba86f441599d91c03fed"
+    },
+    {
+      "path": "src/rime/algo/syllabifier.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1167e29677f15a8534b122c0c37009890edd4909",
+      "size": 1967,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1167e29677f15a8534b122c0c37009890edd4909"
+    },
+    {
+      "path": "src/rime/algo/utilities.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54e2b4324f1543b42b939df28dbf9301cf0ba1be",
+      "size": 1192,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/54e2b4324f1543b42b939df28dbf9301cf0ba1be"
+    },
+    {
+      "path": "src/rime/algo/utilities.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda119520447e73883a4ed666cf6d36b917840f1",
+      "size": 764,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cda119520447e73883a4ed666cf6d36b917840f1"
+    },
+    {
+      "path": "src/rime/build_config.h.in",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a40a9a55b9429a79f388369243121a9f1c2d5da0",
+      "size": 331,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a40a9a55b9429a79f388369243121a9f1c2d5da0"
+    },
+    {
+      "path": "src/rime/candidate.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbefbd06e43a01724c9e700868aa8966441aad7f",
+      "size": 1329,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cbefbd06e43a01724c9e700868aa8966441aad7f"
+    },
+    {
+      "path": "src/rime/candidate.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f75dcfec94a4b9385cf51b488fefaeee07ec230",
+      "size": 4438,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2f75dcfec94a4b9385cf51b488fefaeee07ec230"
+    },
+    {
+      "path": "src/rime/commit_history.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "622ceebdaff5646c76be34d3918046dacd7ff448",
+      "size": 1791,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/622ceebdaff5646c76be34d3918046dacd7ff448"
+    },
+    {
+      "path": "src/rime/commit_history.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03b0714c89eacdff380b9caa99b091b3da261ae0",
+      "size": 883,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/03b0714c89eacdff380b9caa99b091b3da261ae0"
+    },
+    {
+      "path": "src/rime/common.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5dfaf9cf5a60ec43ac268882c3631a6fa45043e",
+      "size": 3762,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e5dfaf9cf5a60ec43ac268882c3631a6fa45043e"
+    },
+    {
+      "path": "src/rime/component.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786929114ef9b5448b0204358f306cc53b1c884c",
+      "size": 822,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/786929114ef9b5448b0204358f306cc53b1c884c"
+    },
+    {
+      "path": "src/rime/composition.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63820ffdffec69f8572d11552a829959f89d0f1d",
+      "size": 5064,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/63820ffdffec69f8572d11552a829959f89d0f1d"
+    },
+    {
+      "path": "src/rime/composition.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "428f19ee75e6e7ce5c8ad5be0abc86f5e8e19e03",
+      "size": 908,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/428f19ee75e6e7ce5c8ad5be0abc86f5e8e19e03"
+    },
+    {
+      "path": "src/rime/config.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f052b66d1d9b68f2efd747861f8612aecfa75b8",
+      "size": 226,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0f052b66d1d9b68f2efd747861f8612aecfa75b8"
+    },
+    {
+      "path": "src/rime/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8344ffb22958b3b7858997bf642c5ac3a8e770d1",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/8344ffb22958b3b7858997bf642c5ac3a8e770d1"
+    },
+    {
+      "path": "src/rime/config/auto_patch_config_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "397db5b320ff5a7fd28860bed0467fa507b684fe",
+      "size": 1574,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/397db5b320ff5a7fd28860bed0467fa507b684fe"
+    },
+    {
+      "path": "src/rime/config/build_info_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ead851cd85c0a385a2fc842b212ae5c8f3fa8a44",
+      "size": 1470,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ead851cd85c0a385a2fc842b212ae5c8f3fa8a44"
+    },
+    {
+      "path": "src/rime/config/config_compiler.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc90971fb0d88afd6a1f34f16f06b843e85da487",
+      "size": 18749,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/dc90971fb0d88afd6a1f34f16f06b843e85da487"
+    },
+    {
+      "path": "src/rime/config/config_compiler.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bfa41d6b0411e482024fd56b6983a585ca2e1b3",
+      "size": 2382,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5bfa41d6b0411e482024fd56b6983a585ca2e1b3"
+    },
+    {
+      "path": "src/rime/config/config_compiler_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4529e6743b3263705f5fcec66215b71028151cb0",
+      "size": 2200,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4529e6743b3263705f5fcec66215b71028151cb0"
+    },
+    {
+      "path": "src/rime/config/config_component.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60c1107844b8487dd3261b059e50d6dea906e281",
+      "size": 7711,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/60c1107844b8487dd3261b059e50d6dea906e281"
+    },
+    {
+      "path": "src/rime/config/config_component.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "072968179e97c2183264a4d9808c5dfdb0caaf3f",
+      "size": 4920,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/072968179e97c2183264a4d9808c5dfdb0caaf3f"
+    },
+    {
+      "path": "src/rime/config/config_cow_ref.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a83365f4588683f400b1453e82628acdb64e0a50",
+      "size": 2718,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a83365f4588683f400b1453e82628acdb64e0a50"
+    },
+    {
+      "path": "src/rime/config/config_data.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e73dbd058443de96ad607f9d63c595bcf34c2f",
+      "size": 9873,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e3e73dbd058443de96ad607f9d63c595bcf34c2f"
+    },
+    {
+      "path": "src/rime/config/config_data.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daec1b2229331ca01f1f46866a633ac454dcce40",
+      "size": 1429,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/daec1b2229331ca01f1f46866a633ac454dcce40"
+    },
+    {
+      "path": "src/rime/config/config_types.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25e299621200df3ababf80befbec25274884b2aa",
+      "size": 5934,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/25e299621200df3ababf80befbec25274884b2aa"
+    },
+    {
+      "path": "src/rime/config/config_types.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f44309bb77b05ddde5dcb70ded4f8e74634439d8",
+      "size": 5332,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f44309bb77b05ddde5dcb70ded4f8e74634439d8"
+    },
+    {
+      "path": "src/rime/config/default_config_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b715f18755b8eea24ee38c8a248f36005e8a7d2a",
+      "size": 1486,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b715f18755b8eea24ee38c8a248f36005e8a7d2a"
+    },
+    {
+      "path": "src/rime/config/legacy_dictionary_config_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a2516d980d5c60507d9e01511ae5b79b3797458",
+      "size": 516,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1a2516d980d5c60507d9e01511ae5b79b3797458"
+    },
+    {
+      "path": "src/rime/config/legacy_preset_config_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f64657d23a74e4e38607fc2d3d04ca14d8ad19d5",
+      "size": 3108,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f64657d23a74e4e38607fc2d3d04ca14d8ad19d5"
+    },
+    {
+      "path": "src/rime/config/plugins.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e1a963d98f6bfdc105463915b38b153684553bc",
+      "size": 1461,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4e1a963d98f6bfdc105463915b38b153684553bc"
+    },
+    {
+      "path": "src/rime/config/save_output_plugin.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89af4243f08f2c5b0285590577be96e5e8ec5201",
+      "size": 967,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/89af4243f08f2c5b0285590577be96e5e8ec5201"
+    },
+    {
+      "path": "src/rime/context.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec840a3e65eb9218b1efbd7a67c3564436cf2432",
+      "size": 8108,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ec840a3e65eb9218b1efbd7a67c3564436cf2432"
+    },
+    {
+      "path": "src/rime/context.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5261300e0eebaf79f50fbc28e840672ec339ab5",
+      "size": 3774,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d5261300e0eebaf79f50fbc28e840672ec339ab5"
+    },
+    {
+      "path": "src/rime/core_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43c3cb0906514d6ecc224d6ffcf04406e79edfca",
+      "size": 1500,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/43c3cb0906514d6ecc224d6ffcf04406e79edfca"
+    },
+    {
+      "path": "src/rime/deployer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92c52afd0e90ba21ca410a07a4e1767191cedad9",
+      "size": 3848,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/92c52afd0e90ba21ca410a07a4e1767191cedad9"
+    },
+    {
+      "path": "src/rime/deployer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c13bc10fda419ad423a8475aa59baa081a5b19e5",
+      "size": 1818,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c13bc10fda419ad423a8475aa59baa081a5b19e5"
+    },
+    {
+      "path": "src/rime/dict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c01424993eb7e94c5ec217cd8da968825f7caaf9",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/c01424993eb7e94c5ec217cd8da968825f7caaf9"
+    },
+    {
+      "path": "src/rime/dict/corrector.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85cac5ce24fdcd4f65a58cedd799f3d7e9195d42",
+      "size": 9927,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/85cac5ce24fdcd4f65a58cedd799f3d7e9195d42"
+    },
+    {
+      "path": "src/rime/dict/corrector.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f363419fae6575af8faac5c3906133af79c6a617",
+      "size": 3787,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f363419fae6575af8faac5c3906133af79c6a617"
+    },
+    {
+      "path": "src/rime/dict/db.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de8109e204e5751960b8559a283d8c5f6a836718",
+      "size": 1441,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/de8109e204e5751960b8559a283d8c5f6a836718"
+    },
+    {
+      "path": "src/rime/dict/db.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d007c86bd697d20c8acbc651a23e4c5a0e21694",
+      "size": 2998,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4d007c86bd697d20c8acbc651a23e4c5a0e21694"
+    },
+    {
+      "path": "src/rime/dict/db_pool.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f54174e31e5cf2f1c70a12e787fad67baeb5995c",
+      "size": 430,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f54174e31e5cf2f1c70a12e787fad67baeb5995c"
+    },
+    {
+      "path": "src/rime/dict/db_pool_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "467f66b8e61fbfa7675bfea08d787e7bc23dcbb4",
+      "size": 575,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/467f66b8e61fbfa7675bfea08d787e7bc23dcbb4"
+    },
+    {
+      "path": "src/rime/dict/db_utils.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3f28d524a5c5dc949313c3c3ba7a54ab2d9b52f",
+      "size": 1096,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a3f28d524a5c5dc949313c3c3ba7a54ab2d9b52f"
+    },
+    {
+      "path": "src/rime/dict/db_utils.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "692f5501ee9e63ee8499862361fa8ffbf916fe59",
+      "size": 1469,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/692f5501ee9e63ee8499862361fa8ffbf916fe59"
+    },
+    {
+      "path": "src/rime/dict/dict_compiler.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5996ee2cc3e775233e1d3201cfa14c993bd26da6",
+      "size": 12958,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5996ee2cc3e775233e1d3201cfa14c993bd26da6"
+    },
+    {
+      "path": "src/rime/dict/dict_compiler.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "853671479426e042c56be70c249ba7b8e5c61c0c",
+      "size": 1673,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/853671479426e042c56be70c249ba7b8e5c61c0c"
+    },
+    {
+      "path": "src/rime/dict/dict_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7131fa8cf30df0e108282310760e85d9f63278d0",
+      "size": 1508,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7131fa8cf30df0e108282310760e85d9f63278d0"
+    },
+    {
+      "path": "src/rime/dict/dict_settings.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2438ee496a3b166ecc05e9a7cd07c65330ef42f",
+      "size": 2870,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f2438ee496a3b166ecc05e9a7cd07c65330ef42f"
+    },
+    {
+      "path": "src/rime/dict/dict_settings.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3da7216f6cb33643efbe5d928e05cc7ad0094d63",
+      "size": 748,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3da7216f6cb33643efbe5d928e05cc7ad0094d63"
+    },
+    {
+      "path": "src/rime/dict/dictionary.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f21a347838eecfaff6dee4c04a78d2738f0e13",
+      "size": 14937,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/58f21a347838eecfaff6dee4c04a78d2738f0e13"
+    },
+    {
+      "path": "src/rime/dict/dictionary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1127e5a22ccee782b69a6dea86063226bfcb51a",
+      "size": 3506,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f1127e5a22ccee782b69a6dea86063226bfcb51a"
+    },
+    {
+      "path": "src/rime/dict/entry_collector.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48d94027530a93fd4ca2656fe3ec9369fd70ef0c",
+      "size": 8472,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/48d94027530a93fd4ca2656fe3ec9369fd70ef0c"
+    },
+    {
+      "path": "src/rime/dict/entry_collector.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc39cb799c0d7a5bd604f6b7b546290e01387745",
+      "size": 2073,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/dc39cb799c0d7a5bd604f6b7b546290e01387745"
+    },
+    {
+      "path": "src/rime/dict/level_db.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a2eb3debce88148e8844e4747993c6f5882f944",
+      "size": 7947,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9a2eb3debce88148e8844e4747993c6f5882f944"
+    },
+    {
+      "path": "src/rime/dict/level_db.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578ed057955a50ebbf1ae8b282f1b3904752c054",
+      "size": 1867,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/578ed057955a50ebbf1ae8b282f1b3904752c054"
+    },
+    {
+      "path": "src/rime/dict/mapped_file.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a5f75c0b36e99662afad9ddba9c7c7c05e0f156",
+      "size": 4144,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5a5f75c0b36e99662afad9ddba9c7c7c05e0f156"
+    },
+    {
+      "path": "src/rime/dict/mapped_file.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd469eee08665a23ca27a408463d8a6e38df07fc",
+      "size": 4291,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bd469eee08665a23ca27a408463d8a6e38df07fc"
+    },
+    {
+      "path": "src/rime/dict/preset_vocabulary.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c6f0930f4886a4bffc65fdab6151fde6112ccd0",
+      "size": 3148,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4c6f0930f4886a4bffc65fdab6151fde6112ccd0"
+    },
+    {
+      "path": "src/rime/dict/preset_vocabulary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2094309393dd0605d784c7a2fc724bdac13aaa07",
+      "size": 961,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2094309393dd0605d784c7a2fc724bdac13aaa07"
+    },
+    {
+      "path": "src/rime/dict/prism.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ea7d264f199874145245ec7febfc8f92ddc060d",
+      "size": 9967,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6ea7d264f199874145245ec7febfc8f92ddc060d"
+    },
+    {
+      "path": "src/rime/dict/prism.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84e064a0b8b829c6a0b4ebe4d0a3719c10ff86e9",
+      "size": 2592,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/84e064a0b8b829c6a0b4ebe4d0a3719c10ff86e9"
+    },
+    {
+      "path": "src/rime/dict/reverse_lookup_dictionary.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e0459123e565be1ee708b5c51952729b3e238a0",
+      "size": 8023,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4e0459123e565be1ee708b5c51952729b3e238a0"
+    },
+    {
+      "path": "src/rime/dict/reverse_lookup_dictionary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "692aceac0ac83d24c932335763fe4e1e7e5545a6",
+      "size": 2226,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/692aceac0ac83d24c932335763fe4e1e7e5545a6"
+    },
+    {
+      "path": "src/rime/dict/string_table.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8a03dd80253e8580aecd6efff3cca70df280661",
+      "size": 2593,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e8a03dd80253e8580aecd6efff3cca70df280661"
+    },
+    {
+      "path": "src/rime/dict/string_table.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "204878dd27c35547383488c261c43d62ef93ed2f",
+      "size": 1272,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/204878dd27c35547383488c261c43d62ef93ed2f"
+    },
+    {
+      "path": "src/rime/dict/table.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af7e70b3f1ef0aff36da3c771059d0b06647562c",
+      "size": 18714,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/af7e70b3f1ef0aff36da3c771059d0b06647562c"
+    },
+    {
+      "path": "src/rime/dict/table.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a697b3d8fff567e50f21eb698f9cf0372aa7be7",
+      "size": 6957,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9a697b3d8fff567e50f21eb698f9cf0372aa7be7"
+    },
+    {
+      "path": "src/rime/dict/table_db.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "804f9c7b59efd8fa5d1b79ff1e55da3a56582d5b",
+      "size": 2339,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/804f9c7b59efd8fa5d1b79ff1e55da3a56582d5b"
+    },
+    {
+      "path": "src/rime/dict/table_db.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb962b5427e66f5d663d5b8e54d7d3c0d08075e7",
+      "size": 557,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/eb962b5427e66f5d663d5b8e54d7d3c0d08075e7"
+    },
+    {
+      "path": "src/rime/dict/text_db.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf72e16b47a5cd405f73289584a749f0e95ca421",
+      "size": 5267,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bf72e16b47a5cd405f73289584a749f0e95ca421"
+    },
+    {
+      "path": "src/rime/dict/text_db.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff9a0bca99e185f282c8153f6be075bc9c3f9bdd",
+      "size": 2002,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ff9a0bca99e185f282c8153f6be075bc9c3f9bdd"
+    },
+    {
+      "path": "src/rime/dict/tsv.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e859ab0a024c90c0952ed6b1a2b80ecfd1fe6b2f",
+      "size": 2439,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e859ab0a024c90c0952ed6b1a2b80ecfd1fe6b2f"
+    },
+    {
+      "path": "src/rime/dict/tsv.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9efabf93dddfcfab38e869d8470718e823758283",
+      "size": 1479,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9efabf93dddfcfab38e869d8470718e823758283"
+    },
+    {
+      "path": "src/rime/dict/user_db.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8f67887558996d6a3b6e724cd2414eae9758b1b",
+      "size": 6776,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e8f67887558996d6a3b6e724cd2414eae9758b1b"
+    },
+    {
+      "path": "src/rime/dict/user_db.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6740e993e8a7351a96bde515a187ebc53c4cf35d",
+      "size": 3632,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6740e993e8a7351a96bde515a187ebc53c4cf35d"
+    },
+    {
+      "path": "src/rime/dict/user_db_recovery_task.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e602147c93dc03f88d255a97823ac5b8fa5e1119",
+      "size": 2654,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e602147c93dc03f88d255a97823ac5b8fa5e1119"
+    },
+    {
+      "path": "src/rime/dict/user_db_recovery_task.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc9d9259c925677746dc19e2845fd98bb661d691",
+      "size": 703,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fc9d9259c925677746dc19e2845fd98bb661d691"
+    },
+    {
+      "path": "src/rime/dict/user_dictionary.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2944c2dbd39f4e21d119853ce80815f4fc8d4e17",
+      "size": 19802,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2944c2dbd39f4e21d119853ce80815f4fc8d4e17"
+    },
+    {
+      "path": "src/rime/dict/user_dictionary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ebeac0f085021897f62cb137017bfb74d2bfe4d",
+      "size": 3530,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5ebeac0f085021897f62cb137017bfb74d2bfe4d"
+    },
+    {
+      "path": "src/rime/dict/vocabulary.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d09514ab887a3072b9e114dbf73bc60904c7d34",
+      "size": 3686,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2d09514ab887a3072b9e114dbf73bc60904c7d34"
+    },
+    {
+      "path": "src/rime/dict/vocabulary.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7753d942bae24207af73f427b69d69210a07da7",
+      "size": 2599,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c7753d942bae24207af73f427b69d69210a07da7"
+    },
+    {
+      "path": "src/rime/engine.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a54f64cbae31a608eb3b3e73c4d86991c331aac",
+      "size": 12540,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4a54f64cbae31a608eb3b3e73c4d86991c331aac"
+    },
+    {
+      "path": "src/rime/engine.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b51a68eb5b6d6c41b0cc63b53affb6bf93d7b91",
+      "size": 1169,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6b51a68eb5b6d6c41b0cc63b53affb6bf93d7b91"
+    },
+    {
+      "path": "src/rime/filter.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd987d48d3b8437ec43eb4bfe025ef4873864928",
+      "size": 895,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fd987d48d3b8437ec43eb4bfe025ef4873864928"
+    },
+    {
+      "path": "src/rime/formatter.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62ca708281dcfa10e5e1e37498d05b2be4d2daad",
+      "size": 639,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/62ca708281dcfa10e5e1e37498d05b2be4d2daad"
+    },
+    {
+      "path": "src/rime/gear",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb0cb48ec407acbb3652d9220b8121053f49234d",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/cb0cb48ec407acbb3652d9220b8121053f49234d"
+    },
+    {
+      "path": "src/rime/gear/abc_segmentor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e9deb88830e29489187433726dd203a1e12bfa2",
+      "size": 2193,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1e9deb88830e29489187433726dd203a1e12bfa2"
+    },
+    {
+      "path": "src/rime/gear/abc_segmentor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d705605cd44896621caf2a052079853c5584f56c",
+      "size": 555,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d705605cd44896621caf2a052079853c5584f56c"
+    },
+    {
+      "path": "src/rime/gear/affix_segmentor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a2eec99b45c77829208d47ded579516437fc0e4",
+      "size": 3795,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4a2eec99b45c77829208d47ded579516437fc0e4"
+    },
+    {
+      "path": "src/rime/gear/affix_segmentor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf6475e6c17c475964eba51b3452d8eaf9c24479",
+      "size": 577,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cf6475e6c17c475964eba51b3452d8eaf9c24479"
+    },
+    {
+      "path": "src/rime/gear/ascii_composer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49dc3877b3354eb2769acc911c73a1274b22985",
+      "size": 9715,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e49dc3877b3354eb2769acc911c73a1274b22985"
+    },
+    {
+      "path": "src/rime/gear/ascii_composer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "756771ff46d70a71e573359ed676fb6293bdf426",
+      "size": 1578,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/756771ff46d70a71e573359ed676fb6293bdf426"
+    },
+    {
+      "path": "src/rime/gear/ascii_segmentor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e3de8595e80d872720e32b921408ae0f3935e9",
+      "size": 849,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/32e3de8595e80d872720e32b921408ae0f3935e9"
+    },
+    {
+      "path": "src/rime/gear/ascii_segmentor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6fa8bce1975419f07ac44a577f86f1aceb8ef3b",
+      "size": 446,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e6fa8bce1975419f07ac44a577f86f1aceb8ef3b"
+    },
+    {
+      "path": "src/rime/gear/charset_filter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "145dd59bfb22313b1df6c66a2f16b28ab7bdabd0",
+      "size": 3359,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/145dd59bfb22313b1df6c66a2f16b28ab7bdabd0"
+    },
+    {
+      "path": "src/rime/gear/charset_filter.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b6530a2da43c145e28df9e45e25e476414d4fb",
+      "size": 1261,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/22b6530a2da43c145e28df9e45e25e476414d4fb"
+    },
+    {
+      "path": "src/rime/gear/chord_composer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "789697b741b5db4c64f699eeb7cbcebedb17aa10",
+      "size": 8666,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/789697b741b5db4c64f699eeb7cbcebedb17aa10"
+    },
+    {
+      "path": "src/rime/gear/chord_composer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35537f2444628cd0bb3e65808d252f4dce373543",
+      "size": 2182,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/35537f2444628cd0bb3e65808d252f4dce373543"
+    },
+    {
+      "path": "src/rime/gear/contextual_translation.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b037749c710aeecd5cc4ec15be430e4574f69ebc",
+      "size": 2054,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b037749c710aeecd5cc4ec15be430e4574f69ebc"
+    },
+    {
+      "path": "src/rime/gear/contextual_translation.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e817ea4c23ca017e2ebef571e8d4b2cdce5e19bc",
+      "size": 811,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e817ea4c23ca017e2ebef571e8d4b2cdce5e19bc"
+    },
+    {
+      "path": "src/rime/gear/echo_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d49d4c6295c0dae5bcdabda50d4a0ef845018f57",
+      "size": 1275,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d49d4c6295c0dae5bcdabda50d4a0ef845018f57"
+    },
+    {
+      "path": "src/rime/gear/echo_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55e838d575cf3455602e0e20c1a912d5eae76405",
+      "size": 465,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/55e838d575cf3455602e0e20c1a912d5eae76405"
+    },
+    {
+      "path": "src/rime/gear/editor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37b3dda622b8745dbf337a95cf438aeeafbd4e54",
+      "size": 6849,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/37b3dda622b8745dbf337a95cf438aeeafbd4e54"
+    },
+    {
+      "path": "src/rime/gear/editor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72a00a7ea85d06ba6bc63785d251c880af12404a",
+      "size": 1363,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/72a00a7ea85d06ba6bc63785d251c880af12404a"
+    },
+    {
+      "path": "src/rime/gear/fallback_segmentor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bef53ea5ca7338f36f8918ebc659cbe37350fa5a",
+      "size": 1697,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bef53ea5ca7338f36f8918ebc659cbe37350fa5a"
+    },
+    {
+      "path": "src/rime/gear/fallback_segmentor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b55d1a337607022d24b0ba47ba2a10b8572a687",
+      "size": 461,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1b55d1a337607022d24b0ba47ba2a10b8572a687"
+    },
+    {
+      "path": "src/rime/gear/filter_commons.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0ac39a016326f3e810774893a226d8271259e85",
+      "size": 884,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b0ac39a016326f3e810774893a226d8271259e85"
+    },
+    {
+      "path": "src/rime/gear/filter_commons.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de1a58da96ca61a023f2480e255d04aa220660fc",
+      "size": 441,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/de1a58da96ca61a023f2480e255d04aa220660fc"
+    },
+    {
+      "path": "src/rime/gear/gears_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59679b07cfaf499c7f77f15d95f3f6f812853bf8",
+      "size": 3763,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/59679b07cfaf499c7f77f15d95f3f6f812853bf8"
+    },
+    {
+      "path": "src/rime/gear/grammar.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccd99007ff1c9c0c9bf0581e9ee593d38d7be812",
+      "size": 854,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ccd99007ff1c9c0c9bf0581e9ee593d38d7be812"
+    },
+    {
+      "path": "src/rime/gear/history_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d49c7244111806c7c41d106ffdf48bd3a321d1c4",
+      "size": 1651,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d49c7244111806c7c41d106ffdf48bd3a321d1c4"
+    },
+    {
+      "path": "src/rime/gear/history_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eaebd9cae8b3067bb3dbb572b71021e10d2c2279",
+      "size": 558,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/eaebd9cae8b3067bb3dbb572b71021e10d2c2279"
+    },
+    {
+      "path": "src/rime/gear/key_binder.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1e67c905ea899f2dbf6ac3d1e9d23c779c1a95c",
+      "size": 10271,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f1e67c905ea899f2dbf6ac3d1e9d23c779c1a95c"
+    },
+    {
+      "path": "src/rime/gear/key_binder.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fc1a1d748f612f7bde831f3af2d2865e7a8a658",
+      "size": 735,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0fc1a1d748f612f7bde831f3af2d2865e7a8a658"
+    },
+    {
+      "path": "src/rime/gear/key_binding_processor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3649dd40b78e9db418bf7c917a340f77c8742dca",
+      "size": 1606,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3649dd40b78e9db418bf7c917a340f77c8742dca"
+    },
+    {
+      "path": "src/rime/gear/key_binding_processor_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e283770b14a568e8a1005f563aacdc8c549058c3",
+      "size": 3145,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e283770b14a568e8a1005f563aacdc8c549058c3"
+    },
+    {
+      "path": "src/rime/gear/matcher.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf5eb10035108558fdccd9d91d6332be346e487",
+      "size": 1170,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/adf5eb10035108558fdccd9d91d6332be346e487"
+    },
+    {
+      "path": "src/rime/gear/matcher.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f136ea8de3453503be390b9efd4c57c46c719719",
+      "size": 477,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f136ea8de3453503be390b9efd4c57c46c719719"
+    },
+    {
+      "path": "src/rime/gear/memory.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9da80fa99b6b251298843ae88f62369fff486609",
+      "size": 4448,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9da80fa99b6b251298843ae88f62369fff486609"
+    },
+    {
+      "path": "src/rime/gear/memory.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b9612ee0b34d6ec102286efc9f9a43d5250d60d",
+      "size": 1592,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8b9612ee0b34d6ec102286efc9f9a43d5250d60d"
+    },
+    {
+      "path": "src/rime/gear/navigator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a5fb46d403694415339ce2448cb7b9ff45b27e1",
+      "size": 11191,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5a5fb46d403694415339ce2448cb7b9ff45b27e1"
+    },
+    {
+      "path": "src/rime/gear/navigator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f218f508d36b2a107ae444bbc20a985431910071",
+      "size": 1813,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f218f508d36b2a107ae444bbc20a985431910071"
+    },
+    {
+      "path": "src/rime/gear/poet.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "963dd796d2e367e9fd1c0dbb6ba2a8b8da6bc33d",
+      "size": 12063,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/963dd796d2e367e9fd1c0dbb6ba2a8b8da6bc33d"
+    },
+    {
+      "path": "src/rime/gear/poet.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bd82ca5175410e327f90e27dd91370080fe5910",
+      "size": 2303,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1bd82ca5175410e327f90e27dd91370080fe5910"
+    },
+    {
+      "path": "src/rime/gear/punctuator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c20b9222b3a3751dbfa1c78bf55a404c559d5a5",
+      "size": 14591,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0c20b9222b3a3751dbfa1c78bf55a404c559d5a5"
+    },
+    {
+      "path": "src/rime/gear/punctuator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b75388e3d85360fa42caaed7099391a08d2073c3",
+      "size": 2844,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b75388e3d85360fa42caaed7099391a08d2073c3"
+    },
+    {
+      "path": "src/rime/gear/recognizer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86f36ad962413468390c4d440d1dd63c9836c47c",
+      "size": 3141,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/86f36ad962413468390c4d440d1dd63c9836c47c"
+    },
+    {
+      "path": "src/rime/gear/recognizer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64567b8f10ac1bed9841d76603f00643ca675475",
+      "size": 1112,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/64567b8f10ac1bed9841d76603f00643ca675475"
+    },
+    {
+      "path": "src/rime/gear/reverse_lookup_filter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0925aa52f07ac021c24efa303e96b98d2fc236cd",
+      "size": 2586,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/0925aa52f07ac021c24efa303e96b98d2fc236cd"
+    },
+    {
+      "path": "src/rime/gear/reverse_lookup_filter.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28aadb3c3c374bc5a230c9e1eac5690ad291109a",
+      "size": 1022,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/28aadb3c3c374bc5a230c9e1eac5690ad291109a"
+    },
+    {
+      "path": "src/rime/gear/reverse_lookup_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8c9e97301b9be0bfbdf57bca65146c2b3bb617e",
+      "size": 6433,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c8c9e97301b9be0bfbdf57bca65146c2b3bb617e"
+    },
+    {
+      "path": "src/rime/gear/reverse_lookup_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ca038f61471eef1cacac6973927741c45858946",
+      "size": 877,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7ca038f61471eef1cacac6973927741c45858946"
+    },
+    {
+      "path": "src/rime/gear/schema_list_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "166fdcd294f62d6267ff9cbc8d0e178e71e42e56",
+      "size": 4319,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/166fdcd294f62d6267ff9cbc8d0e178e71e42e56"
+    },
+    {
+      "path": "src/rime/gear/schema_list_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd0d172052fca4a540c01d3acc83de4bf489bc6c",
+      "size": 523,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fd0d172052fca4a540c01d3acc83de4bf489bc6c"
+    },
+    {
+      "path": "src/rime/gear/script_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef62178d307b84e2a3fe65c2d70b95c6f70bed3",
+      "size": 25100,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/aef62178d307b84e2a3fe65c2d70b95c6f70bed3"
+    },
+    {
+      "path": "src/rime/gear/script_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5b60a7addedac77c16d1bed1bab32065cebbec9",
+      "size": 2116,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e5b60a7addedac77c16d1bed1bab32065cebbec9"
+    },
+    {
+      "path": "src/rime/gear/selector.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c55e94ff7e4de0d7b05c6d807658e873c00b0d1",
+      "size": 9305,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3c55e94ff7e4de0d7b05c6d807658e873c00b0d1"
+    },
+    {
+      "path": "src/rime/gear/selector.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4bfce00c28221467670612834defa3cbb20c21",
+      "size": 887,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5e4bfce00c28221467670612834defa3cbb20c21"
+    },
+    {
+      "path": "src/rime/gear/shape.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09748afa0000ac8a17041db9980ee3db3c5f21de",
+      "size": 1365,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/09748afa0000ac8a17041db9980ee3db3c5f21de"
+    },
+    {
+      "path": "src/rime/gear/shape.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ba53a11fa20143c7dbfee2234a6cb252d5560e",
+      "size": 697,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/16ba53a11fa20143c7dbfee2234a6cb252d5560e"
+    },
+    {
+      "path": "src/rime/gear/simplifier.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b337cf1a66cad322fe770086accd71f3293f8c55",
+      "size": 11294,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b337cf1a66cad322fe770086accd71f3293f8c55"
+    },
+    {
+      "path": "src/rime/gear/simplifier.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe8e328412a794fc11ca430fa4d0429e1fc8277",
+      "size": 1392,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ffe8e328412a794fc11ca430fa4d0429e1fc8277"
+    },
+    {
+      "path": "src/rime/gear/single_char_filter.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7164aff4681b53c7ce6835bc5c91f8e3fd2fe64",
+      "size": 1688,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f7164aff4681b53c7ce6835bc5c91f8e3fd2fe64"
+    },
+    {
+      "path": "src/rime/gear/single_char_filter.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e6c04d534dc093e82e242fdfba9aa206d64ad96",
+      "size": 522,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2e6c04d534dc093e82e242fdfba9aa206d64ad96"
+    },
+    {
+      "path": "src/rime/gear/speller.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4213de298a825c63e05cdc21f8507ac844198dc0",
+      "size": 8800,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4213de298a825c63e05cdc21f8507ac844198dc0"
+    },
+    {
+      "path": "src/rime/gear/speller.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c22465e27ea5a0714f21405bc02eb81b70e626f1",
+      "size": 1153,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c22465e27ea5a0714f21405bc02eb81b70e626f1"
+    },
+    {
+      "path": "src/rime/gear/switch_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f327a64df28634c8b73d55c393ca2c0cfcbfbeb1",
+      "size": 8738,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f327a64df28634c8b73d55c393ca2c0cfcbfbeb1"
+    },
+    {
+      "path": "src/rime/gear/switch_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8185a06d2ef235dba7dcd08a6d8eaf4e2d87138a",
+      "size": 476,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8185a06d2ef235dba7dcd08a6d8eaf4e2d87138a"
+    },
+    {
+      "path": "src/rime/gear/table_translator.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67bc229209b3e5f782291afbc622ebdb312fb715",
+      "size": 23215,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/67bc229209b3e5f782291afbc622ebdb312fb715"
+    },
+    {
+      "path": "src/rime/gear/table_translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7057ed4bd22614e6444b56cc33633f76952b1fef",
+      "size": 2440,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7057ed4bd22614e6444b56cc33633f76952b1fef"
+    },
+    {
+      "path": "src/rime/gear/translator_commons.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fc0f27260f6b1861decc09851e06c8e9069a5df",
+      "size": 4960,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7fc0f27260f6b1861decc09851e06c8e9069a5df"
+    },
+    {
+      "path": "src/rime/gear/translator_commons.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6217e5a768c50b67e6d2d11758d74e57249543d5",
+      "size": 5851,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6217e5a768c50b67e6d2d11758d74e57249543d5"
+    },
+    {
+      "path": "src/rime/gear/uniquifier.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067e912510732711c209bccf8f7788b0dbdfc8b3",
+      "size": 1934,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/067e912510732711c209bccf8f7788b0dbdfc8b3"
+    },
+    {
+      "path": "src/rime/gear/uniquifier.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd7adae1f7cedf7a82c126e19e39f34635977e1",
+      "size": 477,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ecd7adae1f7cedf7a82c126e19e39f34635977e1"
+    },
+    {
+      "path": "src/rime/gear/unity_table_encoder.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79852f7e315e16237e186de35b7c19c847589e3d",
+      "size": 2883,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/79852f7e315e16237e186de35b7c19c847589e3d"
+    },
+    {
+      "path": "src/rime/gear/unity_table_encoder.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f1d04461c144fecdfbcaa4c72735923fa0a33c9",
+      "size": 1224,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4f1d04461c144fecdfbcaa4c72735923fa0a33c9"
+    },
+    {
+      "path": "src/rime/key_event.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdfd9a114e7861d28acd8da3553d306ad4117fa7",
+      "size": 3433,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bdfd9a114e7861d28acd8da3553d306ad4117fa7"
+    },
+    {
+      "path": "src/rime/key_event.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fddd34cdbcaa2eaeeb30949dbde9911b46fa1b5",
+      "size": 2381,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9fddd34cdbcaa2eaeeb30949dbde9911b46fa1b5"
+    },
+    {
+      "path": "src/rime/key_table.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81cfdff17ce4cfeb1ef06422cb1ca35d7c54c272",
+      "size": 79069,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/81cfdff17ce4cfeb1ef06422cb1ca35d7c54c272"
+    },
+    {
+      "path": "src/rime/key_table.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e709a18ec6c60eabb21100a8c391e3ada82692f6",
+      "size": 1638,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e709a18ec6c60eabb21100a8c391e3ada82692f6"
+    },
+    {
+      "path": "src/rime/language.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5626499f8128feb577bf0c03968a63e68ed89007",
+      "size": 407,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5626499f8128feb577bf0c03968a63e68ed89007"
+    },
+    {
+      "path": "src/rime/language.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb4e0e12b6061c2ebfd879440197f34e132e91f0",
+      "size": 688,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cb4e0e12b6061c2ebfd879440197f34e132e91f0"
+    },
+    {
+      "path": "src/rime/lever",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f5d475dbc843cf3aa0122c721f261ffded17d601",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/f5d475dbc843cf3aa0122c721f261ffded17d601"
+    },
+    {
+      "path": "src/rime/lever/custom_settings.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25545d6b2fe32c9831f9473cc8cb55defda8c227",
+      "size": 2905,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/25545d6b2fe32c9831f9473cc8cb55defda8c227"
+    },
+    {
+      "path": "src/rime/lever/custom_settings.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd1dd64a76b911cf4ab7cf5b2e5bbef783b9073",
+      "size": 1007,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ecd1dd64a76b911cf4ab7cf5b2e5bbef783b9073"
+    },
+    {
+      "path": "src/rime/lever/customizer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b6a7cfd799cfe63133b77c4259ef5fddfc8d20d",
+      "size": 4440,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5b6a7cfd799cfe63133b77c4259ef5fddfc8d20d"
+    },
+    {
+      "path": "src/rime/lever/customizer.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a6b76cb4fccb6aaf37b85d68d5dcb39a8fc5544",
+      "size": 639,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/5a6b76cb4fccb6aaf37b85d68d5dcb39a8fc5544"
+    },
+    {
+      "path": "src/rime/lever/deployment_tasks.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e6ff8957001956437cf747767142e060c43336e",
+      "size": 23671,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/6e6ff8957001956437cf747767142e060c43336e"
+    },
+    {
+      "path": "src/rime/lever/deployment_tasks.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "484b0fb204172431f79e294d10cf26d2d148bd5e",
+      "size": 3265,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/484b0fb204172431f79e294d10cf26d2d148bd5e"
+    },
+    {
+      "path": "src/rime/lever/levers_api_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1da17b26357b1a9fad9c4a159f8a8f3251f17098",
+      "size": 10612,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1da17b26357b1a9fad9c4a159f8a8f3251f17098"
+    },
+    {
+      "path": "src/rime/lever/levers_module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "289b124795276ee21679e2c6391f1de3306ac941",
+      "size": 1352,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/289b124795276ee21679e2c6391f1de3306ac941"
+    },
+    {
+      "path": "src/rime/lever/levers_stdbool.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe1c2c671db4e74b9a2ed9130902e39f1a4e591c",
+      "size": 293,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fe1c2c671db4e74b9a2ed9130902e39f1a4e591c"
+    },
+    {
+      "path": "src/rime/lever/switcher_settings.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad8c91608db15efc41ac17d869b440fc2b64ca4b",
+      "size": 3914,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ad8c91608db15efc41ac17d869b440fc2b64ca4b"
+    },
+    {
+      "path": "src/rime/lever/switcher_settings.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ea902ba7d3a703e6557ac3b0d9bc9f1c50d528",
+      "size": 1148,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/84ea902ba7d3a703e6557ac3b0d9bc9f1c50d528"
+    },
+    {
+      "path": "src/rime/lever/user_dict_manager.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0331e4c0798c63e2bdeab1fd90f5d8b21943e93",
+      "size": 6774,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e0331e4c0798c63e2bdeab1fd90f5d8b21943e93"
+    },
+    {
+      "path": "src/rime/lever/user_dict_manager.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cefa8f84bc26abcc00ce64728f8a2cbfa4ac61e",
+      "size": 1255,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3cefa8f84bc26abcc00ce64728f8a2cbfa4ac61e"
+    },
+    {
+      "path": "src/rime/menu.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5cef6852030b526236257ea5c8316aa47d20ebf",
+      "size": 1903,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f5cef6852030b526236257ea5c8316aa47d20ebf"
+    },
+    {
+      "path": "src/rime/menu.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49a194799c47aeae06554fda53311896a515c184",
+      "size": 1092,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/49a194799c47aeae06554fda53311896a515c184"
+    },
+    {
+      "path": "src/rime/messenger.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39b92a74a327dd4db465d655eed901d6cb600485",
+      "size": 497,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/39b92a74a327dd4db465d655eed901d6cb600485"
+    },
+    {
+      "path": "src/rime/module.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c88e68b31e383b46786b4cbc83cd0630717e4cbd",
+      "size": 1215,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c88e68b31e383b46786b4cbc83cd0630717e4cbd"
+    },
+    {
+      "path": "src/rime/module.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a29e0397dc63de57cbad5fb0fd6aeac603463a19",
+      "size": 828,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a29e0397dc63de57cbad5fb0fd6aeac603463a19"
+    },
+    {
+      "path": "src/rime/no_logging.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf69fd1fc47fdfef7021c84c8c7d80d1e604f4a",
+      "size": 2383,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ddf69fd1fc47fdfef7021c84c8c7d80d1e604f4a"
+    },
+    {
+      "path": "src/rime/processor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c4a2277f3414347afb8ff27ee1d48257f69c651",
+      "size": 886,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9c4a2277f3414347afb8ff27ee1d48257f69c651"
+    },
+    {
+      "path": "src/rime/registry.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "979396c504ef8d68b4d60dca6ff17f07a7da49ad",
+      "size": 1242,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/979396c504ef8d68b4d60dca6ff17f07a7da49ad"
+    },
+    {
+      "path": "src/rime/registry.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "051c780212dcb7a18b9339c044dd72eaceaa9f50",
+      "size": 678,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/051c780212dcb7a18b9339c044dd72eaceaa9f50"
+    },
+    {
+      "path": "src/rime/resource.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "045e047f8a17bfa9e7e16b62441dd237de0ea24f",
+      "size": 1658,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/045e047f8a17bfa9e7e16b62441dd237de0ea24f"
+    },
+    {
+      "path": "src/rime/resource.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ffa2ef48266b4f6f6057a6a0dea86b183d782c8",
+      "size": 1268,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7ffa2ef48266b4f6f6057a6a0dea86b183d782c8"
+    },
+    {
+      "path": "src/rime/schema.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f60625c727ec73d4811a708285c59b456db0560",
+      "size": 1215,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8f60625c727ec73d4811a708285c59b456db0560"
+    },
+    {
+      "path": "src/rime/schema.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb68bcdb90dab2678ecd201eb1fa9cfab2280fe7",
+      "size": 1629,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bb68bcdb90dab2678ecd201eb1fa9cfab2280fe7"
+    },
+    {
+      "path": "src/rime/segmentation.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b34256d05885a22ea80ccd4c639fb6f300408c1d",
+      "size": 4314,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b34256d05885a22ea80ccd4c639fb6f300408c1d"
+    },
+    {
+      "path": "src/rime/segmentation.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d385867a02c0eac909449a677ddcd9a67107f7e4",
+      "size": 1879,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d385867a02c0eac909449a677ddcd9a67107f7e4"
+    },
+    {
+      "path": "src/rime/segmentor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aa7d3e2338048bfca06e829e3e701d6d6cfba64",
+      "size": 710,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4aa7d3e2338048bfca06e829e3e701d6d6cfba64"
+    },
+    {
+      "path": "src/rime/service.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d30f991e7ca551a1e0460d6beb5c56ddc9f2e439",
+      "size": 5160,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d30f991e7ca551a1e0460d6beb5c56ddc9f2e439"
+    },
+    {
+      "path": "src/rime/service.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a69ae74144d4ae2765587757bdf9b143e8ba7788",
+      "size": 2504,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a69ae74144d4ae2765587757bdf9b143e8ba7788"
+    },
+    {
+      "path": "src/rime/setup.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c2a73b9c1da6320f30c7affa819503d5396312a",
+      "size": 3163,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4c2a73b9c1da6320f30c7affa819503d5396312a"
+    },
+    {
+      "path": "src/rime/setup.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70bc372e8524f1232df4fb0966819c511b161078",
+      "size": 687,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/70bc372e8524f1232df4fb0966819c511b161078"
+    },
+    {
+      "path": "src/rime/signature.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65500937d37119a6c091feaa3f58bcf27a88cc40",
+      "size": 873,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/65500937d37119a6c091feaa3f58bcf27a88cc40"
+    },
+    {
+      "path": "src/rime/signature.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15ff7f4fd257cc20d62b81941173e3646b317fd0",
+      "size": 515,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/15ff7f4fd257cc20d62b81941173e3646b317fd0"
+    },
+    {
+      "path": "src/rime/switcher.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d283a92b89e08de4c38c1c7ef1d7d596b37c97bf",
+      "size": 8759,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d283a92b89e08de4c38c1c7ef1d7d596b37c97bf"
+    },
+    {
+      "path": "src/rime/switcher.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ad7676e7467d581e9e230a3c3b365023da9bd15",
+      "size": 1878,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7ad7676e7467d581e9e230a3c3b365023da9bd15"
+    },
+    {
+      "path": "src/rime/switches.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d7d5897745ca60919db96d5b2493efee422343a",
+      "size": 5776,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/4d7d5897745ca60919db96d5b2493efee422343a"
+    },
+    {
+      "path": "src/rime/switches.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2de5fcfa8e3886cb2b42dd589807aa44a28515b",
+      "size": 2119,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b2de5fcfa8e3886cb2b42dd589807aa44a28515b"
+    },
+    {
+      "path": "src/rime/ticket.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a42ef90875bfad1e718384521e94ab18a0da6c68",
+      "size": 618,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a42ef90875bfad1e718384521e94ab18a0da6c68"
+    },
+    {
+      "path": "src/rime/ticket.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "324768182af59880be42324fe07b3e178596dcc5",
+      "size": 702,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/324768182af59880be42324fe07b3e178596dcc5"
+    },
+    {
+      "path": "src/rime/translation.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1134c19ea425d7fe777e93b4f7a4a5662b38ac5c",
+      "size": 5198,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1134c19ea425d7fe777e93b4f7a4a5662b38ac5c"
+    },
+    {
+      "path": "src/rime/translation.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d567db3f7199efd1a0ef61f2df74face569beffa",
+      "size": 3133,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d567db3f7199efd1a0ef61f2df74face569beffa"
+    },
+    {
+      "path": "src/rime/translator.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78ba7e22b28905003b73ab0e7b8d90ca05f1a4ee",
+      "size": 831,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/78ba7e22b28905003b73ab0e7b8d90ca05f1a4ee"
+    },
+    {
+      "path": "src/rime_api.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c0ead2abe8294775dba51c7e599f5008bce35e4",
+      "size": 2207,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1c0ead2abe8294775dba51c7e599f5008bce35e4"
+    },
+    {
+      "path": "src/rime_api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fccde0fb83ead04d0a12ef834c3770d64dff211",
+      "size": 20038,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2fccde0fb83ead04d0a12ef834c3770d64dff211"
+    },
+    {
+      "path": "src/rime_api_deprecated.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9725e7ce70aae99ac18ba637910878ab33b0c33",
+      "size": 9538,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/f9725e7ce70aae99ac18ba637910878ab33b0c33"
+    },
+    {
+      "path": "src/rime_api_impl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f4514fadd564a61ce0c1469c700f74ae83d6f1",
+      "size": 41048,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/30f4514fadd564a61ce0c1469c700f74ae83d6f1"
+    },
+    {
+      "path": "src/rime_api_stdbool.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a29005aae94a41146440d4d4dd88ea2207f0da33",
+      "size": 92,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a29005aae94a41146440d4d4dd88ea2207f0da33"
+    },
+    {
+      "path": "src/rime_api_stdbool.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c10bbd47fe985821d07d7b9c4a2391f6b023451e",
+      "size": 381,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c10bbd47fe985821d07d7b9c4a2391f6b023451e"
+    },
+    {
+      "path": "src/rime_levers_api.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba029b6f4dd0e5ad174e395eccd414dd5170b22b",
+      "size": 3328,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ba029b6f4dd0e5ad174e395eccd414dd5170b22b"
+    },
+    {
+      "path": "test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2391daed488e97f785dac89f1b9d7ae18964ce78",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/2391daed488e97f785dac89f1b9d7ae18964ce78"
+    },
+    {
+      "path": "test/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62c4c1d64bcde7d1a1c636c90f4fafe197fec2fd",
+      "size": 590,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/62c4c1d64bcde7d1a1c636c90f4fafe197fec2fd"
+    },
+    {
+      "path": "test/algebra_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727252d5f55bb6636ff734beb53ccea4accc1b30",
+      "size": 2487,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/727252d5f55bb6636ff734beb53ccea4accc1b30"
+    },
+    {
+      "path": "test/calculus_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1037b461e379dc125fa02ad1a892dbafbc31dc4b",
+      "size": 2255,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/1037b461e379dc125fa02ad1a892dbafbc31dc4b"
+    },
+    {
+      "path": "test/component_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da1f701137384570b62fc04c56e5207946bc4b17",
+      "size": 1642,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/da1f701137384570b62fc04c56e5207946bc4b17"
+    },
+    {
+      "path": "test/config_compiler_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18e62945b7b7e0c756ea8df057bd66a09a4fc74e",
+      "size": 10169,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/18e62945b7b7e0c756ea8df057bd66a09a4fc74e"
+    },
+    {
+      "path": "test/config_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cae2a9fb7d4ce8a7498e0586c1299e8b5b441bff",
+      "size": 9752,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/cae2a9fb7d4ce8a7498e0586c1299e8b5b441bff"
+    },
+    {
+      "path": "test/corrector_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e431ecb13252b19d9641bc22c20245464214dba3",
+      "size": 5437,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e431ecb13252b19d9641bc22c20245464214dba3"
+    },
+    {
+      "path": "test/dictionary_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e2ba98907349e7bfcede544dc4b55ff5f2e7c3e",
+      "size": 2999,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3e2ba98907349e7bfcede544dc4b55ff5f2e7c3e"
+    },
+    {
+      "path": "test/encoder_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07995564c7c2745acc28f0117360cd53f84ecc60",
+      "size": 4627,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/07995564c7c2745acc28f0117360cd53f84ecc60"
+    },
+    {
+      "path": "test/flavored_api_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7dc1c3b54b21c8f8ca92d79d7d2e12e31d56bd8",
+      "size": 1607,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/a7dc1c3b54b21c8f8ca92d79d7d2e12e31d56bd8"
+    },
+    {
+      "path": "test/generate_pinyin_initials.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c91920090e5ed1f8c6a51555442977a218072f4e",
+      "size": 223,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c91920090e5ed1f8c6a51555442977a218072f4e"
+    },
+    {
+      "path": "test/generate_pinyin_syllables.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b2b59cb3c08341a716838015cc2bc26eb9bf89e",
+      "size": 6178,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/7b2b59cb3c08341a716838015cc2bc26eb9bf89e"
+    },
+    {
+      "path": "test/key_event_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c59fea37466af44d2368d2ea5a33378a9de66dd7",
+      "size": 3839,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c59fea37466af44d2368d2ea5a33378a9de66dd7"
+    },
+    {
+      "path": "test/key_table_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2cd0de7e1840d13eb0ddf42895f94584e2b46d0",
+      "size": 1134,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/d2cd0de7e1840d13eb0ddf42895f94584e2b46d0"
+    },
+    {
+      "path": "test/menu_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51a79daca3f0b78611c4053811ef836afd0187e0",
+      "size": 1997,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/51a79daca3f0b78611c4053811ef836afd0187e0"
+    },
+    {
+      "path": "test/prism_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9803a30f72cd400a337a33376a42d917071a3e16",
+      "size": 2252,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9803a30f72cd400a337a33376a42d917071a3e16"
+    },
+    {
+      "path": "test/resource_resolver_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b697257711f4100ce812fd3d7b9babc2aa71e2e0",
+      "size": 1752,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b697257711f4100ce812fd3d7b9babc2aa71e2e0"
+    },
+    {
+      "path": "test/rime_test_main.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edf22776507a2c397680745d5c2148094c7afd98",
+      "size": 763,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/edf22776507a2c397680745d5c2148094c7afd98"
+    },
+    {
+      "path": "test/segmentor_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46c11878732bb71725a660df1a6f0855a8ece397",
+      "size": 2063,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/46c11878732bb71725a660df1a6f0855a8ece397"
+    },
+    {
+      "path": "test/syllabifier_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa748ff39dd33b9b72628b0b48d2f73a1bcb4a55",
+      "size": 7732,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/fa748ff39dd33b9b72628b0b48d2f73a1bcb4a55"
+    },
+    {
+      "path": "test/table_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c08b07f0ad4a2b5ee85b08865d5c2759958e8727",
+      "size": 6576,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/c08b07f0ad4a2b5ee85b08865d5c2759958e8727"
+    },
+    {
+      "path": "test/user_db_test.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc967d34cd45919ea485f0e1ff0bddd41534447",
+      "size": 2547,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/3cc967d34cd45919ea485f0e1ff0bddd41534447"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60660f879201a09795e55695f50ed0a2ae7ad026",
+      "url": "https://api.github.com/repos/rime/librime/git/trees/60660f879201a09795e55695f50ed0a2ae7ad026"
+    },
+    {
+      "path": "tools/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17a612fba32679fbc5a03af2b63b6897b4740ba7",
+      "size": 2639,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/17a612fba32679fbc5a03af2b63b6897b4740ba7"
+    },
+    {
+      "path": "tools/codepage.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b555ae8dcb7ac8d4c46aac80cb8273b415a72005",
+      "size": 389,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/b555ae8dcb7ac8d4c46aac80cb8273b415a72005"
+    },
+    {
+      "path": "tools/line_editor.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab49346f316ec5286885dc6c171997af020abd86",
+      "size": 10111,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/ab49346f316ec5286885dc6c171997af020abd86"
+    },
+    {
+      "path": "tools/line_editor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e53a165ba1fa7aa0de4940c7890b0ff6da51c3b8",
+      "size": 809,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/e53a165ba1fa7aa0de4940c7890b0ff6da51c3b8"
+    },
+    {
+      "path": "tools/rime_api_console.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9daa40fa57445e043b734dcf97be2e293a331589",
+      "size": 8063,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/9daa40fa57445e043b734dcf97be2e293a331589"
+    },
+    {
+      "path": "tools/rime_console.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d6e7d7be9413486ce7167384545ead5a8da5191",
+      "size": 3777,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/2d6e7d7be9413486ce7167384545ead5a8da5191"
+    },
+    {
+      "path": "tools/rime_deployer.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8360ac5b907697c1d3bf2dbf6da77ed015b3137a",
+      "size": 4794,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/8360ac5b907697c1d3bf2dbf6da77ed015b3137a"
+    },
+    {
+      "path": "tools/rime_dict_manager.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdad0d0a884ab0920d50fba7e05a85201be2f477",
+      "size": 3281,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/bdad0d0a884ab0920d50fba7e05a85201be2f477"
+    },
+    {
+      "path": "tools/rime_patch.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "652a1c321605dd9f09b9b5e6ed4c61000e2b27d7",
+      "size": 2269,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/652a1c321605dd9f09b9b5e6ed4c61000e2b27d7"
+    },
+    {
+      "path": "tools/rime_table_decompiler.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06e265fc2787b3a91904eb5c8f4efe29320fd0df",
+      "size": 3573,
+      "url": "https://api.github.com/repos/rime/librime/git/blobs/06e265fc2787b3a91904eb5c8f4efe29320fd0df"
+    }
+  ],
+  "truncated": false
+}

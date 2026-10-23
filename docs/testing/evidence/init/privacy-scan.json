@@ -1,0 +1,10 @@
+{
+  "scope": "high-confidence token/private-key markers in project files; not a guarantee of absence of all private information",
+  "files_scanned": 87,
+  "findings_paths_only": [],
+  "content_suppressed": true,
+  "status": "PASS",
+  "reference_screenshot_status": "not downloaded; no personal screenshots stored",
+  "user_data_status": "no device user dictionaries, text, credentials or serials collected",
+  "checked_at": "2026-10-23T13:11:17.130611-04:00"
+}

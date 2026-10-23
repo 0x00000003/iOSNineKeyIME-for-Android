@@ -1,0 +1,5 @@
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+# Preserve upstream evidence bytes exactly.
+docs/reference/upstream/** -text

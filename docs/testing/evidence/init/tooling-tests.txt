@@ -1,0 +1,20 @@
+$ python3 -m unittest discover -s tests/tooling -v
+exit_code=0
+test_lock_path_escape_is_rejected (test_checks.IntegrityChecks) ... ok
+test_mutable_source_url_is_rejected (test_checks.IntegrityChecks) ... ok
+test_tampered_snapshot_is_rejected (test_checks.IntegrityChecks) ... ok
+test_valid_snapshot (test_checks.IntegrityChecks) ... ok
+test_escape_is_rejected (test_checks.LinkChecks) ... ok
+test_external_and_anchor_links_are_ignored (test_checks.LinkChecks) ... ok
+test_missing_link_is_rejected (test_checks.LinkChecks) ... ok
+test_duplicate_letter_is_rejected (test_checks.SpecificationChecks) ... ok
+test_idle_prediction_cannot_override_punctuation (test_checks.SpecificationChecks) ... ok
+test_mistyped_fixture_is_rejected (test_checks.SpecificationChecks) ... ok
+test_partial_commit_cannot_clear_candidates (test_checks.SpecificationChecks) ... ok
+test_swapped_digit_is_rejected (test_checks.SpecificationChecks) ... ok
+test_valid_spec (test_checks.SpecificationChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.006s
+
+OK

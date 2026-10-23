@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "seed-only-not-full-acceptance-corpus",
+  "synthetic_only": true,
+  "encoding_cases": [
+    {
+      "pinyin": "nihao",
+      "digits": "64426",
+      "expected_candidate_member": "你好"
+    },
+    {
+      "pinyin": "zhongguo",
+      "digits": "94664486",
+      "expected_candidate_member": "中国"
+    },
+    {
+      "pinyin": "xiexie",
+      "digits": "943943",
+      "expected_candidate_member": "谢谢"
+    },
+    {
+      "pinyin": "lvse",
+      "digits": "5873",
+      "expected_candidate_member": "绿色"
+    }
+  ],
+  "state_vectors": [
+    {
+      "events": [
+        "key2",
+        "full_commit"
+      ],
+      "expected_bar": "punctuation"
+    },
+    {
+      "events": [
+        "key2",
+        "delete_to_empty"
+      ],
+      "expected_bar": "punctuation"
+    },
+    {
+      "events": [
+        "key2",
+        "partial_commit"
+      ],
+      "expected_bar": "candidates"
+    },
+    {
+      "events": [
+        "key2",
+        "no_candidates"
+      ],
+      "expected_bar": "no-results"
+    },
+    {
+      "events": [
+        "key2",
+        "cancel",
+        "stale_candidates"
+      ],
+      "expected_bar": "punctuation"
+    }
+  ]
+}

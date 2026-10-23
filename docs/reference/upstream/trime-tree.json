@@ -1,0 +1,4602 @@
+{
+  "sha": "e09ac7114fa067904ed358e82d499516cb423ff4",
+  "url": "https://api.github.com/repos/osfans/trime/git/trees/e09ac7114fa067904ed358e82d499516cb423ff4",
+  "tree": [
+    {
+      "path": ".clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d45c49627d4bcb7969a1fcf7116c71ccebc0b99",
+      "size": 151,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3d45c49627d4bcb7969a1fcf7116c71ccebc0b99"
+    },
+    {
+      "path": ".editorconfig",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de83f67541f8bb1414710725fa72dd709bea37f8",
+      "size": 396,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/de83f67541f8bb1414710725fa72dd709bea37f8"
+    },
+    {
+      "path": ".git-blame-ignore-revs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "908e26ffa3b88e0b8cdf0fc3ee82d4d1b4c24df9",
+      "size": 428,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/908e26ffa3b88e0b8cdf0fc3ee82d4d1b4c24df9"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ec69c51cb50ab9a70990470ac5b79e686182f94",
+      "size": 227,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5ec69c51cb50ab9a70990470ac5b79e686182f94"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "59121de7f812de1113d78c7dc08011756cc43f86",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/59121de7f812de1113d78c7dc08011756cc43f86"
+    },
+    {
+      "path": ".github/FUNDING.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "550a2f9e6c04e2a919d816d4827014fc75124333",
+      "size": 214,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/550a2f9e6c04e2a919d816d4827014fc75124333"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8b17c13780cad9de891fa253b5fd25ef216eb621",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8b17c13780cad9de891fa253b5fd25ef216eb621"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03761bac3abb7834bb84a1dfced8be7a2234901b",
+      "size": 2935,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/03761bac3abb7834bb84a1dfced8be7a2234901b"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccde94a651b2ab45fbb8d1cb280d3351417f31aa",
+      "size": 380,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ccde94a651b2ab45fbb8d1cb280d3351417f31aa"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c6a81084253d25abfad7dfb50223502c9a6a59",
+      "size": 1826,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e9c6a81084253d25abfad7dfb50223502c9a6a59"
+    },
+    {
+      "path": ".github/pull-request-template.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11975cf471394be11e5f1a2acdd83fa8b742372c",
+      "size": 875,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/11975cf471394be11e5f1a2acdd83fa8b742372c"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e3fa951a3aad75e8331ea5220582a074ee4c576",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/0e3fa951a3aad75e8331ea5220582a074ee4c576"
+    },
+    {
+      "path": ".github/workflows/commit-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be3a0a6b5272753689c227d2f0d34976a214eb28",
+      "size": 2860,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/be3a0a6b5272753689c227d2f0d34976a214eb28"
+    },
+    {
+      "path": ".github/workflows/nightly-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68ae45925ccfb8d56d2f2653ed9eb66ca229e90c",
+      "size": 2141,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/68ae45925ccfb8d56d2f2653ed9eb66ca229e90c"
+    },
+    {
+      "path": ".github/workflows/pull-request-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "190588c60f3620be86d3786e2ed91f01be6078ff",
+      "size": 2419,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/190588c60f3620be86d3786e2ed91f01be6078ff"
+    },
+    {
+      "path": ".github/workflows/release-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c7ed6abf3c686d993ab8a36a8ee5345f31ee7a9",
+      "size": 2578,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7c7ed6abf3c686d993ab8a36a8ee5345f31ee7a9"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "813fe219ab00e83c531fc2d3f0f8c1dbcba2ceaa",
+      "size": 7587,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/813fe219ab00e83c531fc2d3f0f8c1dbcba2ceaa"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "681d893462e16aa70d9fd0da0612b4e4213b025b",
+      "size": 1306,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/681d893462e16aa70d9fd0da0612b4e4213b025b"
+    },
+    {
+      "path": ".idea",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c78c93be5f8e9f2db4e5820bfc405275783d85db",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c78c93be5f8e9f2db4e5820bfc405275783d85db"
+    },
+    {
+      "path": ".idea/copyright",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3b32084b8a3c26f3bf44c52e97348923a63e8d8",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/d3b32084b8a3c26f3bf44c52e97348923a63e8d8"
+    },
+    {
+      "path": ".idea/copyright/SPDX.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e42ebcc63ca7dc6b3510ce5320ee13c8210020b5",
+      "size": 269,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e42ebcc63ca7dc6b3510ce5320ee13c8210020b5"
+    },
+    {
+      "path": ".idea/copyright/profiles_settings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e90af380eb8447c76b2d231cc82a12ab3f241cc1",
+      "size": 178,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e90af380eb8447c76b2d231cc82a12ab3f241cc1"
+    },
+    {
+      "path": "AUTHORS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a0b4f6663fe11b35fd0998accb6984e4136c1e",
+      "size": 769,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d4a0b4f6663fe11b35fd0998accb6984e4136c1e"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3125347fa32634c132882b0f9e3b7d5419a0918c",
+      "size": 113407,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3125347fa32634c132882b0f9e3b7d5419a0918c"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c5fdc5644a23f1f57cd04f3a1d7515ba8f92cbf",
+      "size": 5604,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2c5fdc5644a23f1f57cd04f3a1d7515ba8f92cbf"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66299782d1a40aedcc3cb51127e63518f8b0e0a9",
+      "size": 12105,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/66299782d1a40aedcc3cb51127e63518f8b0e0a9"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94a9ed024d3859793618152ea559a168bbcbb5e2",
+      "size": 35147,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/94a9ed024d3859793618152ea559a168bbcbb5e2"
+    },
+    {
+      "path": "Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "510efe430fa04881456c3642f452c916974280a2",
+      "size": 2117,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/510efe430fa04881456c3642f452c916974280a2"
+    },
+    {
+      "path": "PRIVACY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31dcd80e76c300a90aac8390cb9d6118521927fc",
+      "size": 931,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/31dcd80e76c300a90aac8390cb9d6118521927fc"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d408ca6539e8739d4f69ed92619f1c8692fd08db",
+      "size": 7490,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d408ca6539e8739d4f69ed92619f1c8692fd08db"
+    },
+    {
+      "path": "README_sc.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9adb45930b559f8a51709812f05b92bb633c801",
+      "size": 7219,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c9adb45930b559f8a51709812f05b92bb633c801"
+    },
+    {
+      "path": "README_tc.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a487bf40b6ebb8a413ab2f5f64bcc77f64b390c",
+      "size": 7214,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9a487bf40b6ebb8a413ab2f5f64bcc77f64b390c"
+    },
+    {
+      "path": "app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f69d5b8f9ecd9a9e9bf2487d21fe4e52a57d61a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/0f69d5b8f9ecd9a9e9bf2487d21fe4e52a57d61a"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "395e00eebab2c5d482018728dd8bba027a0f6346",
+      "size": 5816,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/395e00eebab2c5d482018728dd8bba027a0f6346"
+    },
+    {
+      "path": "app/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17629671c8abd0c04bccbf6d3a5e27a6334cf82c",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/17629671c8abd0c04bccbf6d3a5e27a6334cf82c"
+    },
+    {
+      "path": "app/data/rime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d1e35fc298161e6a03f1674dcd901e9fe89e89f",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/0d1e35fc298161e6a03f1674dcd901e9fe89e89f"
+    },
+    {
+      "path": "app/data/rime/essay",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "0766c929ec3e578c2c80861e988decd3703a1c3d"
+    },
+    {
+      "path": "app/data/rime/luna-pinyin",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "46acf03142c12b5aeed7002675046bf7255eed35"
+    },
+    {
+      "path": "app/data/rime/prelude",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "3803f09458072e03b9ed396692ce7e1d35c88c95"
+    },
+    {
+      "path": "app/data/rime/stroke",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "7c9874c6b2e0b94947653e9a7de6f99623ff27e4"
+    },
+    {
+      "path": "app/licenses",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "830e395cc6683858bfce62c6225125704c8e28a0",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/830e395cc6683858bfce62c6225125704c8e28a0"
+    },
+    {
+      "path": "app/licenses/libraries",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9535628d9e743d6dcf9d82e5da51b414919e33d4",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/9535628d9e743d6dcf9d82e5da51b414919e33d4"
+    },
+    {
+      "path": "app/licenses/libraries/boost.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "234184536ccd331a29daaecf679d60de0a0f7d02",
+      "size": 276,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/234184536ccd331a29daaecf679d60de0a0f7d02"
+    },
+    {
+      "path": "app/licenses/libraries/glog.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a290eabd2d11adb290f6c96fd3b7c38b3cb9c54",
+      "size": 285,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5a290eabd2d11adb290f6c96fd3b7c38b3cb9c54"
+    },
+    {
+      "path": "app/licenses/libraries/leveldb.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6705e97c42ef8ab87ecbf94a46e39ec5b623c632",
+      "size": 349,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6705e97c42ef8ab87ecbf94a46e39ec5b623c632"
+    },
+    {
+      "path": "app/licenses/libraries/librime.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdf6d8240d311901f5f29b675421e2dee8b1fba9",
+      "size": 247,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bdf6d8240d311901f5f29b675421e2dee8b1fba9"
+    },
+    {
+      "path": "app/licenses/libraries/marisa-trie.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a9522485a89f4bb9c2eb68e3e5f6be399be3a98",
+      "size": 324,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6a9522485a89f4bb9c2eb68e3e5f6be399be3a98"
+    },
+    {
+      "path": "app/licenses/libraries/opencc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bcaa086b5e60816384777429c5ddc4b8460ebf1e",
+      "size": 346,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bcaa086b5e60816384777429c5ddc4b8460ebf1e"
+    },
+    {
+      "path": "app/licenses/libraries/yaml-cpp.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78073e81a3f5ff0e024dca0c4d39706583e47838",
+      "size": 269,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/78073e81a3f5ff0e024dca0c4d39706583e47838"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fe3fade77ee2b07802754e9dcedf6a3830ae269",
+      "size": 1031,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3fe3fade77ee2b07802754e9dcedf6a3830ae269"
+    },
+    {
+      "path": "app/schemas",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4991f6e3948542609f8e27efa08112f67dd814db",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/4991f6e3948542609f8e27efa08112f67dd814db"
+    },
+    {
+      "path": "app/schemas/com.osfans.trime.data.db.Database",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91f8954acad964b511bda3ce1325eada32f20785",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/91f8954acad964b511bda3ce1325eada32f20785"
+    },
+    {
+      "path": "app/schemas/com.osfans.trime.data.db.Database/4.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bfd88b3347ec17ab5daf711264f5fae2326cd02",
+      "size": 1797,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2bfd88b3347ec17ab5daf711264f5fae2326cd02"
+    },
+    {
+      "path": "app/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f4480faf3dcd4e431b58b8c87d141dfbad0dd96",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8f4480faf3dcd4e431b58b8c87d141dfbad0dd96"
+    },
+    {
+      "path": "app/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "874ce81ddad7ccccc1f361e15e2a6480fee5c3d1",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/874ce81ddad7ccccc1f361e15e2a6480fee5c3d1"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0298d62bedb0877741ad0f37687fdb3054b2f14",
+      "size": 4010,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d0298d62bedb0877741ad0f37687fdb3054b2f14"
+    },
+    {
+      "path": "app/src/main/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47284d0e2a8456c1b886c005babadc1bffaf00f9",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/47284d0e2a8456c1b886c005babadc1bffaf00f9"
+    },
+    {
+      "path": "app/src/main/assets/shared",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3bc6c0c844e65182621567c8f5a127491b4fba7",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c3bc6c0c844e65182621567c8f5a127491b4fba7"
+    },
+    {
+      "path": "app/src/main/assets/shared/default.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "d51576a7d733573f6b380a211e1b3c441f062238",
+      "size": 42,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d51576a7d733573f6b380a211e1b3c441f062238"
+    },
+    {
+      "path": "app/src/main/assets/shared/essay.txt",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "331a988b5567d685bb0d3a7f5abdbe449a9ed174",
+      "size": 37,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/331a988b5567d685bb0d3a7f5abdbe449a9ed174"
+    },
+    {
+      "path": "app/src/main/assets/shared/key_bindings.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "0ce1449a5e0856f2be88cc44c662f42eb7201c1b",
+      "size": 47,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0ce1449a5e0856f2be88cc44c662f42eb7201c1b"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_pinyin.dict.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "a75dbde029e51ab120a52017ad035ecd7339a397",
+      "size": 55,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a75dbde029e51ab120a52017ad035ecd7339a397"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_pinyin.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "5e42c9840905313a6bf724fefbadaa4b8d3dca53",
+      "size": 57,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5e42c9840905313a6bf724fefbadaa4b8d3dca53"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_pinyin_fluency.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "d6e3bec6b2febdf45d217dba97ee6b043350b88c",
+      "size": 65,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d6e3bec6b2febdf45d217dba97ee6b043350b88c"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_pinyin_simp.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "602eaf7c264ac259141699dedee430c93e0e90d8",
+      "size": 62,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/602eaf7c264ac259141699dedee430c93e0e90d8"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_pinyin_tw.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "dc2085e884309a16df39d59ebb8947c68a03429f",
+      "size": 60,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/dc2085e884309a16df39d59ebb8947c68a03429f"
+    },
+    {
+      "path": "app/src/main/assets/shared/luna_quanpin.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "185e9b457a42b725f935051f210761332d195eb9",
+      "size": 58,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/185e9b457a42b725f935051f210761332d195eb9"
+    },
+    {
+      "path": "app/src/main/assets/shared/pinyin.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "361aa0b3148a84d238532ff7e1df594d86329e86",
+      "size": 45,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/361aa0b3148a84d238532ff7e1df594d86329e86"
+    },
+    {
+      "path": "app/src/main/assets/shared/punctuation.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "049b6d6a16db9a32cad661f1f531b3abd9d44c59",
+      "size": 46,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/049b6d6a16db9a32cad661f1f531b3abd9d44c59"
+    },
+    {
+      "path": "app/src/main/assets/shared/stroke.dict.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "1042cf1773fff16e61efc80f0003500f1e85486e",
+      "size": 45,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1042cf1773fff16e61efc80f0003500f1e85486e"
+    },
+    {
+      "path": "app/src/main/assets/shared/stroke.schema.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "df087a5763e13bba477abb6a4490554084b7405d",
+      "size": 47,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/df087a5763e13bba477abb6a4490554084b7405d"
+    },
+    {
+      "path": "app/src/main/assets/shared/symbols.yaml",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "5c629a831845829037c5d2f6a71d02846ef632d7",
+      "size": 42,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5c629a831845829037c5d2f6a71d02846ef632d7"
+    },
+    {
+      "path": "app/src/main/assets/shared/tongwenfeng.trime.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f23222dae85357d1a54e353f9914cd90de5e5e90",
+      "size": 197795,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f23222dae85357d1a54e353f9914cd90de5e5e90"
+    },
+    {
+      "path": "app/src/main/assets/shared/trime.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fbd93ea192fab4c4f3f56bc0b935ecf04cdff32",
+      "size": 78253,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3fbd93ea192fab4c4f3f56bc0b935ecf04cdff32"
+    },
+    {
+      "path": "app/src/main/ic_app_icon-playstore.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6fd19e1239a55425db9d72c1768f04648746312",
+      "size": 5797,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a6fd19e1239a55425db9d72c1768f04648746312"
+    },
+    {
+      "path": "app/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fab61b6600820d6082cc2c7391f72179a718df38",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/fab61b6600820d6082cc2c7391f72179a718df38"
+    },
+    {
+      "path": "app/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3e0f46021c181cc5825205cc4ae8e25f98217c9",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/b3e0f46021c181cc5825205cc4ae8e25f98217c9"
+    },
+    {
+      "path": "app/src/main/java/com/osfans",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31d5b05ffcd452005a8bfd538ec02a2ac9ebf035",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/31d5b05ffcd452005a8bfd538ec02a2ac9ebf035"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ce927c0ccf7ff9738b0a5a00917b886ab890184d",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/ce927c0ccf7ff9738b0a5a00917b886ab890184d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/TrimeApplication.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e43f4b5ac46fe372209dac6d9eb7b7a91a9db58",
+      "size": 7361,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4e43f4b5ac46fe372209dac6d9eb7b7a91a9db58"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09ba8a491252f5a1d9cd3248f31c8034cf90e40d",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/09ba8a491252f5a1d9cd3248f31c8034cf90e40d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/KeyModifier.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd6aa5fff92214190dc653d8005e893bc8e6ba0e",
+      "size": 5105,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bd6aa5fff92214190dc653d8005e893bc8e6ba0e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/KeyValue.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81e4d9505893f43e6d7ead15ddeaa9a98c6376fc",
+      "size": 1222,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/81e4d9505893f43e6d7ead15ddeaa9a98c6376fc"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37ec3162a233ce18f7d9f4472b98773df213dd24",
+      "size": 20995,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/37ec3162a233ce18f7d9f4472b98773df213dd24"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeApi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f82da227bb088693695db9312d36ad555df0b9b",
+      "size": 2063,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9f82da227bb088693695db9312d36ad555df0b9b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeConfig.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f0fc33e6619b84f44e42c631fbd798b2658db72",
+      "size": 2113,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0f0fc33e6619b84f44e42c631fbd798b2658db72"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeDispatcher.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6a7991f13c31066879508b7791da5edbf52a297",
+      "size": 4095,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b6a7991f13c31066879508b7791da5edbf52a297"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeKeyEvent.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "501b66ca798a250e785ecde9b6111fdf90b03a7e",
+      "size": 683,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/501b66ca798a250e785ecde9b6111fdf90b03a7e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeLifecycle.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdbfb7343edd214134a91a8d70863bf356f39a7e",
+      "size": 3613,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cdbfb7343edd214134a91a8d70863bf356f39a7e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeMaintenanceMutex.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4ab8c05bac31ec201aa0384857c887d498d6626",
+      "size": 362,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e4ab8c05bac31ec201aa0384857c887d498d6626"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeMessage.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08bff0cfd66b40c350408163c39cfe01f713c1a1",
+      "size": 5440,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/08bff0cfd66b40c350408163c39cfe01f713c1a1"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeProto.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ecc52dfa1f043d336a612f44158dbc74cc2aaea",
+      "size": 4634,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7ecc52dfa1f043d336a612f44158dbc74cc2aaea"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/RimeSchema.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f0bae1cb225ae84e87b2acace9fb55800dd3442",
+      "size": 1182,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7f0bae1cb225ae84e87b2acace9fb55800dd3442"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/SchemaItem.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a650daa2883afb1eaf19795c84dc39ce4111d016",
+      "size": 206,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a650daa2883afb1eaf19795c84dc39ce4111d016"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/daemon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21e0dcb71ddd96f6b17055fe4dc7e09304572370",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/21e0dcb71ddd96f6b17055fe4dc7e09304572370"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/daemon/Extensions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c2b49d2a332eaf6e3bd530027f77368b889271",
+      "size": 400,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a3c2b49d2a332eaf6e3bd530027f77368b889271"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/daemon/RimeDaemon.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b56fc3f6fb9498c517c06809fa1c58d469a0273",
+      "size": 6927,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1b56fc3f6fb9498c517c06809fa1c58d469a0273"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/daemon/RimeSession.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000b5eeecef6924483980ae6e8396bae70e320ad",
+      "size": 1232,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/000b5eeecef6924483980ae6e8396bae70e320ad"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8071012f15a3756d30487dd05e10070794dae458",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8071012f15a3756d30487dd05e10070794dae458"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/SymbolHistory.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6fec3711a1553a5ab6f34aaa821778222db95a2",
+      "size": 876,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d6fec3711a1553a5ab6f34aaa821778222db95a2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99fec47a0a1a7bda5eb68e0cc759cfac1edc1cd3",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/99fec47a0a1a7bda5eb68e0cc759cfac1edc1cd3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/base/DataChecksums.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c73926d8d9c90378072ae5586395e9a1b59c4399",
+      "size": 284,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c73926d8d9c90378072ae5586395e9a1b59c4399"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/base/DataDiff.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3746eb071e408fdfefb37bada6825026de23dc5",
+      "size": 1781,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e3746eb071e408fdfefb37bada6825026de23dc5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/base/DataManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9d732b1781b11a31ab2b139a46506dd748f71c6",
+      "size": 4386,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d9d732b1781b11a31ab2b139a46506dd748f71c6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9daa7e782b0e29e20ea6742c8c489feca56989aa",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/9daa7e782b0e29e20ea6742c8c489feca56989aa"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db/ClipboardHelper.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c0bfa8e11a6678e3587859428dfc116de942025",
+      "size": 7095,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0c0bfa8e11a6678e3587859428dfc116de942025"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db/CollectionHelper.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3deaa1dd0af59459537fe4fb4572e4169a82294e",
+      "size": 2699,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3deaa1dd0af59459537fe4fb4572e4169a82294e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db/Database.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72efe97313dc5154ecdd47cf660eba708419d8b",
+      "size": 1992,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d72efe97313dc5154ecdd47cf660eba708419d8b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db/DatabaseBean.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccd8f18ab0e9c1299737506cce3f51a0d0ba194d",
+      "size": 1500,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ccd8f18ab0e9c1299737506cce3f51a0d0ba194d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/db/DatabaseDao.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d643496872ef99d0f0945b7245b475d7c5575e0d",
+      "size": 2468,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d643496872ef99d0f0945b7245b475d7c5575e0d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "37be109fab8fa9adee16c06043cd4fdbe38fce74",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/37be109fab8fa9adee16c06043cd4fdbe38fce74"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc/OpenCCDictManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002afa6b847c2ed7490da6b99a109ad1f6a971df",
+      "size": 3606,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/002afa6b847c2ed7490da6b99a109ad1f6a971df"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc/dict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7b9da8676316472e763181ee8b3f4bdb7e168e3",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/a7b9da8676316472e763181ee8b3f4bdb7e168e3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc/dict/Dictionary.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d12e199dd88cfe6d0a4eb7fff7bf6017c3d41c0d",
+      "size": 2177,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d12e199dd88cfe6d0a4eb7fff7bf6017c3d41c0d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc/dict/OpenCCDictionary.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98dcaf1d3383b57ce869cbfb988809827cc4b644",
+      "size": 1216,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/98dcaf1d3383b57ce869cbfb988809827cc4b644"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/opencc/dict/TextDictionary.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3754d1b72e340b03cf582d61bac759ce2e07b81",
+      "size": 1003,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f3754d1b72e340b03cf582d61bac759ce2e07b81"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3906519b34e8c078a64d760a6aab9384b43b1932",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/3906519b34e8c078a64d760a6aab9384b43b1932"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/AppPrefs.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ae27589d08c65687d843fe87d1fefc7ad3675ae",
+      "size": 17442,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4ae27589d08c65687d843fe87d1fefc7ad3675ae"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2cf8d1043752a0f8b727158bc9642851e61fdf7",
+      "size": 3642,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e2cf8d1043752a0f8b727158bc9642851e61fdf7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateEnum.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a6dd23422b2f343d02a58b527942fe8e16c84a8",
+      "size": 261,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5a6dd23422b2f343d02a58b527942fe8e16c84a8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f51bdc2cec6316576a5f5914ea682d6d24ac507",
+      "size": 2214,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1f51bdc2cec6316576a5f5914ea682d6d24ac507"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateOwner.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "865f5aa5c471e3db7bed0f8081c948503652b9e2",
+      "size": 6797,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/865f5aa5c471e3db7bed0f8081c948503652b9e2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateProvider.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afbdca4ae09661f7ed8ac8c89487be90d47b79e4",
+      "size": 1479,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/afbdca4ae09661f7ed8ac8c89487be90d47b79e4"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be4225861c84bea9cde2058a12f3d527d35e6972",
+      "size": 7013,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/be4225861c84bea9cde2058a12f3d527d35e6972"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/soundeffect",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0a99faa84c27ba3978d6d8c54211703624f1eefd",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/0a99faa84c27ba3978d6d8c54211703624f1eefd"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/soundeffect/SoundEffect.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b14a2f4fcb508a2850deeb1d5ac02dd74a1c18a",
+      "size": 2729,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3b14a2f4fcb508a2850deeb1d5ac02dd74a1c18a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/soundeffect/SoundEffectManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e271a9f11d6f3787a752ec388a3dcb724a5e98b",
+      "size": 2606,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0e271a9f11d6f3787a752ec388a3dcb724a5e98b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acc8527a0c4b5bc604792fb90cddaa5a77ae6156",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/acc8527a0c4b5bc604792fb90cddaa5a77ae6156"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/AtomicLocalFileCopy.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5429afdeb615a2ba82b22e8dddf99f87e9d11bd0",
+      "size": 2521,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5429afdeb615a2ba82b22e8dddf99f87e9d11bd0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/AtomicSafFileCopy.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f977734bbc5c28b562089811d7d1c796180c68f2",
+      "size": 5494,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f977734bbc5c28b562089811d7d1c796180c68f2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/BoundedCopyPool.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca4f977c15009e01316a961a736f25b4b62fb0d7",
+      "size": 1269,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ca4f977c15009e01316a961a736f25b4b62fb0d7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/DataStorageMode.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "965d2b5558692b4e27636884f519bd6deca92645",
+      "size": 413,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/965d2b5558692b4e27636884f519bd6deca92645"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/ExternalSyncFallback.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff82231869554e1b39eb8c15a0d55b58acd19fbe",
+      "size": 947,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ff82231869554e1b39eb8c15a0d55b58acd19fbe"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/LocalDirectoryGate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "956eba80c60a54530542bd190d5f901679bc8016",
+      "size": 937,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/956eba80c60a54530542bd190d5f901679bc8016"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/OrphanCleaner.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "291cca652bdb2600f518d726f1196e382476580c",
+      "size": 2320,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/291cca652bdb2600f518d726f1196e382476580c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/RimeDataSync.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1235f31d8e88ede718f4bd1c57d0ae4032b491c2",
+      "size": 20419,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1235f31d8e88ede718f4bd1c57d0ae4032b491c2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SafDisplayPath.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a71a6eabe056d3a42dc1506570fb2a4f9c56623",
+      "size": 1306,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2a71a6eabe056d3a42dc1506570fb2a4f9c56623"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SafPathCache.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce0a48300631306db268509bd7e8c78d93ea641a",
+      "size": 3544,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ce0a48300631306db268509bd7e8c78d93ea641a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SafQueryException.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db073de7cfb6a96807b3771fd45ae98206f0e585",
+      "size": 311,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/db073de7cfb6a96807b3771fd45ae98206f0e585"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SafTreeWalker.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d69810ebf2cad5c7e1c739c7286bf0b0d5b7806",
+      "size": 5493,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6d69810ebf2cad5c7e1c739c7286bf0b0d5b7806"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SyncIndex.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d314f50f5c3cdad1053d4981eb5c5117f4373e8",
+      "size": 2049,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3d314f50f5c3cdad1053d4981eb5c5117f4373e8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/SyncRelativePath.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5359c0db4cc897fa294077d86054fcdc3d37f128",
+      "size": 1240,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5359c0db4cc897fa294077d86054fcdc3d37f128"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/sync/UserDbMigration.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50f16853c821cea18ae3528753aadacfa4b5e6fe",
+      "size": 701,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/50f16853c821cea18ae3528753aadacfa4b5e6fe"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "992a67f75b7e421586b1988389f3932b9995722c",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/992a67f75b7e421586b1988389f3932b9995722c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/ColorManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8268ef9c2e00935c06a1f37e701aec037c41436",
+      "size": 12360,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e8268ef9c2e00935c06a1f37e701aec037c41436"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/FontManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4989bc1a67d84527229165e179eeb9c4679f61dd",
+      "size": 4664,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4989bc1a67d84527229165e179eeb9c4679f61dd"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/KeyActionManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0306748f81fd64300b0cf9e02fdfabd59b32eddc",
+      "size": 567,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0306748f81fd64300b0cf9e02fdfabd59b32eddc"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/Theme.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7b914827112286e0ac0680db3d982cce57241f",
+      "size": 2541,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0c7b914827112286e0ac0680db3d982cce57241f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/ThemeFilesManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4615c4f72987ff951c90e7588d2d6f02c8a630b0",
+      "size": 1841,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4615c4f72987ff951c90e7588d2d6f02c8a630b0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/ThemeItem.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b49b050f28afd0c09a0b163acd0d034facffa34",
+      "size": 216,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8b49b050f28afd0c09a0b163acd0d034facffa34"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/ThemeManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69aaf81285df9b0fcfb8c88541c9c16f5a54810f",
+      "size": 4550,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/69aaf81285df9b0fcfb8c88541c9c16f5a54810f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/ThemePrefs.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f14bca506d8eeff53ad43bc20bed521872d35127",
+      "size": 2173,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f14bca506d8eeff53ad43bc20bed521872d35127"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c5bda65558c509fb6566195b5f75d68dd75a1795",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c5bda65558c509fb6566195b5f75d68dd75a1795"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/ColorScheme.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "829dfd11066096787d7bb6823c0f5bb29cfe06b6",
+      "size": 322,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/829dfd11066096787d7bb6823c0f5bb29cfe06b6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/GeneralStyle.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e93876cfc5ab33f4ca6edded2637cf087297bc46",
+      "size": 7943,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e93876cfc5ab33f4ca6edded2637cf087297bc46"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/KeyActionToken.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55eb8f9966bac60202c74a2ae9cd7501c78b022f",
+      "size": 1075,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/55eb8f9966bac60202c74a2ae9cd7501c78b022f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/LiquidKeyboard.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b76a3467816f820d6f7a792ab07668285db71ecf",
+      "size": 5368,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b76a3467816f820d6f7a792ab07668285db71ecf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/Preedit.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4de524dcf6858b9e1212d37f9b44f9045d30e26",
+      "size": 1347,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c4de524dcf6858b9e1212d37f9b44f9045d30e26"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/PresetKey.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "327d2d9c03bc4bdb4acab826075ffed86865503c",
+      "size": 1998,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/327d2d9c03bc4bdb4acab826075ffed86865503c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/TextKeyboard.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44f1ff8ea013c5ba4139ddaa9fb23ccd15d236de",
+      "size": 7360,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/44f1ff8ea013c5ba4139ddaa9fb23ccd15d236de"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/ToolBar.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfdc1c300c666b8b12c8107dfcead23ff94b6618",
+      "size": 4203,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/dfdc1c300c666b8b12c8107dfcead23ff94b6618"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/Window.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63dd1d228a59c2a534cec500f93865a3f43c5826",
+      "size": 2275,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/63dd1d228a59c2a534cec500f93865a3f43c5826"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/userdict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80987c8ce94d9526fb31daa761c4d330f091461e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/80987c8ce94d9526fb31daa761c4d330f091461e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/userdict/UserDictManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f326c3d3ee53e0d75d5142e6c6fbb2fede121560",
+      "size": 2785,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f326c3d3ee53e0d75d5142e6c6fbb2fede121560"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8388061aad1840c1cc1ac887964400b91fb9158",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e8388061aad1840c1cc1ac887964400b91fb9158"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca09af53aab20abea1c024739d945d206e6285d8",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/ca09af53aab20abea1c024739d945d206e6285d8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/InputBarDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4860737625d09dc6a23e34b9e23c45175157277b",
+      "size": 13032,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4860737625d09dc6a23e34b9e23c45175157277b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/QuickBarStateMachine.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f209ed3202c933ad8e8b5102984d7cc9dd3dfb62",
+      "size": 1781,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f209ed3202c933ad8e8b5102984d7cc9dd3dfb62"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/UnrollButtonStateMachine.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb664b169a07e10b47949d0b8893613a211ceaef",
+      "size": 1944,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bb664b169a07e10b47949d0b8893613a211ceaef"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdab7d38a286647375b0437d65b77ea5b68c3913",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/cdab7d38a286647375b0437d65b77ea5b68c3913"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/AlwaysUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e81e517f70a8208d362f6fe343e0f03d49b28bed",
+      "size": 5406,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e81e517f70a8208d362f6fe343e0f03d49b28bed"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/ButtonsBarUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e75830c4570c8ec523afdf42bd1e6affb0ce9c3",
+      "size": 2856,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0e75830c4570c8ec523afdf42bd1e6affb0ce9c3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/CandidateUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0ba2e5d3f8d656ef0710373fa750b4a5428b617",
+      "size": 1471,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a0ba2e5d3f8d656ef0710373fa750b4a5428b617"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/ClipboardSuggestionUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7daaffe4094f40524893d6a853b1e0c9fad356c5",
+      "size": 3486,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7daaffe4094f40524893d6a853b1e0c9fad356c5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/InlineSuggestionsUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbc7c0890d2993de9cbd801923dba0d9a9143288",
+      "size": 4658,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fbc7c0890d2993de9cbd801923dba0d9a9143288"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/TabUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a68bac02f992fd21bc5735561d4b7adcbc647e20",
+      "size": 3575,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a68bac02f992fd21bc5735561d4b7adcbc647e20"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/ui/ToolButton.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe20754649d9ee7e24f70afcfe296147348f957",
+      "size": 6870,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bfe20754649d9ee7e24f70afcfe296147348f957"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/broadcast",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5d227f5ffe4d76e1e9b2db81d28d05985d076bf",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/a5d227f5ffe4d76e1e9b2db81d28d05985d076bf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/broadcast/EnterKeyDisplayDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f4d6b20ac93e856ce7636154d45050d5a69ed49",
+      "size": 3315,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6f4d6b20ac93e856ce7636154d45050d5a69ed49"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/broadcast/InputBroadcastReceiver.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea0d41f713e45b06fcf445faeedd32c86b3fd11",
+      "size": 1100,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3ea0d41f713e45b06fcf445faeedd32c86b3fd11"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/broadcast/InputBroadcaster.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "03911ee828cbc0073d26f8a72600621da8cf2526",
+      "size": 2567,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/03911ee828cbc0073d26f8a72600621da8cf2526"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9cd69723ae35ef2c9ec942cb65c00b2055db418b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/9cd69723ae35ef2c9ec942cb65c00b2055db418b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/CandidateItemUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a0c2f9bce0ab6b68a48d1bc4213111f44131f8d",
+      "size": 6873,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5a0c2f9bce0ab6b68a48d1bc4213111f44131f8d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/CandidateViewHolder.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a2c50805925c45eaf5c45621635a0442b65f43b",
+      "size": 340,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2a2c50805925c45eaf5c45621635a0442b65f43b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/compact",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a086bebda3366433fa1f71f15888fad278a5858b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/a086bebda3366433fa1f71f15888fad278a5858b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/compact/CompactCandidateDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fcb89de12e1265dfa33626a69295bb908205527",
+      "size": 7891,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9fcb89de12e1265dfa33626a69295bb908205527"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/compact/CompactCandidateMode.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e87e6b330abc0233ebd116c42e18458e76f46f80",
+      "size": 512,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e87e6b330abc0233ebd116c42e18458e76f46f80"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/compact/CompactCandidateViewAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0515a8a7500093497e2607c7cf88c0755d439330",
+      "size": 2547,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0515a8a7500093497e2607c7cf88c0755d439330"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdb0db785c715a685d88215d92be799047faf5a0",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/cdb0db785c715a685d88215d92be799047faf5a0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/CandidateItemSpan.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6fc58477b74fe2bf0ca7f36f8d6fa2aea1eb53f",
+      "size": 825,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f6fc58477b74fe2bf0ca7f36f8d6fa2aea1eb53f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/LabeledCandidateItemUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1be9c5fc6b423ba9934d50df93e4aa0f6fbfa7e5",
+      "size": 3546,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1be9c5fc6b423ba9934d50df93e4aa0f6fbfa7e5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/PagedCandidatesUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdd67a7bab48e1b6f38157f0df76d52b547f524b",
+      "size": 5977,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bdd67a7bab48e1b6f38157f0df76d52b547f524b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/PaginationUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c778ae898dff0dba2f1a6fbbabde1a31e485cdcb",
+      "size": 2229,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c778ae898dff0dba2f1a6fbbabde1a31e485cdcb"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/PopupCandidatesLayout.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2dc353054134a50bd862fda3e08ad66ac4f07eb",
+      "size": 484,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b2dc353054134a50bd862fda3e08ad66ac4f07eb"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/popup/PopupCandidatesMode.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989c26a72c609eeb188456962f7a3a9487ef6a00",
+      "size": 503,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/989c26a72c609eeb188456962f7a3a9487ef6a00"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cb3d372add2f81b10ceb2e341da96e71f2dd8f6",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/1cb3d372add2f81b10ceb2e341da96e71f2dd8f6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/CandidatesPagingSource.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0781b5bd1cfabfe8bf8a839d3493354dba9146b",
+      "size": 1440,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c0781b5bd1cfabfe8bf8a839d3493354dba9146b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/PagingCandidateViewAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cebde6e197f3c67dad5c2bcb699ce9ebb8482c3e",
+      "size": 1946,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cebde6e197f3c67dad5c2bcb699ce9ebb8482c3e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/UnrolledCandidateLayout.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da7c6f00e36307ea7839b450e0dfd8944cafac34",
+      "size": 1399,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/da7c6f00e36307ea7839b450e0dfd8944cafac34"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/decoration",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0faec19f4d7aa83f897a3b5de7ec22a3a1acbbf3",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/0faec19f4d7aa83f897a3b5de7ec22a3a1acbbf3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/decoration/FlexboxHorizontalDecoration.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edc4110badf7ddafa0194d668e63d992960f4fbf",
+      "size": 1259,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/edc4110badf7ddafa0194d668e63d992960f4fbf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/decoration/FlexboxVerticalDecoration.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe1de1031a31a859c22be7dace7c9d33a9a70b0a",
+      "size": 2390,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fe1de1031a31a859c22be7dace7c9d33a9a70b0a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/window",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bc4a7c4d3450b37c81ec077ed6712a442aebe44d",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/bc4a7c4d3450b37c81ec077ed6712a442aebe44d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/window/BaseUnrolledCandidateWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99b16bdfe910877d7d35fa483d16cdcbed212cef",
+      "size": 5625,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/99b16bdfe910877d7d35fa483d16cdcbed212cef"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/candidates/unrolled/window/FlexboxUnrolledCandidateWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05aff38c7067f468fd55ce4cf2ee0647b01f172a",
+      "size": 2621,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/05aff38c7067f468fd55ce4cf2ee0647b01f172a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a443dbce30b7536bcccc1b499fb2b6cb0789b956",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/a443dbce30b7536bcccc1b499fb2b6cb0789b956"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb052a1ca3612acbd5d7bb4e2597e6c801f84d7",
+      "size": 5089,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8fb052a1ca3612acbd5d7bb4e2597e6c801f84d7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardBeanUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fffe26dbf44d4a8756d0086074b7736d6f7865aa",
+      "size": 2967,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fffe26dbf44d4a8756d0086074b7736d6f7865aa"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardLayout.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dd3c9dd1728cc1677bb65069d9f7abe9b81d05d",
+      "size": 893,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3dd3c9dd1728cc1677bb65069d9f7abe9b81d05d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardPageUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b111cb93575c6e61879ac30f1f38b11c910edc0b",
+      "size": 816,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b111cb93575c6e61879ac30f1f38b11c910edc0b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardPagesAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fba5a202bbbf7b2c385086f949bdbffd4d98dbc",
+      "size": 2189,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2fba5a202bbbf7b2c385086f949bdbffd4d98dbc"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardTitleUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df6e47d50c5539f742b48fa35d28b8fb917f6924",
+      "size": 1467,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/df6e47d50c5539f742b48fa35d28b8fb917f6924"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/clipboard/ClipboardWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e396c298ed1f9fd9dd327026d79d21b18004057",
+      "size": 8437,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3e396c298ed1f9fd9dd327026d79d21b18004057"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a861f091f9dbfb61cbf3885889eedad9cabb5b3",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8a861f091f9dbfb61cbf3885889eedad9cabb5b3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition/CandidatesView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfa8806769fe9e84f9657e3fe0aad94bfe6e1ea4",
+      "size": 11771,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cfa8806769fe9e84f9657e3fe0aad94bfe6e1ea4"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition/PopupPosition.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b3d6ac4dc3768139ecf65b80ab040bcae09dd2a",
+      "size": 559,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2b3d6ac4dc3768139ecf65b80ab040bcae09dd2a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition/PreeditDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d9df7ebe4b8e3377a5931beee1d87af14e84c6",
+      "size": 2695,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/38d9df7ebe4b8e3377a5931beee1d87af14e84c6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition/PreeditTextView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f41e81baa6d4d280d8719d265ade0776f0fc67",
+      "size": 1693,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c7f41e81baa6d4d280d8719d265ade0776f0fc67"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/composition/PreeditUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3a73ea6046067067d1cf6d39fbd014e91a9ae30",
+      "size": 2917,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c3a73ea6046067067d1cf6d39fbd014e91a9ae30"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39e075fdc543f51fbadcb79bbcd9faf81a109a59",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/39e075fdc543f51fbadcb79bbcd9faf81a109a59"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/AutoScaleTextView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8cfce5e216cb42431e25c214b92894e8b0baeac",
+      "size": 8380,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a8cfce5e216cb42431e25c214b92894e8b0baeac"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/BaseInputView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37beeeb94115aeceee3374d2364745253b4e26e3",
+      "size": 5374,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/37beeeb94115aeceee3374d2364745253b4e26e3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/InlinePreeditMode.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9c97b05ab686eabeb06fb0c30098faaaacd03c7",
+      "size": 500,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f9c97b05ab686eabeb06fb0c30098faaaacd03c7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/InlineSuggestions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c27b58f5217e370d0d1b4b0b1dc7dbdda1acd422",
+      "size": 3310,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c27b58f5217e370d0d1b4b0b1dc7dbdda1acd422"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/InputDeviceManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2379df4f59d482656afe67d5e3b01d3f0938e12",
+      "size": 5822,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f2379df4f59d482656afe67d5e3b01d3f0938e12"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/InputTabLayout.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c41c37a6b330948e9cbff78a948a608149e99ee",
+      "size": 3001,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4c41c37a6b330948e9cbff78a948a608149e99ee"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/InputView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1edb256296edf3ac48d0805bb6cafca4793b10a2",
+      "size": 12142,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1edb256296edf3ac48d0805bb6cafca4793b10a2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/LifecycleInputMethodService.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5388e2fec32c389d8fa1fda0ffac02931094800b",
+      "size": 1126,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5388e2fec32c389d8fa1fda0ffac02931094800b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/NavigationBarManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9725016f8f15c0654229f7ccaff1a8ffeb577dd1",
+      "size": 4052,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9725016f8f15c0654229f7ccaff1a8ffeb577dd1"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/TouchEventReceiverWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "555909c0b67ab234b343cf38df982c74a58e6764",
+      "size": 1583,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/555909c0b67ab234b343cf38df982c74a58e6764"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/TrimeInputMethodService.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bba2fa795ea106efbfab3a1c3d915ac7308e5b6",
+      "size": 37779,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6bba2fa795ea106efbfab3a1c3d915ac7308e5b6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/dependency",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f35b70ce44b3548bd08923c3f6a920769c08d0ea",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/f35b70ce44b3548bd08923c3f6a920769c08d0ea"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/dependency/InputDependencyManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e2b2b74e17d0b461e09c88b0b1976537907810",
+      "size": 2946,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/73e2b2b74e17d0b461e09c88b0b1976537907810"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/dialog",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "20daebd31f52e06287231c026df4a52bcd56b0c0",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/20daebd31f52e06287231c026df4a52bcd56b0c0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/dialog/EnabledSchemaPickerDialog.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe7e931f31fc3b115d7ea1941cebc80ce61b7f5",
+      "size": 1800,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/dfe7e931f31fc3b115d7ea1941cebc80ce61b7f5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc863afd64a548455cbf52003a79cf29ddbe932e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/cc863afd64a548455cbf52003a79cf29ddbe932e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/CommonKeyboardActionListener.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "421b0076505ac9e9d14204e498745d0f1f3274b6",
+      "size": 19319,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/421b0076505ac9e9d14204e498745d0f1f3274b6"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/GestureFrame.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d767a0e80e254d9d05888445ed1270554f319c28",
+      "size": 11247,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d767a0e80e254d9d05888445ed1270554f319c28"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/InputFeedbackManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d93d9d28d5fd090ac3a034dbaed8bb47e50ba944",
+      "size": 7588,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d93d9d28d5fd090ac3a034dbaed8bb47e50ba944"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/Key.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3030767b78a888504f7230ee558e9e702def5e63",
+      "size": 12413,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3030767b78a888504f7230ee558e9e702def5e63"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyAction.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8a56eb65c1b54cb349aac9d00559f92388135e8",
+      "size": 8603,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d8a56eb65c1b54cb349aac9d00559f92388135e8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyBehavior.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feb2eaf6db9288c2c70a40785dac2738b9a14d40",
+      "size": 533,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/feb2eaf6db9288c2c70a40785dac2738b9a14d40"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyCode.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9cc1750396fed8fce7a8d54cab79ccd06525a84",
+      "size": 3935,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f9cc1750396fed8fce7a8d54cab79ccd06525a84"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8723227f1fe8f616a524cea54270ae6ffd086576",
+      "size": 14606,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8723227f1fe8f616a524cea54270ae6ffd086576"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/Keyboard.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9897d9abb2c35fce614dc75c5128c47ede2b4e5",
+      "size": 19629,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a9897d9abb2c35fce614dc75c5128c47ede2b4e5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyboardActionListener.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc741ef7d49cfc6eb3c4b994062e596141634ea4",
+      "size": 1337,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cc741ef7d49cfc6eb3c4b994062e596141634ea4"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyboardPrefs.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e664b990057b9092a34ae69da9e8e3419a647d45",
+      "size": 942,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e664b990057b9092a34ae69da9e8e3419a647d45"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyboardSwitcher.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f36a4b8e9715a5f7931c8623397baf54c1886f4",
+      "size": 302,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1f36a4b8e9715a5f7931c8623397baf54c1886f4"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyboardView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c735974243f87a944ac33b2720fece63d23387d",
+      "size": 3593,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8c735974243f87a944ac33b2720fece63d23387d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/KeyboardWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc2045323160ac3308ccbde4f17887b6e71497a0",
+      "size": 15035,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/dc2045323160ac3308ccbde4f17887b6e71497a0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40122c9079932a602fb4bb7d8c824c528672d07d",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/40122c9079932a602fb4bb7d8c824c528672d07d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupAction.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1030c801160d09ac0609b2cbd484594c1ff7bc89",
+      "size": 1034,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1030c801160d09ac0609b2cbd484594c1ff7bc89"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupActionListener.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd7fdcd205835c531655758fdd4a0a4dde6a53fc",
+      "size": 225,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cd7fdcd205835c531655758fdd4a0a4dde6a53fc"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupContainerUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d57caefb8f94d68bf105f71ed02cf2fe8ab1af66",
+      "size": 2914,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d57caefb8f94d68bf105f71ed02cf2fe8ab1af66"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupDelegate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d989054768a7cbadb2cbf276e5be600d9d445dbf",
+      "size": 7382,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d989054768a7cbadb2cbf276e5be600d9d445dbf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupEntryUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09f834e571da600455731eb43e4026b3cae344ad",
+      "size": 3061,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/09f834e571da600455731eb43e4026b3cae344ad"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/popup/PopupKeyboardUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e609434c56fde746ceca036ef4ff130a565bf36a",
+      "size": 10450,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e609434c56fde746ceca036ef4ff130a565bf36a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eac4ef73c1db41df92168862f73d409280dd9204",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/eac4ef73c1db41df92168862f73d409280dd9204"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments/DragSelectTouchListener.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8f97b18ba431c5712cae507f678f921f16a9482",
+      "size": 5012,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a8f97b18ba431c5712cae507f678f921f16a9482"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments/SegmentUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "907e24ba2c6b8b3a5a7bc9ed7dbff59aacad718a",
+      "size": 2842,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/907e24ba2c6b8b3a5a7bc9ed7dbff59aacad718a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments/SegmentsAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7a3f04aeb91eaa2bc2a05f4e3c688e141fbe90c",
+      "size": 3469,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e7a3f04aeb91eaa2bc2a05f4e3c688e141fbe90c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments/SegmentsUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e19e0a9b4cc4dc511f42cd1529d9f371ac3f657a",
+      "size": 2011,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e19e0a9b4cc4dc511f42cd1529d9f371ac3f657a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/segments/SegmentsWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f611945be76c12b43af85da0392594fcecfa6e93",
+      "size": 5809,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f611945be76c12b43af85da0392594fcecfa6e93"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/switches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c2a72c810ab7d219db17238c272c7d3821ed9e1b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c2a72c810ab7d219db17238c272c7d3821ed9e1b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/switches/SwitchOptionAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb34266d0f028b51eb9dcef58be7c5029596784",
+      "size": 1173,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4cb34266d0f028b51eb9dcef58be7c5029596784"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/switches/SwitchOptionEntry.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a51faa51a63c664ab68912a18f72ebc8e43816f3",
+      "size": 1633,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a51faa51a63c664ab68912a18f72ebc8e43816f3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/switches/SwitchOptionEntryUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bc126e004b4d0bfb1d7b9d9dc7ac5c8731a8513",
+      "size": 4894,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7bc126e004b4d0bfb1d7b9d9dc7ac5c8731a8513"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/switches/SwitchOptionWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc6e4c8f2468b00eaa49ee1101cf75f923e5d062",
+      "size": 8247,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bc6e4c8f2468b00eaa49ee1101cf75f923e5d062"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "94b05047124f0313b7886c8c5b134ef4df8c9a92",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/94b05047124f0313b7886c8c5b134ef4df8c9a92"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ed671a28b18d627ab939e1da0a9f95b9c18d06",
+      "size": 1634,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/87ed671a28b18d627ab939e1da0a9f95b9c18d06"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidData.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f10ee3adc463dfe15fe80433b88cc910fedc75ad",
+      "size": 1160,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f10ee3adc463dfe15fe80433b88cc910fedc75ad"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidItemUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "468e89a0d4a6b85e59430d109f4f342b85337259",
+      "size": 1883,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/468e89a0d4a6b85e59430d109f4f342b85337259"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidLayout.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6326aa53eb4921887222f68673a8bc8d20e097b",
+      "size": 8294,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d6326aa53eb4921887222f68673a8bc8d20e097b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidTabsUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8043e6faa164a62430b30539fafa35cab638672a",
+      "size": 4732,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8043e6faa164a62430b30539fafa35cab638672a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/LiquidWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac7ff1ff8b4fee3fd05f2fa33425f19e511ed09",
+      "size": 4417,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bac7ff1ff8b4fee3fd05f2fa33425f19e511ed09"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/symbol/SpacesItemDecoration.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb9d493eef114367fdad3962a1be68b2703bbc72",
+      "size": 593,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bb9d493eef114367fdad3962a1be68b2703bbc72"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/window",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b09b7b4bde0ef6b0a991d3206882d8c411af285",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/1b09b7b4bde0ef6b0a991d3206882d8c411af285"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/window/BoardWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aefa9f11b975f74d4103a6259cf6db9458294a3",
+      "size": 1600,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3aefa9f11b975f74d4103a6259cf6db9458294a3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/window/BoardWindowManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86ad48ee8abce17c592bf86d65365a4b090a3770",
+      "size": 4119,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/86ad48ee8abce17c592bf86d65365a4b090a3770"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/window/ResidentWindow.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd008453dde60646055d2206eab36953587501b3",
+      "size": 880,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bd008453dde60646055d2206eab36953587501b3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/provider",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a6cab273a2ae85ec3ff0446d85bcfbc42260b48",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/7a6cab273a2ae85ec3ff0446d85bcfbc42260b48"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/provider/RimeDataProvider.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c75e1b9779b6731e48e88a5f4e8bee1c6a20d2b1",
+      "size": 10587,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c75e1b9779b6731e48e88a5f4e8bee1c6a20d2b1"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/receiver",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eabe932429061f2c281efac28337d3e1e5c039fe",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/eabe932429061f2c281efac28337d3e1e5c039fe"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/receiver/RimeIntentReceiver.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df654ee57fb930c9ada92d29f087f0d7fd22fad8",
+      "size": 1293,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/df654ee57fb930c9ada92d29f087f0d7fd22fad8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75a3d3ce431ece2e1e80a1db94c95ec4c1426843",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/75a3d3ce431ece2e1e80a1db94c95ec4c1426843"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/common",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6d6428feb81e843917cd5c0c2263a0f335066a48",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/6d6428feb81e843917cd5c0c2263a0f335066a48"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/common/OnItemChangedListener.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "195c05b82a9e1b2679f733afd7822f50ec58983b",
+      "size": 1457,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/195c05b82a9e1b2679f733afd7822f50ec58983b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/common/PaddingPreferenceFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14af77a45fc652630348162852831f7bf7639713",
+      "size": 967,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/14af77a45fc652630348162852831f7bf7639713"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/common/ProgressBarDialogIndeterminate.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a140957b47fecde325b3439b03b0d8eacac115f4",
+      "size": 2348,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a140957b47fecde325b3439b03b0d8eacac115f4"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29f598e8cd41f4ace531b0ffbdacb0e347277ef2",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/29f598e8cd41f4ace531b0ffbdacb0e347277ef2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/AboutFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0959003acc5efb88481962fee874204b90d14bbe",
+      "size": 5722,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0959003acc5efb88481962fee874204b90d14bbe"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/ClipEditActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "733437a13e09b7a674f37c96d1f13b9b8b879211",
+      "size": 3185,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/733437a13e09b7a674f37c96d1f13b9b8b879211"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/DeveloperFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d362f70a4d018d15913f603d70715074f1af5818",
+      "size": 1932,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d362f70a4d018d15913f603d70715074f1af5818"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/LicenseFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4a96d96ae3ad12ba5bac659e660d1ee62bf23bb",
+      "size": 3186,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c4a96d96ae3ad12ba5bac659e660d1ee62bf23bb"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/LogActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb238e4b43436e33cd38376fc05b0a5aa221400",
+      "size": 5722,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/adb238e4b43436e33cd38376fc05b0a5aa221400"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/MainActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cdc1d7dd30a5a85d4a7eea3e5fb6482362fb515",
+      "size": 10177,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9cdc1d7dd30a5a85d4a7eea3e5fb6482362fb515"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/MainFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347872e414fad15daed60e2c9d54241a962cb301",
+      "size": 3283,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/347872e414fad15daed60e2c9d54241a962cb301"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/MainViewModel.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3751f2b62723b8b38abe97c5aca7a0a8b2494869",
+      "size": 1844,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3751f2b62723b8b38abe97c5aca7a0a8b2494869"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/NavigationRoute.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5be7ab9dcebd128d70c1f912ad5e842f6b0f9c5a",
+      "size": 3738,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5be7ab9dcebd128d70c1f912ad5e842f6b0f9c5a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/TestInputPanel.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c635ee208a719ea331c6201ac9c3d52f1ec1faa7",
+      "size": 11309,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c635ee208a719ea331c6201ac9c3d52f1ec1faa7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/log",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3aaef159d97d0ffaea7677e00045e2f00ff6f09",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e3aaef159d97d0ffaea7677e00045e2f00ff6f09"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/log/LogAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d8e4dee13e903b82f11b5951e07c4303449ce7c",
+      "size": 2169,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0d8e4dee13e903b82f11b5951e07c4303449ce7c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/log/LogView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6745d4795068ad73864ee4a145d14c4316a8accf",
+      "size": 3186,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6745d4795068ad73864ee4a145d14c4316a8accf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "340537f79ae18e936dd0932a8cbf4b5644139f1e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/340537f79ae18e936dd0932a8cbf4b5644139f1e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/AdvancedSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc293e8438f9f1bb6b0449670659768308a1fd5",
+      "size": 2402,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1dc293e8438f9f1bb6b0449670659768308a1fd5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/CandidatesSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a7fbcc243b69e621169a061d51ec81b90ff70e7",
+      "size": 358,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2a7fbcc243b69e621169a061d51ec81b90ff70e7"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/ClipboardSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f68f8af446c7867e862cc03bcc9737c76d410269",
+      "size": 356,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f68f8af446c7867e862cc03bcc9737c76d410269"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/ColorPickerDialog.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ecad30620c6245596ef324d493a4139e8f8bb82",
+      "size": 1785,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4ecad30620c6245596ef324d493a4139e8f8bb82"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/DialogSeekBarPreference.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8fb256d876c76590c67f3b03482ca2658162234e",
+      "size": 8058,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8fb256d876c76590c67f3b03482ca2658162234e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/EditTextIntPreference.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "411ceb888f3c984ae7edce96de337835a92d5347",
+      "size": 2907,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/411ceb888f3c984ae7edce96de337835a92d5347"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/GeneralSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "986617cfdb7cb9f7ea4828d204b438f1bde3dfaf",
+      "size": 352,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/986617cfdb7cb9f7ea4828d204b438f1bde3dfaf"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/KeyboardSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88865d2a464693518e1e7914f5fef6cc23ee59c9",
+      "size": 929,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/88865d2a464693518e1e7914f5fef6cc23ee59c9"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/ProfileSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2e9d3f327d96511a88ca538c7b3d355c2f5b688",
+      "size": 17648,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b2e9d3f327d96511a88ca538c7b3d355c2f5b688"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/ProgressFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffe62e2898035e75d2ea6443ed2bddc8270466e2",
+      "size": 2154,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ffe62e2898035e75d2ea6443ed2bddc8270466e2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/SoundEffectPickerDialog.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05e39b76a32bd67f8a428f8b9e3af734a811c6df",
+      "size": 1548,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/05e39b76a32bd67f8a428f8b9e3af734a811c6df"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/ThemePickerDialog.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3ea73289d694781e59ff03af24f040070186954",
+      "size": 2240,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b3ea73289d694781e59ff03af24f040070186954"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e1a299a3a2ecca9b4cdf04132ca3eb1a4c8129c2",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e1a299a3a2ecca9b4cdf04132ca3eb1a4c8129c2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/schema/SchemaListAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daa476ecd9b11116e2954e199d550da6284eac40",
+      "size": 5159,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/daa476ecd9b11116e2954e199d550da6284eac40"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/schema/SchemaListEntryUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf733da24ed9e98673405106136f452ef81639bb",
+      "size": 2332,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bf733da24ed9e98673405106136f452ef81639bb"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/schema/SchemaListFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a316f56a6a38e87dd879b816c9d630762fc2f7b",
+      "size": 4081,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6a316f56a6a38e87dd879b816c9d630762fc2f7b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/schema/SchemaListUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7792132435124c5055bd7e199c159f80d0bc45d0",
+      "size": 9642,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7792132435124c5055bd7e199c159f80d0bc45d0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/theme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d965df06520dbef2677d938759a2691f79ddfb20",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/d965df06520dbef2677d938759a2691f79ddfb20"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/theme/ThemeSettingsFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c155311543081394edaef6acdc9662b21537598",
+      "size": 1214,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4c155311543081394edaef6acdc9662b21537598"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/userdict",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e6506a9e36d735a050c7427db1cdfbfe54a33e0",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/3e6506a9e36d735a050c7427db1cdfbfe54a33e0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/userdict/UserDictListAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47ebb0700e83359fd1f5096fdbd2b77f01b3561c",
+      "size": 1135,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/47ebb0700e83359fd1f5096fdbd2b77f01b3561c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/userdict/UserDictListEntryUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a119a923305d16722b5651e3edd4d588eece90e",
+      "size": 2703,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2a119a923305d16722b5651e3edd4d588eece90e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/userdict/UserDictListUi.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "916be30133c1df01b979d8a56654e65b1263e241",
+      "size": 5594,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/916be30133c1df01b979d8a56654e65b1263e241"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/userdict/UserDictionaryFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "490e2d510f09dc56706676ed911e154cc7890158",
+      "size": 6481,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/490e2d510f09dc56706676ed911e154cc7890158"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/setup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53c63dd4d03b6b4973e1d36d396a1eb70548394b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/53c63dd4d03b6b4973e1d36d396a1eb70548394b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/setup/SetupActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5ae138dd65a4512864f80ea6c3a431a1a4240e1",
+      "size": 7681,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e5ae138dd65a4512864f80ea6c3a431a1a4240e1"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/setup/SetupFragment.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "329f7575fd294f045e880625fd3f73311bfc336f",
+      "size": 3293,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/329f7575fd294f045e880625fd3f73311bfc336f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/setup/SetupPage.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71fa65fcdc11abd27f22d72c94e52e2574053a66",
+      "size": 2106,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/71fa65fcdc11abd27f22d72c94e52e2574053a66"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e98818c944c05bc675dc55c7c91b3c92d834764b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e98818c944c05bc675dc55c7c91b3c92d834764b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/AppContext.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "324622302f8a49b7f53dd774812306f183b108f5",
+      "size": 293,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/324622302f8a49b7f53dd774812306f183b108f5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/AppUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd1df9f1c48e6453186a5ca2b87df8c136b61138",
+      "size": 2776,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bd1df9f1c48e6453186a5ca2b87df8c136b61138"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Bundle.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f036b079fdffac872ef918be7f1cc2f2f94df20",
+      "size": 465,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5f036b079fdffac872ef918be7f1cc2f2f94df20"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Char.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a73ecf9c33489b4ee6050f88deecb897d6dddc95",
+      "size": 225,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a73ecf9c33489b4ee6050f88deecb897d6dddc95"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Color.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0a2e7dc4394e31a2a3a0b66d62da822ef36d2be",
+      "size": 351,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d0a2e7dc4394e31a2a3a0b66d62da822ef36d2be"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/ColorUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "860014dbaa0e6370dbb46b31a14118755846f96f",
+      "size": 1451,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/860014dbaa0e6370dbb46b31a14118755846f96f"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Configuration.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c865941520c3e39f23b33432d35ae73de352ff1b",
+      "size": 368,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c865941520c3e39f23b33432d35ae73de352ff1b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Const.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ecdf19595720525001c6a643cfd87558070a0ff",
+      "size": 1385,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4ecdf19595720525001c6a643cfd87558070a0ff"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/DateTime.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99cfd2dacc325ad54a514268b60ca0fa1c665de8",
+      "size": 1958,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/99cfd2dacc325ad54a514268b60ca0fa1c665de8"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/DeviceInfo.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99e9d111b4f41115f54fc5eb7e901fef5b004db9",
+      "size": 2136,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/99e9d111b4f41115f54fc5eb7e901fef5b004db9"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/DeviceUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdef55342bed08db0d89c1c5c0526ec88a8a1f1b",
+      "size": 587,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cdef55342bed08db0d89c1c5c0526ec88a8a1f1b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Dimensions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ac34eb3373c96bda0277b36842ca8224afaf271",
+      "size": 1016,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2ac34eb3373c96bda0277b36842ca8224afaf271"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Drawable.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b72a5b48c6b534b888ce3d95604bec83824190b",
+      "size": 2397,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3b72a5b48c6b534b888ce3d95604bec83824190b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/ErrorDialog.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caa15a696ed711f0f49f1e9e2872810ba56d186d",
+      "size": 820,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/caa15a696ed711f0f49f1e9e2872810ba56d186d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/EventStateMachine.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d5cf3e43ada51f8994db3a55ac3a5c8a9b9e902",
+      "size": 4292,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2d5cf3e43ada51f8994db3a55ac3a5c8a9b9e902"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Exception.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5184c3cada984f1850d3d27b3d4450d250b0f9e5",
+      "size": 1117,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5184c3cada984f1850d3d27b3d4450d250b0f9e5"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/FileUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b825834bba34c0810aeedafada2251fe4275ee61",
+      "size": 1357,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b825834bba34c0810aeedafada2251fe4275ee61"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/InputMethod.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2afd9f175c21ad68458d90a3365370975576432",
+      "size": 1357,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c2afd9f175c21ad68458d90a3365370975576432"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/InputMethodUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a45e5d5a288e6645110c693caabe1c56421456",
+      "size": 3315,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/25a45e5d5a288e6645110c693caabe1c56421456"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Intent.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e498b1c9d7a4b3ec363805ab15dbb5c2c0524257",
+      "size": 1901,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e498b1c9d7a4b3ec363805ab15dbb5c2c0524257"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/KeyCharacterMap.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f81e7126cce4b46776e525a215e1725a82bf9bbd",
+      "size": 285,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f81e7126cce4b46776e525a215e1725a82bf9bbd"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Logcat.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46051840678bc07ed3ef3f25e091c0e6752a0c1e",
+      "size": 2257,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/46051840678bc07ed3ef3f25e091c0e6752a0c1e"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Menu.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2965af35903cb06a11ca248281e99137e910493c",
+      "size": 1812,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2965af35903cb06a11ca248281e99137e910493c"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/NaiveDustman.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55831a6f74529be7e96ec601f33020212b455c9",
+      "size": 1391,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c55831a6f74529be7e96ec601f33020212b455c9"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/NativeTokenizer.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b64fc64386c8c610e3ceb2d6e4acebe0dce5753",
+      "size": 1594,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1b64fc64386c8c610e3ceb2d6e4acebe0dce5753"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/NavController.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c2a5b100ec2e390bc5df3d323d96b762b0d079a",
+      "size": 651,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2c2a5b100ec2e390bc5df3d323d96b762b0d079a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/NinePatchBitmapFactory.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd598fe25f20e4fd648dd5bbd44653ea82c69789",
+      "size": 5834,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bd598fe25f20e4fd648dd5bbd44653ea82c69789"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Notifications.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea23004d90008e76df40b6ec0c7e16a53b6eeb2a",
+      "size": 6228,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ea23004d90008e76df40b6ec0c7e16a53b6eeb2a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Permissions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcf33a2a4a40a3f9a7a7761202acfcc4cd0c8f45",
+      "size": 337,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fcf33a2a4a40a3f9a7a7761202acfcc4cd0c8f45"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/PreferenceScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afffa67e3a19327d06d1e342d96dffd2e6970fd2",
+      "size": 3187,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/afffa67e3a19327d06d1e342d96dffd2e6970fd2"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Process.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2854d3565252adf2e9f08e7baa824423cfce139b",
+      "size": 832,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2854d3565252adf2e9f08e7baa824423cfce139b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Rect.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e39c83ea568b2929249209caf16609a1764d7e3",
+      "size": 307,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1e39c83ea568b2929249209caf16609a1764d7e3"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/RecyclerView.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1664cb3853f26b73c7ee8deac88cac75f2fc985",
+      "size": 613,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f1664cb3853f26b73c7ee8deac88cac75f2fc985"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Regex.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bea47e752e08c3c228a858eb07dadafe35cf4a50",
+      "size": 344,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bea47e752e08c3c228a858eb07dadafe35cf4a50"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/ResourceUtils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b29c3447d2f274958effe83c792980a03df8322",
+      "size": 889,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0b29c3447d2f274958effe83c792980a03df8322"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Splitties.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c15d8cc81fc665da6119d17c48ea18817e97c743",
+      "size": 922,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c15d8cc81fc665da6119d17c48ea18817e97c743"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/StartActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6476f59f34e62dc6e1d63ab4f7f1f143f1bb9a77",
+      "size": 579,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/6476f59f34e62dc6e1d63ab4f7f1f143f1bb9a77"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Strings.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5a7f4d48a1eb702fe206cde6411091d98d2e918",
+      "size": 1016,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b5a7f4d48a1eb702fe206cde6411091d98d2e918"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Toast.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "972ba771f087e179a3836859f275ea162b3ee7fe",
+      "size": 1202,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/972ba771f087e179a3836859f275ea162b3ee7fe"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/WeakHashSet.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2942b6373493a19090567f9f7fcc24af2a687a31",
+      "size": 311,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2942b6373493a19090567f9f7fcc24af2a687a31"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/yaml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "742524599e761335e89f0333fa132273264c8c44",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/742524599e761335e89f0333fa132273264c8c44"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/yaml/Node.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a6adea48afa900417951ad9359991256ff726c0",
+      "size": 4511,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0a6adea48afa900417951ad9359991256ff726c0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/yaml/Parser.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c4917c38379a5e785ba4f2145f77777689ddd0",
+      "size": 7411,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f2c4917c38379a5e785ba4f2145f77777689ddd0"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/yaml/Yaml.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a20edeb8c2240bcf40ce37f9eadc0e41f05cb91",
+      "size": 274,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3a20edeb8c2240bcf40ce37f9eadc0e41f05cb91"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/worker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25744877b0ded91bc0b3a642bcd970058308fb4d",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/25744877b0ded91bc0b3a642bcd970058308fb4d"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/worker/BackgroundSyncWork.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b5efe0c37c5cdda992948da351bfe1da72e6aed",
+      "size": 3818,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4b5efe0c37c5cdda992948da351bfe1da72e6aed"
+    },
+    {
+      "path": "app/src/main/jni",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32d2dd388d08f077ca5f60db2bea8bfd1f059222",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/32d2dd388d08f077ca5f60db2bea8bfd1f059222"
+    },
+    {
+      "path": "app/src/main/jni/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2375c8a8ce95343422dd8b83f42bdbc4419d7ed",
+      "size": 1549,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a2375c8a8ce95343422dd8b83f42bdbc4419d7ed"
+    },
+    {
+      "path": "app/src/main/jni/OpenCC",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "907bfcbbd3aae86ff04bc8eaca67c8af03108ddf"
+    },
+    {
+      "path": "app/src/main/jni/cmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9a88b0218d0040d362357d1753b82103d4787ef",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c9a88b0218d0040d362357d1753b82103d4787ef"
+    },
+    {
+      "path": "app/src/main/jni/cmake/Boost.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e08aa233bc10d3d542af004c723cd6afda6b453",
+      "size": 1076,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9e08aa233bc10d3d542af004c723cd6afda6b453"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindBoost.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61cae8ca9b9aeaa84c018c360b2903c18d0b1ea6",
+      "size": 560,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/61cae8ca9b9aeaa84c018c360b2903c18d0b1ea6"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindGlog.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b15b957ff33f55c3b43d27efcadf6f926175357",
+      "size": 224,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7b15b957ff33f55c3b43d27efcadf6f926175357"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindLevelDb.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b12420add95716cccb4ef40bc2a267d5312550",
+      "size": 153,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e3b12420add95716cccb4ef40bc2a267d5312550"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindMarisa.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bca73dd7a62e49375fa6de3ad35cfdd9e9a79dcd",
+      "size": 228,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/bca73dd7a62e49375fa6de3ad35cfdd9e9a79dcd"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindOpencc.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e711e798fec65ae7e74d13ac3e7b52c5d1d92c3c",
+      "size": 208,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e711e798fec65ae7e74d13ac3e7b52c5d1d92c3c"
+    },
+    {
+      "path": "app/src/main/jni/cmake/FindYamlCpp.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "849d1772d5a17acb65ec2c01a8ff40b75d397d48",
+      "size": 154,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/849d1772d5a17acb65ec2c01a8ff40b75d397d48"
+    },
+    {
+      "path": "app/src/main/jni/cmake/OpenccWorkarounds.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adc78e169a35d69e5af5136a86fe47b20baa9148",
+      "size": 379,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/adc78e169a35d69e5af5136a86fe47b20baa9148"
+    },
+    {
+      "path": "app/src/main/jni/cmake/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a6047b1c049e8df6d012f4430b0fcc1db727b19",
+      "size": 204,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0a6047b1c049e8df6d012f4430b0fcc1db727b19"
+    },
+    {
+      "path": "app/src/main/jni/cmake/Rime.cmake",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "841fc0b63cb2571d9671ff2fe8b6a2b951560c39",
+      "size": 1190,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/841fc0b63cb2571d9671ff2fe8b6a2b951560c39"
+    },
+    {
+      "path": "app/src/main/jni/librime",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "33e78140250125871856cdc5b42ddc6a5fcd3cd4"
+    },
+    {
+      "path": "app/src/main/jni/librime-lua",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "68f9c364a2d25a04c7d4794981d7c796b05ab627"
+    },
+    {
+      "path": "app/src/main/jni/librime-lua-deps",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "9c53b362229766a97b83683b9541c46679118a90"
+    },
+    {
+      "path": "app/src/main/jni/librime-octagram",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "bd12863f45fbbd5c7db06d5ec8be8987b10253bf"
+    },
+    {
+      "path": "app/src/main/jni/librime-predict",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "67c2881914a0242fc14ec7d6877782771b75800c"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48b08aa2b2a914191be5dad6d953294c6582e583",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/48b08aa2b2a914191be5dad6d953294c6582e583"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6c2808c0af37b669a140033d15289eb33def477",
+      "size": 428,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f6c2808c0af37b669a140033d15289eb33def477"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/config.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b117bc8e9dd9c01a5185a95b1a43bba3212f3ca9",
+      "size": 4062,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b117bc8e9dd9c01a5185a95b1a43bba3212f3ca9"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/frontend.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2cfbdf04c74b36c867f0aa2a0b5634371b38bdd",
+      "size": 413,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e2cfbdf04c74b36c867f0aa2a0b5634371b38bdd"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/frontend.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e56ae524533b7e2205c9ca0a1d5a62a57a6a61c8",
+      "size": 177,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e56ae524533b7e2205c9ca0a1d5a62a57a6a61c8"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/helper-types.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "878f2fac74d4261a34d1ac406d8eb4db37eafaf6",
+      "size": 4463,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/878f2fac74d4261a34d1ac406d8eb4db37eafaf6"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/jni-utils.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2411350ad6ec13417a3e5fb91bd55d606ec6dee9",
+      "size": 6356,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2411350ad6ec13417a3e5fb91bd55d606ec6dee9"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/key.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf352b0950390e00f5cfea00d71c3ee6658d9e9",
+      "size": 1177,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2bf352b0950390e00f5cfea00d71c3ee6658d9e9"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/levers.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d980c18a4a0781e05b9d8e8df0d1b80df770bcc5",
+      "size": 5031,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d980c18a4a0781e05b9d8e8df0d1b80df770bcc5"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/objconv.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a7516b2f498143417b82bd8bad5f20d984e8ceb",
+      "size": 5289,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8a7516b2f498143417b82bd8bad5f20d984e8ceb"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/opencc.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4c6001cd1be1f26a7d48a4552ceefcb8920bb60",
+      "size": 1271,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f4c6001cd1be1f26a7d48a4552ceefcb8920bb60"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/rime_jni.cc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22436e21f0deb0530be2d5df6c6abc6b6a662576",
+      "size": 15806,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/22436e21f0deb0530be2d5df6c6abc6b6a662576"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/session.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "307bf2f941e257b137445163ae8db1f628ee12a0",
+      "size": 480,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/307bf2f941e257b137445163ae8db1f628ee12a0"
+    },
+    {
+      "path": "app/src/main/jni/snappy",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "32ded457c0b1fe78ceb8397632c416568d6714a0"
+    },
+    {
+      "path": "app/src/main/res",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5e3b7bb617f8baf016398264b1203080996fa50",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/b5e3b7bb617f8baf016398264b1203080996fa50"
+    },
+    {
+      "path": "app/src/main/res/color",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "65244b1a223527f4327ea2962c803006e8f3727e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/65244b1a223527f4327ea2962c803006e8f3727e"
+    },
+    {
+      "path": "app/src/main/res/color/text_input_type_pill.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aca1a6a4fc8fd66878aa2da911f9e85c55a337b0",
+      "size": 401,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/aca1a6a4fc8fd66878aa2da911f9e85c55a337b0"
+    },
+    {
+      "path": "app/src/main/res/drawable",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b2736cdbfb7dc6d2de4f850dc62e511d9e3ddc9",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/7b2736cdbfb7dc6d2de4f850dc62e511d9e3ddc9"
+    },
+    {
+      "path": "app/src/main/res/drawable/bg_inline_suggestion_dark.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1d916c9a8ad4c416510a1b6dbb392e312c37ab0",
+      "size": 653,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d1d916c9a8ad4c416510a1b6dbb392e312c37ab0"
+    },
+    {
+      "path": "app/src/main/res/drawable/bg_inline_suggestion_light.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67e40103cfd9ecbeef6dafd87b9d8bd051df4383",
+      "size": 653,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/67e40103cfd9ecbeef6dafd87b9d8bd051df4383"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_app_icon_foreground.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ede482b480c9344bccc895a1a47b9aaa6c9c5263",
+      "size": 1267,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ede482b480c9344bccc895a1a47b9aaa6c9c5263"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_add_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3c351a299810bba00e4926220b42e36a75c759",
+      "size": 464,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ec3c351a299810bba00e4926220b42e36a75c759"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_arrow_back_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9330eac7ea8ca9de7f5466d2c6c6120bb3aa8a4",
+      "size": 484,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a9330eac7ea8ca9de7f5466d2c6c6120bb3aa8a4"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcbf50300e994797dbef9e4546ba751d78f9282a",
+      "size": 437,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fcbf50300e994797dbef9e4546ba751d78f9282a"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_arrow_left_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "513d28746a9dfb02083ee88d65505c66a4585b38",
+      "size": 414,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/513d28746a9dfb02083ee88d65505c66a4585b38"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_arrow_right_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adc95bfa3960c96f5b133d2b044b0ffee8f40d46",
+      "size": 418,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/adc95bfa3960c96f5b133d2b044b0ffee8f40d46"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_book_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e989de99285c8fac2917d7a99b2cac53b08d76f5",
+      "size": 513,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e989de99285c8fac2917d7a99b2cac53b08d76f5"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_check_circle_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08e48165bed4e59ac82a46282f52722483f21980",
+      "size": 510,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/08e48165bed4e59ac82a46282f52722483f21980"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_color_lens_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ed1029b9a8057b8c5068513d1ee87d30b4e0c2c",
+      "size": 928,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9ed1029b9a8057b8c5068513d1ee87d30b4e0c2c"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_content_copy_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39cea0d77952837b9c2bc55628e4b3c3ed80bcce",
+      "size": 587,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/39cea0d77952837b9c2bc55628e4b3c3ed80bcce"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_delete_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "644f03f265f59edeaa811e0ae98f7c4443c6f06d",
+      "size": 465,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/644f03f265f59edeaa811e0ae98f7c4443c6f06d"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_delete_sweep_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6a495f63ff75993527bd102f91827af5279915e",
+      "size": 509,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f6a495f63ff75993527bd102f91827af5279915e"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_deselect_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7230005b67a5e5e99a574a755092f5709fd4d0bf",
+      "size": 809,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7230005b67a5e5e99a574a755092f5709fd4d0bf"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_edit_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7d43174bdaa7260ff29947153438b4bd208797a",
+      "size": 548,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f7d43174bdaa7260ff29947153438b4bd208797a"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_email_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61c5c90d3136d61188dce85a60fbb474bd768120",
+      "size": 530,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/61c5c90d3136d61188dce85a60fbb474bd768120"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_expand_less_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0fcd01c87e56c1c42609a49118fb1213527c815",
+      "size": 443,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a0fcd01c87e56c1c42609a49118fb1213527c815"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_expand_more_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb0361d34ffeacc7e01404f73b3e27c6f9a58f9",
+      "size": 442,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4cb0361d34ffeacc7e01404f73b3e27c6f9a58f9"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_keyboard_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5273333bff3ad5d749ed72e02350c7c28dae660",
+      "size": 697,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d5273333bff3ad5d749ed72e02350c7c28dae660"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_link_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13b2be53fc5e513730f87dc6311d0e233a03cbeb",
+      "size": 638,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/13b2be53fc5e513730f87dc6311d0e233a03cbeb"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_list_alt_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e028bc11f4b772cdf6900a71dd9bcaf1d1a32c",
+      "size": 638,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/73e028bc11f4b772cdf6900a71dd9bcaf1d1a32c"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_lock_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1146bc5bbe859faaccf652d504c0638eec1a5bad",
+      "size": 670,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1146bc5bbe859faaccf652d504c0638eec1a5bad"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_more_horiz_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffcff2d5e68cbc8d037233bce3bd45ef810f7c35",
+      "size": 582,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ffcff2d5e68cbc8d037233bce3bd45ef810f7c35"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_numbers_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30daaa12736921d45a92a5c33c82e935f8be0d49",
+      "size": 1044,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/30daaa12736921d45a92a5c33c82e935f8be0d49"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_phone_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de7ac62a155f0909065aa000a8e946ecddcae209",
+      "size": 685,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/de7ac62a155f0909065aa000a8e946ecddcae209"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_push_pin_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5e7e5191c8d7113e909f753d168ed2909f9d883",
+      "size": 594,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a5e7e5191c8d7113e909f753d168ed2909f9d883"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_refresh_reversed_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d45264cb35caa97a2f6f96fe453686323971175",
+      "size": 694,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1d45264cb35caa97a2f6f96fe453686323971175"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_search_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55908842812fb5f4b2090b90efd28e1bc6938889",
+      "size": 645,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/55908842812fb5f4b2090b90efd28e1bc6938889"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_select_all_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a155f78d2eb132b7b7e927a4579ce8f7d11ba917",
+      "size": 767,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a155f78d2eb132b7b7e927a4579ce8f7d11ba917"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_settings_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd9933fdc74467f816aae5ec91723225b70a78fd",
+      "size": 1301,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cd9933fdc74467f816aae5ec91723225b70a78fd"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_share_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32cb9807ae3f4497e81bf3104616697b1afc7fee",
+      "size": 828,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/32cb9807ae3f4497e81bf3104616697b1afc7fee"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_snippet_folder_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a681588db870a9ba81cfaa9ee8396364e14d065",
+      "size": 569,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3a681588db870a9ba81cfaa9ee8396364e14d065"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_star_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68a54f6fe87af0af3357cfc58d7278f31cffcdce",
+      "size": 473,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/68a54f6fe87af0af3357cfc58d7278f31cffcdce"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_sync_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab9f16bc742ef9067a5c4331c14619d1552b90aa",
+      "size": 648,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ab9f16bc742ef9067a5c4331c14619d1552b90aa"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_text_fields_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2030f1961c8bfc1f6d38a193b26af0a606c4fa22",
+      "size": 436,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2030f1961c8bfc1f6d38a193b26af0a606c4fa22"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_tune_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a31afa930165ab22d680ed3d6cb0a4e608bf452d",
+      "size": 544,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a31afa930165ab22d680ed3d6cb0a4e608bf452d"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_view_comfy_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b4a242f6c68d0c9ae64513ef40a5ee055156faf",
+      "size": 608,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7b4a242f6c68d0c9ae64513ef40a5ee055156faf"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_baseline_warning_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "538773c706d4889b4bda6fc99b29b678a5fc375b",
+      "size": 450,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/538773c706d4889b4bda6fc99b29b678a5fc375b"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_clipboard_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c12a22a3a6129cf23c23cad05c2d19b2795079cb",
+      "size": 805,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c12a22a3a6129cf23c23cad05c2d19b2795079cb"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_input_box.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8a6babe32270a380308b0691dacd9e4a91059e4",
+      "size": 992,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f8a6babe32270a380308b0691dacd9e4a91059e4"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_outline_cancel_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccb632e77db93efce4757b272f57e455c388448d",
+      "size": 633,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ccb632e77db93efce4757b272f57e455c388448d"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_outline_push_pin_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff776c86a4dc8a956205186504c95ec73a6287e7",
+      "size": 648,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ff776c86a4dc8a956205186504c95ec73a6287e7"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_round_view_list_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d00e91ac31ca4d26b597c299069523d1de9df82e",
+      "size": 999,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d00e91ac31ca4d26b597c299069523d1de9df82e"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_trime_status.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a45fabc166a3119aae4465d6bb7745075a14f1f",
+      "size": 1311,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8a45fabc166a3119aae4465d6bb7745075a14f1f"
+    },
+    {
+      "path": "app/src/main/res/layout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "39c52716f4d61b08888143be7fc9260f6b70f839",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/39c52716f4d61b08888143be7fc9260f6b70f839"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_clip_edit.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65d5ee67a53f0d520fa37d23b3949a65acdb8b5f",
+      "size": 2317,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/65d5ee67a53f0d520fa37d23b3949a65acdb8b5f"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_log.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a7b321d5bae804907d839ee15c576d8706784b",
+      "size": 2656,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/69a7b321d5bae804907d839ee15c576d8706784b"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f667bad0930cbf78fc25a907d1eade8642f4ce32",
+      "size": 1579,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f667bad0930cbf78fc25a907d1eade8642f4ce32"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_setup.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "824afab5b6ee82e868a4976855ce624ab75a64a1",
+      "size": 1970,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/824afab5b6ee82e868a4976855ce624ab75a64a1"
+    },
+    {
+      "path": "app/src/main/res/layout/fragment_setup.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f273b2692b1d45edfce419256c0e4a7fdf981e70",
+      "size": 5555,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f273b2692b1d45edfce419256c0e4a7fdf981e70"
+    },
+    {
+      "path": "app/src/main/res/layout/toolbar.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e606b007758d91e8a99504c527e03e6573ce7249",
+      "size": 821,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e606b007758d91e8a99504c527e03e6573ce7249"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb39fea3da2ff0680050e6b7ab1947c21cfa46e2",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/fb39fea3da2ff0680050e6b7ab1947c21cfa46e2"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_app_icon.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c005155dd414d11b0d0474f038fd36942b59f172",
+      "size": 442,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c005155dd414d11b0d0474f038fd36942b59f172"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_app_icon_round.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c005155dd414d11b0d0474f038fd36942b59f172",
+      "size": 442,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c005155dd414d11b0d0474f038fd36942b59f172"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8c2863de9e3b087db9d35acec9e036a9463bb0e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/c8c2863de9e3b087db9d35acec9e036a9463bb0e"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_app_icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a136fc77c310a10d233695fcb87191e19b234d8d",
+      "size": 2978,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a136fc77c310a10d233695fcb87191e19b234d8d"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_app_icon_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a136fc77c310a10d233695fcb87191e19b234d8d",
+      "size": 2978,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/a136fc77c310a10d233695fcb87191e19b234d8d"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e31d6e6622d059948daa8d09719cf21c6038b24",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/2e31d6e6622d059948daa8d09719cf21c6038b24"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_app_icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b6f31a90b7c02f9afd51e74645f7b655b19f014",
+      "size": 1947,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8b6f31a90b7c02f9afd51e74645f7b655b19f014"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_app_icon_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b6f31a90b7c02f9afd51e74645f7b655b19f014",
+      "size": 1947,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8b6f31a90b7c02f9afd51e74645f7b655b19f014"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa40445c40720ce58cb028f071ec9f6d4deeaa5c",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/fa40445c40720ce58cb028f071ec9f6d4deeaa5c"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_app_icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6768f272bd14e00ca5c832354e7ca7979d9823",
+      "size": 4296,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ee6768f272bd14e00ca5c832354e7ca7979d9823"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_app_icon_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee6768f272bd14e00ca5c832354e7ca7979d9823",
+      "size": 4296,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ee6768f272bd14e00ca5c832354e7ca7979d9823"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be2529309ebddc4690247fef71ba5c6b117c05eb",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/be2529309ebddc4690247fef71ba5c6b117c05eb"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_app_icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "974a380865ce94adcf5c3ba21decd421f487d6f0",
+      "size": 6815,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/974a380865ce94adcf5c3ba21decd421f487d6f0"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_app_icon_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "974a380865ce94adcf5c3ba21decd421f487d6f0",
+      "size": 6815,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/974a380865ce94adcf5c3ba21decd421f487d6f0"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3d2f6bac415e4e107d79a4e8ea35375c2c9b18da",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/3d2f6bac415e4e107d79a4e8ea35375c2c9b18da"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_app_icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57acbf3902f3f89a483ae9dbedcd19b76fa96b1f",
+      "size": 10057,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/57acbf3902f3f89a483ae9dbedcd19b76fa96b1f"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_app_icon_round.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57acbf3902f3f89a483ae9dbedcd19b76fa96b1f",
+      "size": 10057,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/57acbf3902f3f89a483ae9dbedcd19b76fa96b1f"
+    },
+    {
+      "path": "app/src/main/res/values-night",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfa3a5a5ee07ad8bbe4f8bf93389d76abf3bdb65",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/bfa3a5a5ee07ad8bbe4f8bf93389d76abf3bdb65"
+    },
+    {
+      "path": "app/src/main/res/values-night/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b438619c4a854b88106e7ec2304896cc8af3bc5b",
+      "size": 265,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b438619c4a854b88106e7ec2304896cc8af3bc5b"
+    },
+    {
+      "path": "app/src/main/res/values-night/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2121db7b8f83dfc1e44197148d84c70cdfc33a53",
+      "size": 608,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2121db7b8f83dfc1e44197148d84c70cdfc33a53"
+    },
+    {
+      "path": "app/src/main/res/values-zh-rCN",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e067faefa120bbd0a0cc0cd05f3681a8057ee04a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e067faefa120bbd0a0cc0cd05f3681a8057ee04a"
+    },
+    {
+      "path": "app/src/main/res/values-zh-rCN/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3938e96b7de7c2a86c84bb63246d5d2d94b3d3f",
+      "size": 16948,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c3938e96b7de7c2a86c84bb63246d5d2d94b3d3f"
+    },
+    {
+      "path": "app/src/main/res/values-zh-rTW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6dc27ecdae962570a3b9c9e86df6c8af31dc5f76",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/6dc27ecdae962570a3b9c9e86df6c8af31dc5f76"
+    },
+    {
+      "path": "app/src/main/res/values-zh-rTW/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92bb111e6f4198f41d536e54838886cb2e3e3902",
+      "size": 16915,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/92bb111e6f4198f41d536e54838886cb2e3e3902"
+    },
+    {
+      "path": "app/src/main/res/values",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d34b78d8ac8b0342986b2027cc96a590558bdf70",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/d34b78d8ac8b0342986b2027cc96a590558bdf70"
+    },
+    {
+      "path": "app/src/main/res/values/attrs.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b0e4d741796831664d83606126c81ae9853a659",
+      "size": 1193,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2b0e4d741796831664d83606126c81ae9853a659"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66a970c354114803afa968f0f2c9936df67aae15",
+      "size": 912,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/66a970c354114803afa968f0f2c9936df67aae15"
+    },
+    {
+      "path": "app/src/main/res/values/ic_app_icon_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5cbb0d60392a6bfe4f92f52759a7576ed4a1e91",
+      "size": 225,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f5cbb0d60392a6bfe4f92f52759a7576ed4a1e91"
+    },
+    {
+      "path": "app/src/main/res/values/input_view_ids.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cc15374061f0a965eca6dec46d0fb388d17ab2b",
+      "size": 394,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5cc15374061f0a965eca6dec46d0fb388d17ab2b"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba369a6c4eeba146cc62c95ac00e9b8a8a86618a",
+      "size": 17149,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/ba369a6c4eeba146cc62c95ac00e9b8a8a86618a"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7fc58e06668d712e7e67cff9e4f631e10c349da3",
+      "size": 618,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7fc58e06668d712e7e67cff9e4f631e10c349da3"
+    },
+    {
+      "path": "app/src/main/res/xml-v30",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "378a06f953e6baae9d4dcca6b1c6347beea7b7ca",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/378a06f953e6baae9d4dcca6b1c6347beea7b7ca"
+    },
+    {
+      "path": "app/src/main/res/xml-v30/method.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d29ea62e7c3c4a80acd14a18e9d88f7b4f7e0df",
+      "size": 726,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5d29ea62e7c3c4a80acd14a18e9d88f7b4f7e0df"
+    },
+    {
+      "path": "app/src/main/res/xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "393b92f270fb1531ae1830bd38cf555bac3edd15",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/393b92f270fb1531ae1830bd38cf555bac3edd15"
+    },
+    {
+      "path": "app/src/main/res/xml/method.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87e1ea9530e3bffe600f09048b1c3bd7cf01283b",
+      "size": 681,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/87e1ea9530e3bffe600f09048b1c3bd7cf01283b"
+    },
+    {
+      "path": "app/src/main/res/xml/provider_paths.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24e704680809882910ea5c218b20475f2059514e",
+      "size": 651,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/24e704680809882910ea5c218b20475f2059514e"
+    },
+    {
+      "path": "app/src/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e4e2a94daad85134fc1997e57cb7d4684585edce",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e4e2a94daad85134fc1997e57cb7d4684585edce"
+    },
+    {
+      "path": "app/src/test/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5697209242cc429d89d054fc25f82d73906fc4a2",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/5697209242cc429d89d054fc25f82d73906fc4a2"
+    },
+    {
+      "path": "app/src/test/assets/incorrect.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4addb41fd0dd8b8e75f99ef26e543fa9b8b35cdf",
+      "size": 453,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4addb41fd0dd8b8e75f99ef26e543fa9b8b35cdf"
+    },
+    {
+      "path": "app/src/test/assets/trime.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ce5480011a47866890c703532ea93eb3b844012",
+      "size": 78970,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5ce5480011a47866890c703532ea93eb3b844012"
+    },
+    {
+      "path": "app/src/test/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f05650a72d8f68aad4645f34dff8eac4673e932",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/6f05650a72d8f68aad4645f34dff8eac4673e932"
+    },
+    {
+      "path": "app/src/test/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17d77353d54d07d946ed4c209928785c423cdc43",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/17d77353d54d07d946ed4c209928785c423cdc43"
+    },
+    {
+      "path": "app/src/test/java/com/osfans",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75300a0bbd890b03c19363efc749def30a6fe6fe",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/75300a0bbd890b03c19363efc749def30a6fe6fe"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63e676e7e990b99de604d804d60d5e1dc603c764",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/63e676e7e990b99de604d804d60d5e1dc603c764"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b10318b3c181b00f7865df699afda941fb9ea1f9",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/b10318b3c181b00f7865df699afda941fb9ea1f9"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "30d2039a9b61b31d11ad88cadae571930820fa51",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/30d2039a9b61b31d11ad88cadae571930820fa51"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/AtomicLocalFileCopyTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b3f014f978ef5dcb92ca7ac3c07e4c7a317618",
+      "size": 2825,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/22b3f014f978ef5dcb92ca7ac3c07e4c7a317618"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/BoundedCopyPoolTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc115e355767153137d0038059281d88dfe4a0d2",
+      "size": 1142,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cc115e355767153137d0038059281d88dfe4a0d2"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/OrphanCleanerTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "460d12f18785f3c1c5798eff807a8748d86876cd",
+      "size": 1057,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/460d12f18785f3c1c5798eff807a8748d86876cd"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/SafDisplayPathTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f90b491a41e5762c9b356e55c096cbc5b148c991",
+      "size": 1427,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f90b491a41e5762c9b356e55c096cbc5b148c991"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/SafTreeWalkerTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66a9e071626366e7dbd69cd116c933bd5556cf16",
+      "size": 960,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/66a9e071626366e7dbd69cd116c933bd5556cf16"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/SyncRelativePathTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c732ee0d01fb5babbc140e28759551809f71904f",
+      "size": 1843,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c732ee0d01fb5babbc140e28759551809f71904f"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/theme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "320c1b3deccb645f7ed06769292e205e00cef2df",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/320c1b3deccb645f7ed06769292e205e00cef2df"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/theme/GeneralStyleTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ad193b28fa6b9f6e014aefc74b902a25e01b19e",
+      "size": 2048,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/5ad193b28fa6b9f6e014aefc74b902a25e01b19e"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/util",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8def74e54c6162475c32355b20db4b3217743645",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8def74e54c6162475c32355b20db4b3217743645"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/util/WeakHashSetTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b2e37328dbee876eda0e9c0821f12e9b840ddf7",
+      "size": 3612,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0b2e37328dbee876eda0e9c0821f12e9b840ddf7"
+    },
+    {
+      "path": "build-logic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b61ca349471da5158a76246346271f31734fbbd5",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/b61ca349471da5158a76246346271f31734fbbd5"
+    },
+    {
+      "path": "build-logic/convention",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07c29a47a575536b079298892b6546edac6d2e8a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/07c29a47a575536b079298892b6546edac6d2e8a"
+    },
+    {
+      "path": "build-logic/convention/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8465ea1bb26516be917fe2000d42dd1214f8f86",
+      "size": 1251,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/c8465ea1bb26516be917fe2000d42dd1214f8f86"
+    },
+    {
+      "path": "build-logic/convention/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46ee417ea4e1e8e39b8d8e487880fadeca36f5db",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/46ee417ea4e1e8e39b8d8e487880fadeca36f5db"
+    },
+    {
+      "path": "build-logic/convention/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e590d34aede0f3dfdc4dc4aec8a970b7272cd9e1",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e590d34aede0f3dfdc4dc4aec8a970b7272cd9e1"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8ad600e1d54e2047da7d10cfdda3348ead1e12e",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/f8ad600e1d54e2047da7d10cfdda3348ead1e12e"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/AndroidAppConventionPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3624dabc5e5fcbb1ad3a5c1bde57a60bbc283dab",
+      "size": 2668,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3624dabc5e5fcbb1ad3a5c1bde57a60bbc283dab"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/AndroidBaseConventionPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c18a92c6e62eacf34ac746f10f529ea3e977866",
+      "size": 819,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9c18a92c6e62eacf34ac746f10f529ea3e977866"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/DataChecksumsPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7501117c453a6a889f7f2f1485c68b02682461c4",
+      "size": 4615,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7501117c453a6a889f7f2f1485c68b02682461c4"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/NativeAppConventionPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e315d7c7f4c5d661929925b2b0480085e5c63589",
+      "size": 1286,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e315d7c7f4c5d661929925b2b0480085e5c63589"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/NativeBaseConventionPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2af34b0e1c19fc849b83fce8200cc8d207ec89fa",
+      "size": 2084,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2af34b0e1c19fc849b83fce8200cc8d207ec89fa"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/NativeCacheHashPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0b3e3a4475ad1d543238f069f699bcf5bc766af",
+      "size": 2068,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e0b3e3a4475ad1d543238f069f699bcf5bc766af"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/OpenCCDataPlugin.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "177500aca787b0cf1f071382af923bba29a168b2",
+      "size": 4109,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/177500aca787b0cf1f071382af923bba29a168b2"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/ProjectExtensions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cfc4269adbf29be3f77434a93f6372bc8e1e546b",
+      "size": 3379,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/cfc4269adbf29be3f77434a93f6372bc8e1e546b"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/Utils.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ed666f9bbd1e90963d698b72c939c4e72d18582",
+      "size": 863,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/3ed666f9bbd1e90963d698b72c939c4e72d18582"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/Versions.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eff53089df5581d63c24f622e8190dec9d1128c",
+      "size": 282,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/9eff53089df5581d63c24f622e8190dec9d1128c"
+    },
+    {
+      "path": "build-logic/gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d3661bd944334f62a3d3a24bca157983666f0f8",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/9d3661bd944334f62a3d3a24bca157983666f0f8"
+    },
+    {
+      "path": "build-logic/gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8796bf53307028364a42db1696768ac15015f0ce",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8796bf53307028364a42db1696768ac15015f0ce"
+    },
+    {
+      "path": "build-logic/gradle/wrapper/gradle-wrapper.properties",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "579c670a3ca08fe5754dcd157671c24df32be165",
+      "size": 49,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/579c670a3ca08fe5754dcd157671c24df32be165"
+    },
+    {
+      "path": "build-logic/settings.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "368a2e2c64e17e584e1227b79c69cc3778100137",
+      "size": 408,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/368a2e2c64e17e584e1227b79c69cc3778100137"
+    },
+    {
+      "path": "build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fea98fd73106cebc7fb2b4776412270b443bb79e",
+      "size": 959,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/fea98fd73106cebc7fb2b4776412270b443bb79e"
+    },
+    {
+      "path": "cliff.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85c23175274bc6361734183b88abb3c59c2b9b02",
+      "size": 3490,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/85c23175274bc6361734183b88abb3c59c2b9b02"
+    },
+    {
+      "path": "codegen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "724d1fbe648e81ecc4e4d16e75c4408a4a673bf8",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/724d1fbe648e81ecc4e4d16e75c4408a4a673bf8"
+    },
+    {
+      "path": "codegen/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d102b16190c9a6a17f85bf19506e5a40766a8f7",
+      "size": 107,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/4d102b16190c9a6a17f85bf19506e5a40766a8f7"
+    },
+    {
+      "path": "codegen/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e3b419274fd78fad31fc0b54050f5e28d48b009",
+      "size": 237,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2e3b419274fd78fad31fc0b54050f5e28d48b009"
+    },
+    {
+      "path": "codegen/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea7809cc6544490907f7b6d1752252f0f947a970",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/ea7809cc6544490907f7b6d1752252f0f947a970"
+    },
+    {
+      "path": "codegen/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed2371521a011602a987e5396912b4b652a7698b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/ed2371521a011602a987e5396912b4b652a7698b"
+    },
+    {
+      "path": "codegen/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18beb119b8ece305437028a69789859a23ef8850",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/18beb119b8ece305437028a69789859a23ef8850"
+    },
+    {
+      "path": "codegen/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2078c3d8c9164f423b4eb336c9a8491f068c30a8",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/2078c3d8c9164f423b4eb336c9a8491f068c30a8"
+    },
+    {
+      "path": "codegen/src/main/java/com/osfans",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16fe731a919c647375cd995bfdd76e14f204fd5b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/16fe731a919c647375cd995bfdd76e14f204fd5b"
+    },
+    {
+      "path": "codegen/src/main/java/com/osfans/trime",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a57eaf3190f14e0b014cf297febea96300862832",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/a57eaf3190f14e0b014cf297febea96300862832"
+    },
+    {
+      "path": "codegen/src/main/java/com/osfans/trime/codegen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "feb06a6ef2d95391e33f12332ad15d01f3bf7875",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/feb06a6ef2d95391e33f12332ad15d01f3bf7875"
+    },
+    {
+      "path": "codegen/src/main/java/com/osfans/trime/codegen/GenKeyMapping.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8c4986c099b2d99894d0d7d553df9b355b2d65c",
+      "size": 25016,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f8c4986c099b2d99894d0d7d553df9b355b2d65c"
+    },
+    {
+      "path": "codegen/src/main/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "253f2faae84ca8fd4272ee043a7eac038fdeb088",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/253f2faae84ca8fd4272ee043a7eac038fdeb088"
+    },
+    {
+      "path": "codegen/src/main/resources/META-INF",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e063774679bd7af1aab1aa8ffe35b8b0f0b4b0e3",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/e063774679bd7af1aab1aa8ffe35b8b0f0b4b0e3"
+    },
+    {
+      "path": "codegen/src/main/resources/META-INF/services",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7fe0066a378a27cef8f1ef00737b41c899169d19",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/7fe0066a378a27cef8f1ef00737b41c899169d19"
+    },
+    {
+      "path": "codegen/src/main/resources/META-INF/services/com.google.devtools.ksp.processing.SymbolProcessorProvider",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df3862631416699c046922887b3c21bf51418db7",
+      "size": 47,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/df3862631416699c046922887b3c21bf51418db7"
+    },
+    {
+      "path": "doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dc4354eea4b7ab8eda0bcce205692eb99fdb7aa0",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/dc4354eea4b7ab8eda0bcce205692eb99fdb7aa0"
+    },
+    {
+      "path": "doc/Keyboard.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f345afa21be245347758b50b0bb551b4c729cfb",
+      "size": 2200,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/1f345afa21be245347758b50b0bb551b4c729cfb"
+    },
+    {
+      "path": "doc/trime-schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77f016c1f96bbd1343f896daf1900b18bee34c8",
+      "size": 30047,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b77f016c1f96bbd1343f896daf1900b18bee34c8"
+    },
+    {
+      "path": "fastlane",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f348c8a6de1883b68da4c50b0c4a606c2584f6a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/8f348c8a6de1883b68da4c50b0c4a606c2584f6a"
+    },
+    {
+      "path": "fastlane/metadata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c622654bdea13a9197381aa6648c90a4cb2f52b",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/7c622654bdea13a9197381aa6648c90a4cb2f52b"
+    },
+    {
+      "path": "fastlane/metadata/android",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b27a63ecfe70fc36071eb8913e80dcbce4710662",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/b27a63ecfe70fc36071eb8913e80dcbce4710662"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5365713b1c5a6daeb26830e2ca0bd0a41fa60a6a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/5365713b1c5a6daeb26830e2ca0bd0a41fa60a6a"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/full_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0b375dfbf26e0fd3c1301ba9ab275d251b05632",
+      "size": 316,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e0b375dfbf26e0fd3c1301ba9ab275d251b05632"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35389955dd3415dbf6b07ab7486879a9387a456c",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/35389955dd3415dbf6b07ab7486879a9387a456c"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/icon.png",
+      "mode": "120000",
+      "type": "blob",
+      "sha": "86f9ce473a431cb0b844785a664f2aa906235bf3",
+      "size": 53,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/86f9ce473a431cb0b844785a664f2aa906235bf3"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/short_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f029014eb5c61a72ef31a97dfa93874278fb42dd",
+      "size": 44,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/f029014eb5c61a72ef31a97dfa93874278fb42dd"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-CN",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c5ffd7b3314875e90cf187ffa59df83d75d9538",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/4c5ffd7b3314875e90cf187ffa59df83d75d9538"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-CN/full_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d916e5ba72a8e8735b6115c1c5e61bdc349b4d7",
+      "size": 259,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2d916e5ba72a8e8735b6115c1c5e61bdc349b4d7"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-CN/short_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06ec0773b6e6fa9bfb23267733486e3f527f262b",
+      "size": 80,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/06ec0773b6e6fa9bfb23267733486e3f527f262b"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-TW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "45959400a7c986eb4b1f32b17b47542c5a166402",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/45959400a7c986eb4b1f32b17b47542c5a166402"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-TW/full_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c5716b744ffc978594520bb0eec3339062dbc47",
+      "size": 259,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/8c5716b744ffc978594520bb0eec3339062dbc47"
+    },
+    {
+      "path": "fastlane/metadata/android/zh-TW/short_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6c5f814327c61f3c897a3ea53d5a9009f0a7c8",
+      "size": 80,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/7b6c5f814327c61f3c897a3ea53d5a9009f0a7c8"
+    },
+    {
+      "path": "gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "442d71b38de9a47324e12a2125faa358c5883b5a",
+      "size": 398,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/442d71b38de9a47324e12a2125faa358c5883b5a"
+    },
+    {
+      "path": "gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb77d8409853eda6f0d46b942dd01f945be989ee",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/cb77d8409853eda6f0d46b942dd01f945be989ee"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd2fcd454a477cb12d62f3877508bf4078661aa3",
+      "size": 4857,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/dd2fcd454a477cb12d62f3877508bf4078661aa3"
+    },
+    {
+      "path": "gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "931b1cbb3ff63ec8f7e1a283c603cd39ece992d4",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/931b1cbb3ff63ec8f7e1a283c603cd39ece992d4"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d997cfc60f4cff0e7451d19d49a82fa986695d07",
+      "size": 48966,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/d997cfc60f4cff0e7451d19d49a82fa986695d07"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "317a32cf42232f6282ccdb2420ceddc2773625ea",
+      "size": 252,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/317a32cf42232f6282ccdb2420ceddc2773625ea"
+    },
+    {
+      "path": "gradlew",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "739907dfd15937f032b5a46390e9d63709e87f7a",
+      "size": 8654,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/739907dfd15937f032b5a46390e9d63709e87f7a"
+    },
+    {
+      "path": "gradlew.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e509b2dd8fe5579a5954a2c28633ad914cd1c225",
+      "size": 2896,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/e509b2dd8fe5579a5954a2c28633ad914cd1c225"
+    },
+    {
+      "path": "osfans_alipay.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a0f191ea8a135cb26047d472aa40c9b42d4114d",
+      "size": 37798,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/0a0f191ea8a135cb26047d472aa40c9b42d4114d"
+    },
+    {
+      "path": "patches",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d259db5ef5c56362836e7bbcdc0f6c15c7993a3a",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/d259db5ef5c56362836e7bbcdc0f6c15c7993a3a"
+    },
+    {
+      "path": "patches/lua.patch",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b87297293094bb67e6355ef5ed218c6a23ed9f97",
+      "size": 399,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/b87297293094bb67e6355ef5ed218c6a23ed9f97"
+    },
+    {
+      "path": "script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19988d1c94ca36004440fb7040375babfbf1ce84",
+      "url": "https://api.github.com/repos/osfans/trime/git/trees/19988d1c94ca36004440fb7040375babfbf1ce84"
+    },
+    {
+      "path": "script/clang-format.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2763f24dc0bb0fed0476ffcd5f8be649b2931789",
+      "size": 844,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/2763f24dc0bb0fed0476ffcd5f8be649b2931789"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41aa13153b7f2d1d3c54b43bbe315124df921ed5",
+      "size": 516,
+      "url": "https://api.github.com/repos/osfans/trime/git/blobs/41aa13153b7f2d1d3c54b43bbe315124df921ed5"
+    }
+  ],
+  "truncated": false
+}

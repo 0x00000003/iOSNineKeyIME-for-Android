@@ -1,0 +1,72 @@
+{
+  "scope": "host inventory only; no Gradle/Android build or device test",
+  "os": "Darwin",
+  "python": "3.9.6",
+  "commands": {
+    "git": {
+      "path": "/usr/bin/git",
+      "version": {
+        "exit_code": 0,
+        "summary": [
+          "git version 2.50.1 (Apple Git-155)"
+        ]
+      }
+    },
+    "java": {
+      "path": "/usr/bin/java",
+      "version": {
+        "exit_code": 0,
+        "summary": [
+          "openjdk version \"21.0.7\" 2025-04-15 LTS",
+          "OpenJDK Runtime Environment Temurin-21.0.7+6 (build 21.0.7+6-LTS)",
+          "OpenJDK 64-Bit Server VM Temurin-21.0.7+6 (build 21.0.7+6-LTS, mixed mode, sharing)"
+        ]
+      }
+    },
+    "adb": {
+      "path": "/opt/homebrew/bin/adb",
+      "version": {
+        "exit_code": 0,
+        "summary": [
+          "Android Debug Bridge version 1.0.41",
+          "Version 37.0.0-14910828",
+          "Installed as /opt/homebrew/bin/adb"
+        ]
+      }
+    },
+    "gradle": {
+      "path": null
+    },
+    "cmake": {
+      "path": null
+    },
+    "ninja": {
+      "path": null
+    }
+  },
+  "sdk_candidates": [
+    {
+      "path": "~/Library/Android/sdk",
+      "exists": true,
+      "components": {
+        "platforms": [
+          "android-34",
+          "android-36.1"
+        ],
+        "build-tools": [
+          "30.0.3",
+          "36.1.0",
+          "37.0.0"
+        ],
+        "ndk": [
+          "23.1.7779620"
+        ],
+        "cmake": [
+          "3.22.1"
+        ],
+        "cmdline-tools": []
+      }
+    }
+  ],
+  "android_project_present": false
+}

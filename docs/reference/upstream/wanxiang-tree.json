@@ -1,0 +1,1656 @@
+{
+  "sha": "89075fe7b870dcf80249dfa0ece7474f1a960d91",
+  "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/89075fe7b870dcf80249dfa0ece7474f1a960d91",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94f480de94e1d767531580401cbf13844868e82b",
+      "size": 18,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/94f480de94e1d767531580401cbf13844868e82b"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "be6f23754081459c1d8ef154b54c26a0e94c2862",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/be6f23754081459c1d8ef154b54c26a0e94c2862"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dd627966070fd42f652d2f64f3dbe8e6565af6d",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/9dd627966070fd42f652d2f64f3dbe8e6565af6d"
+    },
+    {
+      "path": ".github/workflows/Wanxiang_Matrix.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a6bfe5728a928636eaf49c8e883c55fe5d85871",
+      "size": 11806,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7a6bfe5728a928636eaf49c8e883c55fe5d85871"
+    },
+    {
+      "path": ".github/workflows/deploy-docs.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29cce0355de9eff26afaa19879db0530fde4c832",
+      "size": 1467,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/29cce0355de9eff26afaa19879db0530fde4c832"
+    },
+    {
+      "path": ".github/workflows/release-build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ada491ec332a82b2cdac5f45b65752bc39fe22b",
+      "size": 777,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7ada491ec332a82b2cdac5f45b65752bc39fe22b"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28b394bb5874848302f954d80ef4c76cf8cfcff2",
+      "size": 2255,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/28b394bb5874848302f954d80ef4c76cf8cfcff2"
+    },
+    {
+      "path": ".github/workflows/releases-napshot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb223330cabdb3e0a2f9fa8a7a2ac0088888c975",
+      "size": 9937,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/eb223330cabdb3e0a2f9fa8a7a2ac0088888c975"
+    },
+    {
+      "path": ".github/workflows/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d34cb2da91db881acaed2c322b421daca211f23c",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/d34cb2da91db881acaed2c322b421daca211f23c"
+    },
+    {
+      "path": ".github/workflows/scripts/aux_go.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82bfb7faa1a8797a8e3188fa573887227663b0b6",
+      "size": 13723,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/82bfb7faa1a8797a8e3188fa573887227663b0b6"
+    },
+    {
+      "path": ".github/workflows/scripts/generate-release-note.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e31c98fe7aa6d8bebbfaf1c8b05d999df106dbea",
+      "size": 3552,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e31c98fe7aa6d8bebbfaf1c8b05d999df106dbea"
+    },
+    {
+      "path": ".github/workflows/scripts/openccset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4a8879981fcf19e1d363bcec407fd078658cb1d",
+      "size": 2094,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/b4a8879981fcf19e1d363bcec407fd078658cb1d"
+    },
+    {
+      "path": ".github/workflows/scripts/release-build.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a122833180e03794ee2bbc289469bdec659f1f9c",
+      "size": 23426,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/a122833180e03794ee2bbc289469bdec659f1f9c"
+    },
+    {
+      "path": ".github/workflows/sync_dicts.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54ce783e12a78a94081e6dbbe0336f0fd9c3785e",
+      "size": 1603,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/54ce783e12a78a94081e6dbbe0336f0fd9c3785e"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "512b615d3c8d2f707d364099503bba8d989b82ea",
+      "size": 142,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/512b615d3c8d2f707d364099503bba8d989b82ea"
+    },
+    {
+      "path": ".release-please-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac54587025f81888b32c9e7bcecbc21b5e5fc8e5",
+      "size": 14,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ac54587025f81888b32c9e7bcecbc21b5e5fc8e5"
+    },
+    {
+      "path": ".yamlfmt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c7c134b89993b509c699ce86e0bc8cbb42e8c0b",
+      "size": 194,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5c7c134b89993b509c699ce86e0bc8cbb42e8c0b"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f362c015c3fa2bc2101aab58ec2e6212acee77a",
+      "size": 11055,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5f362c015c3fa2bc2101aab58ec2e6212acee77a"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df14921c2931e93625e6d49db3b4bcac5563c5ba",
+      "size": 455208,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/df14921c2931e93625e6d49db3b4bcac5563c5ba"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ea99c213c5c0c005ae4e80df8e52169d06896ec",
+      "size": 18656,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/4ea99c213c5c0c005ae4e80df8e52169d06896ec"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f80ef0053122e1e4b007dd46cf32b7beba075973",
+      "size": 6753,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f80ef0053122e1e4b007dd46cf32b7beba075973"
+    },
+    {
+      "path": "custom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1242d5ba8388cff5eabc314c083de35792ae995",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/f1242d5ba8388cff5eabc314c083de35792ae995"
+    },
+    {
+      "path": "custom/aux_code.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf6b3c7bbcdedabc48e27126a4b40aa595a8a2d",
+      "size": 3016458,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0bf6b3c7bbcdedabc48e27126a4b40aa595a8a2d"
+    },
+    {
+      "path": "custom/jm_flypy.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "002f9fa6482ef8cd2bacfae4d57c28e518cb46e6",
+      "size": 261040,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/002f9fa6482ef8cd2bacfae4d57c28e518cb46e6"
+    },
+    {
+      "path": "custom/jm_zrm.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b7fc59bd40231e8a9e37e60a057264e0ccabef6",
+      "size": 23907,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7b7fc59bd40231e8a9e37e60a057264e0ccabef6"
+    },
+    {
+      "path": "custom/wanxiang.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "051ea87518aac84db3a4ae77547c3b72b05f0dfd",
+      "size": 2201,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/051ea87518aac84db3a4ae77547c3b72b05f0dfd"
+    },
+    {
+      "path": "custom/wanxiang_abbrev.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0565eaefd4481a7b5a9999855a7ad6f21781c06c",
+      "size": 275,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0565eaefd4481a7b5a9999855a7ad6f21781c06c"
+    },
+    {
+      "path": "custom/wanxiang_english.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615f8ce336070ee49f886535ec99b9bf9c21f250",
+      "size": 374,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/615f8ce336070ee49f886535ec99b9bf9c21f250"
+    },
+    {
+      "path": "custom/wanxiang_lite.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de3f0f8b3bd175dab40f0e27ab726f0802da83a0",
+      "size": 1575,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/de3f0f8b3bd175dab40f0e27ab726f0802da83a0"
+    },
+    {
+      "path": "custom/wanxiang_lite.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96eb0bd2d9f0aa8e20a0d02565f9b1862ff1fce2",
+      "size": 1386,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/96eb0bd2d9f0aa8e20a0d02565f9b1862ff1fce2"
+    },
+    {
+      "path": "custom/wanxiang_lite.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f35f16692902f68ff17cc90fab78f311335f4391",
+      "size": 32285,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f35f16692902f68ff17cc90fab78f311335f4391"
+    },
+    {
+      "path": "custom/wanxiang_mixedcode.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca49594d2fc0b308eb7b947254bb1077d7f20853",
+      "size": 370,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ca49594d2fc0b308eb7b947254bb1077d7f20853"
+    },
+    {
+      "path": "custom/wanxiang_phrase.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0565eaefd4481a7b5a9999855a7ad6f21781c06c",
+      "size": 275,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0565eaefd4481a7b5a9999855a7ad6f21781c06c"
+    },
+    {
+      "path": "custom/wanxiang_pro.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05434bb0dba1a4dec52408d9c3cc4b1e0602450a",
+      "size": 2008,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/05434bb0dba1a4dec52408d9c3cc4b1e0602450a"
+    },
+    {
+      "path": "custom/wanxiang_pro.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db07bbc322f6b0e18e217180fa70f0471e9b5bd3",
+      "size": 1371,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/db07bbc322f6b0e18e217180fa70f0471e9b5bd3"
+    },
+    {
+      "path": "custom/wanxiang_pro.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b111131ebc35761be4766408710c6f479b0d351",
+      "size": 38617,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0b111131ebc35761be4766408710c6f479b0d351"
+    },
+    {
+      "path": "custom/wanxiang_pure.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39951db673ffa75e24c0aa2660f158debd0dbfbe",
+      "size": 1080,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/39951db673ffa75e24c0aa2660f158debd0dbfbe"
+    },
+    {
+      "path": "custom/wanxiang_pure.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8533b601cabe76de0b64f5eb76a823d9c91c9b50",
+      "size": 1372,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8533b601cabe76de0b64f5eb76a823d9c91c9b50"
+    },
+    {
+      "path": "custom/wanxiang_pure.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0adc80b17f32659d2843ee5a95e6791fc52d6055",
+      "size": 11287,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0adc80b17f32659d2843ee5a95e6791fc52d6055"
+    },
+    {
+      "path": "custom/wanxiang_reverse.custom.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09977fe8f3f06581ba35fbb253191a78c3dbb8aa",
+      "size": 599,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/09977fe8f3f06581ba35fbb253191a78c3dbb8aa"
+    },
+    {
+      "path": "custom/wubi_chaifen.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5933e251478b6a48ac994b649d75acacd7c051e",
+      "size": 699643,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f5933e251478b6a48ac994b649d75acacd7c051e"
+    },
+    {
+      "path": "custom/万象键位映射.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5774aaf867170cb35388210496f156264027d24",
+      "size": 1086001,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/a5774aaf867170cb35388210496f156264027d24"
+    },
+    {
+      "path": "custom/简纯.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32da756e72471b1bec8bb146ce7f1e9d5952a78e",
+      "size": 479620,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/32da756e72471b1bec8bb146ce7f1e9d5952a78e"
+    },
+    {
+      "path": "custom/赞赏.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f45e8e04cf3d5f0ac06e82829daba47cadba4b3",
+      "size": 106513,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0f45e8e04cf3d5f0ac06e82829daba47cadba4b3"
+    },
+    {
+      "path": "custom_phrase.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d43ac80c19bf29b0706a54a62fd7da56ecf3a61",
+      "size": 1492,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8d43ac80c19bf29b0706a54a62fd7da56ecf3a61"
+    },
+    {
+      "path": "custom_phrase.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c46e2fda1a3aab587ebe70b747ee5f5d8d6f91b2",
+      "size": 7,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/c46e2fda1a3aab587ebe70b747ee5f5d8d6f91b2"
+    },
+    {
+      "path": "default.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "831d45d254a747b885e9820ee68171e7c00f18de",
+      "size": 6390,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/831d45d254a747b885e9820ee68171e7c00f18de"
+    },
+    {
+      "path": "dicts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ea6dbeaa92e6967601a01e9968bb75a995dae34",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/7ea6dbeaa92e6967601a01e9968bb75a995dae34"
+    },
+    {
+      "path": "dicts/abbrev.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a89e8bf23f3318db837198c774548b2fed5e1885",
+      "size": 558072,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/a89e8bf23f3318db837198c774548b2fed5e1885"
+    },
+    {
+      "path": "dicts/cuoyin.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e621f7dac4ff88e12bb8a641362b34dbd6637b1b",
+      "size": 8116,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e621f7dac4ff88e12bb8a641362b34dbd6637b1b"
+    },
+    {
+      "path": "dicts/diming.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8dccd7252753996334c878adab76dff24801a7a0",
+      "size": 3307037,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8dccd7252753996334c878adab76dff24801a7a0"
+    },
+    {
+      "path": "dicts/duoyin.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "502a4258a5a5f7a2ee6e762b07ca479035504b51",
+      "size": 137394,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/502a4258a5a5f7a2ee6e762b07ca479035504b51"
+    },
+    {
+      "path": "dicts/en.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80c2613b13ea0922665e5fd71bf2cac9dfdc43c6",
+      "size": 1568996,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/80c2613b13ea0922665e5fd71bf2cac9dfdc43c6"
+    },
+    {
+      "path": "dicts/jichu.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65771b119657a04639f8545b97692ee46435d187",
+      "size": 49489467,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/65771b119657a04639f8545b97692ee46435d187"
+    },
+    {
+      "path": "dicts/mingren.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc4a016716e0dc2f8feb3d4a1246a9416768ff9",
+      "size": 666980,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9bc4a016716e0dc2f8feb3d4a1246a9416768ff9"
+    },
+    {
+      "path": "dicts/mixed.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51b9df032bbda25d00585d71d8fa6d2d17bac68b",
+      "size": 35913,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/51b9df032bbda25d00585d71d8fa6d2d17bac68b"
+    },
+    {
+      "path": "dicts/t9_abbrev.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a432214d52b5fc8674f18f2b434e3a2116f57ed",
+      "size": 514659,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5a432214d52b5fc8674f18f2b434e3a2116f57ed"
+    },
+    {
+      "path": "dicts/yiren.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b86545a2f61296c99275879bfa6c3aefd7d51647",
+      "size": 423960,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/b86545a2f61296c99275879bfa6c3aefd7d51647"
+    },
+    {
+      "path": "dicts/zi.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "038a106edb471982b49c83f209834db0e1984bbb",
+      "size": 616559,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/038a106edb471982b49c83f209834db0e1984bbb"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14aec53bd70db67a9d22dedbaffdaf4445b423f1",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/14aec53bd70db67a9d22dedbaffdaf4445b423f1"
+    },
+    {
+      "path": "docs/doc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb2906d90c3c864749696add2e52b965dfb2ff8b",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/eb2906d90c3c864749696add2e52b965dfb2ff8b"
+    },
+    {
+      "path": "docs/doc/2026-1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f71d86aae8d21d903cbebb87ab2b5b03a19364ce",
+      "size": 10362,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f71d86aae8d21d903cbebb87ab2b5b03a19364ce"
+    },
+    {
+      "path": "docs/doc/400+gram.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca863a5d3eebeed6ce068900b06a625c712be6e4",
+      "size": 6860,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ca863a5d3eebeed6ce068900b06a625c712be6e4"
+    },
+    {
+      "path": "docs/doc/RIME配置手册.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9612a5312a98fbe401c1e0060e87122cbb340d8b",
+      "size": 27219,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9612a5312a98fbe401c1e0060e87122cbb340d8b"
+    },
+    {
+      "path": "docs/doc/RIME配置指南.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab21881eb2bf47b83c641e5e93e70b0ce81ce964",
+      "size": 55695,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ab21881eb2bf47b83c641e5e93e70b0ce81ce964"
+    },
+    {
+      "path": "docs/doc/RUNV.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e517ac6a468a1e5a45fcc141ae384786cd9f09c",
+      "size": 10288,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0e517ac6a468a1e5a45fcc141ae384786cd9f09c"
+    },
+    {
+      "path": "docs/doc/Rime设计逻辑与配置哲学.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60e0cbdae6ea8768dcc7dd5b5bcb7fe267cc99d2",
+      "size": 19305,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/60e0cbdae6ea8768dcc7dd5b5bcb7fe267cc99d2"
+    },
+    {
+      "path": "docs/doc/XCompose.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2a0ea66a0e83da5d66eeebb970924ba8290a9a6",
+      "size": 5439,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/c2a0ea66a0e83da5d66eeebb970924ba8290a9a6"
+    },
+    {
+      "path": "docs/doc/aux_code.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adad3411d66fe03741efe3f314dde0ef41267686",
+      "size": 8446,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/adad3411d66fe03741efe3f314dde0ef41267686"
+    },
+    {
+      "path": "docs/doc/candidate_slicer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3471e251acec7df7f9b9b0b0a98c19ea42449c87",
+      "size": 2631,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/3471e251acec7df7f9b9b0b0a98c19ea42449c87"
+    },
+    {
+      "path": "docs/doc/chaoyue.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1255e31d80fd20d8c82a303556a3b1cd5c9548b",
+      "size": 4033,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e1255e31d80fd20d8c82a303556a3b1cd5c9548b"
+    },
+    {
+      "path": "docs/doc/charset.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68143ba33a333d076ca421c187734949bf31b33f",
+      "size": 5964,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/68143ba33a333d076ca421c187734949bf31b33f"
+    },
+    {
+      "path": "docs/doc/complete_pinyin_table.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efddb5ba6b182c5c61eb5980ea1400d8213e0eb6",
+      "size": 155,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/efddb5ba6b182c5c61eb5980ea1400d8213e0eb6"
+    },
+    {
+      "path": "docs/doc/context_reorder.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15c10fe392350e0113e53a3db40c9ea759c27968",
+      "size": 3631,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/15c10fe392350e0113e53a3db40c9ea759c27968"
+    },
+    {
+      "path": "docs/doc/custom_phrase_architecture.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27cc692b8ab3707cd0ad2e0914d75260314367f5",
+      "size": 8103,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/27cc692b8ab3707cd0ad2e0914d75260314367f5"
+    },
+    {
+      "path": "docs/doc/custom_words.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5430b65d0130cde5132c8a64a53da3d868177f9",
+      "size": 4967,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/c5430b65d0130cde5132c8a64a53da3d868177f9"
+    },
+    {
+      "path": "docs/doc/dict_gram.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d11ace1b2ed61a875081a1768d70c17c44c4b4b",
+      "size": 7720,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2d11ace1b2ed61a875081a1768d70c17c44c4b4b"
+    },
+    {
+      "path": "docs/doc/dicts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e389ae30142186681dfac942ee637e612812636",
+      "size": 2081,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0e389ae30142186681dfac942ee637e612812636"
+    },
+    {
+      "path": "docs/doc/dicts_sync.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c7fb0c4a08b0463d1175c9a634d04900c64fc22",
+      "size": 11887,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9c7fb0c4a08b0463d1175c9a634d04900c64fc22"
+    },
+    {
+      "path": "docs/doc/english.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fcc6f9f78814c8552a84e4e7bad411437f76d1f",
+      "size": 6156,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2fcc6f9f78814c8552a84e4e7bad411437f76d1f"
+    },
+    {
+      "path": "docs/doc/faq.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f5c8c19bcad2b2f6fbd693e96e6621323f1be18",
+      "size": 25137,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9f5c8c19bcad2b2f6fbd693e96e6621323f1be18"
+    },
+    {
+      "path": "docs/doc/fcitx5-android.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a868d3e30a4444ff043b4658343dce3cd8eff49",
+      "size": 5794,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8a868d3e30a4444ff043b4658343dce3cd8eff49"
+    },
+    {
+      "path": "docs/doc/fcitx5-linux.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "899a3da460e272999828a13537db25d1ad0c31ed",
+      "size": 6382,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/899a3da460e272999828a13537db25d1ad0c31ed"
+    },
+    {
+      "path": "docs/doc/fcitx5-mac.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfb8f2f1a0f266f36bb0e4f44cba0c32ff42a6b5",
+      "size": 5489,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/bfb8f2f1a0f266f36bb0e4f44cba0c32ff42a6b5"
+    },
+    {
+      "path": "docs/doc/fuzzy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e46c3a5bf6ad5a3605f580d9e8c4d42b1af7a7a",
+      "size": 3858,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6e46c3a5bf6ad5a3605f580d9e8c4d42b1af7a7a"
+    },
+    {
+      "path": "docs/doc/hamster.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16ae4d97c9e1a5ad6b9530a77a00f53981ceee5c",
+      "size": 6762,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/16ae4d97c9e1a5ad6b9530a77a00f53981ceee5c"
+    },
+    {
+      "path": "docs/doc/hamster3.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b6db613b322a38bdd103e5cf55326aad73a9727",
+      "size": 5097,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/4b6db613b322a38bdd103e5cf55326aad73a9727"
+    },
+    {
+      "path": "docs/doc/input_statistics.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2643fa779341e22429332d31e01821fddd14802b",
+      "size": 5302,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2643fa779341e22429332d31e01821fddd14802b"
+    },
+    {
+      "path": "docs/doc/intro.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "584eaba3b3ab9e4c15cb33915f5a0cdd925c9595",
+      "size": 4626,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/584eaba3b3ab9e4c15cb33915f5a0cdd925c9595"
+    },
+    {
+      "path": "docs/doc/key.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32f463d14768c5b8d594bec4b8fb55b91abb6c37",
+      "size": 5207,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/32f463d14768c5b8d594bec4b8fb55b91abb6c37"
+    },
+    {
+      "path": "docs/doc/layouts.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c4f91657865cf57b987a9e3648bfc78c2b29802",
+      "size": 4650,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5c4f91657865cf57b987a9e3648bfc78c2b29802"
+    },
+    {
+      "path": "docs/doc/manual.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64b02c22ea484e85053885529d34d1783ee6c216",
+      "size": 7916,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/64b02c22ea484e85053885529d34d1783ee6c216"
+    },
+    {
+      "path": "docs/doc/paired_symbols.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e2e5a7cb477de1bc880481ed69439dc400f21e1",
+      "size": 8761,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7e2e5a7cb477de1bc880481ed69439dc400f21e1"
+    },
+    {
+      "path": "docs/doc/patch方法论.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c6dde54096ea735cb0eaca8f5bcb985308531d6",
+      "size": 11751,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0c6dde54096ea735cb0eaca8f5bcb985308531d6"
+    },
+    {
+      "path": "docs/doc/plum.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c438a735ad765492e57bcd69d7dde9c793f803f",
+      "size": 4943,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/1c438a735ad765492e57bcd69d7dde9c793f803f"
+    },
+    {
+      "path": "docs/doc/profile-analysis.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a24c04a1cba24c6469bab184cde18f089bc70492",
+      "size": 11377,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/a24c04a1cba24c6469bab184cde18f089bc70492"
+    },
+    {
+      "path": "docs/doc/quick_symbol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "670b5fdb2588aaae60901fb8b5cc3b272165688e",
+      "size": 6082,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/670b5fdb2588aaae60901fb8b5cc3b272165688e"
+    },
+    {
+      "path": "docs/doc/random_tools.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "336e069108e189e8d82159f3a3be24a0899aa95e",
+      "size": 4175,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/336e069108e189e8d82159f3a3be24a0899aa95e"
+    },
+    {
+      "path": "docs/doc/reverse_lookup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08def6a03cea7925bcee5a6ecc46839e3627055",
+      "size": 6284,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/b08def6a03cea7925bcee5a6ecc46839e3627055"
+    },
+    {
+      "path": "docs/doc/rime_tree.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dcd85445fc63c632a29bac254e7e19d1fbbff27",
+      "size": 7536,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9dcd85445fc63c632a29bac254e7e19d1fbbff27"
+    },
+    {
+      "path": "docs/doc/schema_custom.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f65028f49055bfc1b539172b59a10ebf35b960",
+      "size": 17873,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d5f65028f49055bfc1b539172b59a10ebf35b960"
+    },
+    {
+      "path": "docs/doc/shijian.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5727164d3e6e57267726a8f3ae96d54fdfb3d18c",
+      "size": 9852,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5727164d3e6e57267726a8f3ae96d54fdfb3d18c"
+    },
+    {
+      "path": "docs/doc/shortcut.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4050309eefc7fb37cfc1926bf90547cb332b5a51",
+      "size": 8149,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/4050309eefc7fb37cfc1926bf90547cb332b5a51"
+    },
+    {
+      "path": "docs/doc/slash_commands.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e39e3c6cca731c7bb87cd3ea3cca0c30b14d2bee",
+      "size": 632,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e39e3c6cca731c7bb87cd3ea3cca0c30b14d2bee"
+    },
+    {
+      "path": "docs/doc/squirrel.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e12fa18ecacb6843de50bfca7e2c7512e709dd1e",
+      "size": 5459,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e12fa18ecacb6843de50bfca7e2c7512e709dd1e"
+    },
+    {
+      "path": "docs/doc/super_comment.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc65f1b505596ce349f507035e7b51c489b716a1",
+      "size": 14528,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/cc65f1b505596ce349f507035e7b51c489b716a1"
+    },
+    {
+      "path": "docs/doc/super_lookup.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed41ed03aa038b22d25585c41e0ced3f36eb2ac9",
+      "size": 10998,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ed41ed03aa038b22d25585c41e0ced3f36eb2ac9"
+    },
+    {
+      "path": "docs/doc/super_processor.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73a211e5e6afb4cdda929bc71883ca21bcd9f278",
+      "size": 15059,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/73a211e5e6afb4cdda929bc71883ca21bcd9f278"
+    },
+    {
+      "path": "docs/doc/super_replacer.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd24562ef545d11450b924e5b724cd70432df394",
+      "size": 19195,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/fd24562ef545d11450b924e5b724cd70432df394"
+    },
+    {
+      "path": "docs/doc/super_sequence.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea97fa5529e7180be2c9d3309c0136a37da6642c",
+      "size": 8361,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ea97fa5529e7180be2c9d3309c0136a37da6642c"
+    },
+    {
+      "path": "docs/doc/super_symbols.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d67de40b9d2a615bfd8b2f185e7d542b095bdc2",
+      "size": 8335,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6d67de40b9d2a615bfd8b2f185e7d542b095bdc2"
+    },
+    {
+      "path": "docs/doc/super_tips.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "146cbe9c049810ca86a0417052cce6c9348af98f",
+      "size": 18206,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/146cbe9c049810ca86a0417052cce6c9348af98f"
+    },
+    {
+      "path": "docs/doc/tools.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c1b9f0a712a592b040dd4a004ce467941dceba6",
+      "size": 3976,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5c1b9f0a712a592b040dd4a004ce467941dceba6"
+    },
+    {
+      "path": "docs/doc/trime.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "069b09ed89140b10bd3b731deec37eaefe693e5c",
+      "size": 13555,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/069b09ed89140b10bd3b731deec37eaefe693e5c"
+    },
+    {
+      "path": "docs/doc/weasel.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1fb6ba7af4ef5000411f01c46e8fb3a6c9c9f5c",
+      "size": 11230,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d1fb6ba7af4ef5000411f01c46e8fb3a6c9c9f5c"
+    },
+    {
+      "path": "docs/doc/word_creation.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d85be18f398c85d3b56012bdc325a034f9beed4c",
+      "size": 5930,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d85be18f398c85d3b56012bdc325a034f9beed4c"
+    },
+    {
+      "path": "docs/doc/wxsp.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e6c604cafe294146ec3694a4b3798ac56ed195d",
+      "size": 8072,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8e6c604cafe294146ec3694a4b3798ac56ed195d"
+    },
+    {
+      "path": "docs/files",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "736264e2c8936930636f15a9702e194497965ac2",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/736264e2c8936930636f15a9702e194497965ac2"
+    },
+    {
+      "path": "docs/files/VGHFly.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd3af28a931c81815f5ca8e5e5d2b45e8d68abca",
+      "size": 3181,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/fd3af28a931c81815f5ca8e5e5d2b45e8d68abca"
+    },
+    {
+      "path": "docs/files/万象双拼.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d7f7a190e9be06b2e069ff8faf3059a720a4bd7",
+      "size": 571401,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/3d7f7a190e9be06b2e069ff8faf3059a720a4bd7"
+    },
+    {
+      "path": "docs/image",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33cd281387aebee071d8fcf7470a6bc139f3fef6",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/33cd281387aebee071d8fcf7470a6bc139f3fef6"
+    },
+    {
+      "path": "docs/image/base直接辅助.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93da6c5015050b12245400213bd6fa9eb6ab9caf",
+      "size": 7212,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/93da6c5015050b12245400213bd6fa9eb6ab9caf"
+    },
+    {
+      "path": "docs/image/complete_pinyin_table.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dbeebea6e4bd7f13ba5531c306068912c5f2575",
+      "size": 48774,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/5dbeebea6e4bd7f13ba5531c306068912c5f2575"
+    },
+    {
+      "path": "docs/image/donate.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f45e8e04cf3d5f0ac06e82829daba47cadba4b3",
+      "size": 106513,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0f45e8e04cf3d5f0ac06e82829daba47cadba4b3"
+    },
+    {
+      "path": "docs/image/fictx5-linux.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa224f59482f31de5dd9907cdcb136941ee30a4",
+      "size": 88009,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/aaa224f59482f31de5dd9907cdcb136941ee30a4"
+    },
+    {
+      "path": "docs/image/user_dir_squirrel.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6886b06148e5091695735f34944b09a183b06cea",
+      "size": 249285,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6886b06148e5091695735f34944b09a183b06cea"
+    },
+    {
+      "path": "docs/image/user_dir_weasel.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8877e06e50db06972338109f9c890800b5aeda53",
+      "size": 181403,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8877e06e50db06972338109f9c890800b5aeda53"
+    },
+    {
+      "path": "docs/image/wx_keyboard_layout.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e228471a1ae49ee3e76608b00361374c7c93d99b",
+      "size": 58124,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e228471a1ae49ee3e76608b00361374c7c93d99b"
+    },
+    {
+      "path": "docs/image/wxconfig.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c739a91bba5f6a08a56197ece2dc0ec1d916415",
+      "size": 67250,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2c739a91bba5f6a08a56197ece2dc0ec1d916415"
+    },
+    {
+      "path": "docs/image/万象更新.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bda52c3e99615175cf6d7e29d49e7f65216ae09f",
+      "size": 130816,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/bda52c3e99615175cf6d7e29d49e7f65216ae09f"
+    },
+    {
+      "path": "docs/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f1a45b2b00d96857bb4fd80fa3b43a2db410d70",
+      "size": 10091,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2f1a45b2b00d96857bb4fd80fa3b43a2db410d70"
+    },
+    {
+      "path": "docs/stylesheets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9146d284c2b2623e98e5555302def5abc6159c99",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/9146d284c2b2623e98e5555302def5abc6159c99"
+    },
+    {
+      "path": "docs/stylesheets/extra.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ef572b45079d807c859b94cd262ec0859ed1462",
+      "size": 30226,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/4ef572b45079d807c859b94cd262ec0859ed1462"
+    },
+    {
+      "path": "lua",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d123c5a10b366f0b076935fc147380bf473fa8d",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/1d123c5a10b366f0b076935fc147380bf473fa8d"
+    },
+    {
+      "path": "lua/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "acacbeb0fccc048fc06ce65ea922268be69a14dc",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/acacbeb0fccc048fc06ce65ea922268be69a14dc"
+    },
+    {
+      "path": "lua/data/chaifen.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "lua/data/charset.reverse.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e631e30a0b30d1dfb83f30a89abd3c731f598bb",
+      "size": 565032,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8e631e30a0b30d1dfb83f30a89abd3c731f598bb"
+    },
+    {
+      "path": "lua/data/codex_emoji.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe9cddfa375da0da97d9d95c09c50bc6931c467c",
+      "size": 21773,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/fe9cddfa375da0da97d9d95c09c50bc6931c467c"
+    },
+    {
+      "path": "lua/data/codex_sym.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "011e52f8b4724f5f78a523bc4570979c5bd1c34f",
+      "size": 19431,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/011e52f8b4724f5f78a523bc4570979c5bd1c34f"
+    },
+    {
+      "path": "lua/data/en_abbrev.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d27c893b18efcd0b553477bf92bc86e881c64803",
+      "size": 2476,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d27c893b18efcd0b553477bf92bc86e881c64803"
+    },
+    {
+      "path": "lua/data/english_chinese.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91502bc23cc1132b540f47580b4d6ffa66c24253",
+      "size": 1308578,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/91502bc23cc1132b540f47580b4d6ffa66c24253"
+    },
+    {
+      "path": "lua/data/others.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66246dafe8ec24de8714c972e7b6d7669488e54e",
+      "size": 30663,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/66246dafe8ec24de8714c972e7b6d7669488e54e"
+    },
+    {
+      "path": "lua/data/sentence.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b170725dd1c1d3d076ea982be1dff66289ce0b5",
+      "size": 313,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6b170725dd1c1d3d076ea982be1dff66289ce0b5"
+    },
+    {
+      "path": "lua/data/tips_show.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f00a17a018ada6e1c508c866b8937cd1f3de9ad6",
+      "size": 192537,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f00a17a018ada6e1c508c866b8937cd1f3de9ad6"
+    },
+    {
+      "path": "lua/wanxiang",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ea52432f9a9b5e3453d0c9783864f6a642cca57",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/5ea52432f9a9b5e3453d0c9783864f6a642cca57"
+    },
+    {
+      "path": "lua/wanxiang/auto_phrase.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f630c337a31a1967b3fb1b5c5daeea36f0778e11",
+      "size": 10104,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/f630c337a31a1967b3fb1b5c5daeea36f0778e11"
+    },
+    {
+      "path": "lua/wanxiang/bit.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b183e9d0e217b525c283f22ba3969cbfbee1e284",
+      "size": 3505,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/b183e9d0e217b525c283f22ba3969cbfbee1e284"
+    },
+    {
+      "path": "lua/wanxiang/charset_filter.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042b785e3982a8b91e7c0f5d5dcd6dd51a968a1b",
+      "size": 16405,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/042b785e3982a8b91e7c0f5d5dcd6dd51a968a1b"
+    },
+    {
+      "path": "lua/wanxiang/context_reorder.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b1ba963c7253f5241a4a9c6d197fe866c93bb73",
+      "size": 28881,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8b1ba963c7253f5241a4a9c6d197fe866c93bb73"
+    },
+    {
+      "path": "lua/wanxiang/custom_phrase.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30eb3387b415a63c17fdffc16c30337a5744a65a",
+      "size": 6953,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/30eb3387b415a63c17fdffc16c30337a5744a65a"
+    },
+    {
+      "path": "lua/wanxiang/force_upper_aux.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbd7c441bbed47843ad737e870adf51ef515aacb",
+      "size": 8319,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/fbd7c441bbed47843ad737e870adf51ef515aacb"
+    },
+    {
+      "path": "lua/wanxiang/input_statistics.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9200cea9cb5666e24cb0fda6fc5b059b02f0d6b7",
+      "size": 32266,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9200cea9cb5666e24cb0fda6fc5b059b02f0d6b7"
+    },
+    {
+      "path": "lua/wanxiang/key_binder.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "682a5cc190da0c08297f67a06def37ab373c14e2",
+      "size": 8124,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/682a5cc190da0c08297f67a06def37ab373c14e2"
+    },
+    {
+      "path": "lua/wanxiang/librime.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c4672708948148f23de1f1e1d46684988829006",
+      "size": 28216,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9c4672708948148f23de1f1e1d46684988829006"
+    },
+    {
+      "path": "lua/wanxiang/number_conversion.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45cc0f26a4035d2dc6aceb47bba3062ae0b3113a",
+      "size": 15624,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/45cc0f26a4035d2dc6aceb47bba3062ae0b3113a"
+    },
+    {
+      "path": "lua/wanxiang/partial_commit.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a44590d2b142b127509930b12c8ee9b9e6aad88b",
+      "size": 5270,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/a44590d2b142b127509930b12c8ee9b9e6aad88b"
+    },
+    {
+      "path": "lua/wanxiang/random_tools.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33fd1c34441b552674420274483dc702bc523929",
+      "size": 14354,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/33fd1c34441b552674420274483dc702bc523929"
+    },
+    {
+      "path": "lua/wanxiang/set_schema.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31a34157efb346c6122fb499c0d4783976c95081",
+      "size": 6151,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/31a34157efb346c6122fb499c0d4783976c95081"
+    },
+    {
+      "path": "lua/wanxiang/shijian.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc04053691efc35775da8dbdb7c3bd4709cd944b",
+      "size": 129716,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/dc04053691efc35775da8dbdb7c3bd4709cd944b"
+    },
+    {
+      "path": "lua/wanxiang/super_calculator.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9c76265de7cb2897feea1c6dd3f9a75a12fbce7",
+      "size": 128038,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d9c76265de7cb2897feea1c6dd3f9a75a12fbce7"
+    },
+    {
+      "path": "lua/wanxiang/super_comment_preedit.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37bef76b8891b2b99960b53cf1ddb346c6450f7b",
+      "size": 21575,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/37bef76b8891b2b99960b53cf1ddb346c6450f7b"
+    },
+    {
+      "path": "lua/wanxiang/super_english.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97d1df188592dc946fbfb7bde2a90ab046d929c1",
+      "size": 26892,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/97d1df188592dc946fbfb7bde2a90ab046d929c1"
+    },
+    {
+      "path": "lua/wanxiang/super_filter.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff118df44dbc522fa5746d189c2d859bfd460d38",
+      "size": 29797,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ff118df44dbc522fa5746d189c2d859bfd460d38"
+    },
+    {
+      "path": "lua/wanxiang/super_lookup.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae0895c4f86f5babb2d41ada8aa413aeb7b4989",
+      "size": 57521,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9ae0895c4f86f5babb2d41ada8aa413aeb7b4989"
+    },
+    {
+      "path": "lua/wanxiang/super_processor.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2714694a5e310ad4e6e23d51fde3678e45a5af1",
+      "size": 30483,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d2714694a5e310ad4e6e23d51fde3678e45a5af1"
+    },
+    {
+      "path": "lua/wanxiang/super_replacer.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc96daa803067db0dec0f1840e1c095b29dca73b",
+      "size": 59165,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/cc96daa803067db0dec0f1840e1c095b29dca73b"
+    },
+    {
+      "path": "lua/wanxiang/super_sequence.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffddaf1e184d59aaef67bd7d64172ac21518a852",
+      "size": 25577,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ffddaf1e184d59aaef67bd7d64172ac21518a852"
+    },
+    {
+      "path": "lua/wanxiang/super_symbols.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5f47f31ad787a671cde7eaea3646cfead2a63b2",
+      "size": 23675,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d5f47f31ad787a671cde7eaea3646cfead2a63b2"
+    },
+    {
+      "path": "lua/wanxiang/super_tips.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7597d7cd20f11c5df0c6d0e84ddbf1542b972923",
+      "size": 9177,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7597d7cd20f11c5df0c6d0e84ddbf1542b972923"
+    },
+    {
+      "path": "lua/wanxiang/unicode_conversion.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76703d03003aacea4868878550d2cdf6007c4b55",
+      "size": 17636,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/76703d03003aacea4868878550d2cdf6007c4b55"
+    },
+    {
+      "path": "lua/wanxiang/userdb.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76d7036f6a6ea37604b4df2854c52523d9ad679e",
+      "size": 2853,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/76d7036f6a6ea37604b4df2854c52523d9ad679e"
+    },
+    {
+      "path": "lua/wanxiang/version_display.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "433aa726e48117007dee522b5b0a0874168c61c5",
+      "size": 952,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/433aa726e48117007dee522b5b0a0874168c61c5"
+    },
+    {
+      "path": "lua/wanxiang/wanxiang.lua",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "441be5ac07fb93af1fab68d25cc9a52bc2f3ee5b",
+      "size": 13587,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/441be5ac07fb93af1fab68d25cc9a52bc2f3ee5b"
+    },
+    {
+      "path": "mkdocs.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16b9dbad5a7fe795fe59e4d9e14a1357e396f80c",
+      "size": 4300,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/16b9dbad5a7fe795fe59e4d9e14a1357e396f80c"
+    },
+    {
+      "path": "opencc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ff59e88350487ccdfe3df0c95fdc24196ac4700",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/9ff59e88350487ccdfe3df0c95fdc24196ac4700"
+    },
+    {
+      "path": "opencc/wanxiang",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "181e88f240e5d341717178818c9f1efdc9fca838",
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/trees/181e88f240e5d341717178818c9f1efdc9fca838"
+    },
+    {
+      "path": "opencc/wanxiang/Custom_Emoji.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81b33aad10a2d13bbaeb5e2c682b9afaf258e80d",
+      "size": 22,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/81b33aad10a2d13bbaeb5e2c682b9afaf258e80d"
+    },
+    {
+      "path": "opencc/wanxiang/Custom_STPhrases.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fa38ecd32de6f9faa94f6158c4d80631812408e",
+      "size": 19,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2fa38ecd32de6f9faa94f6158c4d80631812408e"
+    },
+    {
+      "path": "opencc/wanxiang/HKVariants.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0f688135ff60536e84093754bf72310c2ef0308",
+      "size": 532,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e0f688135ff60536e84093754bf72310c2ef0308"
+    },
+    {
+      "path": "opencc/wanxiang/STCharacters.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa40b9b1766b7961044245c0d95f0abd005dc10a",
+      "size": 34344,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/aa40b9b1766b7961044245c0d95f0abd005dc10a"
+    },
+    {
+      "path": "opencc/wanxiang/STPhrases.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "455194297c76b07266deebd46884833ab1373369",
+      "size": 1005092,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/455194297c76b07266deebd46884833ab1373369"
+    },
+    {
+      "path": "opencc/wanxiang/TWVariants.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "023a0687b6c637a96d6b157f53bb98dec00d3166",
+      "size": 312,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/023a0687b6c637a96d6b157f53bb98dec00d3166"
+    },
+    {
+      "path": "opencc/wanxiang/emoji.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83ebf035a5f51cc56fe63bd8e2dc9983275864e6",
+      "size": 136555,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/83ebf035a5f51cc56fe63bd8e2dc9983275864e6"
+    },
+    {
+      "path": "opencc/wanxiang_emoji.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f849691e5d13345ded5845f11c059c322d40234",
+      "size": 630,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/1f849691e5d13345ded5845f11c059c322d40234"
+    },
+    {
+      "path": "opencc/wanxiang_s2hk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8f1137f3880adbee0f76b21893bc02ba1f68cf8",
+      "size": 905,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/b8f1137f3880adbee0f76b21893bc02ba1f68cf8"
+    },
+    {
+      "path": "opencc/wanxiang_s2t.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ac3d9519fc9577559533108d0069bd81ca60d60",
+      "size": 784,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/0ac3d9519fc9577559533108d0069bd81ca60d60"
+    },
+    {
+      "path": "opencc/wanxiang_s2tw.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d7962ce2ae22d76b7395ca1911d9c9413e9b42",
+      "size": 906,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/42d7962ce2ae22d76b7395ca1911d9c9413e9b42"
+    },
+    {
+      "path": "release-please-config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "199a7c9ca4393f03030c846920f1f29f20eafa52",
+      "size": 1406,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/199a7c9ca4393f03030c846920f1f29f20eafa52"
+    },
+    {
+      "path": "version.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85a0b7e0db572de98c01f26827ea8676669e5684",
+      "size": 7,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/85a0b7e0db572de98c01f26827ea8676669e5684"
+    },
+    {
+      "path": "wanxiang.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "621a4032d57181447b5aaa003354731b8921ba59",
+      "size": 1311,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/621a4032d57181447b5aaa003354731b8921ba59"
+    },
+    {
+      "path": "wanxiang.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a3b55ae386264aafbbced3cd90dc2a524c6ea6c",
+      "size": 37422,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7a3b55ae386264aafbbced3cd90dc2a524c6ea6c"
+    },
+    {
+      "path": "wanxiang_abbrev.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dca929127e638e47cdad045bf149f44ba2b76414",
+      "size": 233,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/dca929127e638e47cdad045bf149f44ba2b76414"
+    },
+    {
+      "path": "wanxiang_abbrev.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8505ead44916a0a774e482af930b4a89539fdb34",
+      "size": 699,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8505ead44916a0a774e482af930b4a89539fdb34"
+    },
+    {
+      "path": "wanxiang_abbrev_t9.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "192628348d53d435952995c87ddbc9bc6830819e",
+      "size": 239,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/192628348d53d435952995c87ddbc9bc6830819e"
+    },
+    {
+      "path": "wanxiang_abbrev_t9.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfcd2b8fafe68e0fef94fa9e36796035403a89f6",
+      "size": 711,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/dfcd2b8fafe68e0fef94fa9e36796035403a89f6"
+    },
+    {
+      "path": "wanxiang_algebra.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e402155dc642d7487c96efd24093221e5f4c95d4",
+      "size": 136967,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e402155dc642d7487c96efd24093221e5f4c95d4"
+    },
+    {
+      "path": "wanxiang_english.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6949a498d2e223653757faec38d59b98750d6c77",
+      "size": 179,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6949a498d2e223653757faec38d59b98750d6c77"
+    },
+    {
+      "path": "wanxiang_english.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b3f0f6952ad38b1c9683fa47502fdca7629979e",
+      "size": 5608,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/9b3f0f6952ad38b1c9683fa47502fdca7629979e"
+    },
+    {
+      "path": "wanxiang_mixedcode.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e96c61ab11986932fdce87aec3556375a146c5bd",
+      "size": 309,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/e96c61ab11986932fdce87aec3556375a146c5bd"
+    },
+    {
+      "path": "wanxiang_mixedcode.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4c5fd9f4254b32c663698ce3b672bfe900c06c8",
+      "size": 1008,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/d4c5fd9f4254b32c663698ce3b672bfe900c06c8"
+    },
+    {
+      "path": "wanxiang_phrase.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "786a1e5e54b73990ab7e1b40139466e284ff9fc8",
+      "size": 780,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/786a1e5e54b73990ab7e1b40139466e284ff9fc8"
+    },
+    {
+      "path": "wanxiang_phrase_t9.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce09a021f45efc7b86c219443b1ea77440ad0d3c",
+      "size": 785,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/ce09a021f45efc7b86c219443b1ea77440ad0d3c"
+    },
+    {
+      "path": "wanxiang_reverse.dict.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8237c3ffd8dcfdefe20a6f77fcad6d1f91ec2dd5",
+      "size": 6576733,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/8237c3ffd8dcfdefe20a6f77fcad6d1f91ec2dd5"
+    },
+    {
+      "path": "wanxiang_reverse.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "973c5dbfb273687cc3dacf4cd6e8c05df1b71f73",
+      "size": 829,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/973c5dbfb273687cc3dacf4cd6e8c05df1b71f73"
+    },
+    {
+      "path": "wanxiang_symbols.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d4de6c70ff2c7bc87c77063e3115896314bfc6",
+      "size": 98894,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/83d4de6c70ff2c7bc87c77063e3115896314bfc6"
+    },
+    {
+      "path": "wanxiang_t9.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6268148efed0b7bfecc8d69686a9dfc5c5d8f093",
+      "size": 20842,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/6268148efed0b7bfecc8d69686a9dfc5c5d8f093"
+    },
+    {
+      "path": "wanxiang_t9i.schema.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cfe306317422eaed4b850abb9d21fea41ee325c",
+      "size": 20971,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/2cfe306317422eaed4b850abb9d21fea41ee325c"
+    },
+    {
+      "path": "weasel.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a51169faeb59e8fea9be205fe04a3017ff95c49",
+      "size": 26646,
+      "url": "https://api.github.com/repos/amzxyz/rime-wanxiang/git/blobs/7a51169faeb59e8fea9be205fe04a3017ff95c49"
+    }
+  ],
+  "truncated": false
+}

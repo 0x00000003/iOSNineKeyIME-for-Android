@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "forbidden_permissions": [
+    "android.permission.INTERNET"
+  ],
+  "allow_backup": false,
+  "allow_shared_uid": false,
+  "allow_backup_agent": false,
+  "allow_runtime_network": false,
+  "runtime_assets_bundled": true,
+  "learning_root": "app-private noBackupFilesDir",
+  "backup_rules_required": [
+    "cloud-backup",
+    "device-transfer"
+  ],
+  "sensitive_learning": false,
+  "sensitive_context_reads": false,
+  "telemetry": false,
+  "advertising": false,
+  "runtime_online_dependencies": false
+}
