@@ -1,0 +1,77 @@
+{
+  "version": "context-v1",
+  "minimum_improved": 8,
+  "scope": "ten fixed synthetic classifier/noun minimal pairs, model on/off and history on/off, no personalization; no post-measurement replacement",
+  "cases": [
+    {
+      "id": "c001",
+      "prefix": "一匹",
+      "prefix_pinyin": "yipi",
+      "target": "马",
+      "target_pinyin": "ma"
+    },
+    {
+      "id": "c002",
+      "prefix": "一杯",
+      "prefix_pinyin": "yibei",
+      "target": "茶",
+      "target_pinyin": "cha"
+    },
+    {
+      "id": "c003",
+      "prefix": "一条",
+      "prefix_pinyin": "yitiao",
+      "target": "鱼",
+      "target_pinyin": "yu"
+    },
+    {
+      "id": "c004",
+      "prefix": "一张",
+      "prefix_pinyin": "yizhang",
+      "target": "纸",
+      "target_pinyin": "zhi"
+    },
+    {
+      "id": "c005",
+      "prefix": "一棵",
+      "prefix_pinyin": "yike",
+      "target": "树",
+      "target_pinyin": "shu"
+    },
+    {
+      "id": "c006",
+      "prefix": "一把",
+      "prefix_pinyin": "yiba",
+      "target": "刀",
+      "target_pinyin": "dao"
+    },
+    {
+      "id": "c007",
+      "prefix": "一艘",
+      "prefix_pinyin": "yisou",
+      "target": "船",
+      "target_pinyin": "chuan"
+    },
+    {
+      "id": "c008",
+      "prefix": "一朵",
+      "prefix_pinyin": "yiduo",
+      "target": "花",
+      "target_pinyin": "hua"
+    },
+    {
+      "id": "c009",
+      "prefix": "一首",
+      "prefix_pinyin": "yishou",
+      "target": "诗",
+      "target_pinyin": "shi"
+    },
+    {
+      "id": "c010",
+      "prefix": "一条",
+      "prefix_pinyin": "yitiao",
+      "target": "河",
+      "target_pinyin": "he"
+    }
+  ]
+}
