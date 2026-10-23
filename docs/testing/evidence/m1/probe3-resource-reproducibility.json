@@ -1,0 +1,8 @@
+{
+  "scope": "same pinned inputs: two fresh staging/ZIP generations; NOT clean-toolchain/application reproducibility",
+  "archive_sha256": "daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007",
+  "bytes": 24390180,
+  "manifest_sha256": "8c339607e5f47d920c69ed83bd8ef35046230231516fed1813cf24e0eb66e70c",
+  "manifest_identical": true,
+  "pass": true
+}

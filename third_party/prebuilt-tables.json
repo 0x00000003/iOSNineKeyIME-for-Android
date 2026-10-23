@@ -1,0 +1,47 @@
+{
+  "scope": "Six public static dictionary binaries only; NO userdb, learned data, schema timestamps, prism or model",
+  "generator": "tests/native/compatibility.cc via pinned Trime librime 1.17.0 host build",
+  "generator_source_sha256": "414e8128f1de41902a513b7a8634ebb6ee76a8312327d1ee7e4e007c525a6ae5",
+  "baseline_commit": "065f5be2cfe22c12b2a3ca55b516a4588551e961",
+  "data_source": "Wanxiang lite v18.1.7 asset 659385471; original source archive SHA in upstream-lock.json",
+  "verification": "Byte-identical in two independently deployed host profiles. Not a clean-toolchain reproducibility or Android compatibility claim.",
+  "excluded": "Prism/schema builds contain source timestamps; user dictionaries and installation/user YAML are never selected.",
+  "files": [
+    {
+      "path": "build/custom_phrase.table.bin",
+      "sha256": "bde6f9703c6ead09e3a8153a21a1ca18dc595fa66ef13972775297f0be6b2be5",
+      "bytes": 4396,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    },
+    {
+      "path": "build/custom_phrase.reverse.bin",
+      "sha256": "972b406b7138eb781242d314137166a711df0fd1aa502aaab04e7090fe6592f9",
+      "bytes": 8376,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    },
+    {
+      "path": "build/wanxiang_abbrev_t9.table.bin",
+      "sha256": "a2cef394d92eef466dd122675983a59fb70097d188a5bc168ef7c7b25b5151a1",
+      "bytes": 851052,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    },
+    {
+      "path": "build/wanxiang_abbrev_t9.reverse.bin",
+      "sha256": "59c1b741f254eca1e66635d73f2b4582c97f7325f4f2dd83b57dfecf326caeeb",
+      "bytes": 366208,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    },
+    {
+      "path": "build/wanxiang_lite.table.bin",
+      "sha256": "3bb6cb0e7cb9c2d98fbe75fe9812dce0a54d3455a2e8404e48330e8a9c20445d",
+      "bytes": 50615112,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    },
+    {
+      "path": "build/wanxiang_lite.reverse.bin",
+      "sha256": "f84fb2d09e56a597db8a6f604a8d6faaef24d5801f3b60af609be2364fc9f057",
+      "bytes": 263796,
+      "license": "CC-BY-4.0, generated from the pinned original public Wanxiang dictionaries"
+    }
+  ]
+}

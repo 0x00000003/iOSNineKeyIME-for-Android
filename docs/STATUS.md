@@ -1,6 +1,6 @@
 # 当前状态
 
-日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`a21c873`，本轮补丁见Git与下列记录；开发记录。
+日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`065f5be`，本轮补丁见Git与下列记录；开发记录。
 
 | 项目 | 真实状态 | 证据/范围 |
 | --- | --- | --- |
@@ -23,3 +23,7 @@
 接续：先补M1学习关闭/敏感零写、模型授权及Android加载、资源与传递许可闭包；同时完成允许独立验证的纯状态/提交协议。测试设备应连接且保持解锁；不得启用/切换日用默认键盘。参考图缺失保留M5阻碍，继续独立可做任务。
 
 第三检查点：原生probe-2测试APK SHA256 `632bdcc7b0035232bcf6863bd9d8e72bcf13963509251dfb5d51542aba8aadca`，native-only在Pixel/模拟器PASS，editor-only明确FAIL，不混为全项通过。后续提交边界重入修复已通过49项state JVM；检查点当前构建的debug `7e780cb45f2d3d131a8a34a918e52734a3bbeae4f6366e1ebb35c50468f4970d` 与unsigned release `2c347994661891a8ccb9cc5a8a9295164a75854605d5ea03d2fd3916ea104614`仅静态APK及构建/lint通过，尚未绑定该最终哈希重跑设备测试。见[未解决项](OPEN_ISSUES.md)。下一步优先评估构建时预编译词典，减少每个新profile重复编译的耗时；不放宽R04私密字段断言。
+
+第四检查点（取代上段“当前最终哈希”）：probe-3 debug SHA256 `13e97020102c69b09a44f0353e4510b39f9077c58c5dc12326ec263d1ab41b32`，已在Pixel及模拟器运行native-only PASS、editor-only仍FAIL；同一debug哈希实际APK静态权限/备份PASS。unsigned release `f95dc8ab7991e72c637dbbde7ebdfb6bc4a105384792cfd3d565e6edd6d66ddb`构建/lint/静态PASS，未签名或运行。无用户库的六个固定公共table/reverse改为构建时产物，原始词典不随此探针重复打包；ZIP24390180 bytes、16文件、SHA daec81fe，两个fresh staging重建字节一致。Pixel一次debug双profile探针13005ms（资源部署1190ms、首profile引擎ready4293ms）；模拟器干净卸装后离线首装重测3906ms（497/1291ms），不是P02二十次release成绩。
+
+继续调查模型：固定lotem/rime-octagram-data 20260712 / 8ceef1b、约41MB compact词模型，README对命名gram数据给出LGPL许可指向。下载完整性与格式加载通过，原万象专用4查询只匹配2项；真实host grammar引擎的学习探针FAIL（即时排名2、重启1），需控制前文/重置会话验证。此候选未打包、未被认定达到R08/R10；原万象模型的许可疑点未自动解除。下一步先查明此测试混杂与原生session重置边界，再进入完整IME；R04私密组合音标FAIL不变。

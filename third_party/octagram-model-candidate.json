@@ -1,0 +1,33 @@
+{
+  "scope": "alternative grammar candidate research; NOT bundled or quality/context acceptance",
+  "repository": "https://github.com/lotem/rime-octagram-data",
+  "commit": "8ceef1b42eb77e86501382a52e85c309c0f2f04c",
+  "tag": "20260712",
+  "release_id": 352671543,
+  "asset_id": 474090460,
+  "name": "zh-hans-t-essay-bgw-compact.gram",
+  "url": "https://github.com/lotem/rime-octagram-data/releases/download/20260712/zh-hans-t-essay-bgw-compact.gram",
+  "bytes": 40925228,
+  "sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "publisher_digest": "sha256:d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "license": "LGPL-3.0; pinned README explicitly associates the named .gram data and its license; distribution/source/attribution obligations remain to audit",
+  "license_evidence": [
+    {
+      "path": "docs/reference/upstream/octagram-data/README.md",
+      "sha256": "242b2b0bcb3d284f406c0606ec0aa8b37e4725a1b4dee7ef14a6e2a3e5002763",
+      "bytes": 2315
+    },
+    {
+      "path": "docs/reference/upstream/octagram-data/LICENSE",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651
+    },
+    {
+      "path": "docs/reference/upstream/octagram-data/grammar.yaml",
+      "sha256": "a58ce9ef1dc8106634ed305565a832c06ddec9c01796501b1a4adaeb77264129",
+      "bytes": 775
+    }
+  ],
+  "bundled": false,
+  "android_compatibility_verified": false
+}

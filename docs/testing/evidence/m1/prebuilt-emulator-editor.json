@@ -1,0 +1,72 @@
+{
+  "scope": "real host editor component ONLY; native engine not rerun",
+  "pass": false,
+  "host_editor_component": {
+    "scope": "real EditText/InputConnection component test; NOT full IME/multi-host or I05 all-path acceptance",
+    "single_host_commit": true,
+    "composing_replacement": true,
+    "same_session_restore": true,
+    "old_field_not_replayed": true,
+    "grapheme_and_selection_deletion_passed": 6,
+    "deletion_fixture_count": 6,
+    "sensitive_metadata_cases_passed": 6,
+    "sensitive_context_reads": 0,
+    "sensitive_metadata_results": [
+      {
+        "case": "text_password",
+        "pass": true
+      },
+      {
+        "case": "visible_password",
+        "pass": true
+      },
+      {
+        "case": "web_password",
+        "pass": true
+      },
+      {
+        "case": "number_password",
+        "pass": true
+      },
+      {
+        "case": "no_personalized_learning",
+        "pass": true
+      },
+      {
+        "case": "user_private",
+        "pass": true
+      }
+    ],
+    "sensitive_deletion_results": [
+      {
+        "case": "astral",
+        "pass": true
+      },
+      {
+        "case": "combining_accent",
+        "pass": false
+      },
+      {
+        "case": "zwj_family",
+        "pass": true
+      },
+      {
+        "case": "regional_flag",
+        "pass": true
+      },
+      {
+        "case": "skin_modifier",
+        "pass": true
+      }
+    ],
+    "sensitive_grapheme_deletion_passed": 4,
+    "sensitive_deletion_fixture_count": 5,
+    "normal_learning_tree_unchanged": true,
+    "pass": false
+  },
+  "probe_run_id": "46c5d837646b4a8db74694865aa3dfba",
+  "tested_apk_sha256": "13e97020102c69b09a44f0353e4510b39f9077c58c5dc12326ec263d1ab41b32",
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "editor",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

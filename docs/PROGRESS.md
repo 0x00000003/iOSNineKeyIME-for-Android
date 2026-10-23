@@ -39,3 +39,9 @@ M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通
 真实AndroidEditText组件测试：去重、预编辑替换、断线恢复/切字段、普通字素/选区及6敏感元数据零上下文读取通过；私密预存组合音标仍FAIL（4/5），不降低门槛。修复sendKeyEvent返回值解释、测试UI异常传回、字段fixture顺序、提交flush同步重入；失败记录全部保留。细节及不同APK哈希见M1/M2记录和OPEN_ISSUES。
 
 接续先评估固定数据构建时预编译，减少每个新profile重复编译；M1许可/完整数据、R04私密删除、参考图等未关闭。没有完成可日用应用或1:1验收，不推送。
+
+## 2026-10-23 — 公共词典预编译与替代模型调查（WIP）
+
+前一提交065f5be。6固定公共table/reverse从两个独立host部署导出字节一致，不选userdb；runtime省略原始dict文本，保持解包预算32/128MiB。probe-3资源16项、ZIP daec81fe，fresh staging两次重建一致。debug13e97020在Pixel/离线API36模拟器native-only PASS，editor-only同样保留R04 FAIL；两APK静态、debug/release构建/lint通过。一次debug双profile探针Pixel13005ms（原源码编译探针135694ms）、模拟器干净卸装离线首装3906ms；未把单样本作为release性能成绩。忽略制品已冻结并有校验。
+
+不把原模型许可当作停止所有独立工作的理由：另外固定Rime上游LGPL compact gram候选并下载验证，host格式加载成功，但原特定查询2/4、grammar学习即时/重启rank不一致导致测试FAIL。未打包、未宣称上下文/许可分发全部通过；下一步研究session清理与前文混杂，再评价替代模型。具体证据见M1记录。完整M1/M2门禁仍未完成。

@@ -25,3 +25,6 @@
 
 | 017 | 2026-10-23 | Accepted for probe | 缺省schema首先无学习，正常学习显式选；无学习探针用独立新noBackup profile并对输入至退出全文件内容/mtime比较 | Rime创建session会先实例化缺省schema，之后才select；不能先加载普通用户DB再称私密。host/Pixel/模拟器已测配置，但完整IME字段策略仍未验收 |
 | 018 | 2026-10-23 | WIP / failing R04 | 敏感宿主删除禁止读取上下文，DEL结果标DELEGATED；真实效果必须另断言，不能信任sendKeyEvent布尔值 | Android正常ICU删除通过，私密预存组合音标FAIL；保留门槛与失败，后续解决，不用平台差异冒充P0通过 |
+
+| 019 | 2026-10-23 | Accepted for probe-3 | 构建时编译固定公共词典的table/reverse，两个独立部署字节一致后打包；不带原始dict、动态prism/schema或userdb。沿用原解包预算与librime支持的prebuilt fallback | Pixel/API36实际兼容与静态共享数据不变通过；不是完整工具链重建或release性能验收；原始来源与许可仍保留 |
+| 020 | 2026-10-23 | Research candidate only | 原Wanxiang模型许可疑点保留，另评估有明确命名gram数据授权指向的lotem compact LGPL模型（40.9MB） | 固定commit/资产/哈希/许可证据；host格式通过但原查询/即时学习断言FAIL，先定位会话与上下文，未打包，不降低R08/R10要求 |

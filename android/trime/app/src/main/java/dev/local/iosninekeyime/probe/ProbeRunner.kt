@@ -14,14 +14,18 @@ object ProbeRunner {
         val result = JSONObject().put("scope", "M1 no-model JNI compatibility; not IME/visual/privacy acceptance")
         val start = System.nanoTime()
         val shared = ProbeResources.deploy(context)
+        result.put("resource_deploy_ms", (System.nanoTime() - start) / 1_000_000)
+        val sharedBefore = ProbeFileSnapshot.fingerprint(shared)
         val profile = File(context.noBackupFilesDir, "m1/profiles/${UUID.randomUUID()}")
         check(profile.mkdirs())
         var started = false
         try {
+            val engineStart = System.nanoTime()
             Rime.startupRime(shared.absolutePath, profile.absolutePath, "m1-probe-1", true)
             started = true
             Rime.awaitRimeMaintenance()
             check(Rime.selectRimeSchema("wanxiang_t9")) { "E_SCHEMA" }
+            result.put("first_profile_engine_ready_ms", (System.nanoTime() - engineStart) / 1_000_000)
             var handled = true
             for (ch in "64426") handled = Rime.processRimeKey(ch.code, 0) && handled
             val candidates = Rime.getRimeCandidates(0, 20)
@@ -120,8 +124,13 @@ object ProbeRunner {
                 .put("no_learning_userdb_absent_at_start", noUserDatabaseAtStart)
                 .put("no_learning_profile_bytes_and_timestamps_unchanged", filesUnchanged).put("no_learning_userdb_absent", noUserDatabase)
                 .put("no_learning_probe", noLearningBefore > 1 && noLearningBefore == noLearningAfter && filesUnchanged && noUserDatabase && noUserDatabaseAtStart)
+            val prebuiltShared = File(shared, "build/wanxiang_lite.table.bin").isFile &&
+                !File(profile, "build/wanxiang_lite.table.bin").exists() && !File(noLearningProfile, "build/wanxiang_lite.table.bin").exists()
+            val sharedUnchanged = sharedBefore == ProbeFileSnapshot.fingerprint(shared)
+            result.put("prebuilt_main_table_shared", prebuiltShared).put("static_resources_bytes_and_timestamps_unchanged", sharedUnchanged)
             val all = multi == 3 && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
-                "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe", "no_learning_probe").all { result.getBoolean(it) }
+                "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe", "no_learning_probe",
+                "prebuilt_main_table_shared", "static_resources_bytes_and_timestamps_unchanged").all { result.getBoolean(it) }
             result.put("pass", all)
         } finally {
             if (started) Rime.exitRime()

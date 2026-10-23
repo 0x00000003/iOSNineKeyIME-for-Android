@@ -46,3 +46,9 @@
 当前应用是兼容性探针，没有注册可日用IME。发布签名未配置，不读取外部密钥环境；debug密钥仅在本项目忽略的`.private`。构建APK前依次准备锁定lite ZIP、运行prepare_probe.py（需新staging目录）、package_android_probe.py，再运行Gradle。package脚本同时写资源manifest；临时输出不能替代原始资源哈希。工具链干净环境重建仍未验收。
 
 上游导入文件保留原字节。首次整体`git diff --cached --check`报告上游既有空白问题；不批量格式化上游。原始4928文件逐一对比清单，19项本地修改另有哈希ledger，并对新增文件和修改相对原文件的差异单独检查空白。证据日志副本仅脱敏和去掉行尾空白，不改变测试结果；原始输出保留在忽略的artifacts。
+
+## probe-3公共预编译词典（开发检查点）
+
+prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/host-compat-profile-1/build与profile-2/build字节一致；输出third_party/prebuilt-tables.json和忽略的.cache/probe-prebuilt。绝不递归复制整个profile或userdb。然后在新的.cache/android-probe-resources staging运行`python3 scripts/package_android_probe.py --prebuilt`；当前脚本拒绝覆盖已存在stage，保留旧stage后才重建，勿用全局清理。原始source词典在已核验lite ZIP/host准备目录，runtime只用prebuilt fallback，不能删构建来源或许可。
+
+两个fresh staging重建的ZIP与manifest字节一致；当前APK13e97020对应资源daec81fe。尚无完整一键干净SDK/JDK重建证明，不能以同缓存重建称M6 REL01。设备测试命令`python3 scripts/run_probe.py --target pixel --scope engine --record 新名称`；editor/full会保留私密组合音标FAIL，不能为得到退出0静默跳过。Pixel目标只能来自忽略的.private/test-device；不打印serial、不启用/切换IME。专用emulator-5580以同脚本显式选择，始终检查qemu。原始输出和APK留artifacts，脱敏记录留docs/testing/evidence。

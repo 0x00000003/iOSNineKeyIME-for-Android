@@ -1,0 +1,10 @@
+{
+  "scope": "alternative model host format and four original Wanxiang-specific lookup fixtures; lookup misses are coverage evidence, NOT invalid file format",
+  "model_loaded": 1,
+  "load_ms": 0,
+  "fixed_queries": 4,
+  "queries_with_matches": 2,
+  "pass": 0,
+  "model_sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "exit_code": 1
+}

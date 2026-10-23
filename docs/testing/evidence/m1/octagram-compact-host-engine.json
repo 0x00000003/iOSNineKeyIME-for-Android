@@ -1,0 +1,19 @@
+{
+  "scope": "real host engine with compact LGPL grammar candidate and Wanxiang T9 dictionaries; NOT Android/model quality/context acceptance",
+  "schema": 1,
+  "multi_syllable_fixtures_passed": 3,
+  "partial_selection_preserves_composition": 1,
+  "partial_drain_single_exact_commit": 1,
+  "learning_repetitions": 20,
+  "learning_before_rank": 2,
+  "learning_after_rank": 2,
+  "restart_rank": 1,
+  "no_learning_configuration": 0,
+  "runtime_profile_bytes_and_timestamps_unchanged": 0,
+  "user_database_created": 1,
+  "learning_pass": 0,
+  "pass": 0,
+  "model_sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "elapsed_seconds": 0.328,
+  "exit_code": 1
+}

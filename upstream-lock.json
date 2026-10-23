@@ -5,14 +5,14 @@
   "runtime_assets": [
     {
       "id": "m1-no-model-probe",
-      "version": "probe-2",
+      "version": "probe-3",
       "source": "https://github.com/amzxyz/rime-wanxiang/releases/download/v18.1.7/rime-wanxiang-lite.zip",
-      "sha256": "188fd5c73fd3365a5cd79ed08cd3ed8b43417d3103813b1a9c5e4dbd0f6a388a",
+      "sha256": "daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007",
       "source_archive_sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
       "license": "CC-BY-4.0 data/config; GPL-3.0-or-later test Lua; see per-file third_party/android-probe-resources.json",
       "status": "M1 probe only; not full product/model licensing approval",
       "manifest": "third_party/android-probe-resources.json",
-      "bytes": 18423325
+      "bytes": 24390180
     }
   ],
   "projects": {

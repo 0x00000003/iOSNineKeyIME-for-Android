@@ -27,7 +27,7 @@ android {
 
         testInstrumentationRunner = "dev.local.iosninekeyime.probe.ProbeInstrumentation"
         multiDexEnabled = true
-        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"188fd5c73fd3365a5cd79ed08cd3ed8b43417d3103813b1a9c5e4dbd0f6a388a\"")
+        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007\"")
         buildConfigField("String", "BUILDER", "\"${project.builder}\"")
         buildConfigField("long", "BUILD_TIMESTAMP", project.buildTimestamp)
         buildConfigField("String", "BUILD_COMMIT_HASH", "\"${project.buildCommitHash}\"")

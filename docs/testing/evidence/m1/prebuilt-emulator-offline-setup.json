@@ -1,0 +1,12 @@
+{
+  "scope": "dedicated AOSP API36 ARM64 emulator only; not Pixel",
+  "network": {
+    "airplane_mode": "1",
+    "wifi": "0",
+    "mobile_data": "0"
+  },
+  "own_debug_package_removed": true,
+  "exact_package_absent_before_install": true,
+  "fresh_install_after_own_test_app_uninstall": true,
+  "previous_setup_issue": "pm path for missing package returns 1; previous helper incorrectly required 0; clean setup repeated with exact package-list check"
+}
