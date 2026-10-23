@@ -1,0 +1,38 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+> Task :state:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :state:compileKotlin UP-TO-DATE
+> Task :state:compileJava NO-SOURCE
+> Task :state:processResources NO-SOURCE
+> Task :state:classes UP-TO-DATE
+> Task :state:jar UP-TO-DATE
+> Task :state:processTestResources NO-SOURCE
+> Task :state:compileTestKotlin
+> Task :state:compileTestJava NO-SOURCE
+> Task :state:testClasses UP-TO-DATE
+
+> Task :state:test FAILED
+
+HostCommitGateTest > U03 synchronous field switch during host callback cannot consume the new field queue FAILED
+    org.opentest4j.AssertionFailedError at HostCommitGateTest.kt:88
+
+49 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':state:test'.
+> There were failing tests. See the report at: file://<project>/android/trime/state/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 7s
+8 actionable tasks: 2 executed, 6 up-to-date

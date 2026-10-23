@@ -89,8 +89,39 @@ object ProbeRunner {
                 .put("learning_after_rank", after).put("restart_rank", restarted).put("user_database_created", database)
             result.put("normal_learning_probe", database && before > 1 && after > 0 && after < before && restarted == after)
             Rime.clearRimeComposition()
+            Rime.exitRime()
+            started = false
+            val noLearningProfile = File(context.noBackupFilesDir, "m1/profiles/${UUID.randomUUID()}")
+            check(noLearningProfile.mkdirs())
+            Rime.startupRime(shared.absolutePath, noLearningProfile.absolutePath, "m1-probe-2", true)
+            started = true
+            Rime.awaitRimeMaintenance()
+            check(Rime.selectRimeSchema("wanxiang_t9_nolearn")) { "E_NO_LEARNING_SCHEMA" }
+            val noUserDatabaseAtStart = noLearningProfile.walkTopDown().none { it.name.contains(".userdb") }
+            val filesBefore = ProbeFileSnapshot.fingerprint(noLearningProfile)
+            type("64426")
+            val noLearningTarget = Rime.getRimeCandidates(0, 20).getOrNull(1)?.text ?: error("E_NO_LEARNING_FIXTURE")
+            val noLearningBefore = rank(noLearningTarget)
+            repeat(20) {
+                type("64426")
+                val current = rank(noLearningTarget)
+                check(current > 0 && Rime.selectRimeCandidate(current - 1, true)) { "E_NO_LEARNING_SELECT" }
+                check(Rime.getRimeCommit().text == noLearningTarget && Rime.getRimeCommit().text.isNullOrEmpty()) { "E_NO_LEARNING_COMMIT" }
+                Rime.processRimeKey(0xffe1, 0)
+            }
+            type("64426")
+            val noLearningAfter = rank(noLearningTarget)
+            Rime.clearRimeComposition()
+            Rime.exitRime()
+            started = false
+            val filesUnchanged = filesBefore == ProbeFileSnapshot.fingerprint(noLearningProfile)
+            val noUserDatabase = noLearningProfile.walkTopDown().none { it.name.contains(".userdb") }
+            result.put("no_learning_before_rank", noLearningBefore).put("no_learning_after_rank", noLearningAfter)
+                .put("no_learning_userdb_absent_at_start", noUserDatabaseAtStart)
+                .put("no_learning_profile_bytes_and_timestamps_unchanged", filesUnchanged).put("no_learning_userdb_absent", noUserDatabase)
+                .put("no_learning_probe", noLearningBefore > 1 && noLearningBefore == noLearningAfter && filesUnchanged && noUserDatabase && noUserDatabaseAtStart)
             val all = multi == 3 && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
-                "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe").all { result.getBoolean(it) }
+                "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe", "no_learning_probe").all { result.getBoolean(it) }
             result.put("pass", all)
         } finally {
             if (started) Rime.exitRime()

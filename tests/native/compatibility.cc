@@ -2,7 +2,9 @@
 // Real C API integration; all input is fixed synthetic fixture data.
 #include <rime_api.h>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
+#include <map>
 #include <string>
 #include <vector>
 
@@ -12,6 +14,21 @@ extern void rime_require_module_predict();
 
 namespace {
 RimeApi* api;
+using Tree = std::map<std::string, std::pair<std::filesystem::file_time_type, std::string>>;
+Tree snapshot(const std::filesystem::path& root) {
+  Tree result;
+  result["."] = {std::filesystem::last_write_time(root), {}};
+  for (const auto& entry : std::filesystem::recursive_directory_iterator(root)) {
+    std::string bytes;
+    if (entry.is_regular_file()) {
+      std::ifstream input(entry.path(), std::ios::binary);
+      bytes.assign(std::istreambuf_iterator<char>(input), std::istreambuf_iterator<char>());
+    }
+    result[std::filesystem::relative(entry.path(), root).string()] =
+        {std::filesystem::last_write_time(entry.path()), std::move(bytes)};
+  }
+  return result;
+}
 void type(RimeSessionId session, const std::string& digits) {
   api->clear_composition(session);
   for (char digit : digits) api->process_key(session, digit, 0);
@@ -61,7 +78,9 @@ void start(const char* shared, const char* user) {
 }  // namespace
 
 int main(int argc, char** argv) {
-  if (argc != 3 || std::filesystem::exists(argv[2])) return 64;
+  if ((argc != 3 && argc != 4) || std::filesystem::exists(argv[2])) return 64;
+  bool noLearning = argc == 4 && std::string(argv[3]) == "--no-learning";
+  if (argc == 4 && !noLearning) return 64;
   std::filesystem::create_directories(argv[2]);
   rime_require_module_lua();
   rime_require_module_octagram();
@@ -73,6 +92,7 @@ int main(int argc, char** argv) {
   start(argv[1], argv[2]);
   auto session = api->create_session();
   bool schema = api->select_schema(session, "wanxiang_t9");
+  const auto initialTree = noLearning ? snapshot(argv[2]) : Tree{};
   int multi = 0;
   for (const auto& fixture : std::vector<std::pair<std::string, std::string>>{
            {"64426", "你好"}, {"94664486", "中国"}, {"744543", "世界"}}) {
@@ -117,6 +137,7 @@ int main(int argc, char** argv) {
   api->clear_composition(session);
   api->destroy_session(session);
   api->finalize();
+  bool unchanged = noLearning && initialTree == snapshot(argv[2]);
 
   start(argv[1], argv[2]);
   session = api->create_session();
@@ -127,8 +148,8 @@ int main(int argc, char** argv) {
   for (auto const& entry : std::filesystem::directory_iterator(argv[2]))
     if (entry.path().filename().string().find(".userdb") != std::string::npos)
       database = true;
-  bool learning = training && database && before > 1 && after > 0 &&
-                  after < before && restarted == after;
+  bool learning = training && before > 1 && after > 0 && restarted == after &&
+      (noLearning ? (!database && before == after && unchanged) : (database && after < before));
   api->clear_composition(session);
   api->destroy_session(session);
   api->finalize();
@@ -139,6 +160,8 @@ int main(int argc, char** argv) {
             << ",\"partial_drain_single_exact_commit\":" << (drained && exactDrain)
             << ",\"learning_repetitions\":20,\"learning_before_rank\":" << before
             << ",\"learning_after_rank\":" << after << ",\"restart_rank\":" << restarted
+            << ",\"no_learning_configuration\":" << noLearning
+            << ",\"runtime_profile_bytes_and_timestamps_unchanged\":" << unchanged
             << ",\"user_database_created\":" << database << ",\"learning_pass\":" << learning
             << ",\"pass\":" << pass << "}\n";
   return pass ? 0 : 1;

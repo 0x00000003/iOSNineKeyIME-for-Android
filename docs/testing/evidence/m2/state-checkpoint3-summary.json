@@ -1,0 +1,32 @@
+{
+  "scope": "state JVM tests; NOT full IME/host or all-path security acceptance",
+  "suites": [
+    {
+      "name": "dev.local.iosninekeyime.state.HostCommitGateTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.local.iosninekeyime.state.KeyboardReducerTest",
+      "tests": "26",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.local.iosninekeyime.state.TouchProtocolTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "totals": {
+    "tests": 49,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

@@ -42,8 +42,16 @@ engine='''engine:
 text,count=re.subn(r'^engine:\n.*?(?=^[a-z_]+:)',engine,text,flags=re.M|re.S)
 assert count==1
 schema.write_text(text)
+private_text=text.replace('schema_id: wanxiang_t9', 'schema_id: wanxiang_t9_nolearn', 1)
+private_text=private_text.replace('  enable_user_dict: true', '  enable_user_dict: false', 1)
+assert private_text != text and '  enable_user_dict: true' not in private_text
+(stage/'wanxiang_t9_nolearn.schema.yaml').write_text(private_text)
+default=stage/'default.yaml'
+default_text=default.read_text()
+assert default_text.count('  - schema: wanxiang_t9\n')==1
+default.write_text(default_text.replace('  - schema: wanxiang_t9\n', '  - schema: wanxiang_t9_nolearn\n  - schema: wanxiang_t9\n'))
 # Test marker is original GPL code; data/config retains its own CC-BY attribution.
-(stage/'NOTICE.txt').write_text('M1 compatibility probe only; no model.\nData/config: amzxyz and rime-wanxiang contributors, v18.1.7 lite asset 659385471, CC-BY-4.0.\nhttps://github.com/amzxyz/rime-wanxiang/tree/89075fe7b870dcf80249dfa0ece7474f1a960d91\nModified: no grammar; native-only pipeline plus test Lua marker; statistics and upstream Lua omitted.\nProbe Lua: this project, GPL-3.0-or-later.\n')
+(stage/'NOTICE.txt').write_text('M1 compatibility probe only; no model.\nData/config: amzxyz and rime-wanxiang contributors, v18.1.7 lite asset 659385471, CC-BY-4.0.\nhttps://github.com/amzxyz/rime-wanxiang/tree/89075fe7b870dcf80249dfa0ece7474f1a960d91\nModified: no grammar; native-only pipeline plus test Lua marker; statistics and upstream Lua omitted; separate no-learning schema disables translator user dictionary.\nProbe Lua: this project, GPL-3.0-or-later.\n')
 output=ROOT/'android/trime/app/build/generated/imeAssets'
 output.mkdir(parents=True,exist_ok=True)
 archive=output/'ime-probe.zip'
@@ -56,7 +64,7 @@ with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=
   z.writestr(info,p.read_bytes())
 digest=hashlib.sha256(archive.read_bytes()).hexdigest()
 (output/'ime-probe.sha256').write_text(digest+'\n')
-manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-1',
+manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-2',
           'source_asset':659385471,'source_sha256':'4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a',
           'archive_sha256':digest,'archive_bytes':archive.stat().st_size,
           'model':False,'upstream_lua':False,

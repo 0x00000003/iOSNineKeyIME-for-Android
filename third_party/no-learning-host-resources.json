@@ -1,0 +1,114 @@
+{
+  "scope": "no-learning HOST configuration probe only, not product pack or all-sensitive-path audit",
+  "base_manifest": {
+    "commit": "a21c873",
+    "path": "third_party/android-probe-resources.json",
+    "sha256": "7122adabc067e764b6f0a802fd9db2b53a70bdac3c15c4a51c69e6b4aed61141"
+  },
+  "modified_file": "wanxiang_t9.schema.yaml",
+  "before_sha256": "9ae1c4bce43be55932fc2addd25f9062464aadb2eb1fd28ca4cdec9978c85b38",
+  "after_sha256": "b60976ef1348af469957af7463f919cb75b91c50674db18407732ab08940550c",
+  "change": "translator.enable_user_dict=false; same no-model native pipeline plus nonpersistent probe Lua",
+  "files": [
+    {
+      "path": "LICENSE.wanxiang",
+      "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
+      "bytes": 18656
+    },
+    {
+      "path": "NOTICE.txt",
+      "sha256": "fb1d7f8f552867bc9a72398392252e8df31bdf8dd05f20966c5e9a3ab0c3b29e",
+      "bytes": 363
+    },
+    {
+      "path": "custom_phrase.dict.yaml",
+      "sha256": "c78303912bf8798b5abeb0cd5e6e80fb0a4c42d4cd53e9f1645c1fba7cd01393",
+      "bytes": 1492
+    },
+    {
+      "path": "default.yaml",
+      "sha256": "dab021590b7e78c76a537a7c3a5922232c87d76b605d2de78621b712d6cb2bc2",
+      "bytes": 6277
+    },
+    {
+      "path": "dicts/cuoyin.lite.dict.yaml",
+      "sha256": "587c93dda00883a3885212f0b84edb0e63675f684159f95cee241a31ca27c8c3",
+      "bytes": 7640
+    },
+    {
+      "path": "dicts/diming.lite.dict.yaml",
+      "sha256": "5a87bc73b43a7d94751f41869ed51049c238605ae028ef62c1235f29fdb99d86",
+      "bytes": 2953515
+    },
+    {
+      "path": "dicts/duoyin.lite.dict.yaml",
+      "sha256": "8b6d3662324e89239bb61696df92a7e0abd873381a3605644110f277143e780c",
+      "bytes": 124363
+    },
+    {
+      "path": "dicts/jichu.lite.dict.yaml",
+      "sha256": "00517f9977f3a699c77ddede3b7e0d48501c5d50f90b55e30007f852af2045bb",
+      "bytes": 44387819
+    },
+    {
+      "path": "dicts/mingren.lite.dict.yaml",
+      "sha256": "cf0ceb89145096af385a04699f702840b23b70a3b1493c6618ca4b9b1ab369ec",
+      "bytes": 596812
+    },
+    {
+      "path": "dicts/t9_abbrev.dict.yaml",
+      "sha256": "2b72e3c0dee6ce6207a29a5cfa30ff310751bb977070086fc52868696bbc368f",
+      "bytes": 514659
+    },
+    {
+      "path": "dicts/yiren.lite.dict.yaml",
+      "sha256": "b3748b91ad7981263d1e33320825ffc78bd1fa14a1998f30fcdc4a29afc89b1f",
+      "bytes": 380055
+    },
+    {
+      "path": "dicts/zi.lite.dict.yaml",
+      "sha256": "1f95b52c9b19adb139eceeaff26c27f78d719a18b67bbd29d75caa213cd9581f",
+      "bytes": 547153
+    },
+    {
+      "path": "lua/ime_probe.lua",
+      "sha256": "0729085f08283f45b1ce084d393ea64aeb52ec6ed92c38c2f155038eca98c433",
+      "bytes": 265
+    },
+    {
+      "path": "wanxiang_abbrev_t9.dict.yaml",
+      "sha256": "7b0335e92e836f519bdb57e76b9c223ee84599ae808ae2601da9329153ed8fd0",
+      "bytes": 239
+    },
+    {
+      "path": "wanxiang_abbrev_t9.schema.yaml",
+      "sha256": "d54a04d1cfb8cf6170f2767a1cea1cc6b660729669682fdbaf10f207ce4321b0",
+      "bytes": 711
+    },
+    {
+      "path": "wanxiang_algebra.yaml",
+      "sha256": "99719690856aa5d334a0e9110f0ea7a8eb0f92cc669a51b2a1a2293c1bff53c7",
+      "bytes": 136967
+    },
+    {
+      "path": "wanxiang_lite.dict.yaml",
+      "sha256": "2a5e58758f4c1f780959680ed5a2a8094d7b14d9f1a593f553e03b6452c69b0f",
+      "bytes": 1386
+    },
+    {
+      "path": "wanxiang_phrase_t9.schema.yaml",
+      "sha256": "cf22e457aedd4a3de1b65d84f559bbe20a414d881da456d947d0d8a18f4f8848",
+      "bytes": 785
+    },
+    {
+      "path": "wanxiang_symbols.yaml",
+      "sha256": "8cd64dd226ccdddc0771085ad4d072c19713529ec02c9f4c00d97e6fd6e4c8df",
+      "bytes": 98894
+    },
+    {
+      "path": "wanxiang_t9.schema.yaml",
+      "sha256": "b60976ef1348af469957af7463f919cb75b91c50674db18407732ab08940550c",
+      "bytes": 17171
+    }
+  ]
+}

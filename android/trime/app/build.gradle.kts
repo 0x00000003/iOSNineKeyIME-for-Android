@@ -27,7 +27,7 @@ android {
 
         testInstrumentationRunner = "dev.local.iosninekeyime.probe.ProbeInstrumentation"
         multiDexEnabled = true
-        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"acf96b9f5d2f3665b3e4c69bab204f0e0b6234647756614d162733c5422a1dcd\"")
+        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"188fd5c73fd3365a5cd79ed08cd3ed8b43417d3103813b1a9c5e4dbd0f6a388a\"")
         buildConfigField("String", "BUILDER", "\"${project.builder}\"")
         buildConfigField("long", "BUILD_TIMESTAMP", project.buildTimestamp)
         buildConfigField("String", "BUILD_COMMIT_HASH", "\"${project.buildCommitHash}\"")
@@ -127,6 +127,7 @@ ksp {
 }
 
 dependencies {
+    implementation(project(":state"))
     ksp(project(":codegen"))
     implementation(libs.kotlinx.coroutines)
     implementation(libs.kotlinx.serialization.json)

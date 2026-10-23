@@ -31,3 +31,11 @@ M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通
 前一检查点已本地提交de7b919。真实host/Pixel/API36模拟器新增三组多音节、部分选词和单词20次学习/引擎重启正对照PASS，debug绑定7ddd343a；同补丁41项app JVM、38项state JVM、debug/release lint及两变体静态APK门禁通过。模型本地只读格式/4查询通过，但未打包/授权关闭/Android性能。记录见M1/M2-20261023；全部门禁范围分开。
 
 失败保留：state新传递依赖pin缺失；敏感Cancel错误触发native Clear；模型host生成头include缺失。逐一修复后重测，不删除断言或减低门槛。新增TouchProtocol共享几何/字段取消，EditorPolicy覆盖密码与无学习元数据。尚无实际InputConnection、真实IME或完整隐私零写证明；M1、M2均WIP，M5缺参考图BLOCKED。下一步完成M1剩余原生/隐私/资产门禁与纯提交控制协议。
+
+## 2026-10-23 — 无学习真实对照与宿主边界（WIP）
+
+前一提交a21c873之后，host/Pixel/API36原生probe-2正常学习/无学习对照通过，源包哈希188fd5c7。默认先创建无学习schema，普通学习显式选择，避免先加载正常用户库。独立profile输入到finalize的完整内容/mtime不变、无userdb；不是完整IME R07。最终49 state/41 app JVM、debug/release构建与lint通过。
+
+真实AndroidEditText组件测试：去重、预编辑替换、断线恢复/切字段、普通字素/选区及6敏感元数据零上下文读取通过；私密预存组合音标仍FAIL（4/5），不降低门槛。修复sendKeyEvent返回值解释、测试UI异常传回、字段fixture顺序、提交flush同步重入；失败记录全部保留。细节及不同APK哈希见M1/M2记录和OPEN_ISSUES。
+
+接续先评估固定数据构建时预编译，减少每个新profile重复编译；M1许可/完整数据、R04私密删除、参考图等未关闭。没有完成可日用应用或1:1验收，不推送。

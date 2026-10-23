@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,6 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine'], default='full')
     args = parser.parse_args()
     if not re.fullmatch(r'[a-z0-9-]+', args.record):
         raise ValueError('E_RECORD_NAME')
@@ -50,20 +52,31 @@ def main():
     for file in (frozen, test):
         if 'Success' not in call('install', '-r', str(file)):
             raise RuntimeError('E_INSTALL')
-    output = call('shell', 'am', 'instrument', '-w', '-r',
+    run_id = uuid.uuid4().hex
+    output = call('shell', 'am', 'instrument', '-w', '-r', '-e', 'probe_scope', args.scope, '-e', 'probe_run_id', run_id,
                   'dev.local.iosninekeyime.probe.debug.test/dev.local.iosninekeyime.probe.ProbeInstrumentation')
     raw_output.write_text(output)
-    if 'm1_probe_pass=true' not in output or 'INSTRUMENTATION_CODE: -1' not in output:
+    result = None
+    try:
+        candidate = json.loads(call('shell', 'run-as', 'dev.local.iosninekeyime.probe.debug',
+                                   'cat', 'no_backup/m1/probe-result.json'))
+        if candidate.get('probe_run_id') == run_id:
+            result = candidate
+    except (RuntimeError, json.JSONDecodeError):
+        pass
+    if result is None:
         evidence.write_text(json.dumps({'pass': False, 'scope': 'instrumentation assertions failed; no stale result consumed',
                                            'tested_apk_sha256': digest}, indent=2) + '\n')
         raise RuntimeError('E_PROBE_ASSERTIONS')
-    result = json.loads(call('shell', 'run-as', 'dev.local.iosninekeyime.probe.debug',
-                             'cat', 'no_backup/m1/probe-result.json'))
     result.update(tested_apk_sha256=digest,
                   device='Pixel 9 Pro / Android 17 API 37' if args.target == 'pixel' else 'dedicated AOSP API36 ARM64 emulator',
-                  scope_note='synthetic debug engine integration; NOT IME selection, first install, ten-word learning, privacy or performance acceptance')
+                  requested_scope=args.scope,
+                  scope_note='synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance')
     evidence.write_text(json.dumps(result, indent=2) + '\n')
-    print(json.dumps(dict(target=args.target, passed=result['pass'], elapsed_ms=result['elapsed_ms'], apk_sha256=digest)))
+    passed = result['pass'] and 'm1_probe_pass=true' in output and 'INSTRUMENTATION_CODE: -1' in output
+    print(json.dumps(dict(target=args.target, passed=passed, elapsed_ms=result.get('elapsed_ms'), apk_sha256=digest)))
+    if not passed:
+        raise RuntimeError('E_PROBE_ASSERTIONS')
 
 
 if __name__ == '__main__':

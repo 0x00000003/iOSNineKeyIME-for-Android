@@ -15,7 +15,7 @@
     {
       "path": "app/build.gradle.kts",
       "upstream_sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
-      "modified_sha256": "e9d13bea2ab8532215f92b7fde0a9b62fe77cd77b98d9430a5b51ae57ba3a3e6"
+      "modified_sha256": "7b1e8466471f70a0a38d8d345f782421d3fc3ab42a2f33b0d7eed475ae49f91c"
     },
     {
       "path": "app/src/main/AndroidManifest.xml",

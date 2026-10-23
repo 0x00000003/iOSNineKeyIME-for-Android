@@ -22,3 +22,6 @@
 
 | 015 | 2026-10-23 | Provisional implementation | 对密码/NO_PERSONALIZED_LEARNING/用户隐私开关统一形成敏感策略；当前纯Reducer强制直接英/数，Cancel不得调用native；真实InputConnection/零持久写待接入验证 | 此为保守开发边界，不声称普通隐私中文候选已支持；R07全链路未验收 |
 | 016 | 2026-10-23 | Accepted | 状态同时使用真实compositionLength与原始编码，候选menu为空不能推导Idle；触控与绘制共享半开矩形，一指拥有、字段更换终止重复 | 38纯单元测试；Android视图/TalkBack/实际部分选段与宿主集成仍要实测 |
+
+| 017 | 2026-10-23 | Accepted for probe | 缺省schema首先无学习，正常学习显式选；无学习探针用独立新noBackup profile并对输入至退出全文件内容/mtime比较 | Rime创建session会先实例化缺省schema，之后才select；不能先加载普通用户DB再称私密。host/Pixel/模拟器已测配置，但完整IME字段策略仍未验收 |
+| 018 | 2026-10-23 | WIP / failing R04 | 敏感宿主删除禁止读取上下文，DEL结果标DELEGATED；真实效果必须另断言，不能信任sendKeyEvent布尔值 | Android正常ICU删除通过，私密预存组合音标FAIL；保留门槛与失败，后续解决，不用平台差异冒充P0通过 |
