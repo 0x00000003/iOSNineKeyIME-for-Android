@@ -1,0 +1,8 @@
+{
+  "scope": "selected Pixel readonly state; no IME selection, unlock or settings mutation",
+  "wakefulness": "Awake",
+  "powered": "true",
+  "own_ime_enabled": false,
+  "own_ime_default": false,
+  "keyguard_showing": "false"
+}

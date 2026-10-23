@@ -2,6 +2,7 @@
 #define RIME_OCTAGRAM_H_
 
 #include <rime/common.h>
+#include <cstdint>
 #include <rime/component.h>
 #include <rime/resource.h>
 #include <rime/gear/grammar.h>
@@ -27,6 +28,7 @@ class Octagram : public Grammar {
  private:
   the<GrammarConfig> config_;
   GramDb* db_ = nullptr;
+  OctagramComponent* component_ = nullptr;
 };
 
 class OctagramComponent : public Grammar::Component {
@@ -38,8 +40,17 @@ class OctagramComponent : public Grammar::Component {
 
   GramDb* GetDb(const string& language);
 
+  // Project observability: metadata only, never load a model from an inspection call.
+  bool HasLoadedDb(const string& language) const {
+    auto found = db_by_language_.find(language);
+    return found != db_by_language_.end() && found->second != nullptr;
+  }
+  void ObserveQuery() { ++query_count_; }
+  uint64_t query_count() const { return query_count_; }
+
  private:
   map<string, the<GramDb>> db_by_language_;
+  uint64_t query_count_ = 0;
 };
 
 }  // namespace rime

@@ -216,7 +216,7 @@ class Rime {
 
   bool probeCompactGrammarLoaded() {
     auto* component = dynamic_cast<rime::OctagramComponent*>(rime::Grammar::Require("grammar"));
-    return component && component->GetDb("zh-hans-t-essay-bgw-compact") != nullptr;
+    return component && component->HasLoadedDb("zh-hans-t-essay-bgw-compact");
   }
 
   bool sync() {
@@ -307,6 +307,12 @@ Java_com_osfans_trime_core_Rime_getRimeProbeHistorySize(JNIEnv*, jclass) {
 extern "C" JNIEXPORT jboolean JNICALL
 Java_com_osfans_trime_core_Rime_getRimeProbeCompactGrammarLoaded(JNIEnv*, jclass) {
   return Rime::Instance().probeCompactGrammarLoaded();
+}
+
+extern "C" JNIEXPORT jlong JNICALL
+Java_com_osfans_trime_core_Rime_getRimeProbeGrammarQueryCount(JNIEnv*, jclass) {
+  auto* component = dynamic_cast<rime::OctagramComponent*>(rime::Grammar::Require("grammar"));
+  return component ? static_cast<jlong>(component->query_count()) : 0;
 }
 
 // deployment

@@ -1,0 +1,23 @@
+{
+  "scope": "debug-owned public-resource/model corruption and recovery; NOT general privacy/backup acceptance",
+  "public_corruption_rejected": true,
+  "model_corruption_rejected": true,
+  "model_bundled": true,
+  "recovered_public_resources": true,
+  "profiles_bytes_and_timestamps_unchanged": true,
+  "preservation_scope": "whole profile tree immediately after repair; then separately reopen engine with fresh synthetic profiles",
+  "existing_profiles_unchanged_after_engine_reopen": true,
+  "engine_reopened_with_repaired_resources": true,
+  "positive_existing_profile_count": 21,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "a26f16e6e4c24893887d4fb65b51b14b",
+  "tested_apk_sha256": "43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531",
+  "tested_test_apk_sha256": "fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff",
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "resources",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

@@ -59,3 +59,11 @@ M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通
 最终48 app/61 state JVM、两套lint/assemble、两实际APK静态门禁PASS。debug3556212b在Pixel/模拟器view/controller与损坏恢复PASS；full native PASS但editor仍R04 FAIL。实际触控首轮无fresh结果，第二轮定位到嵌入EditText失焦导致DEL无效，恢复fixture焦点后相同要求通过。新视图同帧重建后立即measure/layout匹配HitMap，测试不再依赖长按时waitForIdle。保留失败。未执行系统设置授权/默认切换，服务生命周期未验收；R04与M5未解。见M2记录及USER_GUIDE。
 
 测量前固定R08质量语料100词/20句；不按后续结果更换目标或下调门槛。下一步运行host/Android固定语料与独立学习/上下文对照，继续完整安全/许可审计，开发记录。
+
+## 2026-10-23 — M3质量/学习受控测量（WIP）
+
+quality-v1在13208fe冻结，learning-v1在28fabd5冻结，context-v1在41d6795冻结，均在测量前固定。R08首轮虽99/100与19/20命中达标，但整树mtime控制FAIL；定位到测试反复select同schema保存user.yaml访问时间。只核验自动选中schema后原零写断言保持并通过，两设备得分不变。R09同f13dc431/e74c9023 APK十词全部2→1/restart1/clear2，清除拒绝引擎占用、私有兄弟symlink不越界均通过。完整SEC04/R04/系统IME未通过，不把组件当完整交付。
+
+R10四格对照测试进行中；发现旧loaded getter的GetDb有加载副作用，改非加载getter并增加无文本query计数，需新APK回归。详见M3记录，保留所有失败历史，按贡献流程提交。
+
+M3最终追加：43cf6e69/fc0c5fa3同制品在两设备R08/R09/R10及触控/恢复全部组件PASS，R10 9/10真实排序改善、off不变/0查询、on5110查询；无用户库/全profile不变控制保持。full仍R04 FAIL。Pixel重复安装首轮超时记BLOCKED，按当前已装APK+test实际SHA相同才复用重试并执行full，不按版本号跳过，也不声称首装。48 app/61 state、两套lint与实际两APK静态门禁PASS；release73a2031d未签名/运行。下一步M4独立界面/清学习/清单，按发布流程管理。

@@ -1,0 +1,8 @@
+{
+  "pass": false,
+  "status": "BLOCKED",
+  "phase": "diagnostic runner stopped during repeated ADB wait; no fresh assertion result",
+  "tested_apk_sha256": "43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531",
+  "tested_test_apk_sha256": "fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff",
+  "scope": "transport/installation failure, NOT executed Android assertion failure"
+}

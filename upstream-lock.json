@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "checked_at_utc": "2026-10-23T16:55:44.984537+00:00",
-  "selection_status": "research-pinned; compatibility and artifact licensing pending",
+  "selection_status": "fixed runtime candidate; M1-M3 engine component observations, NOT completed release/privacy/visual gates",
   "runtime_assets": [
     {
       "id": "m1-engine-probe",
@@ -450,5 +450,12 @@
     "license_status": "asset scope and attribution to verify before bundling",
     "local_sha256": "9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
     "bundled": false
+  },
+  "android_frontend": {
+    "service": "dev.local.iosninekeyime.ime.NineKeyInputMethodService",
+    "base": "Trime LifecycleInputMethodService at pinned source snapshot",
+    "engine": "pinned JNI/librime/Lua/octagram; serial controller and global native lease",
+    "status": "WIP service registered, not manually enabled; lifecycle and visual acceptance incomplete",
+    "decision": "ADR024"
   }
 }

@@ -507,6 +507,9 @@ class Rime :
         external fun getRimeProbeCompactGrammarLoaded(): Boolean
 
         @JvmStatic
+        external fun getRimeProbeGrammarQueryCount(): Long
+
+        @JvmStatic
         external fun awaitRimeMaintenance()
 
         @JvmStatic

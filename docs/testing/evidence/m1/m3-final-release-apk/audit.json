@@ -1,0 +1,8 @@
+{
+  "scope": "static APK manifest/packaged backup XML, NOT target-OS backup/network/learning acceptance",
+  "sha256": "73a2031d8af44c27ce551dc98ad7162b78dde851b2ac515b9fc52dbf83ffe5cb",
+  "bytes": 62913693,
+  "package": "dev.local.iosninekeyime.probe",
+  "errors": [],
+  "pass": true
+}

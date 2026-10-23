@@ -17,7 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
-    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller'], default='full')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context'], default='full')
     args = parser.parse_args()
     if not re.fullmatch(r'[a-z0-9-]+', args.record):
         raise ValueError('E_RECORD_NAME')
@@ -47,11 +47,34 @@ def main():
     apk, = (outputs / 'debug').glob('*.apk')
     test, = (outputs / 'androidTest/debug').glob('*.apk')
     digest = hashlib.sha256(apk.read_bytes()).hexdigest()
+    test_digest = hashlib.sha256(test.read_bytes()).hexdigest()
+    frozen_test = ROOT / 'artifacts/m1' / (args.record + '-test-' + test_digest[:12] + '.apk')
+    shutil.copy2(test, frozen_test)
     frozen = ROOT / 'artifacts/m1' / (args.record + '-' + digest[:12] + '.apk')
     shutil.copy2(apk, frozen)
-    for file in (frozen, test):
-        if 'Success' not in call('install', '-r', str(file)):
-            raise RuntimeError('E_INSTALL')
+    installation = []
+    for file, package, expected_sha in ((frozen, 'dev.local.iosninekeyime.probe.debug', digest),
+                                       (frozen_test, 'dev.local.iosninekeyime.probe.debug.test', test_digest)):
+        existing_matches = False
+        try:
+            locations = [line.removeprefix('package:').strip() for line in call('shell', 'pm', 'path', package).splitlines() if line.startswith('package:')]
+            if len(locations) == 1 and re.fullmatch(r'/data/app/[A-Za-z0-9_~+./=-]+/base\.apk', locations[0]):
+                actual = call('shell', 'sha256sum', locations[0]).split()[0]
+                existing_matches = actual == expected_sha
+        except (RuntimeError, IndexError):
+            pass
+        if existing_matches:
+            installation.append(dict(package=package, state='existing APK bytes verified by SHA256'))
+            continue
+        try:
+            if 'Success' not in call('install', '-r', str(file)):
+                raise RuntimeError('E_INSTALL')
+        except RuntimeError as error:
+            evidence.write_text(json.dumps(dict(pass_=False, status='BLOCKED', scope='installation did not complete; assertions NOT_RUN',
+                                               tested_apk_sha256=digest, tested_test_apk_sha256=test_digest,
+                                               phase='install', error_code=str(error)), indent=2).replace('"pass_"', '"pass"') + '\n')
+            raise
+        installation.append(dict(package=package, state='installed local frozen APK'))
     run_id = uuid.uuid4().hex
     output = call('shell', 'am', 'instrument', '-w', '-r', '-e', 'probe_scope', args.scope, '-e', 'probe_run_id', run_id,
                   'dev.local.iosninekeyime.probe.debug.test/dev.local.iosninekeyime.probe.ProbeInstrumentation')
@@ -68,7 +91,7 @@ def main():
         evidence.write_text(json.dumps({'pass': False, 'scope': 'instrumentation assertions failed; no stale result consumed',
                                            'tested_apk_sha256': digest}, indent=2) + '\n')
         raise RuntimeError('E_PROBE_ASSERTIONS')
-    result.update(tested_apk_sha256=digest,
+    result.update(tested_apk_sha256=digest, tested_test_apk_sha256=test_digest, installation=installation,
                   device='Pixel 9 Pro / Android 17 API 37' if args.target == 'pixel' else 'dedicated AOSP API36 ARM64 emulator',
                   requested_scope=args.scope,
                   scope_note='synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance')

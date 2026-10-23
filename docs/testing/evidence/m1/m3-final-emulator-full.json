@@ -1,0 +1,112 @@
+{
+  "scope": "M1 pinned-resource JNI compatibility; not IME/visual/privacy/quality acceptance",
+  "model_bundled": true,
+  "model_sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "resource_deploy_ms": 55,
+  "compact_grammar_loaded": true,
+  "first_profile_engine_ready_ms": 1699,
+  "digits_handled": true,
+  "target_rank": 1,
+  "lua_executed": true,
+  "jni_string_regression_calls": 100,
+  "single_commit": true,
+  "full_commit_empty": true,
+  "delete_to_empty": true,
+  "clear_composition_retains_history": true,
+  "session_reset_clears_history": true,
+  "session_reset_clears_property": true,
+  "session_reset_empty_raw_and_commit": true,
+  "multi_syllable_fixtures_passed": 3,
+  "partial_selection_preserves_composition": true,
+  "partial_drain_single_exact_commit": true,
+  "learning_repetitions": 20,
+  "learning_before_rank": 2,
+  "learning_rank_control": "fresh native session before/after, no prior field text",
+  "learning_baseline_history_count": 0,
+  "learning_after_history_count": 0,
+  "learning_contextual_after_rank": 2,
+  "learning_after_rank": 1,
+  "restart_rank": 1,
+  "user_database_created": true,
+  "normal_learning_probe": true,
+  "no_learning_before_rank": 2,
+  "no_learning_after_rank": 2,
+  "no_learning_userdb_absent_at_start": true,
+  "no_learning_profile_bytes_and_timestamps_unchanged": true,
+  "no_learning_userdb_absent": true,
+  "no_learning_probe": true,
+  "prebuilt_main_table_shared": true,
+  "static_resources_bytes_and_timestamps_unchanged": true,
+  "pass": false,
+  "elapsed_ms": 4654,
+  "native_engine_probe_pass": true,
+  "host_editor_component": {
+    "scope": "real EditText/InputConnection component test; NOT full IME/multi-host or I05 all-path acceptance",
+    "single_host_commit": true,
+    "composing_replacement": true,
+    "same_session_restore": true,
+    "old_field_not_replayed": true,
+    "grapheme_and_selection_deletion_passed": 6,
+    "deletion_fixture_count": 6,
+    "sensitive_metadata_cases_passed": 6,
+    "sensitive_context_reads": 0,
+    "sensitive_metadata_results": [
+      {
+        "case": "text_password",
+        "pass": true
+      },
+      {
+        "case": "visible_password",
+        "pass": true
+      },
+      {
+        "case": "web_password",
+        "pass": true
+      },
+      {
+        "case": "number_password",
+        "pass": true
+      },
+      {
+        "case": "no_personalized_learning",
+        "pass": true
+      },
+      {
+        "case": "user_private",
+        "pass": true
+      }
+    ],
+    "sensitive_deletion_results": [
+      {
+        "case": "astral",
+        "pass": true
+      },
+      {
+        "case": "combining_accent",
+        "pass": false
+      },
+      {
+        "case": "zwj_family",
+        "pass": true
+      },
+      {
+        "case": "regional_flag",
+        "pass": true
+      },
+      {
+        "case": "skin_modifier",
+        "pass": true
+      }
+    ],
+    "sensitive_grapheme_deletion_passed": 4,
+    "sensitive_deletion_fixture_count": 5,
+    "normal_learning_tree_unchanged": true,
+    "pass": false
+  },
+  "probe_run_id": "e4bb6c327fad4202817f2915b7191b11",
+  "tested_apk_sha256": "43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531",
+  "tested_test_apk_sha256": "fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff",
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "full",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

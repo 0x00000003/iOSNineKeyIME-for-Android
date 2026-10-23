@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="20261023"
+    android:versionName="0.1.0-m1-wip"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    package="dev.local.iosninekeyime.probe.debug"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="36" />
+
+    <permission
+        android:name="dev.local.iosninekeyime.probe.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="0x2" />
+
+    <application
+        android:theme="@ref/0x1030241"
+        android:label="离线九键（开发检查点）"
+        android:name="android.app.Application"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@ref/0x7f140000"
+        android:usesCleartextTraffic="false"
+        android:dataExtractionRules="@ref/0x7f140001">
+
+        <activity
+            android:theme="@ref/0x1030241"
+            android:name="dev.local.iosninekeyime.editor.EditorHarnessActivity"
+            android:exported="false"
+            android:windowSoftInputMode="0x3" />
+
+        <activity
+            android:name="dev.local.iosninekeyime.probe.ProbeActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="dev.local.iosninekeyime.ime.NineKeyInputMethodService"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@ref/0x7f140003" />
+        </service>
+    </application>
+</manifest>

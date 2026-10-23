@@ -15,7 +15,7 @@
     {
       "path": "app/build.gradle.kts",
       "upstream_sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
-      "modified_sha256": "1cc9329573eedde988ed33bfb735fcda09c9bae5c6032726ec6e64e2d32b2e1d"
+      "modified_sha256": "95840c381e78b8b25ed4d2a77c0b7d49a7eeac53f627b25b050fdf00ebcb45b0"
     },
     {
       "path": "app/licenses/libraries/librime.json",
@@ -30,7 +30,7 @@
     {
       "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",
       "upstream_sha256": "783b64a7a96d6941c1fe20ace6e8984995e7d2317a2b820f3145f0665cd2f9ca",
-      "modified_sha256": "89cb00c56782dc764be81f53ff8177bc655030c0c66d4dddb366ab427293f325"
+      "modified_sha256": "898414b5193bd735fa275b3344c098ea620938a09bff36e5ddaa444280ff467b"
     },
     {
       "path": "app/src/main/java/com/osfans/trime/daemon/RimeDaemon.kt",
@@ -65,7 +65,7 @@
     {
       "path": "app/src/main/jni/librime_jni/rime_jni.cc",
       "upstream_sha256": "5b0d097a610fd8084fa50a2488ad32836035a92e087a10de00d459f5c1a068f5",
-      "modified_sha256": "0fb9129084d15b10a4f89a759dc157a8d9bef2b1759ea700c11a4ffbcbd093ab"
+      "modified_sha256": "c01bcc378311a768626b675a93f89e97e7295dc34ad9b5b9ea078a68ec83c9e4"
     },
     {
       "path": "app/src/test/java/com/osfans/trime/data/sync/AtomicLocalFileCopyTest.kt",
@@ -106,6 +106,16 @@
       "path": "settings.gradle.kts",
       "upstream_sha256": "838b3e835668d37c40ae5ceee661a8fbd5d169c32933a790ed61771451183349",
       "modified_sha256": "cc35abf1e0dbf781fa875d6698ecc1c817b61678e75088e4e70c668d486f0e89"
+    },
+    {
+      "path": "app/src/main/jni/librime-octagram/src/octagram.cc",
+      "upstream_sha256": "0dfe54e4fab36b733699b334f96801f6872a47f63cb1be68f5c256a6e256e11d",
+      "modified_sha256": "c1c4d9c195db6e806cf0b892ea0a0a3283298b2fd98948ff45dfcbc10c783b32"
+    },
+    {
+      "path": "app/src/main/jni/librime-octagram/src/octagram.h",
+      "upstream_sha256": "018772555e6574120814585f9757b3377e1a0712535ff1c5be3936b24e9087d6",
+      "modified_sha256": "383f6338faf55c3b4750f56f08504685fcd153a271c87ce5c2a9090aa37c2661"
     }
   ]
 }

@@ -35,3 +35,6 @@
 
 | 024 | 2026-10-23 | Provisional, refines001/010 | M1底座已在host/Pixel/API36实际加载模型/Lua与T9；M2继承固定Trime LifecycleInputMethodService复用生命周期/JNI，采用受测独立Controller/薄服务，不继承TrimeInputMethodService | 原服务onCreate无条件创建RimeDaemon、AppPrefs、主题/剪贴板/外部同步等路径，与最小默认Application不兼容。避免为临时前端重新引入共享路径副作用；不是重写Rime。旧前端保持不注册，M4继续剥离/audit。系统服务需用户设置启用后实测 |
 | 025 | 2026-10-23 | Accepted for WIP | 真实IME和合成探针共用native排他租约；私密字段只持租约不调用native，普通关闭屏障完成后再观察零写 | 该屏障已组件实测，未覆盖系统IME全生命周期；不把普通待完成写入误说成私密输入写入或安全全PASS |
+
+| 026 | 2026-10-23 | Accepted for engine evaluation | R08/R09/R10语料/协议必须在测量前本地冻结；只记录ID/排名，无真实候选dump；quality每项fresh session避免前文混杂，R10四格隔离模型/前文且禁学习 | 初始R08重复schema选择导致user.yaml访问时间变化，保留FAIL后消除测试冗余选择，零写断言不降。R09清除只删停止的私有指定profile、symlink不向外遍历 |
+| 027 | 2026-10-23 | Accepted observability | grammar loaded检查不得调用GetDb造成检查副作用，改成只看已加载cache并计无内容query次数 | M3模型on/off对照已用0/5110次查询证明，旧getter的结果只作为数据可加载事实，不独自证明translator使用；需同APK回归 |

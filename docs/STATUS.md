@@ -41,3 +41,9 @@
 同3556212b debug在Pixel与模拟器view/controller PASS：真实MotionEvent五键快输、滑出取消、一次提交/空闲标点、确认追加标点、取消队列、私密零上下文读取/正常profile不变、探针互斥，以及长删切字段后停止。view触控首轮受阻、第二轮因测试重挂EditText未恢复焦点而DEL不生效；保留两轮FAIL后修复fixture焦点，原断言不变。full scope两设备**FAIL**：native部分PASS，editor部分仍为R04预存组合音标4/5。资源损坏恢复同哈希两设备PASS。View.draw只渲染自有合成键盘的PNG位于忽略artifacts/m2（不是系统截图/参考对比）。
 
 另已在测量前冻结R08 100词/20句合成语料quality-v1 SHA256 `6d44fe6d9e9c1e8f9c40ffe535ccefd71c0943845bd1b45cde1d4f6452512566`，暂未执行/未报告质量成绩。继续M3独立引擎测量、M4审计/清学习与设置；等待系统设置启用的系统IME和缺失原图不冒称通过。
+
+第七检查点进行中：本地protocol冻结提交28fabd5与41d6795。f13dc431主APK / e74c9023测试APK，R08固定100词20句在Pixel/模拟器通过（Top5 99/100、19/20，整树零写控制通过）；R09十词各20次学习组件两设备通过（10/10 2→1，restart1，clear2）。详见M3记录，R10/系统IME/完整安全仍未验收。后续为严谨模型on/off对照，正在将loaded getter改成无加载副作用的检查并加纯计数查询证据，新APK未绑定全部旧成绩。旧R04失败与视觉阻碍不变。
+
+第七检查点最终（当前）：debug43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531 / test fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff。同哈希两设备R08 Top5 99/100和19/20、R09十词2→1/restart1/clear2、R10上下文9/10改善及model-off不变，全部原控制断言通过；view/controller与损坏恢复同样两设备PASS。48 app/61 state JVM与两套lint PASS；unsigned release73a2031d仅静态/构建PASS。full两设备仍R04 FAIL，不能总括通过。第一次Pixel full安装ADB超时已标BLOCKED，按设备实际APK SHA匹配复用后重试执行，原R04如实复现；不是锁屏或替换测试结果。详见M3记录。
+
+下一步独立M4工作：接入已测的停止引擎/私有路径清学习按钮、离线来源许可界面、固定运行时清单与入口/持久层审计。服务未由用户启用，系统生命周期与多宿主继续BLOCKED/NOT_RUN；M5参考图与体验确认BLOCKED。不得用组件成绩宣布整体开发完成。

@@ -22,7 +22,7 @@ const ResourceType kGramDbType = {"gram_db", "", ".gram"};
 const string kGrammarDefaultLanguage = "zh-hant";
 
 Octagram::Octagram(Config* config, OctagramComponent* component)
-    : config_(std::make_unique<GrammarConfig>()) {
+    : config_(std::make_unique<GrammarConfig>()), component_(component) {
   string language;
   if (config) {
     if (config->GetString("grammar/language", &language)) {
@@ -110,6 +110,7 @@ double Octagram::Query(const string& context,
   if (!db_ || context.empty()) {
     return config_->non_collocation_penalty;
   }
+  component_->ObserveQuery();
   double result = config_->non_collocation_penalty;
   GramDb::Match matches[GramDb::kMaxResults];
   int n = (std::min)(grammar::kMaxEncodedUnicode,

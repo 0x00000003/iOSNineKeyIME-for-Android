@@ -46,6 +46,7 @@ android {
         buildConfigField("String", "BUILD_VERSION_NAME", "\"${project.buildVersionName}\"")
     }
 
+    sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("../../tests/fixtures"))
     sourceSets.getByName("main").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/imeAssets")))
     signingConfigs.getByName("debug").storeFile = rootProject.file("../../.private/baseline-debug.keystore")
 

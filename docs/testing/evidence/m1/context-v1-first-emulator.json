@@ -1,0 +1,185 @@
+{
+  "scope": "R10 frozen synthetic minimal pairs, model/history four-cell control; NOT enabled IME or quality equivalence",
+  "corpus_sha256": "b8928e45bf8d25a9cf653ef64002601a53b85680430a3348c1cd73d74a5591bd",
+  "corpus_frozen_commit": "41d6795",
+  "candidate_limit": 500,
+  "case_count": 10,
+  "improved_with_model": 9,
+  "required_improved": 8,
+  "controls": [
+    {
+      "mode": "model_off",
+      "grammar_loaded_before": false,
+      "grammar_loaded_after": false,
+      "grammar_queries_before": 0,
+      "grammar_queries_after": 0,
+      "fresh_history": true,
+      "all_prefix_commits_exact": true,
+      "no_automatic_commit": true,
+      "profile_unchanged": true,
+      "no_userdb": true,
+      "model_off_rank_unchanged": true,
+      "pass": true
+    },
+    {
+      "mode": "model_on",
+      "grammar_loaded_before": true,
+      "grammar_loaded_after": true,
+      "grammar_queries_before": 0,
+      "grammar_queries_after": 5110,
+      "fresh_history": true,
+      "all_prefix_commits_exact": true,
+      "no_automatic_commit": true,
+      "profile_unchanged": true,
+      "no_userdb": true,
+      "model_off_rank_unchanged": true,
+      "pass": true
+    }
+  ],
+  "ranks": [
+    {
+      "id": "c001",
+      "model_off": {
+        "before": 5,
+        "after_context": 5,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 5,
+        "after_context": 3,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c002",
+      "model_off": {
+        "before": 3,
+        "after_context": 3,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 3,
+        "after_context": 1,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c003",
+      "model_off": {
+        "before": 29,
+        "after_context": 29,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 29,
+        "after_context": 14,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c004",
+      "model_off": {
+        "before": 8,
+        "after_context": 8,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 8,
+        "after_context": 1,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c005",
+      "model_off": {
+        "before": 11,
+        "after_context": 11,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 11,
+        "after_context": 3,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c006",
+      "model_off": {
+        "before": 21,
+        "after_context": 21,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 21,
+        "after_context": 5,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c007",
+      "model_off": {
+        "before": 4,
+        "after_context": 4,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 4,
+        "after_context": 3,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c008",
+      "model_off": {
+        "before": 1,
+        "after_context": 1,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 1,
+        "after_context": 2,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c009",
+      "model_off": {
+        "before": 12,
+        "after_context": 12,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 12,
+        "after_context": 4,
+        "prefix_committed": true
+      }
+    },
+    {
+      "id": "c010",
+      "model_off": {
+        "before": 9,
+        "after_context": 9,
+        "prefix_committed": true
+      },
+      "model_on": {
+        "before": 9,
+        "after_context": 2,
+        "prefix_committed": true
+      }
+    }
+  ],
+  "static_resources_unchanged": true,
+  "controls_pass": true,
+  "pass": true,
+  "elapsed_ms": 6124,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "d6d2944165294a40984be1c56e84ac63",
+  "tested_apk_sha256": "43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531",
+  "tested_test_apk_sha256": "fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff",
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "context",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

@@ -11,6 +11,9 @@ class ProbeInstrumentation : Instrumentation() {
     private var engineOnly = false
     private var resourceOnly = false
     private var controllerOnly = false
+    private var qualityOnly = false
+    private var learningOnly = false
+    private var contextOnly = false
     private var runId: String? = null
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
@@ -18,6 +21,9 @@ class ProbeInstrumentation : Instrumentation() {
         engineOnly = arguments?.getString("probe_scope") == "engine"
         resourceOnly = arguments?.getString("probe_scope") == "resources"
         controllerOnly = arguments?.getString("probe_scope") == "controller"
+        qualityOnly = arguments?.getString("probe_scope") == "quality"
+        learningOnly = arguments?.getString("probe_scope") == "learning"
+        contextOnly = arguments?.getString("probe_scope") == "context"
         runId = arguments?.getString("probe_run_id")?.takeIf { it.matches(Regex("[a-f0-9]{32}")) }
         start()
     }
@@ -25,14 +31,17 @@ class ProbeInstrumentation : Instrumentation() {
         val output = Bundle()
         try {
             val result = when {
+                contextOnly -> ContextBoundaryProbe.run(targetContext,context.assets)
+                learningOnly -> LearningBoundaryProbe.run(targetContext,context.assets)
+                qualityOnly -> QualityBoundaryProbe.run(targetContext,context.assets)
                 controllerOnly -> ControllerBoundaryProbe.run(this)
                 resourceOnly -> ResourceBoundaryProbe.run(targetContext)
                 editorOnly -> org.json.JSONObject().put("scope", "real host editor component ONLY; native engine not rerun").put("pass", true)
                 else -> ProbeRunner.run(targetContext)
             }
             check(android.os.Build.VERSION.SDK_INT >= 31) { "E_PROBE_TEST_API" }
-            if (!editorOnly && !resourceOnly && !controllerOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
-            if (!engineOnly && !resourceOnly && !controllerOnly) {
+            if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
+            if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly) {
                 val editor = EditorBoundaryProbe.run(this)
                 result.put("host_editor_component", editor)
                 result.put("pass", result.getBoolean("pass") && editor.getBoolean("pass"))
