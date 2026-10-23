@@ -1,0 +1,18 @@
+{
+  "version": "learning-v1",
+  "scope": "deterministic synthetic targets: second candidate from each fixed code in a clean no-history session, retained in memory only; no candidate dump",
+  "repetitions": 20,
+  "minimum_improved": 8,
+  "pinyin": [
+    "nihao",
+    "zhongguo",
+    "shijie",
+    "beijing",
+    "shanghai",
+    "gongzuo",
+    "xuexi",
+    "shijian",
+    "jintian",
+    "shouji"
+  ]
+}
