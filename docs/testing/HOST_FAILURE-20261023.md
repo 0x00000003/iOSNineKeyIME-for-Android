@@ -1,0 +1,11 @@
+# 宿主连接异常/重入（WIP）
+
+M5长测使用独立冻结94b9d40f/ee19b44e Pixel包，不受本项主机/专用模拟器构建影响；不在Pixel安装/运行本项。
+
+检查HostEditorAdapter发现begin/end batch、delete上下文查询/DEL、performEditorAction可能抛RuntimeException；批次begin同步切字段后，旧commit仍会触发旧InputConnection，虽HostCommitGate最后判STALE但宿主正文已改变。不能用最终STALE状态代替实际宿主oracle。
+
+先增加真实EditText+11个合成throwing/reentrant wrapper测试，只记录case ID/故障点/布尔值，无异常payload/输入正文/候选dump。m4-host-fault-red-emulator.json主9cdf03c8/test64d5d9c4实际只1/11通过（原commitText异常已捕获，其余失败），整体FAIL，异常由测试worker安全捕获，不让宿主合成正文进入Android崩溃日志。end fault fixture后续显式先关闭真实batch再抛，避免fixture自己跨case留下未关batch，原断言保持；需同最终fixture再次确认red后修正产品，不降低R04。
+
+本项不保证“宿主已经上屏但随后在commitText本身抛异常”这种无确认事务能无歧义重试，普通InputConnection没有幂等token接口，敏感模式又禁止读回内容。原同字段显式重试仍有这种未知边界，不能宣称所有损坏宿主都exact-once。目标为拒绝旧字段重入、容纳可判定异常、已返回accepted的commit不因endBatch异常误变成待重试。
+
+最终fixture再次red：m4-host-fault-red-confirmed-fixture-emulator.json仍主9cdf03c8，测试d35ef8d99ed50d720627fe5c6cc07adc717acf051c995e4a714a253eecf1d40d，仅1/11通过、零私密上下文读取。另一个命名red-final-fixture的尝试启动时编译尚未完成，实际绑定旧64d5d9c4测试APK，明确不当作最终fixture证据；保留该记录而另用confirmed命名重测。后续产品修复与上述最终测试体相同，不靠改宿主期望通过。
