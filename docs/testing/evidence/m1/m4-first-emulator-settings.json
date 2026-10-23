@@ -1,0 +1,33 @@
+{
+  "scope": "own offline notice UI and cancel-only clear confirmation; NOT full license audit or production learning erase",
+  "bundle_sha_matches_pin": true,
+  "all_notice_text_hashes_match": true,
+  "notice_count": 40,
+  "dependency_count": 137,
+  "plain_text_dialog_visible": true,
+  "explicit_clear_confirmation_present": true,
+  "clear_dialog_cancelled": false,
+  "production_clear_not_executed": true,
+  "system_ime_settings_not_opened": true,
+  "pass": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "cb0f0b462c6d432daa92ac48e2bd79be",
+  "tested_apk_sha256": "3c40ea2dc26bee6733ac9b2ed3ac3ca84ca996f0b2780ad8dc8b06618263e7e8",
+  "tested_test_apk_sha256": "a33794df4b9a1ed4163574a019b4a05b8d86f62a6d7e83ca843f533c68804f68",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "installed local frozen APK"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "settings",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

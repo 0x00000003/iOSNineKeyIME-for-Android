@@ -1,0 +1,17 @@
+{
+  "scope": "JVM only, not Android device/IME acceptance",
+  "modules": {
+    "app": {
+      "tests": 49,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "state": {
+      "tests": 61,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

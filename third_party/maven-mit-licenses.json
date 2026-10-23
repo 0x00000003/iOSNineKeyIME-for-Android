@@ -1,0 +1,35 @@
+{
+  "scope": "exact-version upstream license snapshots; POM and resolved artifact hashes tracked separately",
+  "files": [
+    {
+      "repository": "CymChad/BaseRecyclerViewAdapterHelper",
+      "version": "4.4.1",
+      "commit": "d2b387b4960afed3433659b993a31273d91953ec",
+      "url": "https://raw.githubusercontent.com/CymChad/BaseRecyclerViewAdapterHelper/d2b387b4960afed3433659b993a31273d91953ec/LICENSE",
+      "path": "docs/reference/upstream/maven-mit/BaseRecyclerViewAdapterHelper/LICENSE",
+      "sha256": "55c00a36f81ac9d2847dd02ef0ff0a098dc4be9b3aa2dfce98caefc9bafe6870",
+      "bytes": 1066,
+      "license": "MIT"
+    },
+    {
+      "repository": "kosi-libs/Kodein",
+      "version": "7.33.0",
+      "commit": "4c2a4813e0077017d0bde371649141bd1e420a96",
+      "url": "https://raw.githubusercontent.com/kosi-libs/Kodein/4c2a4813e0077017d0bde371649141bd1e420a96/LICENSE.txt",
+      "path": "docs/reference/upstream/maven-mit/Kodein/LICENSE.txt",
+      "sha256": "56c812194c9f9be2d863043e5a01b10fe553554518ee99f39e8452111abc0831",
+      "bytes": 1077,
+      "license": "MIT"
+    },
+    {
+      "repository": "kosi-libs/Kaverit",
+      "version": "2.14.0",
+      "commit": "368c463f61a10f1dba1c0d04b70439399fbd401b",
+      "url": "https://raw.githubusercontent.com/kosi-libs/Kaverit/368c463f61a10f1dba1c0d04b70439399fbd401b/LICENSE.txt",
+      "path": "docs/reference/upstream/maven-mit/Kaverit/LICENSE.txt",
+      "sha256": "56c812194c9f9be2d863043e5a01b10fe553554518ee99f39e8452111abc0831",
+      "bytes": 1077,
+      "license": "MIT"
+    }
+  ]
+}

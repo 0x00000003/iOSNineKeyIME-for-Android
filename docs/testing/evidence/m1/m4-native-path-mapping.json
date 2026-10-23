@@ -1,0 +1,6 @@
+{
+  "scope": "static native path-marker scan only; not complete reproducibility or data-leak audit",
+  "library_sha256": "66ae89210f5f8421726ee16250ec688d78fcda49bf9e6f6d4fcd14580752c722",
+  "absolute_mac_home_path_markers": 0,
+  "absolute_linux_home_path_markers": 0
+}

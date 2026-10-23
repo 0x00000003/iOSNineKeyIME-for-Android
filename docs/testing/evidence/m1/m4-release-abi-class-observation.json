@@ -1,0 +1,14 @@
+{
+  "scope": "optimized release exact mapped defined classes; stable test ABI added; not full runtime security proof",
+  "apk_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "class_present": {
+    "com.osfans.trime.ime.core.TrimeInputMethodService": false,
+    "com.osfans.trime.daemon.RimeDaemon": false,
+    "com.osfans.trime.data.sync.RimeDataSync": false,
+    "com.osfans.trime.data.base.DataManager": false,
+    "com.osfans.trime.data.db.ClipboardHelper": false,
+    "com.osfans.trime.worker.BackgroundSyncWork": true,
+    "dev.local.iosninekeyime.ime.NineKeyInputMethodService": true
+  },
+  "bytes": 62452893
+}

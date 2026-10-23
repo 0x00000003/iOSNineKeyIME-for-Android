@@ -19,4 +19,10 @@ class ProbeFailureCodeTest : StringSpec({
         ProbeFailureCode.repairable("E_RESOURCE_DELETE_LEARNING") shouldBe false
         ProbeFailureCode.repairable("E_PROBE_EXECUTION") shouldBe false
     }
+
+    "native busy cannot enable resource repair or expose arbitrary operational payload" {
+        ProbeFailureCode.from(IllegalStateException("E_ENGINE_BUSY")) shouldBe "E_ENGINE_BUSY"
+        ProbeFailureCode.repairable("E_ENGINE_BUSY") shouldBe false
+        ProbeFailureCode.from(IllegalStateException("E_LEARNING_CLEAR: synthetic-private-canary")) shouldBe "E_PROBE_EXECUTION"
+    }
 })

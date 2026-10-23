@@ -7,7 +7,6 @@ package com.osfans.trime.data.prefs
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.annotation.Keep
 import com.osfans.trime.R
 import com.osfans.trime.data.sync.DataStorageMode
 import com.osfans.trime.ime.candidates.compact.CompactCandidateMode
@@ -47,7 +46,6 @@ class AppPrefs(
     val clipboard = Clipboard(shared).register()
     val advanced = Advanced(shared).register()
 
-    @Keep
     private val onSharedPreferenceChangeListener =
         SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
             if (key == null) return@OnSharedPreferenceChangeListener

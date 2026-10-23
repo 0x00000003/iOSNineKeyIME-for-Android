@@ -38,3 +38,8 @@
 
 | 026 | 2026-10-23 | Accepted for engine evaluation | R08/R09/R10语料/协议必须在测量前本地冻结；只记录ID/排名，无真实候选dump；quality每项fresh session避免前文混杂，R10四格隔离模型/前文且禁学习 | 初始R08重复schema选择导致user.yaml访问时间变化，保留FAIL后消除测试冗余选择，零写断言不降。R09清除只删停止的私有指定profile、symlink不向外遍历 |
 | 027 | 2026-10-23 | Accepted observability | grammar loaded检查不得调用GetDb造成检查副作用，改成只看已加载cache并计无内容query次数 | M3模型on/off对照已用0/5110次查询证明，旧getter的结果只作为数据可加载事实，不独自证明translator使用；需同APK回归 |
+
+| 028 | 2026-10-23 | WIP hardening | 离线许可只加载固定hash资产，运行时清单以实际releaseRuntimeClasspath/POM/显式parent链为准，不用AboutLibraries父ID版本替代选中制品 | 43原文/124制品有锁和UI测试；POM声明不代表完整对应源义务已审计 |
+| 029 | 2026-10-23 | Accepted restricted runtime | Lua仅固定内置模块，无用户rime.lua、IO/OS/package/debug/动态加载标准库；公共资源严格白名单、拒绝symlink、故障修复持native租约 | 真机/模拟器policy及损坏恢复通过；仍有Rime类型绑定，不称通用不可信脚本沙箱 |
+| 030 | 2026-10-23 | Accepted fork reduction | 精确JNI/DTO keep；移除未注册旧前端listener的Keep roots，禁用旧后台同步worker为failure-only，保留ABI不伪报成功；native项目根prefix-map | release中旧前端/daemon/同步/剪贴板已裁剪，后续每次keep调整重新检查；不以符号缺席当完整隐私证明 |
+| 031 | 2026-10-23 | Local validation only | 显式localReleaseProbe用本项目调试key签非debuggable优化release，默认仍不签；独立引擎runner拒绝完整IME/editor gate | 不是M6正式签名/发布；复用原协议/语料、双APK哈希与nonce，release实际执行后才能报告该制品成绩 |

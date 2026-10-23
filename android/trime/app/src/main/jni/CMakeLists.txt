@@ -6,6 +6,10 @@ cmake_minimum_required(VERSION 3.18.0)
 
 project(trime VERSION 3.0.0)
 
+# Keep this machine's account/workspace paths out of native strings/debug metadata.
+get_filename_component(IME_REPO_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../../../.." ABSOLUTE)
+add_compile_options("-ffile-prefix-map=${IME_REPO_ROOT}=." "-fdebug-prefix-map=${IME_REPO_ROOT}=.")
+
 # for reproducible build
 add_link_options("LINKER:--hash-style=both,--build-id=none")
 

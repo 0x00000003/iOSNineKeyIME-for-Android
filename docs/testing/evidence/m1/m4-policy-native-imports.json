@@ -1,0 +1,14 @@
+{
+  "scope": "ELF symbol observation ONLY, not runtime/reachability or complete no-network proof",
+  "library_sha256": "a6a4c3f5487aa170ea3ee75f8d1ee0ce47d0e35ec6af012f616405143d282df9",
+  "removed_lua_io_os_modules": [
+    "liolib",
+    "loslib",
+    "ldblib",
+    "linit",
+    "loadlib"
+  ],
+  "process_imports_present": [],
+  "network_imports_present": [],
+  "dlopen_import_present": false
+}

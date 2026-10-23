@@ -198,7 +198,17 @@ namespace LuaImpl {
   static const char luakey = 'k';
 
   static int pmain(lua_State *L) {
-    luaL_openlibs(L);
+    // Project offline runtime: do not register IO, OS, package/C loaders or debug libraries.
+    const luaL_Reg libraries[] = {{"_G", luaopen_base}, {LUA_TABLIBNAME, luaopen_table},
+      {LUA_STRLIBNAME, luaopen_string}, {LUA_MATHLIBNAME, luaopen_math},
+      {LUA_COLIBNAME, luaopen_coroutine}, {LUA_UTF8LIBNAME, luaopen_utf8}, {nullptr, nullptr}};
+    for (const luaL_Reg* library = libraries; library->func; ++library) {
+      luaL_requiref(L, library->name, library->func, 1);
+      lua_pop(L, 1);
+    }
+    for (const char* name : {"dofile", "loadfile", "print", "warn"}) {
+      lua_pushnil(L); lua_setglobal(L, name);
+    }
     xluaopen_utf8(L);
     lua_register(L, "yield", yield);
     export_set(L);

@@ -1,0 +1,13 @@
+{
+  "scope": "R8 mapped defined-class name observation; absence alone is NOT proof of no alternative path",
+  "apk_sha256": "b4faa0efc7df1bfd37095c31eacf999d95c9f1061b4a72b6ebfb034080feced5",
+  "class_present": {
+    "com.osfans.trime.ime.core.TrimeInputMethodService": true,
+    "com.osfans.trime.daemon.RimeDaemon": true,
+    "com.osfans.trime.data.sync.RimeDataSync": true,
+    "com.osfans.trime.data.db.ClipboardDao": false,
+    "dev.local.iosninekeyime.ime.NineKeyInputMethodService": true,
+    "dev.local.iosninekeyime.probe.ProbeActivity": true,
+    "dev.local.iosninekeyime.settings.OfflineNoticesActivity": true
+  }
+}

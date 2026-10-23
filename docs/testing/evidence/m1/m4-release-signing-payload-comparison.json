@@ -1,0 +1,8 @@
+{
+  "scope": "non-META-INF ZIP entry byte hashes compared, excludes APK signing block; not whole APK reproducibility proof",
+  "unsigned_sha256": "bbd28866af7501b99593c28e58f92976449f4ee8ef7be7da009abbbb2b16081a",
+  "local_signed_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "entry_count": 24,
+  "same_non_signature_payload": true,
+  "different_entries": []
+}

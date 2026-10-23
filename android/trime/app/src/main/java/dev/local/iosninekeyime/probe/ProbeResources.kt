@@ -40,9 +40,26 @@ object ProbeResources {
             val row = rows.getJSONObject(i)
             row.getString("path") to row
         }
-        fun validate(dir: File): Boolean = files.all { (name, row) ->
-            val f = File(dir, name)
-            f.isFile && f.length() == row.getLong("bytes") && digest(f) == row.getString("sha256")
+        val allowedFiles = files.keys + if(BuildConfig.PROBE_MODEL_ENABLED)setOf(ProbeModelResources.NAME) else emptySet()
+        val allowedDirs = mutableSetOf("")
+        for(name in allowedFiles) {
+            var parent=File(name).parent
+            while(parent!=null){allowedDirs+=parent;parent=File(parent).parent}
+        }
+        fun validate(dir: File): Boolean {
+            fun walk(node:File,name:String):Boolean {
+                val mode=android.system.Os.lstat(node.path).st_mode
+                if(android.system.OsConstants.S_ISLNK(mode))return false
+                if(android.system.OsConstants.S_ISDIR(mode)) {
+                    if(name !in allowedDirs)return false
+                    return node.listFiles()?.all {walk(it,if(name.isEmpty())it.name else "$name/${it.name}")}==true
+                }
+                return name in allowedFiles && android.system.OsConstants.S_ISREG(mode)
+            }
+            return walk(dir,"") && files.all { (name, row) ->
+                val f = File(dir, name)
+                f.isFile && f.length() == row.getLong("bytes") && digest(f) == row.getString("sha256")
+            }
         }
         val installed = File(root, BuildConfig.PROBE_RESOURCE_SHA256)
         if (installed.exists()) {

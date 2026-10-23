@@ -1,0 +1,36 @@
+{
+  "scope": "owned public-resource/model faults and restoration with native lease; NOT general privacy/backup acceptance",
+  "public_corruption_rejected": true,
+  "unknown_public_lua_rejected": true,
+  "public_symlink_rejected": true,
+  "public_sentinel_preserved": true,
+  "model_corruption_rejected": true,
+  "model_bundled": true,
+  "recovered_public_resources": true,
+  "profiles_bytes_and_timestamps_unchanged": true,
+  "preservation_scope": "all existing synthetic profiles immediately after repair and after reopening with fresh synthetic profiles",
+  "existing_profiles_unchanged_after_engine_reopen": true,
+  "engine_reopened_with_repaired_resources": true,
+  "positive_existing_profile_count": 27,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "cdab1002413a44b0a3d79f444870f643",
+  "tested_apk_sha256": "f6b2acdc9166a92fd198c58efdcd2780f195f972e1e18ef5227637dcf2858011",
+  "tested_test_apk_sha256": "6a036e2c74ca5fb34726d4cb8623de5c836855ef0145ece5627e363a1415bbb5",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "resources",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

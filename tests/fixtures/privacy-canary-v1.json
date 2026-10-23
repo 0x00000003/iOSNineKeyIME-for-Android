@@ -1,0 +1,8 @@
+{
+  "version": "privacy-canary-v1",
+  "scope": "fixed synthetic private direct-text fixture; never output its value in records/logs",
+  "id": "p001",
+  "text": "SYNTHETIC_PRIVATE_CANARY_20261023",
+  "expected_context_reads": 0,
+  "expected_profile_changes": 0
+}

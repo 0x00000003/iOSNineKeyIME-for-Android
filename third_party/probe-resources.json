@@ -189,8 +189,8 @@
     },
     {
       "path": "lua/ime_probe.lua",
-      "bytes": 265,
-      "sha256": "0729085f08283f45b1ce084d393ea64aeb52ec6ed92c38c2f155038eca98c433"
+      "bytes": 588,
+      "sha256": "4d0c86942605d79c8e3291112084026e87b5086c75d36494a58287508b438d1e"
     },
     {
       "path": "lua/wanxiang/auto_phrase.lua",

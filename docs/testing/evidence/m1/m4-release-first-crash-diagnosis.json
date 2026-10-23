@@ -1,0 +1,11 @@
+{
+  "scope": "initial optimized release runner startup only; no native assertions executed",
+  "observed_device": "dedicated emulator",
+  "initial_main_sha256": "0f17a0f68271f7f83e7484be9c82e1895e52008c7ca254de1feef414f5d779e3",
+  "initial_test_sha256": "31c08d3f0fb0cc135e91361d0571f2da9f72b529e6c33c708ef78a23eb155222",
+  "failure": "ClassNotFoundException",
+  "class_name": "kotlin.text.Regex",
+  "cause": "target R8 merged provided Kotlin class while separate protocol APK referenced original ABI",
+  "correction": "fixed selected compiled-protocol Kotlin class families in probe-runtime-abi.pro, applied equally to normal and local signed release, optimization remains on",
+  "raw_logs_persisted": false
+}

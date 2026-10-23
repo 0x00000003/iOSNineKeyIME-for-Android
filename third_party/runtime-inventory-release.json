@@ -1,0 +1,2604 @@
+[
+    {
+        "component": "androidx.activity:activity-ktx:1.10.1",
+        "file": "activity-ktx-1.10.1.aar",
+        "bytes": 5568,
+        "sha256": "f396f58dbd772c065b873696b74a3d4d087554b3766280e63b49b25dbb53ab16",
+        "pom_file": "activity-ktx-1.10.1.pom",
+        "pom_sha256": "4213490e4ce2b5750e4445246dfe9de4f6655c2123c04a79a8248cc8893e2bf4",
+        "pom_license_sources": [
+            {
+                "file": "activity-ktx-1.10.1.pom",
+                "sha256": "4213490e4ce2b5750e4445246dfe9de4f6655c2123c04a79a8248cc8893e2bf4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.activity:activity:1.10.1",
+        "file": "activity-1.10.1.aar",
+        "bytes": 226433,
+        "sha256": "b62b528c917de9be497eb6f88830197c20e9d21267c3916c613492e5ee837d4d",
+        "pom_file": "activity-1.10.1.pom",
+        "pom_sha256": "0ae4de888974f5cef982660900ec32a33f10968750db7afa9438daec183f14e7",
+        "pom_license_sources": [
+            {
+                "file": "activity-1.10.1.pom",
+                "sha256": "0ae4de888974f5cef982660900ec32a33f10968750db7afa9438daec183f14e7"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.annotation:annotation-experimental:1.4.1",
+        "file": "annotation-experimental-1.4.1.aar",
+        "bytes": 39841,
+        "sha256": "6bd4c7c7476f8260cd3bdbb81183583e93fc9f790c27dea7dc314181cbf87aa0",
+        "pom_file": "annotation-experimental-1.4.1.pom",
+        "pom_sha256": "fe57b228417f4d7c677903dc61fb4a7cf993d603499de26d8d8113e477cc4f1b",
+        "pom_license_sources": [
+            {
+                "file": "annotation-experimental-1.4.1.pom",
+                "sha256": "fe57b228417f4d7c677903dc61fb4a7cf993d603499de26d8d8113e477cc4f1b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.annotation:annotation-jvm:1.10.0",
+        "file": "annotation-jvm-1.10.0.jar",
+        "bytes": 62171,
+        "sha256": "ddd072ddbb553178e205517ce777b2f05aa9e412982d9ecb4eedc74f1212f697",
+        "pom_file": "annotation-jvm-1.10.0.pom",
+        "pom_sha256": "5eece0903b4810aa1da85414dc4c2746046d878a543aa12dd4f1fe74171f7506",
+        "pom_license_sources": [
+            {
+                "file": "annotation-jvm-1.10.0.pom",
+                "sha256": "5eece0903b4810aa1da85414dc4c2746046d878a543aa12dd4f1fe74171f7506"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.appcompat:appcompat-resources:1.7.1",
+        "file": "appcompat-resources-1.7.1.aar",
+        "bytes": 63997,
+        "sha256": "8e2db31224ca53b108c784da2b361959062716d416b210cfef3d5a3828306df0",
+        "pom_file": "appcompat-resources-1.7.1.pom",
+        "pom_sha256": "2faf922e8c3d706f29d862b3fbb3aa1347705c21c6eae18586d2bb1f7366ea01",
+        "pom_license_sources": [
+            {
+                "file": "appcompat-resources-1.7.1.pom",
+                "sha256": "2faf922e8c3d706f29d862b3fbb3aa1347705c21c6eae18586d2bb1f7366ea01"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.appcompat:appcompat:1.7.1",
+        "file": "appcompat-1.7.1.aar",
+        "bytes": 1148656,
+        "sha256": "2ad334a323b28046e89b738c77d184cb3dcca32a551ab048851b2fda23a3ba26",
+        "pom_file": "appcompat-1.7.1.pom",
+        "pom_sha256": "1f79910cc20de198acf3867b1e93f9ed59ddb643585b2e9c28ee55518af1bc00",
+        "pom_license_sources": [
+            {
+                "file": "appcompat-1.7.1.pom",
+                "sha256": "1f79910cc20de198acf3867b1e93f9ed59ddb643585b2e9c28ee55518af1bc00"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.arch.core:core-common:2.2.0",
+        "file": "core-common-2.2.0.jar",
+        "bytes": 11657,
+        "sha256": "65308a06b1c00ee186cb9e19321383f043b993813f1522c47f4a3e3303bdba41",
+        "pom_file": "core-common-2.2.0.pom",
+        "pom_sha256": "1e17d4af8d6425be2a69f8af4d654a87e0456259a9eef1542869bcb023547e28",
+        "pom_license_sources": [
+            {
+                "file": "core-common-2.2.0.pom",
+                "sha256": "1e17d4af8d6425be2a69f8af4d654a87e0456259a9eef1542869bcb023547e28"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.arch.core:core-runtime:2.2.0",
+        "file": "core-runtime-2.2.0.aar",
+        "bytes": 7577,
+        "sha256": "a1be5e0caa2b07623862af6ae21b3ab0718123245184d0e30dea81b53f990a47",
+        "pom_file": "core-runtime-2.2.0.pom",
+        "pom_sha256": "0f953706598140d9d8735cdd5aeb1fa35933f4e2f31c0bf3eb81a053a4c8c1a5",
+        "pom_license_sources": [
+            {
+                "file": "core-runtime-2.2.0.pom",
+                "sha256": "0f953706598140d9d8735cdd5aeb1fa35933f4e2f31c0bf3eb81a053a4c8c1a5"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.autofill:autofill:1.3.0",
+        "file": "autofill-1.3.0.aar",
+        "bytes": 40850,
+        "sha256": "b5a217cee7724ea42a382965a9b22a330b988d62cb97abe1b1af50e54370c322",
+        "pom_file": "autofill-1.3.0.pom",
+        "pom_sha256": "6292a3975ee2bbe04b958197acee6a1da0ff6d0cddbad6abbf9f4adbafb8eac9",
+        "pom_license_sources": [
+            {
+                "file": "autofill-1.3.0.pom",
+                "sha256": "6292a3975ee2bbe04b958197acee6a1da0ff6d0cddbad6abbf9f4adbafb8eac9"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.cardview:cardview:1.0.0",
+        "file": "cardview-1.0.0.aar",
+        "bytes": 22527,
+        "sha256": "1193c04c22a3d6b5946dae9f4e8c59d6adde6a71b6bd5d87fb99d82dda1afec7",
+        "pom_file": "cardview-1.0.0.pom",
+        "pom_sha256": "e64ef4e08b58358fe27b599e6fe80a1b153db014c644beee630ab271061c3e6c",
+        "pom_license_sources": [
+            {
+                "file": "cardview-1.0.0.pom",
+                "sha256": "e64ef4e08b58358fe27b599e6fe80a1b153db014c644beee630ab271061c3e6c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.collection:collection-jvm:1.4.2",
+        "file": "collection-jvm-1.4.2.jar",
+        "bytes": 775789,
+        "sha256": "984ce9bd780055eafb8a105aca3f514686bf7b1b6272ec7c645a98ce40fc7db4",
+        "pom_file": "collection-jvm-1.4.2.pom",
+        "pom_sha256": "adbb379e2b160f08e63e341ad04bbcc7033f6d868ec51ac11e4334642a4e39ef",
+        "pom_license_sources": [
+            {
+                "file": "collection-jvm-1.4.2.pom",
+                "sha256": "adbb379e2b160f08e63e341ad04bbcc7033f6d868ec51ac11e4334642a4e39ef"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.collection:collection-ktx:1.4.2",
+        "file": "collection-ktx-1.4.2.jar",
+        "bytes": 261,
+        "sha256": "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",
+        "pom_file": "collection-ktx-1.4.2.pom",
+        "pom_sha256": "4b2d5f929a0f04dda7b50697a29f51343217e257f0798289712c137e0dc41556",
+        "pom_license_sources": [
+            {
+                "file": "collection-ktx-1.4.2.pom",
+                "sha256": "4b2d5f929a0f04dda7b50697a29f51343217e257f0798289712c137e0dc41556"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.compose.runtime:runtime-android:1.6.7",
+        "file": "runtime-release.aar",
+        "bytes": 2429479,
+        "sha256": "096fc94de01f27bc783bb0b8984b49aeda688f6329f8393d42d4b6754beae7da",
+        "pom_file": "runtime-android-1.6.7.pom",
+        "pom_sha256": "8b09aed734890c6c6ae301876de5988a679b0c820c12eb4d14c20543571050a4",
+        "pom_license_sources": [
+            {
+                "file": "runtime-android-1.6.7.pom",
+                "sha256": "8b09aed734890c6c6ae301876de5988a679b0c820c12eb4d14c20543571050a4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.concurrent:concurrent-futures:1.0.0",
+        "file": "concurrent-futures-1.0.0.jar",
+        "bytes": 25895,
+        "sha256": "5595a40e278a7b39fa78a09490e3d7f3faa95c7b01447148bd38b5ade0605c35",
+        "pom_file": "concurrent-futures-1.0.0.pom",
+        "pom_sha256": "4505b9a5e30a9418b59a9ad6702c3e4193aea6e691a3d03cf220c7640ad083e2",
+        "pom_license_sources": [
+            {
+                "file": "concurrent-futures-1.0.0.pom",
+                "sha256": "4505b9a5e30a9418b59a9ad6702c3e4193aea6e691a3d03cf220c7640ad083e2"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.constraintlayout:constraintlayout-core:1.1.1",
+        "file": "constraintlayout-core-1.1.1.jar",
+        "bytes": 585546,
+        "sha256": "3c2054328328831eb6e69b4014f6ef9faa117fd4b811929f3a91d3db375f2c02",
+        "pom_file": "constraintlayout-core-1.1.1.pom",
+        "pom_sha256": "d0e8276f39aa41ec1f24d357fd6ace2c76723ca0e0711ed6e884e686d6fc86e9",
+        "pom_license_sources": [
+            {
+                "file": "constraintlayout-core-1.1.1.pom",
+                "sha256": "d0e8276f39aa41ec1f24d357fd6ace2c76723ca0e0711ed6e884e686d6fc86e9"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.constraintlayout:constraintlayout:2.2.1",
+        "file": "constraintlayout-2.2.1.aar",
+        "bytes": 507993,
+        "sha256": "30f8d79b782d283a90f0b6f7369169d9cf560091537fdd6056d1daa9f3033763",
+        "pom_file": "constraintlayout-2.2.1.pom",
+        "pom_sha256": "ccccaa27e5658da4734f7e9cd345c1fc4d495bad49c0821279ddba0503dffb91",
+        "pom_license_sources": [
+            {
+                "file": "constraintlayout-2.2.1.pom",
+                "sha256": "ccccaa27e5658da4734f7e9cd345c1fc4d495bad49c0821279ddba0503dffb91"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.coordinatorlayout:coordinatorlayout:1.1.0",
+        "file": "coordinatorlayout-1.1.0.aar",
+        "bytes": 45020,
+        "sha256": "44a9e30abf56af1025c52a0af506fee9c4131aa55efda52f9fd9451211c5e8cb",
+        "pom_file": "coordinatorlayout-1.1.0.pom",
+        "pom_sha256": "a67c52c9ddfaff2ffb2fd4b97cd94fa382e837ea8a5874d029e0a04fa63e5caf",
+        "pom_license_sources": [
+            {
+                "file": "coordinatorlayout-1.1.0.pom",
+                "sha256": "a67c52c9ddfaff2ffb2fd4b97cd94fa382e837ea8a5874d029e0a04fa63e5caf"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.core:core-ktx:1.16.0",
+        "file": "core-ktx-1.16.0.aar",
+        "bytes": 175736,
+        "sha256": "1766dbd82f64a12dcd359ecb6f15f3cf35db4d66d22961a7c51b2ffc6468314c",
+        "pom_file": "core-ktx-1.16.0.pom",
+        "pom_sha256": "4660cfb606ed89828ba3e10f79b29809ffb677ee5d2346fe9bcb03dfc4b9b645",
+        "pom_license_sources": [
+            {
+                "file": "core-ktx-1.16.0.pom",
+                "sha256": "4660cfb606ed89828ba3e10f79b29809ffb677ee5d2346fe9bcb03dfc4b9b645"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.core:core-viewtree:1.0.0",
+        "file": "core-viewtree-1.0.0.aar",
+        "bytes": 6980,
+        "sha256": "dc1b678d58ebcf2bfa1587be68ff826694ce3d221251b9ef30d4d4b36297e6de",
+        "pom_file": "core-viewtree-1.0.0.pom",
+        "pom_sha256": "d4f2ed1176fa8c5612b80f74c952a8799142a9ed36022a1a238fde5b140580d9",
+        "pom_license_sources": [
+            {
+                "file": "core-viewtree-1.0.0.pom",
+                "sha256": "d4f2ed1176fa8c5612b80f74c952a8799142a9ed36022a1a238fde5b140580d9"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.core:core:1.16.0",
+        "file": "core-1.16.0.aar",
+        "bytes": 1377184,
+        "sha256": "6bf03d39dbe3744acce227d3b697374c3625aae1025fbec8ad9fd7bd58bce431",
+        "pom_file": "core-1.16.0.pom",
+        "pom_sha256": "074974a1550221af7aa85ded6903c3d84c9bdedf9e6b4ff3b0cb471329b5ac77",
+        "pom_license_sources": [
+            {
+                "file": "core-1.16.0.pom",
+                "sha256": "074974a1550221af7aa85ded6903c3d84c9bdedf9e6b4ff3b0cb471329b5ac77"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.core:core:1.16.0",
+        "file": "core-1.16.0.aar",
+        "bytes": 1377184,
+        "sha256": "6bf03d39dbe3744acce227d3b697374c3625aae1025fbec8ad9fd7bd58bce431",
+        "pom_file": "core-1.16.0.pom",
+        "pom_sha256": "074974a1550221af7aa85ded6903c3d84c9bdedf9e6b4ff3b0cb471329b5ac77",
+        "pom_license_sources": [
+            {
+                "file": "core-1.16.0.pom",
+                "sha256": "074974a1550221af7aa85ded6903c3d84c9bdedf9e6b4ff3b0cb471329b5ac77"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.cursoradapter:cursoradapter:1.0.0",
+        "file": "cursoradapter-1.0.0.aar",
+        "bytes": 10591,
+        "sha256": "a81c8fe78815fa47df5b749deb52727ad11f9397da58b16017f4eb2c11e28564",
+        "pom_file": "cursoradapter-1.0.0.pom",
+        "pom_sha256": "62d95c89850af21030b19f14d5f7ecd6d8bcc9a3014c59002ec99624caac8100",
+        "pom_license_sources": [
+            {
+                "file": "cursoradapter-1.0.0.pom",
+                "sha256": "62d95c89850af21030b19f14d5f7ecd6d8bcc9a3014c59002ec99624caac8100"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.customview:customview-poolingcontainer:1.0.0",
+        "file": "customview-poolingcontainer-1.0.0.aar",
+        "bytes": 6608,
+        "sha256": "3584102fc49bf399c56e3b7be4bfe12000c46112320cd8cf85cc0a8f93f3e752",
+        "pom_file": "customview-poolingcontainer-1.0.0.pom",
+        "pom_sha256": "9fa62196c4c4e79b6a58dbb38a8c022bef8db21989d7dae2da0f6f5b66289a9c",
+        "pom_license_sources": [
+            {
+                "file": "customview-poolingcontainer-1.0.0.pom",
+                "sha256": "9fa62196c4c4e79b6a58dbb38a8c022bef8db21989d7dae2da0f6f5b66289a9c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.customview:customview:1.1.0",
+        "file": "customview-1.1.0.aar",
+        "bytes": 33346,
+        "sha256": "01f76ab043770a97b054046f9815717b82ce0355c02967d16c61981359dc189a",
+        "pom_file": "customview-1.1.0.pom",
+        "pom_sha256": "c814d435f73e9e6d169886d0eb96b5c5361feb48449fbbb315c908c03c588c94",
+        "pom_license_sources": [
+            {
+                "file": "customview-1.1.0.pom",
+                "sha256": "c814d435f73e9e6d169886d0eb96b5c5361feb48449fbbb315c908c03c588c94"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.databinding:viewbinding:9.3.0",
+        "file": "viewbinding-9.3.0.aar",
+        "bytes": 1861,
+        "sha256": "4878f68771545beeefd9531edfc5071dea6f1f33d8131b9ee91079c05e1103ab",
+        "pom_file": "viewbinding-9.3.0.pom",
+        "pom_sha256": "a83a10a981fe1f0be03695b6ecb52fe88b5642fffc2dfb76ade9dd9841b562e0",
+        "pom_license_sources": [
+            {
+                "file": "viewbinding-9.3.0.pom",
+                "sha256": "a83a10a981fe1f0be03695b6ecb52fe88b5642fffc2dfb76ade9dd9841b562e0"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.documentfile:documentfile:1.0.0",
+        "file": "documentfile-1.0.0.aar",
+        "bytes": 11221,
+        "sha256": "865a061ef2fad16522f8433536b8d47208c46ff7c7745197dfa1eeb481869487",
+        "pom_file": "documentfile-1.0.0.pom",
+        "pom_sha256": "013288a9317a552706ce625fb24493e8223288529223ec578cf855a5ae9c16e5",
+        "pom_license_sources": [
+            {
+                "file": "documentfile-1.0.0.pom",
+                "sha256": "013288a9317a552706ce625fb24493e8223288529223ec578cf855a5ae9c16e5"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.drawerlayout:drawerlayout:1.1.1",
+        "file": "drawerlayout-1.1.1.aar",
+        "bytes": 34591,
+        "sha256": "2c5f0dca378eb78ca2c4403f9889c77daa3059302260f26a07fe9f63c08926fe",
+        "pom_file": "drawerlayout-1.1.1.pom",
+        "pom_sha256": "c12fa903ba53005962a72405f37896608718f41673fc4a62312e4536132f6f45",
+        "pom_license_sources": [
+            {
+                "file": "drawerlayout-1.1.1.pom",
+                "sha256": "c12fa903ba53005962a72405f37896608718f41673fc4a62312e4536132f6f45"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.dynamicanimation:dynamicanimation:1.0.0",
+        "file": "dynamicanimation-1.0.0.aar",
+        "bytes": 32597,
+        "sha256": "ce005162c229bf308d2d5b12fb6cad0874069cbbeaccee63a8193bd08d40de04",
+        "pom_file": "dynamicanimation-1.0.0.pom",
+        "pom_sha256": "44ce22ee620d28f17301bcc60ad49b69b7d0596c2a87b054ad1e3feac7b4a898",
+        "pom_license_sources": [
+            {
+                "file": "dynamicanimation-1.0.0.pom",
+                "sha256": "44ce22ee620d28f17301bcc60ad49b69b7d0596c2a87b054ad1e3feac7b4a898"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.emoji2:emoji2-views-helper:1.3.0",
+        "file": "emoji2-views-helper-1.3.0.aar",
+        "bytes": 22075,
+        "sha256": "9a1351295a4f739df0efe8344adaa9afb34856c3af584d4a9afbec105a45b90b",
+        "pom_file": "emoji2-views-helper-1.3.0.pom",
+        "pom_sha256": "2673b0f5859d4361a4e9a30457852a6745d0c3c85b5e0412070483f3963ef526",
+        "pom_license_sources": [
+            {
+                "file": "emoji2-views-helper-1.3.0.pom",
+                "sha256": "2673b0f5859d4361a4e9a30457852a6745d0c3c85b5e0412070483f3963ef526"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.emoji2:emoji2:1.3.0",
+        "file": "emoji2-1.3.0.aar",
+        "bytes": 143474,
+        "sha256": "2bf23818b23a996ddaa1b5fd5bb32129daff6bbb2dce15166e2fccdd2010b1a5",
+        "pom_file": "emoji2-1.3.0.pom",
+        "pom_sha256": "14ebbea8234f013211965fdd08b42ee907ce0075af321018c8c2865c2e5db0eb",
+        "pom_license_sources": [
+            {
+                "file": "emoji2-1.3.0.pom",
+                "sha256": "14ebbea8234f013211965fdd08b42ee907ce0075af321018c8c2865c2e5db0eb"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.fragment:fragment-ktx:1.6.2",
+        "file": "fragment-ktx-1.6.2.aar",
+        "bytes": 30127,
+        "sha256": "460c9036b64da7ce7a066a0cb184e01451cfc44929aa1b62fe0689597f2343f8",
+        "pom_file": "fragment-ktx-1.6.2.pom",
+        "pom_sha256": "c2821a29d35a219226ad39c1761d4508917af04c00ec43e15ed4511810174bd4",
+        "pom_license_sources": [
+            {
+                "file": "fragment-ktx-1.6.2.pom",
+                "sha256": "c2821a29d35a219226ad39c1761d4508917af04c00ec43e15ed4511810174bd4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.fragment:fragment:1.6.2",
+        "file": "fragment-1.6.2.aar",
+        "bytes": 354022,
+        "sha256": "df7ba73f377dbd7ccd28b112afd08d28b60ec2c6bc91ec658609c845442ace08",
+        "pom_file": "fragment-1.6.2.pom",
+        "pom_sha256": "4ae4177623da16c641d7555da92a547f40f7660186ce86469931a794283139d4",
+        "pom_license_sources": [
+            {
+                "file": "fragment-1.6.2.pom",
+                "sha256": "4ae4177623da16c641d7555da92a547f40f7660186ce86469931a794283139d4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.interpolator:interpolator:1.0.0",
+        "file": "interpolator-1.0.0.aar",
+        "bytes": 7669,
+        "sha256": "33193135a64fe21fa2c35eec6688f1a76e512606c0fc83dc1b689e37add7732a",
+        "pom_file": "interpolator-1.0.0.pom",
+        "pom_sha256": "0ddc07cc39699f48ecd9ec894b5830c0f09e22e82959294edf37217224c88b7b",
+        "pom_license_sources": [
+            {
+                "file": "interpolator-1.0.0.pom",
+                "sha256": "0ddc07cc39699f48ecd9ec894b5830c0f09e22e82959294edf37217224c88b7b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.legacy:legacy-support-core-utils:1.0.0",
+        "file": "legacy-support-core-utils-1.0.0.aar",
+        "bytes": 4104,
+        "sha256": "a7edcf01d5b52b3034073027bc4775b78a4764bb6202bb91d61c829add8dd1c7",
+        "pom_file": "legacy-support-core-utils-1.0.0.pom",
+        "pom_sha256": "8fd093008b3ee7c06e52c78da2af980a7b47b69b967fa91dad7af466f7a00a38",
+        "pom_license_sources": [
+            {
+                "file": "legacy-support-core-utils-1.0.0.pom",
+                "sha256": "8fd093008b3ee7c06e52c78da2af980a7b47b69b967fa91dad7af466f7a00a38"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-common-jvm:2.9.0",
+        "file": "lifecycle-common-jvm-2.9.0.jar",
+        "bytes": 60804,
+        "sha256": "37d89b2101f074ac6c260917dabb185607645ee200aa3018c7c5bde70edcf184",
+        "pom_file": "lifecycle-common-jvm-2.9.0.pom",
+        "pom_sha256": "54beadc62da90fbe038dc30ead0605522b3697b61d91f76e4969b60202483cc1",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-common-jvm-2.9.0.pom",
+                "sha256": "54beadc62da90fbe038dc30ead0605522b3697b61d91f76e4969b60202483cc1"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0",
+        "file": "lifecycle-livedata-core-ktx-2.9.0.aar",
+        "bytes": 5832,
+        "sha256": "f265a665819e51322b3eea2a6ff2ab90186cadf1787a81dd8bef0ce93c4a600a",
+        "pom_file": "lifecycle-livedata-core-ktx-2.9.0.pom",
+        "pom_sha256": "2377ddd0f460ea0fe4d16657e8f28cb6004b34e5713004f6d0b8d6b45b36a259",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-livedata-core-ktx-2.9.0.pom",
+                "sha256": "2377ddd0f460ea0fe4d16657e8f28cb6004b34e5713004f6d0b8d6b45b36a259"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-livedata-core:2.9.0",
+        "file": "lifecycle-livedata-core-2.9.0.aar",
+        "bytes": 34182,
+        "sha256": "64f96b52c70895807f3020e2e8fa11f3ec2da9c157f62aae21a2c9d3b484a747",
+        "pom_file": "lifecycle-livedata-core-2.9.0.pom",
+        "pom_sha256": "20363ac987c763e48870234a0ed8fc7fd9a0597583e7c8b3b8416def7354a271",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-livedata-core-2.9.0.pom",
+                "sha256": "20363ac987c763e48870234a0ed8fc7fd9a0597583e7c8b3b8416def7354a271"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-livedata-ktx:2.9.0",
+        "file": "lifecycle-livedata-ktx-2.9.0.aar",
+        "bytes": 5804,
+        "sha256": "578720de6d3a9f4bae022366b18bbada436f7dcc14e720200cefa2498c1e3dee",
+        "pom_file": "lifecycle-livedata-ktx-2.9.0.pom",
+        "pom_sha256": "c78bed36114a1a512fa9777d902db261187f8e7cc4d6498d30855ba7fcd89194",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-livedata-ktx-2.9.0.pom",
+                "sha256": "c78bed36114a1a512fa9777d902db261187f8e7cc4d6498d30855ba7fcd89194"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-livedata:2.9.0",
+        "file": "lifecycle-livedata-2.9.0.aar",
+        "bytes": 54996,
+        "sha256": "46382ddfba348db97846cfa81d67d72304dc156bb96224358b429fe748bc6ab4",
+        "pom_file": "lifecycle-livedata-2.9.0.pom",
+        "pom_sha256": "87056d33c5acdddde61b7b44599872b5b7271be27e140a393ca688d456aef908",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-livedata-2.9.0.pom",
+                "sha256": "87056d33c5acdddde61b7b44599872b5b7271be27e140a393ca688d456aef908"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-livedata:2.9.0",
+        "file": "lifecycle-livedata-2.9.0.aar",
+        "bytes": 54996,
+        "sha256": "46382ddfba348db97846cfa81d67d72304dc156bb96224358b429fe748bc6ab4",
+        "pom_file": "lifecycle-livedata-2.9.0.pom",
+        "pom_sha256": "87056d33c5acdddde61b7b44599872b5b7271be27e140a393ca688d456aef908",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-livedata-2.9.0.pom",
+                "sha256": "87056d33c5acdddde61b7b44599872b5b7271be27e140a393ca688d456aef908"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-process:2.9.0",
+        "file": "lifecycle-process-2.9.0.aar",
+        "bytes": 19920,
+        "sha256": "c15ce972cc28936a596a9cd256b32f22768a61d5dd810fa56ba945522a0ee7a5",
+        "pom_file": "lifecycle-process-2.9.0.pom",
+        "pom_sha256": "ad86f00646155856b83456ed6f04c3165c4f9205088d555b93c7e7deaf560916",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-process-2.9.0.pom",
+                "sha256": "ad86f00646155856b83456ed6f04c3165c4f9205088d555b93c7e7deaf560916"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-runtime-android:2.9.0",
+        "file": "lifecycle-runtime-release.aar",
+        "bytes": 82841,
+        "sha256": "d4223ae6a8447677267dff22863b6d6988ca68b4d27ca6d74b81046b04794257",
+        "pom_file": "lifecycle-runtime-android-2.9.0.pom",
+        "pom_sha256": "5db05802cf540514dcc2ea581a4f67f996546cba568d9bb14bf273b29cd0233c",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-runtime-android-2.9.0.pom",
+                "sha256": "5db05802cf540514dcc2ea581a4f67f996546cba568d9bb14bf273b29cd0233c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.0",
+        "file": "lifecycle-runtime-ktx.aar",
+        "bytes": 5765,
+        "sha256": "333fa2ce6db70ac372b791dfeba99c02c0d97b1a8b4ab4a84d4762466d12b207",
+        "pom_file": "lifecycle-runtime-ktx-android-2.9.0.pom",
+        "pom_sha256": "8dd817a9b6767b2b9e93698bda6b6c9dd72306a530c028f807bcdf36b31cb119",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-runtime-ktx-android-2.9.0.pom",
+                "sha256": "8dd817a9b6767b2b9e93698bda6b6c9dd72306a530c028f807bcdf36b31cb119"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-service:2.9.0",
+        "file": "lifecycle-service-2.9.0.aar",
+        "bytes": 9886,
+        "sha256": "c78580ca38cd14e474323861ebe822d04c04231cb7e59b24de801406a511376a",
+        "pom_file": "lifecycle-service-2.9.0.pom",
+        "pom_sha256": "6838189383bee6e2e448b54c4aa72fe3929a81eff2ccc569dfdd2beca4898f5e",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-service-2.9.0.pom",
+                "sha256": "6838189383bee6e2e448b54c4aa72fe3929a81eff2ccc569dfdd2beca4898f5e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-viewmodel-android:2.9.0",
+        "file": "lifecycle-viewmodel-release.aar",
+        "bytes": 65625,
+        "sha256": "fa9d7511a8fe0d5edc53099706d64f37621dcfeb9f2c557369ed83645fc87a23",
+        "pom_file": "lifecycle-viewmodel-android-2.9.0.pom",
+        "pom_sha256": "75d3a8e143aaaf489b07434c4e30030942b1a82a699b229bf887377b603c3f91",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-viewmodel-android-2.9.0.pom",
+                "sha256": "75d3a8e143aaaf489b07434c4e30030942b1a82a699b229bf887377b603c3f91"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0",
+        "file": "lifecycle-viewmodel-ktx-2.9.0.aar",
+        "bytes": 5810,
+        "sha256": "af42fd84f4e52b44dcabaf9ecf94120553929bc1a059beb2240a9ec1dbee814f",
+        "pom_file": "lifecycle-viewmodel-ktx-2.9.0.pom",
+        "pom_sha256": "99c4a88d509f4c43a681d14d20948182641691b74f6dd6c4d6996caabbd4c677",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-viewmodel-ktx-2.9.0.pom",
+                "sha256": "99c4a88d509f4c43a681d14d20948182641691b74f6dd6c4d6996caabbd4c677"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0",
+        "file": "lifecycle-viewmodel-savedstate-release.aar",
+        "bytes": 56874,
+        "sha256": "db367838716e55866823c6deed62fcec23fce487bf2a8fa565a36f149ab3d1ef",
+        "pom_file": "lifecycle-viewmodel-savedstate-android-2.9.0.pom",
+        "pom_sha256": "02f383e140adfc2bd5c94e15ec994d9069a4d4538a3700f5cf31b2774f156768",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-viewmodel-savedstate-android-2.9.0.pom",
+                "sha256": "02f383e140adfc2bd5c94e15ec994d9069a4d4538a3700f5cf31b2774f156768"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.lifecycle:lifecycle-viewmodel:2.9.0",
+        "file": "lifecycle-viewmodel-2.9.0.aar",
+        "bytes": 4568,
+        "sha256": "cab404b05d5faed209104a2aef14c0cbb316ab9fabe4a8f037b043e5d2f43435",
+        "pom_file": "lifecycle-viewmodel-2.9.0.pom",
+        "pom_sha256": "f49d4b68b6854111e4d193c90c9a4b75840ad2f373b2ed1842cb56ac50b6a846",
+        "pom_license_sources": [
+            {
+                "file": "lifecycle-viewmodel-2.9.0.pom",
+                "sha256": "f49d4b68b6854111e4d193c90c9a4b75840ad2f373b2ed1842cb56ac50b6a846"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.loader:loader:1.0.0",
+        "file": "loader-1.0.0.aar",
+        "bytes": 33445,
+        "sha256": "11f735cb3b55c458d470bed9e25254375b518b4b1bad6926783a7026db0f5025",
+        "pom_file": "loader-1.0.0.pom",
+        "pom_sha256": "c978d550808b47434aa49a63164110a50b55b0bcc6160a93a2e37d5110df8c5e",
+        "pom_license_sources": [
+            {
+                "file": "loader-1.0.0.pom",
+                "sha256": "c978d550808b47434aa49a63164110a50b55b0bcc6160a93a2e37d5110df8c5e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0",
+        "file": "localbroadcastmanager-1.0.0.aar",
+        "bytes": 6808,
+        "sha256": "e71c328ceef5c4a7d76f2d86df1b65d65fe2acf868b1a4efd84a3f34336186d8",
+        "pom_file": "localbroadcastmanager-1.0.0.pom",
+        "pom_sha256": "a000041f5a1f79283c5175e1bb60cf3683780f401c6a9d34fbe9751253fa6ff9",
+        "pom_license_sources": [
+            {
+                "file": "localbroadcastmanager-1.0.0.pom",
+                "sha256": "a000041f5a1f79283c5175e1bb60cf3683780f401c6a9d34fbe9751253fa6ff9"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-common-android:2.9.8",
+        "file": "navigation-common-release.aar",
+        "bytes": 367401,
+        "sha256": "d43832772012afa0d5c71d03153aef764f1c5f683fe7605f0db77cada8515102",
+        "pom_file": "navigation-common-android-2.9.8.pom",
+        "pom_sha256": "082f02f70f1601db91e91917d5a74581def4ca94a3fe98db5b0d67a19eba3b0b",
+        "pom_license_sources": [
+            {
+                "file": "navigation-common-android-2.9.8.pom",
+                "sha256": "082f02f70f1601db91e91917d5a74581def4ca94a3fe98db5b0d67a19eba3b0b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-fragment-ktx:2.9.8",
+        "file": "navigation-fragment-ktx-2.9.8.aar",
+        "bytes": 5814,
+        "sha256": "234c3eac27abb80c67888a1ed439c19f119e50d0da32aa32e240a0ee8606fabb",
+        "pom_file": "navigation-fragment-ktx-2.9.8.pom",
+        "pom_sha256": "f9261a3d48902a5bc5559aaf00fada309e4045609b41cd8f594102b20dfdf6bb",
+        "pom_license_sources": [
+            {
+                "file": "navigation-fragment-ktx-2.9.8.pom",
+                "sha256": "f9261a3d48902a5bc5559aaf00fada309e4045609b41cd8f594102b20dfdf6bb"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-fragment:2.9.8",
+        "file": "navigation-fragment-2.9.8.aar",
+        "bytes": 92401,
+        "sha256": "62a34a1fbf3e2da11c2a358868290d9d80fa0de31abf40a4eb5e1aa35143c308",
+        "pom_file": "navigation-fragment-2.9.8.pom",
+        "pom_sha256": "c8cf82a72b2b431964a9f6e51579c6d2d4137e06f314db41d72ed43c1d7f85a8",
+        "pom_license_sources": [
+            {
+                "file": "navigation-fragment-2.9.8.pom",
+                "sha256": "c8cf82a72b2b431964a9f6e51579c6d2d4137e06f314db41d72ed43c1d7f85a8"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-runtime-android:2.9.8",
+        "file": "navigation-runtime-release.aar",
+        "bytes": 192448,
+        "sha256": "7d741a3b0a299a8c8990712009c63bfca8d52d060afe8f5ad9c200619f113237",
+        "pom_file": "navigation-runtime-android-2.9.8.pom",
+        "pom_sha256": "40d25c518ef11c9e8d1a0cc48b53adcb56c475c82f0b0b43f7c95d5d718c179c",
+        "pom_license_sources": [
+            {
+                "file": "navigation-runtime-android-2.9.8.pom",
+                "sha256": "40d25c518ef11c9e8d1a0cc48b53adcb56c475c82f0b0b43f7c95d5d718c179c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-ui-ktx:2.9.8",
+        "file": "navigation-ui-ktx-2.9.8.aar",
+        "bytes": 5779,
+        "sha256": "76980de9b4ff3b29b1ab2e2c8771241a213b3da20d87cc9b116afa88f11d0ad4",
+        "pom_file": "navigation-ui-ktx-2.9.8.pom",
+        "pom_sha256": "48bf4bc31e326e59401a9eafa3e89444cf85c375928d3e1e241163d799bb9bd7",
+        "pom_license_sources": [
+            {
+                "file": "navigation-ui-ktx-2.9.8.pom",
+                "sha256": "48bf4bc31e326e59401a9eafa3e89444cf85c375928d3e1e241163d799bb9bd7"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.navigation:navigation-ui:2.9.8",
+        "file": "navigation-ui-2.9.8.aar",
+        "bytes": 93106,
+        "sha256": "0652f4cc33b66a2335574142c15f2594cef4e38f4fa0ad753f5ee51affe74d6e",
+        "pom_file": "navigation-ui-2.9.8.pom",
+        "pom_sha256": "214efa15f4a704925d71908278047d519b8254e190efb35d234514d188036ae1",
+        "pom_license_sources": [
+            {
+                "file": "navigation-ui-2.9.8.pom",
+                "sha256": "214efa15f4a704925d71908278047d519b8254e190efb35d234514d188036ae1"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.paging:paging-common-android:3.3.6",
+        "file": "paging-common-release.aar",
+        "bytes": 680099,
+        "sha256": "792a0dd40a6d0c51f4935482d8aeb740136b80e60ae15cda7db2a24d37b669ce",
+        "pom_file": "paging-common-android-3.3.6.pom",
+        "pom_sha256": "a9ccfbd82978609aa02caca15f52d8de0e897188c2f62254dce4178dbd5f3e1b",
+        "pom_license_sources": [
+            {
+                "file": "paging-common-android-3.3.6.pom",
+                "sha256": "a9ccfbd82978609aa02caca15f52d8de0e897188c2f62254dce4178dbd5f3e1b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.paging:paging-common-ktx:3.3.6",
+        "file": "paging-common-ktx-3.3.6.jar",
+        "bytes": 261,
+        "sha256": "c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3",
+        "pom_file": "paging-common-ktx-3.3.6.pom",
+        "pom_sha256": "c0287a21b95a63858d4484b60bb12802fe5ca6ce862c2382cccb6dfe4cb67574",
+        "pom_license_sources": [
+            {
+                "file": "paging-common-ktx-3.3.6.pom",
+                "sha256": "c0287a21b95a63858d4484b60bb12802fe5ca6ce862c2382cccb6dfe4cb67574"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.paging:paging-runtime-ktx:3.3.6",
+        "file": "paging-runtime-ktx-3.3.6.aar",
+        "bytes": 2139,
+        "sha256": "d5ccceac2e75a26331295803d53d32d16d3951673f18c5a579892c7d905a9e2d",
+        "pom_file": "paging-runtime-ktx-3.3.6.pom",
+        "pom_sha256": "18a3dffb3d5ba5f636022bd58dd3de75eab89d591a0c222b63ef256f399bbcf6",
+        "pom_license_sources": [
+            {
+                "file": "paging-runtime-ktx-3.3.6.pom",
+                "sha256": "18a3dffb3d5ba5f636022bd58dd3de75eab89d591a0c222b63ef256f399bbcf6"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.paging:paging-runtime:3.3.6",
+        "file": "paging-runtime-3.3.6.aar",
+        "bytes": 92983,
+        "sha256": "1f7c0dbf894f8623ad0716c45964340dd1913f3321958b1fc1a06b12bacee271",
+        "pom_file": "paging-runtime-3.3.6.pom",
+        "pom_sha256": "349264083974747561e9cb244b6bd50ef3d7e9116d80d84b19c9ea856bd5cb74",
+        "pom_license_sources": [
+            {
+                "file": "paging-runtime-3.3.6.pom",
+                "sha256": "349264083974747561e9cb244b6bd50ef3d7e9116d80d84b19c9ea856bd5cb74"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.preference:preference-ktx:1.2.1",
+        "file": "preference-ktx-1.2.1.aar",
+        "bytes": 6284,
+        "sha256": "872a5e3e07c0b8d21cb77769ab2f468b209ab6ec08231874401aecfea304a81c",
+        "pom_file": "preference-ktx-1.2.1.pom",
+        "pom_sha256": "331b95647f7c1e5002c5a3dd997150828c6d60f9158690a7900fc5c85d31c305",
+        "pom_license_sources": [
+            {
+                "file": "preference-ktx-1.2.1.pom",
+                "sha256": "331b95647f7c1e5002c5a3dd997150828c6d60f9158690a7900fc5c85d31c305"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.preference:preference:1.2.1",
+        "file": "preference-1.2.1.aar",
+        "bytes": 257054,
+        "sha256": "40ca8adfdb7effb61facb39bd9ca2e2f3a40d106743b0cd6dc9e21e8bedd4f85",
+        "pom_file": "preference-1.2.1.pom",
+        "pom_sha256": "0157b052e8433a6bab5df7ffe4fbf01bd10a55f18f111b37faf7dfafe14c7923",
+        "pom_license_sources": [
+            {
+                "file": "preference-1.2.1.pom",
+                "sha256": "0157b052e8433a6bab5df7ffe4fbf01bd10a55f18f111b37faf7dfafe14c7923"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.print:print:1.0.0",
+        "file": "print-1.0.0.aar",
+        "bytes": 15782,
+        "sha256": "1d5c7f3135a1bba661fc373fd72e11eb0a4adbb3396787826dd8e4190d5d9edd",
+        "pom_file": "print-1.0.0.pom",
+        "pom_sha256": "62482c0594841bee24bb996abb6cb7b320a6a3b77dca9f0a0ba4fe3be5530aa7",
+        "pom_license_sources": [
+            {
+                "file": "print-1.0.0.pom",
+                "sha256": "62482c0594841bee24bb996abb6cb7b320a6a3b77dca9f0a0ba4fe3be5530aa7"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.recyclerview:recyclerview:1.4.0",
+        "file": "recyclerview-1.4.0.aar",
+        "bytes": 452493,
+        "sha256": "0f32ccaffcda74c3f87f0b4cfe6ae78e8aa4eb3ad7dda4f2edf06eedc947a5cf",
+        "pom_file": "recyclerview-1.4.0.pom",
+        "pom_sha256": "d551d4343861814e05380f67f8c2e63140b84df37435ffd2eb53528a96045d63",
+        "pom_license_sources": [
+            {
+                "file": "recyclerview-1.4.0.pom",
+                "sha256": "d551d4343861814e05380f67f8c2e63140b84df37435ffd2eb53528a96045d63"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.resourceinspection:resourceinspection-annotation:1.0.1",
+        "file": "resourceinspection-annotation-1.0.1.jar",
+        "bytes": 2336,
+        "sha256": "8cff870ec6fb31db48a52f4a792335b4bf8de07e03bd37823181526433ccd5cb",
+        "pom_file": "resourceinspection-annotation-1.0.1.pom",
+        "pom_sha256": "b8eb4938ed95d7fcdaa2712ebca363e46a0f9228b8be7f23154def56846815dc",
+        "pom_license_sources": [
+            {
+                "file": "resourceinspection-annotation-1.0.1.pom",
+                "sha256": "b8eb4938ed95d7fcdaa2712ebca363e46a0f9228b8be7f23154def56846815dc"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.room:room-common-jvm:2.7.2",
+        "file": "room-common-jvm-2.7.2.jar",
+        "bytes": 63047,
+        "sha256": "b2a00b88c8b8d810d07ecbdf92fdff47db7f0ea884efe5c31cda7a526c9b1ae5",
+        "pom_file": "room-common-jvm-2.7.2.pom",
+        "pom_sha256": "0cdf9b35e6df499aa052729af4feaf93a232fbd9f9a9c77f6f7c922f2a220358",
+        "pom_license_sources": [
+            {
+                "file": "room-common-jvm-2.7.2.pom",
+                "sha256": "0cdf9b35e6df499aa052729af4feaf93a232fbd9f9a9c77f6f7c922f2a220358"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.room:room-ktx:2.7.2",
+        "file": "room-ktx-2.7.2.aar",
+        "bytes": 6055,
+        "sha256": "721e00a36367d9e6e43f86de1ce5bfa43043ab7091170e44100a239d0ebda4ab",
+        "pom_file": "room-ktx-2.7.2.pom",
+        "pom_sha256": "394fa4d2759f160983b5b065e7e8cad8df2fbb9d221d5c8764719ef273f60338",
+        "pom_license_sources": [
+            {
+                "file": "room-ktx-2.7.2.pom",
+                "sha256": "394fa4d2759f160983b5b065e7e8cad8df2fbb9d221d5c8764719ef273f60338"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.room:room-paging-android:2.7.2",
+        "file": "room-paging-release.aar",
+        "bytes": 42407,
+        "sha256": "8884459a33460935990056aec00dd6bebc34649ae2b4b403bfff450d36531262",
+        "pom_file": "room-paging-android-2.7.2.pom",
+        "pom_sha256": "f7d35769e972e7b5965cb92428870744f96ffb65682a0ff7f280de776e44b742",
+        "pom_license_sources": [
+            {
+                "file": "room-paging-android-2.7.2.pom",
+                "sha256": "f7d35769e972e7b5965cb92428870744f96ffb65682a0ff7f280de776e44b742"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.room:room-runtime-android:2.7.2",
+        "file": "room-runtime-release.aar",
+        "bytes": 595394,
+        "sha256": "1382348cc0b63869b1019f35bfc75c7d86e8b3991d87be96e1a245e42314910c",
+        "pom_file": "room-runtime-android-2.7.2.pom",
+        "pom_sha256": "99469a033aaf4e5f7c7444a25a11b9ed02d0031e3d062df7e83f4946f260864b",
+        "pom_license_sources": [
+            {
+                "file": "room-runtime-android-2.7.2.pom",
+                "sha256": "99469a033aaf4e5f7c7444a25a11b9ed02d0031e3d062df7e83f4946f260864b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.savedstate:savedstate-android:1.3.0",
+        "file": "savedstate-release.aar",
+        "bytes": 140531,
+        "sha256": "210b6909bbd515dbf415905cbb220fca93a87fa546838f754077ebc8e0488590",
+        "pom_file": "savedstate-android-1.3.0.pom",
+        "pom_sha256": "22ebd3d8b1e2c8bfa0ded23fe2f0179961683daa25b476deb991350c6ca94c38",
+        "pom_license_sources": [
+            {
+                "file": "savedstate-android-1.3.0.pom",
+                "sha256": "22ebd3d8b1e2c8bfa0ded23fe2f0179961683daa25b476deb991350c6ca94c38"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.savedstate:savedstate-ktx:1.3.0",
+        "file": "savedstate-ktx-1.3.0.aar",
+        "bytes": 5763,
+        "sha256": "45c5f6412840f50de7bf7d9b1c4a8c81ea236832487a1138cb320b8c997416f2",
+        "pom_file": "savedstate-ktx-1.3.0.pom",
+        "pom_sha256": "757560e597520f07044b1e033bbde439bf1fbe47eec916186735eed0999cd3e7",
+        "pom_license_sources": [
+            {
+                "file": "savedstate-ktx-1.3.0.pom",
+                "sha256": "757560e597520f07044b1e033bbde439bf1fbe47eec916186735eed0999cd3e7"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.slidingpanelayout:slidingpanelayout:1.2.0",
+        "file": "slidingpanelayout-1.2.0.aar",
+        "bytes": 37999,
+        "sha256": "5f53339be2a4f90a9abea3571dd59e70a8a49e7f15dd82974a3898b4652e8714",
+        "pom_file": "slidingpanelayout-1.2.0.pom",
+        "pom_sha256": "283f5eaa6becd4842c65176b6c9de96bb284250fb9fbd78b4717fac1ac5357ef",
+        "pom_license_sources": [
+            {
+                "file": "slidingpanelayout-1.2.0.pom",
+                "sha256": "283f5eaa6becd4842c65176b6c9de96bb284250fb9fbd78b4717fac1ac5357ef"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.sqlite:sqlite-android:2.5.1",
+        "file": "sqlite-release.aar",
+        "bytes": 39449,
+        "sha256": "4b0494c5d7e22f7448a8bf2b73f4e995fa3165030554bc39673803c9d046a416",
+        "pom_file": "sqlite-android-2.5.1.pom",
+        "pom_sha256": "9e40dc225ff2e6f293a5158eea4e4774b13c78b38117df1e649012534a68ba27",
+        "pom_license_sources": [
+            {
+                "file": "sqlite-android-2.5.1.pom",
+                "sha256": "9e40dc225ff2e6f293a5158eea4e4774b13c78b38117df1e649012534a68ba27"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.sqlite:sqlite-framework-android:2.5.1",
+        "file": "sqlite-framework-release.aar",
+        "bytes": 50437,
+        "sha256": "fb2cbae463280caa382e13cafc22e7ae76564f22bdb352a1b01fdf7069f11d72",
+        "pom_file": "sqlite-framework-android-2.5.1.pom",
+        "pom_sha256": "d96481998593017f70a5bee65af3d93e5370e734f50e2d39c03f8540dcac10f0",
+        "pom_license_sources": [
+            {
+                "file": "sqlite-framework-android-2.5.1.pom",
+                "sha256": "d96481998593017f70a5bee65af3d93e5370e734f50e2d39c03f8540dcac10f0"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.startup:startup-runtime:1.1.1",
+        "file": "startup-runtime-1.1.1.aar",
+        "bytes": 19371,
+        "sha256": "e0a6329a371262fe4c450372b70fdaf33b769ef6917094723787cfce896b1dd3",
+        "pom_file": "startup-runtime-1.1.1.pom",
+        "pom_sha256": "f4114b5c6859bb1bc3caf281cb6d6f25998fa7f7292c64ceaea74a93210e746b",
+        "pom_license_sources": [
+            {
+                "file": "startup-runtime-1.1.1.pom",
+                "sha256": "f4114b5c6859bb1bc3caf281cb6d6f25998fa7f7292c64ceaea74a93210e746b"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.tracing:tracing:1.2.0",
+        "file": "tracing-1.2.0.aar",
+        "bytes": 6060,
+        "sha256": "6faa90390d1fdbf0adb9a99bf99de67b94c6c6f35aea9510593a9d17973736a2",
+        "pom_file": "tracing-1.2.0.pom",
+        "pom_sha256": "f34bec4eb58871d31002901377108aaa1ebfe77fa6d882b8b86200b158e26ea1",
+        "pom_license_sources": [
+            {
+                "file": "tracing-1.2.0.pom",
+                "sha256": "f34bec4eb58871d31002901377108aaa1ebfe77fa6d882b8b86200b158e26ea1"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.transition:transition:1.4.1",
+        "file": "transition-1.4.1.aar",
+        "bytes": 181918,
+        "sha256": "36d28d9ec33a8c64313842bce99c95736da5b27a6b3a513639050de82f075726",
+        "pom_file": "transition-1.4.1.pom",
+        "pom_sha256": "742263f7b85bfcc2d16a1eb744bfbdf97e0fdab5b1e946645e67d5b3e64a4e7e",
+        "pom_license_sources": [
+            {
+                "file": "transition-1.4.1.pom",
+                "sha256": "742263f7b85bfcc2d16a1eb744bfbdf97e0fdab5b1e946645e67d5b3e64a4e7e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.vectordrawable:vectordrawable-animated:1.1.0",
+        "file": "vectordrawable-animated-1.1.0.aar",
+        "bytes": 34496,
+        "sha256": "76da2c502371d9c38054df5e2b248d00da87809ed058f3363eae87ce5e2403f8",
+        "pom_file": "vectordrawable-animated-1.1.0.pom",
+        "pom_sha256": "276a20116b705fb75b9003ee9496c56f6fd3b32375fb232472811eba60a040bd",
+        "pom_license_sources": [
+            {
+                "file": "vectordrawable-animated-1.1.0.pom",
+                "sha256": "276a20116b705fb75b9003ee9496c56f6fd3b32375fb232472811eba60a040bd"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.vectordrawable:vectordrawable:1.1.0",
+        "file": "vectordrawable-1.1.0.aar",
+        "bytes": 33236,
+        "sha256": "46fd633ac01b49b7fcabc263bf098c5a8b9e9a69774d234edcca04fb02df8e26",
+        "pom_file": "vectordrawable-1.1.0.pom",
+        "pom_sha256": "5b0e2d5b2179e54804785cbc21ce5f473b5e1ddd55a57da482e94dcd39492bb2",
+        "pom_license_sources": [
+            {
+                "file": "vectordrawable-1.1.0.pom",
+                "sha256": "5b0e2d5b2179e54804785cbc21ce5f473b5e1ddd55a57da482e94dcd39492bb2"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.versionedparcelable:versionedparcelable:1.1.1",
+        "file": "versionedparcelable-1.1.1.aar",
+        "bytes": 31061,
+        "sha256": "57e8d93260d18d5b9007c9eed3c64ad159de90c8609ebfc74a347cbd514535a4",
+        "pom_file": "versionedparcelable-1.1.1.pom",
+        "pom_sha256": "5f51e65873ca612de3838fa90d2ee95b8d040efd31b9c390a19bf94d615cdb2f",
+        "pom_license_sources": [
+            {
+                "file": "versionedparcelable-1.1.1.pom",
+                "sha256": "5f51e65873ca612de3838fa90d2ee95b8d040efd31b9c390a19bf94d615cdb2f"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.viewpager2:viewpager2:1.1.0",
+        "file": "viewpager2-1.1.0.aar",
+        "bytes": 66652,
+        "sha256": "1934b5eff05c46215896b75bac065a7b63b13e3f0c8deacc0a9d54b207d9f53d",
+        "pom_file": "viewpager2-1.1.0.pom",
+        "pom_sha256": "b623eca90462870fd05d7ec042412dffd5f1abdf90b341f712a6af73b51dd5c5",
+        "pom_license_sources": [
+            {
+                "file": "viewpager2-1.1.0.pom",
+                "sha256": "b623eca90462870fd05d7ec042412dffd5f1abdf90b341f712a6af73b51dd5c5"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.viewpager:viewpager:1.0.0",
+        "file": "viewpager-1.0.0.aar",
+        "bytes": 53513,
+        "sha256": "147af4e14a1984010d8f155e5e19d781f03c1d70dfed02a8e0d18428b8fc8682",
+        "pom_file": "viewpager-1.0.0.pom",
+        "pom_sha256": "1f72f836339d03c6eb013f65075e76ca87075a577578eb4f95f74a3a5d253128",
+        "pom_license_sources": [
+            {
+                "file": "viewpager-1.0.0.pom",
+                "sha256": "1f72f836339d03c6eb013f65075e76ca87075a577578eb4f95f74a3a5d253128"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.window:window:1.0.0",
+        "file": "window-1.0.0.aar",
+        "bytes": 160998,
+        "sha256": "3212985be4127373ca4d0ea7f8b81a250ae2105e924f7940105d067a0f9ac130",
+        "pom_file": "window-1.0.0.pom",
+        "pom_sha256": "377fee39dcf1aefa6b2caeecb3c9e33079010fd45dc070dbcba57d54c5081f8a",
+        "pom_license_sources": [
+            {
+                "file": "window-1.0.0.pom",
+                "sha256": "377fee39dcf1aefa6b2caeecb3c9e33079010fd45dc070dbcba57d54c5081f8a"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.work:work-runtime-ktx:2.9.1",
+        "file": "work-runtime-ktx-2.9.1.aar",
+        "bytes": 2498,
+        "sha256": "8f4cc53ac1879665b14d2f17ad4fbcb3045a4b74774250b99829b1c13f7b7728",
+        "pom_file": "work-runtime-ktx-2.9.1.pom",
+        "pom_sha256": "108c74f75ca0cb5e80095768f28f529f76aa8350838ef8e2e97353c6451d5d38",
+        "pom_license_sources": [
+            {
+                "file": "work-runtime-ktx-2.9.1.pom",
+                "sha256": "108c74f75ca0cb5e80095768f28f529f76aa8350838ef8e2e97353c6451d5d38"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "androidx.work:work-runtime:2.9.1",
+        "file": "work-runtime-2.9.1.aar",
+        "bytes": 1838630,
+        "sha256": "1be76486b894af179462941a39cab242b00d7235c3aeb4d756f45262b0c2e4a3",
+        "pom_file": "work-runtime-2.9.1.pom",
+        "pom_sha256": "d970bbd71f2b928578a0051ec402c9cca6710d5e68c7de86ffaf5e88706bd5dc",
+        "pom_license_sources": [
+            {
+                "file": "work-runtime-2.9.1.pom",
+                "sha256": "d970bbd71f2b928578a0051ec402c9cca6710d5e68c7de86ffaf5e88706bd5dc"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.github.getActivity:XXPermissions:18.5",
+        "file": "XXPermissions-18.5.aar",
+        "bytes": 80560,
+        "sha256": "9fa58a47c7362e467a475d716bbd4111dc23d6c50fffffc478c11b74bbe881f5",
+        "pom_file": "XXPermissions-18.5.pom",
+        "pom_sha256": "a8d26a9c926711ee49b48b37199befc3c566b7b6fe78273718d31e7027e60e18",
+        "pom_license_sources": [
+            {
+                "file": "XXPermissions-18.5.pom",
+                "sha256": "a8d26a9c926711ee49b48b37199befc3c566b7b6fe78273718d31e7027e60e18"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache License 2.0",
+                "url": "https://api.github.com/licenses/apache-2.0"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.google.android.flexbox:flexbox:3.0.0",
+        "file": "flexbox-3.0.0.aar",
+        "bytes": 80074,
+        "sha256": "5e19500486fd7c8e2e8c7aad6bbba9c8d0ada7057c6b32b9b5c61439814e7574",
+        "pom_file": "flexbox-3.0.0.pom",
+        "pom_sha256": "fe010adf7575a5936ec250652cd4a121d0117bd2582641adafdbdbf3f5946eff",
+        "pom_license_sources": [
+            {
+                "file": "flexbox-3.0.0.pom",
+                "sha256": "fe010adf7575a5936ec250652cd4a121d0117bd2582641adafdbdbf3f5946eff"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.google.android.material:material:1.4.0",
+        "file": "material-1.4.0.aar",
+        "bytes": 1611643,
+        "sha256": "80a0e02abf8a8a8cbe5716e06ac80cd683840b9f5b0d2f19a2a279e47f2895ee",
+        "pom_file": "material-1.4.0.pom",
+        "pom_sha256": "cf5c277c3a9805c83b79399b31b0d22006f1f01181a1a6bf8544a9c9aa4fbb6f",
+        "pom_license_sources": [
+            {
+                "file": "material-1.4.0.pom",
+                "sha256": "cf5c277c3a9805c83b79399b31b0d22006f1f01181a1a6bf8544a9c9aa4fbb6f"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.google.guava:listenablefuture:1.0",
+        "file": "listenablefuture-1.0.jar",
+        "bytes": 3149,
+        "sha256": "e4ad7607e5c0477c6f890ef26a49cb8d1bb4dffb650bab4502afee64644e3069",
+        "pom_file": "listenablefuture-1.0.pom",
+        "pom_sha256": "53873caf26bc1ed8a567ea6c939ab2aaa3f47a5e32d5cade95ddf5080d23238a",
+        "pom_license_sources": [
+            {
+                "file": "listenablefuture-1.0.pom",
+                "sha256": "53873caf26bc1ed8a567ea6c939ab2aaa3f47a5e32d5cade95ddf5080d23238a"
+            },
+            {
+                "file": "guava-parent-26.0-android.pom",
+                "sha256": "f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.jakewharton.timber:timber:5.0.1",
+        "file": "timber-5.0.1.aar",
+        "bytes": 32329,
+        "sha256": "c6edddfcc8eff42a1604c8577fcfa4b4ffd9f252122c52ea36cfe7967f512f71",
+        "pom_file": "timber-5.0.1.pom",
+        "pom_sha256": "47caeb2d78b331edf9eebff21de4599cec469ec75f9c9cf118e42455412ce917",
+        "pom_license_sources": [
+            {
+                "file": "timber-5.0.1.pom",
+                "sha256": "47caeb2d78b331edf9eebff21de4599cec469ec75f9c9cf118e42455412ce917"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-appctx-android:3.0.0",
+        "file": "splitties-appctx-release.aar",
+        "bytes": 7483,
+        "sha256": "574a20e35ef0421d444015518b921a11518da0b88ac9fca9ca107fca0c0a3f50",
+        "pom_file": "splitties-appctx-android-3.0.0.pom",
+        "pom_sha256": "9b5c399179b338429d91ea13b479538411af411bc915b600b1c43de580adc354",
+        "pom_license_sources": [
+            {
+                "file": "splitties-appctx-android-3.0.0.pom",
+                "sha256": "9b5c399179b338429d91ea13b479538411af411bc915b600b1c43de580adc354"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-bitflags-jvm:3.0.0",
+        "file": "splitties-bitflags-jvm-3.0.0.jar",
+        "bytes": 2647,
+        "sha256": "2bed20d8ac16860e212edda5605196abc49b040b9d4917301548bf2d8c545dd4",
+        "pom_file": "splitties-bitflags-jvm-3.0.0.pom",
+        "pom_sha256": "2bb780a03509b709c225c5203dc7f13993f804dfbe90922a7d1b47b1cc42e59e",
+        "pom_license_sources": [
+            {
+                "file": "splitties-bitflags-jvm-3.0.0.pom",
+                "sha256": "2bb780a03509b709c225c5203dc7f13993f804dfbe90922a7d1b47b1cc42e59e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-collections-jvm:3.0.0",
+        "file": "splitties-collections-jvm-3.0.0.jar",
+        "bytes": 2554,
+        "sha256": "633cab0c1f9772a958d3bff021d48dd14d272df731d34533431c4150792c7bd0",
+        "pom_file": "splitties-collections-jvm-3.0.0.pom",
+        "pom_sha256": "85d2f970e01bb20b01c0651ea678120d1f74a7009c2169ddd92c78807c36cb9f",
+        "pom_license_sources": [
+            {
+                "file": "splitties-collections-jvm-3.0.0.pom",
+                "sha256": "85d2f970e01bb20b01c0651ea678120d1f74a7009c2169ddd92c78807c36cb9f"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-dimensions-android:3.0.0",
+        "file": "splitties-dimensions-release.aar",
+        "bytes": 2238,
+        "sha256": "d92683b1e4767233d1da4fd784742bafa64ce33c920cd16bcef788329ab9b293",
+        "pom_file": "splitties-dimensions-android-3.0.0.pom",
+        "pom_sha256": "97cd8c79d38b3a187dd1c9f43253367938845eaa20460b6930615a951f29e96f",
+        "pom_license_sources": [
+            {
+                "file": "splitties-dimensions-android-3.0.0.pom",
+                "sha256": "97cd8c79d38b3a187dd1c9f43253367938845eaa20460b6930615a951f29e96f"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-exceptions-android:3.0.0",
+        "file": "splitties-exceptions-release.aar",
+        "bytes": 2115,
+        "sha256": "f82183f1784dea7627e2b39c06f9553b123d5ae92b33a26661601fb5bbf56106",
+        "pom_file": "splitties-exceptions-android-3.0.0.pom",
+        "pom_sha256": "0d3257175f769313d0fc157bb75d89cf4932cd69487863f6597792f325c00675",
+        "pom_license_sources": [
+            {
+                "file": "splitties-exceptions-android-3.0.0.pom",
+                "sha256": "0d3257175f769313d0fc157bb75d89cf4932cd69487863f6597792f325c00675"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-experimental-jvm:3.0.0",
+        "file": "splitties-experimental-jvm-3.0.0.jar",
+        "bytes": 2653,
+        "sha256": "2719a1305b989ec8035fee6ec605668958dfbfbd788f298042b3b11a4ce36984",
+        "pom_file": "splitties-experimental-jvm-3.0.0.pom",
+        "pom_sha256": "d804d41648a1e44aa2f42ed25c35c9af8709e42436ef78bb3a1c603a24095342",
+        "pom_license_sources": [
+            {
+                "file": "splitties-experimental-jvm-3.0.0.pom",
+                "sha256": "d804d41648a1e44aa2f42ed25c35c9af8709e42436ef78bb3a1c603a24095342"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-mainthread-android:3.0.0",
+        "file": "splitties-mainthread-release.aar",
+        "bytes": 3027,
+        "sha256": "24f2265ee7db74a4a138af646c9b4afe991a9467e2d421e049768c77cad4b7c7",
+        "pom_file": "splitties-mainthread-android-3.0.0.pom",
+        "pom_sha256": "e4f3f176ec3c01ea6636aaf1c9846736379322c91342f576f73a84af2f8d3454",
+        "pom_license_sources": [
+            {
+                "file": "splitties-mainthread-android-3.0.0.pom",
+                "sha256": "e4f3f176ec3c01ea6636aaf1c9846736379322c91342f576f73a84af2f8d3454"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-resources-android:3.0.0",
+        "file": "splitties-resources-release.aar",
+        "bytes": 25138,
+        "sha256": "8a688307726fb2b8ebfbadfe320da4590ca9e5115d8d620286d78a83829fa8e4",
+        "pom_file": "splitties-resources-android-3.0.0.pom",
+        "pom_sha256": "2acd33bb8cd5972fc81753f25f94bb2068923c1a4d605afb4ef4b3758a9e6073",
+        "pom_license_sources": [
+            {
+                "file": "splitties-resources-android-3.0.0.pom",
+                "sha256": "2acd33bb8cd5972fc81753f25f94bb2068923c1a4d605afb4ef4b3758a9e6073"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-systemservices-android:3.0.0",
+        "file": "splitties-systemservices-release.aar",
+        "bytes": 8883,
+        "sha256": "b6dc514b74317afc509bd1d6db9926967b1f9a939166f21a2ec884f975337ccc",
+        "pom_file": "splitties-systemservices-android-3.0.0.pom",
+        "pom_sha256": "bce047e574bcfed604f861e540f1a7fbde58d4ee695686a5e2f2dc5004681932",
+        "pom_license_sources": [
+            {
+                "file": "splitties-systemservices-android-3.0.0.pom",
+                "sha256": "bce047e574bcfed604f861e540f1a7fbde58d4ee695686a5e2f2dc5004681932"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-android:3.0.0",
+        "file": "splitties-views-release.aar",
+        "bytes": 27746,
+        "sha256": "4d8ac75fe921d4e422136a6524f709349fe9204af1f313a6c3360e496e5d02a6",
+        "pom_file": "splitties-views-android-3.0.0.pom",
+        "pom_sha256": "a7de982a970f5fe5c1bb56edb8569db4bf9745c6a282b2cf9a272a5c49160020",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-android-3.0.0.pom",
+                "sha256": "a7de982a970f5fe5c1bb56edb8569db4bf9745c6a282b2cf9a272a5c49160020"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-dsl-android:3.0.0",
+        "file": "splitties-views-dsl-release.aar",
+        "bytes": 160265,
+        "sha256": "9924ee4034f1b22f923d74f9c6c89cf10f0fde3af1d9bd367ae99eb3f4b2aab2",
+        "pom_file": "splitties-views-dsl-android-3.0.0.pom",
+        "pom_sha256": "94ada3d5b05e6a9bf1d1ae097757d2a3eabf6783f07e251cc9fa6e0a8101b350",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-dsl-android-3.0.0.pom",
+                "sha256": "94ada3d5b05e6a9bf1d1ae097757d2a3eabf6783f07e251cc9fa6e0a8101b350"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-dsl-constraintlayout-android:3.0.0",
+        "file": "splitties-views-dsl-constraintlayout-release.aar",
+        "bytes": 43199,
+        "sha256": "4d28762e47666805981d958339f1c518000413b0a58f430028c3489d24953e36",
+        "pom_file": "splitties-views-dsl-constraintlayout-android-3.0.0.pom",
+        "pom_sha256": "793fd683e61995b8a57f5b97a0dd273d0a21f320fb8a397188b91c34d6d2c1b9",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-dsl-constraintlayout-android-3.0.0.pom",
+                "sha256": "793fd683e61995b8a57f5b97a0dd273d0a21f320fb8a397188b91c34d6d2c1b9"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-dsl-coordinatorlayout-android:3.0.0",
+        "file": "splitties-views-dsl-coordinatorlayout-release.aar",
+        "bytes": 9528,
+        "sha256": "fec9778c967517f1c434a70191c70ee1ada28568c864bd1895ee39321ea3d1e4",
+        "pom_file": "splitties-views-dsl-coordinatorlayout-android-3.0.0.pom",
+        "pom_sha256": "ca69eb1e4e94de4831675993983e9812c642190d8a8ee17eba018409403a2a2c",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-dsl-coordinatorlayout-android-3.0.0.pom",
+                "sha256": "ca69eb1e4e94de4831675993983e9812c642190d8a8ee17eba018409403a2a2c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-dsl-recyclerview-android:3.0.0",
+        "file": "splitties-views-dsl-recyclerview-release.aar",
+        "bytes": 17250,
+        "sha256": "f893dc074fc2cce5a3a542a83fd5a05723e9bf47f7f667923d47315483ce8c26",
+        "pom_file": "splitties-views-dsl-recyclerview-android-3.0.0.pom",
+        "pom_sha256": "40fb84300e0b151956c46ae06a8dd0b551b25d4b7a9f9769fef0e277ffcc413e",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-dsl-recyclerview-android-3.0.0.pom",
+                "sha256": "40fb84300e0b151956c46ae06a8dd0b551b25d4b7a9f9769fef0e277ffcc413e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.louiscad.splitties:splitties-views-recyclerview-android:3.0.0",
+        "file": "splitties-views-recyclerview-release.aar",
+        "bytes": 10436,
+        "sha256": "13602d076194165cdf93b14788c5bf2f61638bbdc42469cb8b44ef27d2f380eb",
+        "pom_file": "splitties-views-recyclerview-android-3.0.0.pom",
+        "pom_sha256": "b63635a7fb201d1781811adfc8b3a91aae17dea6ad3cd1ed65da4cda76361d2f",
+        "pom_license_sources": [
+            {
+                "file": "splitties-views-recyclerview-android-3.0.0.pom",
+                "sha256": "b63635a7fb201d1781811adfc8b3a91aae17dea6ad3cd1ed65da4cda76361d2f"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.mikepenz:aboutlibraries-core-android:14.0.1",
+        "file": "aboutlibraries-core.aar",
+        "bytes": 54265,
+        "sha256": "8c9279399f51201c865c952edf2c6e8d5f57a42c9a3a8346d1e3a2ef163996e0",
+        "pom_file": "aboutlibraries-core-android-14.0.1.pom",
+        "pom_sha256": "b99c5427ec29df503458e53487c494682663705c2ca24fe3354752a2a02bb70a",
+        "pom_license_sources": [
+            {
+                "file": "aboutlibraries-core-android-14.0.1.pom",
+                "sha256": "b99c5427ec29df503458e53487c494682663705c2ca24fe3354752a2a02bb70a"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.mikepenz:community-material-typeface:7.0.96.1-kotlin",
+        "file": "community-material-typeface-7.0.96.1-kotlin.aar",
+        "bytes": 807108,
+        "sha256": "b363d060c4f7e173f9fba3af76c82df6bca2bdd2be3c6a9edeb41a724f294c21",
+        "pom_file": "community-material-typeface-7.0.96.1-kotlin.pom",
+        "pom_sha256": "d336187fb4ad30834b336fbe1771781ab9a915787092f12591aa32d13505d589",
+        "pom_license_sources": [
+            {
+                "file": "community-material-typeface-7.0.96.1-kotlin.pom",
+                "sha256": "d336187fb4ad30834b336fbe1771781ab9a915787092f12591aa32d13505d589"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.mikepenz:iconics-core:5.4.0",
+        "file": "iconics-core-5.4.0.aar",
+        "bytes": 185732,
+        "sha256": "2ae469c3731dba7c7ba210688c603fe8732eb3d65d0f005de1f2907c0acefc86",
+        "pom_file": "iconics-core-5.4.0.pom",
+        "pom_sha256": "4a0afd7863724747dd702ca359492db5e4b64fd9a9c977b0a40a921d22bebbfb",
+        "pom_license_sources": [
+            {
+                "file": "iconics-core-5.4.0.pom",
+                "sha256": "4a0afd7863724747dd702ca359492db5e4b64fd9a9c977b0a40a921d22bebbfb"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "com.mikepenz:iconics-typeface-api:5.5.0-b01",
+        "file": "iconics-typeface-api-5.5.0-b01.aar",
+        "bytes": 11404,
+        "sha256": "258b2b1daee3fc1ea3d114ae48fb2005c8e58f5b6e61c1d91daf0c2ce654fc0d",
+        "pom_file": "iconics-typeface-api-5.5.0-b01.pom",
+        "pom_sha256": "ff13485e8524339bcc5f2a6e8136cb899d1cc36269433b150068c0b1cc97748e",
+        "pom_license_sources": [
+            {
+                "file": "iconics-typeface-api-5.5.0-b01.pom",
+                "sha256": "ff13485e8524339bcc5f2a6e8136cb899d1cc36269433b150068c0b1cc97748e"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.4.1",
+        "file": "BaseRecyclerViewAdapterHelper4-4.4.1.aar",
+        "bytes": 124845,
+        "sha256": "83111c61f8d23e6e02b69d134062843ccce204e7cac037c6fb3e3512afefc6c6",
+        "pom_file": "BaseRecyclerViewAdapterHelper4-4.4.1.pom",
+        "pom_sha256": "98aa63bc2975f8affe9005feae709341923e3da3491f72e3e5be163548a859ae",
+        "pom_license_sources": [
+            {
+                "file": "BaseRecyclerViewAdapterHelper4-4.4.1.pom",
+                "sha256": "98aa63bc2975f8affe9005feae709341923e3da3491f72e3e5be163548a859ae"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The MIT License",
+                "url": "https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/LICENSE"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlin:kotlin-parcelize-runtime:2.3.21",
+        "file": "kotlin-parcelize-runtime-2.3.21.jar",
+        "bytes": 14333,
+        "sha256": "a21d5f85475efb27f17dd97d1a289d64874f2ddfdb508ea484477a4cf1afe969",
+        "pom_file": "kotlin-parcelize-runtime-2.3.21.pom",
+        "pom_sha256": "5f2e4485cffba36f04aac055f2a830151133d95074f5f1b589c56109a4b9b407",
+        "pom_license_sources": [
+            {
+                "file": "kotlin-parcelize-runtime-2.3.21.pom",
+                "sha256": "5f2e4485cffba36f04aac055f2a830151133d95074f5f1b589c56109a4b9b407"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.0",
+        "file": "kotlin-stdlib-jdk7-2.0.0.jar",
+        "bytes": 961,
+        "sha256": "dd958064f946b01f745365c2efa11e4c5812a22e26b6caa4433f207fb5b4a5c5",
+        "pom_file": "kotlin-stdlib-jdk7-2.0.0.pom",
+        "pom_sha256": "1ea14bf50d37b24cee99b3bbeca0e24a07ff361d906bb20067cf41606e143096",
+        "pom_license_sources": [
+            {
+                "file": "kotlin-stdlib-jdk7-2.0.0.pom",
+                "sha256": "1ea14bf50d37b24cee99b3bbeca0e24a07ff361d906bb20067cf41606e143096"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0",
+        "file": "kotlin-stdlib-jdk8-2.0.0.jar",
+        "bytes": 967,
+        "sha256": "92035a0fa8b97a97bb430d30ba03e5ad51f4cfa839cf1559e55245cba735aa94",
+        "pom_file": "kotlin-stdlib-jdk8-2.0.0.pom",
+        "pom_sha256": "afe5006f9d2bb7a26a1f1b92b007a871be26dd82fadbbb2cca9f3757534c5b83",
+        "pom_license_sources": [
+            {
+                "file": "kotlin-stdlib-jdk8-2.0.0.pom",
+                "sha256": "afe5006f9d2bb7a26a1f1b92b007a871be26dd82fadbbb2cca9f3757534c5b83"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlin:kotlin-stdlib:2.4.0",
+        "file": "kotlin-stdlib-2.4.0.jar",
+        "bytes": 1841929,
+        "sha256": "ccb14ff83fabcb11458b798dbc9824748ccdffeec79c9aba789e6ed1cda86b1c",
+        "pom_file": "kotlin-stdlib-2.4.0.pom",
+        "pom_sha256": "8194ff79a9ee24a7fa3f74a6b179c04a1859de8b987a4f0983056e59451721de",
+        "pom_license_sources": [
+            {
+                "file": "kotlin-stdlib-2.4.0.pom",
+                "sha256": "8194ff79a9ee24a7fa3f74a6b179c04a1859de8b987a4f0983056e59451721de"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2",
+        "file": "kotlinx-coroutines-android-1.10.2.jar",
+        "bytes": 17826,
+        "sha256": "e713f1f874244115a07571065cffa0f24f5e78300e9720fea16de3af1d75fd41",
+        "pom_file": "kotlinx-coroutines-android-1.10.2.pom",
+        "pom_sha256": "b92d3672e7f9e8f4c4e2ab187c3e31fecc506496396f4a5f27ee1c957a42b319",
+        "pom_license_sources": [
+            {
+                "file": "kotlinx-coroutines-android-1.10.2.pom",
+                "sha256": "b92d3672e7f9e8f4c4e2ab187c3e31fecc506496396f4a5f27ee1c957a42b319"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.10.2",
+        "file": "kotlinx-coroutines-core-jvm-1.10.2.jar",
+        "bytes": 1479317,
+        "sha256": "5ca175b38df331fd64155b35cd8cae1251fa9ee369709b36d42e0a288ccce3fd",
+        "pom_file": "kotlinx-coroutines-core-jvm-1.10.2.pom",
+        "pom_sha256": "658f576b96c832e7382406adb197d64d8e2e97de10e96dfa3700decfa2a60def",
+        "pom_license_sources": [
+            {
+                "file": "kotlinx-coroutines-core-jvm-1.10.2.pom",
+                "sha256": "658f576b96c832e7382406adb197d64d8e2e97de10e96dfa3700decfa2a60def"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.10.0",
+        "file": "kotlinx-serialization-core-jvm-1.10.0.jar",
+        "bytes": 403584,
+        "sha256": "14d6f27ce28f61ebc4a516d562f911b7bc01cfbe5397fb884c45ea0db044c635",
+        "pom_file": "kotlinx-serialization-core-jvm-1.10.0.pom",
+        "pom_sha256": "5c4c0c8010042b7f542ab484dea8a3687b96c20944e72c063eac16a2739ad8e4",
+        "pom_license_sources": [
+            {
+                "file": "kotlinx-serialization-core-jvm-1.10.0.pom",
+                "sha256": "5c4c0c8010042b7f542ab484dea8a3687b96c20944e72c063eac16a2739ad8e4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.10.0",
+        "file": "kotlinx-serialization-json-jvm-1.10.0.jar",
+        "bytes": 279729,
+        "sha256": "af1e3e1e8ee3176468e1ec729df853b2066071de94a84c412ad9fa135cb37f3a",
+        "pom_file": "kotlinx-serialization-json-jvm-1.10.0.pom",
+        "pom_sha256": "786ca9c81c3c7ec53d924bb236a008f214c2c096d1317dc9f7b378ecd10fd5cd",
+        "pom_license_sources": [
+            {
+                "file": "kotlinx-serialization-json-jvm-1.10.0.pom",
+                "sha256": "786ca9c81c3c7ec53d924bb236a008f214c2c096d1317dc9f7b378ecd10fd5cd"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache-2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jetbrains:annotations:23.0.0",
+        "file": "annotations-23.0.0.jar",
+        "bytes": 29371,
+        "sha256": "7b0f19724082cbfcbc66e5abea2b9bc92cf08a1ea11e191933ed43801eb3cd05",
+        "pom_file": "annotations-23.0.0.pom",
+        "pom_sha256": "c9490f655132328df2cfbcfdf743f53fc3916d6c1d10437175a6ca6e3a67771c",
+        "pom_license_sources": [
+            {
+                "file": "annotations-23.0.0.pom",
+                "sha256": "c9490f655132328df2cfbcfdf743f53fc3916d6c1d10437175a6ca6e3a67771c"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache Software License, Version 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.jspecify:jspecify:1.0.0",
+        "file": "jspecify-1.0.0.jar",
+        "bytes": 3819,
+        "sha256": "1fad6e6be7557781e4d33729d49ae1cdc8fdda6fe477bb0cc68ce351eafdfbab",
+        "pom_file": "jspecify-1.0.0.pom",
+        "pom_sha256": "cdab929a3b95211f43d2090c5e2d0dfe8465960e378bc32b35841dab324433a6",
+        "pom_license_sources": [
+            {
+                "file": "jspecify-1.0.0.pom",
+                "sha256": "cdab929a3b95211f43d2090c5e2d0dfe8465960e378bc32b35841dab324433a6"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "The Apache License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.kodein.di:kodein-di-jvm:7.33.0",
+        "file": "kodein-di-jvm-7.33.0.jar",
+        "bytes": 1974140,
+        "sha256": "e1c2445eb3b943860133eddaa462885a018778584cf1423353f97914cdcc2905",
+        "pom_file": "kodein-di-jvm-7.33.0.pom",
+        "pom_sha256": "580dfd8c13053626f5a8d8292f31846932bde6ba4c22e69919e198bb3f658d58",
+        "pom_license_sources": [
+            {
+                "file": "kodein-di-jvm-7.33.0.pom",
+                "sha256": "580dfd8c13053626f5a8d8292f31846932bde6ba4c22e69919e198bb3f658d58"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "MIT",
+                "url": "https://opensource.org/licenses/MIT"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.kodein.type:kaverit-android:2.14.0",
+        "file": "kaverit.aar",
+        "bytes": 55326,
+        "sha256": "bee06735d9a887c30097f36d306107c2aeece13670f7218be72be8799d688255",
+        "pom_file": "kaverit-android-2.14.0.pom",
+        "pom_sha256": "e27a7c609d1becef5b3380e59394e000a6dc536b430bd88815528a8ad22bce93",
+        "pom_license_sources": [
+            {
+                "file": "kaverit-android-2.14.0.pom",
+                "sha256": "e27a7c609d1becef5b3380e59394e000a6dc536b430bd88815528a8ad22bce93"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "MIT",
+                "url": "https://opensource.org/licenses/MIT"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "org.yaml:snakeyaml:2.6",
+        "file": "snakeyaml-2.6.jar",
+        "bytes": 340068,
+        "sha256": "c8f7a98e7394adda02f6317249710e4d1b4c7a25aa8c7eace0c2eea52eb8bf85",
+        "pom_file": "snakeyaml-2.6.pom",
+        "pom_sha256": "2773b0e948964d21e37b0e1dcf39025e627b873e0ce6aa2a47e23c374303e0c4",
+        "pom_license_sources": [
+            {
+                "file": "snakeyaml-2.6.pom",
+                "sha256": "2773b0e948964d21e37b0e1dcf39025e627b873e0ce6aa2a47e23c374303e0c4"
+            }
+        ],
+        "pom_licenses": [
+            {
+                "name": "Apache License, Version 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        ],
+        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
+    },
+    {
+        "component": "project :state",
+        "file": "state.jar",
+        "bytes": 91377,
+        "sha256": "bbf6fe5ce529a65a9df1f14b6408fb5c55e67a266672f8f37b0d805daccccd52",
+        "pom_file": null,
+        "pom_sha256": null,
+        "pom_license_sources": [
+
+        ],
+        "pom_licenses": [
+
+        ],
+        "scope": "local project code"
+    }
+]

@@ -6,7 +6,6 @@ package com.osfans.trime.data.prefs
 
 import android.os.Bundle
 import androidx.annotation.CallSuper
-import androidx.annotation.Keep
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.Preference
 import androidx.preference.PreferenceScreen
@@ -19,7 +18,7 @@ abstract class PreferenceDelegateFragment(
     private val visibility = mutableMapOf<String, Boolean>()
 
     // it would be better to declare the dependency relationship, rather than reevaluating on each value changed
-    @Keep
+
     private val onValueChangeListener = PreferenceDelegateProvider.OnChangeListener {
         evaluateVisibility()
     }

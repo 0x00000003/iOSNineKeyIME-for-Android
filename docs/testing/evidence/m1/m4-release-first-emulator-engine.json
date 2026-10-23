@@ -1,0 +1,8 @@
+{
+  "pass": false,
+  "scope": "instrumentation assertions failed; no stale result consumed",
+  "tested_apk_sha256": "0f17a0f68271f7f83e7484be9c82e1895e52008c7ca254de1feef414f5d779e3",
+  "tested_test_apk_sha256": "31c08d3f0fb0cc135e91361d0571f2da9f72b529e6c33c708ef78a23eb155222",
+  "requested_scope": "engine",
+  "variant": "release"
+}

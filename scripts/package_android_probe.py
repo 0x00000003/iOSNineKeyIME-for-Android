@@ -114,7 +114,7 @@ def license_for(path):
  if path.name=='LICENSE.octagram-data':return 'LGPL-3.0'
  if path.name in ['NOTICE.txt','model-info.json']:return 'project attribution'
  return 'CC-BY-4.0'
-manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-4-model' if model else 'probe-3' if args.prebuilt else 'probe-2',
+manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-5-offline-lua' if model else 'probe-3' if args.prebuilt else 'probe-2',
           'source_asset':659385471,'source_sha256':'4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a',
           'archive_sha256':digest,'archive_bytes':archive.stat().st_size,
           'model':bool(model),'upstream_lua':False,

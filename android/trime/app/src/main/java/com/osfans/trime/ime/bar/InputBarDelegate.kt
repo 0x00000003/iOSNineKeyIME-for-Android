@@ -15,7 +15,6 @@ import android.view.inputmethod.InlineSuggestion
 import android.view.inputmethod.InlineSuggestionsResponse
 import android.widget.ViewAnimator
 import android.widget.inline.InlineContentView
-import androidx.annotation.Keep
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
@@ -84,7 +83,6 @@ class InputBarDelegate : InputBroadcastReceiver {
     private var isClipboardFresh: Boolean = false
     private var isInlineSuggestionPresent: Boolean = false
 
-    @Keep
     private val onClipboardUpdateListener = ClipboardHelper.OnClipboardUpdateListener {
         if (!clipboardSuggestion) return@OnClipboardUpdateListener
         service.lifecycleScope.launch {

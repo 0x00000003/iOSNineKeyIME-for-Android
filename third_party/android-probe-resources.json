@@ -1,10 +1,10 @@
 {
   "scope": "M1 compatibility APK only, NOT full product pack",
-  "version": "probe-4-model",
+  "version": "probe-5-offline-lua",
   "source_asset": 659385471,
   "source_sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
-  "archive_sha256": "c50e359b72cb5364956bba3e78b2afb6b88f291cd9a68d3be00b68a42a607c07",
-  "archive_bytes": 24405891,
+  "archive_sha256": "a51758a5b638bff70d129fd08ec47d56d67c7ff6b391e98aac870e246973f10e",
+  "archive_bytes": 24406009,
   "model": true,
   "upstream_lua": false,
   "model_asset": {
@@ -86,8 +86,8 @@
     },
     {
       "path": "lua/ime_probe.lua",
-      "sha256": "0729085f08283f45b1ce084d393ea64aeb52ec6ed92c38c2f155038eca98c433",
-      "bytes": 265,
+      "sha256": "4d0c86942605d79c8e3291112084026e87b5086c75d36494a58287508b438d1e",
+      "bytes": 588,
       "license": "GPL-3.0-or-later"
     },
     {

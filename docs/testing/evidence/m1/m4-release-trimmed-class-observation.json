@@ -1,0 +1,11 @@
+{
+  "scope": "R8 mapped class observation after exact JNI keep rules; NOT a runtime/no-network certification",
+  "apk_sha256": "ab0173820ae2a2e3f26752993258b57f18ac2d6825cb48c428501882771acc25",
+  "class_present": {
+    "com.osfans.trime.ime.core.TrimeInputMethodService": true,
+    "com.osfans.trime.daemon.RimeDaemon": true,
+    "com.osfans.trime.data.sync.RimeDataSync": true,
+    "com.osfans.trime.data.base.DataManager": true,
+    "dev.local.iosninekeyime.ime.NineKeyInputMethodService": true
+  }
+}

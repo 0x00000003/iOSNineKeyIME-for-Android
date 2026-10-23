@@ -1,0 +1,33 @@
+{
+  "scope": "own offline notice UI and cancel-only clear confirmation; NOT full license audit or production learning erase",
+  "bundle_sha_matches_pin": true,
+  "all_notice_text_hashes_match": true,
+  "notice_count": 43,
+  "dependency_count": 138,
+  "plain_text_dialog_visible": true,
+  "explicit_clear_confirmation_present": true,
+  "clear_dialog_cancelled": true,
+  "production_clear_not_executed": true,
+  "system_ime_settings_not_opened": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "d284e0c0716f4fdda600222c8ba4979f",
+  "tested_apk_sha256": "f6b2acdc9166a92fd198c58efdcd2780f195f972e1e18ef5227637dcf2858011",
+  "tested_test_apk_sha256": "6a036e2c74ca5fb34726d4cb8623de5c836855ef0145ece5627e363a1415bbb5",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "settings",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

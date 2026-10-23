@@ -1,0 +1,17 @@
+{
+  "scope": "ELF undefined-symbol observation ONLY; not reachability, no-network or full security proof",
+  "library_sha256": "9e4cc863ac5d893790e9ccc52c0d108319e8a2e834d9b7e7f473f9a23ab92240",
+  "observed_relevant_imports": [
+    "dlopen",
+    "fopen",
+    "open",
+    "openat",
+    "opendir",
+    "openlog",
+    "popen",
+    "rename",
+    "system",
+    "unlink",
+    "unlinkat"
+  ]
+}

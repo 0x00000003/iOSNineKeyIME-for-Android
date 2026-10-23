@@ -1,0 +1,13 @@
+{
+  "scope": "R8 mapped defined-class observation after disabled unused reflection/sync roots; NOT full runtime security proof",
+  "apk_sha256": "03118601801e37b20527f65da02bef1a279dfe8790a482e63a2d3ccd1db1abc5",
+  "class_present": {
+    "com.osfans.trime.ime.core.TrimeInputMethodService": false,
+    "com.osfans.trime.daemon.RimeDaemon": false,
+    "com.osfans.trime.data.sync.RimeDataSync": false,
+    "com.osfans.trime.data.base.DataManager": false,
+    "com.osfans.trime.data.db.ClipboardHelper": false,
+    "com.osfans.trime.worker.BackgroundSyncWork": true,
+    "dev.local.iosninekeyime.ime.NineKeyInputMethodService": true
+  }
+}

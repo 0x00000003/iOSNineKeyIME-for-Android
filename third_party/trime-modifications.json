@@ -15,7 +15,7 @@
     {
       "path": "app/build.gradle.kts",
       "upstream_sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
-      "modified_sha256": "95840c381e78b8b25ed4d2a77c0b7d49a7eeac53f627b25b050fdf00ebcb45b0"
+      "modified_sha256": "af61f91a58cedfd8ce03b68770031dde01b7eaf56493d8c9898afaaade75b10b"
     },
     {
       "path": "app/licenses/libraries/librime.json",
@@ -23,9 +23,14 @@
       "modified_sha256": "151480515275b251c7e819b76dba7691bf810af18561c2d8c0b6d28ed179182a"
     },
     {
+      "path": "app/proguard-rules.pro",
+      "upstream_sha256": "fd1c85fbeb714effe51486df32b0dc6b0985ee99871878e1f98b6a0b3fe579f7",
+      "modified_sha256": "15a38f9e7ee2d73b657d39d3b1471063536ba25589563e464476a8672a6b1a6a"
+    },
+    {
       "path": "app/src/main/AndroidManifest.xml",
       "upstream_sha256": "2ddc51e4df8026d06cbf64f480b2db3f23924e54c8a53091d53b49df25586a31",
-      "modified_sha256": "8a544d46c0d83b53267ea17d23a84cef3db6853e2d2dd5463831f3b332dc21c4"
+      "modified_sha256": "6264daefc4ee82b28f113fea8e7112204350525042bd3b6903ebcbd795b77473"
     },
     {
       "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",
@@ -38,14 +43,44 @@
       "modified_sha256": "271d8025b10d08366b968c451a545d3e37d2a21a477403d9c75c4372a9215471"
     },
     {
+      "path": "app/src/main/java/com/osfans/trime/data/db/ClipboardHelper.kt",
+      "upstream_sha256": "f3ac96bb9075eef343cb4a49157115bacb9b61291d45fa5e2eced28d7ed2dba0",
+      "modified_sha256": "c9c97806d05464229372b455a253b9c04c6c4acca6c5639a4fadfded1ffd9e33"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/AppPrefs.kt",
+      "upstream_sha256": "275ef8221938fcf3abcc1953f45592e3bb7dbd07be834d8bf329d8d9525eb74b",
+      "modified_sha256": "30e9b2855503766242c215ea79c920af451cfbdada292ad2da7066ff5c6c4fae"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/prefs/PreferenceDelegateFragment.kt",
+      "upstream_sha256": "f60bbc33f26c51314a69e85f98bff5ec97f8339d84e4b18f5882ef08e11cc2c3",
+      "modified_sha256": "8b459f390b26432e72db71b246cd8b307578f2018ba04f3d697c5294ba0e2616"
+    },
+    {
       "path": "app/src/main/java/com/osfans/trime/data/theme/model/GeneralStyle.kt",
       "upstream_sha256": "347b97d14ed260ec51e5cf0fc5634bec599a23c7bcdf1580e96d0c10514fb663",
       "modified_sha256": "973c7e424c014e2e6226873901e66a675cbb93c52caf59d1840056a4f81b3b1b"
     },
     {
+      "path": "app/src/main/java/com/osfans/trime/ime/bar/InputBarDelegate.kt",
+      "upstream_sha256": "c7cac328cef13c0605553425ac9d9af3eaa8790d28a24f7bcc54bf4104c8eb67",
+      "modified_sha256": "e4e6b1dd69fd355ac34418ba74f3baaf2d5a62e346042bd05dfe1cde659e3edc"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/core/TrimeInputMethodService.kt",
+      "upstream_sha256": "82662651d740167556bb0ce262e31077fb4e6bad7330e492e27179c72756abc5",
+      "modified_sha256": "43d816f3c3c72756846ca4f738a2edf2ca079b1d629a46edb66b0a4d76876378"
+    },
+    {
       "path": "app/src/main/java/com/osfans/trime/ime/keyboard/InputFeedbackManager.kt",
       "upstream_sha256": "d12a0f4fd5f4939f65a7c85de99357d142417312842b8ab1ed1f45fdeb409c02",
       "modified_sha256": "52a31f57e421dfa61a30c7c18a3f12420cfdaecddd1fc1e7819beaef446be39a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/main/settings/AdvancedSettingsFragment.kt",
+      "upstream_sha256": "6cdb3f7e71ffa2818974096ad2a61577c0194e38237bdccb90ac74cce4fee900",
+      "modified_sha256": "e933a8016582251e11ec1de3010ebde8e3ef5332f24c5860c57f0e4cb5e1b684"
     },
     {
       "path": "app/src/main/java/com/osfans/trime/ui/setup/SetupActivity.kt",
@@ -58,9 +93,39 @@
       "modified_sha256": "b505a360cf4b04d8e21427fbf2219d991f00fff697ee6d2e7704a16eef0528e7"
     },
     {
+      "path": "app/src/main/java/com/osfans/trime/worker/BackgroundSyncWork.kt",
+      "upstream_sha256": "c362158639bc57ad8628ac0cd139489217715ed51c906b3e832c95d663559d9c",
+      "modified_sha256": "a2a7031f4721614e61d6deb2173b1ee90ef9dfa0470dce3abd96a54f0c5e56fd"
+    },
+    {
       "path": "app/src/main/jni/CMakeLists.txt",
       "upstream_sha256": "b9acb57cd5ec8e2b3204c4cff1ff9d7fb799679747fd5052cee8b172b8ed8f47",
-      "modified_sha256": "aeacac5895f03b6176bc07a31ae41069f46c17431fa6085176abe22d1a3667e4"
+      "modified_sha256": "45d43ba386f9297a5b532d85f18c50e60128babda99aff657eca73a7db17d024"
+    },
+    {
+      "path": "app/src/main/jni/librime-lua/CMakeLists.txt",
+      "upstream_sha256": "e0ec903aabf8bd0264bac3cd6c2abcda86bac6d3a4dafdb76230d8f91c24049c",
+      "modified_sha256": "33374982a739bac7dc795e46aacf53daf5f45e94a9ff29bb6664b48d2764b924"
+    },
+    {
+      "path": "app/src/main/jni/librime-lua/src/lib/lua.cc",
+      "upstream_sha256": "a81f77f9138f09be2cc52d18935ac58340bdf999aae408d6f5cc04ebce898d81",
+      "modified_sha256": "c367dbf7a301ec9546162402586aae73f1dd5344d8a1681f81a9a8230b897555"
+    },
+    {
+      "path": "app/src/main/jni/librime-lua/src/modules.cc",
+      "upstream_sha256": "811ae6d2c78d8a44758d7ab25e6c8b93abc64b1da0228e2a0809640dc07d6324",
+      "modified_sha256": "8cb3713acd1e09ac6b97570776200feec0a10ddc3a5dd6fdfe96f226f47c9002"
+    },
+    {
+      "path": "app/src/main/jni/librime-octagram/src/octagram.cc",
+      "upstream_sha256": "0dfe54e4fab36b733699b334f96801f6872a47f63cb1be68f5c256a6e256e11d",
+      "modified_sha256": "c1c4d9c195db6e806cf0b892ea0a0a3283298b2fd98948ff45dfcbc10c783b32"
+    },
+    {
+      "path": "app/src/main/jni/librime-octagram/src/octagram.h",
+      "upstream_sha256": "018772555e6574120814585f9757b3377e1a0712535ff1c5be3936b24e9087d6",
+      "modified_sha256": "383f6338faf55c3b4750f56f08504685fcd153a271c87ce5c2a9090aa37c2661"
     },
     {
       "path": "app/src/main/jni/librime_jni/rime_jni.cc",
@@ -106,16 +171,6 @@
       "path": "settings.gradle.kts",
       "upstream_sha256": "838b3e835668d37c40ae5ceee661a8fbd5d169c32933a790ed61771451183349",
       "modified_sha256": "cc35abf1e0dbf781fa875d6698ecc1c817b61678e75088e4e70c668d486f0e89"
-    },
-    {
-      "path": "app/src/main/jni/librime-octagram/src/octagram.cc",
-      "upstream_sha256": "0dfe54e4fab36b733699b334f96801f6872a47f63cb1be68f5c256a6e256e11d",
-      "modified_sha256": "c1c4d9c195db6e806cf0b892ea0a0a3283298b2fd98948ff45dfcbc10c783b32"
-    },
-    {
-      "path": "app/src/main/jni/librime-octagram/src/octagram.h",
-      "upstream_sha256": "018772555e6574120814585f9757b3377e1a0712535ff1c5be3936b24e9087d6",
-      "modified_sha256": "383f6338faf55c3b4750f56f08504685fcd153a271c87ce5c2a9090aa37c2661"
     }
   ]
 }

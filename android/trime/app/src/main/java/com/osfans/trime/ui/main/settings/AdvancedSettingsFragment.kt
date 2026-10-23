@@ -9,7 +9,6 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.annotation.Keep
 import androidx.appcompat.app.AppCompatDelegate
 import com.osfans.trime.data.prefs.AppPrefs
 import com.osfans.trime.data.prefs.PreferenceDelegate
@@ -21,7 +20,6 @@ class AdvancedSettingsFragment : PreferenceDelegateFragment(AppPrefs.defaultInst
 
     private val showAppIcon = AppPrefs.defaultInstance().advanced.showAppIcon
 
-    @Keep
     private val onUiModeChange = PreferenceDelegate.OnChangeListener<AppPrefs.Advanced.UiMode> { _, v ->
         val mode = when (v) {
             AppPrefs.Advanced.UiMode.AUTO -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
@@ -31,7 +29,6 @@ class AdvancedSettingsFragment : PreferenceDelegateFragment(AppPrefs.defaultInst
         AppCompatDelegate.setDefaultNightMode(mode)
     }
 
-    @Keep
     private val onShowAppIconChange = PreferenceDelegate.OnChangeListener<Boolean> { _, v ->
         showAppIcon(requireContext(), v)
     }

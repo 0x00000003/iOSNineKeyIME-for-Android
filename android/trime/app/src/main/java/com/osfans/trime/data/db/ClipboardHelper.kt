@@ -8,7 +8,6 @@ package com.osfans.trime.data.db
 import android.content.ClipboardManager
 import android.content.Context
 import android.os.Build
-import androidx.annotation.Keep
 import androidx.room.Room
 import androidx.room.withTransaction
 import com.osfans.trime.data.prefs.AppPrefs
@@ -58,7 +57,6 @@ object ClipboardHelper :
 
     private val enabledPref = clipPref.clipboardListening
 
-    @Keep
     private val enabledListener = PreferenceDelegate.OnChangeListener<Boolean> { _, value ->
         if (value) {
             clipboardManager.addPrimaryClipChangedListener(this)
@@ -69,7 +67,6 @@ object ClipboardHelper :
 
     private val limitPref = clipPref.clipboardLimit
 
-    @Keep
     private val limitListener = PreferenceDelegate.OnChangeListener<Int> { _, _ ->
         launch { removeOutdated() }
     }

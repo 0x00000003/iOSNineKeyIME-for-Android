@@ -1,5 +1,9 @@
 # 当前状态
 
+最新：M4 WIP，优化且非debuggable的本地签名release引擎及R08/R09/R10/资源恢复两设备PASS，静态权限/实际备份XML PASS。release SHA256 `94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162`；这是本项目调试证书签名的验证制品，非正式M6发布。49 app/61 state JVM通过。R04依然FAIL，系统IME尚未由用户启用/切换，参考图BLOCKED，不能宣布应用完成、安全全通过或1:1。当前记录：[M4](testing/M4-20261023.md)。
+
+以下是历史检查点及追加结果，最新制品不可继承旧哈希成绩。
+
 日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`d9a8466`，本轮补丁见Git与下列记录；开发记录。
 
 | 项目 | 真实状态 | 证据/范围 |
@@ -47,3 +51,7 @@
 第七检查点最终（当前）：debug43cf6e699a83e89d2e367a122780350ab45e74552c94a461a7e2e243e45eb531 / test fc0c5fa34c41c012d539882449edc684e87b03dd6e563e1b9f79b6528aec66ff。同哈希两设备R08 Top5 99/100和19/20、R09十词2→1/restart1/clear2、R10上下文9/10改善及model-off不变，全部原控制断言通过；view/controller与损坏恢复同样两设备PASS。48 app/61 state JVM与两套lint PASS；unsigned release73a2031d仅静态/构建PASS。full两设备仍R04 FAIL，不能总括通过。第一次Pixel full安装ADB超时已标BLOCKED，按设备实际APK SHA匹配复用后重试执行，原R04如实复现；不是锁屏或替换测试结果。详见M3记录。
 
 下一步独立M4工作：接入已测的停止引擎/私有路径清学习按钮、离线来源许可界面、固定运行时清单与入口/持久层审计。服务未由用户启用，系统生命周期与多宿主继续BLOCKED/NOT_RUN；M5参考图与体验确认BLOCKED。不得用组件成绩宣布整体开发完成。
+
+第八检查点M4进行中：离线43许可原文/124确切运行时制品、清学习显式确认/取消路径、严格资源白名单与持租约修复已接入。Lua仅允许固定内置模块，移除IO/OS/package/debug等标准库及外部rime.lua；两设备policy/R08/R09/R10/controller/settings/resources分项PASS，full仍R04 FAIL。UID合成canary两设备0命中，只覆盖自己UID缓冲区；native本机路径标记0，release旧前端/daemon/同步/剪贴板已裁剪。49 app/61 state JVM与两套lint PASS。详见testing/M4-20261023.md，多个制品分别绑定，不把旧结果归到新哈希。当前正验证显式本地签名、优化且非debuggable的release引擎，默认release仍unsigned；尚无release运行成绩或完整安全通过。系统IME未启用、参考图缺失，不称开发完成。
+
+第八检查点最终追加：release94b9d40f/test31c08d3f在两设备原生引擎、固定质量/学习/上下文及资源恢复PASS，专用离线模拟器卸装后首装同APK native组件PASS；release旧前端roots仍未带回。debug9cdf03c8/test65eb60dc两设备完整回归native PASS而R04 FAIL，分项settings/resources/R08/R09/R10/controller/canary PASS，app UID canary前后0。49 app/61 state JVM和两套lint PASS、32工具测试PASS；默认unsigned release重建/对照正在收尾。M4依旧WIP，未启用IME与原图缺失不被组件成绩替代。

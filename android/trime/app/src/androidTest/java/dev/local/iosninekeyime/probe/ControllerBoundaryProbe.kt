@@ -167,8 +167,16 @@ object ControllerBoundaryProbe {
                 activity.editor.setText("12");activity.editor.setSelection(2)
             }
             Thread.sleep(600)
-            main {touch("delete",MotionEvent.ACTION_UP);result.put("view_hold_cancelled_on_new_field",activity.editor.text.toString()=="12");controller.end(4)}
-            val bools=listOf("view_touches_drive_jni","view_slide_out_cancel","view_hold_cancelled_on_new_field","fast_keys_preserved","single_commit_and_idle_punctuation","confirm_then_single_punctuation","cancel_drops_queued_input","new_private_field_rejects_old_candidate","probe_excluded_during_private_session","normal_profile_positive_userdb","normal_profile_unchanged_after_privacy_barrier","ended_field_ignores_input")
+            main {
+                touch("delete",MotionEvent.ACTION_UP)
+                result.put("view_hold_cancelled_on_new_field",activity.editor.text.toString()=="12")
+                val canary=JSONObject(instrumentation.context.assets.open("privacy-canary-v1.json").bufferedReader().use {it.readText()}).getString("text")
+                controller.submit(Event.Text(canary))
+                result.put("private_canary_reached_synthetic_host",activity.editor.text.toString()=="12"+canary)
+                result.put("normal_profile_unchanged_after_private_canary",before==ProbeFileSnapshot.fingerprint(profile))
+                controller.end(4)
+            }
+            val bools=listOf("private_canary_reached_synthetic_host","normal_profile_unchanged_after_private_canary","view_touches_drive_jni","view_slide_out_cancel","view_hold_cancelled_on_new_field","fast_keys_preserved","single_commit_and_idle_punctuation","confirm_then_single_punctuation","cancel_drops_queued_input","new_private_field_rejects_old_candidate","probe_excluded_during_private_session","normal_profile_positive_userdb","normal_profile_unchanged_after_privacy_barrier","ended_field_ignores_input")
             result.put("pass",reads==0 && bools.all {result.getBoolean(it)})
             return result
         } catch (_:Throwable) {

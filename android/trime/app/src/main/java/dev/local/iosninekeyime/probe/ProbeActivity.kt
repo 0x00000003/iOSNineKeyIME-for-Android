@@ -10,12 +10,14 @@ import android.view.View
 import java.util.concurrent.Executors
 
 class ProbeActivity : Activity() {
+    var clearConfirmation:android.app.AlertDialog?=null
+        private set
     private val worker = Executors.newSingleThreadExecutor()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val panel = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setPadding(24, 48, 24, 24) }
         val status = TextView(this).apply {
-            text = "M1 兼容性探针\n\n仅使用内置合成语料验证 Rime/JNI 与离线部署。尚非可日用键盘，未验收视觉、隐私模式或模型上下文。"
+            text = "离线九键 · 开发检查点\n\n仅使用内置合成语料验证 Rime/JNI 与离线部署。已有临时键盘服务与引擎组件测试，完整隐私、系统IME、视觉和发布验收仍未通过。"
             textSize = 18f
         }
         val run = Button(this).apply { text = "运行合成探针" }
@@ -55,9 +57,36 @@ class ProbeActivity : Activity() {
         panel.addView(status)
         panel.addView(run)
         panel.addView(repair)
+        panel.addView(Button(this).apply {
+            text="系统键盘设置（由你启用/切换）"
+            setOnClickListener {startActivity(android.content.Intent(android.provider.Settings.ACTION_INPUT_METHOD_SETTINGS))}
+        })
+        panel.addView(Button(this).apply {
+            text="离线来源与许可"
+            setOnClickListener {startActivity(android.content.Intent(this@ProbeActivity,dev.local.iosninekeyime.settings.OfflineNoticesActivity::class.java))}
+        })
+        panel.addView(Button(this).apply {
+            tag="clear-learning"
+            text="清空本应用的输入法学习"
+            setOnClickListener {
+                clearConfirmation?.dismiss()
+                clearConfirmation=android.app.AlertDialog.Builder(this@ProbeActivity).setTitle("清空本地学习？")
+                    .setMessage("仅删除本应用输入法的本地学习记录，不删除固定词典。此操作不可撤销，请先收起本键盘。")
+                    .setNegativeButton("取消",null).setPositiveButton("清空学习") {_,_->
+                        isEnabled=false
+                        worker.execute {
+                            var code:String?=null
+                            try{dev.local.iosninekeyime.privacy.LearningStore.clearNormal(applicationContext)}catch(error:Exception){code=ProbeFailureCode.from(error)}
+                            runOnUiThread {if(!isDestroyed){status.text=when(code){null->"本地学习已清空。固定词典保留。";"E_ENGINE_BUSY"->"请先收起本键盘，再重试清学习。";else->"清学习失败（$code），请保留测试记录。"};isEnabled=true}}
+                        }
+                    }.show()
+            }
+        })
         setContentView(panel)
     }
     override fun onDestroy() {
+        clearConfirmation?.dismiss()
+        clearConfirmation=null
         worker.shutdown()
         super.onDestroy()
     }

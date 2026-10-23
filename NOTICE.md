@@ -23,3 +23,7 @@ the model. Individual probe resources and attribution are listed in
 `third_party/android-probe-resources.json`. No data-repository tool code is used.
 The APK's Java/native transitive dependency license audit remains incomplete;
 source inclusion or successful compilation does not close that gate.
+
+## M4 本地派生增量（2026-10-23）
+
+离线许可bundle由third_party/offline-notice-sources.json固定43个原文及SHA，来源文本保留原版权；实际运行时制品清单在third_party/runtime-inventory-release.json（POM/parent SHA与发布者许可声明）。BRAVH/Kodein/Kaverit精确版本MIT原文见docs/reference/upstream/maven-mit，Boost正文同目录boost。新设置/测试/生成器/严格公共资源验证沿用GPL-3.0-or-later。对Trime/Lua子模块修改：关闭旧同步worker，缩小R8旧前端roots，限制Lua标准库与固定内置模块，native编译去本地路径；完整逐文件变更SHA见third_party/trime-modifications.json。没有复制万象数据仓库未授权工具，没有打包Apple素材。完整对应源与分发审查仍WIP。

@@ -9,6 +9,7 @@ object NativeEngineLease {
         holder = owner
         return true
     }
+    @Synchronized internal fun requireOwner(owner:Any) { check(holder===owner) { "E_ENGINE_OWNER" } }
     @Synchronized fun release(owner: Any) {
         check(holder === owner) { "E_ENGINE_OWNER" }
         holder = null

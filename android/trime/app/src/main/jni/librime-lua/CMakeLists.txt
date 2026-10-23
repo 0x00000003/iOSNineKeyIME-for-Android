@@ -19,6 +19,8 @@ else()
   message(STATUS "Using in-tree lua source")
   include_directories(thirdparty/lua5.4)
   aux_source_directory(thirdparty/lua5.4 LUA_SRC)
+  # Project offline fork: excluded standard libraries are never linked/registered.
+  list(FILTER LUA_SRC EXCLUDE REGEX "/(liolib|loslib|ldblib|linit|loadlib)[.]c$")
   add_definitions(-DLUA_COMPAT_5_3)
   if(WIN32)
     set_property(SOURCE ${LUA_SRC} PROPERTY COMPILE_DEFINITIONS LUA_BUILD_AS_DLL)

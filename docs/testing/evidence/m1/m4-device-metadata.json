@@ -1,0 +1,10 @@
+{
+  "scope": "selected authorized Pixel metadata only; no settings changed, no serial/account or unrelated IME identity recorded",
+  "utc": "2026-10-23T22:40:11.731143+00:00",
+  "awake": true,
+  "powered": true,
+  "keyguard_showing": false,
+  "project_debug_ime_enabled": false,
+  "project_release_ime_enabled": false,
+  "project_ime_default": false
+}

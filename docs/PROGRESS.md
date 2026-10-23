@@ -67,3 +67,11 @@ quality-v1在13208fe冻结，learning-v1在28fabd5冻结，context-v1在41d6795�
 R10四格对照测试进行中；发现旧loaded getter的GetDb有加载副作用，改非加载getter并增加无文本query计数，需新APK回归。详见M3记录，保留所有失败历史，按贡献流程提交。
 
 M3最终追加：43cf6e69/fc0c5fa3同制品在两设备R08/R09/R10及触控/恢复全部组件PASS，R10 9/10真实排序改善、off不变/0查询、on5110查询；无用户库/全profile不变控制保持。full仍R04 FAIL。Pixel重复安装首轮超时记BLOCKED，按当前已装APK+test实际SHA相同才复用重试并执行full，不按版本号跳过，也不声称首装。48 app/61 state、两套lint与实际两APK静态门禁PASS；release73a2031d未签名/运行。下一步M4独立界面/清学习/清单，按发布流程管理。
+
+## 2026-10-23 — M4独立加固（WIP）
+
+前置0da82a5。新增固定离线许可/确切Maven POM及parent哈希清单、清学习确认取消测试；保留首轮AlertDialog队列时序FAIL后修正fixture，43正文均校验。Lua固定内置模块/削减标准库、未知资源与symlink拒绝、持native租约恢复，真实两设备分项PASS。合成私密canary两UID日志计数0、不落原文，native构建路径去除。R8旧listener Keep roots定位并移除后旧daemon/同步/剪贴板不再出现在release中，worker失败而非假成功。49 app/61 state单测及lint通过。32项工具测试仅主机工具边界，不代替Android。
+
+详见testing/M4-20261023.md与ADR028—031。正在接独立优化release引擎验证，前两次源集配置构建失败保留。M4整体不勾选；系统IME/多宿主仍未运行，R04敏感预存组合音标FAIL，参考图BLOCKED。没有默认键盘或Pixel网络/锁屏更改、没有远端推送。
+
+M4优化release追加：第三次源集构建成功，首轮两设备test入口因target R8合并Regex ABI而启动崩溃；保留FAIL后以编译协议constant pool确定少量Kotlin ABI保留规则，普通/本地签名release一致，未关闭优化。最终94b9d40f release/31c08d3f test两设备引擎、R08、R09、R10与资源恢复PASS，静态权限/实际备份XML PASS、旧前端roots未被带回。专用模拟器同94b9d40f离线卸装后首装native组件PASS，Pixel数据未清。default release仍unsigned，不把本地调试证书验证当正式发布。最终debug9cdf03c8另做完整回归，R04失败继续保留，详见M4记录。

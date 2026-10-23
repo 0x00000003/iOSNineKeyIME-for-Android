@@ -29,7 +29,6 @@ import android.view.inputmethod.ExtractedTextRequest
 import android.view.inputmethod.InlineSuggestionsRequest
 import android.view.inputmethod.InlineSuggestionsResponse
 import android.widget.FrameLayout
-import androidx.annotation.Keep
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.view.updateLayoutParams
@@ -68,6 +67,7 @@ import timber.log.Timber
 
 /** [輸入法][InputMethodService]主程序  */
 
+// Offline fork: legacy service is not registered; no reflection roots for its preference listeners.
 open class TrimeInputMethodService : LifecycleInputMethodService() {
     private lateinit var rime: RimeSession
     private val jobs = Channel<Job>(capacity = Channel.UNLIMITED)
@@ -104,25 +104,21 @@ open class TrimeInputMethodService : LifecycleInputMethodService() {
         prefs.advanced.ignoreSystemGestureInsets,
     )
 
-    @Keep
     private val recreateInputViewListener =
         PreferenceDelegate.OnChangeListener<Any> { _, _ ->
             replaceInputView(ThemeManager.activeTheme)
         }
 
-    @Keep
     private val recreateCandidatesViewListener =
         PreferenceDelegateProvider.OnChangeListener {
             replaceCandidateView(ThemeManager.activeTheme)
         }
 
-    @Keep
     private val onThemeChangeListener =
         ThemeManager.OnThemeChangeListener {
             replaceInputViews(it)
         }
 
-    @Keep
     private val onColorChangeListener =
         ColorManager.OnColorChangeListener {
             ContextCompat.getMainExecutor(this).execute {

@@ -11,10 +11,17 @@ import org.json.JSONObject
 /** All calls are on one worker. Uses only baked-in synthetic input, never a host editor. */
 object ProbeRunner {
     @Synchronized
-    fun rebuildPublicResources(context: Context) = dev.local.iosninekeyime.engine.NativeEngineLease.exclusive {
+    fun rebuildPublicResources(context: Context) {
+        val owner=Any()
+        check(dev.local.iosninekeyime.engine.NativeEngineLease.acquire(owner)){"E_ENGINE_BUSY"}
+        try { rebuildReservedResources(context,owner) } finally {dev.local.iosninekeyime.engine.NativeEngineLease.release(owner)}
+    }
+
+    internal fun rebuildReservedResources(context:Context,owner:Any) {
+        dev.local.iosninekeyime.engine.NativeEngineLease.requireOwner(owner)
         ProbeResources.quarantineCurrent(context)
-        val shared = ProbeResources.deploy(context)
-        ProbeModelResources.deploy(context, shared)
+        val shared=ProbeResources.deploy(context)
+        ProbeModelResources.deploy(context,shared)
     }
 
     @Synchronized
@@ -46,6 +53,7 @@ object ProbeRunner {
             val rank = candidates.indexOfFirst { it.text == "你好" } + 1
             result.put("digits_handled", handled).put("target_rank", rank)
             val luaExecuted = (0 until 100).all { Rime.getRimeProbeProperty("ime_probe_lua") == "executed" }
+            result.put("lua_offline_policy", Rime.getRimeProbeProperty("ime_probe_policy") == "restricted")
             result.put("lua_executed", luaExecuted).put("jni_string_regression_calls", 100)
             check(handled && rank > 0) { "E_CANDIDATE" }
             check(Rime.selectRimeCandidate(rank - 1, true)) { "E_SELECT" }
@@ -161,7 +169,7 @@ object ProbeRunner {
                 !File(profile, "build/wanxiang_lite.table.bin").exists() && !File(noLearningProfile, "build/wanxiang_lite.table.bin").exists()
             val sharedUnchanged = sharedBefore == ProbeFileSnapshot.fingerprint(shared)
             result.put("prebuilt_main_table_shared", prebuiltShared).put("static_resources_bytes_and_timestamps_unchanged", sharedUnchanged)
-            val all = multi == 3 && (!BuildConfig.PROBE_MODEL_ENABLED || grammarLoaded) && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
+            val all = multi == 3 && (!BuildConfig.PROBE_MODEL_ENABLED || grammarLoaded) && listOf("digits_handled", "lua_executed", "lua_offline_policy", "single_commit", "full_commit_empty", "delete_to_empty",
                 "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe", "no_learning_probe",
                 "prebuilt_main_table_shared", "static_resources_bytes_and_timestamps_unchanged", "clear_composition_retains_history",
                 "session_reset_clears_history", "session_reset_clears_property", "session_reset_empty_raw_and_commit").all { result.getBoolean(it) }
