@@ -1,0 +1,13 @@
+{
+  "scope": "static APK manifest/packaged backup XML/locked runtime assets, NOT target-OS backup/network/learning acceptance",
+  "sha256": "9493d1938a82f828e427b10625b4d574f9a35003a7ad57dd49977ed17997804d",
+  "bytes": 3000841,
+  "package": "dev.local.iosninekeyime.probe",
+  "errors": [
+    "missing/duplicate locked runtime asset: ime-probe.zip",
+    "missing/duplicate locked runtime asset: ime-probe-manifest.json",
+    "missing/duplicate locked runtime asset: ime-probe.sha256",
+    "missing/duplicate locked runtime asset: zh-hans-t-essay-bgw-compact.gram"
+  ],
+  "pass": false
+}

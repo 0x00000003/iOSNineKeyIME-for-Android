@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Prepare a fresh no-model HOST probe. This is not the application's resource pack."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -15,9 +16,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--stage', type=Path)
+    parser.add_argument('--no-write-manifest', action='store_true')
+    args = parser.parse_args()
     archive = ROOT / '.cache/upstream/wanxiang-lite.zip'
     verify(archive, '4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a', 23403719)
-    stage = ROOT / '.cache/probe-shared'
+    stage = args.stage or ROOT / '.cache/probe-shared'
+    stage.resolve().relative_to(ROOT.resolve())
     extract_zip(archive, stage)
     modifications = []
     for p in stage.glob('*.schema.yaml'):
@@ -62,7 +68,8 @@ def main():
                 'files':[{'path':p.relative_to(stage).as_posix(),'bytes':p.stat().st_size,
                           'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
                          for p in sorted(stage.rglob('*')) if p.is_file()]}
-    (ROOT / 'third_party/probe-resources.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
+    if not args.no_write_manifest:
+        (ROOT / 'third_party/probe-resources.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
     print('Prepared fresh no-model host resource pack; statistics module removed.')
 
 

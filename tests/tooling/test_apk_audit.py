@@ -27,3 +27,14 @@ class ApkAuditTests(unittest.TestCase):
         table='    resource 0x7f010001 xml/rules\n      () (file) res/xml/rules.xml type=XML\n      (v31) (file) res/xml-v31/rules.xml type=XML\n'
         self.assertEqual(a.resolve_xml('@ref/0x7f010001',table),['res/xml/rules.xml','res/xml-v31/rules.xml'])
         with self.assertRaises(ValueError):a.resolve_xml('@ref/0x7f000000',table)
+
+    def test_clean_build_missing_or_altered_assets_cannot_pass(self):
+        import hashlib,io,zipfile
+        expected={'ime-probe.zip':(hashlib.sha256(b'locked').hexdigest(),6)}
+        for content in [None,b'broken',b'locked']:
+            stream=io.BytesIO()
+            with zipfile.ZipFile(stream,'w') as archive:
+                archive.writestr('assets/runtime-artifacts-release.json','[]')
+                if content is not None:archive.writestr('assets/ime-probe.zip',content)
+            stream.seek(0)
+            self.assertEqual(bool(a.asset_errors(stream,expected)),content!=b'locked')

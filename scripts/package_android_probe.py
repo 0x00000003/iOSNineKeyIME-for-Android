@@ -13,10 +13,15 @@ ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--prebuilt', action='store_true', help='Include only hash-verified public static tables from prepare_prebuilt_tables.py')
 parser.add_argument('--octagram-model', action='store_true', help='Bundle the pinned LGPL compact word model candidate for compatibility tests')
+parser.add_argument('--source', type=Path)
+parser.add_argument('--stage', type=Path)
+parser.add_argument('--output', type=Path)
+parser.add_argument('--no-write-manifest', action='store_true')
 args=parser.parse_args()
 if args.octagram_model and not args.prebuilt:raise ValueError('Model probe requires verified prebuilt public tables')
-source=ROOT/'.cache/probe-shared'
-stage=ROOT/'.cache/android-probe-resources'
+source=args.source or ROOT/'.cache/probe-shared'
+stage=args.stage or ROOT/'.cache/android-probe-resources'
+stage.resolve().relative_to(ROOT.resolve())
 if stage.exists():raise FileExistsError(stage)
 names=['default.yaml','wanxiang_t9.schema.yaml','wanxiang_algebra.yaml','wanxiang_symbols.yaml',
        'wanxiang_lite.dict.yaml','wanxiang_abbrev_t9.schema.yaml','wanxiang_abbrev_t9.dict.yaml',
@@ -86,7 +91,8 @@ if args.prebuilt:
   destination=stage/row['path'];destination.parent.mkdir(exist_ok=True);shutil.copy2(p,destination)
  with (stage/'NOTICE.txt').open('a') as notice:
   notice.write('Static dictionary table/reverse binaries compiled with pinned librime 1.17.0 from the same public CC-BY-4.0 dictionaries; raw dictionary source retained in the build provenance, omitted from this runtime pack. No learned user data, prism, model or upstream tool programs included.\n')
-output=ROOT/'android/trime/app/build/generated/imeAssets'
+output=args.output or ROOT/'android/trime/app/build/generated/imeAssets'
+output.resolve().relative_to(ROOT.resolve())
 output.mkdir(parents=True,exist_ok=True)
 model_output=output/'zh-hans-t-essay-bgw-compact.gram'
 if model:
@@ -125,6 +131,6 @@ manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'
                     'license':license_for(p)}
                    for p in sorted(stage.rglob('*')) if p.is_file()]}
 manifest_text=json.dumps(manifest,indent=2,ensure_ascii=False)+'\n'
-(ROOT/'third_party/android-probe-resources.json').write_text(manifest_text)
+if not args.no_write_manifest:(ROOT/'third_party/android-probe-resources.json').write_text(manifest_text)
 (output/'ime-probe-manifest.json').write_text(manifest_text)
 print('Generated deterministic M1 probe asset',archive.stat().st_size,digest)

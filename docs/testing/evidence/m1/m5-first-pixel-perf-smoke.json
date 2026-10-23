@@ -1,0 +1,64 @@
+{
+  "scope": "optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle",
+  "model_enabled": true,
+  "grammar_queries": 616,
+  "requested_duration_seconds": 10,
+  "elapsed_ms": 10335,
+  "keys": 78,
+  "paced_keys_per_second": 8,
+  "warmup_keys": 120,
+  "warmup_commits": 19,
+  "measured_exact_once_commits": 12,
+  "jni_key_context_candidates_p50_ms": 4.744751,
+  "jni_key_context_candidates_p95_ms": 156.973958,
+  "jni_key_context_candidates_p99_ms": 162.086792,
+  "samples": [
+    {
+      "elapsed_ms": 20,
+      "keys": 0,
+      "total_pss_kib": 28270,
+      "total_private_dirty_kib": 19136,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 10187,
+      "keys": 78,
+      "total_pss_kib": 35195,
+      "total_private_dirty_kib": 20764,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 40927232
+    }
+  ],
+  "profile_unchanged_before_native_close": true,
+  "shared_bytes_and_timestamps_unchanged": true,
+  "own_uid_traffic_supported": true,
+  "own_uid_tx_bytes_delta": 0,
+  "own_uid_rx_bytes_delta": 0,
+  "pass": true,
+  "probe_run_id": "014b9649790847d19acd6a50684d2817",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "tested_test_apk_sha256": "fa871aae0f08296199f6da51b8855779392b1f949f63bd683cba505b47cab501",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "perf-smoke",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

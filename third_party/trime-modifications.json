@@ -15,7 +15,7 @@
     {
       "path": "app/build.gradle.kts",
       "upstream_sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
-      "modified_sha256": "af61f91a58cedfd8ce03b68770031dde01b7eaf56493d8c9898afaaade75b10b"
+      "modified_sha256": "d02bada36c328a3ec7707a04d78acb17b9e5ab01838c92b6666611ed87c1d25b"
     },
     {
       "path": "app/licenses/libraries/librime.json",

@@ -42,6 +42,8 @@ def main():
     parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
     parser.add_argument('--variant', choices=['debug', 'release'], default='debug')
     args = parser.parse_args()
+    if args.scope.startswith('perf-') and args.variant != 'release':
+        parser.error('performance scopes require the optimized release runner')
     if args.variant == 'release' and args.scope not in ['engine', 'resources', 'quality', 'learning', 'context', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long']:
         parser.error('release runner supports engine/resources/quality/learning/context only; IME/editor gates remain unverified')
     if not re.fullmatch(r'[a-z0-9-]+', args.record):

@@ -42,6 +42,14 @@ val prepareReleaseEngineTests = tasks.register<Sync>("prepareReleaseEngineTests"
 }
 val runtimeInventoryDir = layout.buildDirectory.dir("generated/runtimeInventory")
 val offlineNoticeDir = layout.buildDirectory.dir("generated/offlineNotices")
+val prepareRuntimeAssets = tasks.register<Exec>("prepareRuntimeAssets") {
+    inputs.files(rootProject.file("../../upstream-lock.json"), rootProject.file("../../third_party/android-probe-resources.json"), rootProject.file("../../third_party/prebuilt-tables.json"))
+    inputs.files(rootProject.fileTree("../../scripts") { include("*.py") }, rootProject.file("../../tests/native/ime_probe.lua"))
+    outputs.dir(layout.buildDirectory.dir("generated/imeAssets"))
+    outputs.upToDateWhen { false } // Regenerate and verify before packaging, including a clean checkout.
+    commandLine("python3", rootProject.file("../../scripts/ensure_runtime_assets.py"))
+}
+
 val prepareOfflineNotices = tasks.register<Exec>("prepareOfflineNotices") {
     inputs.file(rootProject.file("../../third_party/offline-notice-sources.json"))
     inputs.file(rootProject.file("../../scripts/prepare_offline_notices.py"))
@@ -232,7 +240,7 @@ configurations {
 dependencyLocking { lockAllConfigurations() }
 
 
-tasks.named("preBuild") { dependsOn(prepareOfflineNotices, "writeReleaseRuntimeInventory") }
+tasks.named("preBuild") { dependsOn(prepareRuntimeAssets, prepareOfflineNotices, "writeReleaseRuntimeInventory") }
 if (localReleaseProbe) tasks.configureEach {
     if (name.contains("ReleaseAndroidTest") && (name.startsWith("compile") || name.startsWith("ksp"))) dependsOn(prepareReleaseEngineTests)
 }

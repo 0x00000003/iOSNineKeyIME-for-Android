@@ -1,0 +1,14 @@
+{
+  "scope": "b4fb49d fresh source/build dirs, shared pinned caches; build SUCCESS but runtime asset closure FAIL",
+  "source_commit": "b4fb49d",
+  "apk_sha256": "9493d1938a82f828e427b10625b4d574f9a35003a7ad57dd49977ed17997804d",
+  "apk_bytes": 3000841,
+  "missing_apk_assets": [
+    "assets/ime-probe.zip",
+    "assets/ime-probe-manifest.json",
+    "assets/ime-probe.sha256",
+    "assets/zh-hans-t-essay-bgw-compact.gram"
+  ],
+  "android_behavior": "NOT_RUN; no-resource package not installed",
+  "pass": false
+}

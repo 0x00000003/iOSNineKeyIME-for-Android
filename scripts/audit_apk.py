@@ -8,6 +8,7 @@ import subprocess
 import re
 import sys
 import xml.etree.ElementTree as E
+import zipfile
 
 A='{http://schemas.android.com/apk/res/android}'
 DOMAINS={'root','file','database','sharedpref','external','device_root','device_file','device_database','device_sharedpref'}
@@ -59,6 +60,27 @@ def resolve_xml(value, table):
     return paths
 
 
+def asset_errors(apk, expected):
+    errors=[]
+    with zipfile.ZipFile(apk) as archive:
+        names=archive.namelist()
+        for name,(sha,size) in expected.items():
+            entry='assets/'+name
+            if names.count(entry)!=1:
+                errors.append('missing/duplicate locked runtime asset: '+name)
+                continue
+            info=archive.getinfo(entry)
+            if info.file_size!=size:
+                errors.append('locked runtime asset size mismatch: '+name)
+                continue
+            digest=hashlib.sha256()
+            with archive.open(info) as stream:
+                for block in iter(lambda:stream.read(1024*1024),b''):digest.update(block)
+            if digest.hexdigest()!=sha:errors.append('locked runtime asset hash mismatch: '+name)
+        if 'assets/runtime-artifacts-release.json' not in names:errors.append('missing exact runtime inventory')
+    return errors
+
+
 def main():
     apk=Path(sys.argv[1]).resolve()
     destination=Path(sys.argv[2])
@@ -68,6 +90,11 @@ def main():
     manifest=run('manifest','print')
     (destination/'manifest.xml').write_text(manifest)
     errors=manifest_errors(manifest,release='--release' in sys.argv[3:])
+    from ensure_runtime_assets import expected_assets, ROOT
+    expected=expected_assets()
+    notice=json.loads((ROOT/'third_party/offline-notice-sources.json').read_text())
+    expected['offline-notices.json']=(notice['sha256'],notice['bytes'])
+    errors.extend(asset_errors(apk,expected))
     app=E.fromstring(manifest).find('application')
     aapt=tool.parents[3]/'build-tools/36.0.0/aapt2'
     table=subprocess.check_output([str(aapt),'dump','resources',str(apk)],text=True)
@@ -78,7 +105,7 @@ def main():
             content=run('resources','xml','--file',path)
             (destination/(attr+'-'+str(index)+'.xml')).write_text(content)
             errors.extend(backup_errors(content,modern))
-    result={'scope':'static APK manifest/packaged backup XML, NOT target-OS backup/network/learning acceptance',
+    result={'scope':'static APK manifest/packaged backup XML/locked runtime assets, NOT target-OS backup/network/learning acceptance',
             'sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'bytes':apk.stat().st_size,
             'package':E.fromstring(manifest).get('package'),'errors':errors,'pass':not errors}
     (destination/'audit.json').write_text(json.dumps(result,indent=2)+'\n')

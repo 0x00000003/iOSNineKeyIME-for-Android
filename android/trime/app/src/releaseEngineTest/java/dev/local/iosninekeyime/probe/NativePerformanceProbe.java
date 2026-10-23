@@ -63,7 +63,7 @@ public final class NativePerformanceProbe {
                 if(cursor==digits.length()) {commit();commits++;cursor=0;word++;}
             }
             Rime.resetRimeSession();cursor=0;
-            long[] latency=new long[16000];
+            long[] latency=new long[16000], keyLatency=new long[16000], contextLatency=new long[16000], candidatesLatency=new long[16000];
             PowerManager power=(PowerManager)context.getSystemService(Context.POWER_SERVICE);
             long start=System.nanoTime(), nextSample=start;
             long duration=longRun?1_800_000_000_000L:10_000_000_000L;
@@ -76,9 +76,14 @@ public final class NativePerformanceProbe {
                 String digits=DIGITS[word%DIGITS.length];
                 long keyStart=System.nanoTime();
                 require(Rime.processRimeKey(digits.charAt(cursor++),0));
+                long keyEnd=System.nanoTime();
                 require(Rime.getRimeContext().getComposition().getLength()>0);
-                require(Rime.getRimeCandidates(0,20).length>0);
-                require(keys<latency.length);latency[keys++]=System.nanoTime()-keyStart;
+                long contextEnd=System.nanoTime();
+                require(Rime.getRimeCandidates(0,100).length>0);
+                long candidatesEnd=System.nanoTime();
+                require(keys<latency.length);
+                keyLatency[keys]=keyEnd-keyStart;contextLatency[keys]=contextEnd-keyEnd;candidatesLatency[keys]=candidatesEnd-contextEnd;
+                latency[keys++]=candidatesEnd-keyStart;
                 if(cursor==digits.length()) {commit();measuredCommits++;cursor=0;word++;}
                 // Eight keys per second, no catch-up bursts when a call stalls.
                 long rest=125_000_000L-(System.nanoTime()-tick);
@@ -91,13 +96,20 @@ public final class NativePerformanceProbe {
             boolean staticUnchanged=sharedBefore.equals(ProbeFileSnapshot.INSTANCE.fingerprint(shared));
             long txAfter=TrafficStats.getUidTxBytes(Process.myUid()),rxAfter=TrafficStats.getUidRxBytes(Process.myUid());
             long[] ordered=Arrays.copyOf(latency,keys);Arrays.sort(ordered);
+            double p95=ordered[(int)Math.ceil(keys*.95)-1]/1e6;
+            double p99=ordered[(int)Math.ceil(keys*.99)-1]/1e6;
             JSONObject result=new JSONObject().put("scope","optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle")
+                .put("candidate_limit",100).put("protocol_revision",2)
+                .put("component_candidate_budget_p95_80_p99_150_met",p95<=80&&p99<=150)
+                .put("full_product_performance_acceptance","NOT_RUN")
                 .put("model_enabled",modelEnabled).put("grammar_queries",queryCount).put("requested_duration_seconds",longRun?1800:10)
                 .put("elapsed_ms",(System.nanoTime()-start)/1_000_000).put("keys",keys).put("paced_keys_per_second",8)
                 .put("warmup_keys",120).put("warmup_commits",commits).put("measured_exact_once_commits",measuredCommits)
                 .put("jni_key_context_candidates_p50_ms",ordered[(int)Math.ceil(keys*.50)-1]/1e6)
                 .put("jni_key_context_candidates_p95_ms",ordered[(int)Math.ceil(keys*.95)-1]/1e6)
                 .put("jni_key_context_candidates_p99_ms",ordered[(int)Math.ceil(keys*.99)-1]/1e6)
+                .put("phase_p95_ms",new JSONObject().put("process_key",percentile95(keyLatency,keys))
+                    .put("get_context",percentile95(contextLatency,keys)).put("get_candidates",percentile95(candidatesLatency,keys)))
                 .put("samples",samples).put("profile_unchanged_before_native_close",profilesUnchanged)
                 .put("shared_bytes_and_timestamps_unchanged",staticUnchanged)
                 .put("own_uid_traffic_supported",txBefore>=0&&rxBefore>=0&&txAfter>=0&&rxAfter>=0)
@@ -109,6 +121,10 @@ public final class NativePerformanceProbe {
             if(started)Rime.exitRime();
             NativeEngineLease.INSTANCE.release(owner);
         }
+    }
+    private static double percentile95(long[] values,int count) {
+        long[] copy=Arrays.copyOf(values,count);Arrays.sort(copy);
+        return copy[(int)Math.ceil(count*.95)-1]/1e6;
     }
     private static void commit() {
         String expected=Rime.getRimeCandidates(0,1)[0].getText();

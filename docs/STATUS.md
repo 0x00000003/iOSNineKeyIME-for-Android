@@ -55,3 +55,5 @@
 第八检查点M4进行中：离线43许可原文/124确切运行时制品、清学习显式确认/取消路径、严格资源白名单与持租约修复已接入。Lua仅允许固定内置模块，移除IO/OS/package/debug等标准库及外部rime.lua；两设备policy/R08/R09/R10/controller/settings/resources分项PASS，full仍R04 FAIL。UID合成canary两设备0命中，只覆盖自己UID缓冲区；native本机路径标记0，release旧前端/daemon/同步/剪贴板已裁剪。49 app/61 state JVM与两套lint PASS。详见testing/M4-20261023.md，多个制品分别绑定，不把旧结果归到新哈希。当前正验证显式本地签名、优化且非debuggable的release引擎，默认release仍unsigned；尚无release运行成绩或完整安全通过。系统IME未启用、参考图缺失，不称开发完成。
 
 第八检查点最终追加：release94b9d40f/test31c08d3f在两设备原生引擎、固定质量/学习/上下文及资源恢复PASS，专用离线模拟器卸装后首装同APK native组件PASS；release旧前端roots仍未带回。debug9cdf03c8/test65eb60dc两设备完整回归native PASS而R04 FAIL，分项settings/resources/R08/R09/R10/controller/canary PASS，app UID canary前后0。49 app/61 state JVM和两套lint PASS、32工具测试PASS；默认unsigned release重建/对照正在收尾。M4依旧WIP，未启用IME与原图缺失不被组件成绩替代。
+
+隔离源码重建发现新构建缺陷：b4fb49d在全新源码/build目录Gradle成功但APK3MB缺四运行时资产，整体FAIL且未安装。正在把固定资源生成接入preBuild，并让实际APK资源hash进入静态审计；原M4原目录已运行制品结果不受篡改，新隔离重建不能宣称通过。详见testing/REBUILD-20261023.md。运行时ZIP内容保持原锁不变。
