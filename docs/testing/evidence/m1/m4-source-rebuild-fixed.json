@@ -1,0 +1,11 @@
+{
+  "scope": "fresh git-archive source and all build/.cxx directories, same machine and shared pinned SDK/Gradle/public assets cache; NOT clean SDK/dependency/resource-from-original-source environment",
+  "source_commit": "2ad1de3",
+  "build_tasks_executed": 62,
+  "build_seconds": 188,
+  "apk_bytes": 62444813,
+  "rebuilt_unsigned_sha256": "bbd28866af7501b99593c28e58f92976449f4ee8ef7be7da009abbbb2b16081a",
+  "baseline_unsigned_sha256": "bbd28866af7501b99593c28e58f92976449f4ee8ef7be7da009abbbb2b16081a",
+  "whole_unsigned_apk_byte_identical": true,
+  "passed": true
+}

@@ -41,6 +41,7 @@ def main():
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
     parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
     parser.add_argument('--variant', choices=['debug', 'release'], default='debug')
+    parser.add_argument('--apk-root', type=Path, help='Frozen APK output tree inside this project; default current Gradle outputs')
     args = parser.parse_args()
     if args.scope.startswith('perf-') and args.variant != 'release':
         parser.error('performance scopes require the optimized release runner')
@@ -70,7 +71,9 @@ def main():
         raise RuntimeError('E_SELECTED_MODEL')
     if args.target != 'pixel' and call('shell', 'getprop', 'ro.kernel.qemu').strip() != '1':
         raise RuntimeError('E_NOT_OWN_EMULATOR')
-    outputs = ROOT / 'android/trime/app/build/outputs/apk'
+    outputs = (args.apk_root if args.apk_root and args.apk_root.is_absolute() else ROOT / args.apk_root) if args.apk_root else ROOT / 'android/trime/app/build/outputs/apk'
+    outputs = outputs.resolve()
+    outputs.relative_to(ROOT)
     package = 'dev.local.iosninekeyime.probe' + ('.debug' if args.variant == 'debug' else '')
     apk = selected_apk(outputs / args.variant, package)
     test = selected_apk(outputs / 'androidTest' / args.variant, package + '.test')

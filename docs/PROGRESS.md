@@ -81,3 +81,5 @@ M4本地WIP提交b4fb49d已落。后续先冻结JNI独立性能协议，再运�
 隔离b4fb49d重建实际暴露FAIL：Gradle成功不等于完整APK，新包缺手工生成的四个资产。保留3MB失败制品与补强审计失败证据，接入fresh staging资源生成/全哈希preBuild，工具34项PASS；资产ZIP仍a51758a5不变。ADR032及REBUILD真实记录已写，后续再隔离重建，不把它写成M6通过。
 
 M5探索短测保留：v2总P95约162ms，分段processKey约161ms，候选读取约5ms。检查固定JNI reset实现确认每词reset销毁session，下一词首键混入冷启动；协议v3测量前冻结为warmup后连续同字段（不重启session），显式记录该条件，原失败预算字段不覆盖，不修改产品或降低阈值。完整P01/P02仍未验收。
+
+2ad1de3隔离源码重建补测PASS（同机共享固定缓存）：62任务全部执行，3m8s，unsigned整包bbd28866与原基线完全相同，补强APK资产/备份静态检查通过。首轮3MB缺资产FAIL不覆盖。完整SDK/cache初次获取、系统IME和视觉/性能门禁继续未关闭。即将冻结性能APK树并通过run_probe --apk-root绑定，避免其他构建改变长测两组被测版本。

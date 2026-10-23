@@ -57,3 +57,5 @@
 第八检查点最终追加：release94b9d40f/test31c08d3f在两设备原生引擎、固定质量/学习/上下文及资源恢复PASS，专用离线模拟器卸装后首装同APK native组件PASS；release旧前端roots仍未带回。debug9cdf03c8/test65eb60dc两设备完整回归native PASS而R04 FAIL，分项settings/resources/R08/R09/R10/controller/canary PASS，app UID canary前后0。49 app/61 state JVM和两套lint PASS、32工具测试PASS；默认unsigned release重建/对照正在收尾。M4依旧WIP，未启用IME与原图缺失不被组件成绩替代。
 
 隔离源码重建发现新构建缺陷：b4fb49d在全新源码/build目录Gradle成功但APK3MB缺四运行时资产，整体FAIL且未安装。正在把固定资源生成接入preBuild，并让实际APK资源hash进入静态审计；原M4原目录已运行制品结果不受篡改，新隔离重建不能宣称通过。详见testing/REBUILD-20261023.md。运行时ZIP内容保持原锁不变。
+
+隔离重建修复已本地提交2ad1de3：从该commit归档、全新源码/build/.cxx重建62任务后，62444813字节unsigned APK整包SHA与bbd28866基线完全相同，实际资源/权限/备份审计PASS。仍共享已固定SDK/Gradle/公共table和model缓存，完整M6干净环境获取未验收；见REBUILD记录。性能v1/v2混入session冷启动的短测原始成绩保留，v3连续同字段协议已在测量前提交6ae38b3，尚不据此宣布性能通过。
