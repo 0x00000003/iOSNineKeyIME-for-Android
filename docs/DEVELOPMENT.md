@@ -38,3 +38,11 @@
 
 ## 本机组件差距（doctor实读）
 当前SDK platforms只有android-34和android-36.1；build-tools为30.0.3/36.1.0/37.0.0；NDK为23.1.7779620、CMake为3.22.1、未见cmdline-tools子目录。固定上游要求compileSdk36/build-tools36.0.0、默认NDK28.0.13004108/CMake3.31.6，不能把存在其他版本当作依赖齐全。JDK实测21.0.7。M1先解决并记录确切差距，不在初始化阶段伪造构建成功。
+
+## M1 本地检查点的实际命令与范围
+
+工程已导入。使用 `./scripts/gradle.sh` 保持SDK/Gradle/Android用户配置在项目`.cache`内；不要再按上面的M0环境观察理解当前状态。已实跑基线、debug、androidTest、unsigned release、35项JVM测试与debug/release lint；对应结果见testing/M1-20261023.md。
+
+当前应用是兼容性探针，没有注册可日用IME。发布签名未配置，不读取外部密钥环境；debug密钥仅在本项目忽略的`.private`。构建APK前依次准备锁定lite ZIP、运行prepare_probe.py（需新staging目录）、package_android_probe.py，再运行Gradle。package脚本同时写资源manifest；临时输出不能替代原始资源哈希。工具链干净环境重建仍未验收。
+
+上游导入文件保留原字节。首次整体`git diff --cached --check`报告上游既有空白问题；不批量格式化上游。原始4928文件逐一对比清单，19项本地修改另有哈希ledger，并对新增文件和修改相对原文件的差异单独检查空白。证据日志副本仅脱敏和去掉行尾空白，不改变测试结果；原始输出保留在忽略的artifacts。

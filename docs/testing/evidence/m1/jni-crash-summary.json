@@ -1,0 +1,8 @@
+{
+  "scope": "only synthetic probe; raw crash registers and device fingerprint not committed",
+  "failure": "SIGSEGV in ART CheckReferenceResult returning from added getRimeProbeProperty JNI function",
+  "root_cause": "temporary JString destructor deleted local reference before JNI returned it",
+  "bad_return": "return JString(env, Rime::Instance().probeProperty(CString(env, name)));",
+  "fix": "return env->NewStringUTF(value.c_str()); caller owns local reference",
+  "regression": "100 getter calls on Pixel; pass; see pixel-probe-result.json"
+}

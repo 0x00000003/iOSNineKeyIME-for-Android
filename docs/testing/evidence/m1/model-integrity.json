@@ -1,0 +1,9 @@
+{
+  "asset_id": 655157355,
+  "bytes": 398497836,
+  "sha256": "9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
+  "publisher_digest_matches": true,
+  "bundled": false,
+  "runtime_tested": false,
+  "license_status": "asset-specific provenance/scope review pending; host no-model probe continues"
+}

@@ -1,0 +1,101 @@
+{
+  "baseline": "e09ac7114fa067904ed358e82d499516cb423ff4 recursive snapshot",
+  "scope": "modified original source files; new project files tracked normally",
+  "modifications": [
+    {
+      "path": ".gitattributes",
+      "upstream_sha256": "33ca3677f6e4f89ef65c3fa91139a9a8fbc30295cfca4ecd868568ab8ed19a30",
+      "modified_sha256": "510249ff7aa4b7e19153ee1b110be7c808a41d41095e9bf00e08a16065af24cd"
+    },
+    {
+      "path": ".github/pull-request-template.md",
+      "upstream_sha256": "2dffd5740ae79a9c590da3157f79286f997e60bc3636a68d2ea178343c38425e",
+      "modified_sha256": "9d2002d347423f0e4cd3bf786fdfff076564bdecafcf051be0c89e7ec5e888c6"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "upstream_sha256": "fe6b3e5fd2a80b01d8f57d8549ebdaa07b56be13f08a1082e9e9e91a9a5c738b",
+      "modified_sha256": "e9d13bea2ab8532215f92b7fde0a9b62fe77cd77b98d9430a5b51ae57ba3a3e6"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "upstream_sha256": "2ddc51e4df8026d06cbf64f480b2db3f23924e54c8a53091d53b49df25586a31",
+      "modified_sha256": "86d0a595ea797ed8908191e253af37279d882a627c52ffa6dbf3ebf0cf7a2022"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",
+      "upstream_sha256": "783b64a7a96d6941c1fe20ace6e8984995e7d2317a2b820f3145f0665cd2f9ca",
+      "modified_sha256": "5f9d8ecbcac625aa4ed0ef3f3594a192c0e0d39d127c72ec48fffc3e76a4d6ef"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/daemon/RimeDaemon.kt",
+      "upstream_sha256": "649492c00208c461034d9ac2a9bd48b412f281c3e0b15d4a04c7c5a3128a2998",
+      "modified_sha256": "271d8025b10d08366b968c451a545d3e37d2a21a477403d9c75c4372a9215471"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/data/theme/model/GeneralStyle.kt",
+      "upstream_sha256": "347b97d14ed260ec51e5cf0fc5634bec599a23c7bcdf1580e96d0c10514fb663",
+      "modified_sha256": "973c7e424c014e2e6226873901e66a675cbb93c52caf59d1840056a4f81b3b1b"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ime/keyboard/InputFeedbackManager.kt",
+      "upstream_sha256": "d12a0f4fd5f4939f65a7c85de99357d142417312842b8ab1ed1f45fdeb409c02",
+      "modified_sha256": "52a31f57e421dfa61a30c7c18a3f12420cfdaecddd1fc1e7819beaef446be39a"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/ui/setup/SetupActivity.kt",
+      "upstream_sha256": "b1f9a338e7e2de18508796ddbddedcbff3db40c2a18ed035c5a2d9b90cd24366",
+      "modified_sha256": "7b50525d7eab03941c76df384ff63b3be7a805c82c2c0b897fdb793ee04656ee"
+    },
+    {
+      "path": "app/src/main/java/com/osfans/trime/util/Notifications.kt",
+      "upstream_sha256": "89ef80c068af0c2c41e77da073329716a42df56c0a5685cfdd54d42ba8ebcd7a",
+      "modified_sha256": "b505a360cf4b04d8e21427fbf2219d991f00fff697ee6d2e7704a16eef0528e7"
+    },
+    {
+      "path": "app/src/main/jni/CMakeLists.txt",
+      "upstream_sha256": "b9acb57cd5ec8e2b3204c4cff1ff9d7fb799679747fd5052cee8b172b8ed8f47",
+      "modified_sha256": "aeacac5895f03b6176bc07a31ae41069f46c17431fa6085176abe22d1a3667e4"
+    },
+    {
+      "path": "app/src/main/jni/librime_jni/rime_jni.cc",
+      "upstream_sha256": "5b0d097a610fd8084fa50a2488ad32836035a92e087a10de00d459f5c1a068f5",
+      "modified_sha256": "f9af32ab8900b4cc1ec58521ede4175d967a8094973cee11053b157321d180b6"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/AtomicLocalFileCopyTest.kt",
+      "upstream_sha256": "de559eea87999666d6238d385eab78de7fcff3bd3fc11c4ae5bd9da5fb97baaa",
+      "modified_sha256": "a36a96976b4984ab2869c8634b4faac356904a1484100b7d11d09067bceb01d1"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/OrphanCleanerTest.kt",
+      "upstream_sha256": "0cb054735daa6fa5d48ce6b6ad2517085a508210a33b96c3a75a33f17b0e8fad",
+      "modified_sha256": "7292081a3037575d2ab9445242b2012d34fc97d271495f0ba4d3d2b0bb3ca2a5"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/sync/SyncRelativePathTest.kt",
+      "upstream_sha256": "ab0440199c8f5aead03f6147ac1ae6ffa851c6d5915601cb39ba3dcc122173f4",
+      "modified_sha256": "ddd719ca922242a2ec62e564915d188c08c2a029b6f624efa8c33f3bb030534d"
+    },
+    {
+      "path": "app/src/test/java/com/osfans/trime/data/theme/GeneralStyleTest.kt",
+      "upstream_sha256": "74f876a75099efd37f52cb7e8c4d82ec61087861ee5945c7f4e0d0ef593aeb64",
+      "modified_sha256": "22b8b33700d057f7e20b224da8adf02df2ac09849c34760260b4943bec5ef78e"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/NativeAppConventionPlugin.kt",
+      "upstream_sha256": "6960c8387d931c72236f36af450af653cc02a83b15fbc5cb3b69e10157fd7420",
+      "modified_sha256": "59621fdfe4583164465b350b172ac9a9f4397be2f54ebf64b69d2acaeec1a995"
+    },
+    {
+      "path": "build-logic/convention/src/main/kotlin/ProjectExtensions.kt",
+      "upstream_sha256": "d2135f7be515a0083afaa6fb171428ba36841496b3152cbeefe2fa260b89fca1",
+      "modified_sha256": "ef1225534dc4fe0baa280797cbb3c635bf81d019d5c50f8168ffe29395419338"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "upstream_sha256": "618587c28dc74aafdbe935d103a69dbf65f03945b4ff00b4663e8210ea1b101a",
+      "modified_sha256": "8e15225737701952f5f980ed2f688bbd07f82aee0163fa65a6e3b153f40e28e8"
+    }
+  ]
+}

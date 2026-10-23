@@ -1,0 +1,190 @@
+[
+  {
+    "path": ".",
+    "commit": "e09ac7114fa067904ed358e82d499516cb423ff4",
+    "source": "https://github.com/osfans/trime.git",
+    "licenses": [
+      "LICENSE",
+      "app/src/main/java/com/osfans/trime/ui/main/LicenseFragment.kt"
+    ]
+  },
+  {
+    "path": "app/data/rime/essay",
+    "commit": "0766c929ec3e578c2c80861e988decd3703a1c3d",
+    "source": "https://github.com/rime/rime-essay",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/data/rime/luna-pinyin",
+    "commit": "46acf03142c12b5aeed7002675046bf7255eed35",
+    "source": "https://github.com/rime/rime-luna-pinyin",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/data/rime/prelude",
+    "commit": "3803f09458072e03b9ed396692ce7e1d35c88c95",
+    "source": "https://github.com/rime/rime-prelude",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/data/rime/stroke",
+    "commit": "7c9874c6b2e0b94947653e9a7de6f99623ff27e4",
+    "source": "https://github.com/rime/rime-stroke",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/OpenCC",
+    "commit": "907bfcbbd3aae86ff04bc8eaca67c8af03108ddf",
+    "source": "https://github.com/BYVoid/OpenCC.git",
+    "licenses": [
+      "LICENSE",
+      "deps/google-benchmark/LICENSE",
+      "deps/googletest-1.15.0/LICENSE",
+      "deps/marisa-0.2.6/COPYING.md",
+      "deps/pybind11-2.13.1/LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime",
+    "commit": "33e78140250125871856cdc5b42ddc6a5fcd3cd4",
+    "source": "https://github.com/rime/librime.git",
+    "licenses": [
+      "LICENSE",
+      "include/COPYING.darts-clone"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/glog",
+    "commit": "7b134a5c82c0c0b5698bb6bf7a835b230c5638e4",
+    "source": "https://github.com/google/glog.git",
+    "licenses": [
+      "COPYING"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/googletest",
+    "commit": "f8d7d77c06936315286eb55f8de22cd23c188571",
+    "source": "https://github.com/google/googletest.git",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/leveldb",
+    "commit": "99b3c03b3284f5886f9ef9a4ef703d57373e61be",
+    "source": "https://github.com/google/leveldb.git",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/leveldb/third_party/benchmark",
+    "commit": "bf585a2789e30585b4e3ce6baf11ef2750b54677",
+    "source": "https://github.com/google/benchmark",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/leveldb/third_party/googletest",
+    "commit": "c27acebba3b3c7d94209e0467b0a801db4af73ed",
+    "source": "https://github.com/google/googletest.git",
+    "licenses": [
+      "LICENSE",
+      "googlemock/LICENSE",
+      "googlemock/scripts/generator/LICENSE",
+      "googletest/LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/marisa-trie",
+    "commit": "3e87d53b78e15f2f43783d5e376561a8c9722051",
+    "source": "https://github.com/s-yata/marisa-trie.git",
+    "licenses": [
+      "COPYING.md"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/opencc",
+    "commit": "556ed22496d650bd0b13b6c163be9814637970ae",
+    "source": "https://github.com/BYVoid/OpenCC.git",
+    "licenses": [
+      "LICENSE",
+      "deps/google-benchmark/LICENSE",
+      "deps/googletest-1.15.0/LICENSE",
+      "deps/marisa-0.2.6/COPYING.md",
+      "deps/pybind11-2.13.1/LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime/deps/yaml-cpp",
+    "commit": "2f86d13775d119edbb69af52e5f566fd65c6953b",
+    "source": "https://github.com/jbeder/yaml-cpp.git",
+    "licenses": [
+      "LICENSE",
+      "test/googletest-1.13.0/LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime-lua",
+    "commit": "68f9c364a2d25a04c7d4794981d7c796b05ab627",
+    "source": "https://github.com/hchunhui/librime-lua",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime-lua-deps",
+    "commit": "9c53b362229766a97b83683b9541c46679118a90",
+    "source": "https://github.com/hchunhui/librime-lua",
+    "licenses": []
+  },
+  {
+    "path": "app/src/main/jni/librime-octagram",
+    "commit": "bd12863f45fbbd5c7db06d5ec8be8987b10253bf",
+    "source": "https://github.com/lotem/librime-octagram.git",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/librime-predict",
+    "commit": "67c2881914a0242fc14ec7d6877782771b75800c",
+    "source": "https://github.com/rime/librime-predict",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/snappy",
+    "commit": "32ded457c0b1fe78ceb8397632c416568d6714a0",
+    "source": "https://github.com/google/snappy.git",
+    "licenses": [
+      "COPYING"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/snappy/third_party/benchmark",
+    "commit": "d572f4777349d43653b21d6c2fc63020ab326db2",
+    "source": "https://github.com/google/benchmark.git",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  {
+    "path": "app/src/main/jni/snappy/third_party/googletest",
+    "commit": "b796f7d44681514f58a683a3a71ff17c94edb0c1",
+    "source": "https://github.com/google/googletest.git",
+    "licenses": [
+      "LICENSE"
+    ]
+  }
+]

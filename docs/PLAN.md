@@ -9,8 +9,8 @@
 交付：当前仓库及 INIT 记录；commit `docs(m0): initialize offline nine-key IME project`。
 
 ## M1 工具链与兼容性探针（先解决风险）
-- [ ] 读取约束、检查未提交修改与本机环境；仅在本项目配置 SDK/Gradle 缓存。
-- [ ] 从锁定 Trime commit 获取源码与完整递归子模块，记录 SBOM 和源头；导入 android/trime，保留许可。
+- [x] 读取约束、检查未提交修改与本机环境；仅在本项目配置 SDK/Gradle 缓存。
+- [x] 从锁定 Trime commit 获取源码与完整递归子模块，记录源码来源清单；导入 android/trime，保留许可。（最终运行时SBOM/合规审计仍未完成，见M1记录）
 - [ ] 固定 Wrapper SHA256、AGP/Kotlin/JDK/SDK/NDK/CMake 版本和 dependency verification；不盲从 README 旧版本指令。
 - [ ] 检查万象 release zip 中九键依赖闭包，资源文件入口路径正确，选择 t9 而非仅全拼；所有依赖/模型单独确认来源许可和哈希。
 - [ ] 先构建上游基线，再改独立包名和禁网/禁备份；保留两次对照结果。不要将不符合隐私的基线安装到日用默认键盘。

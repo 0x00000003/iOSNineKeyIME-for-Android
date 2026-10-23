@@ -1,0 +1,4 @@
+rime_version=1.17.0 plugins=1
+schema_selected=1
+synthetic_64426_handled=1 target_rank=1
+lua_executed=1 single_commit=1 no_duplicate=1 delete_to_empty=1

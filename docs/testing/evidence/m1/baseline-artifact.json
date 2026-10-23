@@ -1,0 +1,9 @@
+{
+  "source_commit": "e09ac7114fa067904ed358e82d499516cb423ff4",
+  "abi": "arm64-v8a",
+  "variant": "upstream-debug",
+  "sha256": "854ac42f201ebcf0c674ed56bc52f1cab656d0d26d97d8064a87d20450054f76",
+  "bytes": 19614067,
+  "installed": false,
+  "scope": "upstream baseline; allowBackup true; not a project deliverable"
+}

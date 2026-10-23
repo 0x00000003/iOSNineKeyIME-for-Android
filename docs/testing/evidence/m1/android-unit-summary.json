@@ -1,0 +1,49 @@
+{
+  "scope": "Android Gradle JVM unit tests; not device input testing",
+  "tests": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "com.osfans.trime.data.sync.OrphanCleanerTest",
+      "tests": 1,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.sync.AtomicLocalFileCopyTest",
+      "tests": 4,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.theme.GeneralStyleTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.util.WeakHashSetTest",
+      "tests": 14,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.sync.SafTreeWalkerTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.sync.SafDisplayPathTest",
+      "tests": 6,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.sync.BoundedCopyPoolTest",
+      "tests": 2,
+      "failures": 0
+    },
+    {
+      "name": "com.osfans.trime.data.sync.SyncRelativePathTest",
+      "tests": 4,
+      "failures": 0
+    }
+  ]
+}

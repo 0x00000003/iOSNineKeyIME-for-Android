@@ -1,0 +1,3 @@
+rime_version=1.17.0 plugins=1
+schema_selected=1
+synthetic_64426_handled=1 target_rank=1

@@ -1,0 +1,14 @@
+{
+  "scope": "M1 no-model JNI compatibility; not IME/visual/privacy acceptance",
+  "digits_handled": true,
+  "target_rank": 1,
+  "lua_executed": true,
+  "jni_string_regression_calls": 100,
+  "single_commit": true,
+  "full_commit_empty": true,
+  "delete_to_empty": true,
+  "pass": true,
+  "elapsed_ms": 61814,
+  "tested_apk_sha256": "d04f618e0abf5ba8bca6f164d97dc7c752c43f4e23224d3cc08010dbd0a27266",
+  "device": "Pixel 9 Pro / Android 17 API 37"
+}

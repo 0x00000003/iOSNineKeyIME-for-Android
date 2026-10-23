@@ -93,3 +93,21 @@
 | [tests/fixtures/seed_cases.json](../tests/fixtures/seed_cases.json) | 项目文档/规格/检查工具 |
 | [tests/tooling/test_checks.py](../tests/tooling/test_checks.py) | 项目文档/规格/检查工具 |
 | [upstream-lock.json](../upstream-lock.json) | 项目文档/规格/检查工具 |
+
+## M1 additions (WIP)
+
+`android/trime/` contains 4928 original files from 22 pinned recursive repositories,
+plus the explicitly recorded project patches and probe classes/resources. The
+complete original inventory is `third_party/trime-sources.json`; changes are
+`third_party/trime-modifications.json`. This avoids reproducing thousands of
+vendor paths here. Generated Boost/plugin links, CMake/Gradle outputs, SDK, APKs,
+private debug keys and device selectors are ignored and are not source snapshots.
+
+New tooling: `artifact_utils.py`, `import_trime.py`, `audit_wanxiang.py`,
+`prepare_probe.py`, `package_android_probe.py`, `pin_gradle_cache.py`,
+`audit_apk.py`, `gradle.sh` under `scripts/`; safety/resource/APK tests under
+`tests/tooling/`; native CMake/API/Lua probe under `tests/native/`.
+
+Execution/evidence index: `docs/testing/M1-20261023.md` and
+`docs/testing/evidence/m1/`. Dependency/source/toolchain/resource inventories are
+under `third_party/`. All statuses remain bounded by the test record.

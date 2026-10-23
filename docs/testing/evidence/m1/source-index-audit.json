@@ -1,0 +1,9 @@
+{
+  "scope": "Git index exact bytes vs materialized imported files, original hashes and separate patch ledger",
+  "files": 4928,
+  "patches": 19,
+  "index_byte_mismatches": [],
+  "pass_": true,
+  "initial_normalized_files": 23,
+  "repair": "vendor -text plus explicit renormalize; original materialized bytes preserved"
+}

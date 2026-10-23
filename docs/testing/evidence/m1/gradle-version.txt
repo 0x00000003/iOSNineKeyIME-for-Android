@@ -1,0 +1,25 @@
+Downloading https://services.gradle.org/distributions/gradle-9.5.1-all.zip
+......................10%.......................20%.......................30%.......................40%.......................50%.......................60%.......................70%.......................80%.......................90%.......................100%
+
+Welcome to Gradle 9.5.1!
+
+Here are the highlights of this release:
+ - Task provenance in reports and failure messages
+ - Type-safe accessors for precompiled Kotlin Settings plugins
+
+For more details see https://docs.gradle.org/9.5.1/release-notes.html
+
+
+------------------------------------------------------------
+Gradle 9.5.1
+------------------------------------------------------------
+
+Build time:    2026-05-12 13:19:42 UTC
+Revision:      fd78213f09782e62ca4957f9cfd3d90c6c3f1767
+
+Kotlin:        2.3.20
+Groovy:        4.0.29
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  21.0.7 (Eclipse Adoptium 21.0.7+6-LTS)
+Daemon JVM:    $HOME/Library/Java/JavaVirtualMachines/jdk-21.0.7+6/Contents/Home (no Daemon JVM specified, using current Java home)
+OS:            Mac OS X 26.2 aarch64

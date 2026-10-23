@@ -1,0 +1,68 @@
+{
+  "scope": "installed SDK inventory, not full toolchain artifact verification",
+  "host": "macOS arm64",
+  "jdk": "Temurin 21.0.7+6",
+  "gradle": {
+    "version": "9.5.1",
+    "distribution_sha256": "c72fb9991f6025cbe337d52ba77e531b3faf62bdd3e348fe1ccee9f51c71adb0"
+  },
+  "sdk_packages": [
+    {
+      "path": "build-tools/36.0.0",
+      "properties": {
+        "Pkg.Revision": "36.0.0"
+      },
+      "source_properties_sha256": "7dee6632e9ad6cb111da2bb99d747211e27927061b1276d040bb1d71fded5ebb"
+    },
+    {
+      "path": "cmake/3.31.6",
+      "properties": {
+        "Pkg.Revision": "3.31.6",
+        "Pkg.Path": "cmake;3.31.6",
+        "Pkg.Desc": "CMake 3.31.6"
+      },
+      "source_properties_sha256": "b4fe8263cd6635dcf8df133ebdafbfa88866d89cd9c4c1779403cfb3917b5af7"
+    },
+    {
+      "path": "cmdline-tools/19.0",
+      "properties": {
+        "Pkg.Revision": "19.0",
+        "Pkg.Path": "cmdline-tools;19.0",
+        "Pkg.Desc": "Android SDK Command-line Tools"
+      },
+      "source_properties_sha256": "bedcca88b02addf6585f79cee090c0c977682545a893438e13b3fed515dc8fcd"
+    },
+    {
+      "path": "ndk/28.0.13004108",
+      "properties": {
+        "Pkg.Desc": "Android NDK",
+        "Pkg.Revision": "28.0.13004108"
+      },
+      "source_properties_sha256": "4f060f28f653cb492fdfbf48d7c4777399574bd2e4c14090141d2db770eef129"
+    },
+    {
+      "path": "platform-tools",
+      "properties": {
+        "Pkg.Revision": "37.0.1"
+      },
+      "source_properties_sha256": "2dccd788c0234d8cf7f7457377e57f57527a86a629c6ed54feb8af0f549dac38"
+    },
+    {
+      "path": "platforms/android-36",
+      "properties": {
+        "Pkg.Desc": "Android SDK Platform 16",
+        "Pkg.Revision": "2",
+        "AndroidVersion.ApiLevel": "36"
+      },
+      "source_properties_sha256": "72291ff6611dbfc46fdfb6de2821c4a62c87befa5200713847eda426e3a501c2"
+    }
+  ],
+  "commandline_tools": {
+    "version": "19.0",
+    "url": "https://dl.google.com/android/repository/commandlinetools-mac-13114758_latest.zip",
+    "sha256": "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
+  },
+  "deviations": [
+    "AGP automatically installed platform-tools 37.0.1; actual version recorded; clean toolchain bootstrap must pin its artifact before REL01."
+  ]
+}

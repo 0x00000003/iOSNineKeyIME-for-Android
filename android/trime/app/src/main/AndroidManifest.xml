@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-FileCopyrightText: 2015 - 2024 Rime community
+     SPDX-License-Identifier: GPL-3.0-or-later
+     Project modification: M1 probe surface only; legacy Trime components omitted. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission tools:node="removeAll" />
+    <uses-permission-sdk-23 tools:node="removeAll" />
+    <application
+        android:name="android.app.Application"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/ime_backup_rules"
+        android:dataExtractionRules="@xml/ime_data_extraction_rules"
+        android:usesCleartextTraffic="false"
+        android:label="九键 M1 兼容性探针"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        tools:node="replace">
+        <activity android:name="dev.local.iosninekeyime.probe.ProbeActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

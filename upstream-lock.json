@@ -2,7 +2,18 @@
   "schema_version": 1,
   "checked_at_utc": "2026-10-23T16:55:44.984537+00:00",
   "selection_status": "research-pinned; compatibility and artifact licensing pending",
-  "runtime_assets": [],
+  "runtime_assets": [
+    {
+      "id": "m1-no-model-probe",
+      "version": "probe-1 / wanxiang v18.1.7 lite asset 659385471",
+      "source": "https://github.com/amzxyz/rime-wanxiang/releases/download/v18.1.7/rime-wanxiang-lite.zip",
+      "sha256": "acf96b9f5d2f3665b3e4c69bab204f0e0b6234647756614d162733c5422a1dcd",
+      "source_archive_sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
+      "license": "CC-BY-4.0 data/config; GPL-3.0-or-later test Lua; see per-file third_party/android-probe-resources.json",
+      "status": "M1 probe only; not full product/model licensing approval",
+      "manifest": "third_party/android-probe-resources.json"
+    }
+  ],
   "projects": {
     "trime": {
       "repository": "osfans/trime",
@@ -20,7 +31,7 @@
       },
       "latest_release": "v3.3.12",
       "latest_release_published": "2026-09-01T13:05:44Z",
-      "role": "candidate only; not integrated",
+      "role": "imported recursive source snapshot; baseline built; M1 probe only, not full product",
       "files": [
         {
           "path": "LICENSE",
@@ -421,8 +432,10 @@
     "bytes": 398497836,
     "url": "https://github.com/amzxyz/rime-wanxiang-data/releases/download/LTS/wanxiang-lts-zh-hans.gram",
     "publisher_digest": "sha256:9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
-    "downloaded": false,
+    "downloaded": true,
     "compatibility_verified": false,
-    "license_status": "asset scope and attribution to verify before bundling"
+    "license_status": "asset scope and attribution to verify before bundling",
+    "local_sha256": "9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
+    "bundled": false
   }
 }

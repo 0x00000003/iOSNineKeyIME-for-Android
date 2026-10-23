@@ -20,7 +20,16 @@ REQUIRED = (
     'spec/keyboard.json', 'spec/security.json', 'tests/fixtures/seed_cases.json',
     'scripts/doctor.py', 'tests/tooling/test_checks.py', 'android/README.md',
 )
-SKIP_DIRS = {'.git', '.cache', '.private', 'artifacts', '__pycache__', '.gradle', 'build'}
+SKIP_DIRS = {'.git', '.cache', '.private', 'artifacts', '__pycache__', '.gradle', 'build', '.cxx', '.externalNativeBuild'}
+
+# These are CMake-generated copies/links, never imported source files.
+GENERATED_TREES = {
+    'android/trime/app/src/main/jni/boost',
+    'android/trime/app/src/main/jni/librime/plugins/librime-lua',
+    'android/trime/app/src/main/jni/librime/plugins/librime-octagram',
+    'android/trime/app/src/main/jni/librime/plugins/librime-predict',
+    'android/trime/app/src/main/jni/librime-lua/thirdparty',
+}
 
 
 def within(root, path):
@@ -35,8 +44,10 @@ def project_files(root):
     # Do not descend ignored build trees or follow symlinks.
     import os
     for base, dirs, files in os.walk(root, followlinks=False):
-        dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS and not (Path(base) / d).is_symlink())
+        dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS and (Path(base) / d).relative_to(root).as_posix() not in GENERATED_TREES and not (Path(base) / d).is_symlink())
         for name in sorted(files):
+            if (Path(base) / name).relative_to(root).as_posix() in GENERATED_TREES:
+                continue
             if name == '.DS_Store' or name.endswith(('.pyc', '.pyo')):
                 continue
             yield Path(base) / name

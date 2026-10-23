@@ -1,0 +1,13 @@
+{
+  "scope": "inventory only; no keyboard enable/switch, no install",
+  "transport_count": 1,
+  "authorized_transport_count": 1,
+  "target": "Pixel 9 Pro",
+  "android": "17",
+  "api": "37",
+  "abi": "arm64-v8a",
+  "display": "Physical size: 960x2142",
+  "density": "Physical density: 360",
+  "font_scale": "1.0",
+  "navigation_mode": "2"
+}

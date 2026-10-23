@@ -1,0 +1,2431 @@
+{
+  "scope": "static literal-reference inventory, NOT runtime closure or license approval",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 11055,
+      "sha256": "4b691ee325bf057bcf3f213397bf41bbb26210a9b778475230fdcbbb7e088771"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6753,
+      "sha256": "32af277792c7dab236d8fd39932f88dfa54626b1b3e2392b10ff21f76ea666b8"
+    },
+    {
+      "path": "custom/wanxiang.custom.yaml",
+      "bytes": 2201,
+      "sha256": "a4e074f55b7a6ea072083e730dc8292878c0b2bfc93ad3fb7a10b6420797f179"
+    },
+    {
+      "path": "custom/wanxiang_abbrev.custom.yaml",
+      "bytes": 275,
+      "sha256": "1d89d723ce866385660c83545076a6794f5d8db4db0a03526e9b00a76182821d"
+    },
+    {
+      "path": "custom/wanxiang_english.custom.yaml",
+      "bytes": 374,
+      "sha256": "f726c65fddea3a75e5ac862e725bd034453818905006f4c738173a21eb36f5f6"
+    },
+    {
+      "path": "custom/wanxiang_mixedcode.custom.yaml",
+      "bytes": 370,
+      "sha256": "70734a296bbe0ba87a46a2db9bb4006782f1a198a2efe50d18f0f09d83af2606"
+    },
+    {
+      "path": "custom/wanxiang_phrase.custom.yaml",
+      "bytes": 275,
+      "sha256": "1d89d723ce866385660c83545076a6794f5d8db4db0a03526e9b00a76182821d"
+    },
+    {
+      "path": "custom/wanxiang_reverse.custom.yaml",
+      "bytes": 599,
+      "sha256": "a2059125e32dab17ebe6876cfaa74aec07c380faeddaa5d898e44dd802a8fae9"
+    },
+    {
+      "path": "custom/万象键位映射.jpg",
+      "bytes": 1086001,
+      "sha256": "ce5e66182e289c5b0466982963f1d683121cb4bdfe01ba49561bfca477a96e57"
+    },
+    {
+      "path": "custom/赞赏.jpg",
+      "bytes": 106513,
+      "sha256": "069e8d456b28bcbd59bd6f7b6b73b6f77d0c34f078adad611fe78b9b81365bd1"
+    },
+    {
+      "path": "custom_phrase.dict.yaml",
+      "bytes": 1492,
+      "sha256": "c78303912bf8798b5abeb0cd5e6e80fb0a4c42d4cd53e9f1645c1fba7cd01393"
+    },
+    {
+      "path": "default.yaml",
+      "bytes": 6390,
+      "sha256": "15b8b58741e6e325ccab201990fb48ba56879ceabd634789a39e0ae56a2e70bc"
+    },
+    {
+      "path": "dicts/abbrev.dict.yaml",
+      "bytes": 558072,
+      "sha256": "947b7c487f0e8ca9bbdd47af6b27b2a6b21b994d0ac97b62c658db05946aa318"
+    },
+    {
+      "path": "dicts/cuoyin.dict.yaml",
+      "bytes": 8116,
+      "sha256": "d699a3a620ca1ad8203747e525e4f366f8f15df0185dd1acaa4c1480cfd5b75a"
+    },
+    {
+      "path": "dicts/diming.dict.yaml",
+      "bytes": 3307037,
+      "sha256": "217f145d086928a079e082f168cfb410c3c5b2265dd1aa9c5cfa4587dcde736c"
+    },
+    {
+      "path": "dicts/duoyin.dict.yaml",
+      "bytes": 137394,
+      "sha256": "ba63fbb95ba10f5a147645ae33faeff74ee87b76068006c14244708e741693ea"
+    },
+    {
+      "path": "dicts/en.dict.yaml",
+      "bytes": 1568996,
+      "sha256": "37554b30274173d9755e1f2dc6e6e58bb2006ed40f43a3ad243f9fb070d2d1a2"
+    },
+    {
+      "path": "dicts/jichu.dict.yaml",
+      "bytes": 49489467,
+      "sha256": "82101c735182cdbb789dd521ac70e811122161ae09d3e96ce432b544c0ea6d8d"
+    },
+    {
+      "path": "dicts/mingren.dict.yaml",
+      "bytes": 666980,
+      "sha256": "d595aee7864a13d4703f37f01e9b48748a0d277be2cc07e886cf1ac420b20504"
+    },
+    {
+      "path": "dicts/mixed.dict.yaml",
+      "bytes": 35913,
+      "sha256": "9e60dfd5ebb74ebfafbda5a46b59797d5abeefc9161af1de01b8fa63c6bd94ee"
+    },
+    {
+      "path": "dicts/t9_abbrev.dict.yaml",
+      "bytes": 514659,
+      "sha256": "2b72e3c0dee6ce6207a29a5cfa30ff310751bb977070086fc52868696bbc368f"
+    },
+    {
+      "path": "dicts/yiren.dict.yaml",
+      "bytes": 423960,
+      "sha256": "9caf54d6607647b5dffecbf6d870e9df04df998467785b900eb1b945abc8fe35"
+    },
+    {
+      "path": "dicts/zi.dict.yaml",
+      "bytes": 616559,
+      "sha256": "7d2399aa659520dd4e1bd54e8dadced277ac25e342ccc9ca92714df0cb242a11"
+    },
+    {
+      "path": "lua/data/chaifen.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lua/data/charset.reverse.bin",
+      "bytes": 565032,
+      "sha256": "dbf8049c1f2f616a0a2ebd7b439cc94ea188805fd2c4b8dba2c4cabdf55de9e8"
+    },
+    {
+      "path": "lua/data/codex_emoji.txt",
+      "bytes": 21773,
+      "sha256": "2229432a9f74e32ab5a08255cb3dd311f7749c7414c4d7c9f70e63c07a414681"
+    },
+    {
+      "path": "lua/data/codex_sym.txt",
+      "bytes": 19431,
+      "sha256": "859ea5a9f63f24d336d4fd7cd73d621584aa549ea724ce65dbbc494e0d331f4c"
+    },
+    {
+      "path": "lua/data/en_abbrev.txt",
+      "bytes": 2476,
+      "sha256": "418f3e6faa65928e5f0684269492d839c2ca4116e98ecd16cf1ac390f58be689"
+    },
+    {
+      "path": "lua/data/english_chinese.txt",
+      "bytes": 1308578,
+      "sha256": "7690f55fb0af2a21cda456ac3f0524d7a399135f3b48caf79077d3dbadabc0e1"
+    },
+    {
+      "path": "lua/data/others.txt",
+      "bytes": 30663,
+      "sha256": "166e4bd6201542cd12812d8f7712d8e4b2ee4111e3e95e42293d2a0a1fc586e6"
+    },
+    {
+      "path": "lua/data/sentence.txt",
+      "bytes": 313,
+      "sha256": "a77ae7bc6249ef8efb32d90e8268f60e9bffc595f04997b36794459179d20c60"
+    },
+    {
+      "path": "lua/data/tips_show.txt",
+      "bytes": 192537,
+      "sha256": "5dccc393f8843ec795d824ab815a91b9cd61f77f9167e0f24ffa9efb444e1b57"
+    },
+    {
+      "path": "lua/wanxiang/auto_phrase.lua",
+      "bytes": 10104,
+      "sha256": "28babacc7b005ca15c33d9e951f3209d97cfa9394b752cd34e5096d50a245d0f"
+    },
+    {
+      "path": "lua/wanxiang/bit.lua",
+      "bytes": 3505,
+      "sha256": "7dedb1ed31a31c2c254fcf26a23e77fc428ebeaa091336f2545cb5d5fc4f03ca"
+    },
+    {
+      "path": "lua/wanxiang/charset_filter.lua",
+      "bytes": 16405,
+      "sha256": "b9a9287f911ef8f5ae73f6e3f6a5a7f0b0e64aea8ad2df6341e7caf9ba931bee"
+    },
+    {
+      "path": "lua/wanxiang/context_reorder.lua",
+      "bytes": 28881,
+      "sha256": "d11b37eba4260d6531a14390a688ac4a89390fae5fc6263f684f95139b252003"
+    },
+    {
+      "path": "lua/wanxiang/custom_phrase.lua",
+      "bytes": 6953,
+      "sha256": "b204192be9839f4fcf54b22f76dde987295f74efe54cc2b3fe884c38f9beeecf"
+    },
+    {
+      "path": "lua/wanxiang/force_upper_aux.lua",
+      "bytes": 8319,
+      "sha256": "489ed027c7b2fe7f6176d7c87c854adc19228609352f44a4693d8348fd5ab8f4"
+    },
+    {
+      "path": "lua/wanxiang/input_statistics.lua",
+      "bytes": 32266,
+      "sha256": "ba4c8e1be82d7901d9037844f965a498e881611532f4f5ecabc278144b1f0295"
+    },
+    {
+      "path": "lua/wanxiang/key_binder.lua",
+      "bytes": 8124,
+      "sha256": "ade50151277e3a13e33bdddd10e9f62cba7cfda4f6490ff8309fcb8aeb710c46"
+    },
+    {
+      "path": "lua/wanxiang/librime.lua",
+      "bytes": 28216,
+      "sha256": "53415e56d69cbe86928199a0b7d7fef7742b90a854b22337bef209ab7b990b3c"
+    },
+    {
+      "path": "lua/wanxiang/number_conversion.lua",
+      "bytes": 15624,
+      "sha256": "4cc3f75f4ec1b3d6860259db7b868003a707dff8a4e2462511d26b35d8b1d02e"
+    },
+    {
+      "path": "lua/wanxiang/partial_commit.lua",
+      "bytes": 5270,
+      "sha256": "f78ecf8c454351fe135de594e7553a364d677d3b31357010d533b82032ca708b"
+    },
+    {
+      "path": "lua/wanxiang/random_tools.lua",
+      "bytes": 14354,
+      "sha256": "ef41449f8a9634718892752b8e4bf4da8a8a08e48f16f2183f0678c761241ab4"
+    },
+    {
+      "path": "lua/wanxiang/set_schema.lua",
+      "bytes": 6151,
+      "sha256": "ab0b9629ffa5ecfa158a64eca7d3069bc376504ccea6534272480c07b1340450"
+    },
+    {
+      "path": "lua/wanxiang/shijian.lua",
+      "bytes": 129716,
+      "sha256": "e3a1b1ee926ef8e52cfcb409ee5c6626453006cc6f452d339fc5b414e52482bb"
+    },
+    {
+      "path": "lua/wanxiang/super_calculator.lua",
+      "bytes": 128038,
+      "sha256": "9b1a0e5625dff95b9d208087e9e0d2f2452ab87081fa08515c318542f291b693"
+    },
+    {
+      "path": "lua/wanxiang/super_comment_preedit.lua",
+      "bytes": 21575,
+      "sha256": "9a64782e100cd2285e271de5831e52d769b88eb94eee1e1a38bfb72fda518064"
+    },
+    {
+      "path": "lua/wanxiang/super_english.lua",
+      "bytes": 26892,
+      "sha256": "c48a6686be64e39e173215392b74aaed9f6c21b389ab03440ebf38484414d397"
+    },
+    {
+      "path": "lua/wanxiang/super_filter.lua",
+      "bytes": 29797,
+      "sha256": "89c00bec56dbf29014892893f2d1dc14797d96ef2fdb49a729543bde952dd50f"
+    },
+    {
+      "path": "lua/wanxiang/super_lookup.lua",
+      "bytes": 57521,
+      "sha256": "4ab6fce0922b03b30ba57f0205483801924f977f556a64f97e99fd2432ca8807"
+    },
+    {
+      "path": "lua/wanxiang/super_processor.lua",
+      "bytes": 30483,
+      "sha256": "3f61f3af18f3caa2c4a4f37af7b934acb6504d26c9c2d53be93448ead377cb5f"
+    },
+    {
+      "path": "lua/wanxiang/super_replacer.lua",
+      "bytes": 59165,
+      "sha256": "5e65afeca29a4926ffe6a45fce7258c448c773e4dece4c1d28b7eba846cac629"
+    },
+    {
+      "path": "lua/wanxiang/super_sequence.lua",
+      "bytes": 25577,
+      "sha256": "f80258879a2fbd7673992f5762c42f8a8defd06232baab12312e7ab1018f7b4a"
+    },
+    {
+      "path": "lua/wanxiang/super_symbols.lua",
+      "bytes": 23675,
+      "sha256": "88d1fd97c13b0c36004c3cc24fee665d92f16decc52ff6e6c49bbf9f5950918e"
+    },
+    {
+      "path": "lua/wanxiang/super_tips.lua",
+      "bytes": 9177,
+      "sha256": "f7c1f3d283f1c66d4ea428c885e329ca434f0d0a3d4076d7b51a3519d3a3be4b"
+    },
+    {
+      "path": "lua/wanxiang/unicode_conversion.lua",
+      "bytes": 17636,
+      "sha256": "e797cba245602606daf1d1dfe22766c058297c3b0aa73824a53c8ca6fc07febb"
+    },
+    {
+      "path": "lua/wanxiang/userdb.lua",
+      "bytes": 2853,
+      "sha256": "81e3cc8d4030301da6a37febf023cf11c334412251d9311c4ea933f12e973160"
+    },
+    {
+      "path": "lua/wanxiang/version_display.lua",
+      "bytes": 952,
+      "sha256": "8d0c83f7f4e361f3b9b1eb8c2c6181fdba1a8d8de1f472801092f29348c47e18"
+    },
+    {
+      "path": "lua/wanxiang/wanxiang.lua",
+      "bytes": 13587,
+      "sha256": "63c9b67e440b85297bea6797c102e00591763671c35515d389afc5333a20c592"
+    },
+    {
+      "path": "opencc/wanxiang/Custom_Emoji.txt",
+      "bytes": 22,
+      "sha256": "20303c3efed9a4e293471880f29e98b152545f385f440b4e8a58481683e592d2"
+    },
+    {
+      "path": "opencc/wanxiang/Custom_STPhrases.txt",
+      "bytes": 19,
+      "sha256": "4150010248e76c4eb6e3a0ad7fe4d3aa70fb5f39f04ee32d27f22dfbc0651116"
+    },
+    {
+      "path": "opencc/wanxiang/HKVariants.ocd2",
+      "bytes": 4893,
+      "sha256": "62750cb79eef18a407030b05bd4abe0e102bec2254d04b2d2310792f44519321"
+    },
+    {
+      "path": "opencc/wanxiang/STCharacters.ocd2",
+      "bytes": 45302,
+      "sha256": "bf3207251f5d233cc23f3eaedd11510eba5b81bfdc0b44708ffaf260b05ad903"
+    },
+    {
+      "path": "opencc/wanxiang/STPhrases.ocd2",
+      "bytes": 925883,
+      "sha256": "04125a9fb1983292e36cfe1e558d0ecea9b106a8d2948bbf1509472268e6290c"
+    },
+    {
+      "path": "opencc/wanxiang/TWVariants.ocd2",
+      "bytes": 4595,
+      "sha256": "390f07a1867ad56aa60a7af23b6e4b3acc96ea48d893c06ede3dffb1c576c2bc"
+    },
+    {
+      "path": "opencc/wanxiang/emoji.ocd2",
+      "bytes": 147511,
+      "sha256": "c0a1f97912e963f71badff320de632beb48043a8582c9c3d4db6ebd474d107a3"
+    },
+    {
+      "path": "opencc/wanxiang_emoji.json",
+      "bytes": 630,
+      "sha256": "bdf1c63ce13d047530eee88fbd5d86631868ef70438ae23e1c9813133a9adba9"
+    },
+    {
+      "path": "opencc/wanxiang_s2hk.json",
+      "bytes": 905,
+      "sha256": "c5680fcf528f43d90c6e71dc91e0aa6454e04e73a131c40403c75a3c92a62847"
+    },
+    {
+      "path": "opencc/wanxiang_s2t.json",
+      "bytes": 784,
+      "sha256": "5a731d0bb71a0da6536b5e9b940add183bd9233f9a0b926274e1375ad6cd409b"
+    },
+    {
+      "path": "opencc/wanxiang_s2tw.json",
+      "bytes": 906,
+      "sha256": "516cc76f28daa2f65a00c9f0f3f08b00eaa2e60056db9faed5d9aab07a94c48f"
+    },
+    {
+      "path": "version.txt",
+      "bytes": 7,
+      "sha256": "8a378d91d1b62b25ff4dcdbf919ba1430ea5646bf794a4e59366cfd529ef71c3"
+    },
+    {
+      "path": "wanxiang.dict.yaml",
+      "bytes": 1311,
+      "sha256": "8c61a89f522a911eecfbe7807c44d06f17845c5859358992d80023b69402a092"
+    },
+    {
+      "path": "wanxiang.schema.yaml",
+      "bytes": 37422,
+      "sha256": "cac4de78acf77bac62f3082e8e43ec7e1c2ca25807d45bf43873a0710fedf2e3"
+    },
+    {
+      "path": "wanxiang_abbrev.dict.yaml",
+      "bytes": 233,
+      "sha256": "b22ddbaba46468f4011ab7ccc93d909155b9d7495ca267bf6c254c97eecd47e2"
+    },
+    {
+      "path": "wanxiang_abbrev.schema.yaml",
+      "bytes": 699,
+      "sha256": "5a3ee7fee063b50c7d304502223de72e837737b8dfdf786b16cdef5b69ce391a"
+    },
+    {
+      "path": "wanxiang_abbrev_t9.dict.yaml",
+      "bytes": 239,
+      "sha256": "7b0335e92e836f519bdb57e76b9c223ee84599ae808ae2601da9329153ed8fd0"
+    },
+    {
+      "path": "wanxiang_abbrev_t9.schema.yaml",
+      "bytes": 711,
+      "sha256": "d54a04d1cfb8cf6170f2767a1cea1cc6b660729669682fdbaf10f207ce4321b0"
+    },
+    {
+      "path": "wanxiang_algebra.yaml",
+      "bytes": 136967,
+      "sha256": "99719690856aa5d334a0e9110f0ea7a8eb0f92cc669a51b2a1a2293c1bff53c7"
+    },
+    {
+      "path": "wanxiang_english.dict.yaml",
+      "bytes": 179,
+      "sha256": "d6ef2c2041d67c3a5f8f571a7317891bf92117a7e46df41ecf3174fff0378f0c"
+    },
+    {
+      "path": "wanxiang_english.schema.yaml",
+      "bytes": 5608,
+      "sha256": "370008be3601b0fc82473820c22a43f5301b4ccf7b4a28e484f0f15396278323"
+    },
+    {
+      "path": "wanxiang_mixedcode.dict.yaml",
+      "bytes": 309,
+      "sha256": "d212d0dbe08bc204f1bf8776f198f218be84e2730fb3f0bcad11b9c99c2c441d"
+    },
+    {
+      "path": "wanxiang_mixedcode.schema.yaml",
+      "bytes": 1008,
+      "sha256": "a81c536dcd449f6bad12b51f6e756067cd12593c3591625a07d4786f015d126b"
+    },
+    {
+      "path": "wanxiang_phrase.schema.yaml",
+      "bytes": 780,
+      "sha256": "2f7ec78b562bd32decfdf016349a50311da26e24d91fad128593567086e90b17"
+    },
+    {
+      "path": "wanxiang_phrase_t9.schema.yaml",
+      "bytes": 785,
+      "sha256": "cf22e457aedd4a3de1b65d84f559bbe20a414d881da456d947d0d8a18f4f8848"
+    },
+    {
+      "path": "wanxiang_reverse.dict.yaml",
+      "bytes": 6576733,
+      "sha256": "2af5542f0459c25304858976c90b8a8aee4ba2512ea42e32d20fbe0b8831e618"
+    },
+    {
+      "path": "wanxiang_reverse.schema.yaml",
+      "bytes": 829,
+      "sha256": "8740fe447c34f04ecfa2b21b8c00165b667011e9afcce1edf4479f3a5e867521"
+    },
+    {
+      "path": "wanxiang_symbols.yaml",
+      "bytes": 98894,
+      "sha256": "8cd64dd226ccdddc0771085ad4d072c19713529ec02c9f4c00d97e6fd6e4c8df"
+    },
+    {
+      "path": "wanxiang_t9.schema.yaml",
+      "bytes": 20837,
+      "sha256": "52325a26dceb6d6ff15098846d648723fcf2d1eadf20709ada59a6796c6bd5fb"
+    },
+    {
+      "path": "wanxiang_t9i.schema.yaml",
+      "bytes": 20966,
+      "sha256": "9f5a6bae9a95f790c659a50788a4c22a52eef3f21f9da05f8e9596abe45b7b3a"
+    },
+    {
+      "path": "weasel.yaml",
+      "bytes": 26646,
+      "sha256": "991d56a5bde63f3f7ae9f9600740b544207eedc9021fed1a065588516fef1e73"
+    }
+  ],
+  "references": [
+    {
+      "source": "custom/wanxiang.custom.yaml",
+      "line": 16,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang.custom.yaml",
+      "line": 18,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_abbrev.custom.yaml",
+      "line": 4,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_english.custom.yaml",
+      "line": 4,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_english.custom.yaml",
+      "line": 5,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_english.custom.yaml",
+      "line": 6,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_mixedcode.custom.yaml",
+      "line": 4,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_mixedcode.custom.yaml",
+      "line": 5,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_mixedcode.custom.yaml",
+      "line": 6,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_phrase.custom.yaml",
+      "line": 4,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_reverse.custom.yaml",
+      "line": 5,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_reverse.custom.yaml",
+      "line": 6,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "custom/wanxiang_reverse.custom.yaml",
+      "line": 7,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/bit.lua",
+      "line": 107,
+      "kind": "lua_require",
+      "target": "lua/bit.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/bit.lua",
+      "line": 109,
+      "kind": "lua_require",
+      "target": "lua/bit32.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/charset_filter.lua",
+      "line": 12,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/charset_filter.lua",
+      "line": 28,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/bit.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/context_reorder.lua",
+      "line": 20,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/context_reorder.lua",
+      "line": 21,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/userdb.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/custom_phrase.lua",
+      "line": 30,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/force_upper_aux.lua",
+      "line": 6,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/input_statistics.lua",
+      "line": 3,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/userdb.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/input_statistics.lua",
+      "line": 4,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/key_binder.lua",
+      "line": 5,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/partial_commit.lua",
+      "line": 3,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/random_tools.lua",
+      "line": 103,
+      "kind": "lua_require",
+      "target": "lua/bit.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/random_tools.lua",
+      "line": 105,
+      "kind": "lua_require",
+      "target": "lua/bit32.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 1,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_comment_preedit.lua",
+      "line": 2,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_english.lua",
+      "line": 34,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_filter.lua",
+      "line": 9,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_lookup.lua",
+      "line": 10,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_lookup.lua",
+      "line": 15,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/charset_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_processor.lua",
+      "line": 8,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_replacer.lua",
+      "line": 41,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/userdb.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_replacer.lua",
+      "line": 42,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 11,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 12,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/userdb.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_symbols.lua",
+      "line": 18,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_tips.lua",
+      "line": 13,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/super_tips.lua",
+      "line": 14,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/userdb.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/unicode_conversion.lua",
+      "line": 7,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "lua/wanxiang/version_display.lua",
+      "line": 1,
+      "kind": "lua_require",
+      "target": "lua/wanxiang/wanxiang.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_emoji.json",
+      "line": 11,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_Emoji.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_emoji.json",
+      "line": 15,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/emoji.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_emoji.json",
+      "line": 28,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_Emoji.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_emoji.json",
+      "line": 32,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/emoji.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 11,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 15,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 28,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 32,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 36,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STCharacters.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2hk.json",
+      "line": 45,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/HKVariants.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2t.json",
+      "line": 11,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2t.json",
+      "line": 15,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2t.json",
+      "line": 28,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2t.json",
+      "line": 32,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2t.json",
+      "line": 36,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STCharacters.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 11,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 15,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 28,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/Custom_STPhrases.txt",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 32,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STPhrases.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 36,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/STCharacters.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "opencc/wanxiang_s2tw.json",
+      "line": 44,
+      "kind": "opencc_dictionary",
+      "target": "opencc/wanxiang/TWVariants.ocd2",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 17,
+      "kind": "import_table",
+      "target": "dicts/zi.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 18,
+      "kind": "import_table",
+      "target": "dicts/jichu.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 19,
+      "kind": "import_table",
+      "target": "dicts/cuoyin.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 20,
+      "kind": "import_table",
+      "target": "dicts/duoyin.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 21,
+      "kind": "import_table",
+      "target": "dicts/diming.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 22,
+      "kind": "import_table",
+      "target": "dicts/mingren.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.dict.yaml",
+      "line": 23,
+      "kind": "import_table",
+      "target": "dicts/yiren.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 60,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_processor.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 61,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/unicode_conversion.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 62,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 63,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 64,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/partial_commit.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 65,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_sequence.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 66,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_tips.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 70,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/key_binder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 86,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/version_display.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 87,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/set_schema.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 88,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/shijian.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 89,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/unicode_conversion.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 90,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/number_conversion.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 91,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_calculator.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 92,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/random_tools.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 93,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/input_statistics.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 94,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_symbols.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 95,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 99,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/charset_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 100,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/auto_phrase.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 101,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_lookup.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 102,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/custom_phrase.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 103,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 104,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/charset_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 105,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_comment_preedit.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 110,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_replacer.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 111,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 112,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 113,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_sequence.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 117,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 127,
+      "kind": "dictionary",
+      "target": "wanxiang.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 151,
+      "kind": "dictionary",
+      "target": "custom_phrase.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 160,
+      "kind": "dictionary",
+      "target": "wanxiang_abbrev.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 171,
+      "kind": "dictionary",
+      "target": "wanxiang_english.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 189,
+      "kind": "dictionary",
+      "target": "wanxiang_mixedcode.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 200,
+      "kind": "dictionary",
+      "target": "wanxiang_reverse.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 216,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_emoji.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 222,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2t.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 228,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2hk.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 234,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2tw.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 251,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 291,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 292,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev.dict.yaml",
+      "line": 11,
+      "kind": "import_table",
+      "target": "dicts/abbrev.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev.schema.yaml",
+      "line": 25,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev.schema.yaml",
+      "line": 32,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev.schema.yaml",
+      "line": 35,
+      "kind": "dictionary",
+      "target": "wanxiang_abbrev.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev_t9.dict.yaml",
+      "line": 11,
+      "kind": "import_table",
+      "target": "dicts/t9_abbrev.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev_t9.schema.yaml",
+      "line": 25,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev_t9.schema.yaml",
+      "line": 32,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_abbrev_t9.schema.yaml",
+      "line": 35,
+      "kind": "dictionary",
+      "target": "wanxiang_abbrev_t9.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.dict.yaml",
+      "line": 10,
+      "kind": "import_table",
+      "target": "dicts/en.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 24,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 41,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 44,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_english.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 45,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/auto_phrase.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 46,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_replacer.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 55,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 56,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 58,
+      "kind": "dictionary",
+      "target": "wanxiang_english.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 72,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 73,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_english.schema.yaml",
+      "line": 79,
+      "kind": "dictionary",
+      "target": "wanxiang_english.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_mixedcode.dict.yaml",
+      "line": 13,
+      "kind": "import_table",
+      "target": "dicts/mixed.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_mixedcode.schema.yaml",
+      "line": 26,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_mixedcode.schema.yaml",
+      "line": 33,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_mixedcode.schema.yaml",
+      "line": 34,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_mixedcode.schema.yaml",
+      "line": 36,
+      "kind": "dictionary",
+      "target": "wanxiang_mixedcode.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase.schema.yaml",
+      "line": 25,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase.schema.yaml",
+      "line": 32,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase.schema.yaml",
+      "line": 35,
+      "kind": "dictionary",
+      "target": "custom_phrase.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase_t9.schema.yaml",
+      "line": 25,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase_t9.schema.yaml",
+      "line": 32,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_phrase_t9.schema.yaml",
+      "line": 35,
+      "kind": "dictionary",
+      "target": "custom_phrase.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_reverse.schema.yaml",
+      "line": 26,
+      "kind": "include_or_patch",
+      "target": "default.yaml",
+      "optional": true,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_reverse.schema.yaml",
+      "line": 33,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_reverse.schema.yaml",
+      "line": 34,
+      "kind": "include_or_patch",
+      "target": "wanxiang_algebra.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_reverse.schema.yaml",
+      "line": 37,
+      "kind": "dictionary",
+      "target": "wanxiang_reverse.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 53,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 54,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_processor.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 55,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_tips.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 59,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/key_binder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 75,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/version_display.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 76,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/shijian.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 77,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_calculator.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 78,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/input_statistics.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 79,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/number_conversion.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 82,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_lookup.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 83,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/custom_phrase.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 84,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 85,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_comment_preedit.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 90,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_replacer.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 91,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 95,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 105,
+      "kind": "dictionary",
+      "target": "wanxiang.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 126,
+      "kind": "dictionary",
+      "target": "custom_phrase.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 135,
+      "kind": "dictionary",
+      "target": "wanxiang_abbrev_t9.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 152,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_emoji.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 158,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2t.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 164,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2hk.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 170,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2tw.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 229,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 231,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 52,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 53,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_processor.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 55,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_tips.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 59,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/key_binder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 75,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/version_display.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 76,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/shijian.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 77,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_calculator.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 78,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/input_statistics.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 79,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/number_conversion.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 82,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_lookup.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 83,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/custom_phrase.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 84,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/context_reorder.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 85,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_comment_preedit.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 90,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_replacer.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 91,
+      "kind": "lua_component",
+      "target": "lua/wanxiang/super_filter.lua",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 96,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 106,
+      "kind": "dictionary",
+      "target": "wanxiang.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 127,
+      "kind": "dictionary",
+      "target": "custom_phrase.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 136,
+      "kind": "dictionary",
+      "target": "wanxiang_abbrev_t9.dict.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 153,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_emoji.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 159,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2t.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 165,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2hk.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 171,
+      "kind": "opencc",
+      "target": "opencc/wanxiang_s2tw.json",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 228,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 230,
+      "kind": "include_or_patch",
+      "target": "wanxiang_symbols.yaml",
+      "optional": false,
+      "exists": true
+    }
+  ],
+  "missing_references": [
+    {
+      "source": "lua/wanxiang/bit.lua",
+      "line": 107,
+      "kind": "lua_require",
+      "target": "lua/bit.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/bit.lua",
+      "line": 109,
+      "kind": "lua_require",
+      "target": "lua/bit32.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/random_tools.lua",
+      "line": 103,
+      "kind": "lua_require",
+      "target": "lua/bit.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "lua/wanxiang/random_tools.lua",
+      "line": 105,
+      "kind": "lua_require",
+      "target": "lua/bit32.lua",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang.schema.yaml",
+      "line": 117,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang_t9.schema.yaml",
+      "line": 95,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    },
+    {
+      "source": "wanxiang_t9i.schema.yaml",
+      "line": 96,
+      "kind": "model",
+      "target": "wanxiang-lts-zh-hans.gram",
+      "optional": false,
+      "exists": false
+    }
+  ],
+  "lua_operations_requiring_review": [
+    {
+      "source": "lua/wanxiang/auto_phrase.lua",
+      "line": 103,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/auto_phrase.lua",
+      "line": 105,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/auto_phrase.lua",
+      "line": 111,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/context_reorder.lua",
+      "line": 205,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/context_reorder.lua",
+      "line": 222,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/input_statistics.lua",
+      "line": 85,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/input_statistics.lua",
+      "line": 104,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/input_statistics.lua",
+      "line": 108,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 433,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 560,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 583,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 584,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 732,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 732,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 733,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 752,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 753,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 755,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 755,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 758,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 759,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/librime.lua",
+      "line": 761,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 4,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 12,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 23,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 80,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 98,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 132,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/set_schema.lua",
+      "line": 147,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_lookup.lua",
+      "line": 1230,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_replacer.lua",
+      "line": 662,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 9,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 67,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 103,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_sequence.lua",
+      "line": 174,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_tips.lua",
+      "line": 2,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/super_tips.lua",
+      "line": 157,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/unicode_conversion.lua",
+      "line": 440,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/unicode_conversion.lua",
+      "line": 441,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/unicode_conversion.lua",
+      "line": 441,
+      "operation": "Memory",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 3,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 6,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 70,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 89,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 93,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 96,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 108,
+      "operation": "LevelDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 109,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/userdb.lua",
+      "line": 113,
+      "operation": "UserDb",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/wanxiang.lua",
+      "line": 148,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/wanxiang.lua",
+      "line": 233,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    },
+    {
+      "source": "lua/wanxiang/wanxiang.lua",
+      "line": 251,
+      "operation": "io.open",
+      "status": "REVIEW_REQUIRED; literal scan may include comments"
+    }
+  ],
+  "limits": [
+    "Dynamic Lua require/file paths are not resolved.",
+    "Rime patches and YAML inheritance must be validated by real deployment.",
+    "License exceptions and embedded third-party attribution require manual review."
+  ]
+}

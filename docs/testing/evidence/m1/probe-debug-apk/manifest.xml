@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="20260901"
+    android:versionName="3.3.12"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    package="dev.local.iosninekeyime.probe.debug"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16">
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="36" />
+
+    <permission
+        android:name="dev.local.iosninekeyime.probe.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="0x2" />
+
+    <application
+        android:theme="@ref/0x1030241"
+        android:label="九键 M1 兼容性探针"
+        android:name="android.app.Application"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:extractNativeLibs="true"
+        android:fullBackupContent="@ref/0x7f140000"
+        android:usesCleartextTraffic="false"
+        android:dataExtractionRules="@ref/0x7f140001">
+
+        <activity
+            android:name="dev.local.iosninekeyime.probe.ProbeActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

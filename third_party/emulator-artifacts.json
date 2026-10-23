@@ -1,0 +1,22 @@
+{
+  "emulator_x64_unused": {
+    "version": "37.2.12",
+    "url": "https://dl.google.com/android/repository/emulator-darwin_x64-16428233.zip",
+    "sha256": "9fdae8c07ac92155aeb175835669ef9b12adf19130f5557792139fb4ebd01256",
+    "bytes": 488731099
+  },
+  "emulator": {
+    "version": "37.2.12",
+    "url": "https://dl.google.com/android/repository/emulator-darwin_aarch64-16428233.zip",
+    "sha256": "f4c4a142bda54fcec064bdb32b51f19e25bae0a45ad019197ef968bf7a48979b",
+    "bytes": 416112708
+  },
+  "image": {
+    "package": "system-images;android-36;default;arm64-v8a",
+    "revision": 2,
+    "url": "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-36_r02.zip",
+    "sha256": "c6194eb8ace128b174ea86b5fbc0c78204147123b3b5ce6d0e3d615a06ad31d1",
+    "bytes": 810736863
+  },
+  "note": "repository2-1.xml lacked host-arch; v3 metadata selected aarch64; x64 tool not used for tests"
+}
