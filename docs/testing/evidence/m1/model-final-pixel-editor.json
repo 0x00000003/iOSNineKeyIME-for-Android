@@ -1,0 +1,72 @@
+{
+  "scope": "real host editor component ONLY; native engine not rerun",
+  "pass": false,
+  "host_editor_component": {
+    "scope": "real EditText/InputConnection component test; NOT full IME/multi-host or I05 all-path acceptance",
+    "single_host_commit": true,
+    "composing_replacement": true,
+    "same_session_restore": true,
+    "old_field_not_replayed": true,
+    "grapheme_and_selection_deletion_passed": 6,
+    "deletion_fixture_count": 6,
+    "sensitive_metadata_cases_passed": 6,
+    "sensitive_context_reads": 0,
+    "sensitive_metadata_results": [
+      {
+        "case": "text_password",
+        "pass": true
+      },
+      {
+        "case": "visible_password",
+        "pass": true
+      },
+      {
+        "case": "web_password",
+        "pass": true
+      },
+      {
+        "case": "number_password",
+        "pass": true
+      },
+      {
+        "case": "no_personalized_learning",
+        "pass": true
+      },
+      {
+        "case": "user_private",
+        "pass": true
+      }
+    ],
+    "sensitive_deletion_results": [
+      {
+        "case": "astral",
+        "pass": true
+      },
+      {
+        "case": "combining_accent",
+        "pass": false
+      },
+      {
+        "case": "zwj_family",
+        "pass": true
+      },
+      {
+        "case": "regional_flag",
+        "pass": true
+      },
+      {
+        "case": "skin_modifier",
+        "pass": true
+      }
+    ],
+    "sensitive_grapheme_deletion_passed": 4,
+    "sensitive_deletion_fixture_count": 5,
+    "normal_learning_tree_unchanged": true,
+    "pass": false
+  },
+  "probe_run_id": "6114e3e5d56f40af868629daa13573e4",
+  "tested_apk_sha256": "05da473956b8db4f5708d3a699c90e2a9a3b5ccfa13c3faa1d224edfc6867a73",
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "editor",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

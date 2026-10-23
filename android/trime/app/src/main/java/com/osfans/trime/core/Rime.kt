@@ -495,6 +495,17 @@ class Rime :
         @JvmStatic
         external fun exitRime()
 
+        /** Serial-worker only: invalidate field-local native context, then select the policy schema. */
+        @JvmStatic
+        external fun resetRimeSession()
+
+        /** Synthetic regression metadata only; never returns history text. */
+        @JvmStatic
+        external fun getRimeProbeHistorySize(): Int
+
+        @JvmStatic
+        external fun getRimeProbeCompactGrammarLoaded(): Boolean
+
         @JvmStatic
         external fun awaitRimeMaintenance()
 

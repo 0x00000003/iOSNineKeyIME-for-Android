@@ -1,0 +1,16 @@
+{
+  "scope": "font-specific source/license evidence; not complete app compliance",
+  "component": "com.mikepenz:community-material-typeface:7.0.96.1-kotlin",
+  "aar_sha256": "b363d060c4f7e173f9fba3af76c82df6bca2bdd2be3c6a9edeb41a724f294c21",
+  "embedded_font": "res/font/community_material_design_icons_font_v7_0_96.ttf",
+  "font_sha256": "cbfb8ffc5961513f8c93f84674751d2dcbbc560c2d844d142ab6de1ca64a88e0",
+  "source": "https://github.com/Templarian/MaterialDesign-Webfont",
+  "tag": "v7.0.96",
+  "commit": "6b7bfd3c201c1185129e819e02dc2505dbb82994",
+  "license_evidence": {
+    "path": "docs/reference/upstream/material-font/LICENSE",
+    "sha256": "3bae6305bcaa6d10219b999f65c342034c2d40b1c0e8567fa08605e73ccba829"
+  },
+  "declared_font_license": "Apache-2.0; pinned license explicitly names fonts separately from MIT code",
+  "limitation": "AAR repackaging and font source attribution reviewed; no Apple assets; complete distribution notice/source audit remains open"
+}

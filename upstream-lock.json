@@ -4,15 +4,27 @@
   "selection_status": "research-pinned; compatibility and artifact licensing pending",
   "runtime_assets": [
     {
-      "id": "m1-no-model-probe",
-      "version": "probe-3",
+      "id": "m1-engine-probe",
+      "version": "probe-4-model",
       "source": "https://github.com/amzxyz/rime-wanxiang/releases/download/v18.1.7/rime-wanxiang-lite.zip",
-      "sha256": "daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007",
+      "sha256": "c50e359b72cb5364956bba3e78b2afb6b88f291cd9a68d3be00b68a42a607c07",
       "source_archive_sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
-      "license": "CC-BY-4.0 data/config; GPL-3.0-or-later test Lua; see per-file third_party/android-probe-resources.json",
-      "status": "M1 probe only; not full product/model licensing approval",
+      "license": "CC-BY-4.0 data/config; GPL-3.0-or-later probe Lua/metadata; LGPL-3.0 license text; per-file manifest",
+      "status": "M1 compatibility probe only; not product/model quality or full redistribution compliance acceptance",
       "manifest": "third_party/android-probe-resources.json",
-      "bytes": 24390180
+      "bytes": 24405891
+    },
+    {
+      "id": "m1-octagram-compact-model",
+      "version": "20260712@8ceef1b42eb77e86501382a52e85c309c0f2f04c",
+      "source": "https://github.com/lotem/rime-octagram-data/releases/download/20260712/zh-hans-t-essay-bgw-compact.gram",
+      "asset_id": 474090460,
+      "name": "zh-hans-t-essay-bgw-compact.gram",
+      "sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+      "bytes": 40925228,
+      "license": "LGPL-3.0",
+      "license_evidence": "third_party/octagram-model-candidate.json",
+      "status": "M1 Android JNI compatibility observed on Pixel/API36 emulator; NOT R08/R10/model quality or complete distribution audit"
     }
   ],
   "projects": {

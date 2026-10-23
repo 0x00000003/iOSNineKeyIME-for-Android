@@ -1,0 +1,11 @@
+{
+    "uniqueId": "google/snappy",
+    "artifactVersion": "32ded457c0b1fe78ceb8397632c416568d6714a0",
+    "description": "Pinned native source; see third_party/trime-repositories.json and retained component license",
+    "name": "google/snappy",
+    "website": "https://github.com/google/snappy",
+    "tag": "native",
+    "licenses": [
+        "BSD-3-Clause"
+    ]
+}

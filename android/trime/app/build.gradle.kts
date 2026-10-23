@@ -4,6 +4,8 @@
  */
 @file:Suppress("UnstableApiUsage")
 
+import groovy.json.JsonSlurper
+
 plugins {
     id("com.osfans.trime.app-convention")
     id("com.osfans.trime.native-app-convention")
@@ -12,6 +14,12 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.ksp)
 }
+
+val runtimeLocks = ((JsonSlurper().parse(rootProject.file("../../upstream-lock.json")) as Map<*, *>)["runtime_assets"] as List<*>)
+    .filterIsInstance<Map<*, *>>()
+val probeResourceLock = runtimeLocks.single { it["id"] == "m1-engine-probe" }
+val compactModelLock = runtimeLocks.singleOrNull { it["id"] == "m1-octagram-compact-model" }
+fun pinnedSha(row: Map<*, *>): String = (row["sha256"] as String).also { require(it.matches(Regex("[a-f0-9]{64}"))) }
 
 android {
     namespace = "com.osfans.trime"
@@ -27,7 +35,10 @@ android {
 
         testInstrumentationRunner = "dev.local.iosninekeyime.probe.ProbeInstrumentation"
         multiDexEnabled = true
-        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007\"")
+        buildConfigField("String", "PROBE_RESOURCE_SHA256", "\"${pinnedSha(probeResourceLock)}\"")
+        buildConfigField("boolean", "PROBE_MODEL_ENABLED", (compactModelLock != null).toString())
+        buildConfigField("String", "PROBE_MODEL_SHA256", "\"${compactModelLock?.let(::pinnedSha).orEmpty()}\"")
+        buildConfigField("long", "PROBE_MODEL_BYTES", "${(compactModelLock?.get("bytes") as? Number)?.toLong() ?: 0}L")
         buildConfigField("String", "BUILDER", "\"${project.builder}\"")
         buildConfigField("long", "BUILD_TIMESTAMP", project.buildTimestamp)
         buildConfigField("String", "BUILD_COMMIT_HASH", "\"${project.buildCommitHash}\"")

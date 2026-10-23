@@ -1,0 +1,22 @@
+{
+  "scope": "debug-owned public-resource/model corruption and recovery; NOT general privacy/backup acceptance",
+  "public_corruption_rejected": true,
+  "model_corruption_rejected": true,
+  "model_bundled": true,
+  "recovered_public_resources": true,
+  "profiles_bytes_and_timestamps_unchanged": true,
+  "preservation_scope": "whole profile tree immediately after repair; then separately reopen engine with fresh synthetic profiles",
+  "existing_profiles_unchanged_after_engine_reopen": true,
+  "engine_reopened_with_repaired_resources": true,
+  "positive_existing_profile_count": 2,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "83e36af5cb6948188f7e2098d55ef497",
+  "tested_apk_sha256": "05da473956b8db4f5708d3a699c90e2a9a3b5ccfa13c3faa1d224edfc6867a73",
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "resources",
+  "scope_note": "synthetic component integration; NOT full IME, first install, ten-word learning or all-path privacy/performance acceptance"
+}

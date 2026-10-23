@@ -1,0 +1,11 @@
+{
+    "uniqueId": "rime/librime-predict",
+    "artifactVersion": "67c2881914a0242fc14ec7d6877782771b75800c",
+    "description": "Pinned native source; see third_party/trime-repositories.json and retained component license",
+    "name": "rime/librime-predict",
+    "website": "https://github.com/rime/librime-predict",
+    "tag": "native",
+    "licenses": [
+        "BSD-3-Clause"
+    ]
+}

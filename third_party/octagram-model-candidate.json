@@ -28,6 +28,12 @@
       "bytes": 775
     }
   ],
-  "bundled": false,
-  "android_compatibility_verified": false
+  "bundled": true,
+  "android_compatibility_verified": true,
+  "bundle_scope": "M1 local compatibility probe only, not accepted production language model",
+  "android_evidence": [
+    "docs/testing/evidence/m1/compact-model-pixel-native.json",
+    "docs/testing/evidence/m1/compact-model-emulator-native.json"
+  ],
+  "quality_context_acceptance": false
 }

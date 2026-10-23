@@ -1,16 +1,35 @@
 {
   "scope": "M1 compatibility APK only, NOT full product pack",
-  "version": "probe-3",
+  "version": "probe-4-model",
   "source_asset": 659385471,
   "source_sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
-  "archive_sha256": "daec81fe117251480a93a0877c5c6fda60f6027ad871c070c1abc64908b5f007",
-  "archive_bytes": 24390180,
-  "model": false,
+  "archive_sha256": "c50e359b72cb5364956bba3e78b2afb6b88f291cd9a68d3be00b68a42a607c07",
+  "archive_bytes": 24405891,
+  "model": true,
   "upstream_lua": false,
+  "model_asset": {
+    "name": "zh-hans-t-essay-bgw-compact.gram",
+    "bytes": 40925228,
+    "sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+    "license": "LGPL-3.0; pinned README explicitly associates the named .gram data and its license; distribution/source/attribution obligations remain to audit",
+    "asset_id": 474090460
+  },
   "prebuilt_tables": true,
   "prebuilt_manifest_sha256": "3850754acbe103cb6cd7d49f3dc6813dffd12d78940b1095838cc3f4d59c7559",
   "license_review": "individual data/config headers inspected; no file-level contrary grant observed; third-party app/native dependency audit remains incomplete",
   "files": [
+    {
+      "path": "COPYING.GPL-3.0",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "license": "GPL-3.0-or-later"
+    },
+    {
+      "path": "LICENSE.octagram-data",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651,
+      "license": "LGPL-3.0"
+    },
     {
       "path": "LICENSE.wanxiang",
       "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94",
@@ -19,8 +38,8 @@
     },
     {
       "path": "NOTICE.txt",
-      "sha256": "1bde65e7204cee45f83d8193ec8e20aaca01cd64ed90a1b524ba5b344b7ab709",
-      "bytes": 709,
+      "sha256": "337f63d6c2128c27829b4a67530f2552ec0cea7df0b92780f4f33bd2b738ad9c",
+      "bytes": 1164,
       "license": "project attribution"
     },
     {
@@ -72,6 +91,12 @@
       "license": "GPL-3.0-or-later"
     },
     {
+      "path": "model-info.json",
+      "sha256": "aa94fceeaea7b896a024140edcdea8ce0ad6b9d8423b286457453935a94f970b",
+      "bytes": 475,
+      "license": "project attribution"
+    },
+    {
       "path": "wanxiang_abbrev_t9.schema.yaml",
       "sha256": "d54a04d1cfb8cf6170f2767a1cea1cc6b660729669682fdbaf10f207ce4321b0",
       "bytes": 711,
@@ -97,14 +122,14 @@
     },
     {
       "path": "wanxiang_t9.schema.yaml",
-      "sha256": "9ae1c4bce43be55932fc2addd25f9062464aadb2eb1fd28ca4cdec9978c85b38",
-      "bytes": 17170,
+      "sha256": "8e16a91f6474c59109b746ee288f07522b270d3629ce1329b69f8a58edbcde8e",
+      "bytes": 17219,
       "license": "CC-BY-4.0"
     },
     {
       "path": "wanxiang_t9_nolearn.schema.yaml",
-      "sha256": "0b2a850bc7f32112fc77b82bcbd921326a3de0ed007379b28d1b799ae467edbe",
-      "bytes": 17179,
+      "sha256": "d5ac6cb5feab574586689273fd3e5e9414d603f7d135cc2441d247868df5dca9",
+      "bytes": 17229,
       "license": "CC-BY-4.0"
     }
   ]

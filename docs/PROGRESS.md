@@ -45,3 +45,9 @@ M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通
 前一提交065f5be。6固定公共table/reverse从两个独立host部署导出字节一致，不选userdb；runtime省略原始dict文本，保持解包预算32/128MiB。probe-3资源16项、ZIP daec81fe，fresh staging两次重建一致。debug13e97020在Pixel/离线API36模拟器native-only PASS，editor-only同样保留R04 FAIL；两APK静态、debug/release构建/lint通过。一次debug双profile探针Pixel13005ms（原源码编译探针135694ms）、模拟器干净卸装离线首装3906ms；未把单样本作为release性能成绩。忽略制品已冻结并有校验。
 
 不把原模型许可当作停止所有独立工作的理由：另外固定Rime上游LGPL compact gram候选并下载验证，host格式加载成功，但原特定查询2/4、grammar学习即时/重启rank不一致导致测试FAIL。未打包、未宣称上下文/许可分发全部通过；下一步研究session清理与前文混杂，再评价替代模型。具体证据见M1记录。完整M1/M2门禁仍未完成。
+
+## 2026-10-23 — 模型加载、会话清理与资源恢复（WIP）
+
+前一提交bde02ac。本轮将明确命名授权的Rime compact模型加入固定运行时资产；未集成数据仓库工具。发现clearComposition不清提交前文，新增原生session重建与元数据计数，通过并发会话对照定位学习排名混杂。旧FAIL保留，新控制保持2→1/重启1门槛。最终debug05da4739在Pixel/离线首装模拟器native-only与public-resource-recovery均PASS；损坏固定数据可重建且不改既有学习库，editor-only仍FAIL。
+
+45 app/49 state JVM、debug/release assemble/lint及两APK静态权限/实际备份XML PASS。工具链补官方SDK/JDK制品来源与固定版本检查；依赖清单补Lua/原生插件/字体/数据模型授权，修正librime旧版本。AboutLibraries联合导出触发Gradle任务输出依赖校验FAIL，保留失败并将CSV单独指定项目内输出目录后重跑PASS，未关闭校验。完整发布合规与干净重建仍未通过。详见M1记录第五检查点。无远端操作；下一步继续独立M2串行引擎/状态集成，不宣称M1全门禁或应用完成。

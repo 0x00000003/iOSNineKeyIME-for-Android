@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Build the small, no-model/no-upstream-Lua M1 APK resource pack."""
+"""Build pinned M1 resources, with optional verified public data and compact grammar."""
 import hashlib
 import argparse
 import json
@@ -12,7 +12,9 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--prebuilt', action='store_true', help='Include only hash-verified public static tables from prepare_prebuilt_tables.py')
+parser.add_argument('--octagram-model', action='store_true', help='Bundle the pinned LGPL compact word model candidate for compatibility tests')
 args=parser.parse_args()
+if args.octagram_model and not args.prebuilt:raise ValueError('Model probe requires verified prebuilt public tables')
 source=ROOT/'.cache/probe-shared'
 stage=ROOT/'.cache/android-probe-resources'
 if stage.exists():raise FileExistsError(stage)
@@ -51,6 +53,20 @@ private_text=text.replace('schema_id: wanxiang_t9', 'schema_id: wanxiang_t9_nole
 private_text=private_text.replace('  enable_user_dict: true', '  enable_user_dict: false', 1)
 assert private_text != text and '  enable_user_dict: true' not in private_text
 (stage/'wanxiang_t9_nolearn.schema.yaml').write_text(private_text)
+model=None
+if args.octagram_model:
+ model=json.loads((ROOT/'third_party/octagram-model-candidate.json').read_text())
+ assert model['asset_id']==474090460 and model['name']=='zh-hans-t-essay-bgw-compact.gram'
+ assert model['sha256']=='d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e'
+ for file in model['license_evidence']:
+  p=ROOT/file['path'];assert p.stat().st_size==file['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==file['sha256']
+ for name in ['wanxiang_t9.schema.yaml','wanxiang_t9_nolearn.schema.yaml']:
+  p=stage/name;value=p.read_text();value+='\ngrammar:\n  language: zh-hans-t-essay-bgw-compact\n'
+  if 'nolearn' not in name:value=value.replace('contextual_suggestions: false','contextual_suggestions: true')
+  p.write_text(value)
+ shutil.copy2(ROOT/'docs/reference/upstream/octagram-data/LICENSE',stage/'LICENSE.octagram-data')
+ shutil.copy2(ROOT/'LICENSE',stage/'COPYING.GPL-3.0')
+ (stage/'model-info.json').write_text(json.dumps({key:model[key] for key in ['repository','commit','tag','asset_id','name','bytes','sha256','license']},indent=2)+'\n')
 default=stage/'default.yaml'
 default_text=default.read_text()
 assert default_text.count('  - schema: wanxiang_t9\n')==1
@@ -72,6 +88,17 @@ if args.prebuilt:
   notice.write('Static dictionary table/reverse binaries compiled with pinned librime 1.17.0 from the same public CC-BY-4.0 dictionaries; raw dictionary source retained in the build provenance, omitted from this runtime pack. No learned user data, prism, model or upstream tool programs included.\n')
 output=ROOT/'android/trime/app/build/generated/imeAssets'
 output.mkdir(parents=True,exist_ok=True)
+model_output=output/'zh-hans-t-essay-bgw-compact.gram'
+if model:
+ notice=stage/'NOTICE.txt'
+ notice.write_text(notice.read_text().replace('M1 compatibility probe only; no model.', 'M1 compatibility probe with pinned compact grammar candidate.').replace('Modified: no grammar;', 'Modified: original Wanxiang grammar omitted;').replace('No learned user data, prism, model or upstream tool programs included.', 'No learned user data, dynamic prism or upstream tool programs included.'))
+ path=ROOT/'.cache/upstream'/model['name']
+ assert path.stat().st_size==model['bytes'] and hashlib.sha256(path.read_bytes()).hexdigest()==model['sha256']
+ shutil.copy2(path,model_output)
+ with (stage/'NOTICE.txt').open('a') as notice:
+  notice.write('Grammar candidate: lotem / Rime Developers, zh-hans-t-essay-bgw-compact.gram, release 20260712, LGPL-3.0. '+model['repository']+'/tree/'+model['commit']+' . Model unmodified. LICENSE.octagram-data and COPYING.GPL-3.0 included; full product attribution/corresponding-source delivery audit is pending. This is a local compatibility probe, not model quality acceptance.\n')
+else:
+ if model_output.exists():model_output.unlink() # Only this script's known generated public asset.
 archive=output/'ime-probe.zip'
 with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
  for p in sorted(stage.rglob('*')):
@@ -82,14 +109,20 @@ with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=
   z.writestr(info,p.read_bytes())
 digest=hashlib.sha256(archive.read_bytes()).hexdigest()
 (output/'ime-probe.sha256').write_text(digest+'\n')
-manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-3' if args.prebuilt else 'probe-2',
+def license_for(path):
+ if path.name in ['ime_probe.lua','COPYING.GPL-3.0']:return 'GPL-3.0-or-later'
+ if path.name=='LICENSE.octagram-data':return 'LGPL-3.0'
+ if path.name in ['NOTICE.txt','model-info.json']:return 'project attribution'
+ return 'CC-BY-4.0'
+manifest={'scope':'M1 compatibility APK only, NOT full product pack','version':'probe-4-model' if model else 'probe-3' if args.prebuilt else 'probe-2',
           'source_asset':659385471,'source_sha256':'4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a',
           'archive_sha256':digest,'archive_bytes':archive.stat().st_size,
-          'model':False,'upstream_lua':False,
+          'model':bool(model),'upstream_lua':False,
+          'model_asset':None if not model else {key:model[key] for key in ['name','bytes','sha256','license','asset_id']},
           'prebuilt_tables':args.prebuilt,'prebuilt_manifest_sha256':prebuilt_manifest,
           'license_review':'individual data/config headers inspected; no file-level contrary grant observed; third-party app/native dependency audit remains incomplete',
           'files':[{'path':p.relative_to(stage).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size,
-                    'license':'GPL-3.0-or-later' if p.name=='ime_probe.lua' else 'CC-BY-4.0' if p.name!='NOTICE.txt' else 'project attribution'}
+                    'license':license_for(p)}
                    for p in sorted(stage.rglob('*')) if p.is_file()]}
 manifest_text=json.dumps(manifest,indent=2,ensure_ascii=False)+'\n'
 (ROOT/'third_party/android-probe-resources.json').write_text(manifest_text)

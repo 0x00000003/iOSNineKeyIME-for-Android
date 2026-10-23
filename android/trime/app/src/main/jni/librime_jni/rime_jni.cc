@@ -3,6 +3,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include <rime_api.h>
+#include <rime/context.h>
+#include <rime/service.h>
+#include "../librime-octagram/src/octagram.h"
 
 #include <memory>
 #include <string>
@@ -203,6 +206,19 @@ class Rime {
     rime->finalize();
   }
 
+  // Clear field-local history/properties as well as composition. Does not erase learned data.
+  void resetSession() { session_.reset(); }
+
+  int probeHistorySize() {
+    auto handle = rime::Service::instance().GetSession(session());
+    return handle ? static_cast<int>(handle->context()->commit_history().size()) : -1;
+  }
+
+  bool probeCompactGrammarLoaded() {
+    auto* component = dynamic_cast<rime::OctagramComponent*>(rime::Grammar::Require("grammar"));
+    return component && component->GetDb("zh-hans-t-essay-bgw-compact") != nullptr;
+  }
+
   bool sync() {
     session_.reset();
     return rime->sync_user_data();
@@ -276,6 +292,21 @@ extern "C" JNIEXPORT void JNICALL Java_com_osfans_trime_core_Rime_startupRime(
 extern "C" JNIEXPORT void JNICALL
 Java_com_osfans_trime_core_Rime_exitRime(JNIEnv* env, jclass /* thiz */) {
   Rime::Instance().exit();
+}
+
+extern "C" JNIEXPORT void JNICALL
+Java_com_osfans_trime_core_Rime_resetRimeSession(JNIEnv*, jclass) {
+  Rime::Instance().resetSession();
+}
+
+extern "C" JNIEXPORT jint JNICALL
+Java_com_osfans_trime_core_Rime_getRimeProbeHistorySize(JNIEnv*, jclass) {
+  return Rime::Instance().probeHistorySize();
+}
+
+extern "C" JNIEXPORT jboolean JNICALL
+Java_com_osfans_trime_core_Rime_getRimeProbeCompactGrammarLoaded(JNIEnv*, jclass) {
+  return Rime::Instance().probeCompactGrammarLoaded();
 }
 
 // deployment

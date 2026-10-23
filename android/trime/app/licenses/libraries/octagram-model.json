@@ -1,0 +1,11 @@
+{
+    "uniqueId": "lotem/rime-octagram-data",
+    "artifactVersion": "20260712+8ceef1b42eb77e86501382a52e85c309c0f2f04c",
+    "description": "Unmodified compact word grammar candidate, pinned asset 474090460; data/source distribution review remains open",
+    "name": "lotem/rime-octagram-data",
+    "website": "https://github.com/lotem/rime-octagram-data",
+    "tag": "model",
+    "licenses": [
+        "LGPL-3.0-only"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "uniqueId": "amzxyz/rime-wanxiang",
+    "artifactVersion": "v18.1.7+89075fe7b870dcf80249dfa0ece7474f1a960d91",
+    "description": "Public T9 data/config; local native-only pipeline, no upstream Lua/statistics; see per-file resource manifest",
+    "name": "amzxyz/rime-wanxiang",
+    "website": "https://github.com/amzxyz/rime-wanxiang",
+    "tag": "data",
+    "licenses": [
+        "CC-BY-4.0"
+    ]
+}

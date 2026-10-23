@@ -1,0 +1,11 @@
+{
+    "uniqueId": "hchunhui/librime-lua",
+    "artifactVersion": "68f9c364a2d25a04c7d4794981d7c796b05ab627",
+    "description": "Pinned native source; see third_party/trime-repositories.json and retained component license",
+    "name": "hchunhui/librime-lua",
+    "website": "https://github.com/hchunhui/librime-lua",
+    "tag": "native",
+    "licenses": [
+        "BSD-3-Clause"
+    ]
+}

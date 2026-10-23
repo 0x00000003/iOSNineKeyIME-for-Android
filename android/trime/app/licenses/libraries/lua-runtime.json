@@ -1,0 +1,11 @@
+{
+    "uniqueId": "lua.org/lua",
+    "artifactVersion": "5.4.6",
+    "description": "Lua 5.4.6 from pinned librime-lua-deps; MIT copyright notice is in lua5.4/lua.h",
+    "name": "lua.org/lua",
+    "website": "https://www.lua.org/",
+    "tag": "native",
+    "licenses": [
+        "MIT"
+    ]
+}

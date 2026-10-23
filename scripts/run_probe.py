@@ -17,7 +17,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
-    parser.add_argument('--scope', choices=['full', 'editor', 'engine'], default='full')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources'], default='full')
     args = parser.parse_args()
     if not re.fullmatch(r'[a-z0-9-]+', args.record):
         raise ValueError('E_RECORD_NAME')

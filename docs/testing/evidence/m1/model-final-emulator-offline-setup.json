@@ -1,0 +1,11 @@
+{
+  "scope": "dedicated API36 AOSP ARM64 emulator only, NOT Pixel",
+  "network": {
+    "airplane_mode_on": "1",
+    "wifi_on": "0",
+    "mobile_data": "0"
+  },
+  "own_synthetic_app_uninstalled": true,
+  "exact_package_absent": true,
+  "fresh_install": true
+}

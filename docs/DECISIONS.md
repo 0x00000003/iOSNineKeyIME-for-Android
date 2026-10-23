@@ -28,3 +28,7 @@
 
 | 019 | 2026-10-23 | Accepted for probe-3 | 构建时编译固定公共词典的table/reverse，两个独立部署字节一致后打包；不带原始dict、动态prism/schema或userdb。沿用原解包预算与librime支持的prebuilt fallback | Pixel/API36实际兼容与静态共享数据不变通过；不是完整工具链重建或release性能验收；原始来源与许可仍保留 |
 | 020 | 2026-10-23 | Research candidate only | 原Wanxiang模型许可疑点保留，另评估有明确命名gram数据授权指向的lotem compact LGPL模型（40.9MB） | 固定commit/资产/哈希/许可证据；host格式通过但原查询/即时学习断言FAIL，先定位会话与上下文，未打包，不降低R08/R10要求 |
+
+| 021 | 2026-10-23 | Accepted for compatibility | 原Wanxiang LTS模型不打包，采用固定lotem/rime-octagram-data 20260712 compact词数据模型，明确README命名授权与LGPL许可证据；质量R08/R10不预判 | runtime独立模型SHA/size预算，完整分发对应源与NOTICE仍在M4/M6 |
+| 022 | 2026-10-23 | Accepted | clearComposition只清当前组合，不能当作字段切换清历史；需要销毁native session并按隐私schema重建 | history/property/raw/commit均有真机断言；用户库不因此清除；未来服务与探针必须共享串行原生所有权 |
+| 023 | 2026-10-23 | Probe boundary | 损坏公共资源隔离版本目录并从固定APK重建，不递归删除/改写学习profile；错误仅有限安全码 | Pixel/API36损坏+恢复+重新打开引擎通过；不能替代清学习、备份或完整IME安全验收 |

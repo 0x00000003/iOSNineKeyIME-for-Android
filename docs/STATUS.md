@@ -1,6 +1,6 @@
 # 当前状态
 
-日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`065f5be`，本轮补丁见Git与下列记录；开发记录。
+日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`bde02ac`，本轮补丁见Git与下列记录；开发记录。
 
 | 项目 | 真实状态 | 证据/范围 |
 | --- | --- | --- |
@@ -27,3 +27,9 @@
 第四检查点（取代上段“当前最终哈希”）：probe-3 debug SHA256 `13e97020102c69b09a44f0353e4510b39f9077c58c5dc12326ec263d1ab41b32`，已在Pixel及模拟器运行native-only PASS、editor-only仍FAIL；同一debug哈希实际APK静态权限/备份PASS。unsigned release `f95dc8ab7991e72c637dbbde7ebdfb6bc4a105384792cfd3d565e6edd6d66ddb`构建/lint/静态PASS，未签名或运行。无用户库的六个固定公共table/reverse改为构建时产物，原始词典不随此探针重复打包；ZIP24390180 bytes、16文件、SHA daec81fe，两个fresh staging重建字节一致。Pixel一次debug双profile探针13005ms（资源部署1190ms、首profile引擎ready4293ms）；模拟器干净卸装后离线首装重测3906ms（497/1291ms），不是P02二十次release成绩。
 
 继续调查模型：固定lotem/rime-octagram-data 20260712 / 8ceef1b、约41MB compact词模型，README对命名gram数据给出LGPL许可指向。下载完整性与格式加载通过，原万象专用4查询只匹配2项；真实host grammar引擎的学习探针FAIL（即时排名2、重启1），需控制前文/重置会话验证。此候选未打包、未被认定达到R08/R10；原万象模型的许可疑点未自动解除。下一步先查明此测试混杂与原生session重置边界，再进入完整IME；R04私密组合音标FAIL不变。
+
+第五检查点（当前制品，以本段为准）：probe-4 debug SHA256 `05da473956b8db4f5708d3a699c90e2a9a3b5ccfa13c3faa1d224edfc6867a73`；unsigned release `0e29f12e7f5a71a86d623ef5962b88c40a06afe5aae6ee44d67279ba28357ee0`。最终两APK静态权限/备份XML PASS，45 app/49 state JVM及两套lint PASS，release未签名/运行。原万象398MB模型仍不打包，另用有命名数据许可证据的lotem compact 40925228字节LGPL数据模型，来源、哈希、NOTICE和模型单独部署预算均固定。完整分发对应源/许可闭包仍是M4/M6工作，不据此宣称完整合规。
+
+同一05da4739 debug在Pixel和专用离线首装API36模拟器native-only PASS：真实grammar加载、Lua、三组多音节/部分提交、正常学习和无学习对照均通过。已证明clearComposition保留20条提交历史；新增native session reset真正清掉历史/property，学习排名在无前文的新会话控制下2→1、重启1。原未控制前文测试FAIL保留；并发新会话对照排除“关闭DB才刷新”的解释，未降低原排名断言。见model-final-*-native及compact-*-control.json。
+
+资源损坏恢复同哈希两设备PASS：独立篡改本项目公共资源/模型即拒绝，隔离重建固定数据；已有profile全部字节/mtime不变（Pixel15个、模拟器2个），同进程重新打开引擎成功。不是清除学习功能或完整备份验收。Pixel一次debug双profile14398ms（资源1546ms、首profile引擎ready4224ms）；模拟器离线首装4315ms（652/1273ms），不算P02 release20次成绩。editor-only两设备仍FAIL，敏感预存组合音标4/5，不能掩盖。当前仍是探针，无IME服务；继续M1许可/可重建与M2受控串行适配组件，M5缺图BLOCKED。

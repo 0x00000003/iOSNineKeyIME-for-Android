@@ -1,0 +1,11 @@
+{
+    "uniqueId": "lotem/librime-octagram",
+    "artifactVersion": "bd12863f45fbbd5c7db06d5ec8be8987b10253bf",
+    "description": "Pinned native source; see third_party/trime-repositories.json and retained component license",
+    "name": "lotem/librime-octagram",
+    "website": "https://github.com/lotem/librime-octagram",
+    "tag": "native",
+    "licenses": [
+        "GPL-3.0-only"
+    ]
+}

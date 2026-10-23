@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Real C API integration; all input is fixed synthetic fixture data.
 #include <rime_api.h>
+#include <rime/context.h>
+#include <rime/service.h>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -64,6 +66,10 @@ int length(RimeSessionId session) {
   api->free_context(&context);
   return result;
 }
+int historySize(RimeSessionId session) {
+  auto handle = rime::Service::instance().GetSession(session);
+  return handle ? static_cast<int>(handle->context()->commit_history().size()) : -1;
+}
 void start(const char* shared, const char* user) {
   RIME_STRUCT(RimeTraits, traits);
   traits.shared_data_dir = shared;
@@ -80,7 +86,8 @@ void start(const char* shared, const char* user) {
 int main(int argc, char** argv) {
   if ((argc != 3 && argc != 4) || std::filesystem::exists(argv[2])) return 64;
   bool noLearning = argc == 4 && std::string(argv[3]) == "--no-learning";
-  if (argc == 4 && !noLearning) return 64;
+  bool freshRanks = argc == 4 && std::string(argv[3]) == "--fresh-context-ranks";
+  if (argc == 4 && !noLearning && !freshRanks) return 64;
   std::filesystem::create_directories(argv[2]);
   rime_require_module_lua();
   rime_require_module_octagram();
@@ -119,6 +126,12 @@ int main(int argc, char** argv) {
   // Actual partial commits may remain buffered by express_editor until finalization.
   bool exactDrain = partialCommit + finalCommit == "你好世界";
 
+  if (freshRanks) {
+    api->destroy_session(session);
+    session = api->create_session();
+    api->select_schema(session, "wanxiang_t9");
+  }
+  int baselineHistory = historySize(session);
   type(session, "64426");
   values = menu(session);
   std::string learned = values.size() > 1 ? values[1] : "";
@@ -134,6 +147,30 @@ int main(int argc, char** argv) {
   }
   type(session, "64426");
   int after = rank(session, learned);
+  int concurrentFreshRank = -1;
+  int concurrentFreshHistory = -1;
+  bool originalSessionAlive = false;
+  if (freshRanks) {
+    // Keep A and its DB handle alive while measuring B, so closing/flushing A is not the cause.
+    auto comparison = api->create_session();
+    api->select_schema(comparison, "wanxiang_t9");
+    concurrentFreshHistory = historySize(comparison);
+    type(comparison, "64426");
+    concurrentFreshRank = rank(comparison, learned);
+    originalSessionAlive = api->find_session(session);
+    api->clear_composition(comparison);
+    api->destroy_session(comparison);
+  }
+  int historyBeforeClear = historySize(session);
+  api->clear_composition(session);
+  int historyAfterClear = historySize(session);
+  api->destroy_session(session);
+  session = api->create_session();
+  api->select_schema(session, "wanxiang_t9");
+  int historyFresh = historySize(session);
+  type(session, "64426");
+  int freshSessionRank = rank(session, learned);
+  int measuredAfter = freshRanks ? freshSessionRank : after;
   api->clear_composition(session);
   api->destroy_session(session);
   api->finalize();
@@ -148,18 +185,29 @@ int main(int argc, char** argv) {
   for (auto const& entry : std::filesystem::directory_iterator(argv[2]))
     if (entry.path().filename().string().find(".userdb") != std::string::npos)
       database = true;
-  bool learning = training && before > 1 && after > 0 && restarted == after &&
-      (noLearning ? (!database && before == after && unchanged) : (database && after < before));
+  bool learning = training && before > 1 && measuredAfter > 0 && restarted == measuredAfter &&
+      (noLearning ? (!database && before == measuredAfter && unchanged) : (database && measuredAfter < before)) &&
+      (!freshRanks || (baselineHistory == 0 && historyFresh == 0 && concurrentFreshHistory == 0 && concurrentFreshRank == measuredAfter && originalSessionAlive));
   api->clear_composition(session);
   api->destroy_session(session);
   api->finalize();
   bool pass = schema && multi == 3 && partial && drained && exactDrain && learning;
-  std::cout << "{\"scope\":\"host C API no-model probe; not Android or R09 ten-word acceptance\","
+  std::cout << "{\"scope\":\"host C API schema integration; not Android or R09 ten-word acceptance\","
             << "\"schema\":" << schema << ",\"multi_syllable_fixtures_passed\":" << multi
             << ",\"partial_selection_preserves_composition\":" << partial
             << ",\"partial_drain_single_exact_commit\":" << (drained && exactDrain)
             << ",\"learning_repetitions\":20,\"learning_before_rank\":" << before
             << ",\"learning_after_rank\":" << after << ",\"restart_rank\":" << restarted
+            << ",\"fresh_context_rank_control\":" << freshRanks
+            << ",\"baseline_history_count\":" << baselineHistory
+            << ",\"controlled_after_rank\":" << measuredAfter
+            << ",\"concurrent_fresh_session_rank\":" << concurrentFreshRank
+            << ",\"concurrent_fresh_session_history_count\":" << concurrentFreshHistory
+            << ",\"original_training_session_alive\":" << originalSessionAlive
+            << ",\"history_before_clear_count\":" << historyBeforeClear
+            << ",\"history_after_clear_count\":" << historyAfterClear
+            << ",\"fresh_session_history_count\":" << historyFresh
+            << ",\"fresh_session_rank\":" << freshSessionRank
             << ",\"no_learning_configuration\":" << noLearning
             << ",\"runtime_profile_bytes_and_timestamps_unchanged\":" << unchanged
             << ",\"user_database_created\":" << database << ",\"learning_pass\":" << learning

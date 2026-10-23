@@ -3,6 +3,7 @@ package dev.local.iosninekeyime.probe
 
 import android.content.Context
 import com.osfans.trime.core.Rime
+import com.osfans.trime.BuildConfig
 import java.io.File
 import java.util.UUID
 import org.json.JSONObject
@@ -10,10 +11,19 @@ import org.json.JSONObject
 /** All calls are on one worker. Uses only baked-in synthetic input, never a host editor. */
 object ProbeRunner {
     @Synchronized
+    fun rebuildPublicResources(context: Context) {
+        ProbeResources.quarantineCurrent(context)
+        val shared = ProbeResources.deploy(context)
+        ProbeModelResources.deploy(context, shared)
+    }
+
+    @Synchronized
     fun run(context: Context): JSONObject {
-        val result = JSONObject().put("scope", "M1 no-model JNI compatibility; not IME/visual/privacy acceptance")
+        val result = JSONObject().put("scope", "M1 pinned-resource JNI compatibility; not IME/visual/privacy/quality acceptance")
+            .put("model_bundled", BuildConfig.PROBE_MODEL_ENABLED).put("model_sha256", BuildConfig.PROBE_MODEL_SHA256)
         val start = System.nanoTime()
         val shared = ProbeResources.deploy(context)
+        ProbeModelResources.deploy(context, shared)
         result.put("resource_deploy_ms", (System.nanoTime() - start) / 1_000_000)
         val sharedBefore = ProbeFileSnapshot.fingerprint(shared)
         val profile = File(context.noBackupFilesDir, "m1/profiles/${UUID.randomUUID()}")
@@ -25,6 +35,8 @@ object ProbeRunner {
             started = true
             Rime.awaitRimeMaintenance()
             check(Rime.selectRimeSchema("wanxiang_t9")) { "E_SCHEMA" }
+            val grammarLoaded = BuildConfig.PROBE_MODEL_ENABLED && Rime.getRimeProbeCompactGrammarLoaded()
+            result.put("compact_grammar_loaded", grammarLoaded)
             result.put("first_profile_engine_ready_ms", (System.nanoTime() - engineStart) / 1_000_000)
             var handled = true
             for (ch in "64426") handled = Rime.processRimeKey(ch.code, 0) && handled
@@ -42,7 +54,14 @@ object ProbeRunner {
             Rime.processRimeKey('6'.code, 0)
             Rime.processRimeKey(0xff08, 0)
             result.put("delete_to_empty", Rime.getRimeContext().composition.length == 0)
+            val historyBeforeClear = Rime.getRimeProbeHistorySize()
             Rime.clearRimeComposition()
+            result.put("clear_composition_retains_history", historyBeforeClear > 0 && Rime.getRimeProbeHistorySize() == historyBeforeClear)
+            Rime.resetRimeSession()
+            result.put("session_reset_clears_history", Rime.getRimeProbeHistorySize() == 0)
+            result.put("session_reset_clears_property", Rime.getRimeProbeProperty("ime_probe_lua").isEmpty())
+            result.put("session_reset_empty_raw_and_commit", Rime.getRimeRawInput().isEmpty() && Rime.getRimeCommit().text.isNullOrEmpty())
+            check(Rime.selectRimeSchema("wanxiang_t9")) { "E_RESET_SCHEMA" }
             fun type(digits: String) {
                 Rime.clearRimeComposition()
                 for (ch in digits) check(Rime.processRimeKey(ch.code, 0)) { "E_FIXTURE_KEY" }
@@ -67,6 +86,10 @@ object ProbeRunner {
             result.put("partial_selection_preserves_composition", partial)
             result.put("partial_drain_single_exact_commit", drained && partialCommit + lastCommit == "你好世界" &&
                 Rime.getRimeContext().composition.length == 0 && Rime.getRimeCommit().text.isNullOrEmpty())
+            // Compare learning under the same empty field-local history, independently of grammar.
+            Rime.resetRimeSession()
+            check(Rime.selectRimeSchema("wanxiang_t9")) { "E_LEARNING_BASELINE_SCHEMA" }
+            val baselineHistory = Rime.getRimeProbeHistorySize()
             type("64426")
             val learned = Rime.getRimeCandidates(0, 20).getOrNull(1)?.text ?: error("E_LEARNING_FIXTURE")
             val before = rank(learned)
@@ -77,6 +100,11 @@ object ProbeRunner {
                 check(Rime.getRimeCommit().text == learned && Rime.getRimeCommit().text.isNullOrEmpty()) { "E_LEARNING_COMMIT" }
                 Rime.processRimeKey(0xffe1, 0) // End the pending normal learning transaction.
             }
+            type("64426")
+            val contextualAfter = rank(learned)
+            Rime.resetRimeSession()
+            check(Rime.selectRimeSchema("wanxiang_t9")) { "E_LEARNING_AFTER_SCHEMA" }
+            val afterHistory = Rime.getRimeProbeHistorySize()
             type("64426")
             val after = rank(learned)
             Rime.clearRimeComposition()
@@ -90,8 +118,11 @@ object ProbeRunner {
             val restarted = rank(learned)
             val database = profile.listFiles().orEmpty().any { it.name.endsWith(".userdb") }
             result.put("learning_repetitions", 20).put("learning_before_rank", before)
+                .put("learning_rank_control", "fresh native session before/after, no prior field text")
+                .put("learning_baseline_history_count", baselineHistory).put("learning_after_history_count", afterHistory)
+                .put("learning_contextual_after_rank", contextualAfter)
                 .put("learning_after_rank", after).put("restart_rank", restarted).put("user_database_created", database)
-            result.put("normal_learning_probe", database && before > 1 && after > 0 && after < before && restarted == after)
+            result.put("normal_learning_probe", database && before > 1 && after > 0 && after < before && restarted == after && baselineHistory == 0 && afterHistory == 0)
             Rime.clearRimeComposition()
             Rime.exitRime()
             started = false
@@ -128,9 +159,10 @@ object ProbeRunner {
                 !File(profile, "build/wanxiang_lite.table.bin").exists() && !File(noLearningProfile, "build/wanxiang_lite.table.bin").exists()
             val sharedUnchanged = sharedBefore == ProbeFileSnapshot.fingerprint(shared)
             result.put("prebuilt_main_table_shared", prebuiltShared).put("static_resources_bytes_and_timestamps_unchanged", sharedUnchanged)
-            val all = multi == 3 && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
+            val all = multi == 3 && (!BuildConfig.PROBE_MODEL_ENABLED || grammarLoaded) && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
                 "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe", "no_learning_probe",
-                "prebuilt_main_table_shared", "static_resources_bytes_and_timestamps_unchanged").all { result.getBoolean(it) }
+                "prebuilt_main_table_shared", "static_resources_bytes_and_timestamps_unchanged", "clear_composition_retains_history",
+                "session_reset_clears_history", "session_reset_clears_property", "session_reset_empty_raw_and_commit").all { result.getBoolean(it) }
             result.put("pass", all)
         } finally {
             if (started) Rime.exitRime()

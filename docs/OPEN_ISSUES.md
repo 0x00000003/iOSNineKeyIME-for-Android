@@ -4,7 +4,7 @@
 
 | 项目 | 状态 | 具体原因 / 下一步 |
 | --- | --- | --- |
-| M1模型资产授权 | BLOCKED | 具体LTS gram已核哈希、host格式及4查询通过。根CC-BY和数据scope未对该release gram直接列明；保留README“数据资产”与release“模型也是词库”的证据，需进一步确认具体许可归属后打包。不集成data仓库未授权程序。同时已固定有明确命名数据授权指向的lotem LGPL compact替代候选，当前host测试有未解FAIL，仍未打包。 |
+| 原万象LTS模型授权 | BLOCKED（不打包，已有替代路径） | 具体LTS gram已核哈希、host格式及4查询通过。根CC-BY和数据scope未对该release gram直接列明；保留README“数据资产”与release“模型也是词库”的证据，需进一步确认具体许可归属后打包。不集成data仓库未授权程序。已另用有命名数据授权证据的lotem LGPL compact替代模型，host/Android实际加载与受控学习通过并已打包；原模型疑点不再阻碍替代路径。分发对应源/完整NOTICE和质量R08/R10仍待验收。 |
 | R04敏感预存组合音标 | FAIL | Pixel/API36真实EditText都只删音标，5私密字素4过；为零上下文读取委托宿主DEL，不能假定它等同ICU。不能为过关改读密码或删断言。可研究本会话自主输入的字素追踪及宿主协作，但未知预存内容/外部光标修改仍要验证。 |
 | M5参考图/体验确认 | BLOCKED | 原对话无截图附件，未取得iOS版本/设置对应原图；临时UI不可能证明1:1。 |
 | M1冷部署与可重建 | WIP | 双profile debug探针耗时大，已验证构建时公共词典预编译并在Pixel/离线模拟器运行，大幅减少本轮debug探针观察耗时；SDK/JDK干净重建及完整传递许可/SBOM未关闭。 |

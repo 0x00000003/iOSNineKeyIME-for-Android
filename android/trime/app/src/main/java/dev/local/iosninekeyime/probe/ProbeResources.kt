@@ -10,6 +10,16 @@ import org.json.JSONObject
 
 /** Built-in immutable M1 pack only. No picker, external path, Intent or online source. */
 object ProbeResources {
+    /** Called only after the serial probe worker has stopped native use; never touches learning profiles. */
+    fun quarantineCurrent(context: Context): Boolean {
+        val root = File(context.noBackupFilesDir, "m1/resources")
+        val installed = File(root, BuildConfig.PROBE_RESOURCE_SHA256)
+        if (!installed.exists()) return false
+        val quarantine = File(root, "quarantine-${BuildConfig.PROBE_RESOURCE_SHA256}-${java.util.UUID.randomUUID()}")
+        check(installed.renameTo(quarantine)) { "E_RESOURCE_QUARANTINE" }
+        return true
+    }
+
     private fun digest(file: File): String = file.inputStream().use { input ->
         val md = MessageDigest.getInstance("SHA-256")
         val buffer = ByteArray(65536)
