@@ -75,3 +75,5 @@ M3最终追加：43cf6e69/fc0c5fa3同制品在两设备R08/R09/R10及触控/恢�
 详见testing/M4-20261023.md与ADR028—031。正在接独立优化release引擎验证，前两次源集配置构建失败保留。M4整体不勾选；系统IME/多宿主仍未运行，R04敏感预存组合音标FAIL，参考图BLOCKED。没有默认键盘或Pixel网络/锁屏更改、没有远端推送。
 
 M4优化release追加：第三次源集构建成功，首轮两设备test入口因target R8合并Regex ABI而启动崩溃；保留FAIL后以编译协议constant pool确定少量Kotlin ABI保留规则，普通/本地签名release一致，未关闭优化。最终94b9d40f release/31c08d3f test两设备引擎、R08、R09、R10与资源恢复PASS，静态权限/实际备份XML PASS、旧前端roots未被带回。专用模拟器同94b9d40f离线卸装后首装native组件PASS，Pixel数据未清。default release仍unsigned，不把本地调试证书验证当正式发布。最终debug9cdf03c8另做完整回归，R04失败继续保留，详见M4记录。
+
+M4本地WIP提交b4fb49d已落。后续先冻结JNI独立性能协议，再运行10秒smoke与30分钟组件观察；不替代P01—P04。并从b4fb49d git archive在项目内全新源码/build目录重建，复用固定SDK/Gradle/资源缓存和本项目调试key，不能称全干净工具链重建。

@@ -22,6 +22,10 @@ class ReleaseEngineInstrumentation : Instrumentation() {
         try {
             check(!BuildConfig.DEBUG && runId != null) { "E_RELEASE_TARGET" }
             val result = when (scope) {
+                "perf-smoke" -> NativePerformanceProbe.run(targetContext, true, false)
+                "perf-model-off-smoke" -> NativePerformanceProbe.run(targetContext, false, false)
+                "perf-model-on-long" -> NativePerformanceProbe.run(targetContext, true, true)
+                "perf-model-off-long" -> NativePerformanceProbe.run(targetContext, false, true)
                 "engine" -> ProbeRunner.run(targetContext)
                 "resources" -> ResourceBoundaryProbe.run(targetContext)
                 "quality" -> QualityBoundaryProbe.run(targetContext, context.assets)

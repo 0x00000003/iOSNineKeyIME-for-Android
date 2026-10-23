@@ -39,10 +39,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
-    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings'], default='full')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
     parser.add_argument('--variant', choices=['debug', 'release'], default='debug')
     args = parser.parse_args()
-    if args.variant == 'release' and args.scope not in ['engine', 'resources', 'quality', 'learning', 'context']:
+    if args.variant == 'release' and args.scope not in ['engine', 'resources', 'quality', 'learning', 'context', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long']:
         parser.error('release runner supports engine/resources/quality/learning/context only; IME/editor gates remain unverified')
     if not re.fullmatch(r'[a-z0-9-]+', args.record):
         raise ValueError('E_RECORD_NAME')
@@ -56,7 +56,7 @@ def main():
 
     def call(*arguments):
         try:
-            r = subprocess.run([str(adb), '-s', target, *arguments], capture_output=True, text=True, timeout=300)
+            r = subprocess.run([str(adb), '-s', target, *arguments], capture_output=True, text=True, timeout=2100 if args.scope.endswith('-long') and 'instrument' in arguments else 300)
         except subprocess.TimeoutExpired:
             raise RuntimeError('E_ADB_TIMEOUT') from None
         if r.returncode:
