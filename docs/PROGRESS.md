@@ -25,3 +25,9 @@ M1追加：独立探针APK实际权限/备份XML检查通过；Pixel第一次JNI
 M1检查追加：35项Android JVM测试最终全部通过、0跳过，摘要见testing/evidence/m1/android-unit-summary.json。原生probe APK静态门禁与Pixel行为均已存在真实记录；lint/release仍继续，M1整体WIP。
 
 M1来源检查点：debug/release最终metadata构建及实际APK静态门禁通过；API36专用模拟器首次断网安装探针通过。修复导入时23项Git换行转换，4928文件index字节核对通过；本地改动有独立哈希记录。整体M1仍WIP，不勾选完整学习/模型/隐私/性能验收。
+
+## 2026-10-23 — 扩展M1与独立M2纯组件（WIP）
+
+前一检查点已本地提交de7b919。真实host/Pixel/API36模拟器新增三组多音节、部分选词和单词20次学习/引擎重启正对照PASS，debug绑定7ddd343a；同补丁41项app JVM、38项state JVM、debug/release lint及两变体静态APK门禁通过。模型本地只读格式/4查询通过，但未打包/授权关闭/Android性能。记录见M1/M2-20261023；全部门禁范围分开。
+
+失败保留：state新传递依赖pin缺失；敏感Cancel错误触发native Clear；模型host生成头include缺失。逐一修复后重测，不删除断言或减低门槛。新增TouchProtocol共享几何/字段取消，EditorPolicy覆盖密码与无学习元数据。尚无实际InputConnection、真实IME或完整隐私零写证明；M1、M2均WIP，M5缺参考图BLOCKED。下一步完成M1剩余原生/隐私/资产门禁与纯提交控制协议。

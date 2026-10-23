@@ -1,0 +1,10 @@
+{
+  "scope": "local host model-format/lookup study; NOT Android packaging, ranking or licensing approval",
+  "model_loaded": 1,
+  "load_ms": 1,
+  "fixed_queries": 4,
+  "queries_with_matches": 4,
+  "pass": 1,
+  "model_sha256": "9eedac1d836f3fdafb61b162035c8937253aedc106be40b2b957d9ab64e9ed89",
+  "timing_scope": "n=1 host read-only mmap open; excludes deployment/full paging; NOT Pixel startup or memory score"
+}

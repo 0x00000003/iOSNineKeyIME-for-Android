@@ -19,3 +19,6 @@
 | 012 | 2026-10-23 | WIP | Gradle验证严格开启；首次下载SHA256以明确TOFU方式固定，Wrapper使用发布方SHA256 | 不能把首次固定说成发布方签名审计；完整SBOM/许可及干净重建仍未通过 |
 | 013 | 2026-10-23 | Accepted for offline fork | 去除平台后台通知副作用；旧通知接口仅保留源码兼容，当前probe无相应组件入口；触感改用遵从系统设置的View反馈 | 不新增VIBRATE/POST_NOTIFICATIONS权限，不压低lint；完整前端剥离与设置交互在M2/M4复核 |
 | 014 | 2026-10-23 | Accepted | 主机/Pixel/专用离线API36模拟器已实际运行无模型JNI底座，允许并行准备不依赖模型/截图的M2纯状态组件 | M1未测门禁及模型/隐私验收仍保持WIP，不据此关闭M2集成或M3—M6 |
+
+| 015 | 2026-10-23 | Provisional implementation | 对密码/NO_PERSONALIZED_LEARNING/用户隐私开关统一形成敏感策略；当前纯Reducer强制直接英/数，Cancel不得调用native；真实InputConnection/零持久写待接入验证 | 此为保守开发边界，不声称普通隐私中文候选已支持；R07全链路未验收 |
+| 016 | 2026-10-23 | Accepted | 状态同时使用真实compositionLength与原始编码，候选menu为空不能推导Idle；触控与绘制共享半开矩形，一指拥有、字段更换终止重复 | 38纯单元测试；Android视图/TalkBack/实际部分选段与宿主集成仍要实测 |

@@ -1,25 +1,21 @@
 # 当前状态
 
-日期：2026-10-23（America/New_York）。阶段：M1 兼容性开发进行中（WIP，非应用完成），结果见 [初始化记录](testing/INIT-20261023.md)。
+日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`de7b919`，本轮补丁见Git与下列记录；开发记录。
 
-| 项目 | 状态 | 证据/下一步 |
+| 项目 | 真实状态 | 证据/范围 |
 | --- | --- | --- |
-| 独立目录、约束与产品/设计/开发/测试文档 | 已创建 | 根目录及 docs |
-| 上游版本、许可与关键源码快照 | 研究已核对 | UPSTREAM、upstream-lock.json |
-| Android工程/JNI | WIP | 已导入并构建上游基线；独立探针debug/test/release构建通过，完整资源包未通过 |
-| 九键编码和候选真实运行 | host/Pixel探针部分PASS | 64426首选、Lua、单次提交/退格通过；不是完整IME验收 |
-| iPhone/Pixel 原截图 | BLOCKED | 原对话接口未提供附件，reference/README |
-| 测试Pixel系统库存 | PASS（只读） | Android17/API37、arm64；不代表真机输入测试通过 |
-| 词频学习、上下文排序、敏感场景 | NOT_RUN | M3/M4 |
-| APK 静态权限/备份 | 探针debug/release PASS | 实际APK解码及两套XML；不是完整M4验收 |
-| 首装离线运行 | 专用模拟器探针PASS | Pixel飞行模式/M6发布回归尚未执行 |
-| 性能和完整回归 | NOT_RUN | M5—M6 |
-| 文档、结构和工具检查 | 见真实执行记录 | testing/INIT-20261023.md |
+| Trime固定递归源码与构建 | 探针PASS | 22来源/4928文件；基线、debug、test、unsigned release构建 |
+| 真实引擎九键/多音节/部分选词 | host/Pixel/模拟器探针PASS | 3组合成词、部分选择保留组合、最终完整且仅一次提交 |
+| 普通学习正对照 | 单词探针PASS | 非首词20次后2→1，重启仍1；不是R09十词验收 |
+| APK权限与备份XML | debug/release静态PASS | extended-debug-apk/extended-release-apk；不是目标OS备份/迁移验收 |
+| 首装离线 | API36专用模拟器探针PASS | 原d04f618e首次安装；新扩展版本为回归，不能混用条件 |
+| 纯状态/触控组件 | 38项JVM PASS | U01—U04/U06部分覆盖，无真实IME/宿主/Android视图验收 |
+| Android JVM与lint | 41项JVM、debug/release lint PASS | 含6项敏感元数据策略；保留lint警告 |
+| 密码/隐私零写持久层 | NOT_RUN | 决策测试不是I05/SEC04文件差异证明 |
+| 398MB模型 | host格式/查询PASS，未打包 | 4固定查询；授权边界与Android加载/性能仍待完成 |
+| iPhone/Pixel参考原图 | BLOCKED | 无附件；M5视觉不验收，不声称1:1 |
+| 完整IME/质量/上下文/性能/发布 | NOT_RUN | M1完整资源与隐私门禁未关闭，M2集成至M6未完成 |
 
-下一项：M1 工具链与九键闭包兼容性探针。图片缺失不妨碍此项，但 M5 视觉验收不能绕过。可先实现明确标为临时的 UI。
+最新记录：[M1真实执行](testing/M1-20261023.md)、[M2独立组件](testing/M2-20261023.md)。最终扩展debug SHA256 `7ddd343a07b363e33e74ef2383f7afd273e05b64a6e9ec8eb8e7e06ab4ddba23`；unsigned release `ad4778853a2c1c340c317ba35c8ea168f32b36bccd119e4626c15ee65e8a0cfd`。它们是开发探针；release未签名/运行，不能当M6交付。
 
-不确定项：v18.1.7 各 release zip 的九键文件覆盖；wanxiang_lite 入口文件实际打包位置；Lua 上下文学习在隐私模式的彻底关停；398MB 级简体模型在 Pixel 的性能/授权/打包方式；Rime 和 Android 前端回调的竞态；OEM/系统版本的数据迁移行为。后续必须实测，不引用 README 宣传效果为本项目结论。
-
-M1工作和失败重测见 [本轮记录](testing/M1-20261023.md)。模型哈希已核对但资产归属未完成，不打包。当前没有完成的M1验收结论。
-
-Pixel修复重测通过，APK和证据绑定见[M1真实结果](testing/evidence/m1/pixel-probe-result.json)。第一次JNI接口崩溃及修复均保留；35项JVM测试、debug/release lint均通过；完整产品门禁不能宣称全部PASS。
+接续：先补M1学习关闭/敏感零写、模型授权及Android加载、资源与传递许可闭包；同时完成允许独立验证的纯状态/提交协议。测试设备应连接且保持解锁；不得启用/切换日用默认键盘。参考图缺失保留M5阻碍，继续独立可做任务。

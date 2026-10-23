@@ -1,0 +1,14 @@
+{
+  "scope": "host C API no-model probe; not Android or R09 ten-word acceptance",
+  "schema": 1,
+  "multi_syllable_fixtures_passed": 3,
+  "partial_selection_preserves_composition": 1,
+  "partial_drain_single_exact_commit": 1,
+  "learning_repetitions": 20,
+  "learning_before_rank": 2,
+  "learning_after_rank": 1,
+  "restart_rank": 1,
+  "user_database_created": 1,
+  "learning_pass": 1,
+  "pass": 1
+}

@@ -96,6 +96,11 @@
       "path": "gradle/wrapper/gradle-wrapper.properties",
       "upstream_sha256": "618587c28dc74aafdbe935d103a69dbf65f03945b4ff00b4663e8210ea1b101a",
       "modified_sha256": "8e15225737701952f5f980ed2f688bbd07f82aee0163fa65a6e3b153f40e28e8"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "upstream_sha256": "838b3e835668d37c40ae5ceee661a8fbd5d169c32933a790ed61771451183349",
+      "modified_sha256": "cc35abf1e0dbf781fa875d6698ecc1c817b61678e75088e4e70c668d486f0e89"
     }
   ]
 }

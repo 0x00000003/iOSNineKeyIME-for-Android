@@ -1,0 +1,25 @@
+{
+  "scope": "state JVM unit tests; not Android device/IME acceptance",
+  "suites": [
+    {
+      "name": "dev.local.iosninekeyime.state.KeyboardReducerTest",
+      "tests": "26",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "dev.local.iosninekeyime.state.TouchProtocolTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "totals": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

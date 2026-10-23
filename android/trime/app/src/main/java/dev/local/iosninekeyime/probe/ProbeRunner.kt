@@ -39,7 +39,58 @@ object ProbeRunner {
             Rime.processRimeKey(0xff08, 0)
             result.put("delete_to_empty", Rime.getRimeContext().composition.length == 0)
             Rime.clearRimeComposition()
-            val all = listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty").all { result.getBoolean(it) }
+            fun type(digits: String) {
+                Rime.clearRimeComposition()
+                for (ch in digits) check(Rime.processRimeKey(ch.code, 0)) { "E_FIXTURE_KEY" }
+            }
+            fun rank(text: String) = Rime.getRimeCandidates(0, 100).indexOfFirst { it.text == text } + 1
+            var multi = 0
+            for ((digits, expected) in listOf("64426" to "你好", "94664486" to "中国", "744543" to "世界")) {
+                type(digits)
+                val position = rank(expected)
+                if (position > 0 && Rime.selectRimeCandidate(position - 1, true) &&
+                    Rime.getRimeCommit().text == expected && Rime.getRimeCommit().text.isNullOrEmpty() &&
+                    Rime.getRimeContext().composition.length == 0) multi++
+            }
+            result.put("multi_syllable_fixtures_passed", multi)
+            type("64426744543")
+            val prefix = Rime.getRimeCandidates(0, 500).indexOfFirst { it.text == "你好" }
+            val partial = prefix >= 0 && Rime.selectRimeCandidate(prefix, true) &&
+                Rime.getRimeContext().composition.length > 0 && Rime.getRimeCandidates(0, 20).isNotEmpty()
+            val partialCommit = Rime.getRimeCommit().text.orEmpty()
+            val drained = partial && Rime.commitRimeComposition()
+            val lastCommit = Rime.getRimeCommit().text.orEmpty()
+            result.put("partial_selection_preserves_composition", partial)
+            result.put("partial_drain_single_exact_commit", drained && partialCommit + lastCommit == "你好世界" &&
+                Rime.getRimeContext().composition.length == 0 && Rime.getRimeCommit().text.isNullOrEmpty())
+            type("64426")
+            val learned = Rime.getRimeCandidates(0, 20).getOrNull(1)?.text ?: error("E_LEARNING_FIXTURE")
+            val before = rank(learned)
+            repeat(20) {
+                type("64426")
+                val current = rank(learned)
+                check(current > 0 && Rime.selectRimeCandidate(current - 1, true)) { "E_LEARNING_SELECT" }
+                check(Rime.getRimeCommit().text == learned && Rime.getRimeCommit().text.isNullOrEmpty()) { "E_LEARNING_COMMIT" }
+                Rime.processRimeKey(0xffe1, 0) // End the pending normal learning transaction.
+            }
+            type("64426")
+            val after = rank(learned)
+            Rime.clearRimeComposition()
+            Rime.exitRime()
+            started = false
+            Rime.startupRime(shared.absolutePath, profile.absolutePath, "m1-probe-1", true)
+            started = true
+            Rime.awaitRimeMaintenance()
+            check(Rime.selectRimeSchema("wanxiang_t9")) { "E_RESTART_SCHEMA" }
+            type("64426")
+            val restarted = rank(learned)
+            val database = profile.listFiles().orEmpty().any { it.name.endsWith(".userdb") }
+            result.put("learning_repetitions", 20).put("learning_before_rank", before)
+                .put("learning_after_rank", after).put("restart_rank", restarted).put("user_database_created", database)
+            result.put("normal_learning_probe", database && before > 1 && after > 0 && after < before && restarted == after)
+            Rime.clearRimeComposition()
+            val all = multi == 3 && listOf("digits_handled", "lua_executed", "single_commit", "full_commit_empty", "delete_to_empty",
+                "partial_selection_preserves_composition", "partial_drain_single_exact_commit", "normal_learning_probe").all { result.getBoolean(it) }
             result.put("pass", all)
         } finally {
             if (started) Rime.exitRime()

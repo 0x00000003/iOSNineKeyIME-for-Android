@@ -23,3 +23,6 @@ dependencyResolutionManagement {
 rootProject.name = "trime"
 include(":app")
 include(":codegen")
+
+// Pure reducer validation is independent of the WIP runtime resource gate.
+include(":state")

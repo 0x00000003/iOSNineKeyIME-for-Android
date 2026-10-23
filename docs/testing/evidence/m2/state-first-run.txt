@@ -1,0 +1,46 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+> Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :build-logic:convention:compileKotlin UP-TO-DATE
+> Task :build-logic:convention:compileJava NO-SOURCE
+> Task :build-logic:convention:pluginDescriptors UP-TO-DATE
+> Task :build-logic:convention:processResources UP-TO-DATE
+> Task :build-logic:convention:classes UP-TO-DATE
+> Task :build-logic:convention:jar UP-TO-DATE
+> Task :state:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :state:processResources NO-SOURCE
+> Task :state:processTestResources NO-SOURCE
+
+> Task :state:compileKotlin
+w: file://<project>/android/trime/state/src/main/kotlin/dev/local/iosninekeyime/state/KeyboardReducer.kt:144:13 'when' is exhaustive so 'else' is redundant here.
+
+> Task :state:compileJava NO-SOURCE
+> Task :state:classes UP-TO-DATE
+> Task :state:jar
+> Task :state:compileTestKotlin
+> Task :state:compileTestJava NO-SOURCE
+> Task :state:testClasses UP-TO-DATE
+> Task :state:test FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':state:test' (registered by plugin 'org.gradle.jvm-test-suite').
+> Dependency verification failed for configuration ':state:testRuntimeClasspath'
+  4 artifacts failed verification:
+    - kotlinx-serialization-bom-1.9.0.pom (org.jetbrains.kotlinx:kotlinx-serialization-bom:1.9.0) from repository MavenRepo
+    - kotlinx-serialization-core-1.9.0.module (org.jetbrains.kotlinx:kotlinx-serialization-core:1.9.0) from repository MavenRepo
+    - kotlinx-serialization-core-jvm-1.9.0.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.9.0) from repository MavenRepo
+    - kotlinx-serialization-core-jvm-1.9.0.module (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.9.0) from repository MavenRepo
+  If the artifacts are trustworthy, you will need to update the gradle/verification-metadata.xml file. For more on how to do this, please refer to https://docs.gradle.org/9.5.1/userguide/dependency_verification.html#sec:troubleshooting-verification in the Gradle documentation.
+
+  Open this report for more details: file://<project>/android/trime/build/reports/dependency-verification/at-1792780018001/dependency-verification-report.html
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 17s
+8 actionable tasks: 4 executed, 4 up-to-date
