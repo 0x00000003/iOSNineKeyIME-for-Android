@@ -1,0 +1,113 @@
+{
+  "scope": "R09 deterministic ten-query JNI/erase component; NOT system IME or complete privacy/security acceptance",
+  "protocol_sha256": "3c43d871220a5e8952ca77f862f6526b63bfb88da66eef3fbd14799727d88a6b",
+  "protocol_frozen_commit": "28fabd5",
+  "repetitions_per_target": 20,
+  "clear_rejected_while_native_reserved": true,
+  "positive_normal_userdb": true,
+  "old_profile_absent_after_clear": true,
+  "sibling_sentinel_unchanged": true,
+  "target_count": 10,
+  "nonfirst_baselines": 10,
+  "improved": 10,
+  "persisted_exact_rank": 10,
+  "clear_restored_baseline": 10,
+  "ranks": [
+    {
+      "id": "l001",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l002",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l003",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l004",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l005",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l006",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l007",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l008",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l009",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l010",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    }
+  ],
+  "all_commits_exact_once": true,
+  "fresh_history_each_measurement": true,
+  "elapsed_ms": 25194,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "76d7f7ce66c94e3d9738d9a8ac2f2f17",
+  "tested_apk_sha256": "b03434817de3a384727cfd289917dcd4f69467a1adcf0300442fb98967f11137",
+  "tested_test_apk_sha256": "50b1c1e33dec242c94ad950df9d174f34d26bcd1c28c1555faa9b49acf409c92",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "learning",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

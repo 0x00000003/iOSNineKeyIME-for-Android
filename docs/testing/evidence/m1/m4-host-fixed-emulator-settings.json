@@ -1,0 +1,35 @@
+{
+  "scope": "own offline notice UI and cancel-only clear confirmation; NOT full license audit or production learning erase",
+  "bundle_sha_matches_pin": true,
+  "all_notice_text_hashes_match": true,
+  "notice_count": 43,
+  "dependency_count": 138,
+  "plain_text_dialog_visible": true,
+  "explicit_clear_confirmation_present": true,
+  "clear_dialog_cancelled": true,
+  "production_clear_not_executed": true,
+  "system_ime_settings_not_opened": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "c9585cd8e53c45ea91f327dacb411df2",
+  "tested_apk_sha256": "b03434817de3a384727cfd289917dcd4f69467a1adcf0300442fb98967f11137",
+  "tested_test_apk_sha256": "50b1c1e33dec242c94ad950df9d174f34d26bcd1c28c1555faa9b49acf409c92",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "settings",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

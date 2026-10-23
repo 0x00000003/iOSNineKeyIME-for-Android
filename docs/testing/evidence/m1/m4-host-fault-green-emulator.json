@@ -1,0 +1,84 @@
+{
+  "scope": "synthetic real-host exception/reentrant batch boundaries only; no after-apply ambiguous commit recovery guarantee or R04 waiver",
+  "cases": [
+    {
+      "case_id": "h001",
+      "fault_point": "begin_commit",
+      "pass": true
+    },
+    {
+      "case_id": "h002",
+      "fault_point": "commit",
+      "pass": true
+    },
+    {
+      "case_id": "h003",
+      "fault_point": "end_commit",
+      "pass": true
+    },
+    {
+      "case_id": "h004",
+      "fault_point": "selected",
+      "pass": true
+    },
+    {
+      "case_id": "h005",
+      "fault_point": "before",
+      "pass": true
+    },
+    {
+      "case_id": "h006",
+      "fault_point": "delete",
+      "pass": true
+    },
+    {
+      "case_id": "h007",
+      "fault_point": "private_key",
+      "pass": true
+    },
+    {
+      "case_id": "h008",
+      "fault_point": "action",
+      "pass": true
+    },
+    {
+      "case_id": "h009",
+      "fault_point": "reentrant_begin",
+      "pass": true
+    },
+    {
+      "case_id": "h010",
+      "fault_point": "begin_delete",
+      "pass": true
+    },
+    {
+      "case_id": "h011",
+      "fault_point": "end_delete",
+      "pass": true
+    }
+  ],
+  "private_context_reads": 0,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit engine/resource scope; editor failures remain open"
+  },
+  "probe_run_id": "5ae5582eaf254807b55805c7cd5c88c3",
+  "tested_apk_sha256": "b03434817de3a384727cfd289917dcd4f69467a1adcf0300442fb98967f11137",
+  "tested_test_apk_sha256": "d35ef8d99ed50d720627fe5c6cc07adc717acf051c995e4a714a253eecf1d40d",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "installed local frozen APK"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "connection-faults",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

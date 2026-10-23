@@ -1,0 +1,84 @@
+{
+  "scope": "synthetic real-host exception/reentrant batch boundaries only; no after-apply ambiguous commit recovery guarantee or R04 waiver",
+  "cases": [
+    {
+      "case_id": "h001",
+      "fault_point": "begin_commit",
+      "pass": true
+    },
+    {
+      "case_id": "h002",
+      "fault_point": "commit",
+      "pass": true
+    },
+    {
+      "case_id": "h003",
+      "fault_point": "end_commit",
+      "pass": true
+    },
+    {
+      "case_id": "h004",
+      "fault_point": "selected",
+      "pass": true
+    },
+    {
+      "case_id": "h005",
+      "fault_point": "before",
+      "pass": true
+    },
+    {
+      "case_id": "h006",
+      "fault_point": "delete",
+      "pass": true
+    },
+    {
+      "case_id": "h007",
+      "fault_point": "private_key",
+      "pass": true
+    },
+    {
+      "case_id": "h008",
+      "fault_point": "action",
+      "pass": true
+    },
+    {
+      "case_id": "h009",
+      "fault_point": "reentrant_begin",
+      "pass": true
+    },
+    {
+      "case_id": "h010",
+      "fault_point": "begin_delete",
+      "pass": true
+    },
+    {
+      "case_id": "h011",
+      "fault_point": "end_delete",
+      "pass": true
+    }
+  ],
+  "private_context_reads": 0,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "c89b1204e017466faef8f815929a274f",
+  "tested_apk_sha256": "b03434817de3a384727cfd289917dcd4f69467a1adcf0300442fb98967f11137",
+  "tested_test_apk_sha256": "50b1c1e33dec242c94ad950df9d174f34d26bcd1c28c1555faa9b49acf409c92",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "connection-faults",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

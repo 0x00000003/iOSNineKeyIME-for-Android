@@ -59,3 +59,5 @@
 隔离源码重建发现新构建缺陷：b4fb49d在全新源码/build目录Gradle成功但APK3MB缺四运行时资产，整体FAIL且未安装。正在把固定资源生成接入preBuild，并让实际APK资源hash进入静态审计；原M4原目录已运行制品结果不受篡改，新隔离重建不能宣称通过。详见testing/REBUILD-20261023.md。运行时ZIP内容保持原锁不变。
 
 隔离重建修复已本地提交2ad1de3：从该commit归档、全新源码/build/.cxx重建62任务后，62444813字节unsigned APK整包SHA与bbd28866基线完全相同，实际资源/权限/备份审计PASS。仍共享已固定SDK/Gradle/公共table和model缓存，完整M6干净环境获取未验收；见REBUILD记录。性能v1/v2混入session冷启动的短测原始成绩保留，v3连续同字段协议已在测量前提交6ae38b3，尚不据此宣布性能通过。
+
+宿主异常边界追加WIP：专用模拟器真实EditText 11故障最终相同test d35ef8d9，从1/11红测到b0343481 debug 11/11绿测。开始batch/查询后重核字段，异常失败关闭、结束batch不撤销已接受commit；full继续包含此组件和原R04，native/故障组件PASS而R04 FAIL。controller/settings/resources/R08/R09/R10同b0343481模拟器PASS。当前Pixel仍冻结94b9d40f/ee19b44e作长期组件观察，未安装新宿主版，所以新宿主版本真机回归尚未运行。最终APK字体逐字节匹配已核字体许可，未知字体hash新增拒绝。详见HOST_FAILURE记录；不宣布完整安全或完成。

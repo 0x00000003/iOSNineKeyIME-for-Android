@@ -81,6 +81,21 @@ def asset_errors(apk, expected):
     return errors
 
 
+def font_errors(apk, allowed_hashes):
+    errors=[]
+    observed=[]
+    with zipfile.ZipFile(apk) as archive:
+        for info in archive.infolist():
+            if Path(info.filename).suffix.lower() not in {'.ttf','.otf','.ttc','.woff','.woff2'}:continue
+            if info.file_size>4*1024*1024:
+                errors.append('font exceeds reviewed size budget: '+info.filename)
+                continue
+            sha=hashlib.sha256(archive.read(info)).hexdigest()
+            observed.append(dict(apk_entry=info.filename,bytes=info.file_size,sha256=sha))
+            if sha not in allowed_hashes:errors.append('unreviewed packaged font: '+info.filename)
+    return errors,observed
+
+
 def main():
     apk=Path(sys.argv[1]).resolve()
     destination=Path(sys.argv[2])
@@ -95,6 +110,9 @@ def main():
     notice=json.loads((ROOT/'third_party/offline-notice-sources.json').read_text())
     expected['offline-notices.json']=(notice['sha256'],notice['bytes'])
     errors.extend(asset_errors(apk,expected))
+    font=json.loads((ROOT/'third_party/material-font-license.json').read_text())
+    font_problems,fonts=font_errors(apk,{font['font_sha256']})
+    errors.extend(font_problems)
     app=E.fromstring(manifest).find('application')
     aapt=tool.parents[3]/'build-tools/36.0.0/aapt2'
     table=subprocess.check_output([str(aapt),'dump','resources',str(apk)],text=True)
@@ -105,9 +123,9 @@ def main():
             content=run('resources','xml','--file',path)
             (destination/(attr+'-'+str(index)+'.xml')).write_text(content)
             errors.extend(backup_errors(content,modern))
-    result={'scope':'static APK manifest/packaged backup XML/locked runtime assets, NOT target-OS backup/network/learning acceptance',
+    result={'scope':'static APK manifest/packaged backup XML/locked runtime assets/reviewed font hashes, NOT target-OS backup/network/learning acceptance',
             'sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'bytes':apk.stat().st_size,
-            'package':E.fromstring(manifest).get('package'),'errors':errors,'pass':not errors}
+            'package':E.fromstring(manifest).get('package'),'packaged_fonts':fonts,'errors':errors,'pass':not errors}
     (destination/'audit.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result))
     return bool(errors)

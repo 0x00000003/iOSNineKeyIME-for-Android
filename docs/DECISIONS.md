@@ -44,3 +44,4 @@
 | 030 | 2026-10-23 | Accepted fork reduction | 精确JNI/DTO keep；移除未注册旧前端listener的Keep roots，禁用旧后台同步worker为failure-only，保留ABI不伪报成功；native项目根prefix-map | release中旧前端/daemon/同步/剪贴板已裁剪，后续每次keep调整重新检查；不以符号缺席当完整隐私证明 |
 | 031 | 2026-10-23 | Local validation only | 显式localReleaseProbe用本项目调试key签非debuggable优化release，默认仍不签；独立引擎runner拒绝完整IME/editor gate | 不是M6正式签名/发布；复用原协议/语料、双APK哈希与nonce，release实际执行后才能报告该制品成绩 |
 | 032 | 2026-10-23 | Build fix required by actual FAIL | b4fb49d隔离源码Gradle成功但3MB APK缺四个运行时资源；把fresh固定资产生成/哈希核验接入preBuild，任何缺失/漂移失败，不复用未核验旧生成目录 | 独立源码构建必须核对实际APK资源闭包，manifest/备份静态PASS不能代替可运行。固定缓存输入可复用，仍不称SDK/cache全干净重建 |
+| 033 | 2026-10-23 | Host boundary fix | 宿主beginBatch及普通查询后重核session/connection，旧字段重入在commit前拒绝；可判定host RuntimeException失败关闭且不日志payload，endBatch错误不撤销已被host接受的commit | 相同测试APK 1/11红→11/11绿，真实EditText oracle；不承诺host提交本身after-apply抛异常可无歧义重试，不读取敏感正文补偿 |

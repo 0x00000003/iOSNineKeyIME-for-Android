@@ -9,3 +9,13 @@ M5长测使用独立冻结94b9d40f/ee19b44e Pixel包，不受本项主机/专用
 本项不保证“宿主已经上屏但随后在commitText本身抛异常”这种无确认事务能无歧义重试，普通InputConnection没有幂等token接口，敏感模式又禁止读回内容。原同字段显式重试仍有这种未知边界，不能宣称所有损坏宿主都exact-once。目标为拒绝旧字段重入、容纳可判定异常、已返回accepted的commit不因endBatch异常误变成待重试。
 
 最终fixture再次red：m4-host-fault-red-confirmed-fixture-emulator.json仍主9cdf03c8，测试d35ef8d99ed50d720627fe5c6cc07adc717acf051c995e4a714a253eecf1d40d，仅1/11通过、零私密上下文读取。另一个命名red-final-fixture的尝试启动时编译尚未完成，实际绑定旧64d5d9c4测试APK，明确不当作最终fixture证据；保留该记录而另用confirmed命名重测。后续产品修复与上述最终测试体相同，不靠改宿主期望通过。
+
+## 修复及相同测试体绿测
+
+产品修复：beginBatch调用、普通读取/删除、私密DEL和editor action均捕获RuntimeException且不序列化payload；只有begin正常返回才尝试end，end异常不撤销已接受commit。begin以及普通selected/before查询后检查相同session/连接，重入切字段在提交前中止。保留私密不读上下文和原同字段显式重试。主APK b03434817de3a384727cfd289917dcd4f69467a1adcf0300442fb98967f11137，**测试APK仍为red最终相同d35ef8d9**，专用模拟器11/11 PASS、私密上下文0读；m4-host-fault-green-emulator.json。49 app/61 state单测及debug lint通过。
+
+随后把11组故障组件加入full/editor scope必测，原R04仍完整执行；修改此汇总入口导致后续test hash变化，另绑后续记录。未在Pixel安装本轮包以免打断冻结长测，本轮不能声称Pixel宿主故障已过，仍要等长测结束后补对应版。不能以异常被容纳宣称解决所有不可靠宿主的原子性。
+
+整合后的同b0343481 debug在专用模拟器connection-faults/controller/settings/resources/R08/R09/R10分项PASS；full的native与11故障组件PASS，但原R04依然FAIL。见m4-host-fixed-emulator-*.json，每份明确主/测试哈希，不把首次独立故障测试的test hash归到新增full入口版本。
+
+静态审核又核对最终APK中实际字体字节：release94b9d40f和debugb0343481都只有一个font，R8后名字变化但SHA均cbfb8ffc5961513f8c93f84674751d2dcbbc560c2d844d142ab6de1ca64a88e0，匹配固定v7.0.96来源/字体专门Apache2许可，不仅看父POM。audit_apk现在拒绝未知字体hash，许可/来源文本在原43正文中；并不因此关闭完整M4合规。两个实际APK的新font/runtime/备份静态审计PASS，工具35项PASS仅工具边界。

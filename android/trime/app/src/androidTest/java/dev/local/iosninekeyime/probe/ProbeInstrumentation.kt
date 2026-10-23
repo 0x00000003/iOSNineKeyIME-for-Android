@@ -49,9 +49,11 @@ class ProbeInstrumentation : Instrumentation() {
             if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
             if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly) {
                 val editor = EditorBoundaryProbe.run(this)
+                val faults = HostConnectionFailureProbe.run(this)
                 result.put("host_editor_component", editor)
-                result.put("pass", result.getBoolean("pass") && editor.getBoolean("pass"))
-            } else result.put("host_editor_component", org.json.JSONObject().put("status", "NOT_RUN").put("reason", "explicit engine/resource scope; editor failures remain open"))
+                result.put("host_connection_fault_component", faults)
+                result.put("pass", result.getBoolean("pass") && editor.getBoolean("pass") && faults.getBoolean("pass"))
+            } else result.put("host_editor_component", org.json.JSONObject().put("status", "NOT_RUN").put("reason", "explicit separate component scope; R04 remains open"))
             result.put("probe_run_id", runId)
             java.io.File(targetContext.noBackupFilesDir, "m1/probe-result.json").writeText(result.toString(2))
             output.putString("stream", result.toString(2) + "\n")

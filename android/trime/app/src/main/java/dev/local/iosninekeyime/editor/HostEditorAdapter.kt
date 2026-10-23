@@ -42,14 +42,21 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
 
     private fun commitToConnection(text: String): Boolean {
         val editor = connection ?: return false
-        editor.beginBatchEdit()
-        val finishAttempt = onCommitAttempt(text.length)
+        val expectedSession = session
+        var batchStarted = false
+        var finishAttempt: ((Boolean) -> Unit)? = null
         return try {
-            editor.commitText(text, 1).also { finishAttempt(it) }
+            editor.beginBatchEdit()
+            batchStarted = true
+            // A local host may synchronously restart input from beginBatchEdit.
+            if (!current(expectedSession, editor)) return false
+            val finish = onCommitAttempt(text.length)
+            finishAttempt = finish
+            editor.commitText(text, 1).also { finish(it) }
         } catch (_:RuntimeException) {
-            finishAttempt(false)
+            finishAttempt?.invoke(false)
             false
-        } finally { editor.endBatchEdit() }
+        } finally { if (batchStarted) endBatchQuietly(editor) }
     }
 
     fun delete(expectedSession: Long): EditResult {
@@ -57,10 +64,16 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
         val editor = connection ?: return EditResult.UNAVAILABLE
         // Sensitive fields: delegate deletion to the host; never request selected/surrounding text.
         if (sensitive || Build.VERSION.SDK_INT < 24) return deleteKey(editor)
-        editor.beginBatchEdit()
+        var batchStarted = false
         return try {
-            if (!editor.getSelectedText(0).isNullOrEmpty()) return if (commitToConnection("")) EditResult.ACCEPTED else EditResult.UNAVAILABLE
+            editor.beginBatchEdit()
+            batchStarted = true
+            if (!current(expectedSession, editor)) return EditResult.STALE
+            val selected = editor.getSelectedText(0)
+            if (!current(expectedSession, editor)) return EditResult.STALE
+            if (!selected.isNullOrEmpty()) return if (commitToConnection("")) EditResult.ACCEPTED else EditResult.UNAVAILABLE
             val before = editor.getTextBeforeCursor(4096, 0)?.toString() ?: return EditResult.UNAVAILABLE
+            if (!current(expectedSession, editor)) return EditResult.STALE
             if (before.isEmpty()) return EditResult.ACCEPTED
             val iterator = android.icu.text.BreakIterator.getCharacterInstance(java.util.Locale.ROOT)
             iterator.setText(before)
@@ -69,15 +82,18 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
             // If a giant cluster fills the bounded context, its start may be truncated. Fail closed.
             if (boundary < 0 || (boundary == 0 && before.length == 4096)) return EditResult.CONTEXT_LIMIT
             if (editor.deleteSurroundingText(before.length - boundary, 0)) EditResult.ACCEPTED else EditResult.UNAVAILABLE
-        } finally { editor.endBatchEdit() }
+        } catch (_:RuntimeException) { EditResult.UNAVAILABLE }
+        finally { if (batchStarted) endBatchQuietly(editor) }
     }
 
     private fun deleteKey(editor: InputConnection): EditResult {
         // AOSP BaseInputConnection dispatches the event but deliberately returns false.
         // This is a request delegated to the host, never a synchronous success assertion.
-        editor.sendKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL))
-        editor.sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DEL))
-        return EditResult.DELEGATED
+        return try {
+            editor.sendKeyEvent(KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_DEL))
+            editor.sendKeyEvent(KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_DEL))
+            EditResult.DELEGATED
+        } catch (_:RuntimeException) { EditResult.UNAVAILABLE }
     }
 
     fun action(expectedSession: Long, action: EditorAction): Boolean {
@@ -91,7 +107,14 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
             EditorAction.GO -> EditorInfo.IME_ACTION_GO
             EditorAction.NEWLINE -> error("E_ACTION")
         }
-        return connection?.performEditorAction(value) ?: false
+        return try { connection?.performEditorAction(value) ?: false } catch (_:RuntimeException) { false }
+    }
+
+    private fun current(expectedSession:Long, editor:InputConnection) = active && session==expectedSession && connection===editor
+
+    private fun endBatchQuietly(editor:InputConnection) {
+        // Batch cleanup failure must not turn an accepted commit into an ambiguous retry.
+        try { editor.endBatchEdit() } catch (_:RuntimeException) { }
     }
 
     fun end(expectedSession: Long) {

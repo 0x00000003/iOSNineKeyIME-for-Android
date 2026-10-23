@@ -1,0 +1,8 @@
+{
+  "scope": "one supplemental selected-app process observation during frozen long run, NOT completed long-run/P03 result",
+  "utc": "2026-10-23T23:09:15.877514+00:00",
+  "selected_package": "dev.local.iosninekeyime.probe",
+  "own_total_pss_kib": null,
+  "own_total_private_dirty_kib": null,
+  "app_process_present": true
+}

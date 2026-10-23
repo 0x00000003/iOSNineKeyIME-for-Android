@@ -85,3 +85,7 @@ M5探索短测保留：v2总P95约162ms，分段processKey约161ms，候选读�
 2ad1de3隔离源码重建补测PASS（同机共享固定缓存）：62任务全部执行，3m8s，unsigned整包bbd28866与原基线完全相同，补强APK资产/备份静态检查通过。首轮3MB缺资产FAIL不覆盖。完整SDK/cache初次获取、系统IME和视觉/性能门禁继续未关闭。即将冻结性能APK树并通过run_probe --apk-root绑定，避免其他构建改变长测两组被测版本。
 
 长测后台期间检查宿主连接边界，先在专用模拟器真实EditText注入11组异常/同步切字段；初始1/11通过，保留红测。发现batch begin切字段后旧commit虽最终标STALE仍会改正文，及batch end异常会掩盖已接受提交，准备修复。Pixel冻结长测不安装任何新包；原R04失败不受本项替换。
+
+宿主异常修复专用模拟器绿测：同最终red测试d35ef8d9，主APK b0343481，11/11通过、敏感上下文0；49 app/61 state及debug lint PASS。批次begin/查询后重核字段，捕获连接异常，endBatch不撤销accepted commit。原R04不改，11组组件继续加入完整scope必测；Pixel仍运行冻结性能长测，本轮未在Pixel安装新宿主版，不冒称真机回归已通过。
+
+宿主修复完整模拟器回归完成：b0343481的native/11故障组件/controller/settings/resources/R08/R09/R10 PASS，full继续原R04 FAIL。实际font由最终APK提取hash核对固定MaterialDesign-Webfont许可，debug/release均匹配，未知字体新增静态拒绝；工具35项PASS。Pixel长期组件尚在冻结旧版94b9d40f，未冒称新宿主修复已真机通过。

@@ -1,0 +1,15 @@
+{
+  "scope": "static APK manifest/packaged backup XML/locked runtime assets/reviewed font hashes, NOT target-OS backup/network/learning acceptance",
+  "sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "bytes": 62452893,
+  "package": "dev.local.iosninekeyime.probe",
+  "packaged_fonts": [
+    {
+      "apk_entry": "res/9B.ttf",
+      "bytes": 1305768,
+      "sha256": "cbfb8ffc5961513f8c93f84674751d2dcbbc560c2d844d142ab6de1ca64a88e0"
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

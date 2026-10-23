@@ -38,3 +38,12 @@ class ApkAuditTests(unittest.TestCase):
                 if content is not None:archive.writestr('assets/ime-probe.zip',content)
             stream.seek(0)
             self.assertEqual(bool(a.asset_errors(stream,expected)),content!=b'locked')
+
+    def test_font_license_requires_exact_packaged_binary_not_parent_pom(self):
+        import hashlib,io,zipfile
+        stream=io.BytesIO()
+        with zipfile.ZipFile(stream,'w') as archive:archive.writestr('res/obfuscated.ttf',b'reviewed-font')
+        stream.seek(0)
+        self.assertTrue(a.font_errors(stream,{'0'*64})[0])
+        stream.seek(0)
+        self.assertFalse(a.font_errors(stream,{hashlib.sha256(b'reviewed-font').hexdigest()})[0])
