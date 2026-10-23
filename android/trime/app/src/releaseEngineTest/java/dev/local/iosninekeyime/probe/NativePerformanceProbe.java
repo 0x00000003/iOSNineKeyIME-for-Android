@@ -62,7 +62,7 @@ public final class NativePerformanceProbe {
                 require(Rime.processRimeKey(digits.charAt(cursor++),0));
                 if(cursor==digits.length()) {commit();commits++;cursor=0;word++;}
             }
-            Rime.resetRimeSession();cursor=0;
+            Rime.clearRimeComposition();cursor=0;
             long[] latency=new long[16000], keyLatency=new long[16000], contextLatency=new long[16000], candidatesLatency=new long[16000];
             PowerManager power=(PowerManager)context.getSystemService(Context.POWER_SERVICE);
             long start=System.nanoTime(), nextSample=start;
@@ -99,7 +99,7 @@ public final class NativePerformanceProbe {
             double p95=ordered[(int)Math.ceil(keys*.95)-1]/1e6;
             double p99=ordered[(int)Math.ceil(keys*.99)-1]/1e6;
             JSONObject result=new JSONObject().put("scope","optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle")
-                .put("candidate_limit",100).put("protocol_revision",2)
+                .put("candidate_limit",100).put("protocol_revision",3).put("session_reset_per_commit",false)
                 .put("component_candidate_budget_p95_80_p99_150_met",p95<=80&&p99<=150)
                 .put("full_product_performance_acceptance","NOT_RUN")
                 .put("model_enabled",modelEnabled).put("grammar_queries",queryCount).put("requested_duration_seconds",longRun?1800:10)
@@ -133,6 +133,5 @@ public final class NativePerformanceProbe {
         String duplicate=Rime.getRimeCommit().getText();
         require(duplicate==null||duplicate.isEmpty());
         require(Rime.getRimeContext().getComposition().getLength()==0);
-        Rime.resetRimeSession();
     }
 }

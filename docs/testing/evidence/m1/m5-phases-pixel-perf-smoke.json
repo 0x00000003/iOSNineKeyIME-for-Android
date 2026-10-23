@@ -1,0 +1,73 @@
+{
+  "scope": "optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle",
+  "candidate_limit": 100,
+  "protocol_revision": 2,
+  "component_candidate_budget_p95_80_p99_150_met": false,
+  "full_product_performance_acceptance": "NOT_RUN",
+  "model_enabled": true,
+  "grammar_queries": 616,
+  "requested_duration_seconds": 10,
+  "elapsed_ms": 10204,
+  "keys": 77,
+  "paced_keys_per_second": 8,
+  "warmup_keys": 120,
+  "warmup_commits": 19,
+  "measured_exact_once_commits": 12,
+  "jni_key_context_candidates_p50_ms": 8.211833,
+  "jni_key_context_candidates_p95_ms": 162.128825,
+  "jni_key_context_candidates_p99_ms": 167.028687,
+  "phase_p95_ms": {
+    "process_key": 161.140544,
+    "get_context": 1.727701,
+    "get_candidates": 4.934733
+  },
+  "samples": [
+    {
+      "elapsed_ms": 20,
+      "keys": 0,
+      "total_pss_kib": 28223,
+      "total_private_dirty_kib": 19100,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 10068,
+      "keys": 77,
+      "total_pss_kib": 36050,
+      "total_private_dirty_kib": 21480,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 40927232
+    }
+  ],
+  "profile_unchanged_before_native_close": true,
+  "shared_bytes_and_timestamps_unchanged": true,
+  "own_uid_traffic_supported": true,
+  "own_uid_tx_bytes_delta": 0,
+  "own_uid_rx_bytes_delta": 0,
+  "pass": true,
+  "probe_run_id": "2215d80efd7540149782b51bc5b99552",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "tested_test_apk_sha256": "acb6144bc8849d1a50f86ceefb688a29285bed9cb6a66c6cd4d6ca6888243bea",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "perf-smoke",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}
