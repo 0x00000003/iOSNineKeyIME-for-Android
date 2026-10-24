@@ -1,0 +1,25 @@
+{
+  "scope": "JVM pure helper only; not Android/JNI/UI",
+  "phase": "GREEN",
+  "helper_tests": 10,
+  "suite": {
+    "tests": 93,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_sha256": "0f0bc7be60685af5cffc63952ac97ff22703bd455bb7b2918d63987a830b93cd",
+  "test_sha256": "b1013b4f25587bef4a936958dc801ce8c42f087e6ef65b47e54fa3e111f4e646",
+  "xml_sha256": {
+    "TEST-dev.local.iosninekeyime.state.CandidatePagingTest.xml": "fadd7a3b065fa96c91925d4f279c72c3988e5ead95678daacdde1ecf42a7a864",
+    "TEST-dev.local.iosninekeyime.state.HostCommitGateTest.xml": "56ce8da869a2189be87b438b3ffb78054d681161fa52a0a79400ff20a59b3ed9",
+    "TEST-dev.local.iosninekeyime.state.KeyboardControllerTest.xml": "cf79aa0b1611704d913aa015e888fca2c7d65009071156424746eb40db7fd410",
+    "TEST-dev.local.iosninekeyime.state.KeyboardReducerTest.xml": "44aabc7f1dc9882e8cf3c282592c02f34477b15bbff788732dbce85d7f302757",
+    "TEST-dev.local.iosninekeyime.state.PinyinDisambiguationTest.xml": "5e7620e6d419e75c9d140499b16665281740c2069547dadca0fac16f2cde1c36",
+    "TEST-dev.local.iosninekeyime.state.ReferenceGeometryTest.xml": "a1bc5c647d33c9f6f9135c216bbfe16aa0cc89b3b1ef9fe1d48c6dcbb2fbcd51",
+    "TEST-dev.local.iosninekeyime.state.TouchProtocolTest.xml": "39e64101908a8f2bb70e4bc681ba9fe165b5e6844bbe860929e820017b784c7c"
+  },
+  "exit_code": 0,
+  "dependencies_added": 0,
+  "apk_rebuilt": false
+}

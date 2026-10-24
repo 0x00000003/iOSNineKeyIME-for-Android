@@ -1,0 +1,13 @@
+{
+  "scope": "JVM pure helper only; not Android/JNI/UI",
+  "phase": "RED",
+  "tests": 10,
+  "failures": 6,
+  "errors": 0,
+  "skipped": 0,
+  "source_sha256": "a1ea7e4f79ffa26ca2d96a7007a37b1821799223cc32e8c1abd541de4dd59680",
+  "test_sha256": "b1013b4f25587bef4a936958dc801ce8c42f087e6ef65b47e54fa3e111f4e646",
+  "xml_sha256": "c2d66a65038f51a2ac49159f8ddd240c470271ebb50c68b77a2dab6db47fdab0",
+  "exit_code": 1,
+  "earlier_filtered_run": "NOT_EXECUTED: Gradle --tests matched no Kotest specs; full :state:test then executed real assertions"
+}
