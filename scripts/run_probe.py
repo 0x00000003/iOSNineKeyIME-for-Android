@@ -4,11 +4,13 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
 import subprocess
 import uuid
+from artifact_utils import verify
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,6 +23,32 @@ def selected_apk(folder, package):
     if Path(name).name != name or not name.endswith('.apk'):
         raise ValueError('E_APK_PATH')
     return folder / name
+
+
+def freeze_apk(source, destination, expected_sha, blob_folder=None):
+    """One verified immutable copy per APK hash; evidence paths share it via hard links.
+
+    Gradle output remains a separate inode. Existing evidence is never overwritten.
+    """
+    folder = Path(blob_folder) if blob_folder else ROOT / 'artifacts/apk-blobs'
+    folder.mkdir(parents=True, exist_ok=True)
+    blob = folder / (expected_sha + '.apk')
+    if not blob.exists():
+        temp = folder / (expected_sha + '.' + uuid.uuid4().hex + '.partial')
+        try:
+            with Path(source).open('rb') as src, temp.open('xb') as dst:
+                shutil.copyfileobj(src, dst)
+            verify(temp, expected_sha)
+            try:
+                os.link(temp, blob)
+            except FileExistsError:
+                verify(blob, expected_sha)
+        finally:
+            temp.unlink(missing_ok=True)
+    if blob.is_symlink() or not blob.is_file():
+        raise ValueError('E_APK_BLOB_PATH')
+    verify(blob, expected_sha)
+    os.link(blob, destination)  # Fails if a prior/interrupted run already owns this path.
 
 
 def streamed_result(output, run_id):
@@ -80,9 +108,9 @@ def main():
     digest = hashlib.sha256(apk.read_bytes()).hexdigest()
     test_digest = hashlib.sha256(test.read_bytes()).hexdigest()
     frozen_test = ROOT / 'artifacts/m1' / (args.record + '-test-' + test_digest[:12] + '.apk')
-    shutil.copy2(test, frozen_test)
+    freeze_apk(test, frozen_test, test_digest)
     frozen = ROOT / 'artifacts/m1' / (args.record + '-' + digest[:12] + '.apk')
-    shutil.copy2(apk, frozen)
+    freeze_apk(apk, frozen, digest)
     installation = []
     for file, install_package, expected_sha in ((frozen, package, digest),
                                        (frozen_test, package + '.test', test_digest)):

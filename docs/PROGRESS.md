@@ -121,3 +121,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 隐私策略规定：仅禁止文字正文，必要结构信息可以使用。已将定义写入AGENTS及ADR037，采用该隐私边界；继续生产HostAdapter/Controller异步删除及字段/超时/不支持处理。R04原失败继续保留，待实际新路径与系统测试，不将18例研究当作完成。
 
 构建缓存去重检查发现重复隔离目录、未使用模拟器和安装归档。回收9处本项目忽略的可再生成目录，可用空间实际增加24.10GiB；保存各重建receipt/log，所有已冻结APK/测试/源码/未提交编辑保留，两份交付包60文件SHA逐项复核PASS。不将缓存清理当Android测试或R04修复。
+
+磁盘后续修正：run_probe改为已核SHA的单实体APK池与每记录硬链接，Gradle输出隔离inode、既有路径不覆盖、失败无partial遗留；40项tooling通过。后续同APK分项测试不会再按record复制大包。
