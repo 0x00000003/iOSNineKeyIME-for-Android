@@ -1,0 +1,1827 @@
+{
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "reference-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "observed screen pixels + actual touchscreen; no accessibility-coordinate or service-state bridge",
+    "physical_upper_host_button_received": true,
+    "pass": false,
+    "failure_stage": "emoji",
+    "error_code": "E_PIXEL_REFERENCE_ASSERTION",
+    "cases": [
+      {
+        "id": "chinese",
+        "pass": true
+      },
+      {
+        "id": "press-cancel",
+        "pass": true
+      },
+      {
+        "id": "number",
+        "pass": true
+      },
+      {
+        "id": "symbols",
+        "pass": true
+      },
+      {
+        "id": "return-chinese",
+        "pass": true
+      },
+      {
+        "id": "latin",
+        "pass": true
+      }
+    ],
+    "reference_captures": [
+      {
+        "id": "r01-chinese",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "digit-2": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "digit-3": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "digit-4": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "digit-5": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "digit-6": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "digit-7": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "digit-8": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "digit-9": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "pinyin": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "space": [
+            394,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+        "synthetic_key_fill_rgb": [
+          70,
+          70,
+          70
+        ]
+      },
+      {
+        "id": "r01-pressed",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "digit-2": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "digit-3": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "digit-4": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "digit-5": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "digit-6": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "digit-7": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "digit-8": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "digit-9": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "pinyin": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "space": [
+            394,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+        "synthetic_key_fill_rgb": [
+          133,
+          133,
+          133
+        ]
+      },
+      {
+        "id": "r02-number",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "text-1": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "text-2": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "text-3": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "text-4": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "text-5": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "text-6": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "text-7": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "text-8": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "number-punctuation": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "zero": [
+            394,
+            627,
+            565,
+            742
+          ],
+          "space": [
+            581,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells"
+      },
+      {
+        "id": "r03-symbols",
+        "width": 960,
+        "height": 904,
+        "keys": {
+          "text-0": [
+            16,
+            222,
+            95,
+            328
+          ],
+          "text-1": [
+            110,
+            222,
+            190,
+            328
+          ],
+          "text-2": [
+            204,
+            222,
+            284,
+            328
+          ],
+          "text-3": [
+            298,
+            222,
+            378,
+            328
+          ],
+          "text-4": [
+            393,
+            222,
+            472,
+            328
+          ],
+          "text-5": [
+            487,
+            222,
+            566,
+            328
+          ],
+          "text-6": [
+            581,
+            222,
+            661,
+            328
+          ],
+          "text-7": [
+            675,
+            222,
+            755,
+            328
+          ],
+          "text-8": [
+            769,
+            222,
+            849,
+            328
+          ],
+          "text-9": [
+            864,
+            222,
+            943,
+            328
+          ],
+          "text-10": [
+            16,
+            355,
+            95,
+            461
+          ],
+          "text-11": [
+            110,
+            355,
+            190,
+            461
+          ],
+          "text-12": [
+            204,
+            355,
+            284,
+            461
+          ],
+          "text-13": [
+            298,
+            355,
+            378,
+            461
+          ],
+          "text-14": [
+            393,
+            355,
+            472,
+            461
+          ],
+          "text-15": [
+            487,
+            355,
+            566,
+            461
+          ],
+          "text-16": [
+            581,
+            355,
+            661,
+            461
+          ],
+          "text-17": [
+            675,
+            355,
+            755,
+            461
+          ],
+          "text-18": [
+            769,
+            355,
+            849,
+            461
+          ],
+          "text-19": [
+            864,
+            355,
+            943,
+            461
+          ],
+          "symbol-page": [
+            16,
+            488,
+            123,
+            594
+          ],
+          "text-20": [
+            147,
+            488,
+            245,
+            594
+          ],
+          "text-21": [
+            261,
+            488,
+            358,
+            594
+          ],
+          "text-22": [
+            375,
+            488,
+            472,
+            594
+          ],
+          "text-23": [
+            488,
+            488,
+            586,
+            594
+          ],
+          "text-24": [
+            602,
+            488,
+            700,
+            594
+          ],
+          "text-25": [
+            716,
+            488,
+            813,
+            594
+          ],
+          "layout-return": [
+            16,
+            622,
+            237,
+            728
+          ],
+          "delete": [
+            836,
+            488,
+            943,
+            594
+          ],
+          "space": [
+            251,
+            622,
+            708,
+            728
+          ],
+          "enter": [
+            722,
+            622,
+            945,
+            728
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells"
+      },
+      {
+        "id": "r04-latin",
+        "width": 960,
+        "height": 808,
+        "keys": {
+          "text-0": [
+            16,
+            126,
+            95,
+            232
+          ],
+          "text-1": [
+            110,
+            126,
+            190,
+            232
+          ],
+          "text-2": [
+            204,
+            126,
+            284,
+            232
+          ],
+          "text-3": [
+            298,
+            126,
+            378,
+            232
+          ],
+          "text-4": [
+            393,
+            126,
+            472,
+            232
+          ],
+          "text-5": [
+            487,
+            126,
+            566,
+            232
+          ],
+          "text-6": [
+            581,
+            126,
+            661,
+            232
+          ],
+          "text-7": [
+            675,
+            126,
+            755,
+            232
+          ],
+          "text-8": [
+            769,
+            126,
+            849,
+            232
+          ],
+          "text-9": [
+            864,
+            126,
+            943,
+            232
+          ],
+          "text-10": [
+            63,
+            259,
+            142,
+            365
+          ],
+          "text-11": [
+            157,
+            259,
+            237,
+            365
+          ],
+          "text-12": [
+            251,
+            259,
+            331,
+            365
+          ],
+          "text-13": [
+            345,
+            259,
+            425,
+            365
+          ],
+          "text-14": [
+            440,
+            259,
+            519,
+            365
+          ],
+          "text-15": [
+            534,
+            259,
+            614,
+            365
+          ],
+          "text-16": [
+            628,
+            259,
+            708,
+            365
+          ],
+          "text-17": [
+            722,
+            259,
+            802,
+            365
+          ],
+          "text-18": [
+            817,
+            259,
+            896,
+            365
+          ],
+          "shift": [
+            16,
+            393,
+            123,
+            499
+          ],
+          "text-19": [
+            157,
+            393,
+            237,
+            499
+          ],
+          "text-20": [
+            251,
+            393,
+            331,
+            499
+          ],
+          "text-21": [
+            345,
+            393,
+            425,
+            499
+          ],
+          "text-22": [
+            440,
+            393,
+            519,
+            499
+          ],
+          "text-23": [
+            534,
+            393,
+            614,
+            499
+          ],
+          "text-24": [
+            628,
+            393,
+            708,
+            499
+          ],
+          "text-25": [
+            722,
+            393,
+            802,
+            499
+          ],
+          "layout-symbols": [
+            16,
+            526,
+            118,
+            632
+          ],
+          "emoji": [
+            133,
+            526,
+            237,
+            632
+          ],
+          "delete": [
+            836,
+            393,
+            943,
+            499
+          ],
+          "space": [
+            251,
+            526,
+            708,
+            632
+          ],
+          "enter": [
+            722,
+            526,
+            945,
+            632
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells"
+      }
+    ],
+    "actual_pixel_targeted_taps": 18,
+    "planned_cases": 9
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 6,
+  "planned_cases": 9,
+  "status": "FAIL",
+  "reference_captures": [
+    {
+      "id": "r01-chinese",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+      "synthetic_key_fill_rgb": [
+        70,
+        70,
+        70
+      ],
+      "png_sha256": "96b2c4e428e8dcd7541fb4f716337e0f75cf9442e079bcf40fcaab10dcdf3303",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r01-pressed",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+      "synthetic_key_fill_rgb": [
+        133,
+        133,
+        133
+      ],
+      "png_sha256": "c9019653824f6ae94c8a2a8c212ea7310a26b6ec51820563fb5541315e305eb3",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r02-number",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "text-1": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "text-2": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "text-3": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "text-4": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "text-5": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "text-6": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "text-7": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "text-8": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "number-punctuation": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "zero": [
+          394,
+          627,
+          565,
+          742
+        ],
+        "space": [
+          581,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+      "png_sha256": "4c4c74ab71c26901952e24b260c5cb49e2c3a9fde888b5c11abf5cc94c3005a7",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r03-symbols",
+      "width": 960,
+      "height": 904,
+      "keys": {
+        "text-0": [
+          16,
+          222,
+          95,
+          328
+        ],
+        "text-1": [
+          110,
+          222,
+          190,
+          328
+        ],
+        "text-2": [
+          204,
+          222,
+          284,
+          328
+        ],
+        "text-3": [
+          298,
+          222,
+          378,
+          328
+        ],
+        "text-4": [
+          393,
+          222,
+          472,
+          328
+        ],
+        "text-5": [
+          487,
+          222,
+          566,
+          328
+        ],
+        "text-6": [
+          581,
+          222,
+          661,
+          328
+        ],
+        "text-7": [
+          675,
+          222,
+          755,
+          328
+        ],
+        "text-8": [
+          769,
+          222,
+          849,
+          328
+        ],
+        "text-9": [
+          864,
+          222,
+          943,
+          328
+        ],
+        "text-10": [
+          16,
+          355,
+          95,
+          461
+        ],
+        "text-11": [
+          110,
+          355,
+          190,
+          461
+        ],
+        "text-12": [
+          204,
+          355,
+          284,
+          461
+        ],
+        "text-13": [
+          298,
+          355,
+          378,
+          461
+        ],
+        "text-14": [
+          393,
+          355,
+          472,
+          461
+        ],
+        "text-15": [
+          487,
+          355,
+          566,
+          461
+        ],
+        "text-16": [
+          581,
+          355,
+          661,
+          461
+        ],
+        "text-17": [
+          675,
+          355,
+          755,
+          461
+        ],
+        "text-18": [
+          769,
+          355,
+          849,
+          461
+        ],
+        "text-19": [
+          864,
+          355,
+          943,
+          461
+        ],
+        "symbol-page": [
+          16,
+          488,
+          123,
+          594
+        ],
+        "text-20": [
+          147,
+          488,
+          245,
+          594
+        ],
+        "text-21": [
+          261,
+          488,
+          358,
+          594
+        ],
+        "text-22": [
+          375,
+          488,
+          472,
+          594
+        ],
+        "text-23": [
+          488,
+          488,
+          586,
+          594
+        ],
+        "text-24": [
+          602,
+          488,
+          700,
+          594
+        ],
+        "text-25": [
+          716,
+          488,
+          813,
+          594
+        ],
+        "layout-return": [
+          16,
+          622,
+          237,
+          728
+        ],
+        "delete": [
+          836,
+          488,
+          943,
+          594
+        ],
+        "space": [
+          251,
+          622,
+          708,
+          728
+        ],
+        "enter": [
+          722,
+          622,
+          945,
+          728
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+      "png_sha256": "2a70fdfa603989e6ceea2d0f86881c30d8604cea6a71ff80b60c8a7545a50067",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r04-latin",
+      "width": 960,
+      "height": 808,
+      "keys": {
+        "text-0": [
+          16,
+          126,
+          95,
+          232
+        ],
+        "text-1": [
+          110,
+          126,
+          190,
+          232
+        ],
+        "text-2": [
+          204,
+          126,
+          284,
+          232
+        ],
+        "text-3": [
+          298,
+          126,
+          378,
+          232
+        ],
+        "text-4": [
+          393,
+          126,
+          472,
+          232
+        ],
+        "text-5": [
+          487,
+          126,
+          566,
+          232
+        ],
+        "text-6": [
+          581,
+          126,
+          661,
+          232
+        ],
+        "text-7": [
+          675,
+          126,
+          755,
+          232
+        ],
+        "text-8": [
+          769,
+          126,
+          849,
+          232
+        ],
+        "text-9": [
+          864,
+          126,
+          943,
+          232
+        ],
+        "text-10": [
+          63,
+          259,
+          142,
+          365
+        ],
+        "text-11": [
+          157,
+          259,
+          237,
+          365
+        ],
+        "text-12": [
+          251,
+          259,
+          331,
+          365
+        ],
+        "text-13": [
+          345,
+          259,
+          425,
+          365
+        ],
+        "text-14": [
+          440,
+          259,
+          519,
+          365
+        ],
+        "text-15": [
+          534,
+          259,
+          614,
+          365
+        ],
+        "text-16": [
+          628,
+          259,
+          708,
+          365
+        ],
+        "text-17": [
+          722,
+          259,
+          802,
+          365
+        ],
+        "text-18": [
+          817,
+          259,
+          896,
+          365
+        ],
+        "shift": [
+          16,
+          393,
+          123,
+          499
+        ],
+        "text-19": [
+          157,
+          393,
+          237,
+          499
+        ],
+        "text-20": [
+          251,
+          393,
+          331,
+          499
+        ],
+        "text-21": [
+          345,
+          393,
+          425,
+          499
+        ],
+        "text-22": [
+          440,
+          393,
+          519,
+          499
+        ],
+        "text-23": [
+          534,
+          393,
+          614,
+          499
+        ],
+        "text-24": [
+          628,
+          393,
+          708,
+          499
+        ],
+        "text-25": [
+          722,
+          393,
+          802,
+          499
+        ],
+        "layout-symbols": [
+          16,
+          526,
+          118,
+          632
+        ],
+        "emoji": [
+          133,
+          526,
+          237,
+          632
+        ],
+        "delete": [
+          836,
+          393,
+          943,
+          499
+        ],
+        "space": [
+          251,
+          526,
+          708,
+          632
+        ],
+        "enter": [
+          722,
+          526,
+          945,
+          632
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed colored cells",
+      "png_sha256": "1b654a87624645ce69a35492a73c017e77f6aa0f7c8d37528c43c6a1e9735994",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    }
+  ],
+  "window_layout_metadata": {
+    "content_top_inset": 1035,
+    "visible_top_inset": 1035,
+    "touchable_insets": 3,
+    "field_active": true,
+    "destroyed": false,
+    "is_input_view_shown": true,
+    "window_layout_height": -1,
+    "keyboard": {
+      "initial_measure_specs": [
+        [
+          490,
+          108,
+          -2147483648,
+          739
+        ],
+        [
+          490,
+          108,
+          -2147483648,
+          793
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ]
+      ],
+      "width": 960,
+      "height": 954,
+      "measured_width": 960,
+      "measured_height": 954,
+      "width_spec_size": 960,
+      "height_spec_size": 1989,
+      "height_spec_mode": -2147483648,
+      "desired_height": 954,
+      "child_count": 44,
+      "root_height": 1989,
+      "parent_height": 1989,
+      "is_shown": true,
+      "visibility": 0,
+      "safe_left": 0,
+      "safe_right": 0,
+      "safe_bottom": 54,
+      "ancestors": [
+        {
+          "class": "NineKeyView",
+          "id": -1,
+          "height": 954,
+          "width": 960,
+          "y": 1035,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            1035,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "ReferenceInputContainer",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908318,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": 16909476,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908290,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "DecorView",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        }
+      ],
+      "screen_x": 0,
+      "screen_y": 1188,
+      "window_x": 0,
+      "window_y": 1035
+    }
+  },
+  "debug_owned_bottom_crop_saved": true,
+  "debug_owned_bottom_crop_basis": "requested keyboard height; may include owned synthetic host; NOT reference acceptance",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "chinese",
+      "pass": true
+    },
+    {
+      "id": "press-cancel",
+      "pass": true
+    },
+    {
+      "id": "number",
+      "pass": true
+    },
+    {
+      "id": "symbols",
+      "pass": true
+    },
+    {
+      "id": "return-chinese",
+      "pass": true
+    },
+    {
+      "id": "latin",
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "14f224d0401e400bb32f35ef38343b89",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+  "test_apk_sha256": "93ac81ade511dbee6372c047469d3b32d0a346fecac8da2686764bd2b39f8460",
+  "ime_apk_sha256": "e3850fb5eeea44d467b1a7577320c4e4a18d9a28dcf633db88b58c5982e097e0",
+  "ime_variant": "debug",
+  "requested_scope": "reference-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

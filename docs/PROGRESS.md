@@ -141,3 +141,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 五态参考首版1f40c1df：两设备View inset20/20、Pixel核心10/10、81state/50app/42工具与debug/testhost lint/实际APK静态通过。四张真实系统裁图证明几何基本落位/按下有反应，但字体bbox偏大；矩阵首次只5casePASS、ABC定位混淆，随后第二轮真实窗口7px FAIL，未把已有通过当全部UI通过。新增明确5轮hide/show协议f0eaeb0，改intrinsic高度显式服务窗口布局，当前构建/lint通过，实际生命周期/五态仍待新SHA测。未复制工具链，参考私有副本/裁图共968KiB。
 
 2026-10-24 M5 WIP检查点：参考iPhone13/iOS27.2已确认，五态纯几何/状态与内存Emoji落地；测量脚本核双SHA且不输出图片正文，已测三态18/19/31键及色块，R04/R05仍NOT_CAPTURED。新系统矩阵/隐藏重显持续FAIL，原三包复测9/10；旧UI831对照10/10不能继承。所有反例JSON保留，不提交个人图或序列号，未推远端。窗口候选补丁未证实有效不当修复交付，继续定位。
+
+2026-10-24 c51dad6b参考校准WIP：五态+按下6图已采齐，独立真实像素触控9/9与宿主上方按钮通过，原无障碍/lifecycle仍FAIL；两设备full28故障/敏感5/metadata6、controller、view20+搜索清除通过。83 state/50 app/45工具、两套debug lint及实际debug APK权限/备份/固定资产/零字体静态通过。字形/Emoji/原生导航/未知状态和系统全安全/性能/release未验收。磁盘只复用一套工具链，缓存约19.91GiB、制品约7.00GiB，保留独立测试版本而非复制环境；提交开发记录。

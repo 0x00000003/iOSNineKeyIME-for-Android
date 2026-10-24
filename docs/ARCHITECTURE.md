@@ -48,3 +48,5 @@ Trime 3.3.12 固定 librime 子模块正好是 1.17.0 对应 commit，同时带 
 图示没有覆盖的长按/次页/消歧/语音不据静态图宣称等价；性能、系统状态往返、字体缩放/可访问性、最终release均待测。当前调试显示采用渲染器intrinsic高度到服务窗口的有界请求，纯布局dump辅助核对；是否保留须由重显故障A/B确定，不能把可访问性裁图大小直接等同实际View尺寸。
 
 窗口策略澄清（2026-10-24）：显式固定高度/maximumWindowMetrics候选没有通过真实重显门禁，已撤掉Window固定高度设置；目前回到框架WRAP_CONTENT，纯几何dump用于诊断且不调用正文/默认EditorInfo dump。未认定系统平台缺陷，旧UI对照仍通过。
+
+后续c51 WIP按ADR043试用透明全尺寸窗口/底部ReferenceInputContainer，报告实际键盘content/touch区域，保持非extract模式。实际像素scope9/9和宿主上方按钮通过，无障碍坐标仍FAIL，因此不认为整窗解决根因；多宿主/旋转等仍需验证。visualHeight仅改变绘图与文字范围，HitMap仍保留48dp且无重叠；纯模式名事件不会携带候选/正文。Emoji查询在会话结束清空，长删本地搜索不会因重绘取消重复，不涉及宿主IC。

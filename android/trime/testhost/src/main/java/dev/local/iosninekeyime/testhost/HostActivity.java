@@ -21,6 +21,9 @@ import java.io.ByteArrayInputStream;
 public final class HostActivity extends Activity {
     public EditText editor;
     public WebView web;
+    public int upperButtonClicks;
+    private View upperPlain;
+    public View upperPlainButton(){return upperPlain;}
     public int actionCount;
     public int lastAction;
     public boolean imeAnimationRunning;
@@ -50,7 +53,8 @@ public final class HostActivity extends Activity {
         LinearLayout controls = new LinearLayout(this);
         for(String kind:new String[]{"plain","password","no-learn","web"}){
             Button button=new Button(this);button.setText(kind);
-            button.setOnClickListener(v->{if(kind.equals("web"))showWeb();else selectCase(kind,"",0,true);});
+            if(kind.equals("plain"))upperPlain=button;
+            button.setOnClickListener(v->{if(kind.equals("plain"))upperButtonClicks++;if(kind.equals("web"))showWeb();else selectCase(kind,"",0,true);});
             controls.addView(button,new LinearLayout.LayoutParams(0,dp(52),1));
         }
         panel.addView(controls);

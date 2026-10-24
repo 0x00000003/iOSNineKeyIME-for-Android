@@ -56,3 +56,17 @@ A11y坐标实证：96d10b02的自有窗口/根实际报告[0,2134,960,3097]，�
 新增measure_reference_ui.py按引用PNG/原JPEG双SHA校验，输出纯键框/色块/白色像素bbox数字，不做OCR或总括视觉PASS。对首轮已有三态测得：R01/R02高度差+0.375来源px、全部18/19键框最大边差0.578px；R03高度+0.525px、31键最大边差1.406px。三态背景/主键/回车RGB采样差均0。字号/图标仍明显不同，R04/R05未采到，输入矩阵本身FAIL，报告明确MEASUREMENTS_ONLY而非验收；不能以几何接近声称1:1。
 
 WIP检查点复核：3ec3702c恢复初始窗口/caption配置仍lifecycle入口FAIL，去掉clearCache同FAIL，未声称已修复。当前81 state（同输入缓存XML）、50 app（本次执行）、app/testhost debug lint、42工具测试通过；一度误用tests根discover仅发现0项，随即改README的tests/tooling命令实际运行42项，不将0项算通过。check_project5727文件0错仅准备性检查。窗口/系统失败继续优先，不勾M5完成。
+
+44e149c为五态WIP本地提交，3d565e7先冻结独立像素触控协议。显示前预测量857a3ff7仍FAIL；透明整窗/底部键盘与自定义insets的c60498e1在原lifecycle及15秒诊断scope均FAIL，不是已修复。原3秒门禁未改。
+
+同c60498e1像素对照前6/9 PASS，宿主上方按钮也由物理触控收到；真实数字123、符号、64426选词和英文abc均由宿主内存oracle精确核对，无内部事件/IC桥。补得英文实拍，四态测量高度差<0.6来源px、矩形最大边差<1.5px，仍只属MEASUREMENTS_ONLY。Emoji搜索框因最小48dp触控规则同时撑高可见填充而FAIL，开始分离visualHeight/触控框并校准字体/原创线图，原48dp测试保留。首编译因跨模块Float?不可smart cast失败，改成本地val再重编译，不算运行通过。
+
+工具新增参考/捕获任一SHA篡改即拒绝、归一化裁边偏移及保留缺图/输入FAIL三用例，总45/45 PASS。窗口实验过程中两次Gradle invocation曾短暂重叠，均成功但不当性能数据，后续恢复串行且没有复制工具链。
+
+当前c51dad6b真实像素scope最终9/9 PASS，五态+按下6张实拍已采齐，原lifecycle同SHA依然FAIL。e3850fb5搜索框已修正，但Emoji继续FAIL的实际原因是测试要求每格“彩色像素”：固定默认第20格灰度字形有0个彩色像素却有904个可见亮色前景像素，属于测试假设错误。643f1d4先冻结v1.1修订，保留至少20个可见前景及所有OS/自有焦点/IME/几何守卫，不把产品Emoji换成彩色以迎合测试；旧FAIL不删。
+
+83 state全部绿（此前敏感数字返回新增红测已单独冻结），50 app/45工具、两套debug lint/构建通过；先前Color.luminance调用不兼容min21的lint错误已改为已知黑/白色判断，无baseline/suppress。两设备同c51的view-insets20/20+本地搜索会话清除、full原生及28结构故障、敏感字素5/5/metadata6/6（正文getter0、bounds11/cursor22）和controller PASS。此处结构回调为组件合成桥，不能代替系统全隐私；旧831的系统36/20成绩不继承。
+
+新增标准窗口状态可访问性事件只填静态模式名，防止遍历候选正文；官方自定义View事件说明见 https://developer.android.com/guide/topics/ui/accessibility/views/custom-views 。该通知未解决实际坐标问题，不当修复报告。当前透明整窗的上部宿主物理按钮通过，但多宿主/旋转/性能等仍未完整验收。
+
+测量仍只MEASUREMENTS_ONLY：R01/R02/R03/R04/R05总高差+0.375/+0.375/+0.525/+0.425/+0.306来源px；四种主键最大边差0.578/0.578/1.197/1.297px。R05无中性背景主键，不伪造主键矩形分数。常用列表固定且系统Emoji外形/顺序有明显平台差异；原生导航条和其余未知状态保留，不能宣称五张图完全一致。结果、实际三包SHA和图hash见calibration2相关JSON，个人/合成图片均ignored不入Git。

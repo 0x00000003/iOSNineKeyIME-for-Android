@@ -1,0 +1,192 @@
+{
+  "scope": "lifecycle",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "status": "FAIL",
+  "failure_stage": "hide-show-1",
+  "failure_step": "ime-frame-coherent",
+  "tap_attempts": 0,
+  "injected_taps": 0,
+  "measured_bottom_gap": -1,
+  "expected_bottom_gap": -1,
+  "ime_window_root_geometry": [
+    [
+      0,
+      2135,
+      960,
+      3055
+    ],
+    [
+      0,
+      2135,
+      960,
+      3055
+    ]
+  ],
+  "ime_windows": 1,
+  "own_ime_root": true,
+  "error_code": "E_SYSTEM_HOST_ASSERTION",
+  "window_layout_metadata": {
+    "content_top_inset": 0,
+    "visible_top_inset": 0,
+    "touchable_insets": 2,
+    "field_active": true,
+    "destroyed": false,
+    "is_input_view_shown": true,
+    "window_layout_height": 920,
+    "keyboard": {
+      "initial_measure_specs": [
+        [
+          960,
+          2142,
+          -2147483648,
+          920
+        ],
+        [
+          490,
+          920,
+          -2147483648,
+          739
+        ],
+        [
+          490,
+          920,
+          -2147483648,
+          793
+        ],
+        [
+          960,
+          920,
+          -2147483648,
+          920
+        ]
+      ],
+      "width": 960,
+      "height": 920,
+      "measured_width": 960,
+      "measured_height": 920,
+      "width_spec_size": 960,
+      "height_spec_size": 920,
+      "height_spec_mode": -2147483648,
+      "desired_height": 920,
+      "child_count": 23,
+      "root_height": 920,
+      "parent_height": 920,
+      "is_shown": true,
+      "visibility": 0,
+      "safe_left": 0,
+      "safe_right": 0,
+      "safe_bottom": 54,
+      "ancestors": [
+        {
+          "class": "NineKeyView",
+          "id": -1,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908318,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": 16909476,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908290,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": -1,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        },
+        {
+          "class": "DecorView",
+          "id": -1,
+          "height": 920,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            920
+          ]
+        }
+      ],
+      "screen_x": 0,
+      "screen_y": 1222,
+      "window_x": 0,
+      "window_y": 0
+    }
+  },
+  "debug_owned_bottom_crop_saved": true,
+  "debug_owned_bottom_crop_basis": "requested keyboard height; may include owned synthetic host; NOT reference acceptance",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [],
+  "pass": false,
+  "host_run_id": "c8395e5c843c449eafa5672b8a2fc572",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "ea3e5216ec71c91a705391706cc94e5474ff51ca2e0b731ba5eaafa109538dab",
+  "test_apk_sha256": "6aba1122c3ee438762ef152fd8cf2f3f49f151a163e828bb5a5bf79f13fee04c",
+  "ime_apk_sha256": "857a3ff7f2301a0740d2f6bc6047442e8681571ea9f1ae5ac7bddf326867c8ab",
+  "ime_variant": "debug",
+  "requested_scope": "lifecycle",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

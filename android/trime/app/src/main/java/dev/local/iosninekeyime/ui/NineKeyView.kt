@@ -14,6 +14,7 @@ import android.os.SystemClock
 import android.text.TextUtils
 import android.view.*
 import android.view.accessibility.AccessibilityNodeInfo
+import android.view.accessibility.AccessibilityEvent
 import android.widget.Button
 import dev.local.iosninekeyime.state.*
 import kotlin.math.abs
@@ -55,6 +56,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
     private var maximumHeight=Float.POSITIVE_INFINITY
     private var publishedHeight=-1
     private val measureHistory=org.json.JSONArray()
+    private var pendingPanelAccessibility=true
     private var lastWidthSpec=0
     private var lastHeightSpec=0
     private var panel:ReferencePanel?=null
@@ -70,6 +72,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
     init {importantForAccessibility=IMPORTANT_FOR_ACCESSIBILITY_YES;setWillNotDraw(false);clipChildren=true;clipToPadding=false}
 
     fun render(value:KeyboardState){
+        if(value.stamp.session!=state.stamp.session || value.layout!=state.layout || value.expanded!=state.expanded)pendingPanelAccessibility=true
         if(value.stamp.session>lastStamp.session){
             touches.startSession(value.stamp.session);stopRepeating();clearPressed();shift=false;symbolPage=false;numberMore=false
             emojiCategory=0;emojiPage=0;emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE
@@ -78,6 +81,11 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         if(value.layout!=Layout.EMOJI){emojiQuery="";emojiSearch=false}
         lastStamp=value.stamp;state=value;rebuild()
     }
+    override fun onInitializeAccessibilityNodeInfo(info:AccessibilityNodeInfo){
+        super.onInitializeAccessibilityNodeInfo(info)
+        info.extras.putBoolean("dev.local.iosninekeyime.keyboard_root",true)
+    }
+    fun clearSessionUi(){cancelTouches();emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE;rebuild()}
     fun cancelTouches(){touches.cancel();stopRepeating();clearPressed()}
     fun layoutMetadata():org.json.JSONObject {
         val ancestors=org.json.JSONArray()
@@ -127,18 +135,35 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         val box=key.box;geometry[box.id]=box
         val view=ReferenceKeyView(context).apply{
             tag=box.id;caption.text=key.label;caption.textSize=key.textSize;caption.includeFontPadding=false;caption.gravity=Gravity.CENTER
+            key.visualHeight?.let{visual->visualHeightPx=(visual*density).toInt();caption.layoutParams=android.widget.FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,checkNotNull(visualHeightPx))}
             caption.maxLines=1;caption.ellipsize=TextUtils.TruncateAt.END;setPadding(0,0,0,0);glyph=key.glyph
-            iconColor=if(box.id=="shift" && shift)Color.BLACK else keyForeground
-            caption.setTextColor(ColorStateList.valueOf(iconColor));background=keyBackground(key.tone,box.id=="shift" && shift,box.id=="emoji-search")
+            iconColor=when{box.id=="shift" && shift->Color.BLACK;box.id=="enter" && !state.composing->if(state.layout in setOf(Layout.CHINESE,Layout.NUMBER))0xffa0a0a0.toInt()else 0xff8a8a8a.toInt();else->keyForeground}
+            caption.setTextColor(ColorStateList.valueOf(iconColor))
+            val fill=keyBackground(key.tone,box.id=="shift" && shift,box.id=="emoji-search")
+            val visual=key.visualHeight
+            background=if(visual!=null)android.graphics.drawable.InsetDrawable(fill,0,0,0,((box.bottom-box.top-visual)*density).toInt().coerceAtLeast(0))else fill
+            if(box.id in setOf("globe","microphone")){panel?.takeIf{!it.compact}?.let{p->glyphOffsetY=(((1219-p.sourceTop)*p.scale-(box.top+box.bottom)/2)*density).coerceIn(-4.8f*density,4.8f*density)}}
+            if(box.id=="space" && state.layout==Layout.SYMBOLS){caption.text="拼";caption.textSize=20*(panel?.scale?:1f);caption.gravity=Gravity.RIGHT or Gravity.BOTTOM;caption.setTextColor(0xff777777.toInt());caption.setPadding(0,0,(4*density).toInt(),(2*density).toInt())}
+            if(box.id=="space" && state.layout==Layout.LATIN){caption.textScaleX=1.035f;caption.scaleY=0.885f}
+            if(box.id=="space" && state.layout in setOf(Layout.CHINESE,Layout.NUMBER))caption.scaleY=0.94f
+            if((box.id=="layout-primary" && state.layout==Layout.NUMBER) || box.id=="layout-return")caption.scaleY=0.925f
+            if(box.id=="more" && state.layout==Layout.NUMBER){caption.textScaleX=0.98f;caption.scaleY=0.947f}
+            if(box.id=="symbol-page" && key.label=="#+=")caption.scaleY=0.74f
+            if(box.id=="number-punctuation"){caption.letterSpacing=0.22f;caption.scaleY=0.89f}
+            if(box.id=="emoji-return")caption.scaleY=0.90f
+            if(box.id=="pinyin"){caption.textScaleX=0.97f;caption.scaleY=0.85f}
+            if(state.layout in setOf(Layout.CHINESE,Layout.NUMBER) && box.id=="layout-symbols")caption.scaleY=0.83f
+            if(state.layout==Layout.CHINESE && box.id=="text-0")caption.textScaleX=0.84f
+            if(state.layout==Layout.CHINESE && box.id=="more")caption.scaleY=0.88f
             if(state.layout==Layout.CHINESE && box.id=="more"){caption.text="^^";caption.paintFlags=caption.paintFlags or Paint.UNDERLINE_TEXT_FLAG}
-            if(state.layout==Layout.CHINESE && box.id.startsWith("digit-"))caption.letterSpacing=0.12f
+            if(state.layout==Layout.CHINESE && box.id.startsWith("digit-"))caption.letterSpacing=0.175f
             if(box.id=="emoji-search"){
                 caption.text=if(emojiQuery.isEmpty())"Search Emoji"else emojiQuery;glyph=KeyGlyph.SEARCH;leadingGlyph=true
-                caption.gravity=Gravity.CENTER_VERTICAL;setPadding((48*density).toInt(),0,(12*density).toInt(),0)
+                caption.gravity=Gravity.CENTER_VERTICAL;setPadding((56*(panel?.scale?:1f)*density).toInt(),0,(12*density).toInt(),0)
                 caption.setTextColor(if(dark)0xffa0a0a0.toInt()else 0xff555555.toInt())
             }
             if(box.id.startsWith("emoji-category-")){
-                val index=box.id.substringAfterLast('-').toInt();isSelected=index==emojiCategory;selectionDisc=isSelected
+                val index=box.id.substringAfterLast('-').toInt();isSelected=index==emojiCategory;selectionDisc=false
             }
             isEnabled=enabled;isFocusable=enabled;isClickable=action!=null && enabled
             contentDescription=when{
@@ -250,7 +275,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         KeyCommand.SEARCH_DONE->local{emojiSearch=false;emojiPage=0}
         null->Unit
     }}
-    private fun searchDelete(){local{emojiQuery=emojiQuery.dropLast(1);emojiPage=0}}
+    private fun searchDelete(){emojiQuery=emojiQuery.dropLast(1);emojiPage=0;rebuild()}
     private fun buildPopup(p:ReferencePanel){
         val top=p.bodyTop;val w=currentWidth;val full=w-12
         when(popup){
@@ -298,10 +323,22 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         if(measureHistory.length()<12)measureHistory.put(org.json.JSONArray(listOf(w,MeasureSpec.getSize(heightMeasureSpec),MeasureSpec.getMode(heightMeasureSpec),ceil(intrinsic*density).toInt())))
         setMeasuredDimension(w,resolveSize(ceil(intrinsic*density).toInt(),heightMeasureSpec))
     }
-    override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int){for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]?:continue;v.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())}}
+    override fun onAttachedToWindow(){super.onAttachedToWindow();pendingPanelAccessibility=true}
+    override fun dispatchPopulateAccessibilityEvent(event:AccessibilityEvent):Boolean {
+        if(event.eventType==AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED){
+            event.text.add(if(state.sensitive)"私密键盘"else when(state.layout){Layout.CHINESE->"中文九键";Layout.LATIN->"English";Layout.NUMBER->"数字键盘";Layout.SYMBOLS->"符号键盘";Layout.EMOJI->"表情键盘"})
+            return true // Panel events contain static mode labels, never candidates or host text.
+        }
+        return super.dispatchPopulateAccessibilityEvent(event)
+    }
+    override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int){
+        for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]?:continue;v.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())}
+        if(pendingPanelAccessibility && isAttachedToWindow){pendingPanelAccessibility=false;post{if(isAttachedToWindow)sendAccessibilityEvent(AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED)}}
+    }
     override fun onDraw(canvas:Canvas){
         val radius=40*(panel?.scale?:1f)*density;repaint.color=backgroundColor;repaint.style=Paint.Style.FILL
         val path=Path().apply{moveTo(0f,radius);quadTo(0f,0f,radius,0f);lineTo(width-radius,0f);quadTo(width.toFloat(),0f,width.toFloat(),radius);lineTo(width.toFloat(),height.toFloat());lineTo(0f,height.toFloat());close()};canvas.drawPath(path,repaint)
+        if(state.layout==Layout.EMOJI && !emojiSearch && popup==Popup.NONE){panel?.let{p->geometry["emoji-category-$emojiCategory"]?.let{box->repaint.color=0xff55555b.toInt();canvas.drawCircle(safeLeft+(box.left+box.right)/2*density,(box.top+24*p.scale)*density,21.5f*p.scale*density,repaint)}}}
         panel?.takeIf{it.headerHeight>0}?.let{repaint.color=if(dark)0xff171717.toInt()else 0xffbec1c7.toInt();canvas.drawRect(0f,it.barTop*density,width.toFloat(),it.barTop*density+1,repaint)}
         if(state.layout==Layout.LATIN && !state.sensitive){panel?.let{p->repaint.color=if(dark)0xff363638.toInt()else 0xffb8bcc5.toInt();for(i in 1..2){val x=(safeLeft+currentWidth*density*i/3);canvas.drawRect(x,(p.barTop+12)*density,x+1,(p.barTop+p.barHeight-12)*density,repaint)}}}
     }

@@ -17,6 +17,8 @@ internal class ReferenceKeyView(context:Context):FrameLayout(context) {
         set(value){field=value;updateCaption()}
     var leadingGlyph=false
         set(value){field=value;updateCaption()}
+    var visualHeightPx:Int?=null
+    var glyphOffsetY=0f
     var selectionDisc=false
     var iconColor=0xfff4f4f4.toInt()
     private val ink=Paint(Paint.ANTI_ALIAS_FLAG).apply {strokeWidth=1.6f;strokeCap=Paint.Cap.ROUND;strokeJoin=Paint.Join.ROUND}
@@ -29,21 +31,23 @@ internal class ReferenceKeyView(context:Context):FrameLayout(context) {
     override fun onDraw(canvas:Canvas) {
         val g=glyph
         if(g==null){super.onDraw(canvas);return}
-        val size=minOf(width,height)*if(g in setOf(KeyGlyph.GLOBE,KeyGlyph.MICROPHONE))0.72f else if(leadingGlyph)0.45f else 0.60f
+        val visualHeight=(visualHeightPx?:height).coerceAtMost(height).toFloat()
+        val fraction=when{g in setOf(KeyGlyph.GLOBE,KeyGlyph.MICROPHONE)->0.72f;leadingGlyph->0.45f;tag?.toString()?.startsWith("emoji-category-")==true->0.80f;g==KeyGlyph.EMOJI->if(width<visualHeight*1.05f)0.525f else 0.54f;g==KeyGlyph.ENTER && visualHeight>width*1.25f->0.40f;else->0.55f}
+        val size=minOf(width.toFloat(),visualHeight)*fraction
         val saved=canvas.save()
         try {
-            canvas.translate(if(leadingGlyph)12*resources.displayMetrics.density else (width-size)/2,(height-size)/2);canvas.scale(size/24,size/24)
+            canvas.translate(if(leadingGlyph)12*resources.displayMetrics.density else (width-size)/2,(visualHeight-size)/2+glyphOffsetY);canvas.scale(size/24,size/24)
             if(selectionDisc){ink.color=0xff55555b.toInt();ink.style=Paint.Style.FILL;canvas.drawCircle(12f,12f,18f,ink)}
-            ink.color=iconColor;ink.style=Paint.Style.STROKE;ink.strokeWidth=1.5f
+            ink.color=iconColor;ink.style=Paint.Style.STROKE;ink.strokeWidth=1.0f
             fun line(x:Float,y:Float,x2:Float,y2:Float)=canvas.drawLine(x,y,x2,y2,ink)
             fun circle(x:Float,y:Float,r:Float)=canvas.drawCircle(x,y,r,ink)
             fun path(vararg points:Float){val p=Path();p.moveTo(points[0],points[1]);for(i in 2 until points.size step 2)p.lineTo(points[i],points[i+1]);canvas.drawPath(p,ink)}
             fun dot(x:Float,y:Float,r:Float=1f){ink.style=Paint.Style.FILL;circle(x,y,r);ink.style=Paint.Style.STROKE}
             when(g){
-                KeyGlyph.DELETE->{path(9f,4f,22f,4f,22f,20f,9f,20f,2f,12f,9f,4f);line(12f,8f,18f,16f);line(18f,8f,12f,16f)}
-                KeyGlyph.SHIFT->{val p=Path();p.moveTo(12f,2f);p.lineTo(2f,12f);p.lineTo(7f,12f);p.lineTo(7f,21f);p.lineTo(17f,21f);p.lineTo(17f,12f);p.lineTo(22f,12f);p.close();ink.style=Paint.Style.FILL;canvas.drawPath(p,ink)}
-                KeyGlyph.EMOJI->{circle(12f,12f,10f);dot(8f,9f);dot(16f,9f);canvas.drawArc(RectF(6f,7f,18f,18f),20f,140f,false,ink)}
-                KeyGlyph.GLOBE->{circle(12f,12f,10f);canvas.drawOval(RectF(7f,2f,17f,22f),ink);line(2f,12f,22f,12f);canvas.drawArc(RectF(2f,5f,22f,12f),0f,180f,false,ink);canvas.drawArc(RectF(2f,12f,22f,19f),180f,180f,false,ink)}
+                KeyGlyph.DELETE->{path(9f,3.5f,22f,3.5f,22f,20.5f,9f,20.5f,2f,12f,9f,3.5f);line(12f,8f,18f,16f);line(18f,8f,12f,16f)}
+                KeyGlyph.SHIFT->{val p=Path();p.moveTo(12f,2.5f);p.lineTo(2f,12f);p.lineTo(7f,12f);p.lineTo(7f,20f);p.lineTo(17f,20f);p.lineTo(17f,12f);p.lineTo(22f,12f);p.close();ink.style=Paint.Style.FILL;canvas.drawPath(p,ink)}
+                KeyGlyph.EMOJI->{ink.style=Paint.Style.FILL;circle(12f,12f,10f);ink.color=if((iconColor and 0x00ffffff)==0)android.graphics.Color.WHITE else 0xff333333.toInt();dot(8f,9f);dot(16f,9f);ink.style=Paint.Style.STROKE;ink.strokeWidth=1.3f;canvas.drawArc(RectF(6f,7f,18f,18f),20f,140f,false,ink)}
+                KeyGlyph.GLOBE->{circle(12f,12f,10f);canvas.drawOval(RectF(7f,2f,17f,22f),ink);line(2f,12f,22f,12f);line(3.3f,7f,20.7f,7f);line(3.3f,17f,20.7f,17f)}
                 KeyGlyph.MICROPHONE->{canvas.drawRoundRect(RectF(9f,2f,15f,16f),3f,3f,ink);canvas.drawArc(RectF(5f,4f,19f,20f),0f,180f,false,ink);line(5f,11f,5f,13f);line(19f,11f,19f,13f);line(12f,20f,12f,23f);line(8f,23f,16f,23f)}
                 KeyGlyph.ENTER->when(contentDescription?.toString()){
                     "搜索"->{circle(10f,10f,7f);line(15f,15f,22f,22f)}

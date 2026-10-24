@@ -1,0 +1,128 @@
+{
+  "scope": "reference UI WIP host/device checkpoint; NOT complete M5/M6",
+  "source_base": "643f1d4 plus WIP source frozen by this record",
+  "ui_ime_state_source_digest": "6d4bf98ef4a91ce9b1530b52f17947a0fe0c78b2aecccc2fdcda4edcbfc98e8c",
+  "ime_apk_sha256": "c51dad6b58c7dbfb1dfcc4170163825881a06d5312e5e198fc381419eeb8e724",
+  "jvm": {
+    "state": {
+      "counts": {
+        "tests": 83,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "reports": [
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.CandidatePagingTest.xml",
+          "sha256": "79fd067e536af8b7443dfddebec83dc5dcedc338b1ee996f7d0db0d43182bcd4"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.HostCommitGateTest.xml",
+          "sha256": "66fde6837373dbf09666d7c7e41537cfc2b82ce5e2c6ca36d6ba89dc9fa99471"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.KeyboardControllerTest.xml",
+          "sha256": "bb656884655b6d10075904119ee65ad433d8885d449a6a0eda90d99756608957"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.KeyboardReducerTest.xml",
+          "sha256": "09cf855ddf77750957f753c7aa177ec25f75f03f4012e9c60ddf405c0d6d184c"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.ReferenceGeometryTest.xml",
+          "sha256": "9ace5b3b7b4b33c2580680ed424c8e45b2c2e2b17ec8c659fc1760da58b53564"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.TouchProtocolTest.xml",
+          "sha256": "94b1d33f53d8a9104118361f6bcf6eb5283d83f144dcf38f074bb53bce10b21e"
+        }
+      ]
+    },
+    "app": {
+      "counts": {
+        "tests": 50,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "reports": [
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.AtomicLocalFileCopyTest.xml",
+          "sha256": "9869543612bbe10ce05114a200e611f2efccbb4be7003a5d4911fccc891d37e7"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.BoundedCopyPoolTest.xml",
+          "sha256": "0e527060fb5b02c710f87d00682fbd9a41daa442023c7a406357d6eeca74db50"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.OrphanCleanerTest.xml",
+          "sha256": "41909fa8d87d31fbd87c5c685aefaa4ab540524f1c64451635ca7d19ce8e2590"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SafDisplayPathTest.xml",
+          "sha256": "e7bf7f36e62a80d0615e0d100a348309582ba4ad636132fe2f3ad28f827cfc91"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SafTreeWalkerTest.xml",
+          "sha256": "6d652715ed146e8193bd71bdba6047cbcedcbe7b082eea6f70c897dfe0dcf257"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SyncRelativePathTest.xml",
+          "sha256": "c957eb0a48ae443bb39b319f128b681fb93e8f9ba47bedcf21a2664030d4693f"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.theme.GeneralStyleTest.xml",
+          "sha256": "0580eb57da54d8908c1c416eb6bcfc8c74c26388228bb0dc5eddcf0688100fc0"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.util.WeakHashSetTest.xml",
+          "sha256": "c3e6e01392fa9a88c6659a6a401b73832a6ade81a58ef00acfa858f9a47297eb"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.engine.NativeEngineLeaseTest.xml",
+          "sha256": "f1a75029638c813240e5c65fc153d0148a1cabb71ce32732bf6ad243d2494fb8"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.privacy.EditorPolicyTest.xml",
+          "sha256": "eb9209691b8d393f67dcbb37bc37a69b29a74d27abf8cfa129a29ae7c79d0554"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.probe.ProbeFailureCodeTest.xml",
+          "sha256": "6ca0e4aed591b709bf884daa1d0c36aea3fe7f7c7f702363b39768a6467a4bec"
+        }
+      ]
+    }
+  },
+  "tooling_tests": {
+    "passed": 45,
+    "failed": 0
+  },
+  "lint_debug": {
+    "app": "PASS",
+    "testhost": "PASS"
+  },
+  "system_reference_pixels": {
+    "passed": 9,
+    "planned": 9,
+    "fresh_captures": 6,
+    "physical_host_upper_button_received": true,
+    "record": "../m2/reference-ui-calibration2-pixel-targets.json"
+  },
+  "original_accessibility_lifecycle": "FAIL; reference-ui-panel-events-pixel-lifecycle; not overridden",
+  "components_both_devices": [
+    "view-insets20 + local_search_session_clear",
+    "full native + 28 structural faults + private5/5 + metadata6/6; synthetic cursor bridge",
+    "controller"
+  ],
+  "static_apk_audit": "PASS; actual debug manifest/backup XML/assets/zero fonts only",
+  "measurement_runtime": {
+    "python": "3.9.6",
+    "pillow": "11.3.0"
+  },
+  "disk_kib": {
+    "cache": 20874272,
+    "artifacts": 7342276,
+    "app_build": 1445276
+  },
+  "disk_note": "one existing SDK/NDK/Gradle cache/AVD; unique tested APK blobs retained, no new toolchain clone"
+}

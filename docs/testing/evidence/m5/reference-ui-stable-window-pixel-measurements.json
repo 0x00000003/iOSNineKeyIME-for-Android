@@ -1,0 +1,3173 @@
+{
+  "status": "MEASUREMENTS_ONLY",
+  "scope": "width-normalized static keyboard geometry/color/white-pixel bounds; NOT visual acceptance, OCR, font equality or complete functional validation",
+  "input_scope_pass": false,
+  "input_evidence_sha256": "0f8157c9299fba1773974f25bb02f7424c28203435bda688cc334c13e7ed1f78",
+  "spec_sha256": "273e49162012e5c8a93b4e70feecfe41090329588f65f7401c820c0a45c1cca8",
+  "ime_apk_sha256": "c60498e12492b60b15c595ba7ebe23c66234cd8846975c9cc0651adb6f9680bc",
+  "limitations": [
+    "JPEG edges approximate +/-2 source pixels",
+    "white bounding boxes combine all white glyph/icon pixels in a static key",
+    "platform fonts/emoji/gesture area differ; no Apple assets packaged",
+    "only fresh nonce/SHA-bound captures present in input are compared"
+  ],
+  "references": [
+    {
+      "id": "R01",
+      "status": "MEASURED",
+      "source_sha256": "0d3c1c9efe184706850958e930435816bc5b78c2b9f96c7467abae272f01db50",
+      "capture_sha256": "ebb532457afa42eb885e706bdebd11c6af03f2a9c2af0294cebe6e0e944d5bf2",
+      "reference_height": 566,
+      "actual_height_normalized": 566.375,
+      "height_delta_px": 0.375,
+      "reference_rectangles": 18,
+      "matched_rectangles": 18,
+      "max_abs_edge_delta_px": 0.578,
+      "colors": {
+        "panel": {
+          "reference_rgb": [
+            34,
+            34,
+            34
+          ],
+          "actual_rgb": [
+            34,
+            34,
+            34
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "key": {
+          "reference_rgb": [
+            70,
+            70,
+            70
+          ],
+          "actual_rgb": [
+            70,
+            70,
+            70
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "enter": {
+          "reference_rgb": [
+            144,
+            144,
+            144
+          ],
+          "actual_rgb": [
+            144,
+            144,
+            144
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "keys": [
+        {
+          "static_key_id": "layout-primary",
+          "reference_rectangle": [
+            12,
+            140,
+            118,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            139.747,
+            117.584,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.253,
+            -0.416,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            34,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            41.862,
+            19.7
+          ]
+        },
+        {
+          "static_key_id": "text-0",
+          "reference_rectangle": [
+            127,
+            140,
+            233,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            139.747,
+            232.706,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.253,
+            -0.294,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            41,
+            21
+          ],
+          "actual_white_bbox_normalized": [
+            60.947,
+            25.856
+          ]
+        },
+        {
+          "static_key_id": "digit-2",
+          "reference_rectangle": [
+            243,
+            140,
+            348,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            139.747,
+            347.828,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.253,
+            -0.172,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            49,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            62.178,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "digit-3",
+          "reference_rectangle": [
+            358,
+            140,
+            464,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            139.747,
+            463.566,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.253,
+            -0.434,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            45,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            56.637,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "delete",
+          "reference_rectangle": [
+            473,
+            140,
+            580,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            139.747,
+            579.919,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.2,
+            -0.253,
+            -0.081,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            34,
+            29
+          ],
+          "actual_white_bbox_normalized": [
+            37.553,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "layout-symbols",
+          "reference_rectangle": [
+            12,
+            222,
+            118,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            221.625,
+            117.584,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.375,
+            -0.416,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            47,
+            19
+          ],
+          "actual_white_bbox_normalized": [
+            51.712,
+            25.241
+          ]
+        },
+        {
+          "static_key_id": "digit-4",
+          "reference_rectangle": [
+            127,
+            222,
+            233,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            221.625,
+            232.706,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.375,
+            -0.294,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            42,
+            17
+          ],
+          "actual_white_bbox_normalized": [
+            52.328,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "digit-5",
+          "reference_rectangle": [
+            243,
+            222,
+            348,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            221.625,
+            347.828,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.375,
+            -0.172,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            43,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            56.637,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "digit-6",
+          "reference_rectangle": [
+            358,
+            222,
+            464,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            221.625,
+            463.566,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.375,
+            -0.434,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            54,
+            17
+          ],
+          "actual_white_bbox_normalized": [
+            70.797,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "more",
+          "reference_rectangle": [
+            473,
+            222,
+            580,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            221.625,
+            579.919,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.2,
+            -0.375,
+            -0.081,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            24,
+            20
+          ],
+          "actual_white_bbox_normalized": [
+            23.394,
+            22.778
+          ]
+        },
+        {
+          "static_key_id": "enter",
+          "reference_rectangle": [
+            473,
+            303,
+            580,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            303.503,
+            579.919,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.2,
+            0.503,
+            -0.081,
+            -0.206
+          ],
+          "reference_white_bbox": null,
+          "actual_white_bbox_normalized": [
+            41.862,
+            52.328
+          ]
+        },
+        {
+          "static_key_id": "layout-latin",
+          "reference_rectangle": [
+            12,
+            304,
+            118,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            303.503,
+            117.584,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.497,
+            -0.416,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            43,
+            17
+          ],
+          "actual_white_bbox_normalized": [
+            54.791,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "digit-7",
+          "reference_rectangle": [
+            127,
+            304,
+            233,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            303.503,
+            232.706,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.497,
+            -0.294,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            65,
+            18
+          ],
+          "actual_white_bbox_normalized": [
+            81.878,
+            24.625
+          ]
+        },
+        {
+          "static_key_id": "digit-8",
+          "reference_rectangle": [
+            243,
+            304,
+            348,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            303.503,
+            347.828,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.497,
+            -0.172,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            48,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            62.178,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "digit-9",
+          "reference_rectangle": [
+            358,
+            304,
+            464,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            303.503,
+            463.566,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.497,
+            -0.434,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            69,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            88.65,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "emoji",
+          "reference_rectangle": [
+            12,
+            386,
+            118,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            385.997,
+            117.584,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.003,
+            -0.416,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            32,
+            32
+          ],
+          "actual_white_bbox_normalized": [
+            38.169,
+            37.553
+          ]
+        },
+        {
+          "static_key_id": "pinyin",
+          "reference_rectangle": [
+            127,
+            386,
+            233,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            385.997,
+            232.706,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.003,
+            -0.294,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            74,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            76.337,
+            25.856
+          ]
+        },
+        {
+          "static_key_id": "space",
+          "reference_rectangle": [
+            243,
+            386,
+            464,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            385.997,
+            463.566,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.003,
+            -0.434,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            47,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            56.022,
+            27.703
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R02",
+      "status": "MEASURED",
+      "source_sha256": "b2b1886e8dd194f5d403ad557c2313f0ee42b4b22d649cb3a05a5e8ca5cac0ce",
+      "capture_sha256": "b91b530d05100eac700e18def7adb7a15cba0ca9c66e2ae3034a9982159a4752",
+      "reference_height": 566,
+      "actual_height_normalized": 566.375,
+      "height_delta_px": 0.375,
+      "reference_rectangles": 19,
+      "matched_rectangles": 19,
+      "max_abs_edge_delta_px": 0.578,
+      "colors": {
+        "panel": {
+          "reference_rgb": [
+            34,
+            34,
+            34
+          ],
+          "actual_rgb": [
+            34,
+            34,
+            34
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "key": {
+          "reference_rgb": [
+            70,
+            70,
+            70
+          ],
+          "actual_rgb": [
+            70,
+            70,
+            70
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "enter": {
+          "reference_rgb": [
+            144,
+            144,
+            144
+          ],
+          "actual_rgb": [
+            144,
+            144,
+            144
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "keys": [
+        {
+          "static_key_id": "layout-primary",
+          "reference_rectangle": [
+            12,
+            140,
+            118,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            139.747,
+            117.584,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.253,
+            -0.416,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            45,
+            21
+          ],
+          "actual_white_bbox_normalized": [
+            52.944,
+            26.472
+          ]
+        },
+        {
+          "static_key_id": "text-0",
+          "reference_rectangle": [
+            127,
+            140,
+            233,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            139.747,
+            232.706,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.253,
+            -0.294,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            8,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            10.466,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-1",
+          "reference_rectangle": [
+            243,
+            140,
+            348,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            139.747,
+            347.828,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.253,
+            -0.172,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            13,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-2",
+          "reference_rectangle": [
+            358,
+            140,
+            464,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            139.747,
+            463.566,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.253,
+            -0.434,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            15,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "delete",
+          "reference_rectangle": [
+            473,
+            140,
+            580,
+            211
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            139.747,
+            579.919,
+            210.544
+          ],
+          "edge_delta_px": [
+            -0.2,
+            -0.253,
+            -0.081,
+            -0.456
+          ],
+          "reference_white_bbox": [
+            34,
+            29
+          ],
+          "actual_white_bbox_normalized": [
+            37.553,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "layout-symbols",
+          "reference_rectangle": [
+            12,
+            222,
+            118,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            221.625,
+            117.584,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.375,
+            -0.416,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            47,
+            19
+          ],
+          "actual_white_bbox_normalized": [
+            51.712,
+            25.241
+          ]
+        },
+        {
+          "static_key_id": "text-3",
+          "reference_rectangle": [
+            127,
+            222,
+            233,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            221.625,
+            232.706,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.375,
+            -0.294,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            17,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            19.084,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-4",
+          "reference_rectangle": [
+            243,
+            222,
+            348,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            221.625,
+            347.828,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.375,
+            -0.172,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            15,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-5",
+          "reference_rectangle": [
+            358,
+            222,
+            464,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            221.625,
+            463.566,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.375,
+            -0.434,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            16,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "more",
+          "reference_rectangle": [
+            473,
+            222,
+            580,
+            293
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            221.625,
+            579.919,
+            292.422
+          ],
+          "edge_delta_px": [
+            -0.2,
+            -0.375,
+            -0.081,
+            -0.578
+          ],
+          "reference_white_bbox": [
+            44,
+            21
+          ],
+          "actual_white_bbox_normalized": [
+            52.328,
+            25.856
+          ]
+        },
+        {
+          "static_key_id": "enter",
+          "reference_rectangle": [
+            473,
+            303,
+            580,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            472.8,
+            303.503,
+            579.919,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.2,
+            0.503,
+            -0.081,
+            -0.206
+          ],
+          "reference_white_bbox": null,
+          "actual_white_bbox_normalized": [
+            41.862,
+            52.328
+          ]
+        },
+        {
+          "static_key_id": "layout-latin",
+          "reference_rectangle": [
+            12,
+            304,
+            118,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            303.503,
+            117.584,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.497,
+            -0.416,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            43,
+            17
+          ],
+          "actual_white_bbox_normalized": [
+            54.791,
+            21.547
+          ]
+        },
+        {
+          "static_key_id": "text-6",
+          "reference_rectangle": [
+            127,
+            304,
+            233,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            303.503,
+            232.706,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.497,
+            -0.294,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            14,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-7",
+          "reference_rectangle": [
+            243,
+            304,
+            348,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            303.503,
+            347.828,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.497,
+            -0.172,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            15,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.703
+          ]
+        },
+        {
+          "static_key_id": "text-8",
+          "reference_rectangle": [
+            358,
+            304,
+            464,
+            375
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            303.503,
+            463.566,
+            374.916
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.497,
+            -0.434,
+            -0.084
+          ],
+          "reference_white_bbox": [
+            16,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.703
+          ]
+        },
+        {
+          "static_key_id": "emoji",
+          "reference_rectangle": [
+            12,
+            386,
+            118,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            11.697,
+            385.997,
+            117.584,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.303,
+            -0.003,
+            -0.416,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            32,
+            32
+          ],
+          "actual_white_bbox_normalized": [
+            38.169,
+            37.553
+          ]
+        },
+        {
+          "static_key_id": "number-punctuation",
+          "reference_rectangle": [
+            127,
+            386,
+            233,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            126.819,
+            385.997,
+            232.706,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.181,
+            -0.003,
+            -0.294,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            23,
+            14
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            20.931
+          ]
+        },
+        {
+          "static_key_id": "zero",
+          "reference_rectangle": [
+            243,
+            386,
+            348,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            242.556,
+            385.997,
+            347.828,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.444,
+            -0.003,
+            -0.172,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            15,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "space",
+          "reference_rectangle": [
+            358,
+            386,
+            464,
+            457
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            385.997,
+            463.566,
+            456.794
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.003,
+            -0.434,
+            -0.206
+          ],
+          "reference_white_bbox": [
+            48,
+            22
+          ],
+          "actual_white_bbox_normalized": [
+            52.328,
+            26.472
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R03",
+      "status": "MEASURED",
+      "source_sha256": "2bf282aa2bef9432f6bf739a47ddd5795e9fbaf207e47e8ad688da68bad04683",
+      "capture_sha256": "204e2b6d70259c70f85939b64ae789e1d789f5691d501ea1cb5b77cccaada85c",
+      "reference_height": 556,
+      "actual_height_normalized": 556.525,
+      "height_delta_px": 0.525,
+      "reference_rectangles": 31,
+      "matched_rectangles": 31,
+      "max_abs_edge_delta_px": 1.406,
+      "colors": {
+        "panel": {
+          "reference_rgb": [
+            34,
+            34,
+            34
+          ],
+          "actual_rgb": [
+            34,
+            34,
+            34
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "key": {
+          "reference_rgb": [
+            70,
+            70,
+            70
+          ],
+          "actual_rgb": [
+            70,
+            70,
+            70
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "enter": {
+          "reference_rgb": [
+            122,
+            122,
+            122
+          ],
+          "actual_rgb": [
+            122,
+            122,
+            122
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "keys": [
+        {
+          "static_key_id": "text-0",
+          "reference_rectangle": [
+            10,
+            137,
+            59,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            136.669,
+            58.484,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.331,
+            -0.516,
+            0.156
+          ],
+          "reference_white_bbox": [
+            8,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            10.466,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-1",
+          "reference_rectangle": [
+            68,
+            137,
+            117,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            67.719,
+            136.669,
+            116.969,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.281,
+            -0.331,
+            -0.031,
+            0.156
+          ],
+          "reference_white_bbox": [
+            15,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-2",
+          "reference_rectangle": [
+            126,
+            137,
+            175,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            125.587,
+            136.669,
+            174.838,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.413,
+            -0.331,
+            -0.162,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-3",
+          "reference_rectangle": [
+            184,
+            137,
+            233,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            183.456,
+            136.669,
+            232.706,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.544,
+            -0.331,
+            -0.294,
+            0.156
+          ],
+          "reference_white_bbox": [
+            17,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            19.084,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-4",
+          "reference_rectangle": [
+            242,
+            137,
+            291,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            241.941,
+            136.669,
+            290.575,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.059,
+            -0.331,
+            -0.425,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-5",
+          "reference_rectangle": [
+            300,
+            137,
+            349,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            299.809,
+            136.669,
+            348.444,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.191,
+            -0.331,
+            -0.556,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-6",
+          "reference_rectangle": [
+            358,
+            137,
+            407,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            136.669,
+            406.928,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.331,
+            -0.072,
+            0.156
+          ],
+          "reference_white_bbox": [
+            14,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-7",
+          "reference_rectangle": [
+            416,
+            137,
+            465,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            415.547,
+            136.669,
+            464.797,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.453,
+            -0.331,
+            -0.203,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.703
+          ]
+        },
+        {
+          "static_key_id": "text-8",
+          "reference_rectangle": [
+            474,
+            137,
+            523,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            473.416,
+            136.669,
+            522.666,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.584,
+            -0.331,
+            -0.334,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            17.238,
+            27.703
+          ]
+        },
+        {
+          "static_key_id": "text-9",
+          "reference_rectangle": [
+            532,
+            137,
+            581,
+            203
+          ],
+          "actual_rectangle_normalized": [
+            531.9,
+            136.669,
+            580.534,
+            203.156
+          ],
+          "edge_delta_px": [
+            -0.1,
+            -0.331,
+            -0.466,
+            0.156
+          ],
+          "reference_white_bbox": [
+            16,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-10",
+          "reference_rectangle": [
+            10,
+            219,
+            59,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            218.547,
+            58.484,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.453,
+            -0.516,
+            1.034
+          ],
+          "reference_white_bbox": [
+            11,
+            2
+          ],
+          "actual_white_bbox_normalized": [
+            9.234,
+            2.462
+          ]
+        },
+        {
+          "static_key_id": "text-11",
+          "reference_rectangle": [
+            68,
+            219,
+            117,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            67.719,
+            218.547,
+            116.969,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.281,
+            -0.453,
+            -0.031,
+            1.034
+          ],
+          "reference_white_bbox": [
+            10,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            13.544,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-12",
+          "reference_rectangle": [
+            126,
+            219,
+            175,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            125.587,
+            218.547,
+            174.838,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.413,
+            -0.453,
+            -0.162,
+            1.034
+          ],
+          "reference_white_bbox": [
+            3,
+            16
+          ],
+          "actual_white_bbox_normalized": [
+            3.694,
+            20.316
+          ]
+        },
+        {
+          "static_key_id": "text-13",
+          "reference_rectangle": [
+            184,
+            219,
+            233,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            183.456,
+            218.547,
+            232.706,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.544,
+            -0.453,
+            -0.294,
+            1.034
+          ],
+          "reference_white_bbox": [
+            4,
+            21
+          ],
+          "actual_white_bbox_normalized": [
+            5.541,
+            25.241
+          ]
+        },
+        {
+          "static_key_id": "text-14",
+          "reference_rectangle": [
+            242,
+            219,
+            291,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            241.941,
+            218.547,
+            290.575,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.059,
+            -0.453,
+            -0.425,
+            1.034
+          ],
+          "reference_white_bbox": [
+            6,
+            29
+          ],
+          "actual_white_bbox_normalized": [
+            9.85,
+            38.784
+          ]
+        },
+        {
+          "static_key_id": "text-15",
+          "reference_rectangle": [
+            300,
+            219,
+            349,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            299.809,
+            218.547,
+            348.444,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.191,
+            -0.453,
+            -0.556,
+            1.034
+          ],
+          "reference_white_bbox": [
+            7,
+            29
+          ],
+          "actual_white_bbox_normalized": [
+            9.85,
+            38.784
+          ]
+        },
+        {
+          "static_key_id": "text-16",
+          "reference_rectangle": [
+            358,
+            219,
+            407,
+            285
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            218.547,
+            406.928,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.453,
+            -0.072,
+            0.034
+          ],
+          "reference_white_bbox": [
+            15,
+            28
+          ],
+          "actual_white_bbox_normalized": [
+            16.622,
+            35.091
+          ]
+        },
+        {
+          "static_key_id": "text-17",
+          "reference_rectangle": [
+            416,
+            219,
+            465,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            415.547,
+            218.547,
+            464.797,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.453,
+            -0.453,
+            -0.203,
+            1.034
+          ],
+          "reference_white_bbox": [
+            25,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            29.55,
+            35.091
+          ]
+        },
+        {
+          "static_key_id": "text-18",
+          "reference_rectangle": [
+            474,
+            219,
+            523,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            473.416,
+            218.547,
+            522.666,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.584,
+            -0.453,
+            -0.334,
+            1.034
+          ],
+          "reference_white_bbox": [
+            9,
+            8
+          ],
+          "actual_white_bbox_normalized": [
+            11.081,
+            8.619
+          ]
+        },
+        {
+          "static_key_id": "text-19",
+          "reference_rectangle": [
+            532,
+            219,
+            581,
+            284
+          ],
+          "actual_rectangle_normalized": [
+            531.9,
+            218.547,
+            580.534,
+            285.034
+          ],
+          "edge_delta_px": [
+            -0.1,
+            -0.453,
+            -0.466,
+            1.034
+          ],
+          "reference_white_bbox": [
+            10,
+            8
+          ],
+          "actual_white_bbox_normalized": [
+            11.081,
+            8.619
+          ]
+        },
+        {
+          "static_key_id": "symbol-page",
+          "reference_rectangle": [
+            10,
+            301,
+            76,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            300.425,
+            75.722,
+            366.912
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.575,
+            -0.278,
+            0.912
+          ],
+          "reference_white_bbox": [
+            35,
+            11
+          ],
+          "actual_white_bbox_normalized": [
+            36.938,
+            16.006
+          ]
+        },
+        {
+          "static_key_id": "text-20",
+          "reference_rectangle": [
+            91,
+            301,
+            151,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            90.497,
+            300.425,
+            150.828,
+            366.912
+          ],
+          "edge_delta_px": [
+            -0.503,
+            -0.575,
+            -0.172,
+            0.912
+          ],
+          "reference_white_bbox": [
+            9,
+            9
+          ],
+          "actual_white_bbox_normalized": [
+            11.081,
+            11.697
+          ]
+        },
+        {
+          "static_key_id": "text-21",
+          "reference_rectangle": [
+            161,
+            301,
+            221,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            160.678,
+            300.425,
+            220.394,
+            366.912
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.575,
+            -0.606,
+            0.912
+          ],
+          "reference_white_bbox": [
+            4,
+            7
+          ],
+          "actual_white_bbox_normalized": [
+            6.772,
+            12.312
+          ]
+        },
+        {
+          "static_key_id": "text-22",
+          "reference_rectangle": [
+            231,
+            301,
+            291,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            230.859,
+            300.425,
+            290.575,
+            366.912
+          ],
+          "edge_delta_px": [
+            -0.141,
+            -0.575,
+            -0.425,
+            0.912
+          ],
+          "reference_white_bbox": [
+            8,
+            8
+          ],
+          "actual_white_bbox_normalized": [
+            9.85,
+            9.85
+          ]
+        },
+        {
+          "static_key_id": "text-23",
+          "reference_rectangle": [
+            300,
+            301,
+            361,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            300.425,
+            300.425,
+            360.756,
+            366.912
+          ],
+          "edge_delta_px": [
+            0.425,
+            -0.575,
+            -0.244,
+            0.912
+          ],
+          "reference_white_bbox": [
+            14,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            15.391,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-24",
+          "reference_rectangle": [
+            370,
+            301,
+            430,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            370.606,
+            300.425,
+            430.938,
+            366.912
+          ],
+          "edge_delta_px": [
+            0.606,
+            -0.575,
+            0.938,
+            0.912
+          ],
+          "reference_white_bbox": [
+            3,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            3.694,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "text-25",
+          "reference_rectangle": [
+            440,
+            301,
+            500,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            440.787,
+            300.425,
+            500.503,
+            366.912
+          ],
+          "edge_delta_px": [
+            0.787,
+            -0.575,
+            0.503,
+            0.912
+          ],
+          "reference_white_bbox": [
+            4,
+            4
+          ],
+          "actual_white_bbox_normalized": [
+            3.694,
+            3.694
+          ]
+        },
+        {
+          "static_key_id": "delete",
+          "reference_rectangle": [
+            515,
+            301,
+            581,
+            366
+          ],
+          "actual_rectangle_normalized": [
+            514.663,
+            300.425,
+            580.534,
+            366.912
+          ],
+          "edge_delta_px": [
+            -0.337,
+            -0.575,
+            -0.466,
+            0.912
+          ],
+          "reference_white_bbox": [
+            31,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            35.091,
+            28.319
+          ]
+        },
+        {
+          "static_key_id": "layout-return",
+          "reference_rectangle": [
+            10,
+            383,
+            146,
+            448
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            382.919,
+            145.903,
+            449.406
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.081,
+            -0.097,
+            1.406
+          ],
+          "reference_white_bbox": [
+            45,
+            21
+          ],
+          "actual_white_bbox_normalized": [
+            52.944,
+            26.472
+          ]
+        },
+        {
+          "static_key_id": "space",
+          "reference_rectangle": [
+            155,
+            383,
+            436,
+            448
+          ],
+          "actual_rectangle_normalized": [
+            154.522,
+            382.919,
+            435.863,
+            449.406
+          ],
+          "edge_delta_px": [
+            -0.478,
+            -0.081,
+            -0.137,
+            1.406
+          ],
+          "reference_white_bbox": null,
+          "actual_white_bbox_normalized": [
+            49.866,
+            25.856
+          ]
+        },
+        {
+          "static_key_id": "enter",
+          "reference_rectangle": [
+            445,
+            383,
+            582,
+            449
+          ],
+          "actual_rectangle_normalized": [
+            444.481,
+            382.919,
+            581.766,
+            449.406
+          ],
+          "edge_delta_px": [
+            -0.519,
+            -0.081,
+            -0.234,
+            0.406
+          ],
+          "reference_white_bbox": null,
+          "actual_white_bbox_normalized": [
+            25.241,
+            32.012
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R04",
+      "status": "MEASURED",
+      "source_sha256": "08cefffbed0cd8c4ebb1cb5d6344cc597f5a59f91a338c16df2e914e58b058a6",
+      "capture_sha256": "da33f8635c165f815072ea837b17a9e4fd852bda32b1ab322e5d6b76eddbda1e",
+      "reference_height": 497,
+      "actual_height_normalized": 497.425,
+      "height_delta_px": 0.425,
+      "reference_rectangles": 32,
+      "matched_rectangles": 32,
+      "max_abs_edge_delta_px": 1.428,
+      "colors": {
+        "panel": {
+          "reference_rgb": [
+            34,
+            34,
+            34
+          ],
+          "actual_rgb": [
+            34,
+            34,
+            34
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "key": {
+          "reference_rgb": [
+            70,
+            70,
+            70
+          ],
+          "actual_rgb": [
+            70,
+            70,
+            70
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        },
+        "enter": {
+          "reference_rgb": [
+            122,
+            122,
+            122
+          ],
+          "actual_rgb": [
+            122,
+            122,
+            122
+          ],
+          "delta": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "keys": [
+        {
+          "static_key_id": "text-0",
+          "reference_rectangle": [
+            10,
+            78,
+            59,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            77.569,
+            58.484,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.431,
+            -0.516,
+            0.056
+          ],
+          "reference_white_bbox": [
+            19,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            23.394,
+            35.091
+          ]
+        },
+        {
+          "static_key_id": "text-1",
+          "reference_rectangle": [
+            68,
+            78,
+            117,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            67.719,
+            77.569,
+            116.969,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.281,
+            -0.431,
+            -0.031,
+            0.056
+          ],
+          "reference_white_bbox": [
+            27,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            34.475,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-2",
+          "reference_rectangle": [
+            126,
+            78,
+            175,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            125.587,
+            77.569,
+            174.838,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.413,
+            -0.431,
+            -0.162,
+            0.056
+          ],
+          "reference_white_bbox": [
+            13,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            18.469,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-3",
+          "reference_rectangle": [
+            184,
+            78,
+            233,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            183.456,
+            77.569,
+            232.706,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.544,
+            -0.431,
+            -0.294,
+            0.056
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            20.931,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-4",
+          "reference_rectangle": [
+            242,
+            78,
+            291,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            241.941,
+            77.569,
+            290.575,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.059,
+            -0.431,
+            -0.425,
+            0.056
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            22.778,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-5",
+          "reference_rectangle": [
+            300,
+            78,
+            349,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            299.809,
+            77.569,
+            348.444,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.191,
+            -0.431,
+            -0.556,
+            0.056
+          ],
+          "reference_white_bbox": [
+            17,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            24.009,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-6",
+          "reference_rectangle": [
+            358,
+            78,
+            407,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            357.678,
+            77.569,
+            406.928,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.322,
+            -0.431,
+            -0.072,
+            0.056
+          ],
+          "reference_white_bbox": [
+            18,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            20.931,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-7",
+          "reference_rectangle": [
+            416,
+            78,
+            465,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            415.547,
+            77.569,
+            464.797,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.453,
+            -0.431,
+            -0.203,
+            0.056
+          ],
+          "reference_white_bbox": [
+            3,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            3.694,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-8",
+          "reference_rectangle": [
+            474,
+            78,
+            523,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            473.416,
+            77.569,
+            522.666,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.584,
+            -0.431,
+            -0.334,
+            0.056
+          ],
+          "reference_white_bbox": [
+            19,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            24.009,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-9",
+          "reference_rectangle": [
+            532,
+            78,
+            581,
+            144
+          ],
+          "actual_rectangle_normalized": [
+            531.9,
+            77.569,
+            580.534,
+            144.056
+          ],
+          "edge_delta_px": [
+            -0.1,
+            -0.431,
+            -0.466,
+            0.056
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            20.931,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-10",
+          "reference_rectangle": [
+            39,
+            160,
+            88,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            38.784,
+            159.447,
+            87.419,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.216,
+            -0.553,
+            -0.581,
+            0.934
+          ],
+          "reference_white_bbox": [
+            18,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            25.856,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-11",
+          "reference_rectangle": [
+            97,
+            160,
+            146,
+            226
+          ],
+          "actual_rectangle_normalized": [
+            96.653,
+            159.447,
+            145.903,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.347,
+            -0.553,
+            -0.097,
+            -0.066
+          ],
+          "reference_white_bbox": [
+            17,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            21.547,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-12",
+          "reference_rectangle": [
+            155,
+            160,
+            204,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            154.522,
+            159.447,
+            203.772,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.478,
+            -0.553,
+            -0.228,
+            0.934
+          ],
+          "reference_white_bbox": [
+            17,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            20.931,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-13",
+          "reference_rectangle": [
+            213,
+            160,
+            262,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            212.391,
+            159.447,
+            261.641,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.609,
+            -0.553,
+            -0.359,
+            0.934
+          ],
+          "reference_white_bbox": [
+            14,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-14",
+          "reference_rectangle": [
+            271,
+            160,
+            320,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            270.875,
+            159.447,
+            319.509,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.125,
+            -0.553,
+            -0.491,
+            0.934
+          ],
+          "reference_white_bbox": [
+            18,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            22.778,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-15",
+          "reference_rectangle": [
+            329,
+            160,
+            378,
+            226
+          ],
+          "actual_rectangle_normalized": [
+            328.744,
+            159.447,
+            377.994,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.256,
+            -0.553,
+            -0.006,
+            -0.066
+          ],
+          "reference_white_bbox": [
+            18,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            22.778,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-16",
+          "reference_rectangle": [
+            387,
+            160,
+            436,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            386.613,
+            159.447,
+            435.863,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.387,
+            -0.553,
+            -0.137,
+            0.934
+          ],
+          "reference_white_bbox": [
+            13,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            18.469,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-17",
+          "reference_rectangle": [
+            445,
+            160,
+            494,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            444.481,
+            159.447,
+            493.731,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.519,
+            -0.553,
+            -0.269,
+            0.934
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            22.162,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-18",
+          "reference_rectangle": [
+            503,
+            160,
+            552,
+            225
+          ],
+          "actual_rectangle_normalized": [
+            502.966,
+            159.447,
+            551.6,
+            225.934
+          ],
+          "edge_delta_px": [
+            -0.034,
+            -0.553,
+            -0.4,
+            0.934
+          ],
+          "reference_white_bbox": [
+            13,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            17.853,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "shift",
+          "reference_rectangle": [
+            10,
+            242,
+            76,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            241.941,
+            75.722,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.059,
+            -0.278,
+            1.428
+          ],
+          "reference_white_bbox": [
+            30,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            31.397,
+            30.781
+          ]
+        },
+        {
+          "static_key_id": "text-19",
+          "reference_rectangle": [
+            97,
+            242,
+            146,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            96.653,
+            241.941,
+            145.903,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.347,
+            -0.059,
+            -0.097,
+            1.428
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            21.547,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-20",
+          "reference_rectangle": [
+            155,
+            242,
+            204,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            154.522,
+            241.941,
+            203.772,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.478,
+            -0.059,
+            -0.228,
+            1.428
+          ],
+          "reference_white_bbox": [
+            18,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            23.394,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-21",
+          "reference_rectangle": [
+            213,
+            242,
+            262,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            212.391,
+            241.941,
+            261.641,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.609,
+            -0.059,
+            -0.359,
+            1.428
+          ],
+          "reference_white_bbox": [
+            18,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            22.778,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "text-22",
+          "reference_rectangle": [
+            271,
+            242,
+            320,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            270.875,
+            241.941,
+            319.509,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.125,
+            -0.059,
+            -0.491,
+            1.428
+          ],
+          "reference_white_bbox": [
+            18,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            25.241,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-23",
+          "reference_rectangle": [
+            329,
+            242,
+            378,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            328.744,
+            241.941,
+            377.994,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.256,
+            -0.059,
+            -0.006,
+            1.428
+          ],
+          "reference_white_bbox": [
+            16,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            19.7,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-24",
+          "reference_rectangle": [
+            387,
+            242,
+            436,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            386.613,
+            241.941,
+            435.863,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.387,
+            -0.059,
+            -0.137,
+            1.428
+          ],
+          "reference_white_bbox": [
+            17,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            22.778,
+            29.55
+          ]
+        },
+        {
+          "static_key_id": "text-25",
+          "reference_rectangle": [
+            445,
+            242,
+            494,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            444.481,
+            241.941,
+            493.731,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.519,
+            -0.059,
+            -0.269,
+            1.428
+          ],
+          "reference_white_bbox": [
+            21,
+            23
+          ],
+          "actual_white_bbox_normalized": [
+            29.55,
+            30.166
+          ]
+        },
+        {
+          "static_key_id": "delete",
+          "reference_rectangle": [
+            515,
+            242,
+            581,
+            307
+          ],
+          "actual_rectangle_normalized": [
+            514.663,
+            241.941,
+            580.534,
+            308.428
+          ],
+          "edge_delta_px": [
+            -0.337,
+            -0.059,
+            -0.466,
+            1.428
+          ],
+          "reference_white_bbox": [
+            31,
+            26
+          ],
+          "actual_white_bbox_normalized": [
+            35.091,
+            28.319
+          ]
+        },
+        {
+          "static_key_id": "layout-symbols",
+          "reference_rectangle": [
+            10,
+            324,
+            73,
+            389
+          ],
+          "actual_rectangle_normalized": [
+            9.85,
+            323.819,
+            72.644,
+            390.306
+          ],
+          "edge_delta_px": [
+            -0.15,
+            -0.181,
+            -0.356,
+            1.306
+          ],
+          "reference_white_bbox": [
+            40,
+            19
+          ],
+          "actual_white_bbox_normalized": [
+            43.709,
+            20.931
+          ]
+        },
+        {
+          "static_key_id": "emoji",
+          "reference_rectangle": [
+            82,
+            324,
+            146,
+            389
+          ],
+          "actual_rectangle_normalized": [
+            81.878,
+            323.819,
+            145.903,
+            390.306
+          ],
+          "edge_delta_px": [
+            -0.122,
+            -0.181,
+            -0.097,
+            1.306
+          ],
+          "reference_white_bbox": [
+            28,
+            28
+          ],
+          "actual_white_bbox_normalized": [
+            34.475,
+            34.475
+          ]
+        },
+        {
+          "static_key_id": "space",
+          "reference_rectangle": [
+            155,
+            324,
+            436,
+            389
+          ],
+          "actual_rectangle_normalized": [
+            154.522,
+            323.819,
+            435.863,
+            390.306
+          ],
+          "edge_delta_px": [
+            -0.478,
+            -0.181,
+            -0.137,
+            1.306
+          ],
+          "reference_white_bbox": [
+            144,
+            24
+          ],
+          "actual_white_bbox_normalized": [
+            139.131,
+            27.087
+          ]
+        },
+        {
+          "static_key_id": "enter",
+          "reference_rectangle": [
+            445,
+            324,
+            582,
+            390
+          ],
+          "actual_rectangle_normalized": [
+            444.481,
+            323.819,
+            581.766,
+            390.306
+          ],
+          "edge_delta_px": [
+            -0.519,
+            -0.181,
+            -0.234,
+            0.306
+          ],
+          "reference_white_bbox": null,
+          "actual_white_bbox_normalized": [
+            25.241,
+            32.012
+          ]
+        }
+      ]
+    },
+    {
+      "id": "R05",
+      "status": "NOT_CAPTURED"
+    }
+  ]
+}

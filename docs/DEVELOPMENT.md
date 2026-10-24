@@ -66,3 +66,5 @@ prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/
 `:testhost`复用现有工具链，独立UID、debug-only，无native/Rime依赖。先构建`./scripts/gradle.sh :testhost:assembleDebug :testhost:assembleDebugAndroidTest :testhost:lintDebug`，再运行`python3 scripts/run_system_host.py --target pixel --scope core --record 新的英文小写记录名`；scope还含readiness/private-delete/privacy-queue，精确定义见SYSTEM_HOST与SYSTEM_PRIVATE_QUEUE_PROTOCOL。runner核实际三APK/hash/nonce，只在明确用户授权下选已经启用的本项目测试条目；未启用标BLOCKED，不调用ime enable。
 
 主应用debug组件测试与系统IME同UID时可能争用native租约，组件运行前仅选已启用的本项目优化版，随后系统runner可切回debug；不改第三方输入法。`-PlocalReleaseProbe=true`把testBuildType切到release，所以此配置没有assembleDebugAndroidTest任务；debug及默认unsigned构建和显式本地签名release需分开命令运行，无需复制工具链或新隔离目录。本轮误把两类任务合并的配置失败已纠正，不算Android测试失败或成功。
+
+主机参考测量使用Pillow11.3.0，非APK/运行时依赖；`requirements-visual.lock`从该固定版本的官方PyPI元数据记录wheel SHA，禁止sdist动态构建。当前复用本机已有同版本库，未声称已核验其原始安装wheel。独立重建测量环境时可只在项目内执行 `python3 -m pip install --require-hashes --no-deps --target .cache/python-visual -r requirements-visual.lock`，再以 `PYTHONPATH="$PWD/.cache/python-visual" python3 -m unittest discover -s tests/tooling -v` 验证；不全局安装或复制Android工具链。测量输出不是Android/视觉验收PASS，输入图片始终私有只读。

@@ -25,10 +25,13 @@ def median_patch(image,x,y):
 
 def measure(evidence):
     record=json.loads(evidence.read_text());spec_path=ROOT/'spec/reference/ios-dark-v1.json';spec=json.loads(spec_path.read_text())
+    if any(not re.fullmatch(r'r0[1-5]-(chinese|number|symbols|latin|emoji|pressed)',c.get('id','')) for c in record.get('reference_captures',[])):raise ValueError('E_CAPTURE_ID')
     captures={c['id'].split('-')[0].upper():c for c in record.get('reference_captures',[]) if not c['id'].endswith('-pressed')}
     rows=[]
     for reference in spec['reference_rows']:
-        ident=reference['id'];capture=captures.get(ident)
+        ident=reference['id']
+        if not re.fullmatch(r'R0[1-5]',ident):raise ValueError('E_REFERENCE_ID')
+        capture=captures.get(ident)
         if capture is None:rows.append(dict(id=ident,status='NOT_CAPTURED'));continue
         source=ROOT/'.private/references/ios-20261023'/(ident+'-original.jpg')
         actual=ROOT/'artifacts/testhost'/(evidence.stem+'-'+capture['id']+'.png')

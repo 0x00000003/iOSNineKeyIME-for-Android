@@ -61,7 +61,7 @@ public final class HostInstrumentation extends Instrumentation {
         step="ime-animation-end";check(await(()->read(()->!activity.imeAnimationRunning),3000));
         // Accessibility exposes new keys before the parent window resize/translation commits.
         // Require the actual bottom-gravity window to reach the display edge, with safe keys.
-        step="ime-frame-coherent";check(await(this::frameCoherent,3000));
+        step="ime-frame-coherent";check(await(this::frameCoherent,scope.equals("lifecycle-diagnostic")?15000:3000));
     }
     private Rect key(String label,boolean bottom){
         Rect found=null;imeWindows=0;ownImeRoot=false;
@@ -96,6 +96,21 @@ public final class HostInstrumentation extends Instrumentation {
         }
         return found;
     }
+    private Rect keyboardRegion(AccessibilityWindowInfo window){
+        AccessibilityNodeInfo root=window.getRoot();if(root==null)return null;
+        ArrayDeque<AccessibilityNodeInfo> queue=new ArrayDeque<>();queue.add(root);Rect result=null;
+        while(!queue.isEmpty()){
+            AccessibilityNodeInfo node=queue.removeFirst();
+            try{
+                if(IME.equals(String.valueOf(node.getPackageName())) && node.getExtras().getBoolean("dev.local.iosninekeyime.keyboard_root",false)){
+                    if(result!=null)throw new IllegalStateException("E_DUPLICATE_KEYBOARD_ROOT");
+                    result=new Rect();node.getBoundsInScreen(result);
+                }
+                for(int i=0;i<node.getChildCount();i++){AccessibilityNodeInfo child=node.getChild(i);if(child!=null)queue.add(child);}
+            }finally{node.recycle();}
+        }
+        return result;
+    }
     private boolean frameCoherent(){
         Rect last=key("切换输入法",true);if(last==null)return false;
         final int[] bottom={0},displayBottom={0};main(()->{bottom[0]=activity.getWindow().getDecorView().getRootWindowInsets().getInsets(WindowInsets.Type.systemBars()).bottom;displayBottom[0]=activity.getSystemService(WindowManager.class).getCurrentWindowMetrics().getBounds().bottom;});
@@ -113,7 +128,8 @@ public final class HostInstrumentation extends Instrumentation {
             }
             // IME navigation controls may require more space than the host gesture pill.
             // The host inset is a minimum safety bound, never an equality assumption.
-            boolean safe=frame.bottom==displayBottom[0] && frame.contains(last) && measuredGap>=expectedGap-2;
+            Rect keyboard=keyboardRegion(window);final int[] imeHeight={0};main(()->imeHeight[0]=activity.getWindow().getDecorView().getRootWindowInsets().getInsets(WindowInsets.Type.ime()).bottom);
+            boolean safe=keyboard!=null && frame.bottom==displayBottom[0] && frame.contains(last) && keyboard.contains(last) && keyboard.bottom==displayBottom[0] && Math.abs(imeHeight[0]-keyboard.height())<=2 && measuredGap>=expectedGap-2;
             if(!safe)return false;
             // This scope keeps orientation/navigation mode fixed. Learn its actual IME margin
             // after entry animation, then require it to remain unchanged across layout heights.
@@ -144,7 +160,7 @@ public final class HostInstrumentation extends Instrumentation {
             if(window.getType()!=AccessibilityWindowInfo.TYPE_INPUT_METHOD)continue;
             AccessibilityNodeInfo root=window.getRoot();if(root==null)continue;
             if(!IME.equals(String.valueOf(root.getPackageName()))){root.recycle();continue;}
-            Rect region=new Rect();window.getBoundsInScreen(region);Bitmap screen=automation.takeScreenshot();check(screen!=null);
+            Rect region=keyboardRegion(window);check(region!=null && !region.isEmpty());Bitmap screen=automation.takeScreenshot();check(screen!=null);
             region.intersect(0,0,screen.getWidth(),screen.getHeight());check(!region.isEmpty());
             Bitmap crop=Bitmap.createBitmap(screen,region.left,region.top,region.width(),region.height());
             JSONObject keys=new JSONObject();ArrayDeque<AccessibilityNodeInfo> queue=new ArrayDeque<>();queue.add(root);
@@ -182,7 +198,7 @@ public final class HostInstrumentation extends Instrumentation {
             check(IME.equals("dev.local.iosninekeyime.probe.debug") || IME.equals("dev.local.iosninekeyime.probe"));
             String component=IME+"/dev.local.iosninekeyime.ime.NineKeyInputMethodService";
             boolean selected=component.equals(Settings.Secure.getString(getTargetContext().getContentResolver(),Settings.Secure.DEFAULT_INPUT_METHOD));
-            output.put("scope",scope).put("system_ime_selected",selected).put("cursor_metadata_bridge",false);
+            output.put("diagnostic_relaxed_frame_deadline",scope.equals("lifecycle-diagnostic")).put("scope",scope).put("system_ime_selected",selected).put("cursor_metadata_bridge",false);
             if(!scope.equals("readiness") && !selected){output.put("status","BLOCKED").put("reason","Own debug IME must be enabled and selected before system tests");return;}
             Intent intent=new Intent(getTargetContext(),HostActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity=(HostActivity)startActivitySync(intent);
@@ -211,7 +227,12 @@ public final class HostInstrumentation extends Instrumentation {
                 output.put("system_ime_path_exercised",false);
             }else{
                 automation=getUiAutomation();AccessibilityServiceInfo service=automation.getServiceInfo();service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS;automation.setServiceInfo(service);
-                if(scope.equals("core")){
+                if(scope.equals("reference-pixels")){
+                    stage="pixel-reference";JSONObject pixel=new PixelReferenceProbe(this,automation,activity,IME,nonce).run();
+                    output.put("pixel_probe",pixel);JSONArray pixelCases=pixel.getJSONArray("cases"),pixelCaptures=pixel.getJSONArray("reference_captures");
+                    for(int i=0;i<pixelCases.length();i++)cases.put(pixelCases.getJSONObject(i));
+                    for(int i=0;i<pixelCaptures.length();i++)captures.put(pixelCaptures.getJSONObject(i));
+                }else if(scope.equals("core")){
                     stage="native-nine-key";choose("plain","",0);word();tap("你好");
                     boolean committed=await(()->read(()->activity.editor.getText().toString().equals("你好")),3000);
                     tap("，");boolean punctuation=await(()->read(()->activity.editor.getText().toString().equals("你好，")),3000);
@@ -239,7 +260,7 @@ public final class HostInstrumentation extends Instrumentation {
                         tap("退格");boolean exact=await(()->read(()->activity.editor.getText().toString().equals("AB") && activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);
                         cases.put(new JSONObject().put("id",stage).put("exact_synthetic_remaining",exact).put("pass",exact));
                     }
-                }else if(scope.equals("lifecycle")){
+                }else if(scope.equals("lifecycle") || scope.equals("lifecycle-diagnostic")){
                     for(int i=1;i<=5;i++){
                         stage="hide-show-"+i;choose("send","",0);
                         main(()->activity.getSystemService(InputMethodManager.class).hideSoftInputFromWindow(activity.editor.getWindowToken(),0));
@@ -311,8 +332,9 @@ public final class HostInstrumentation extends Instrumentation {
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:scope.equals("reference-ui")?9:scope.equals("lifecycle")?5:scope.equals("privacy-queue")?20:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:scope.startsWith("lifecycle")?5:scope.equals("privacy-queue")?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
+            if(scope.equals("reference-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
             output.put("status",passed?"PASS":"FAIL");
         }catch(Throwable failure){try{output.put("status","FAIL").put("failure_stage",stage).put("failure_step",step).put("tap_attempts",taps).put("injected_taps",injected).put("measured_bottom_gap",measuredGap).put("expected_bottom_gap",expectedGap).put("ime_window_root_geometry",ownFrameGeometry).put("ime_windows",imeWindows).put("own_ime_root",ownImeRoot).put("error_code","E_SYSTEM_HOST_ASSERTION");}catch(JSONException ignored){}}
         finally{
@@ -351,7 +373,7 @@ public final class HostInstrumentation extends Instrumentation {
                         AccessibilityNodeInfo node=window.getRoot();
                         if(node==null)continue;
                         boolean own=IME.equals(String.valueOf(node.getPackageName()));node.recycle();if(!own)continue;
-                        Rect region=new Rect();window.getBoundsInScreen(region);
+                        Rect region=keyboardRegion(window);if(region==null)continue;
                         Bitmap screen=automation.takeScreenshot();
                         if(screen!=null){
                             region.intersect(0,0,screen.getWidth(),screen.getHeight());

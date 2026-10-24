@@ -82,3 +82,9 @@ HostAdapter确认caret到薄服务的内存回调，在后续提交前同步预�
 尝试公开captionBar隐藏以去掉Android额外按钮，仍保留navigation/gesture inset与本项目globe长按菜单；首新UIcore和inset通过，但重显时可访问性7px与实际view920px不一致。窗口intrinsic高度显式绑定是诊断阶段候选，未证实必要；caption hide时机继续A/B验证，未签收。新布局无需新增依赖，固定锁不变。测试声明布局dump版本后可读纯本键盘几何，默认dump不输出EditorInfo/正文，禁止将该机制扩展成用户上下文探针。
 
 ADR042追加：固定高度、背景不透明、caption时机、clearCache等A/B未解决坐标问题，不能作为已接受修复；恢复原始窗口策略继续WIP。参考环境为iPhone13/iOS27.2，显示设置仍未知。measure_reference_ui只输出来源/捕获双SHA约束的几何和色块/白色bbox数字，输入FAIL或缺图仍明确保留，不产生自动视觉PASS。
+
+## ADR043 — 稳定窗口/触控区域与独立像素对照（诊断WIP）
+
+尝试透明全尺寸IME窗口、底部ReferenceInputContainer，onComputeInsets只报告实际键盘上沿与触控region；上部内容保持可见且应由宿主接收触控，未开启extract fullscreen。无障碍坐标仍FAIL，该策略未认定修复；独立像素对照6/9与宿主上部物理按钮通过，仅是有限范围证据。原lifecycle/reference-ui门禁不改，15秒lifecycle-diagnostic仅诊断，不签收性能。像素scope仅依屏幕/OS inset/参考色块定位，无内部事件或IC/候选桥，不替代TalkBack。
+
+绘图与触控框分离：参考65/60来源px键面在Pixel下可能小于48dp，保留触控48dp，visualHeight单独控制填充/文字/原创图形。不得删测试或缩小触控范围换视觉PASS。字体只调整系统字形大小/字距/轻微缩放，不打包Apple字体；其他显示设置仍需实测。

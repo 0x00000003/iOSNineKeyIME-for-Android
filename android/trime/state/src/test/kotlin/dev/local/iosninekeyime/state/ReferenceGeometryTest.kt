@@ -42,4 +42,28 @@ class ReferenceGeometryTest:StringSpec({
         s.layout shouldBe Layout.EMOJI
         s.emojiReturnLayout shouldBe Layout.CHINESE
     }
+    "Pixel paint bounds retain the reference height inside minimum-size touch targets" {
+        val width=426.6667f
+        for(layout in listOf(Layout.LATIN,Layout.SYMBOLS)){
+            val p=ReferenceGeometry.build(KeyboardState(Stamp(1,0),layout,ready=true),width,24f,1000f)
+            val key=p.keys.first{it.box.id=="text-0"}
+            (key.box.bottom-key.box.top>=47.99f) shouldBe true
+            (kotlin.math.abs(checkNotNull(key.visualHeight)-65*width/591)<0.001f) shouldBe true
+            (checkNotNull(key.visualHeight)<key.box.bottom-key.box.top) shouldBe true
+        }
+        val emoji=ReferenceGeometry.build(KeyboardState(Stamp(1,0),Layout.EMOJI,ready=true),width,24f,1000f,emojiItems=List(28){"😀"})
+        val search=emoji.keys.first{it.box.id=="emoji-search"}
+        (search.box.bottom-search.box.top>=47.99f) shouldBe true
+        (kotlin.math.abs(checkNotNull(search.visualHeight)-60*width/591)<0.001f) shouldBe true
+        HitMap(emoji.keys.map{it.box}).keys.size shouldBe emoji.keys.size
+    }
+    "sensitive numeric auxiliary pages return to direct Latin without requesting Chinese" {
+        var s=KeyboardReducer.reduce(KeyboardState(),Event.Start(1,true,Layout.NUMBER,EditorAction.DONE)).state
+        s=KeyboardReducer.reduce(s,Event.ChangeLayout(Layout.SYMBOLS)).state
+        s.returnLayout shouldBe Layout.LATIN
+        s=KeyboardReducer.reduce(s,Event.ChangeLayout(s.returnLayout)).state
+        s.layout shouldBe Layout.LATIN
+        s.errorCode shouldBe null
+    }
+
 })

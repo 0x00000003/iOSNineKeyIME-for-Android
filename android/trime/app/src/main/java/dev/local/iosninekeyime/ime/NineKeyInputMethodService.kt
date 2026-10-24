@@ -70,7 +70,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     }
     override fun onCreateInputView():View {
         configureReferenceWindow()
-        return NineKeyView(this,
+        val view=NineKeyView(this,
             send={event,repeated->if(repeated)controller.submitRepeat(event)else controller.submit(event)},
             hide={keyboard?.cancelTouches();requestHideSelf(0)},
             togglePrivacy={userPrivate=!userPrivate;info?.let {startField(it,true)}},
@@ -81,13 +81,29 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
             switchIme={keyboard?.cancelTouches();if(android.os.Build.VERSION.SDK_INT>=28)switchToNextInputMethod(false)else(getSystemService(INPUT_METHOD_SERVICE) as android.view.inputmethod.InputMethodManager).showInputMethodPicker()},
             openSettings={startActivity(android.content.Intent(this,dev.local.iosninekeyime.probe.ProbeActivity::class.java).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))},
 
+            availableHeightPx={resources.displayMetrics.heightPixels},
         ).also {keyboard=it;it.render(controller.state)}
+        return dev.local.iosninekeyime.ui.ReferenceInputContainer(this,view)
     }
     override fun onWindowShown(){super.onWindowShown();configureReferenceWindow()}
     private fun configureReferenceWindow(){
         val current=window?.window?:return
         current.setBackgroundDrawable(android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT))
         if(android.os.Build.VERSION.SDK_INT>=30)current.insetsController?.hide(android.view.WindowInsets.Type.captionBar())
+    }
+    override fun onConfigureWindow(win:android.view.Window,isFullscreen:Boolean,isCandidatesOnly:Boolean){
+        super.onConfigureWindow(win,isFullscreen,isCandidatesOnly)
+        if(!isFullscreen && !isCandidatesOnly)win.setLayout(android.view.ViewGroup.LayoutParams.MATCH_PARENT,android.view.ViewGroup.LayoutParams.MATCH_PARENT)
+    }
+    override fun onComputeInsets(outInsets:android.inputmethodservice.InputMethodService.Insets){
+        super.onComputeInsets(outInsets)
+        val view=keyboard?:return
+        if(!isInputViewShown || !view.isShown || view.height<=0)return
+        val location=IntArray(2);view.getLocationInWindow(location)
+        outInsets.contentTopInsets=location[1]
+        outInsets.visibleTopInsets=location[1]
+        outInsets.touchableInsets=android.inputmethodservice.InputMethodService.Insets.TOUCHABLE_INSETS_REGION
+        outInsets.touchableRegion.set(location[0],location[1],location[0]+view.width,location[1]+view.height)
     }
     override fun onStartInput(attribute:EditorInfo?,restarting:Boolean) {
         super.onStartInput(attribute,restarting)
@@ -134,7 +150,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         if(fieldActive && cursorAnchorInfo!=null)host.updateCursorAnchor(session,cursorAnchorInfo)
     }
     private fun endField() {
-        keyboard?.cancelTouches()
+        keyboard?.clearSessionUi()
         if(fieldActive){fieldActive=false;controller.end(session)}
         expectedSelections.clear()
     }
@@ -145,7 +161,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         // Deliberately do not call the framework dump, which includes EditorInfo/context metadata.
         // Own keyboard window geometry only; no host text, candidates, cursor bounds or account data.
         val computed=android.inputmethodservice.InputMethodService.Insets()
-        super.onComputeInsets(computed)
+        onComputeInsets(computed)
         val value=org.json.JSONObject().put("content_top_inset",computed.contentTopInsets).put("visible_top_inset",computed.visibleTopInsets)
             .put("touchable_insets",computed.touchableInsets).put("field_active",fieldActive).put("destroyed",destroyed)
             .put("is_input_view_shown",isInputViewShown)

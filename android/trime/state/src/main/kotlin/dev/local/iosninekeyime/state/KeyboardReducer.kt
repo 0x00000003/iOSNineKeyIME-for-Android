@@ -115,7 +115,7 @@ object KeyboardReducer {
         if (e is Event.Start) {
             if (e.session <= s.stamp.session) return Transition(s)
             val layout = if (e.sensitive && e.layout == Layout.CHINESE) Layout.LATIN else e.layout
-            return Transition(KeyboardState(Stamp(e.session, 0), layout, e.sensitive, e.action), listOf(Effect.Begin(e.session, e.sensitive)))
+            return Transition(KeyboardState(Stamp(e.session, 0), layout, e.sensitive, e.action, returnLayout=if(e.sensitive)Layout.LATIN else Layout.CHINESE), listOf(Effect.Begin(e.session, e.sensitive)))
         }
         if (e is Event.Ready) return if (e.session == s.stamp.session && !s.sensitive)
             Transition(s.copy(ready = e.success, errorCode = if (e.success) null else "E_ENGINE")) else Transition(s)

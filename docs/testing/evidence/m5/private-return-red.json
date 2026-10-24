@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "scope": "state regression red; sensitive numeric symbols return must stay direct",
+  "suite_tests": 6,
+  "suite_failures": 1,
+  "total_state_tests": 83,
+  "xml_sha256": "b058ea2e14b7cf93179834cb87ba29746bbfb20a33f08d872ccc268194187e7d",
+  "source_base": "3d565e7 plus current WIP UI/state/tests",
+  "reason": "default returnLayout is Chinese for sensitive numeric Start; preserved before repair"
+}
