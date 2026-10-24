@@ -7,3 +7,5 @@
 继续保留邮箱未知外部焦点窗口、WebView结构请求不支持、原a11y坐标FAIL；不操作外部窗口、不读取正文、不加未经验证DEL。模拟器只复用在用AVD、禁快照复制、不启用IME，优先用于组件红绿；Pixel用于实际系统回归。没有新依赖/工具链/模型副本。
 
 修复后增补两个独立断言，原4项不改：密码字段自有输入后横竖屏往返，竖屏退格必须按当前caret删除且正文getter0；部分选词后的已确认前缀跨旋转，再确认剩余候选，最终恰好一次组合结果。新scope总计划6项，基线旧3/4只用于原4项对照，不伪称旧版本执行过新增两项。
+
+trace v1证实同步回调内保留成功，但其后的异步onStartInput会重置。后续保护扩展到配置后的首个回调（最多1秒），必须有框架restarting=true、同一配置会话/客户端binding token、相同字段元数据与当前caret；这不是仅按包名/ID判断。官方restarting语义见[InputMethodService](https://developer.android.com/reference/android/inputmethodservice/InputMethodService)。真实结束/隐藏/新字段立即清保护；再增加旋转中切到真实新字段后不串旧候选的断言，新scope计划7项，旧基线4项不改写。
