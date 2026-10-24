@@ -107,3 +107,5 @@ M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，
 96d627a全新源码/SDK/JDK/初始空Gradle cache首次实际重建结束：62/62任务、12m34s，unsigned整包9cdd4df2与冻结当前基线完全相同；同历史source43正文auditor复核PASS。该目录与后续NDK44正文补丁分开，后者正在本项目根构建；未把历史结果归到改资产后的包。
 
 738a365补齐NDK原文后新哈希收尾：debug b0ca3dd5/test1f988fd6，release582016c3/testb1948467，unsigned22f2f226。26项记录已核：两设备debug full仍R04 FAIL、其余分项/44项完整原文显示/UID canary0通过；两设备release五scope通过，专用断网新装组件PASS。49 app/73 state、38工具、双lint与三实际APK审计PASS。新源码warm输入62任务3m22s整包22f2复现。代码/文档本地WIP，不关闭外部图/系统IME与R04等门禁；正式交付未完成。
+
+R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API字符级删除委托在自有普通/真实密码遮罩EditText测36个案例；几何仅test oracle提供，不接生产私密路径、不读IC正文、不替换原R04门槛。先看宿主实际行为，再评估是否有可行路径。
