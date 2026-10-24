@@ -35,6 +35,7 @@ public final class HostInstrumentation extends Instrumentation {
     private final JSONArray ownFrameGeometry=new JSONArray();
     private final JSONArray captures=new JSONArray();
     private HostActivity activity;
+    private int neutralInputBarriers;
     private UiAutomation automation;
     @Override public void onCreate(Bundle args){
         super.onCreate(args);
@@ -61,6 +62,15 @@ public final class HostInstrumentation extends Instrumentation {
         step="ime-animation-end";check(await(()->read(()->!activity.imeAnimationRunning),3000));
         // Accessibility exposes new keys before the parent window resize/translation commits.
         // Require the actual bottom-gravity window to reach the display edge, with safe keys.
+        if(scope.equals("lifecycle-sync-diagnostic")){
+            step="neutral-input-barrier";check(read(()->activity.hasWindowFocus()));
+            long now=SystemClock.uptimeMillis();
+            for(int action:new int[]{android.view.KeyEvent.ACTION_DOWN,android.view.KeyEvent.ACTION_UP}){
+                android.view.KeyEvent event=new android.view.KeyEvent(now,SystemClock.uptimeMillis(),action,android.view.KeyEvent.KEYCODE_UNKNOWN,0,0,android.view.KeyCharacterMap.VIRTUAL_KEYBOARD,0,0,InputDevice.SOURCE_KEYBOARD);
+                check(automation.injectInputEvent(event,true));
+            }
+            check(read(()->fixture.contentEquals(activity.editor.getText()) && activity.editor.getSelectionStart()==cursor && activity.editor.getSelectionEnd()==cursor));neutralInputBarriers++;
+        }
         step="ime-frame-coherent";check(await(this::frameCoherent,scope.equals("lifecycle-diagnostic")?15000:3000));
     }
     private Rect key(String label,boolean bottom){
@@ -198,7 +208,7 @@ public final class HostInstrumentation extends Instrumentation {
             check(IME.equals("dev.local.iosninekeyime.probe.debug") || IME.equals("dev.local.iosninekeyime.probe"));
             String component=IME+"/dev.local.iosninekeyime.ime.NineKeyInputMethodService";
             boolean selected=component.equals(Settings.Secure.getString(getTargetContext().getContentResolver(),Settings.Secure.DEFAULT_INPUT_METHOD));
-            output.put("diagnostic_relaxed_frame_deadline",scope.equals("lifecycle-diagnostic")).put("scope",scope).put("system_ime_selected",selected).put("cursor_metadata_bridge",false);
+            output.put("diagnostic_input_transaction_barrier",scope.equals("lifecycle-sync-diagnostic")).put("diagnostic_relaxed_frame_deadline",scope.equals("lifecycle-diagnostic")).put("scope",scope).put("system_ime_selected",selected).put("cursor_metadata_bridge",false);
             if(!scope.equals("readiness") && !selected){output.put("status","BLOCKED").put("reason","Own debug IME must be enabled and selected before system tests");return;}
             Intent intent=new Intent(getTargetContext(),HostActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity=(HostActivity)startActivitySync(intent);
@@ -227,8 +237,9 @@ public final class HostInstrumentation extends Instrumentation {
                 output.put("system_ime_path_exercised",false);
             }else{
                 automation=getUiAutomation();AccessibilityServiceInfo service=automation.getServiceInfo();service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS;automation.setServiceInfo(service);
-                if(scope.equals("reference-pixels")){
-                    stage="pixel-reference";JSONObject pixel=new PixelReferenceProbe(this,automation,activity,IME,nonce).run();
+                if(scope.equals("reference-pixels") || scope.equals("restore-pixels")){
+                    stage="pixel-reference";PixelReferenceProbe probe=new PixelReferenceProbe(this,automation,activity,IME,nonce);
+                    JSONObject pixel=scope.equals("restore-pixels")?probe.runRestore():probe.run();
                     output.put("pixel_probe",pixel);JSONArray pixelCases=pixel.getJSONArray("cases"),pixelCaptures=pixel.getJSONArray("reference_captures");
                     for(int i=0;i<pixelCases.length();i++)cases.put(pixelCases.getJSONObject(i));
                     for(int i=0;i<pixelCaptures.length();i++)captures.put(pixelCaptures.getJSONObject(i));
@@ -260,7 +271,7 @@ public final class HostInstrumentation extends Instrumentation {
                         tap("退格");boolean exact=await(()->read(()->activity.editor.getText().toString().equals("AB") && activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);
                         cases.put(new JSONObject().put("id",stage).put("exact_synthetic_remaining",exact).put("pass",exact));
                     }
-                }else if(scope.equals("lifecycle") || scope.equals("lifecycle-diagnostic")){
+                }else if(scope.equals("lifecycle") || scope.equals("lifecycle-diagnostic") || scope.equals("lifecycle-sync-diagnostic")){
                     for(int i=1;i<=5;i++){
                         stage="hide-show-"+i;choose("send","",0);
                         main(()->activity.getSystemService(InputMethodManager.class).hideSoftInputFromWindow(activity.editor.getWindowToken(),0));
@@ -332,9 +343,9 @@ public final class HostInstrumentation extends Instrumentation {
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:scope.startsWith("lifecycle")?5:scope.equals("privacy-queue")?20:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:(scope.startsWith("lifecycle") || scope.equals("restore-pixels"))?5:scope.equals("privacy-queue")?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
-            if(scope.equals("reference-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
+            if(scope.equals("reference-pixels") || scope.equals("restore-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
             output.put("status",passed?"PASS":"FAIL");
         }catch(Throwable failure){try{output.put("status","FAIL").put("failure_stage",stage).put("failure_step",step).put("tap_attempts",taps).put("injected_taps",injected).put("measured_bottom_gap",measuredGap).put("expected_bottom_gap",expectedGap).put("ime_window_root_geometry",ownFrameGeometry).put("ime_windows",imeWindows).put("own_ime_root",ownImeRoot).put("error_code","E_SYSTEM_HOST_ASSERTION");}catch(JSONException ignored){}}
         finally{
@@ -392,7 +403,7 @@ public final class HostInstrumentation extends Instrumentation {
                 main(()->{try{output.put("ime_animation_starts",activity.imeAnimationStarts).put("ime_animation_ends",activity.imeAnimationEnds).put("ime_animation_running_at_finish",activity.imeAnimationRunning);}catch(JSONException ignored){}});
                 main(()->activity.finish());
             }
-            try{output.put("cases",cases).put("pass",passed).put("host_run_id",nonce).put("fixture_source","fixed synthetic values only; no body/candidate dumps");}catch(JSONException ignored){}
+            try{output.put("neutral_input_barriers",neutralInputBarriers).put("neutral_input_fixture_preserved",scope.equals("lifecycle-sync-diagnostic") && neutralInputBarriers>0).put("cases",cases).put("pass",passed).put("host_run_id",nonce).put("fixture_source","fixed synthetic values only; no body/candidate dumps");}catch(JSONException ignored){}
             Bundle result=new Bundle();result.putString("stream",output.toString()+"\n");result.putBoolean("host_pass",passed);
             finish(passed?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
         }

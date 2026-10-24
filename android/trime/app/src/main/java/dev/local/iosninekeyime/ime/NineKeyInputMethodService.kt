@@ -111,7 +111,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     }
     override fun onStartInputView(attribute:EditorInfo?,restarting:Boolean) {
         super.onStartInputView(attribute,restarting)
-        if(!fieldActive && attribute!=null)startField(attribute)
+        if(!fieldActive && attribute!=null)startField(attribute,retainCaret=info!=null)
         keyboard?.render(controller.state)
     }
     private fun startField(attribute:EditorInfo,retainCaret:Boolean=false) {
@@ -136,7 +136,12 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     }
     override fun onUpdateSelection(oldSelStart:Int,oldSelEnd:Int,newSelStart:Int,newSelEnd:Int,candidatesStart:Int,candidatesEnd:Int) {
         super.onUpdateSelection(oldSelStart,oldSelEnd,newSelStart,newSelEnd,candidatesStart,candidatesEnd)
-        if(!fieldActive)return
+        if(!fieldActive){
+            // A hidden input view can remain bound to the SAME field. Keep its structural
+            // selection current without restarting the controller/learning or reading text.
+            if(info!=null){selectionStart=newSelStart;selectionEnd=newSelEnd;observedSelectionStart=newSelStart;observedSelectionEnd=newSelEnd}
+            return
+        }
         val own=if(newSelStart==newSelEnd)expectedSelections.indexOf(newSelStart)else -1
         val ownDelete=host.ownsSelectionUpdate(session,newSelStart,newSelEnd)
         if(own>=0){repeat(own+1){expectedSelections.removeFirst()}}

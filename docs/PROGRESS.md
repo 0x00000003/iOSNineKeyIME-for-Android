@@ -145,3 +145,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 2026-10-24 c51dad6b参考校准WIP：五态+按下6图已采齐，独立真实像素触控9/9与宿主上方按钮通过，原无障碍/lifecycle仍FAIL；两设备full28故障/敏感5/metadata6、controller、view20+搜索清除通过。83 state/50 app/45工具、两套debug lint及实际debug APK权限/备份/固定资产/零字体静态通过。字形/Emoji/原生导航/未知状态和系统全安全/性能/release未验收。磁盘只复用一套工具链，缓存约19.91GiB、制品约7.00GiB，保留独立测试版本而非复制环境；提交开发记录。
 
 2026-10-24 优化构建 WIP：补严格 release 单测配置锁，原缺锁两次失败保留；无新模块/版本，50项 release JVM、lint、构建及实际 APK 静态审计通过。a871fae3（本地调试证书/非 debuggable）在授权 Pixel 独立真实像素触控9/9通过，包含五态及按下6图；不含后续同字段修复，也不是正式 M6 签收。中性输入事务屏障诊断仍不能修复原无障碍窗口坐标，失败记录保存。
+
+2026-10-24 同字段caret WIP：同host306227ba/test0daa38ab对照，旧c51 1/5、新179a 5/5；新179a另一次5/5，密码/no-learn/数字密码/隐藏期间光标移动均正文getter0。早期两次no-learn定位中断保留，不解释成产品已修复；五态matrix当前在number阶段FAIL，待进一步帧诊断。50app/83state/45工具、debug/testhost lint/build及实际APK静态通过，开发版WIP检查点，不签M2/M5。

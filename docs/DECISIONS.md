@@ -94,3 +94,7 @@ ADR042追加：固定高度、背景不透明、caption时机、clearCache等A/B
 首次 release lint 暴露 releaseUnitTestCompileClasspath 无锁，实际 release 单测又发现 KSP processor 无锁。先检查可解析配置，再以 graph-only 方式解析八个明确的 releaseUnitTest 配置并写锁；避免 AGP 测试自身项目制品的 resolve() 歧义。完整差异审核没有新增/移除 module-version，也未移除配置项，仅已有257项扩展测试配置。STRICT 和制品验证保持启用；不跳过测试或降低锁门槛。新构建的50项 release JVM、release lint/构建和实际优化 APK 静态检查通过。
 
 本地优化测试制品 a871fae3 使用本项目调试证书、非 debuggable；独立 Pixel 五态实际触控9/9通过。该制品是 b94 UI 源码检查点，**不含随后同字段 caret 修复**，不继承其测试，不是 M6 正式签名。失败、差异审核、三SHA真机结果分别见 evidence/m5/reference-ui-release-lock-red.json、reference-ui-release-unit-lock-final-review.json、reference-ui-optimized-build.json 和 evidence/m2/reference-ui-optimized-pixel-targets.json。
+
+## ADR045 — 同字段仅隐藏输入View时保留结构光标
+
+onFinishInputView结束控制器和临时UI，不等于宿主字段结束；onStartInputView若仍保留本字段EditorInfo，应复用已观察的当前selection而非初次initialSel。隐藏期间onUpdateSelection只更新RAM结构坐标，不重启控制器/读取正文/学习；onFinishInput仍清info，新字段onStartInput仍读取新metadata。相同最终独立host/test对照旧c51 1/5、新179a 5/5，两次新版本完整通过，四敏感正文getter0。没有新依赖；不是完整生命周期、任意宿主并发外移或隐私零写验收。

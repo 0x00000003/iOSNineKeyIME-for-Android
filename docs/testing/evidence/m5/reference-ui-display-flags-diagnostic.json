@@ -1,0 +1,14 @@
+{
+  "scope": "read-only display scalar flags; no settings changed; NOT cause proven or behavior acceptance",
+  "target": "authorized Pixel 9 Pro",
+  "values": {
+    "accessibility_display_magnification_enabled": "0",
+    "accessibility_display_magnification_scale": "2.0",
+    "accessibility_magnification_mode": "null",
+    "one_handed_mode_enabled": "0",
+    "font_scale": "1.0",
+    "window_animation_scale": "1.0",
+    "transition_animation_scale": "1.0",
+    "animator_duration_scale": "1.0"
+  }
+}

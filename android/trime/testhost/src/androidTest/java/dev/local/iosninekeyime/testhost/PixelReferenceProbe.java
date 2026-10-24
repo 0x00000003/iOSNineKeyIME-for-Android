@@ -26,10 +26,11 @@ final class PixelReferenceProbe {
     private final HostActivity activity;
     private final String ime,nonce;
     private final JSONArray cases=new JSONArray(),captures=new JSONArray();
-    private String stage="setup",panel="chinese";
+    private String stage="setup",panel="chinese",detail="setup";
     private int taps;
     PixelReferenceProbe(Instrumentation i,UiAutomation u,HostActivity a,String p,String n){instrumentation=i;automation=u;activity=a;ime=p;nonce=n;}
     private void check(boolean valid){if(!valid)throw new IllegalStateException("E_PIXEL_ASSERTION");}
+    private void checkAt(boolean valid,String point){if(!valid){detail=point;check(false);}}
     private void main(Runnable task){instrumentation.runOnMainSync(task);}
     private boolean read(BooleanSupplier task){boolean[] result={false};main(()->result[0]=task.getAsBoolean());return result[0];}
     private boolean await(BooleanSupplier task,long timeout){long until=SystemClock.uptimeMillis()+timeout;while(SystemClock.uptimeMillis()<until){if(task.getAsBoolean())return true;SystemClock.sleep(40);}return task.getAsBoolean();}
@@ -42,12 +43,12 @@ final class PixelReferenceProbe {
         boolean neutral(int c,int fill){int r=(c>>16)&255,g=(c>>8)&255,b=c&255;return Math.abs(r-fill)<=3 && Math.abs(g-fill)<=3 && Math.abs(b-fill)<=3;}
         Rect scaled(float[] source){return new Rect(Math.round(source[0]*scale),Math.round((source[1]-top())*scale),Math.round(source[2]*scale),Math.round((source[3]-top())*scale));}
         Rect locate(String id,int fill){
-            float[] source=boxes().get(id);check(source!=null);Rect expected=scaled(source);int margin=Math.max(1,Math.round(2*scale));
+            float[] source=boxes().get(id);checkAt(source!=null,"locate-key-absent");Rect expected=scaled(source);int margin=Math.max(1,Math.round(2*scale));
             Rect scan=new Rect(expected);scan.inset(-margin,-margin);check(scan.intersect(0,0,bitmap.getWidth(),bitmap.getHeight()));
             int l=scan.right,t=scan.bottom,r=-1,b=-1,count=0;
             for(int y=scan.top;y<scan.bottom;y++)for(int x=scan.left;x<scan.right;x++)if(neutral(color(x,y),fill)){l=Math.min(l,x);t=Math.min(t,y);r=Math.max(r,x);b=Math.max(b,y);count++;}
-            check(count>expected.width()*expected.height()/3);Rect actual=new Rect(l,t,r+1,b+1);
-            check(Math.abs(actual.left-expected.left)<=margin+1 && Math.abs(actual.top-expected.top)<=margin+1 && Math.abs(actual.right-expected.right)<=margin+1 && Math.abs(actual.bottom-expected.bottom)<=margin+1);
+            checkAt(count>expected.width()*expected.height()/3,"locate-fill-count");Rect actual=new Rect(l,t,r+1,b+1);
+            checkAt(Math.abs(actual.left-expected.left)<=margin+1 && Math.abs(actual.top-expected.top)<=margin+1 && Math.abs(actual.right-expected.right)<=margin+1 && Math.abs(actual.bottom-expected.bottom)<=margin+1,"locate-fill-geometry");
             return actual;
         }
         boolean emptyHeader(){int white=0;for(int y=Math.round(5*scale);y<Math.round(48*scale);y++)for(int x=Math.round(30*scale);x<Math.round(550*scale);x++){int c=color(x,y);if(((c>>16)&255)>200 && ((c>>8)&255)>200 && (c&255)>200)white++;}return white<10;}
@@ -56,9 +57,9 @@ final class PixelReferenceProbe {
         public void close(){bitmap.recycle();}
     }
     private Shot shot(){
-        final int[] h={0};check(read(()->{WindowInsets insets=activity.getWindow().getDecorView().getRootWindowInsets();if(insets==null)return false;h[0]=insets.getInsets(WindowInsets.Type.ime()).bottom;return activity.hasWindowFocus() && !activity.imeAnimationRunning && insets.isVisible(WindowInsets.Type.ime());}));
-        check(ownIme());Bitmap full=automation.takeScreenshot();check(full!=null);check(h[0]>200 && h[0]<full.getHeight()-200);int y=full.getHeight()-h[0];Bitmap crop=Bitmap.createBitmap(full,0,y,full.getWidth(),h[0]);if(crop!=full)full.recycle();Shot s=new Shot(crop,y);
-        if(!s.neutral(s.color(s.bitmap.getWidth()/2,Math.max(1,Math.round(5*s.scale))),34)){s.close();check(false);}return s;
+        final int[] h={0};checkAt(read(()->{WindowInsets insets=activity.getWindow().getDecorView().getRootWindowInsets();if(insets==null)return false;h[0]=insets.getInsets(WindowInsets.Type.ime()).bottom;return activity.hasWindowFocus() && !activity.imeAnimationRunning && insets.isVisible(WindowInsets.Type.ime());}),"shot-focus-animation-inset");
+        checkAt(ownIme(),"shot-own-ime");Bitmap full=automation.takeScreenshot();check(full!=null);checkAt(h[0]>200 && h[0]<full.getHeight()-200,"shot-inset-height");int y=full.getHeight()-h[0];Bitmap crop=Bitmap.createBitmap(full,0,y,full.getWidth(),h[0]);if(crop!=full)full.recycle();Shot s=new Shot(crop,y);
+        if(!s.neutral(s.color(s.bitmap.getWidth()/2,Math.max(1,Math.round(5*s.scale))),34)){s.close();detail="shot-panel-fill";check(false);}return s;
     }
     private LinkedHashMap<String,float[]> boxes(){
         LinkedHashMap<String,float[]> m=new LinkedHashMap<>();
@@ -81,7 +82,7 @@ final class PixelReferenceProbe {
     }
     private int fill(String id){return id.equals("enter")?(panel.equals("chinese") || panel.equals("number")?144:122):id.equals("emoji-search")?59:70;}
     private void physical(Rect local,Shot s,int action,long downTime){MotionEvent e=MotionEvent.obtain(downTime,SystemClock.uptimeMillis(),action,local.centerX(),s.screenTop+local.centerY(),0);e.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{check(automation.injectInputEvent(e,true));}finally{e.recycle();}}
-    private void tap(String id){try(Shot s=shot()){Rect r=s.locate(id,fill(id));long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
+    private void tap(String id){detail="tap-"+id;try(Shot s=shot()){Rect r=s.locate(id,fill(id));long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
     private void tapPoint(float x,float absoluteY){try(Shot s=shot()){Rect r=new Rect(Math.round(x*s.scale)-1,Math.round((absoluteY-top())*s.scale)-1,Math.round(x*s.scale)+1,Math.round((absoluteY-top())*s.scale)+1);long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
     private boolean body(String expected){return read(()->expected.contentEquals(activity.editor.getText()));}
     private void ready(){check(await(()->{try(Shot s=shot()){return s.emptyHeader();}catch(IllegalStateException e){return false;}},15000));}
@@ -97,6 +98,48 @@ final class PixelReferenceProbe {
         }
     }
     private void result(String id,boolean valid)throws Exception{cases.put(new JSONObject().put("id",id).put("pass",valid));check(valid);}
+    private void restoreChoose(String kind,String fixture,int cursor,boolean guard){
+        main(()->{activity.guardConnections=guard;activity.selectCase(kind,fixture,cursor,true);});
+        check(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.editor) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));
+        detail="restore-ui-idle";try{automation.waitForIdle(100,3000);}catch(java.util.concurrent.TimeoutException e){throw new IllegalStateException("E_RESTORE_UI_BUSY");}
+        panel=kind.equals("number-password")?"number":"latin";
+    }
+    private void hideSameField(){
+        detail="hide-same-field";
+        main(()->activity.getSystemService(InputMethodManager.class).hideSoftInputFromWindow(activity.editor.getWindowToken(),0));
+        check(await(()->read(()->!activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));
+    }
+    private void showSameField(){
+        detail="show-same-field";
+        main(()->{activity.editor.requestFocus();activity.getSystemService(InputMethodManager.class).showSoftInput(activity.editor,InputMethodManager.SHOW_IMPLICIT);});
+        check(await(()->read(()->activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));
+        try{automation.waitForIdle(100,3000);}catch(java.util.concurrent.TimeoutException e){throw new IllegalStateException("E_RESTORE_UI_BUSY");}
+    }
+    private JSONObject restoreResult(String id,boolean exact,boolean sensitive)throws Exception{
+        final int[] counts=new int[4];main(()->{GuardedEditText v=(GuardedEditText)activity.editor;counts[0]=v.bodyReads;counts[1]=v.cursorRequests;counts[2]=v.boundsRequests;counts[3]=v.gestureRequests;});
+        boolean valid=exact && (!sensitive || counts[0]==0);
+        JSONObject row=new JSONObject().put("id",id).put("exact_synthetic_result",exact).put("sensitive",sensitive).put("body_getter_calls",counts[0]).put("cursor_requests",counts[1]).put("bounds_requests",counts[2]).put("gesture_requests",counts[3]).put("pass",valid);cases.put(row);return row;
+    }
+    JSONObject runRestore()throws Exception{
+        JSONObject output=new JSONObject().put("transport","observed pixels + touchscreen + public host IMM hide/show; same EditText identity retained");
+        try{
+            for(String kind:new String[]{"email","password","no-learn","number-password"}){
+                stage="same-field-"+kind;boolean sensitive=!kind.equals("email"),number=kind.equals("number-password");
+                restoreChoose(kind,number?"12":"AB",2,sensitive);android.widget.EditText same=activity.editor;
+                tap(number?"text-2":"text-10");check(await(()->body(number?"123":"ABa"),3000));
+                hideSameField();showSameField();check(read(()->activity.editor==same));tap("delete");
+                boolean deleted=await(()->body(number?"12":"AB"),3000);tap(number?"text-3":"text-23");
+                boolean exact=await(()->body(number?"124":"ABb") && read(()->activity.editor.getSelectionStart()==3 && activity.editor.getSelectionEnd()==3),3000);
+                restoreResult(stage,deleted && exact,sensitive);
+            }
+            stage="hidden-private-selection";restoreChoose("password","ABCD",4,true);android.widget.EditText same=activity.editor;tap("text-10");check(await(()->body("ABCDa"),3000));
+            hideSameField();main(()->activity.editor.setSelection(1));SystemClock.sleep(150);showSameField();check(read(()->activity.editor==same));tap("delete");
+            boolean deleted=await(()->body("BCDa") && read(()->activity.editor.getSelectionStart()==0),3000);tap("text-23");
+            boolean exact=await(()->body("bBCDa") && read(()->activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);restoreResult(stage,deleted && exact,true);
+            boolean valid=cases.length()==5;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable e){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_RESTORE_ASSERTION");}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",5);
+    }
     JSONObject run()throws Exception{
         JSONObject output=new JSONObject().put("transport","observed screen pixels + actual touchscreen; no accessibility-coordinate or service-state bridge");
         try{

@@ -1,5 +1,7 @@
 # 当前需求验收账：未签收
 
+2026-10-24 最新增量（WIP）：debug `179a24e7` 修复同一字段仅隐藏/重显后退格使用过期初始caret的问题。最终同host/test旧c51 1/5→新179a 5/5，另一次新179a 5/5；四敏感场景正文getter全0，隐藏期间外移光标也按真实位置删除。保留旧红测及早期no-learn定位中断；当前五态触控回归在number阶段FAIL，不能继承c51/a871的9/9。50 app/83 state/45工具、debug/testhost lint/build、实际APK静态通过。原无障碍与完整安全/性能/正式签收未关闭，见[同字段记录](testing/SAME_FIELD-20261024.md)。
+
 最新增量（2026-10-24，debug c51dad6b，完整SHA见STATUS）：已启用/选定的自有系统IME独立像素触控9/9，五态+按下6图；两设备view20+搜索会话清除、full28结构故障/敏感5/metadata6和controller通过；83 state/50 app/45工具、debug构建/lint/实际APK静态通过。原无障碍坐标/lifecycle仍FAIL，未宣布阶段完成。下表738a365及后面的77636c33均为历史时点；当前增量如下：
 
 | 需求 | 当前新增真实证据 | 尚缺 / 整体状态 |

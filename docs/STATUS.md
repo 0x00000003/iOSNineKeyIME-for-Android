@@ -1,5 +1,7 @@
 # 当前状态
 
+2026-10-24 最新增量（WIP）：debug `179a24e7` 修复同一字段仅隐藏/重显后退格使用过期初始caret的问题。最终同host/test旧c51 1/5→新179a 5/5，另一次新179a 5/5；四敏感场景正文getter全0，隐藏期间外移光标也按真实位置删除。保留旧红测及早期no-learn定位中断；当前五态触控回归在number阶段FAIL，不能继承c51/a871的9/9。50 app/83 state/45工具、debug/testhost lint/build、实际APK静态通过。原无障碍与完整安全/性能/正式签收未关闭，见[同字段记录](testing/SAME_FIELD-20261024.md)。
+
 **最新生产检查点（WIP，2026-10-23）：** debug `831233e4` / 默认unsigned `f857df0c` 已补删除后真实caret确认，前次系统17/20红测保留。相同独立host/test在真实Pixel core10/10、敏感字素36/36、正文拒绝/异步续输/长按/切字段20/20均PASS，敏感正文getter0；同debug两设备full组件28结构故障PASS、敏感5/5和metadata6/6、bounds11/cursor22，controller两设备PASS。50app/77state/42工具、两套lint/构建/实际APK静态审计PASS；release尚未绑定本最终哈希运行，不称完整M2/R04/I05安全验收。系统测试的两个本项目IME均已启用；名称现已区分调试/优化测试版，已安装旧优化版尚未随本轮更新。见[系统宿主记录](testing/SYSTEM_HOST-20261023.md)。下列未启用/未授权等均为此前历史。
 
 **M5参考实施中（WIP，2026-10-24）：** 当前debug `c51dad6b` 已按iPhone13/iOS27.2五张深色参考校准五种面板、字号/字距、可见键面与48dp触控框、原创图形及内存Emoji。独立实际像素定位系统触控9/9 PASS，采齐五态+按下6图，真实123/符号/64426选词/abc/Emoji提交删除与宿主上部按钮核对通过；不是内部事件桥，也不替代原门禁。五态高度归一差+0.306..0.525来源px、四种主键矩形最大边差≤1.297px，三类灰色块一致；字体轮廓/Emoji默认顺序/原生导航/其他状态仍有差异，不称1:1。两设备同SHA view-insets20/20+搜索会话清除、full组件28结构故障/敏感5/5/metadata6/6和controller PASS；83 state/50 app/45工具、两套debug lint、实际APK静态PASS。**原无障碍窗口坐标/lifecycle仍FAIL**，透明整窗/事件通知未证明修复，不能沿用像素scope签收TalkBack或M5。敏感数字→符号返回错误已有红测并修为Latin；逐音节选拼音/语音未提供。显示缩放/文字大小未知，release全门禁未跑。见[完整记录](testing/REFERENCE_UI-20261023.md)及[当前检查点](testing/evidence/m5/reference-ui-calibration2-checkpoint.json)。

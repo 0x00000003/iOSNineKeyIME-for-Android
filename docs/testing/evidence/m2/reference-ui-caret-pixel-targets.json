@@ -1,0 +1,1006 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "reference-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "observed screen pixels + actual touchscreen; no accessibility-coordinate or service-state bridge",
+    "physical_upper_host_button_received": true,
+    "pass": false,
+    "failure_stage": "number",
+    "error_code": "E_PIXEL_REFERENCE_ASSERTION",
+    "cases": [
+      {
+        "id": "chinese",
+        "pass": true
+      },
+      {
+        "id": "press-cancel",
+        "pass": true
+      }
+    ],
+    "reference_captures": [
+      {
+        "id": "r01-chinese",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "digit-2": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "digit-3": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "digit-4": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "digit-5": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "digit-6": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "digit-7": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "digit-8": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "digit-9": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "pinyin": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "space": [
+            394,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells",
+        "synthetic_key_fill_rgb": [
+          70,
+          70,
+          70
+        ]
+      },
+      {
+        "id": "r01-pressed",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "digit-2": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "digit-3": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "digit-4": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "digit-5": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "digit-6": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "digit-7": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "digit-8": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "digit-9": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "pinyin": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "space": [
+            394,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells",
+        "synthetic_key_fill_rgb": [
+          133,
+          133,
+          133
+        ]
+      },
+      {
+        "id": "r02-number",
+        "width": 960,
+        "height": 920,
+        "keys": {
+          "layout-primary": [
+            19,
+            227,
+            191,
+            342
+          ],
+          "layout-symbols": [
+            19,
+            360,
+            191,
+            475
+          ],
+          "layout-latin": [
+            19,
+            493,
+            191,
+            609
+          ],
+          "emoji": [
+            19,
+            627,
+            191,
+            742
+          ],
+          "text-0": [
+            206,
+            227,
+            378,
+            342
+          ],
+          "text-1": [
+            394,
+            227,
+            565,
+            342
+          ],
+          "text-2": [
+            581,
+            227,
+            753,
+            342
+          ],
+          "text-3": [
+            206,
+            360,
+            378,
+            475
+          ],
+          "text-4": [
+            394,
+            360,
+            565,
+            475
+          ],
+          "text-5": [
+            581,
+            360,
+            753,
+            475
+          ],
+          "text-6": [
+            206,
+            493,
+            378,
+            609
+          ],
+          "text-7": [
+            394,
+            493,
+            565,
+            609
+          ],
+          "text-8": [
+            581,
+            493,
+            753,
+            609
+          ],
+          "delete": [
+            768,
+            227,
+            942,
+            342
+          ],
+          "more": [
+            768,
+            360,
+            942,
+            475
+          ],
+          "enter": [
+            768,
+            492,
+            942,
+            742
+          ],
+          "number-punctuation": [
+            206,
+            627,
+            378,
+            742
+          ],
+          "zero": [
+            394,
+            627,
+            568,
+            742
+          ],
+          "space": [
+            579,
+            627,
+            753,
+            742
+          ]
+        },
+        "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells"
+      }
+    ],
+    "actual_pixel_targeted_taps": 2,
+    "planned_cases": 9
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 2,
+  "planned_cases": 9,
+  "status": "FAIL",
+  "reference_captures": [
+    {
+      "id": "r01-chinese",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells",
+      "synthetic_key_fill_rgb": [
+        70,
+        70,
+        70
+      ],
+      "png_sha256": "dcfaf4a540dbe8c9063515edcf232ef647df0822a6c876b993d57740facb518c",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r01-pressed",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells",
+      "synthetic_key_fill_rgb": [
+        133,
+        133,
+        133
+      ],
+      "png_sha256": "effe6a50ccd5f54b70a6d9744bed538987abee77a8843a7b1c0a499b1eb621eb",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r02-number",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "text-1": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "text-2": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "text-3": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "text-4": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "text-5": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "text-6": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "text-7": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "text-8": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "enter": [
+          768,
+          492,
+          942,
+          742
+        ],
+        "number-punctuation": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "zero": [
+          394,
+          627,
+          568,
+          742
+        ],
+        "space": [
+          579,
+          627,
+          753,
+          742
+        ]
+      },
+      "location_method": "observed screenshot neutral fill around independent reference boxes; Emoji observed foreground cells",
+      "png_sha256": "dcfaf4a540dbe8c9063515edcf232ef647df0822a6c876b993d57740facb518c",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    }
+  ],
+  "window_layout_metadata": {
+    "content_top_inset": 1069,
+    "visible_top_inset": 1069,
+    "touchable_insets": 3,
+    "field_active": true,
+    "destroyed": false,
+    "is_input_view_shown": true,
+    "window_layout_height": -1,
+    "keyboard": {
+      "initial_measure_specs": [
+        [
+          490,
+          108,
+          -2147483648,
+          693
+        ],
+        [
+          490,
+          108,
+          -2147483648,
+          747
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ]
+      ],
+      "width": 960,
+      "height": 920,
+      "measured_width": 960,
+      "measured_height": 920,
+      "width_spec_size": 960,
+      "height_spec_size": 1989,
+      "height_spec_mode": -2147483648,
+      "desired_height": 920,
+      "child_count": 14,
+      "root_height": 1989,
+      "parent_height": 1989,
+      "is_shown": true,
+      "visibility": 0,
+      "safe_left": 0,
+      "safe_right": 0,
+      "safe_bottom": 54,
+      "ancestors": [
+        {
+          "class": "NineKeyView",
+          "id": -1,
+          "height": 920,
+          "width": 960,
+          "y": 1069,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            1069,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "ReferenceInputContainer",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908318,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": 16909476,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908290,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "DecorView",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        }
+      ],
+      "screen_x": 0,
+      "screen_y": 1222,
+      "window_x": 0,
+      "window_y": 1069
+    }
+  },
+  "debug_owned_bottom_crop_saved": true,
+  "debug_owned_bottom_crop_basis": "requested keyboard height; may include owned synthetic host; NOT reference acceptance",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "chinese",
+      "pass": true
+    },
+    {
+      "id": "press-cancel",
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "14b3c98a398349028fed5b6397df1655",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+  "test_apk_sha256": "0daa38ab8ab6ced038f71a62615e61716e78e7ff2e0bf9b4057468cad5b1f776",
+  "ime_apk_sha256": "179a24e74419875a06bfec9bcd38157e3d1b246448c10c4304ad62a76b42984b",
+  "ime_variant": "debug",
+  "requested_scope": "reference-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

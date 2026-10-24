@@ -10,3 +10,5 @@
 3. password隐藏时外移：ABCD/caret4，实际a→ABCDa；hide后由自有宿主setSelection(1)，同字段show，退格→BCDa/caret0，再b→bBCDa/caret1。
 
 hide/show每段最多5秒、正文结果最多3秒，实际tap前截图须满足自有宿主焦点/OS IME inset/自有IME package及键色/几何。不得用新字段掩盖同字段问题、force-stop、切第三方IME或降低字素/零读约束。每个敏感案例记录body_getter_calls/cursor/bounds/gesture请求次数和精确oracle布尔。5/5且注入/fixture/runner新nonce+三SHA/code一致才是此子协议PASS；不等于完整R04/I05、TalkBack、全部生命周期或M2/M5完成。
+
+输入握手细化（重跑前）：IMM.isActive/IME inset可见只证明客户端已服务，新字段/重显的View队列仍可能有事件；实际tap前再等待UiAutomation公开waitForIdle(100ms quiet, 3秒上限)。此为稳态屏障，不修改fixture、同字段身份或零正文读取/精确删除约束。原c51红测保留；以同一新版host/test先重跑旧c51、再跑修复版本，防止把等待变化冒充产品修复。
