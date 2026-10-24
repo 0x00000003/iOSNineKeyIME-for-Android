@@ -7,10 +7,10 @@
 一款基于 Trime/Rime 与万象的开源 Android 输入法。支持九键拼音、选拼音、英文、数字、符号和 Emoji，词库与输入引擎在本机离线运行。
 
 <p align="center">
-  <img src="docs/images/android-ios-comparison.png" width="1000" alt="左右双机对照：左侧 Android 展示本项目九宫格，右侧 iOS 展示参考键盘；机身与编辑区为示意" />
+  <img src="docs/images/android-ios-comparison.png" width="1000" alt="原始键区截图左右对照：左侧 Android 本项目输入法，右侧 iOS 原生键盘；仅裁剪与等比例缩放，没有生成或重绘界面" />
 </p>
 
-<p align="center"><b>左：Android 上的本项目输入法　｜　右：iOS 键盘参考</b><br />对照图依据截图制作，机身与编辑区为示意；<a href="docs/images/android-nine-key.png">查看 Android 原始实机键盘截图</a>。</p>
+<p align="center"><b>左：Android 上的本项目输入法　｜　右：iOS 原生键盘</b><br />原始键区截图直接并排，仅裁剪与等比例缩放；<a href="docs/images/android-nine-key.png">查看 Android 完整键盘截图</a>。</p>
 
 ## 功能
 
@@ -62,4 +62,4 @@ APK 位于 `android/trime/app/build/outputs/apk/debug/`。安装后通过 Androi
 
 本项目原创程序与派生代码采用 [GPL-3.0-or-later](LICENSE)。Trime、librime、万象词库、模型及其他依赖保留各自许可证和版权声明，详见 [NOTICE](NOTICE.md) 与[资源来源](docs/COMPLIANCE.md)。
 
-本项目为独立的 Android 输入法项目，与 Apple 无隶属关系；不包含 Apple 字体或原版图标素材。
+本项目为独立的 Android 输入法项目，与 Apple 无隶属关系。APK 不打包 Apple 字体或原版图标素材；文档中的 iOS 键盘裁图仅用于参考对照。

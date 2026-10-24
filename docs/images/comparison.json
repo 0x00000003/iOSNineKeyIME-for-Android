@@ -1,31 +1,70 @@
 {
-  "kind": "AI-generated side-by-side visual illustration based on keyboard references",
-  "generator": "built-in imagegen",
+  "kind": "deterministic composition of original screenshot key areas",
+  "generator": "Pillow; no generative model",
   "output": {
     "file": "android-ios-comparison.png",
-    "width": 1672,
-    "height": 941,
-    "bytes": 1573062,
-    "sha256": "cf7cadd97125016a4d935c1d898adad3b54727788af0f26cc1b5a6924f66d022"
+    "width": 1440,
+    "height": 748,
+    "bytes": 191205,
+    "sha256": "a332328d22eb4c83a987c4a08149e0f4b7c6f13730c04beca5ae42cc3983084e"
   },
   "left": {
     "platform": "Android",
-    "reference_file": "android-nine-key.png",
-    "reference_sha256": "8b8563de44d81bb9a722563f9a31bf0fbc3a3f809ad57cd01ee5b944a6ae5beb",
+    "source_file": "android-nine-key.png",
+    "source_sha256": "8b8563de44d81bb9a722563f9a31bf0fbc3a3f809ad57cd01ee5b944a6ae5beb",
+    "crop_box": [
+      0,
+      219,
+      960,
+      920
+    ],
     "ime_apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1"
   },
   "right": {
     "platform": "iOS",
-    "reference_sha256": "d5648611a34372f35ef9a9c130bd1fe26e8ca942de1f6bed5a60d269bea4ec80",
-    "reference_dimensions": [
+    "source_file": "ios-nine-key-area.png",
+    "source_sha256": "ed24e7d73fa40f0868754750ffa92ccaac4f804269a9a238cb7e0fb22790a6b2",
+    "reference_keyboard_sha256": "d5648611a34372f35ef9a9c130bd1fe26e8ca942de1f6bed5a60d269bea4ec80",
+    "crop_from_reference_keyboard": [
+      0,
+      134,
       591,
       566
     ],
     "private_original_in_git": false,
     "prediction_row_omitted": true
   },
-  "phone_frames_and_editor": "illustrative",
-  "pixels_may_be_redrawn": true,
-  "not_pixel_parity_evidence": true,
-  "prompt_file": "comparison-prompt.md"
+  "operations": [
+    "crop to key areas",
+    "equal width with preserved aspect ratio",
+    "add labels outside images"
+  ],
+  "synthetic_phone_frames": false,
+  "synthetic_editor": false,
+  "ui_redrawn": false,
+  "pixel_checks": {
+    "saved_panels_equal_resized_source_pixels": true,
+    "sources_unchanged": true
+  },
+  "panels": [
+    {
+      "platform": "Android",
+      "output_box": [
+        48,
+        170,
+        696,
+        643
+      ]
+    },
+    {
+      "platform": "iOS",
+      "output_box": [
+        744,
+        170,
+        1392,
+        644
+      ]
+    }
+  ],
+  "not_full_screen_or_pixel_parity_acceptance": true
 }
