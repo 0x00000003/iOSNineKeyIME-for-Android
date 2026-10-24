@@ -237,9 +237,9 @@ public final class HostInstrumentation extends Instrumentation {
                 output.put("system_ime_path_exercised",false);
             }else{
                 automation=getUiAutomation();AccessibilityServiceInfo service=automation.getServiceInfo();service.flags|=AccessibilityServiceInfo.FLAG_RETRIEVE_INTERACTIVE_WINDOWS;automation.setServiceInfo(service);
-                if(scope.equals("pinyin-pixels") || scope.equals("reference-pixels") || scope.equals("restore-pixels") || scope.equals("private-pixels") || scope.equals("queue-pixels")){
+                if(scope.equals("rotation-pixels") || scope.equals("web-pixels") || scope.equals("fields-pixels") || scope.equals("pinyin-pixels") || scope.equals("reference-pixels") || scope.equals("restore-pixels") || scope.equals("private-pixels") || scope.equals("queue-pixels")){
                     stage="pixel-reference";PixelReferenceProbe probe=new PixelReferenceProbe(this,automation,activity,IME,nonce);
-                    JSONObject pixel=scope.equals("pinyin-pixels")?probe.runPinyin():scope.equals("queue-pixels")?probe.runQueue():scope.equals("private-pixels")?probe.runPrivate():scope.equals("restore-pixels")?probe.runRestore():probe.run();
+                    JSONObject pixel=scope.equals("rotation-pixels")?probe.runRotation():scope.equals("web-pixels")?probe.runWeb():scope.equals("fields-pixels")?probe.runFields():scope.equals("pinyin-pixels")?probe.runPinyin():scope.equals("queue-pixels")?probe.runQueue():scope.equals("private-pixels")?probe.runPrivate():scope.equals("restore-pixels")?probe.runRestore():probe.run();
                     output.put("pixel_probe",pixel);JSONArray pixelCases=pixel.getJSONArray("cases"),pixelCaptures=pixel.getJSONArray("reference_captures");
                     for(int i=0;i<pixelCases.length();i++)cases.put(pixelCases.getJSONObject(i));
                     for(int i=0;i<pixelCaptures.length();i++)captures.put(pixelCaptures.getJSONObject(i));
@@ -343,9 +343,9 @@ public final class HostInstrumentation extends Instrumentation {
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("pinyin-pixels")?8:scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:(scope.startsWith("lifecycle") || scope.equals("restore-pixels"))?5:(scope.equals("privacy-queue") || scope.equals("queue-pixels"))?20:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("rotation-pixels")?4:scope.equals("web-pixels")?3:scope.equals("fields-pixels")?10:scope.equals("pinyin-pixels")?8:scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:(scope.startsWith("lifecycle") || scope.equals("restore-pixels"))?5:(scope.equals("privacy-queue") || scope.equals("queue-pixels"))?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
-            if(scope.equals("pinyin-pixels") || scope.equals("reference-pixels") || scope.equals("restore-pixels") || scope.equals("private-pixels") || scope.equals("queue-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
+            if(scope.equals("rotation-pixels") || scope.equals("web-pixels") || scope.equals("fields-pixels") || scope.equals("pinyin-pixels") || scope.equals("reference-pixels") || scope.equals("restore-pixels") || scope.equals("private-pixels") || scope.equals("queue-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
             output.put("status",passed?"PASS":"FAIL");
         }catch(Throwable failure){try{output.put("status","FAIL").put("failure_stage",stage).put("failure_step",step).put("tap_attempts",taps).put("injected_taps",injected).put("measured_bottom_gap",measuredGap).put("expected_bottom_gap",expectedGap).put("ime_window_root_geometry",ownFrameGeometry).put("ime_windows",imeWindows).put("own_ime_root",ownImeRoot).put("error_code","E_SYSTEM_HOST_ASSERTION");}catch(JSONException ignored){}}
         finally{

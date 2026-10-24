@@ -8,7 +8,7 @@
     <application android:allowBackup="false" android:fullBackupContent="@xml/ime_backup_rules"
         android:dataExtractionRules="@xml/ime_data_extraction_rules" android:usesCleartextTraffic="false"
         android:label="离线九键 · 合成测试宿主" android:theme="@android:style/Theme.Material.Light.NoActionBar">
-        <activity android:name=".HostActivity" android:exported="true" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        <activity android:name=".HostActivity" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

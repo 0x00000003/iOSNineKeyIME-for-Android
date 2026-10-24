@@ -274,6 +274,135 @@ final class PixelReferenceProbe {
             captures.put(new JSONObject().put("id",id).put("width",shot.bitmap.getWidth()).put("height",shot.bitmap.getHeight()).put("first_option_rect",new JSONArray().put(first.left).put(first.top).put(first.right).put(first.bottom)).put("scope","owned synthetic phonetic popup only; no iOS secondary-page reference"));
         }
     }
+    private void fieldChoose(String kind,String layout){
+        main(()->{activity.guardConnections=false;activity.selectCase(kind,"",0,false);});
+        checkAt(await(()->read(()->activity.hasWindowFocus()),5000),"field-host-focus");
+        main(()->activity.getSystemService(InputMethodManager.class).showSoftInput(activity.editor,InputMethodManager.SHOW_IMPLICIT));
+        checkAt(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.editor) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000),"field-served");
+        try{automation.waitForIdle(100,3000);}catch(java.util.concurrent.TimeoutException error){throw new IllegalStateException("E_FIELD_UI_BUSY");}
+        panel=layout;expandedPinyinGrid=false;if(layout.equals("chinese"))ready();
+    }
+    private AccessibilityNodeInfo webInput(boolean password){
+        for(AccessibilityWindowInfo window:automation.getWindows()){
+            if(window.getType()!=AccessibilityWindowInfo.TYPE_APPLICATION)continue;
+            AccessibilityNodeInfo root=window.getRoot();if(root==null)continue;
+            if(!instrumentation.getTargetContext().getPackageName().equals(String.valueOf(root.getPackageName()))){root.recycle();continue;}
+            java.util.ArrayDeque<AccessibilityNodeInfo> queue=new java.util.ArrayDeque<>();queue.add(root);AccessibilityNodeInfo found=null;
+            while(!queue.isEmpty()){
+                AccessibilityNodeInfo node=queue.removeFirst();
+                try{
+                    if(node.isVisibleToUser() && node.isEditable() && node.isPassword()==password && "android.widget.EditText".contentEquals(node.getClassName())){if(found!=null)found.recycle();found=AccessibilityNodeInfo.obtain(node);}
+                    for(int i=0;i<node.getChildCount();i++){AccessibilityNodeInfo child=node.getChild(i);if(child!=null)queue.addLast(child);}
+                }finally{node.recycle();}
+            }
+            if(found!=null)return found;
+        }
+        return null;
+    }
+    private boolean webValue(boolean password,String expected,int length){
+        AccessibilityNodeInfo node=webInput(password);if(node==null)return false;
+        try{CharSequence value=node.getText();return value!=null && (password?value.length()==length:expected.contentEquals(value));}finally{node.recycle();}
+    }
+    private void webFocus(boolean password){
+        final Rect bounds=new Rect();checkAt(await(()->{AccessibilityNodeInfo node=webInput(password);if(node==null)return false;try{node.getBoundsInScreen(bounds);return !bounds.isEmpty();}finally{node.recycle();}},5000),"owned-web-input-node");
+        checkAt(read(()->{int[] location=new int[2];activity.web.getLocationOnScreen(location);return bounds.centerX()>=location[0] && bounds.centerX()<location[0]+activity.web.getWidth() && bounds.centerY()>=location[1] && bounds.centerY()<location[1]+activity.web.getHeight();}),"owned-web-input-bounds");
+        long now=SystemClock.uptimeMillis();for(int action:new int[]{MotionEvent.ACTION_DOWN,MotionEvent.ACTION_UP}){MotionEvent e=MotionEvent.obtain(now,SystemClock.uptimeMillis(),action,bounds.centerX(),bounds.centerY(),0);e.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{check(automation.injectInputEvent(e,true));}finally{e.recycle();}}taps++;
+        checkAt(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.web) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000),"web-ime-served");
+        panel=password?"latin":"chinese";expandedPinyinGrid=false;if(!password)ready();
+    }
+    JSONObject runWeb()throws Exception{
+        JSONObject output=new JSONObject().put("transport","actual offline WebView/DOM accessibility oracle and system touchscreen; no IC/cursor/event bridge");
+        try{
+            stage="web-isolated";main(()->activity.showWeb());
+            checkAt(await(()->read(()->"Synthetic offline host".equals(activity.web.getTitle())),5000),"web-local-page-loaded");
+            result(stage,read(()->!activity.web.getSettings().getJavaScriptEnabled() && activity.web.getSettings().getBlockNetworkLoads() && !activity.web.getSettings().getAllowFileAccess() && !activity.web.getSettings().getAllowContentAccess()));
+            stage="web-plain-chinese-delete-latin";webFocus(false);for(char c:"64426".toCharArray())tap("digit-"+c);tapPoint(35,806);
+            checkAt(await(()->webValue(false,"你好",0),3000),"web-word-exact");tap("delete");checkAt(await(()->webValue(false,"你",0),3000),"web-delete-exact");
+            tap("layout-latin");panel="latin";tap("text-10");tap("text-23");tap("text-21");result(stage,await(()->webValue(false,"你abc",0),3000));
+            stage="web-password-direct-delete";webFocus(true);tap("text-10");tap("text-23");tap("text-21");checkAt(await(()->webValue(true,"",3),3000),"web-password-length");tap("delete");
+            boolean exact=await(()->webValue(true,"",2),5000);final int[] reads={0};main(()->reads[0]=activity.web.sensitiveBodyReads);output.put("sensitive_body_getter_calls",reads[0]);
+            main(()->{try{output.put("text_bounds_requests",activity.web.boundsRequests).put("cursor_requests",activity.web.cursorRequests).put("last_cursor_request_supported",activity.web.lastCursorSupported).put("handwriting_requests",activity.web.gestureRequests).put("last_text_bounds_result_code",activity.web.lastBoundsCode).put("last_handwriting_result_code",activity.web.lastGestureCode);}catch(org.json.JSONException ignored){}});
+            result(stage,exact && reads[0]==0);
+            boolean valid=cases.length()==3;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable error){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_WEB_ASSERTION");}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",3);
+    }
+    private Shot compactShot(){
+        final int[] height={0};checkAt(read(()->{WindowInsets insets=activity.getWindow().getDecorView().getRootWindowInsets();if(insets==null)return false;height[0]=insets.getInsets(WindowInsets.Type.ime()).bottom;return activity.hasWindowFocus() && !activity.imeAnimationRunning && insets.isVisible(WindowInsets.Type.ime());}),"compact-focus-inset");
+        checkAt(ownIme(),"compact-own-ime");Bitmap full=automation.takeScreenshot();check(full!=null);
+        checkAt(full.getWidth()>full.getHeight() && height[0]>200 && height[0]<full.getHeight()-48,"compact-screen-height");
+        int top=full.getHeight()-height[0];Bitmap crop=Bitmap.createBitmap(full,0,top,full.getWidth(),height[0]);if(crop!=full)full.recycle();return new Shot(crop,top);
+    }
+    private Shot stableCompact(){
+        long until=SystemClock.uptimeMillis()+5000,last=0;int repeats=0,lastHeight=-1;
+        while(SystemClock.uptimeMillis()<until){Shot current=null;try{current=compactShot();long signature=17;for(int y=0;y<current.bitmap.getHeight();y+=4)for(int x=0;x<current.bitmap.getWidth();x+=4)signature=31*signature+current.color(x,y);if(lastHeight==current.bitmap.getHeight() && signature==last)repeats++;else repeats=1;last=signature;lastHeight=current.bitmap.getHeight();if(repeats>=3)return current;}catch(IllegalStateException ignored){repeats=0;}if(current!=null)current.close();SystemClock.sleep(40);}
+        checkAt(false,"compact-stable-timeout-"+detail);throw new IllegalStateException("E_UNREACHABLE");
+    }
+    private void compactTap(int digit,boolean space){
+        final int[] inset=new int[2];main(()->{android.graphics.Insets i=activity.getWindow().getDecorView().getRootWindowInsets().getInsets(WindowInsets.Type.systemBars()|WindowInsets.Type.displayCutout());inset[0]=i.left;inset[1]=i.right;});
+        try(Shot frame=stableCompact()){
+            float scale=(frame.bitmap.getWidth()-inset[0]-inset[1])/591f,d=activity.getResources().getDisplayMetrics().density;
+            float[][] cols={{127,233},{243,348},{358,464}};int row=space?3:(digit-1)/3;int column=space?1:(digit-1)%3;
+            Rect box=new Rect(Math.round(inset[0]+(space?243:cols[column][0])*scale),Math.round((54+row*54)*d),Math.round(inset[0]+(space?464:cols[column][1])*scale),Math.round((102+row*54)*d));
+            checkAt(box.left>=0 && box.right<=frame.bitmap.getWidth() && box.top>=0 && box.bottom<=frame.bitmap.getHeight(),"compact-key-screen-bounds");
+            int fill=0;for(int y=box.top;y<box.bottom;y++)for(int x=box.left;x<box.right;x++)if(frame.neutral(frame.color(x,y),70))fill++;
+            checkAt(fill>box.width()*box.height()/2,"compact-key-observed-fill");long now=SystemClock.uptimeMillis();physical(box,frame,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(box,frame,MotionEvent.ACTION_UP,now);taps++;
+        }SystemClock.sleep(80);
+    }
+    private void rotate(boolean landscape){
+        main(()->activity.setRequestedOrientation(landscape?android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE:android.content.pm.ActivityInfo.SCREEN_ORIENTATION_PORTRAIT));
+        checkAt(await(()->read(()->activity.getResources().getConfiguration().orientation==(landscape?android.content.res.Configuration.ORIENTATION_LANDSCAPE:android.content.res.Configuration.ORIENTATION_PORTRAIT) && activity.hasWindowFocus() && !activity.imeAnimationRunning && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime())),7000),"rotation-owned-host-ready");
+    }
+    JSONObject runRotation()throws Exception{
+        JSONObject output=new JSONObject().put("transport","owned Activity orientation request, observed portrait/compact screen keys and actual system touch; no global rotation change");
+        final int[] original={0};main(()->original[0]=activity.getRequestedOrientation());
+        try{
+            stage="portrait-before-rotation";choose();for(char c:"64426".toCharArray())tap("digit-"+c);tapPoint(35,806);result(stage,await(()->body("你好"),3000));
+            stage="landscape-committed-and-input";rotate(true);checkAt(body("你好"),"landscape-committed-preserved");for(char c:"64426".toCharArray())compactTap(c-'0',false);compactTap(0,true);result(stage,await(()->body("你好你好"),3000));
+            stage="portrait-return-and-input";rotate(false);panel="chinese";checkAt(body("你好你好"),"portrait-committed-preserved");for(char c:"64426".toCharArray())tap("digit-"+c);tapPoint(35,806);result(stage,await(()->body("你好你好你好"),3000));
+            stage="unconfirmed-composition-survives-rotation";for(char c:"64426".toCharArray())tap("digit-"+c);rotate(true);compactTap(0,true);result(stage,await(()->body("你好你好你好你好"),3000));
+            boolean valid=cases.length()==4;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable error){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_ROTATION_ASSERTION");}
+        finally{main(()->activity.setRequestedOrientation(original[0]));}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",4).put("original_requested_orientation_restored",true);
+    }
+    private interface FieldCheck { boolean execute() throws Exception; }
+    private void fieldCase(String id,FieldCheck action)throws Exception{
+        stage=id;JSONObject row=new JSONObject().put("id",id);boolean valid=false;
+        try{valid=action.execute();}catch(Throwable ignored){row.put("error_code","E_PIXEL_FIELDS_ASSERTION").put("failure_detail",detail);}
+        if(!valid){
+            main(()->{WindowInsets i=activity.getWindow().getDecorView().getRootWindowInsets();try{row.put("host_window_focus",activity.hasWindowFocus()).put("editor_imm_active",activity.getSystemService(InputMethodManager.class).isActive(activity.editor)).put("ime_inset_visible",i!=null&&i.isVisible(WindowInsets.Type.ime())).put("host_animation_running",activity.imeAnimationRunning);}catch(org.json.JSONException ignored){}});
+            JSONArray windows=new JSONArray();
+            for(AccessibilityWindowInfo window:automation.getWindows()){
+                AccessibilityNodeInfo root=window.getRoot();boolean ownHost=false,ownKeyboard=false;
+                if(root!=null){ownHost=instrumentation.getTargetContext().getPackageName().equals(String.valueOf(root.getPackageName()));ownKeyboard=ime.equals(String.valueOf(root.getPackageName()));root.recycle();}
+                windows.put(new JSONObject().put("type",window.getType()).put("focused",window.isFocused()).put("active",window.isActive()).put("own_host",ownHost).put("own_ime",ownKeyboard));
+            }
+            row.put("window_focus_metadata",windows);
+        }
+        cases.put(row.put("pass",valid));
+    }
+    JSONObject runFields()throws Exception{
+        JSONObject output=new JSONObject().put("transport","actual system touchscreen from observed pixels; independent EditText body/action oracle");
+        String[] kinds={"plain","send","search","next","go"};int[] actions={android.view.inputmethod.EditorInfo.IME_ACTION_DONE,android.view.inputmethod.EditorInfo.IME_ACTION_SEND,android.view.inputmethod.EditorInfo.IME_ACTION_SEARCH,android.view.inputmethod.EditorInfo.IME_ACTION_NEXT,android.view.inputmethod.EditorInfo.IME_ACTION_GO};
+        for(int i=0;i<kinds.length;i++){
+            final String kind=kinds[i];final int action=actions[i];
+            fieldCase("action-"+kind,()->{fieldChoose(kind,"chinese");tap("enter");return await(()->read(()->activity.actionCount==1 && activity.lastAction==action) && body("") && commitCalls()==0,3000);});
+        }
+        for(String kind:new String[]{"number","phone"})fieldCase("field-"+kind,()->{
+            fieldChoose(kind,"number");tap("text-0");tap("text-1");tap("text-2");tap("zero");return await(()->body("1230") && commitCalls()==4,3000);
+        });
+        fieldCase("field-multiline",()->{
+            fieldChoose("multiline","chinese");for(char c:"64426".toCharArray())tap("digit-"+c);
+            tapPoint(35,806);checkAt(await(()->body("你好"),3000),"multiline-word");tap("enter");tap("layout-latin");panel="latin";tap("text-10");
+            return await(()->body("你好\na") && commitCalls()==3,3000);
+        });
+        for(String kind:new String[]{"url","email"})fieldCase("field-"+kind,()->{
+            fieldChoose(kind,"latin");tap("text-10");tap("text-23");tap("text-21");return await(()->body("abc") && commitCalls()==3,3000);
+        });
+        boolean valid=cases.length()==10;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");
+        return output.put("pass",valid).put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",10);
+    }
     JSONObject runPinyin()throws Exception{
         JSONObject output=new JSONObject().put("transport","actual stable screen pixels and touchscreen; own UI labels identify controls only, never node coordinates or service state");
         try{

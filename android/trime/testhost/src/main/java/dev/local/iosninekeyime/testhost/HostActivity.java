@@ -20,7 +20,7 @@ import java.io.ByteArrayInputStream;
 /** Cross-UID synthetic host. No input/file/network logging, persistence, clipboard or IME selection. */
 public final class HostActivity extends Activity {
     public EditText editor;
-    public WebView web;
+    public GuardedWebView web;
     public int upperButtonClicks;
     private View upperPlain;
     public View upperPlainButton(){return upperPlain;}
@@ -104,7 +104,7 @@ public final class HostActivity extends Activity {
     public void showWeb(){
         currentCase="web";editor.clearFocus();editor.setVisibility(View.GONE);
         if(web==null){
-            web=new WebView(this);
+            web=new GuardedWebView(this);
             web.getSettings().setJavaScriptEnabled(false);
             web.getSettings().setAllowFileAccess(false);web.getSettings().setAllowContentAccess(false);
             web.getSettings().setBlockNetworkLoads(true);web.getSettings().setSaveFormData(false);

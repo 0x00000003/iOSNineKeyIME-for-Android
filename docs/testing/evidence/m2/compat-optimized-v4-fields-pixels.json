@@ -1,0 +1,400 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "fields-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "actual system touchscreen from observed pixels; independent EditText body/action oracle",
+    "pass": false,
+    "cases": [
+      {
+        "id": "action-plain",
+        "pass": true
+      },
+      {
+        "id": "action-send",
+        "pass": true
+      },
+      {
+        "id": "action-search",
+        "pass": true
+      },
+      {
+        "id": "action-next",
+        "pass": true
+      },
+      {
+        "id": "action-go",
+        "pass": true
+      },
+      {
+        "id": "field-number",
+        "pass": true
+      },
+      {
+        "id": "field-phone",
+        "pass": true
+      },
+      {
+        "id": "field-multiline",
+        "pass": true
+      },
+      {
+        "id": "field-url",
+        "pass": true
+      },
+      {
+        "id": "field-email",
+        "error_code": "E_PIXEL_FIELDS_ASSERTION",
+        "failure_detail": "stable-frame-timeout-shot-focus-animation-inset",
+        "host_window_focus": false,
+        "editor_imm_active": true,
+        "ime_inset_visible": true,
+        "host_animation_running": false,
+        "window_focus_metadata": [
+          {
+            "type": 3,
+            "focused": false,
+            "active": false,
+            "own_host": false,
+            "own_ime": false
+          },
+          {
+            "type": 1,
+            "focused": true,
+            "active": true,
+            "own_host": false,
+            "own_ime": false
+          },
+          {
+            "type": 2,
+            "focused": false,
+            "active": false,
+            "own_host": false,
+            "own_ime": true
+          },
+          {
+            "type": 1,
+            "focused": false,
+            "active": false,
+            "own_host": true,
+            "own_ime": false
+          }
+        ],
+        "pass": false
+      }
+    ],
+    "reference_captures": [],
+    "actual_pixel_targeted_taps": 25,
+    "planned_cases": 10
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 9,
+  "planned_cases": 10,
+  "status": "FAIL",
+  "window_layout_metadata": {
+    "content_top_inset": 1181,
+    "visible_top_inset": 1181,
+    "touchable_insets": 3,
+    "field_active": true,
+    "destroyed": false,
+    "is_input_view_shown": true,
+    "window_layout_height": -1,
+    "keyboard": {
+      "initial_measure_specs": [
+        [
+          490,
+          108,
+          -2147483648,
+          693
+        ],
+        [
+          490,
+          108,
+          -2147483648,
+          747
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          808
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          1989,
+          -2147483648,
+          920
+        ],
+        [
+          960,
+          2142,
+          -2147483648,
+          920
+        ]
+      ],
+      "width": 960,
+      "height": 808,
+      "measured_width": 960,
+      "measured_height": 808,
+      "width_spec_size": 960,
+      "height_spec_size": 1989,
+      "height_spec_mode": -2147483648,
+      "desired_height": 808,
+      "child_count": 37,
+      "root_height": 1989,
+      "parent_height": 1989,
+      "is_shown": true,
+      "visibility": 0,
+      "safe_left": 0,
+      "safe_right": 0,
+      "safe_bottom": 54,
+      "ancestors": [
+        {
+          "class": "NineKeyView",
+          "id": -1,
+          "height": 808,
+          "width": 960,
+          "y": 1181,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            1181,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "ReferenceInputContainer",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908318,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": 16909476,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "FrameLayout",
+          "id": 16908290,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "LinearLayout",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        },
+        {
+          "class": "DecorView",
+          "id": -1,
+          "height": 1989,
+          "width": 960,
+          "y": 0,
+          "global_visible": true,
+          "visible_rect": [
+            0,
+            0,
+            960,
+            1989
+          ]
+        }
+      ],
+      "screen_x": 0,
+      "screen_y": 1334,
+      "window_x": 0,
+      "window_y": 1181
+    }
+  },
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "action-plain",
+      "pass": true
+    },
+    {
+      "id": "action-send",
+      "pass": true
+    },
+    {
+      "id": "action-search",
+      "pass": true
+    },
+    {
+      "id": "action-next",
+      "pass": true
+    },
+    {
+      "id": "action-go",
+      "pass": true
+    },
+    {
+      "id": "field-number",
+      "pass": true
+    },
+    {
+      "id": "field-phone",
+      "pass": true
+    },
+    {
+      "id": "field-multiline",
+      "pass": true
+    },
+    {
+      "id": "field-url",
+      "pass": true
+    },
+    {
+      "id": "field-email",
+      "error_code": "E_PIXEL_FIELDS_ASSERTION",
+      "failure_detail": "stable-frame-timeout-shot-focus-animation-inset",
+      "host_window_focus": false,
+      "editor_imm_active": true,
+      "ime_inset_visible": true,
+      "host_animation_running": false,
+      "window_focus_metadata": [
+        {
+          "type": 3,
+          "focused": false,
+          "active": false,
+          "own_host": false,
+          "own_ime": false
+        },
+        {
+          "type": 1,
+          "focused": true,
+          "active": true,
+          "own_host": false,
+          "own_ime": false
+        },
+        {
+          "type": 2,
+          "focused": false,
+          "active": false,
+          "own_host": false,
+          "own_ime": true
+        },
+        {
+          "type": 1,
+          "focused": false,
+          "active": false,
+          "own_host": true,
+          "own_ime": false
+        }
+      ],
+      "pass": false
+    }
+  ],
+  "pass": false,
+  "host_run_id": "b0b907af3ff24ff4ab7df780f88a27b5",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "0653783f7bf2345f6240f3cfc7da18c2a8793de56242a2401c2e610aa3f3ee43",
+  "test_apk_sha256": "d8fd5a4ae6f3b37847c3796aad0d72c2e3fc78e996659e4a8d7da1ca37fda65a",
+  "ime_apk_sha256": "990b62cccf28f89eb66866b67b4ac1a04853ced85f624eac6b1c3da435f551a5",
+  "ime_variant": "release",
+  "requested_scope": "fields-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}
