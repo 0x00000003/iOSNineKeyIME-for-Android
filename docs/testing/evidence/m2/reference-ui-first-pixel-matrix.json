@@ -1,0 +1,897 @@
+{
+  "scope": "reference-ui",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "status": "FAIL",
+  "failure_stage": "reference-latin",
+  "failure_step": "settle",
+  "tap_attempts": 4,
+  "injected_taps": 4,
+  "measured_bottom_gap": 55,
+  "expected_bottom_gap": 54,
+  "ime_window_root_geometry": [
+    [
+      0,
+      2133,
+      960,
+      3053
+    ],
+    [
+      0,
+      2133,
+      960,
+      3053
+    ]
+  ],
+  "ime_windows": 1,
+  "own_ime_root": true,
+  "error_code": "E_SYSTEM_HOST_ASSERTION",
+  "reference_captures": [
+    {
+      "id": "r01-chinese",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "punct-0": [
+          18,
+          89,
+          122,
+          209
+        ],
+        "punct-1": [
+          122,
+          89,
+          226,
+          209
+        ],
+        "punct-2": [
+          226,
+          89,
+          330,
+          209
+        ],
+        "punct-3": [
+          330,
+          89,
+          435,
+          209
+        ],
+        "punct-4": [
+          435,
+          89,
+          539,
+          209
+        ],
+        "punct-5": [
+          539,
+          89,
+          643,
+          209
+        ],
+        "punct-6": [
+          643,
+          89,
+          747,
+          209
+        ],
+        "punct-7": [
+          747,
+          89,
+          852,
+          209
+        ],
+        "expand": [
+          861,
+          89,
+          951,
+          209
+        ],
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ],
+        "enter": [
+          768,
+          493,
+          942,
+          742
+        ],
+        "globe": [
+          49,
+          757,
+          157,
+          865
+        ],
+        "microphone": [
+          802,
+          757,
+          910,
+          865
+        ]
+      },
+      "synthetic_key_fill_rgb": [
+        70,
+        70,
+        70
+      ],
+      "png_sha256": "3d82ddce07d5fc72d885ceb4b3135992e1656d4904a8bca34647fec13945a2e3",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r01-pressed",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "punct-0": [
+          18,
+          89,
+          122,
+          209
+        ],
+        "punct-1": [
+          122,
+          89,
+          226,
+          209
+        ],
+        "punct-2": [
+          226,
+          89,
+          330,
+          209
+        ],
+        "punct-3": [
+          330,
+          89,
+          435,
+          209
+        ],
+        "punct-4": [
+          435,
+          89,
+          539,
+          209
+        ],
+        "punct-5": [
+          539,
+          89,
+          643,
+          209
+        ],
+        "punct-6": [
+          643,
+          89,
+          747,
+          209
+        ],
+        "punct-7": [
+          747,
+          89,
+          852,
+          209
+        ],
+        "expand": [
+          861,
+          89,
+          951,
+          209
+        ],
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "digit-2": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "digit-3": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "digit-4": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "digit-5": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "digit-6": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "digit-7": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "digit-8": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "digit-9": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "pinyin": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "space": [
+          394,
+          627,
+          753,
+          742
+        ],
+        "enter": [
+          768,
+          493,
+          942,
+          742
+        ],
+        "globe": [
+          49,
+          757,
+          157,
+          865
+        ],
+        "microphone": [
+          802,
+          757,
+          910,
+          865
+        ]
+      },
+      "synthetic_key_fill_rgb": [
+        133,
+        133,
+        133
+      ],
+      "png_sha256": "28663468734b4148612c322ae4f7f9eef8a2a4be6d18dcac3984541a1a68586e",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r02-number",
+      "width": 960,
+      "height": 920,
+      "keys": {
+        "punct-0": [
+          18,
+          89,
+          122,
+          209
+        ],
+        "punct-1": [
+          122,
+          89,
+          226,
+          209
+        ],
+        "punct-2": [
+          226,
+          89,
+          330,
+          209
+        ],
+        "punct-3": [
+          330,
+          89,
+          435,
+          209
+        ],
+        "punct-4": [
+          435,
+          89,
+          539,
+          209
+        ],
+        "punct-5": [
+          539,
+          89,
+          643,
+          209
+        ],
+        "punct-6": [
+          643,
+          89,
+          747,
+          209
+        ],
+        "punct-7": [
+          747,
+          89,
+          852,
+          209
+        ],
+        "expand": [
+          861,
+          89,
+          951,
+          209
+        ],
+        "layout-primary": [
+          19,
+          227,
+          191,
+          342
+        ],
+        "text-0": [
+          206,
+          227,
+          378,
+          342
+        ],
+        "text-1": [
+          394,
+          227,
+          565,
+          342
+        ],
+        "text-2": [
+          581,
+          227,
+          753,
+          342
+        ],
+        "delete": [
+          768,
+          227,
+          942,
+          342
+        ],
+        "layout-symbols": [
+          19,
+          360,
+          191,
+          475
+        ],
+        "text-3": [
+          206,
+          360,
+          378,
+          475
+        ],
+        "text-4": [
+          394,
+          360,
+          565,
+          475
+        ],
+        "text-5": [
+          581,
+          360,
+          753,
+          475
+        ],
+        "more": [
+          768,
+          360,
+          942,
+          475
+        ],
+        "layout-latin": [
+          19,
+          493,
+          191,
+          609
+        ],
+        "text-6": [
+          206,
+          493,
+          378,
+          609
+        ],
+        "text-7": [
+          394,
+          493,
+          565,
+          609
+        ],
+        "text-8": [
+          581,
+          493,
+          753,
+          609
+        ],
+        "emoji": [
+          19,
+          627,
+          191,
+          742
+        ],
+        "number-punctuation": [
+          206,
+          627,
+          378,
+          742
+        ],
+        "zero": [
+          394,
+          627,
+          565,
+          742
+        ],
+        "space": [
+          581,
+          627,
+          753,
+          742
+        ],
+        "enter": [
+          768,
+          493,
+          942,
+          742
+        ],
+        "globe": [
+          49,
+          757,
+          157,
+          865
+        ],
+        "microphone": [
+          802,
+          757,
+          910,
+          865
+        ]
+      },
+      "png_sha256": "25e868a15a356fed5b06f729fc0c094237e2247564277b6c5f9d10399205fea7",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "r03-symbols",
+      "width": 960,
+      "height": 904,
+      "keys": {
+        "punct-0": [
+          18,
+          89,
+          122,
+          209
+        ],
+        "punct-1": [
+          122,
+          89,
+          226,
+          209
+        ],
+        "punct-2": [
+          226,
+          89,
+          330,
+          209
+        ],
+        "punct-3": [
+          330,
+          89,
+          435,
+          209
+        ],
+        "punct-4": [
+          435,
+          89,
+          539,
+          209
+        ],
+        "punct-5": [
+          539,
+          89,
+          643,
+          209
+        ],
+        "punct-6": [
+          643,
+          89,
+          747,
+          209
+        ],
+        "punct-7": [
+          747,
+          89,
+          852,
+          209
+        ],
+        "expand": [
+          861,
+          89,
+          951,
+          209
+        ],
+        "text-0": [
+          16,
+          222,
+          95,
+          330
+        ],
+        "text-1": [
+          110,
+          222,
+          190,
+          330
+        ],
+        "text-2": [
+          204,
+          222,
+          284,
+          330
+        ],
+        "text-3": [
+          298,
+          222,
+          378,
+          330
+        ],
+        "text-4": [
+          393,
+          222,
+          472,
+          330
+        ],
+        "text-5": [
+          487,
+          222,
+          566,
+          330
+        ],
+        "text-6": [
+          581,
+          222,
+          661,
+          330
+        ],
+        "text-7": [
+          675,
+          222,
+          755,
+          330
+        ],
+        "text-8": [
+          769,
+          222,
+          849,
+          330
+        ],
+        "text-9": [
+          864,
+          222,
+          943,
+          330
+        ],
+        "text-10": [
+          16,
+          355,
+          95,
+          463
+        ],
+        "text-11": [
+          110,
+          355,
+          190,
+          463
+        ],
+        "text-12": [
+          204,
+          355,
+          284,
+          463
+        ],
+        "text-13": [
+          298,
+          355,
+          378,
+          463
+        ],
+        "text-14": [
+          393,
+          355,
+          472,
+          463
+        ],
+        "text-15": [
+          487,
+          355,
+          566,
+          463
+        ],
+        "text-16": [
+          581,
+          355,
+          661,
+          463
+        ],
+        "text-17": [
+          675,
+          355,
+          755,
+          463
+        ],
+        "text-18": [
+          769,
+          355,
+          849,
+          463
+        ],
+        "text-19": [
+          864,
+          355,
+          943,
+          463
+        ],
+        "symbol-page": [
+          16,
+          488,
+          123,
+          596
+        ],
+        "text-20": [
+          147,
+          488,
+          245,
+          596
+        ],
+        "text-21": [
+          261,
+          488,
+          358,
+          596
+        ],
+        "text-22": [
+          375,
+          488,
+          472,
+          596
+        ],
+        "text-23": [
+          488,
+          488,
+          586,
+          596
+        ],
+        "text-24": [
+          602,
+          488,
+          700,
+          596
+        ],
+        "text-25": [
+          716,
+          488,
+          813,
+          596
+        ],
+        "delete": [
+          836,
+          488,
+          943,
+          596
+        ],
+        "layout-return": [
+          16,
+          622,
+          237,
+          730
+        ],
+        "space": [
+          251,
+          622,
+          708,
+          730
+        ],
+        "enter": [
+          722,
+          622,
+          945,
+          730
+        ],
+        "globe": [
+          49,
+          741,
+          157,
+          849
+        ],
+        "microphone": [
+          802,
+          741,
+          910,
+          849
+        ]
+      },
+      "png_sha256": "238254c4557d4237608dc6089f2801b918a14b67ef776e7334f59abee68b53d5",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    }
+  ],
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "reference-chinese",
+      "pass": true
+    },
+    {
+      "id": "reference-highlight",
+      "physical_press_changes_fill": true,
+      "pass": true
+    },
+    {
+      "id": "reference-number",
+      "pass": true
+    },
+    {
+      "id": "reference-symbols",
+      "pass": true
+    },
+    {
+      "id": "reference-return-chinese",
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "d25c1236972c4e619cef119abf6006e4",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "ea3e5216ec71c91a705391706cc94e5474ff51ca2e0b731ba5eaafa109538dab",
+  "test_apk_sha256": "ee7827b57aebd56df9b292cba53a724160cc02f64ef0963584ad1b3b30d9dbde",
+  "ime_apk_sha256": "1f40c1df3ac810ebbdb277b2d8af876aeaf8aa4146e8f199675984b22dd19e51",
+  "ime_variant": "debug",
+  "requested_scope": "reference-ui",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

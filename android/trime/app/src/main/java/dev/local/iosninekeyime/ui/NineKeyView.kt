@@ -3,28 +3,43 @@ package dev.local.iosninekeyime.ui
 
 import android.content.Context
 import android.content.res.Configuration
-import android.graphics.Color
+import android.content.res.ColorStateList
+import android.graphics.*
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.StateListDrawable
+import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
 import android.text.TextUtils
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowInsets
-import android.os.Build
+import android.view.*
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
-import android.widget.TextView
 import dev.local.iosninekeyime.state.*
+import kotlin.math.abs
+import kotlin.math.ceil
+import kotlin.math.max
+import kotlin.math.min
 
-/** Provisional project layout. No iOS geometry/font/assets or pixel equivalence is claimed. */
-class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
-                  private val hide:()->Unit={}, private val togglePrivacy:()->Unit={}, private val retry:()->Unit={}, private val switchIme:()->Unit={}) : ViewGroup(context) {
+/** Reference-derived panels with real reducer events and shared drawing/hit geometry.
+ * Original pixels stay private. Uses system fonts and original geometric vector drawings.
+ */
+class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
+                  private val hide:()->Unit={},private val togglePrivacy:()->Unit={},private val retry:()->Unit={},
+                  private val switchIme:()->Unit={},private val openSettings:()->Unit={},
+                  private val availableHeightPx:(()->Int)?=null) : ViewGroup(context) {
+    private enum class Popup { NONE, OPTIONS, PUNCTUATION, PINYIN, VOICE }
     private val density=resources.displayMetrics.density
     private var state=KeyboardState()
     private var shift=false
+    private var symbolPage=false
+    private var numberMore=false
+    private var emojiCategory=0
+    private var pendingEmojiCategory:Int?=null
+    private var emojiPage=0
+    private var emojiQuery=""
+    private var emojiSearch=false
+    private var popup=Popup.NONE
     private var lastStamp=Stamp(0,0)
     private var map=HitMap(emptyList())
     private val touches=TouchProtocol(map)
@@ -32,168 +47,279 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
     private val geometry=mutableMapOf<String,KeyBox>()
     private val handler=Handler(Looper.getMainLooper())
     private var pointerDown=false
-    private var contentHeight=310f
+    private var pointerId=-1
+    private var downX=0f
+    private var downY=0f
+    private var pressedId:String?=null
     private var currentWidth=0f
+    private var maximumHeight=Float.POSITIVE_INFINITY
+    private var publishedHeight=-1
+    private val measureHistory=org.json.JSONArray()
+    private var lastWidthSpec=0
+    private var lastHeightSpec=0
+    private var panel:ReferencePanel?=null
     private var safeLeft=0
     private var safeRight=0
     private var safeBottom=0
     private val dark get()=resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK==Configuration.UI_MODE_NIGHT_YES
-    private val repeater=object:Runnable {
-        override fun run() {
-            if(!pointerDown)return
-            touches.tick(SystemClock.uptimeMillis())?.let {activate(it)}
-            handler.postDelayed(this,16)
+    private val backgroundColor get()=if(dark)0xff222222.toInt()else 0xffd1d3d9.toInt()
+    private val keyForeground get()=if(dark)0xfff4f4f4.toInt()else Color.BLACK
+    private val repaint=Paint(Paint.ANTI_ALIAS_FLAG)
+    private val optionsHold=Runnable {if(pointerDown && pressedId=="globe"){cancelTouches();popup=Popup.OPTIONS;rebuild()}}
+    private val repeater=object:Runnable {override fun run(){if(!pointerDown)return;touches.tick(SystemClock.uptimeMillis())?.let(::activate);handler.postDelayed(this,16)}}
+    init {importantForAccessibility=IMPORTANT_FOR_ACCESSIBILITY_YES;setWillNotDraw(false);clipChildren=true;clipToPadding=false}
+
+    fun render(value:KeyboardState){
+        if(value.stamp.session>lastStamp.session){
+            touches.startSession(value.stamp.session);stopRepeating();clearPressed();shift=false;symbolPage=false;numberMore=false
+            emojiCategory=0;emojiPage=0;emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE
+        }else if(value.layout!=state.layout || value.expanded!=state.expanded){cancelTouches();popup=Popup.NONE}
+        if(value.layout==Layout.EMOJI && state.layout!=Layout.EMOJI){pendingEmojiCategory?.let{emojiCategory=it;pendingEmojiCategory=null};emojiPage=0}
+        if(value.layout!=Layout.EMOJI){emojiQuery="";emojiSearch=false}
+        lastStamp=value.stamp;state=value;rebuild()
+    }
+    fun cancelTouches(){touches.cancel();stopRepeating();clearPressed()}
+    fun layoutMetadata():org.json.JSONObject {
+        val ancestors=org.json.JSONArray()
+        var ancestor:View?=this
+        while(ancestor!=null && ancestors.length()<8){
+            val loc=IntArray(2);ancestor.getLocationInWindow(loc)
+            val rect=Rect();val visible=ancestor.getGlobalVisibleRect(rect)
+            ancestors.put(org.json.JSONObject().put("class",ancestor.javaClass.simpleName).put("id",ancestor.id)
+                .put("height",ancestor.height).put("width",ancestor.width).put("y",loc[1])
+                .put("global_visible",visible).put("visible_rect",org.json.JSONArray(listOf(rect.left,rect.top,rect.right,rect.bottom))))
+            ancestor=ancestor.parent as? View
+        }
+        val screen=IntArray(2);getLocationOnScreen(screen)
+        val location=IntArray(2);getLocationInWindow(location)
+        return org.json.JSONObject()
+        .put("initial_measure_specs",measureHistory).put("width",width).put("height",height).put("measured_width",measuredWidth).put("measured_height",measuredHeight)
+        .put("width_spec_size",MeasureSpec.getSize(lastWidthSpec)).put("height_spec_size",MeasureSpec.getSize(lastHeightSpec)).put("height_spec_mode",MeasureSpec.getMode(lastHeightSpec))
+        .put("desired_height",publishedHeight).put("child_count",childCount).put("root_height",rootView.height)
+        .put("parent_height",(parent as? View)?.height?:-1).put("is_shown",isShown).put("visibility",visibility)
+        .put("safe_left",safeLeft).put("safe_right",safeRight).put("safe_bottom",safeBottom)
+        .put("ancestors",ancestors).put("screen_x",screen[0]).put("screen_y",screen[1]).put("window_x",location[0]).put("window_y",location[1])
+    }
+    private fun stopRepeating(){pointerDown=false;pointerId=-1;handler.removeCallbacks(repeater);handler.removeCallbacks(optionsHold)}
+    private fun clearPressed(){pressedId?.let{findViewWithTag<View>(it)?.isPressed=false};pressedId=null}
+    private fun activate(a:KeyActivation){if(a.session==state.stamp.session){if(a.key=="delete")send(Event.Backspace,a.repeated)else if(a.key=="search-delete")searchDelete()else actions[a.key]?.invoke()}}
+    private fun rebuild(){if(currentWidth>200)buildKeys();requestLayout();invalidate()}
+    private fun local(action:()->Unit){cancelTouches();action();rebuild()}
+    private fun emit(event:Event){popup=Popup.NONE;send(event,false)}
+
+    private fun keyBackground(tone:KeyTone,selected:Boolean=false,search:Boolean=false):StateListDrawable {
+        val normal=when{
+            search->if(dark)0xff3b3b3b.toInt()else 0xffbfc1c7.toInt()
+            selected->Color.WHITE
+            tone==KeyTone.CLEAR->Color.TRANSPARENT
+            tone==KeyTone.ENTER->if(dark){if(state.layout in setOf(Layout.CHINESE,Layout.NUMBER))0xff909090.toInt()else 0xff7a7a7a.toInt()}else Color.WHITE
+            else->if(dark)0xff464646.toInt()else Color.WHITE
+        }
+        val radius=(if(search)30f else 15f)*(panel?.scale?:1f)*density
+        fun fill(color:Int)=GradientDrawable().apply{setColor(color);cornerRadius=radius}
+        return StateListDrawable().apply{
+            addState(intArrayOf(android.R.attr.state_pressed),fill(if(dark)0xff858585.toInt()else 0xffaeb1b8.toInt()))
+            addState(intArrayOf(android.R.attr.state_focused),fill(if(dark)0xff606066.toInt()else 0xffb6bbc5.toInt()))
+            addState(intArrayOf(),fill(normal))
         }
     }
-    init { importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_YES;setWillNotDraw(false) }
-    fun render(value:KeyboardState) {
-        if(value.stamp.session>lastStamp.session) {touches.startSession(value.stamp.session);stopRepeating();shift=false}
-        lastStamp=value.stamp;state=value
-        if(currentWidth>0)buildKeys(currentWidth)
-        requestLayout()
-    }
-    fun cancelTouches() {touches.cancel();stopRepeating()}
-    private fun stopRepeating(){pointerDown=false;handler.removeCallbacks(repeater)}
-    private fun activate(a:KeyActivation) {
-        if(a.session!=state.stamp.session)return
-        if(a.key=="delete")send(Event.Backspace,a.repeated) else actions[a.key]?.invoke()
-    }
-    private fun addLabel(id:String,label:String,box:KeyBox,action:(()->Unit)?=null,small:Boolean=false,enabled:Boolean=true) {
-        val key=TextView(context).apply {
-            tag=id;text=label;textSize=if(small)14f else 18f
-            gravity=android.view.Gravity.CENTER;maxLines=1;ellipsize=TextUtils.TruncateAt.END
-            setTextColor(if(dark)Color.WHITE else Color.BLACK)
-            if(action!=null) {
-                isEnabled=enabled;isFocusable=enabled;isClickable=enabled;alpha=if(enabled)1f else 0.45f
-                contentDescription=label
-                accessibilityDelegate=object:View.AccessibilityDelegate(){override fun onInitializeAccessibilityNodeInfo(host:View,info:AccessibilityNodeInfo){super.onInitializeAccessibilityNodeInfo(host,info);info.className=Button::class.java.name}}
-                if(enabled)setOnClickListener {touches.accessibilityActivate(id,state.stamp.session)?.let {activate(it)}}
+    private fun addKey(key:ReferenceKey,enabled:Boolean=true,action:(()->Unit)?=null){
+        val box=key.box;geometry[box.id]=box
+        val view=ReferenceKeyView(context).apply{
+            tag=box.id;caption.text=key.label;caption.textSize=key.textSize;caption.includeFontPadding=false;caption.gravity=Gravity.CENTER
+            caption.maxLines=1;caption.ellipsize=TextUtils.TruncateAt.END;setPadding(0,0,0,0);glyph=key.glyph
+            iconColor=if(box.id=="shift" && shift)Color.BLACK else keyForeground
+            caption.setTextColor(ColorStateList.valueOf(iconColor));background=keyBackground(key.tone,box.id=="shift" && shift,box.id=="emoji-search")
+            if(state.layout==Layout.CHINESE && box.id=="more"){caption.text="^^";caption.paintFlags=caption.paintFlags or Paint.UNDERLINE_TEXT_FLAG}
+            if(state.layout==Layout.CHINESE && box.id.startsWith("digit-"))caption.letterSpacing=0.12f
+            if(box.id=="emoji-search"){
+                caption.text=if(emojiQuery.isEmpty())"Search Emoji"else emojiQuery;glyph=KeyGlyph.SEARCH;leadingGlyph=true
+                caption.gravity=Gravity.CENTER_VERTICAL;setPadding((48*density).toInt(),0,(12*density).toInt(),0)
+                caption.setTextColor(if(dark)0xffa0a0a0.toInt()else 0xff555555.toInt())
             }
-            background=GradientDrawable().apply {setColor(if(dark)0xff515155.toInt() else Color.WHITE);cornerRadius=6*density}
+            if(box.id.startsWith("emoji-category-")){
+                val index=box.id.substringAfterLast('-').toInt();isSelected=index==emojiCategory;selectionDisc=isSelected
+            }
+            isEnabled=enabled;isFocusable=enabled;isClickable=action!=null && enabled
+            contentDescription=when{
+                box.id.startsWith("emoji-category-")->EmojiCatalog.categoryNames[box.id.substringAfterLast('-').toInt()]
+                key.event is Event.Text && state.layout==Layout.LATIN->(key.event as Event.Text).value
+                box.id=="emoji-search"->"搜索表情"
+                else->key.label
+            }
+            accessibilityDelegate=object:View.AccessibilityDelegate(){override fun onInitializeAccessibilityNodeInfo(host:View,info:AccessibilityNodeInfo){super.onInitializeAccessibilityNodeInfo(host,info);if(isClickable)info.className=Button::class.java.name;info.extras.putString("dev.local.iosninekeyime.key_id",box.id)}}
+            if(action!=null && enabled)setOnClickListener{touches.accessibilityActivate(box.id,state.stamp.session)?.let(::activate)}
+            if(box.id=="globe")setOnLongClickListener{local{popup=Popup.OPTIONS};true}
         }
-        val width=((box.right-box.left)*density).toInt();val height=((box.bottom-box.top)*density).toInt()
-        addView(key,LayoutParams(width,height))
-        // A second touch can arrive before the next layout frame after a state update.
-        key.measure(MeasureSpec.makeMeasureSpec(width,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY))
-        key.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())
-        if(action!=null && enabled)actions[id]=action
+        val w=((box.right-box.left)*density).toInt();val h=((box.bottom-box.top)*density).toInt()
+        addView(view,LayoutParams(w,h));view.measure(MeasureSpec.makeMeasureSpec(w,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(h,MeasureSpec.EXACTLY))
+        view.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())
+        if(action!=null && enabled)actions[box.id]=action
     }
-    private fun buildKeys(width:Float) {
+    private fun label(id:String,text:String,l:Float,t:Float,r:Float,b:Float,size:Float=14f){if(b>t && r>l)addKey(ReferenceKey(KeyBox(id,l,t,r,b),text,tone=KeyTone.CLEAR,textSize=size))}
+    private fun button(id:String,text:String,l:Float,t:Float,r:Float,b:Float,enabled:Boolean=true,action:()->Unit){addKey(ReferenceKey(KeyBox(id,l,t,r,b),text,textSize=17f),enabled,action)}
+    private fun buildKeys(){
+        val previous=pressedId?.let{map.keys.firstOrNull{box->box.id==it}}
         removeAllViews();actions.clear();geometry.clear()
-        setBackgroundColor(if(dark)0xff2c2c2e.toInt() else 0xffd2d5db.toInt())
-        val keys=mutableListOf<KeyBox>()
-        fun key(id:String,label:String,l:Float,t:Float,r:Float,b:Float,small:Boolean=false,repeats:Boolean=false,enabled:Boolean=true,action:()->Unit) {
-            val box=KeyBox(id,l,t,r,b,repeats);geometry[id]=box;if(enabled)keys+=box;addLabel(id,label,box,action,small,enabled)
+        val allEmoji=EmojiCatalog.select(emojiCategory,emojiQuery)
+        val emojiPageSize=ReferenceGeometry.emojiPageSize(currentWidth,maximumHeight)
+        emojiPage=emojiPage.coerceIn(0,max(0,(allEmoji.size-1)/emojiPageSize))
+        val visible=allEmoji.drop(emojiPage*emojiPageSize).take(emojiPageSize)
+        val p=ReferenceGeometry.build(state,currentWidth,safeBottom/density,maximumHeight,shift,symbolPage,numberMore,visible,emojiSearch)
+        panel=p
+        val desired=ceil(p.totalHeight*density).toInt()
+        if(desired!=publishedHeight)publishedHeight=desired
+        fun bind(key:ReferenceKey){
+            val event=key.event
+            val action:()->Unit=when{key.command!=null->{ {command(key)} };event!=null->{ {emit(event)} };else->{ {} }}
+            addKey(key,action=action)
         }
-        val status=when {
-            state.errorCode!=null -> when(state.errorCode){"E_HOST_PENDING"->"宿主未接收，请恢复连接后重试";"E_NO_CANDIDATE"->"无可用候选，可修改或取消";else->"输入暂不可用（${state.errorCode}）"}
-            state.sensitive->"私密 · 直接输入，不学习"
-            state.awaiting->"正在处理…"
-            !state.ready && state.layout==Layout.CHINESE->"正在准备固定离线资源…"
-            state.composing->state.preedit.ifEmpty {state.input}
-            else->"九键 · 临时布局"
+        val header=when{
+            state.errorCode!=null->when(state.errorCode){"E_HOST_PENDING"->"宿主未接收，请恢复连接后重试";"E_NO_CANDIDATE"->"无可用候选";else->"输入暂不可用（${state.errorCode}）"}
+            state.composing->state.preedit.ifEmpty{state.input}
+            !state.ready && state.layout==Layout.CHINESE->"正在准备离线资源…"
+            else->""
         }
-        val info=TextView(context).apply {tag="status";text=status;textSize=13f;maxLines=1;ellipsize=TextUtils.TruncateAt.END;gravity=android.view.Gravity.CENTER;setTextColor(if(dark)Color.WHITE else Color.DKGRAY)}
-        addView(info,LayoutParams((width*density).toInt(),(24*density).toInt()))
-        if(state.bar==Bar.PUNCTUATION) {
-            val cell=(width-12)/KeyboardReducer.punctuation.size
-            KeyboardReducer.punctuation.forEachIndexed {i,p->key("punct-$i",p,6+i*cell,27f,6+(i+1)*cell-2,75f){send(Event.Punctuation(p),false)}}
-        } else if(state.bar==Bar.CANDIDATES && state.candidates.isNotEmpty()) {
-            val count=if(state.expanded)KeyboardReducer.CANDIDATE_PAGE_SIZE else 3
-            val candidates=state.candidates.take(count)
-            val cols=if(state.expanded)4 else 3
-            val usable=if(state.expanded)width-12 else width-66
-            val cell=usable/cols
-            candidates.forEachIndexed {i,c->
-                key("candidate-${c.id.stamp.session}-${c.id.stamp.revision}-${c.id.index}",c.text,6+(i%cols)*cell,27f+(i/cols)*50,6+(i%cols+1)*cell-4,75f+(i/cols)*50,true,enabled=!state.awaiting){send(Event.Choose(c.id),false)}
-            }
-            if(!state.expanded)key("expand","展开",width-54,27f,width-6,75f,true){send(Event.Expand,false)}
-        } else {
-            key("bar-info",when(state.bar){Bar.NO_CANDIDATES->"无候选 · 修改或取消";Bar.PRIVATE->"不读取周围文字";Bar.UNAVAILABLE->if(state.errorCode!=null)"引擎未就绪 · 点此重试" else "正在部署离线数据";else->"英文 / 数字 / 符号"},6f,27f,width-6,75f,true){if(state.errorCode!=null)retry()}
-        }
-        if(state.expanded) {
-            val top=282f;val cell=(width-30)/4
-            key("previous","上一页",6f,top,6+cell,top+48,true,enabled=!state.awaiting&&state.candidateOffset>0){send(Event.CandidatePage(-1),false)}
-            key("next","下一页",12+cell,top,12+2*cell,top+48,true,enabled=!state.awaiting&&state.hasMoreCandidates){send(Event.CandidatePage(1),false)}
-            key("collapse","收起",18+2*cell,top,18+3*cell,top+48,true,enabled=!state.awaiting){send(Event.Expand,false)}
-            key("cancel","取消",24+3*cell,top,width-6,top+48,true){send(Event.Cancel,false)}
-            contentHeight=336f
-        } else {
-            val top=81f
-            val labels=when(state.layout){
-                Layout.CHINESE->listOf("，","ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ")
-                Layout.NUMBER->listOf("1","2","3","4","5","6","7","8","9",".","0","-")
-                Layout.SYMBOLS->listOf("，","。","？","！","、","：","；","（","）","@","#","/")
-                Layout.LATIN->"qwertyuiopasdfghjklzxcvbnm".map {if(shift)it.uppercaseChar().toString() else it.toString()}
-            }
-            val cols=if(state.layout==Layout.LATIN)7 else 3
-            val rows=(labels.size+cols-1)/cols
-            val cell=(width-72-(cols-1)*6)/cols
-            labels.forEachIndexed {i,label->
-                val l=6+(i%cols)*(cell+6);val t=top+(i/cols)*58
-                val id=if(state.layout==Layout.CHINESE && i>0)"digit-${i+1}" else "text-$i"
-                key(id,label,l,t,l+cell,t+52){
-                    if(state.layout==Layout.CHINESE) {if(i==0)send(Event.Punctuation("，"),false)else send(Event.Digit(i+1),false)}
-                    else send(Event.Text(label),false)
+        if(p.headerHeight>0 && header.isNotEmpty())label("status",header,8f,0f,currentWidth-8,p.headerHeight,13f)
+        if(state.layout!=Layout.EMOJI){
+            val barRight=if(state.layout==Layout.LATIN)currentWidth else currentWidth-48;val t=p.barTop;val b=t+p.barHeight
+            when{
+                state.sensitive->label("bar-private","私密 · 不学习",8f,t,barRight,b,14f)
+                state.errorCode!=null || state.bar==Bar.UNAVAILABLE->{
+                    val k=ReferenceKey(KeyBox("bar-info",8f,t,barRight,b),if(state.errorCode!=null)"点此重试"else"正在准备离线资源…",tone=KeyTone.CLEAR,textSize=14f)
+                    addKey(k,action={retry()})
+                }
+                state.composing || state.awaiting->{
+                    if(state.candidates.isEmpty())label("bar-empty",if(state.awaiting)"正在生成候选…"else"无候选 · 修改或取消",8f,t,barRight,b,14f)
+                    else if(!state.expanded){
+                        val textPaint=Paint().apply{textSize=31*p.scale*density}
+                        var left=10f
+                        for(c in state.candidates){
+                            val cell=max(44f,textPaint.measureText(c.text)/density+18)
+                            if(left+cell>barRight)break
+                            val key=ReferenceKey(KeyBox("candidate-${c.id.stamp.session}-${c.id.stamp.revision}-${c.id.index}",left,t,left+cell,b),c.text,tone=KeyTone.CLEAR,textSize=31*p.scale)
+                            addKey(key,!state.awaiting){emit(Event.Choose(c.id))};left+=cell
+                        }
+                    }
+                }
+                state.layout==Layout.LATIN->{
+                    listOf("I","The","I'm").forEachIndexed{i,text->val cell=barRight/3;addKey(ReferenceKey(KeyBox("english-quick-$i",i*cell,t,(i+1)*cell,b),text,Event.Text(text),tone=KeyTone.CLEAR,textSize=27*p.scale),action={emit(Event.Text(text))})}
+                }
+                else->{
+                    val values=if(state.layout==Layout.NUMBER)listOf(".",",","-","+","/",":",";","=")else KeyboardReducer.punctuation
+                    val cell=(barRight-8)/values.size
+                    values.forEachIndexed{i,text->val event=if(state.layout==Layout.NUMBER)Event.Text(text)else Event.Punctuation(text);addKey(ReferenceKey(KeyBox("punct-$i",8+i*cell,t,8+(i+1)*cell,b),text,event,tone=KeyTone.CLEAR,textSize=31*p.scale),action={emit(event)})}
                 }
             }
-            key("delete","退格",width-54,top,width-6,top+52,true,true){send(Event.Backspace,false)}
-            key("cancel","取消",width-54,top+58,width-6,top+110,true){send(Event.Cancel,false)}
-            key("privacy",if(state.sensitive)"私密开" else "私密关",width-54,top+116,width-6,top+168,true){togglePrivacy()}
-            if(state.layout==Layout.LATIN)key("shift",if(shift)"小写" else "大写",width-54,top+174,width-6,top+226,true){shift=!shift;buildKeys(width);requestLayout()}
-            val bottom=top+rows*58
-            val labels2=listOf("符号","123",if(state.layout==Layout.LATIN)"中文" else "ABC","空格",when(state.action){EditorAction.NEWLINE->"换行";EditorAction.DONE->"完成";EditorAction.SEND->"发送";EditorAction.SEARCH->"搜索";EditorAction.NEXT->"下一项";EditorAction.GO->"前往"},"切换","收起")
-            val cell2=(width-48)/7
-            labels2.forEachIndexed {i,label->val l=6+i*(cell2+6)
-                key("bottom-$i",label,l,bottom,l+cell2,bottom+52,true){when(i){0->send(Event.ChangeLayout(Layout.SYMBOLS),false);1->send(Event.ChangeLayout(Layout.NUMBER),false);2->send(Event.ChangeLayout(if(state.layout==Layout.LATIN)Layout.CHINESE else Layout.LATIN),false);3->send(Event.Space,false);4->send(Event.Enter,false);5->switchIme();6->hide()}}
+            if(state.layout!=Layout.LATIN){
+                val expand=ReferenceKey(KeyBox("expand",currentWidth-44,t,currentWidth-4,b),if(state.expanded)"收起候选"else"展开",glyph=KeyGlyph.EXPAND,tone=KeyTone.CLEAR)
+                addKey(expand,action={if(state.composing)emit(Event.Expand)else local{popup=Popup.PUNCTUATION}})
             }
-            contentHeight=bottom+58
         }
-        val next=HitMap(keys)
+        if(popup!=Popup.NONE){p.keys.filter{it.box.id in setOf("globe","microphone")}.forEach(::bind);buildPopup(p)}
+        else if(state.expanded){
+            p.keys.forEach(::bind)
+            val cols=if(p.compact)7 else 5;val cell=(currentWidth-6*(cols+1))/cols
+            state.candidates.take(20).forEachIndexed{i,c->val l=6+(i%cols)*(cell+6);val t=p.bodyTop+(i/cols)*54;addKey(ReferenceKey(KeyBox("candidate-${c.id.stamp.session}-${c.id.stamp.revision}-${c.id.index}",l,t,l+cell,t+48),c.text,textSize=17f),!state.awaiting){emit(Event.Choose(c.id))}}
+            val top=p.bodyTop+(if(p.compact)3 else 4)*54;val w=(currentWidth-30)/4
+            listOf("上一页","下一页","收起","取消").forEachIndexed{i,text->val l=6+i*(w+6);button(listOf("previous","next","collapse","cancel")[i],text,l,top,l+w,top+48,
+                enabled=!state.awaiting && when(i){0->state.candidateOffset>0;1->state.hasMoreCandidates;else->true}){emit(when(i){0->Event.CandidatePage(-1);1->Event.CandidatePage(1);2->Event.Expand;else->Event.Cancel})}}
+        }else{
+            p.keys.forEach(::bind)
+            if(state.layout==Layout.EMOJI && !emojiSearch && visible.isEmpty())label("emoji-empty","没有匹配的表情",8f,p.bodyTop,currentWidth-8,p.bodyTop+48,16f)
+        }
+        val next=HitMap(actions.keys.map{checkNotNull(geometry[it])})
         touches.updateMap(next);map=next
+        if(previous!=null && next.keys.any{it==previous})findViewWithTag<View>(previous.id)?.isPressed=true else clearPressed()
+    }
+    private fun command(key:ReferenceKey){when(key.command){
+        KeyCommand.SHIFT->local{shift=!shift}
+        KeyCommand.EMOJI->{pendingEmojiCategory=0;emit(Event.ChangeLayout(Layout.EMOJI))}
+        KeyCommand.EMOTICONS->{pendingEmojiCategory=10;emit(Event.ChangeLayout(Layout.EMOJI))}
+        KeyCommand.SYMBOL_PAGE->local{symbolPage=!symbolPage}
+        KeyCommand.NUMBER_MORE->local{numberMore=!numberMore}
+        KeyCommand.PUNCTUATION->local{popup=Popup.PUNCTUATION}
+        KeyCommand.PINYIN->local{popup=Popup.PINYIN}
+        KeyCommand.IME_SWITCH->switchIme()
+        KeyCommand.MICROPHONE->local{popup=Popup.VOICE}
+        KeyCommand.EMOJI_SEARCH->local{emojiSearch=true}
+        KeyCommand.EMOJI_CATEGORY->local{emojiCategory=key.box.id.substringAfterLast('-').toInt();emojiPage=0;emojiQuery=""}
+        KeyCommand.EMOJI_RESULT->emit(Event.Text(key.label))
+        KeyCommand.SEARCH_LETTER->local{if(emojiQuery.length<32){emojiQuery+=key.label;emojiPage=0}}
+        KeyCommand.SEARCH_DELETE->searchDelete()
+        KeyCommand.SEARCH_DONE->local{emojiSearch=false;emojiPage=0}
+        null->Unit
+    }}
+    private fun searchDelete(){local{emojiQuery=emojiQuery.dropLast(1);emojiPage=0}}
+    private fun buildPopup(p:ReferencePanel){
+        val top=p.bodyTop;val w=currentWidth;val full=w-12
+        when(popup){
+            Popup.OPTIONS->{
+                val rows=listOf("切换私密模式","打开离线设置","切换输入法","收起键盘")
+                rows.forEachIndexed{i,text->val x=6+(i%2)*(full/2+3);val y=top+(i/2)*54;button("option-$i",text,x,y,min(w-6,x+full/2-3),y+48){local{popup=Popup.NONE};when(i){0->togglePrivacy();1->openSettings();2->switchIme();3->hide()}}}
+            }
+            Popup.PUNCTUATION->{
+                val values=if(state.layout==Layout.NUMBER)listOf(".",",",";",":","+","-","/","(",")","%","=","¥")else KeyboardReducer.punctuation
+                val cell=(w-30)/4
+                values.forEachIndexed{i,text->val x=6+(i%4)*(cell+6);val y=top+(i/4)*54;button("popup-punct-$i",text,x,y,x+cell,y+48){local{popup=Popup.NONE};emit(if(state.layout==Layout.NUMBER)Event.Text(text)else Event.Punctuation(text))}}
+            }
+            Popup.PINYIN->{
+                label("pinyin-info",if(state.composing)"当前拼音：${state.preedit.ifEmpty{state.input}}"else"请先输入拼音",8f,top,w-8,top+48,17f)
+                button("pinyin-expand","展开候选",6f,top+54,w/2-3,top+102,state.composing && state.candidates.isNotEmpty()){local{popup=Popup.NONE};emit(Event.Expand)}
+                button("pinyin-cancel","取消组合",w/2+3,top+54,w-6,top+102,state.composing){local{popup=Popup.NONE};emit(Event.Cancel)}
+            }
+            Popup.VOICE->label("voice-info","当前离线版本未提供语音输入",8f,top,w-8,top+96,16f)
+            Popup.NONE->Unit
+        }
+        button("popup-close","返回键盘",6f,max(top+162,p.bodyBottom-48),w-6,p.bodyBottom){local{popup=Popup.NONE}}
     }
     override fun onApplyWindowInsets(insets:WindowInsets):WindowInsets {
         val left:Int;val right:Int;val bottom:Int
-        if(Build.VERSION.SDK_INT>=30){
-            val bars=insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout())
-            left=bars.left;right=bars.right;bottom=bars.bottom
-        }else{
+        if(Build.VERSION.SDK_INT>=30){val bars=insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout());left=bars.left;right=bars.right;bottom=bars.bottom}
+        else{
             @Suppress("DEPRECATION")
-            left=insets.systemWindowInsetLeft
+            val legacyLeft=insets.systemWindowInsetLeft
             @Suppress("DEPRECATION")
-            right=insets.systemWindowInsetRight
+            val legacyRight=insets.systemWindowInsetRight
             @Suppress("DEPRECATION")
-            bottom=insets.systemWindowInsetBottom
+            val legacyBottom=insets.systemWindowInsetBottom
+            left=legacyLeft;right=legacyRight;bottom=legacyBottom
         }
-        if(left!=safeLeft || right!=safeRight || bottom!=safeBottom){
-            cancelTouches();safeLeft=left;safeRight=right;safeBottom=bottom;requestLayout()
-        }
+        if(left!=safeLeft || right!=safeRight || bottom!=safeBottom){cancelTouches();safeLeft=left;safeRight=right;safeBottom=bottom;rebuild()}
         return super.onApplyWindowInsets(insets)
     }
-    override fun onMeasure(widthMeasureSpec:Int,heightMeasureSpec:Int) {
-        val w=MeasureSpec.getSize(widthMeasureSpec)
-        val dp=(w-safeLeft-safeRight).coerceAtLeast(0)/density
-        if(dp!=currentWidth && dp>200){currentWidth=dp;cancelTouches();buildKeys(dp)}
+    override fun onMeasure(widthMeasureSpec:Int,heightMeasureSpec:Int){
+        lastWidthSpec=widthMeasureSpec;lastHeightSpec=heightMeasureSpec
+        val w=MeasureSpec.getSize(widthMeasureSpec);val dp=(w-safeLeft-safeRight).coerceAtLeast(0)/density
+        val available=availableHeightPx?.invoke()?.div(density)?:if(MeasureSpec.getMode(heightMeasureSpec)==MeasureSpec.UNSPECIFIED)Float.POSITIVE_INFINITY else MeasureSpec.getSize(heightMeasureSpec)/density
+        if(dp>200 && (dp!=currentWidth || available!=maximumHeight || panel==null)){currentWidth=dp;maximumHeight=available;cancelTouches();buildKeys()}
         for(i in 0 until childCount){val v=getChildAt(i);v.measure(MeasureSpec.makeMeasureSpec(v.layoutParams.width,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(v.layoutParams.height,MeasureSpec.EXACTLY))}
-        setMeasuredDimension(w,resolveSize((contentHeight*density).toInt()+safeBottom,heightMeasureSpec))
+        val intrinsic=panel?.totalHeight?:0f
+        if(measureHistory.length()<12)measureHistory.put(org.json.JSONArray(listOf(w,MeasureSpec.getSize(heightMeasureSpec),MeasureSpec.getMode(heightMeasureSpec),ceil(intrinsic*density).toInt())))
+        setMeasuredDimension(w,resolveSize(ceil(intrinsic*density).toInt(),heightMeasureSpec))
     }
-    override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int) {
-        for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]
-            if(box!=null)v.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())
-            else v.layout(safeLeft,0,width-safeRight,(24*density).toInt())
-        }
+    override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int){for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]?:continue;v.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())}}
+    override fun onDraw(canvas:Canvas){
+        val radius=40*(panel?.scale?:1f)*density;repaint.color=backgroundColor;repaint.style=Paint.Style.FILL
+        val path=Path().apply{moveTo(0f,radius);quadTo(0f,0f,radius,0f);lineTo(width-radius,0f);quadTo(width.toFloat(),0f,width.toFloat(),radius);lineTo(width.toFloat(),height.toFloat());lineTo(0f,height.toFloat());close()};canvas.drawPath(path,repaint)
+        panel?.takeIf{it.headerHeight>0}?.let{repaint.color=if(dark)0xff171717.toInt()else 0xffbec1c7.toInt();canvas.drawRect(0f,it.barTop*density,width.toFloat(),it.barTop*density+1,repaint)}
+        if(state.layout==Layout.LATIN && !state.sensitive){panel?.let{p->repaint.color=if(dark)0xff363638.toInt()else 0xffb8bcc5.toInt();for(i in 1..2){val x=(safeLeft+currentWidth*density*i/3);canvas.drawRect(x,(p.barTop+12)*density,x+1,(p.barTop+p.barHeight-12)*density,repaint)}}}
     }
     override fun onInterceptTouchEvent(event:MotionEvent)=true
     override fun onTouchEvent(event:MotionEvent):Boolean {
         val index=event.actionIndex;val pointer=event.getPointerId(index);val x=(event.getX(index)-safeLeft)/density;val y=event.getY(index)/density
-        when(event.actionMasked) {
-            MotionEvent.ACTION_DOWN->{touches.down(pointer,x,y,event.eventTime);pointerDown=true;handler.post(repeater)}
-            MotionEvent.ACTION_MOVE->{for(i in 0 until event.pointerCount)touches.move(event.getPointerId(i),(event.getX(i)-safeLeft)/density,event.getY(i)/density)}
-            MotionEvent.ACTION_UP->{stopRepeating();touches.up(pointer,x,y)?.let {activate(it)};performClick()}
-            MotionEvent.ACTION_POINTER_UP->touches.up(pointer,x,y)?.let {activate(it)}
+        when(event.actionMasked){
+            MotionEvent.ACTION_DOWN->{touches.down(pointer,x,y,event.eventTime);pointerDown=true;pointerId=pointer;downX=x;downY=y;pressedId=map.hit(x,y)?.id;pressedId?.let{findViewWithTag<View>(it)?.isPressed=true};handler.post(repeater);if(pressedId=="globe")handler.postDelayed(optionsHold,500)}
+            MotionEvent.ACTION_MOVE->{for(i in 0 until event.pointerCount){val px=(event.getX(i)-safeLeft)/density;val py=event.getY(i)/density;touches.move(event.getPointerId(i),px,py);if(event.getPointerId(i)==pointerId && pressedId?.let{id->map.keys.firstOrNull{it.id==id}?.contains(px,py)}!=true){clearPressed();handler.removeCallbacks(optionsHold)}}}
+            MotionEvent.ACTION_UP->{
+                val swipe=state.layout==Layout.EMOJI && !emojiSearch && popup==Popup.NONE && downY>(panel?.barHeight?:0f) && downY<(panel?.bodyBottom?:0f)-48 && abs(x-downX)>48 && abs(y-downY)<40
+                stopRepeating();clearPressed()
+                if(swipe){touches.cancel();local{emojiPage=(emojiPage+if(x<downX)1 else -1).coerceAtLeast(0)}}else touches.up(pointer,x,y)?.let(::activate)
+                performClick()
+            }
+            MotionEvent.ACTION_POINTER_UP->touches.up(pointer,x,y)?.let(::activate)
             MotionEvent.ACTION_CANCEL->cancelTouches()
-        }
-        return true
+        };return true
     }
     override fun performClick():Boolean {super.performClick();return true}
     override fun onDetachedFromWindow(){cancelTouches();super.onDetachedFromWindow()}

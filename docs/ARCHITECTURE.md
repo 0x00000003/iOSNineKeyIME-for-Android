@@ -40,3 +40,11 @@ Trime 3.3.12 固定 librime 子模块正好是 1.17.0 对应 commit，同时带 
 实际TrimeInputMethodService.onCreate直接依赖全局AppPrefs/RimeDaemon/主题/剪贴板和旧外部路径链路；为保留受测离线边界，薄服务继承同源LifecycleInputMethodService，复用Rime JNI和librime而不注册旧复杂前端。SerialRimeEngine单worker+全进程租约，KeyboardController连接真实HostEditorAdapter与临时NineKeyView。敏感field不调用引擎且保留租约防探针进入；field/end/hide失效回调。完整系统生命周期与多宿主测试仍未跑，不等于已适用日用。界面暂只取前100候选，显示分页不等于完整native分页协议。
 
 结构删除WIP补充（ADR038）：KeyboardHostPort的deleteAsync显式回调是controller顺序屏障；旧会话epoch先失效再结束port，避免同步取消回调排空旧队列。敏感HostEditorAdapter通过薄服务转发的CursorAnchorInfo获取必要坐标、一次TextBoundsInfo及有界宿主CHARACTER手势；不读文字正文，不读composing/segment finder，不持久化元数据，不发DEL后备。结果不明失败关闭并停止队列。系统回调/多宿主仍未验证；详细边界见testing/STRUCTURAL_DELETE-20261024.md。
+
+## 参考五态前端增量（WIP）
+
+参考深色五图现已部分到位。KeyboardReducer显式管理Chinese/Latin/Number/Symbols/Emoji及返回来源；ReferenceGeometry纯模型输出统一键框/事件/原创glyph语义，NineKeyView仅绑定实际视图、触控、候选稳定ID与短暂面板状态。Emoji查询/分类/分页只在视图内存，字段/布局结束清理，不接IC正文或持久层。FrameLayout组合框架TextView与Canvas图标，避免强行换AppCompat主题/EmojiCompat初始化；无需新依赖。
+
+图示没有覆盖的长按/次页/消歧/语音不据静态图宣称等价；性能、系统状态往返、字体缩放/可访问性、最终release均待测。当前调试显示采用渲染器intrinsic高度到服务窗口的有界请求，纯布局dump辅助核对；是否保留须由重显故障A/B确定，不能把可访问性裁图大小直接等同实际View尺寸。
+
+窗口策略澄清（2026-10-24）：显式固定高度/maximumWindowMetrics候选没有通过真实重显门禁，已撤掉Window固定高度设置；目前回到框架WRAP_CONTENT，纯几何dump用于诊断且不调用正文/默认EditorInfo dump。未认定系统平台缺陷，旧UI对照仍通过。

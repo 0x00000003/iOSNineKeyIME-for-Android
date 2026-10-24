@@ -1,7 +1,7 @@
 {
   "source": "user supplied 2026-10-23 five JPEG attachments",
-  "ios_version": "PENDING",
-  "iphone_model": "PENDING (project target reference iPhone13; not inferred as fact)",
+  "ios_version": "27.2 (user confirmed 2026-10-24)",
+  "iphone_model": "iPhone 13 (user confirmed 2026-10-24)",
   "display_zoom": "PENDING",
   "text_size": "PENDING",
   "pressed_state": "NOT_SHOWN",

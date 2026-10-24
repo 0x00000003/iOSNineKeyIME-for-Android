@@ -1,0 +1,84 @@
+{
+  "scope": "core",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": 55,
+  "host_minimum_bottom_margin": 54,
+  "passed_cases": 9,
+  "planned_cases": 10,
+  "status": "FAIL",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "native-nine-key",
+      "single_commit": true,
+      "idle_punctuation": true,
+      "pass": true
+    },
+    {
+      "id": "latin",
+      "pass": true
+    },
+    {
+      "id": "direct-number",
+      "pass": true
+    },
+    {
+      "id": "direct-phone",
+      "pass": true
+    },
+    {
+      "id": "action-send",
+      "action_count": 0,
+      "last_action": -1,
+      "remaining_length": 0,
+      "pass": false
+    },
+    {
+      "id": "action-search",
+      "action_count": 1,
+      "last_action": 3,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-next",
+      "action_count": 1,
+      "last_action": 5,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-go",
+      "action_count": 1,
+      "last_action": 2,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-plain",
+      "action_count": 1,
+      "last_action": 6,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "composition-enter",
+      "confirm_only_first_enter": true,
+      "action_only_second_enter": true,
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "2436bc75c8124f429965df07d6a133b0",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "ime_apk_sha256": "1f40c1df3ac810ebbdb277b2d8af876aeaf8aa4146e8f199675984b22dd19e51",
+  "host_apk_sha256": "ea3e5216ec71c91a705391706cc94e5474ff51ca2e0b731ba5eaafa109538dab",
+  "test_apk_sha256": "c205b944ff09302dab211387e67b86f391b4d6c74f767a5bca58248bb4bc7590",
+  "diagnostic_scope": "repeat exact first passing reference UI three APKs"
+}

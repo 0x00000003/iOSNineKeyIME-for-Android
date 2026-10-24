@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 package dev.local.iosninekeyime.state
 
-enum class Layout { CHINESE, LATIN, NUMBER, SYMBOLS }
+enum class Layout { CHINESE, LATIN, NUMBER, SYMBOLS, EMOJI }
 enum class Bar { UNAVAILABLE, PRIVATE, PUNCTUATION, CANDIDATES, NO_CANDIDATES, TOOLS }
 enum class EditorAction { NEWLINE, DONE, SEND, SEARCH, NEXT, GO }
 data class Stamp(val session: Long, val revision: Long)
@@ -31,6 +31,8 @@ data class KeyboardState(
     val hasMoreCandidates: Boolean = false,
     val primaryCandidateText: String? = null,
     val requestedCandidateOffset: Int? = null,
+    val returnLayout: Layout = Layout.CHINESE,
+    val emojiReturnLayout: Layout = Layout.CHINESE,
 ) {
     val composing get() = input.isNotEmpty() || compositionLength > 0
     val bar: Bar get() = when {
@@ -81,6 +83,11 @@ object KeyboardReducer {
     const val CANDIDATE_PAGE_SIZE = 20
     val punctuation = listOf("，", "。", "？", "！", "、", "：", "；", "……")
     val mapping = linkedMapOf(2 to "ABC", 3 to "DEF", 4 to "GHI", 5 to "JKL", 6 to "MNO", 7 to "PQRS", 8 to "TUV", 9 to "WXYZ")
+    private fun changeLayout(s:KeyboardState,layout:Layout):KeyboardState = s.copy(
+        layout=layout,expanded=false,
+        returnLayout=if(layout in setOf(Layout.NUMBER,Layout.SYMBOLS) && s.layout in setOf(Layout.CHINESE,Layout.LATIN))s.layout else s.returnLayout,
+        emojiReturnLayout=if(layout==Layout.EMOJI && s.layout!=Layout.EMOJI)s.layout else s.emojiReturnLayout,
+    )
     fun encode(pinyin: String): String = pinyin.lowercase().map { ch ->
         mapping.entries.firstOrNull { ch.uppercaseChar() in it.value }?.key ?: error("E_NON_PINYIN")
     }.joinToString("")
@@ -138,7 +145,7 @@ object KeyboardReducer {
             if (!active) {
                 when (val tail = s.tail) {
                     is Tail.Punctuation -> effects += Effect.Commit(e.stamp, 1, tail.text)
-                    is Tail.ChangeLayout -> next = next.copy(layout = tail.layout)
+                    is Tail.ChangeLayout -> next = changeLayout(next,tail.layout)
                     null -> Unit
                 }
                 next = next.copy(tail = null)
@@ -170,7 +177,7 @@ object KeyboardReducer {
             is Event.ChangeLayout -> when {
                 s.sensitive && e.layout == Layout.CHINESE -> Transition(s.copy(errorCode = "E_PRIVATE_DIRECT_ONLY"))
                 s.composing -> confirm(s, Tail.ChangeLayout(e.layout))
-                else -> Transition(s.copy(layout = e.layout, expanded = false))
+                else -> Transition(changeLayout(s,e.layout))
             }
             Event.Backspace -> if (s.composing) issue(s) { Effect.Key(it, 0xff08) } else Transition(s, listOf(Effect.Delete(s.stamp.session, s.sensitive)))
             Event.Expand -> if(s.expanded && s.candidateOffset>0)fetchPage(s,0,false)

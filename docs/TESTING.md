@@ -54,3 +54,5 @@
 敏感结构删除增量：隐私策略禁止正文读取、允许必要结构信息，U05的“上下文口”指文字正文读取。正文getter与结构请求分别计数；合成宿主只桥接IMS cursor metadata，实际IC查询/手势必须执行。editor/full scope强制执行原R04字素与结构故障probe，不能只跑研究scope宣布通过。生产未知结果、重复/晚回调、字段/光标变化、同步取消重入、选区/空光标均需保留断言。组件通过仍不能勾选系统I04/D04/I05；历史失败JSON不可替换。
 
 系统宿主增量：bd7ed9a的独立UID宿主在真实选定Pixel上core10/10、private-delete36/36 PASS；没有手工cursor bridge。新增已预冻结privacy-queue20例，包装器只计数/拒绝正文、可延迟真实结构结果，befe红测17/20，所有敏感正文getter0但两续输/长按FAIL。删除后确认屏障修复必须在相同20例及原组件/新增后置故障回归，不因孤立删除通过关闭I05/R04。正文API计数仅涵盖本IC包装边界，不等于所有持久层、日志或EditorInfo正文访问全验收。参考图仍缺，S01—S03不通过。
+
+参考五态WIP（2026-10-24）：`run_system_host.py --target pixel --scope reference-ui --record 新名称`运行真实窗口触控/六张五态含按下截图；`--scope lifecycle`按已冻结SYSTEM_IME_RESHOW_PROTOCOL五轮隐藏/重显。两者目前FAIL，记录见REFERENCE_UI-20261023。`python3 scripts/measure_reference_ui.py --record 已有系统记录名 --output 新测量名`仅核双SHA并输出静态键盘数字，不做OCR/预测词/正文导出，不替代系统测试和人工视觉验收。参考个人图片/合成实拍仅在ignored私有目录，公开只保留测量和hash；不能通过删失败或重置窗口来签收。

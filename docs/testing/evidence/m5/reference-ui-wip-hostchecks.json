@@ -1,0 +1,113 @@
+{
+  "scope": "WIP source host checks; NOT system/reference acceptance",
+  "source_base": "f0eaeb0 plus recorded reference UI worktree",
+  "gradle_command": "./scripts/gradle.sh :state:test :app:testDebugUnitTest :app:lintDebug :testhost:lintDebug",
+  "gradle_exit_code": 0,
+  "state_task": "UP-TO-DATE for unchanged state inputs; cached passing XML",
+  "app_task": "executed",
+  "jvm": {
+    "state": {
+      "counts": {
+        "tests": 81,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "reports": [
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.CandidatePagingTest.xml",
+          "sha256": "3d917954b825ac6ce0f9232fa471512b5047d0c4fc7d9df2e3a80875fae6f5a7"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.HostCommitGateTest.xml",
+          "sha256": "a450b42275cd37dfca999677721d3088d53334d946b568ff7f32da2102324ed1"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.KeyboardControllerTest.xml",
+          "sha256": "e21399923ca11a7504bb94afc3abc16af8251768a5da1a49b48557ce0952e340"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.KeyboardReducerTest.xml",
+          "sha256": "2e7e82172b2a8dbeac8e642b378069ad5bae648dc1a427662ea18cc977a6833e"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.ReferenceGeometryTest.xml",
+          "sha256": "00130fad2f390af40b717b170f4aeb5276500c0465d83765e2bd0e82da019e58"
+        },
+        {
+          "path": "android/trime/state/build/test-results/test/TEST-dev.local.iosninekeyime.state.TouchProtocolTest.xml",
+          "sha256": "640818746d3ec71ded09c4a703c4daf16edf3da822ff70f5e11126b821407eec"
+        }
+      ]
+    },
+    "app": {
+      "counts": {
+        "tests": 50,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "reports": [
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.AtomicLocalFileCopyTest.xml",
+          "sha256": "8ab818793ee066730cfe1cf1193ac2a59991f3d8836df29988887b64fa050570"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.BoundedCopyPoolTest.xml",
+          "sha256": "37e291f7c4c9b48b0ac0288d1c978d6abeae0fd8174fa0d0cc176c5116f5de00"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.OrphanCleanerTest.xml",
+          "sha256": "69cb43ca4a2c33028c4a6ff3ca450ff4e0e0d68e7832ddd3e8d87f2f4707a498"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SafDisplayPathTest.xml",
+          "sha256": "3b100931f8c33e8a4d585c3fb48593507c6264b5f91cd29eb18a1cf72d198f21"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SafTreeWalkerTest.xml",
+          "sha256": "b35d04a101c7e29b5703fcf48f1f36f5e5c09a103ddde6dedb7d120f71ab5bc4"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.sync.SyncRelativePathTest.xml",
+          "sha256": "766bddb405c94e9ad2fea0f589e59dbf3fb3bc895f2af131b46ccd6898aa3363"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.data.theme.GeneralStyleTest.xml",
+          "sha256": "48c9214939dffed6d832d005ff25b59a29dc7325f8cc5ebf310f1b73ce7fcc03"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-com.osfans.trime.util.WeakHashSetTest.xml",
+          "sha256": "ccdac13e7a2549a6cca43d3f46b83ecbdfb6b839e5bc60c8da4678b86b00fced"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.engine.NativeEngineLeaseTest.xml",
+          "sha256": "32d2d7a730c451f2703d6078e140f10213964eb1a312b6254f5bd1fbb134b729"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.privacy.EditorPolicyTest.xml",
+          "sha256": "5ea2b9f503539117f2960a7c687a863b56266312f128ee88efbba58bf261b0df"
+        },
+        {
+          "path": "android/trime/app/build/test-results/testDebugUnitTest/TEST-dev.local.iosninekeyime.probe.ProbeFailureCodeTest.xml",
+          "sha256": "95f9c1215b0a1f34f918bcc3df7f04ca59e9326df0a1d38f8aa16daa1c7c3da9"
+        }
+      ]
+    }
+  },
+  "lint_debug": {
+    "app": "PASS",
+    "testhost": "PASS"
+  },
+  "project_check": {
+    "files": 5727,
+    "errors": 0,
+    "scope": "preparation only"
+  },
+  "system_lifecycle": "FAIL; see nonce/SHA-bound records; not overridden by host checks",
+  "tooling": {
+    "tests": 42,
+    "failures": 0,
+    "command": "python3 -m unittest discover -s tests/tooling -v"
+  }
+}

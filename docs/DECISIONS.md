@@ -74,3 +74,11 @@ NineKeyView只按框架传入的systemBars/displayCutout为自绘键区预留左
 系统privacy-queue红测17/20表明原SUCCESS立即解屏障会与onUpdateSelection外移取消冲突。新方案在手势SUCCESS后请求仅insertion-marker的IMMEDIATE cursor anchor，获得实际新caret后才解屏障，不猜删除UTF16长度；已执行后不支持/抛异常/超时/异常selection均AMBIGUOUS，不重试手势或回退DEL。查询阶段外移仍按selection版本拒绝，字段/session切换仍失效。只在正在执行/确认的操作内暂认32位置内的collapsed向前selection为自身编辑；以额外anchor与已观察selection交叉核对。selection回调未提供来源标签，不能据此声称任意宿主并发外移绝对可区分；复杂宿主继续验收。
 
 HostAdapter确认caret到薄服务的内存回调，在后续提交前同步预测位置；服务区分最后实际观察selection与预测selection，避免将已收通知重复留在预期队列。无新依赖/持久数据/正文读取。组件原21故障保留并增加7例删除已执行但后置确认失败；实际系统同20例必须重测，未跑前不报告修复成功。
+
+## ADR042 — 参考五态前端、内存Emoji及导航窗口策略（WIP）
+
+依据五张静态参考，以591px来源宽度的键框/暗色中性颜色作为目标，纯ReferenceGeometry与同一HitMap驱动绘制/命中。Reducer加入EMOJI及辅助/Emoji返回来源，组合未清仍先确认，敏感不能进入中文；图片不打包。Emoji固定Unicode目录+本地临时搜索，无历史/网络/存储；字形由系统提供，线图原创。未知二级页/语音未提供/逐音节消歧未实现必须明示，不能靠外形宣称功能一致。
+
+尝试公开captionBar隐藏以去掉Android额外按钮，仍保留navigation/gesture inset与本项目globe长按菜单；首新UIcore和inset通过，但重显时可访问性7px与实际view920px不一致。窗口intrinsic高度显式绑定是诊断阶段候选，未证实必要；caption hide时机继续A/B验证，未签收。新布局无需新增依赖，固定锁不变。测试声明布局dump版本后可读纯本键盘几何，默认dump不输出EditorInfo/正文，禁止将该机制扩展成用户上下文探针。
+
+ADR042追加：固定高度、背景不透明、caption时机、clearCache等A/B未解决坐标问题，不能作为已接受修复；恢复原始窗口策略继续WIP。参考环境为iPhone13/iOS27.2，显示设置仍未知。measure_reference_ui只输出来源/捕获双SHA约束的几何和色块/白色bbox数字，输入FAIL或缺图仍明确保留，不产生自动视觉PASS。

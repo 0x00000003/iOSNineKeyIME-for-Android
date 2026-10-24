@@ -137,3 +137,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 系统privacy-queue协议先提交5eec11e后运行，befe真实Pixel17/20红测：10字素/5选区、普通续输/跨字段PASS，敏感正文getter全0；延迟删除期间两续输和长按均FAIL。源定位服务将自身删除selection当外移清队列，拟补删除后确认；原FAIL保存，不改预期、不关闭R04。
 
 删除确认最终debug831233e4/unsignedf857df0c：真实Pixel core10/10、敏感字素36/36、同host/test privacy-queue20/20，正文getter0；两设备full28故障PASS、敏感5/5、metadata6/6、bounds11/cursor22。删除前旧预测队列在确认后清理；默认unsigned仅构建/lint/静态，正式release/全安全未签收。用户随后补5张深色参考，先保存只读私有原件与独立键盘裁图、公开非正文测量，再推进图示布局；原缺图历史保持，不沿用旧BLOCKED描述新状态。
+
+五态参考首版1f40c1df：两设备View inset20/20、Pixel核心10/10、81state/50app/42工具与debug/testhost lint/实际APK静态通过。四张真实系统裁图证明几何基本落位/按下有反应，但字体bbox偏大；矩阵首次只5casePASS、ABC定位混淆，随后第二轮真实窗口7px FAIL，未把已有通过当全部UI通过。新增明确5轮hide/show协议f0eaeb0，改intrinsic高度显式服务窗口布局，当前构建/lint通过，实际生命周期/五态仍待新SHA测。未复制工具链，参考私有副本/裁图共968KiB。
+
+2026-10-24 M5 WIP检查点：参考iPhone13/iOS27.2已确认，五态纯几何/状态与内存Emoji落地；测量脚本核双SHA且不输出图片正文，已测三态18/19/31键及色块，R04/R05仍NOT_CAPTURED。新系统矩阵/隐藏重显持续FAIL，原三包复测9/10；旧UI831对照10/10不能继承。所有反例JSON保留，不提交个人图或序列号，未推远端。窗口候选补丁未证实有效不当修复交付，继续定位。

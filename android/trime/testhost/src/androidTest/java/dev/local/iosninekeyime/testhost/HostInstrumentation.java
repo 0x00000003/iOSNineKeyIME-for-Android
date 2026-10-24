@@ -33,6 +33,7 @@ public final class HostInstrumentation extends Instrumentation {
     private int measuredGap=-1,expectedGap=-1;
     private int navigationGap=-1,lastGap=-1,stableGapSamples=0;
     private final JSONArray ownFrameGeometry=new JSONArray();
+    private final JSONArray captures=new JSONArray();
     private HostActivity activity;
     private UiAutomation automation;
     @Override public void onCreate(Bundle args){
@@ -72,11 +73,14 @@ public final class HostInstrumentation extends Instrumentation {
             try{
                 if(!IME.equals(String.valueOf(root.getPackageName())))continue;
                 ownImeRoot=true;
+                if(ownFrameGeometry.length()<2){Rect r=new Rect();window.getBoundsInScreen(r);ownFrameGeometry.put(new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));root.getBoundsInScreen(r);ownFrameGeometry.put(new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));}
                 ArrayDeque<AccessibilityNodeInfo> queue=new ArrayDeque<>();queue.add(AccessibilityNodeInfo.obtain(root));
                 while(!queue.isEmpty()){
                     AccessibilityNodeInfo node=queue.removeFirst();
                     try{
-                        if(IME.contentEquals(node.getPackageName()) && node.isVisibleToUser() && node.isEnabled() && node.isClickable() && label.contentEquals(node.getContentDescription())){
+                        if(label.equals("切换输入法") && "globe".equals(node.getExtras().getString("dev.local.iosninekeyime.key_id")) && ownFrameGeometry.length()<8){Rect r=new Rect();node.getBoundsInScreen(r);ownFrameGeometry.put(new JSONArray().put("globe").put(node.isVisibleToUser()).put(node.isEnabled()).put(node.isClickable()).put(r.left).put(r.top).put(r.right).put(r.bottom));}
+                        boolean match=label.startsWith("key-id:")?label.substring(7).equals(node.getExtras().getString("dev.local.iosninekeyime.key_id")):label.contentEquals(node.getContentDescription());
+                        if(IME.contentEquals(node.getPackageName()) && node.isVisibleToUser() && node.isEnabled() && node.isClickable() && match){
                             Rect bounds=new Rect();node.getBoundsInScreen(bounds);
                             if(!bounds.isEmpty() && (found==null || (bottom && bounds.centerY()>found.centerY())))found=bounds;
                             if(label.equals("收起") && ownFrameGeometry.length()<8){
@@ -93,9 +97,9 @@ public final class HostInstrumentation extends Instrumentation {
         return found;
     }
     private boolean frameCoherent(){
-        Rect last=key("收起",true);if(last==null)return false;
+        Rect last=key("切换输入法",true);if(last==null)return false;
         final int[] bottom={0},displayBottom={0};main(()->{bottom[0]=activity.getWindow().getDecorView().getRootWindowInsets().getInsets(WindowInsets.Type.systemBars()).bottom;displayBottom[0]=activity.getSystemService(WindowManager.class).getCurrentWindowMetrics().getBounds().bottom;});
-        expectedGap=Math.round(6*getTargetContext().getResources().getDisplayMetrics().density)+bottom[0];
+        expectedGap=bottom[0];
         for(AccessibilityWindowInfo window:automation.getWindows()){
             if(window.getType()!=AccessibilityWindowInfo.TYPE_INPUT_METHOD)continue;
             AccessibilityNodeInfo root=window.getRoot();if(root==null)continue;
@@ -133,6 +137,39 @@ public final class HostInstrumentation extends Instrumentation {
         SystemClock.sleep(55);
     }
     private void word(){for(String label:new String[]{"MNO","GHI","GHI","ABC","MNO"})tap(label);}
+    private JSONObject capture(String id)throws Exception{
+        check(await(this::frameCoherent,3000));
+        check(id.matches("r0[1-5]-(chinese|number|symbols|latin|emoji|pressed)"));
+        for(AccessibilityWindowInfo window:automation.getWindows()){
+            if(window.getType()!=AccessibilityWindowInfo.TYPE_INPUT_METHOD)continue;
+            AccessibilityNodeInfo root=window.getRoot();if(root==null)continue;
+            if(!IME.equals(String.valueOf(root.getPackageName()))){root.recycle();continue;}
+            Rect region=new Rect();window.getBoundsInScreen(region);Bitmap screen=automation.takeScreenshot();check(screen!=null);
+            region.intersect(0,0,screen.getWidth(),screen.getHeight());check(!region.isEmpty());
+            Bitmap crop=Bitmap.createBitmap(screen,region.left,region.top,region.width(),region.height());
+            JSONObject keys=new JSONObject();ArrayDeque<AccessibilityNodeInfo> queue=new ArrayDeque<>();queue.add(root);
+            while(!queue.isEmpty()){
+                AccessibilityNodeInfo node=queue.removeFirst();
+                try{
+                    String keyId=node.getExtras().getString("dev.local.iosninekeyime.key_id");
+                    if(IME.equals(String.valueOf(node.getPackageName())) && node.isVisibleToUser() && node.isClickable() && keyId!=null && keyId.matches("[a-z0-9-]{1,80}") && !keyId.startsWith("candidate-")){
+                        Rect r=new Rect();node.getBoundsInScreen(r);r.offset(-region.left,-region.top);
+                        keys.put(keyId,new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));
+                    }
+                    for(int i=0;i<node.getChildCount();i++){AccessibilityNodeInfo child=node.getChild(i);if(child!=null)queue.add(child);}
+                }finally{node.recycle();}
+            }
+            String file="host-"+nonce+"-"+id+".png";
+            try(FileOutputStream stream=new FileOutputStream(new File(getTargetContext().getCacheDir(),file))){check(crop.compress(Bitmap.CompressFormat.PNG,100,stream));}
+            JSONObject record=new JSONObject().put("id",id).put("width",crop.getWidth()).put("height",crop.getHeight()).put("keys",keys);
+            if(keys.has("digit-6")){
+                JSONArray box=keys.getJSONArray("digit-6");int x=box.getInt(0)+(box.getInt(2)-box.getInt(0))/5,y=box.getInt(1)+(box.getInt(3)-box.getInt(1))/5;
+                int color=crop.getPixel(x,y);record.put("synthetic_key_fill_rgb",new JSONArray().put(android.graphics.Color.red(color)).put(android.graphics.Color.green(color)).put(android.graphics.Color.blue(color)));
+            }
+            if(crop!=screen)crop.recycle();screen.recycle();captures.put(record);return record;
+        }
+        throw new IllegalStateException("E_OWN_IME_CAPTURE");
+    }
     private GuardedEditText guarded(){final GuardedEditText[] view={null};main(()->view[0]=(GuardedEditText)activity.editor);return view[0];}
     private JSONObject privacyCase(String id,boolean exact,GuardedEditText view)throws JSONException{
         final int[] n=new int[5];main(()->{n[0]=view.bodyReads;n[1]=view.cursorRequests;n[2]=view.boundsRequests;n[3]=view.boundsDelivered;n[4]=view.gestureRequests;});
@@ -202,6 +239,36 @@ public final class HostInstrumentation extends Instrumentation {
                         tap("退格");boolean exact=await(()->read(()->activity.editor.getText().toString().equals("AB") && activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);
                         cases.put(new JSONObject().put("id",stage).put("exact_synthetic_remaining",exact).put("pass",exact));
                     }
+                }else if(scope.equals("lifecycle")){
+                    for(int i=1;i<=5;i++){
+                        stage="hide-show-"+i;choose("send","",0);
+                        main(()->activity.getSystemService(InputMethodManager.class).hideSoftInputFromWindow(activity.editor.getWindowToken(),0));
+                        boolean hidden=await(()->read(()->!activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000);
+                        check(hidden);choose("send","",0);word();tap("你好");tap("，");
+                        boolean exact=await(()->read(()->activity.editor.getText().toString().equals("你好，")),3000);
+                        cases.put(new JSONObject().put("id",stage).put("hidden_confirmed",hidden).put("shown_own_ime_frame_safe",frameCoherent()).put("pass",exact && frameCoherent()));
+                    }
+                }else if(scope.equals("reference-ui")){
+                    stage="reference-chinese";choose("send","",0);check(await(()->key("，",false)!=null,6000));JSONObject normal=capture("r01-chinese");
+                    cases.put(new JSONObject().put("id",stage).put("pass",key("MNO",false)!=null && key("#@¥",false)!=null && key("选拼音",false)!=null));
+                    stage="reference-highlight";Rect pressed=key("MNO",false);check(pressed!=null);long now=SystemClock.uptimeMillis();
+                    MotionEvent down=MotionEvent.obtain(now,now,MotionEvent.ACTION_DOWN,pressed.centerX(),pressed.centerY(),0);down.setSource(InputDevice.SOURCE_TOUCHSCREEN);JSONObject highlighted;
+                    try{check(automation.injectInputEvent(down,true));SystemClock.sleep(100);highlighted=capture("r01-pressed");}
+                    finally{MotionEvent cancel=MotionEvent.obtain(now,SystemClock.uptimeMillis(),MotionEvent.ACTION_CANCEL,pressed.centerX(),pressed.centerY(),0);cancel.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{check(automation.injectInputEvent(cancel,true));}finally{cancel.recycle();down.recycle();}}
+                    boolean colorChanged=!normal.getJSONArray("synthetic_key_fill_rgb").toString().equals(highlighted.getJSONArray("synthetic_key_fill_rgb").toString());
+                    cases.put(new JSONObject().put("id",stage).put("physical_press_changes_fill",colorChanged).put("pass",colorChanged && read(()->activity.editor.length()==0) && key("，",false)!=null));
+                    stage="reference-number";tap("123");check(await(()->key("0",false)!=null,3000));capture("r02-number");cases.put(new JSONObject().put("id",stage).put("pass",key("1",false)!=null && key("拼音",false)!=null && key("更多",false)!=null));
+                    stage="reference-symbols";tap("#@¥");check(await(()->key("#+=",false)!=null,3000));capture("r03-symbols");cases.put(new JSONObject().put("id",stage).put("pass",key("9",false)!=null && key("/",false)!=null && key("拼音",false)!=null));
+                    stage="reference-return-chinese";tap("拼音");boolean back=await(()->key("MNO",false)!=null,3000);cases.put(new JSONObject().put("id",stage).put("pass",back));
+                    stage="reference-latin";tap("key-id:layout-latin");check(await(()->key("q",false)!=null,3000));capture("r04-latin");cases.put(new JSONObject().put("id",stage).put("pass",key("a",false)!=null && key("z",false)!=null && key("大写",false)!=null));
+                    // Emoji reference was opened from Chinese, so its return key must be 拼音.
+                    stage="reference-emoji";tap("123");check(await(()->key("#+=",false)!=null,3000));tap("ABC");check(await(()->key("q",false)!=null,3000));
+                    // Go through a fresh Chinese field without manufacturing reducer events.
+                    choose("send","",0);check(await(()->key("，",false)!=null,6000));tap("表情");check(await(()->key("搜索表情",false)!=null,3000));capture("r05-emoji");
+                    cases.put(new JSONObject().put("id",stage).put("pass",key("😀",false)!=null && key("拼音",false)!=null));
+                    stage="reference-emoji-commit-delete";tap("😀");boolean once=await(()->read(()->activity.editor.getText().toString().equals("😀")),3000);tap("退格");boolean deleted=await(()->read(()->activity.editor.length()==0),3000);
+                    cases.put(new JSONObject().put("id",stage).put("pass",once && deleted));
+                    stage="reference-emoji-return";tap("拼音");cases.put(new JSONObject().put("id",stage).put("pass",await(()->key("MNO",false)!=null,3000)));
                 }else if(scope.equals("privacy-queue")){
                     main(()->activity.guardConnections=true);
                     String[] kinds={"password","visible-password","web-password","number-password","no-learn"};
@@ -244,14 +311,41 @@ public final class HostInstrumentation extends Instrumentation {
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:scope.equals("privacy-queue")?20:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:scope.equals("reference-ui")?9:scope.equals("lifecycle")?5:scope.equals("privacy-queue")?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
             output.put("status",passed?"PASS":"FAIL");
         }catch(Throwable failure){try{output.put("status","FAIL").put("failure_stage",stage).put("failure_step",step).put("tap_attempts",taps).put("injected_taps",injected).put("measured_bottom_gap",measuredGap).put("expected_bottom_gap",expectedGap).put("ime_window_root_geometry",ownFrameGeometry).put("ime_windows",imeWindows).put("own_ime_root",ownImeRoot).put("error_code","E_SYSTEM_HOST_ASSERTION");}catch(JSONException ignored){}}
         finally{
+            try{if(captures.length()>0)output.put("reference_captures",captures);}catch(JSONException ignored){}
+            if(!passed && automation!=null){
+                // Own service overrides dump to expose keyboard window geometry ONLY, no super dump.
+                try{
+                    android.content.pm.ApplicationInfo info=getTargetContext().getPackageManager().getApplicationInfo(IME,android.content.pm.PackageManager.GET_META_DATA);
+                    check(info.metaData!=null && info.metaData.getInt("dev.local.iosninekeyime.layout_metadata_version",0)==1);
+                    try(android.os.ParcelFileDescriptor fd=automation.executeShellCommand("dumpsys -t 3 activity service "+IME+"/dev.local.iosninekeyime.ime.NineKeyInputMethodService");
+                    java.io.BufferedReader reader=new java.io.BufferedReader(new java.io.InputStreamReader(new android.os.ParcelFileDescriptor.AutoCloseInputStream(fd)))){
+                    String line;while((line=reader.readLine())!=null){int at=line.indexOf("NINEKEY_LAYOUT_META ");if(at>=0){output.put("window_layout_metadata",new JSONObject(line.substring(at+20)));break;}}
+                    }
+                }catch(Throwable ignored){}
+            }
             if(!passed && automation!=null){
                 // Crop the synthetic IME window only, excluding host/status-bar pixels. Never Git.
                 try{
+                    if(output.has("window_layout_metadata") && read(()->activity.hasWindowFocus())){
+                        JSONObject meta=output.getJSONObject("window_layout_metadata");JSONObject keyboard=meta.optJSONObject("keyboard");
+                        if(keyboard!=null){
+                            int expected=keyboard.getInt("height");Bitmap full=automation.takeScreenshot();
+                            if(full!=null){
+                                if(expected>100 && expected<full.getHeight()-200){
+                                    Bitmap bottom=Bitmap.createBitmap(full,0,full.getHeight()-expected,full.getWidth(),expected);
+                                    try(FileOutputStream stream=new FileOutputStream(new File(getTargetContext().getCacheDir(),"host-"+nonce+"-bottom-diagnostic.png"))){bottom.compress(Bitmap.CompressFormat.PNG,100,stream);}
+                                    output.put("debug_owned_bottom_crop_saved",true).put("debug_owned_bottom_crop_basis","requested keyboard height; may include owned synthetic host; NOT reference acceptance");
+                                    if(bottom!=full)bottom.recycle();
+                                }
+                                full.recycle();
+                            }
+                        }
+                    }
                     for(AccessibilityWindowInfo window:automation.getWindows()){
                         if(window.getType()!=AccessibilityWindowInfo.TYPE_INPUT_METHOD)continue;
                         AccessibilityNodeInfo node=window.getRoot();

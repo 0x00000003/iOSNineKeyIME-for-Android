@@ -9,7 +9,7 @@ from run_probe import ROOT,selected_apk,freeze_apk,streamed_result
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target',choices=['pixel','emulator-5580'],required=True)
-    parser.add_argument('--scope',choices=['readiness','core','private-delete','privacy-queue'],required=True)
+    parser.add_argument('--scope',choices=['readiness','core','private-delete','privacy-queue','reference-ui','lifecycle'],required=True)
     parser.add_argument('--variant',choices=['debug','release'],default='debug')
     parser.add_argument('--record',required=True)
     args=parser.parse_args()
@@ -64,11 +64,24 @@ def main():
     result=streamed_result(output,nonce,'host_run_id')
     if result is None:result=dict(status='FAIL',pass_=False,reason='missing nonce-bound instrumentation result')
     if 'pass_'in result:result['pass']=result.pop('pass_')
+    for capture in result.get('reference_captures',[]):
+        name=capture.get('id','')
+        if not re.fullmatch(r'r0[1-5]-(chinese|number|symbols|latin|emoji|pressed)',name):raise RuntimeError('E_CAPTURE_NAME')
+        shot=subprocess.run([str(adb),'-s',target,'exec-out','run-as',package,'cat','cache/host-'+nonce+'-'+name+'.png'],capture_output=True,timeout=30)
+        if shot.returncode or not shot.stdout.startswith(b'\x89PNG\r\n\x1a\n')or len(shot.stdout)>10*1024*1024:raise RuntimeError('E_CAPTURE_TRANSPORT')
+        destination=raw.parent/(args.record+'-'+name+'.png')
+        with destination.open('xb')as output_image:output_image.write(shot.stdout)
+        capture['png_sha256']=hashlib.sha256(shot.stdout).hexdigest()
+        capture['pixel_storage']='ignored local artifacts/testhost; synthetic IME crop only'
     if result.get('debug_ime_crop_saved'):
         # Owned synthetic keyboard crop only; raw image stays in ignored local artifacts.
         shot=subprocess.run([str(adb),'-s',target,'exec-out','run-as',package,'cat','cache/synthetic-ime-failure.png'],capture_output=True,timeout=30)
         if shot.returncode==0 and shot.stdout.startswith(b'\x89PNG\r\n\x1a\n')and len(shot.stdout)<=10*1024*1024:
             (raw.parent/(args.record+'-ime.png')).write_bytes(shot.stdout)
+    if result.get('debug_owned_bottom_crop_saved'):
+        shot=subprocess.run([str(adb),'-s',target,'exec-out','run-as',package,'cat','cache/host-'+nonce+'-bottom-diagnostic.png'],capture_output=True,timeout=30)
+        if shot.returncode==0 and shot.stdout.startswith(b'\x89PNG\r\n\x1a\n')and len(shot.stdout)<=10*1024*1024:
+            (raw.parent/(args.record+'-owned-bottom.png')).write_bytes(shot.stdout)
 
     result.update(hashes);result.update(ime_apk_sha256=ime_sha,ime_variant=args.variant,requested_scope=args.scope,target=args.target,selection=selection,
         transport='instrumentation stream + fresh host_run_id + success flag/code',scope_note='actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance')

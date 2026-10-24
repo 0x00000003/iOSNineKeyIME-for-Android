@@ -15,6 +15,7 @@
         android:label="@string/ninekey_app_label"
         android:theme="@android:style/Theme.Material.Light.NoActionBar"
         tools:node="replace">
+        <meta-data android:name="dev.local.iosninekeyime.layout_metadata_version" android:value="1" />
         <activity android:name="dev.local.iosninekeyime.probe.ProbeActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

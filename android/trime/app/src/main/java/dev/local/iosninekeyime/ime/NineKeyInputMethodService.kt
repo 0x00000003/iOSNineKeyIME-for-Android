@@ -41,6 +41,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     private var keyboard:NineKeyView?=null
     private var session=0L
     private var fieldActive=false
+    private var destroyed=false
     private var userPrivate=false
     private var info:EditorInfo?=null
     private var selectionStart=-1
@@ -56,7 +57,8 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
             override val pendingCount get()=host.pendingCount
             override fun begin(session:Long,sensitive:Boolean) {
                 val current=checkNotNull(info)
-                host.begin(session,currentInputConnection,EditorPolicy.from(current.inputType,current.imeOptions,userPrivate),current)
+                val caret=EditorInfo().apply {initialSelStart=selectionStart;initialSelEnd=selectionEnd}
+                host.begin(session,currentInputConnection,EditorPolicy.from(current.inputType,current.imeOptions,userPrivate),caret)
             }
             override fun commit(effect:Effect.Commit)=host.commit(effect)
             override fun retry(session:Long)=host.retry(session)
@@ -67,16 +69,25 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         controller=KeyboardController(engine,port,onState={keyboard?.render(it)},checkOwner={check(Looper.myLooper()==Looper.getMainLooper()){"E_OWNER_THREAD"}})
     }
     override fun onCreateInputView():View {
+        configureReferenceWindow()
         return NineKeyView(this,
             send={event,repeated->if(repeated)controller.submitRepeat(event)else controller.submit(event)},
             hide={keyboard?.cancelTouches();requestHideSelf(0)},
-            togglePrivacy={userPrivate=!userPrivate;info?.let {startField(it)}},
+            togglePrivacy={userPrivate=!userPrivate;info?.let {startField(it,true)}},
             retry={
                 if(host.pendingCount>0){host.reconnect(session,currentInputConnection);controller.retryHost(session)}
-                else info?.let {startField(it)}
+                else info?.let {startField(it,true)}
             },
             switchIme={keyboard?.cancelTouches();if(android.os.Build.VERSION.SDK_INT>=28)switchToNextInputMethod(false)else(getSystemService(INPUT_METHOD_SERVICE) as android.view.inputmethod.InputMethodManager).showInputMethodPicker()},
+            openSettings={startActivity(android.content.Intent(this,dev.local.iosninekeyime.probe.ProbeActivity::class.java).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))},
+
         ).also {keyboard=it;it.render(controller.state)}
+    }
+    override fun onWindowShown(){super.onWindowShown();configureReferenceWindow()}
+    private fun configureReferenceWindow(){
+        val current=window?.window?:return
+        current.setBackgroundDrawable(android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT))
+        if(android.os.Build.VERSION.SDK_INT>=30)current.insetsController?.hide(android.view.WindowInsets.Type.captionBar())
     }
     override fun onStartInput(attribute:EditorInfo?,restarting:Boolean) {
         super.onStartInput(attribute,restarting)
@@ -87,10 +98,11 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         if(!fieldActive && attribute!=null)startField(attribute)
         keyboard?.render(controller.state)
     }
-    private fun startField(attribute:EditorInfo) {
+    private fun startField(attribute:EditorInfo,retainCaret:Boolean=false) {
         keyboard?.cancelTouches()
         info=attribute;fieldActive=true;session++
-        selectionStart=attribute.initialSelStart;selectionEnd=attribute.initialSelEnd;expectedSelections.clear()
+        if(!retainCaret){selectionStart=attribute.initialSelStart;selectionEnd=attribute.initialSelEnd}
+        expectedSelections.clear()
         observedSelectionStart=selectionStart;observedSelectionEnd=selectionEnd
         val policy=EditorPolicy.from(attribute.inputType,attribute.imeOptions,userPrivate)
         val variation=attribute.inputType and InputType.TYPE_MASK_VARIATION
@@ -129,5 +141,17 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     override fun onFinishInputView(finishingInput:Boolean){endField();super.onFinishInputView(finishingInput)}
     override fun onFinishInput(){endField();info=null;super.onFinishInput()}
     override fun onEvaluateFullscreenMode()=false
-    override fun onDestroy(){endField();keyboard=null;engine.close();super.onDestroy()}
+    override fun dump(fd:java.io.FileDescriptor,writer:java.io.PrintWriter,args:Array<out String>?){
+        // Deliberately do not call the framework dump, which includes EditorInfo/context metadata.
+        // Own keyboard window geometry only; no host text, candidates, cursor bounds or account data.
+        val computed=android.inputmethodservice.InputMethodService.Insets()
+        super.onComputeInsets(computed)
+        val value=org.json.JSONObject().put("content_top_inset",computed.contentTopInsets).put("visible_top_inset",computed.visibleTopInsets)
+            .put("touchable_insets",computed.touchableInsets).put("field_active",fieldActive).put("destroyed",destroyed)
+            .put("is_input_view_shown",isInputViewShown)
+            .put("window_layout_height",window?.window?.attributes?.height?:0)
+            .put("keyboard",keyboard?.layoutMetadata()?:org.json.JSONObject.NULL)
+        writer.println("NINEKEY_LAYOUT_META "+value.toString())
+    }
+    override fun onDestroy(){destroyed=true;endField();keyboard=null;engine.close();super.onDestroy()}
 }
