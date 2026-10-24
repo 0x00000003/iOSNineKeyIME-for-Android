@@ -2,15 +2,13 @@
 
 **把熟悉的 iPhone 风格中文九宫格，带到 Android。**
 
-🤝 **与 GPT 共创 · 通过 OpenAI Codex 协作开发**
-
 一款基于 Trime/Rime 与万象的开源 Android 输入法。支持九键拼音、选拼音、英文、数字、符号和 Emoji，词库与输入引擎在本机离线运行。
 
 <p align="center">
-  <img src="docs/images/android-ios-comparison.png" width="1000" alt="原始键区截图左右对照：左侧 Android 本项目输入法，右侧 iOS 原生键盘；仅裁剪与等比例缩放，没有生成或重绘界面" />
+  <img src="docs/images/android-ios-comparison.png" width="1000" alt="两张完整截图直接左右拼接：左侧 Android，右侧 iOS；未裁剪、未缩放、未重绘" />
 </p>
 
-<p align="center"><b>左：Android 上的本项目输入法　｜　右：iOS 原生键盘</b><br />原始键区截图直接并排，仅裁剪与等比例缩放；<a href="docs/images/android-nine-key.png">查看 Android 完整键盘截图</a>。</p>
+<p align="center"><b>左：Android　｜　右：iOS</b></p>
 
 ## 功能
 
@@ -45,8 +43,6 @@ APK 位于 `android/trime/app/build/outputs/apk/debug/`。安装后通过 Androi
 
 ## 参与开发
 
-本项目由[维护者](https://github.com/0x00000003)与 GPT（通过 OpenAI Codex）共创：维护者提出产品方向、提供交互参考与反馈，GPT/Codex 协助实现代码、排错、执行测试和编写文档。AI 协助的提交使用 `Co-authored-by` 记录，详见[共创与提交署名](docs/CONTRIBUTING.md)。
-
 提交问题时请提供 Android 版本、设备显示设置、宿主应用和可复现步骤；请勿附带密码、聊天正文、用户词库或其他个人数据。
 
 | 文档 | 内容 |
@@ -54,6 +50,7 @@ APK 位于 `android/trime/app/build/outputs/apk/debug/`。安装后通过 Androi
 | [开发手册](docs/DEVELOPMENT.md) | 工具链、构建与测试命令 |
 | [产品需求](docs/PRODUCT.md) / [界面规格](docs/UI_SPEC.md) | 功能和布局 |
 | [架构](docs/ARCHITECTURE.md) / [开发约定](AGENTS.md) | 模块边界与贡献规则 |
+| [贡献与署名](docs/CONTRIBUTING.md) | 贡献者与Codex共同作者归属 |
 | [测试](docs/TESTING.md) / [当前状态](docs/STATUS.md) | 验证范围与结果 |
 | [安全设计](docs/SECURITY.md) / [资源来源](docs/COMPLIANCE.md) | 隐私边界、依赖与归属 |
 | [截图来源](docs/images/README.md) | Android 实机图片与制品哈希 |
@@ -62,4 +59,4 @@ APK 位于 `android/trime/app/build/outputs/apk/debug/`。安装后通过 Androi
 
 本项目原创程序与派生代码采用 [GPL-3.0-or-later](LICENSE)。Trime、librime、万象词库、模型及其他依赖保留各自许可证和版权声明，详见 [NOTICE](NOTICE.md) 与[资源来源](docs/COMPLIANCE.md)。
 
-本项目为独立的 Android 输入法项目，与 Apple 无隶属关系。APK 不打包 Apple 字体或原版图标素材；文档中的 iOS 键盘裁图仅用于参考对照。
+本项目为独立的 Android 输入法项目，与 Apple 无隶属关系。APK 不打包 Apple 字体或原版图标素材；文档中的 iOS 截图仅用于参考对照。

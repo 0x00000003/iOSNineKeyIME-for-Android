@@ -1,70 +1,51 @@
 {
-  "kind": "deterministic composition of original screenshot key areas",
+  "kind": "two complete original screenshots joined side by side",
   "generator": "Pillow; no generative model",
   "output": {
     "file": "android-ios-comparison.png",
-    "width": 1440,
-    "height": 748,
-    "bytes": 191205,
-    "sha256": "a332328d22eb4c83a987c4a08149e0f4b7c6f13730c04beca5ae42cc3983084e"
+    "width": 1165,
+    "height": 1280,
+    "bytes": 275867,
+    "sha256": "015593e096740e0ed016573af33764053e7fb0a8b8f7b4d609e4b83247a926be"
   },
   "left": {
     "platform": "Android",
-    "source_file": "android-nine-key.png",
-    "source_sha256": "8b8563de44d81bb9a722563f9a31bf0fbc3a3f809ad57cd01ee5b944a6ae5beb",
-    "crop_box": [
-      0,
-      219,
-      960,
-      920
+    "source_file": "android-fullscreen.png",
+    "source_sha256": "27c046576e7f093092337ad795a8e77e0ca40a693ef050b1f8343f9d1068d057",
+    "source_dimensions": [
+      574,
+      1280
     ],
-    "ime_apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1"
+    "original_attachment_sha256": "8023ac4f55be7304f5a7a990efefdac231d30e79c17c7a61896822d44ab73dbc",
+    "output_box": [
+      0,
+      0,
+      574,
+      1280
+    ]
   },
   "right": {
     "platform": "iOS",
-    "source_file": "ios-nine-key-area.png",
-    "source_sha256": "ed24e7d73fa40f0868754750ffa92ccaac4f804269a9a238cb7e0fb22790a6b2",
-    "reference_keyboard_sha256": "d5648611a34372f35ef9a9c130bd1fe26e8ca942de1f6bed5a60d269bea4ec80",
-    "crop_from_reference_keyboard": [
-      0,
-      134,
+    "source_file": "ios-fullscreen.png",
+    "source_sha256": "1a3357e115cfaf75123036fce71787e33153909d690fc2805c97e8dd1ce4e202",
+    "source_dimensions": [
       591,
-      566
+      1280
     ],
-    "private_original_in_git": false,
-    "prediction_row_omitted": true
+    "original_attachment_sha256": "7940553c771e275872c1cfd51d151e90d77a5982abe484f18dc4d48c77b684e5",
+    "output_box": [
+      574,
+      0,
+      1165,
+      1280
+    ]
   },
-  "operations": [
-    "crop to key areas",
-    "equal width with preserved aspect ratio",
-    "add labels outside images"
-  ],
-  "synthetic_phone_frames": false,
-  "synthetic_editor": false,
+  "cropped": false,
+  "resized": false,
+  "labels_added": false,
   "ui_redrawn": false,
   "pixel_checks": {
-    "saved_panels_equal_resized_source_pixels": true,
+    "saved_halves_equal_original_pixels": true,
     "sources_unchanged": true
-  },
-  "panels": [
-    {
-      "platform": "Android",
-      "output_box": [
-        48,
-        170,
-        696,
-        643
-      ]
-    },
-    {
-      "platform": "iOS",
-      "output_box": [
-        744,
-        170,
-        1392,
-        644
-      ]
-    }
-  ],
-  "not_full_screen_or_pixel_parity_acceptance": true
+  }
 }

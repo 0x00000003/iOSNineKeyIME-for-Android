@@ -33,4 +33,4 @@
 
 ## 共创署名
 
-本项目以维护者与GPT（通过OpenAI Codex）共创的方式开发。实际由GPT/Codex协助的提交在消息末尾添加 `Co-authored-by: Codex <codex@openai.com>`；不要给未使用AI的贡献自动添加该署名，也不要覆盖已有作者或全局Git配置。共同作者归属不代表OpenAI官方审核本项目。详见docs/CONTRIBUTING.md。
+实际由Codex协助的提交保留维护者的GitHub关联作者身份，在消息末尾添加 `Co-authored-by: Codex <codex@openai.com>`，使用GitHub可识别的Codex共同作者账号。不要使用占位邮箱，不要给未使用AI的贡献自动添加该署名，不覆盖其他贡献者或全局Git配置。该归属不表示OpenAI官方审核本项目。详见docs/CONTRIBUTING.md。

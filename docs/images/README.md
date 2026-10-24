@@ -1,12 +1,10 @@
 # 项目展示图片
 
-## 原始截图对照图
+## 完整截图对照图
 
-[android-ios-comparison.png](android-ios-comparison.png)为README首屏配图：左侧Android本项目输入法，右侧iOS原生键盘。两侧均取自原始截图，统一裁到主键区后等比例缩放、并排放置；没有生成机身、编辑区或键盘像素。私人聊天和预测词栏未展示，私人完整原件不提交。
+[android-ios-comparison.png](android-ios-comparison.png)为README首图，直接拼接此次提供的两张完整截图：左为[Android](android-fullscreen.png)，右为[iOS](ios-fullscreen.png)。不裁剪、不缩放、不添加内容，不生成机身或编辑区。输出左右两半已逐像素核对完整输入，原文件保持只读。
 
-来源为[Android完整键盘截图](android-nine-key.png)和[iOS原图键区裁图](ios-nine-key-area.png)。导出的左右图块逐像素等于对应原图裁剪缩放后的像素；无调色、锐化、文字替换或界面重绘。排版方式和复现命令见[comparison-layout.md](comparison-layout.md)，来源、裁剪框、输出框和哈希见[comparison.json](comparison.json)。
-
-两侧按相同显示宽度排版，原始分辨率、系统字形和图标差异保留。此图不代表全部状态或像素一致性验收。iOS裁图仅用于文档参考，不随APK打包，也不由根GPL许可证重新授权。
+复现方式见[comparison-layout.md](comparison-layout.md)，来源尺寸与哈希见[comparison.json](comparison.json)。这些截图用于文档展示，不随APK打包，不由根GPL许可证重新授权，也不代表全部状态已验收。
 
 ## Android原始实机截图
 
