@@ -98,3 +98,7 @@ ADR042追加：固定高度、背景不透明、caption时机、clearCache等A/B
 ## ADR045 — 同字段仅隐藏输入View时保留结构光标
 
 onFinishInputView结束控制器和临时UI，不等于宿主字段结束；onStartInputView若仍保留本字段EditorInfo，应复用已观察的当前selection而非初次initialSel。隐藏期间onUpdateSelection只更新RAM结构坐标，不重启控制器/读取正文/学习；onFinishInput仍清info，新字段onStartInput仍读取新metadata。相同最终独立host/test对照旧c51 1/5、新179a 5/5，两次新版本完整通过，四敏感正文getter0。没有新依赖；不是完整生命周期、任意宿主并发外移或隐私零写验收。
+
+## ADR046 — 生成 release 测试源码的生产者依赖
+
+真实联合release构建/lint失败：generateReleaseAndroidTestLintModel消费prepareReleaseEngineTests输出却无依赖；先前仅按compile/ksp任务名dependsOn漏掉lint。SourceSet改为直接接收Sync的TaskProvider，由文件集合携带生产者关系，删除任务名匹配补丁。原失败保留，完整联合assembleRelease/assembleReleaseAndroidTest/testReleaseUnitTest/lintRelease已通过；无新依赖/版本，STRICT不改，修改来源账同步。b127fe87含ADR045修复，本地调试证书非debuggable，50 release JVM及实际APK静态通过；并非正式发布签名。

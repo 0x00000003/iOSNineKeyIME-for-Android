@@ -87,8 +87,8 @@ android {
     sourceSets.getByName("androidTest").assets.srcDir(rootProject.file("../../tests/fixtures"))
     testBuildType = if (localReleaseProbe) "release" else "debug"
     if (localReleaseProbe) sourceSets.getByName("androidTest").apply {
-        java.setSrcDirs(listOf("src/releaseEngineTest/java", releaseEngineTests))
-        kotlin.setSrcDirs(listOf("src/releaseEngineTest/java", releaseEngineTests))
+        java.setSrcDirs(listOf("src/releaseEngineTest/java", prepareReleaseEngineTests))
+        kotlin.setSrcDirs(listOf("src/releaseEngineTest/java", prepareReleaseEngineTests))
     }
     sourceSets.getByName("main").assets.setSrcDirs(listOf(layout.buildDirectory.dir("generated/imeAssets"), offlineNoticeDir, runtimeInventoryDir))
     signingConfigs.getByName("debug").storeFile = rootProject.file("../../.private/baseline-debug.keystore")
@@ -241,9 +241,6 @@ dependencyLocking { lockAllConfigurations() }
 
 
 tasks.named("preBuild") { dependsOn(prepareRuntimeAssets, prepareOfflineNotices, "writeReleaseRuntimeInventory") }
-if (localReleaseProbe) tasks.configureEach {
-    if (name.contains("ReleaseAndroidTest") && (name.startsWith("compile") || name.startsWith("ksp"))) dependsOn(prepareReleaseEngineTests)
-}
 
 // Exact resolved artifact bytes, no cache paths/account identity in the report.
 tasks.register("writeReleaseRuntimeInventory") {

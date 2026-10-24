@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "scope": "optimized caret build + release androidTest + JVM + lint; no device claim",
+  "source_base": "8a2c4fb production caret source",
+  "command": "./scripts/gradle.sh -PlocalReleaseProbe=true :app:assembleRelease :app:assembleReleaseAndroidTest :app:testReleaseUnitTest :app:lintRelease",
+  "failed_task": ":app:generateReleaseAndroidTestLintModel",
+  "reason": "generated/releaseEngineTests consumed without declared dependency on :app:prepareReleaseEngineTests",
+  "elapsed_seconds": 76,
+  "apk_status": "not frozen/installed as a successful build"
+}

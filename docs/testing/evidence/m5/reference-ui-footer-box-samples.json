@@ -1,0 +1,28 @@
+{
+  "scope": "white-pixel bbox only; not glyph shape or icon approval",
+  "capture_record": "reference-ui-caret-finalframe-pixel-targets",
+  "rows": [
+    {
+      "id": "globe",
+      "reference_bbox_source_size": [
+        40.0,
+        40.0
+      ],
+      "capture_bbox_source_size": [
+        41.862,
+        41.862
+      ]
+    },
+    {
+      "id": "microphone",
+      "reference_bbox_source_size": [
+        27.0,
+        42.0
+      ],
+      "capture_bbox_source_size": [
+        29.55,
+        43.709
+      ]
+    }
+  ]
+}

@@ -61,6 +61,23 @@ final class PixelReferenceProbe {
         checkAt(ownIme(),"shot-own-ime");Bitmap full=automation.takeScreenshot();check(full!=null);checkAt(h[0]>200 && h[0]<full.getHeight()-200,"shot-inset-height");int y=full.getHeight()-h[0];Bitmap crop=Bitmap.createBitmap(full,0,y,full.getWidth(),h[0]);if(crop!=full)full.recycle();Shot s=new Shot(crop,y);
         if(!s.neutral(s.color(s.bitmap.getWidth()/2,Math.max(1,Math.round(5*s.scale))),34)){s.close();detail="shot-panel-fill";check(false);}return s;
     }
+    private Shot stableShot(){
+        long until=SystemClock.uptimeMillis()+3000,last=0;int repeats=0,lastHeight=-1;
+        while(SystemClock.uptimeMillis()<until){
+            Shot current=null;
+            try{
+                current=shot();float sourceHeight=current.bitmap.getHeight()/current.scale;
+                checkAt(Math.abs(sourceHeight-(1280-top()))<=2,"shot-reference-height");
+                long signature=17;int y0=Math.round((panel.equals("emoji")?92:861-top())*current.scale),y1=Math.min(current.bitmap.getHeight(),Math.round((1172-top())*current.scale));
+                for(int y=Math.max(0,y0);y<y1;y+=3)for(int x=0;x<current.bitmap.getWidth();x+=3)signature=31*signature+current.color(x,y);
+                if(current.bitmap.getHeight()==lastHeight && signature==last)repeats++;else repeats=1;
+                lastHeight=current.bitmap.getHeight();last=signature;
+                if(repeats>=3)return current;
+            }catch(IllegalStateException ignored){repeats=0;}
+            if(current!=null)current.close();SystemClock.sleep(40);
+        }
+        checkAt(false,"stable-frame-timeout-"+detail);throw new IllegalStateException("E_UNREACHABLE");
+    }
     private LinkedHashMap<String,float[]> boxes(){
         LinkedHashMap<String,float[]> m=new LinkedHashMap<>();
         if(panel.equals("chinese") || panel.equals("number")){
@@ -82,13 +99,13 @@ final class PixelReferenceProbe {
     }
     private int fill(String id){return id.equals("enter")?(panel.equals("chinese") || panel.equals("number")?144:122):id.equals("emoji-search")?59:70;}
     private void physical(Rect local,Shot s,int action,long downTime){MotionEvent e=MotionEvent.obtain(downTime,SystemClock.uptimeMillis(),action,local.centerX(),s.screenTop+local.centerY(),0);e.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{check(automation.injectInputEvent(e,true));}finally{e.recycle();}}
-    private void tap(String id){detail="tap-"+id;try(Shot s=shot()){Rect r=s.locate(id,fill(id));long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
-    private void tapPoint(float x,float absoluteY){try(Shot s=shot()){Rect r=new Rect(Math.round(x*s.scale)-1,Math.round((absoluteY-top())*s.scale)-1,Math.round(x*s.scale)+1,Math.round((absoluteY-top())*s.scale)+1);long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
+    private void tap(String id){detail="tap-"+id;try(Shot s=stableShot()){Rect r=s.locate(id,fill(id));long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
+    private void tapPoint(float x,float absoluteY){try(Shot s=stableShot()){Rect r=new Rect(Math.round(x*s.scale)-1,Math.round((absoluteY-top())*s.scale)-1,Math.round(x*s.scale)+1,Math.round((absoluteY-top())*s.scale)+1);long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
     private boolean body(String expected){return read(()->expected.contentEquals(activity.editor.getText()));}
     private void ready(){check(await(()->{try(Shot s=shot()){return s.emptyHeader();}catch(IllegalStateException e){return false;}},15000));}
     private void choose(){main(()->activity.selectCase("send","",0,true));check(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.editor) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));panel="chinese";ready();}
     private void capture(String id,String pressed)throws Exception{
-        try(Shot s=shot()){
+        try(Shot s=stableShot()){
             JSONObject keys=new JSONObject();for(String key:boxes().keySet()){Rect r=s.locate(key,key.equals(pressed)?133:fill(key));keys.put(key,new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));}
             if(panel.equals("emoji"))for(int i=0;i<28;i++){Rect r=s.emojiCell(i);keys.put("emoji-item-"+i,new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));}
             try(FileOutputStream stream=new FileOutputStream(new File(instrumentation.getTargetContext().getCacheDir(),"host-"+nonce+"-"+id+".png"))){check(s.bitmap.compress(Bitmap.CompressFormat.PNG,100,stream));}
@@ -119,6 +136,69 @@ final class PixelReferenceProbe {
         final int[] counts=new int[4];main(()->{GuardedEditText v=(GuardedEditText)activity.editor;counts[0]=v.bodyReads;counts[1]=v.cursorRequests;counts[2]=v.boundsRequests;counts[3]=v.gestureRequests;});
         boolean valid=exact && (!sensitive || counts[0]==0);
         JSONObject row=new JSONObject().put("id",id).put("exact_synthetic_result",exact).put("sensitive",sensitive).put("body_getter_calls",counts[0]).put("cursor_requests",counts[1]).put("bounds_requests",counts[2]).put("gesture_requests",counts[3]).put("pass",valid);cases.put(row);return row;
+    }
+    private JSONObject queueResult(String id,boolean exact,GuardedEditText view)throws Exception{
+        final int[] counts=new int[5];main(()->{counts[0]=view.bodyReads;counts[1]=view.cursorRequests;counts[2]=view.boundsRequests;counts[3]=view.gestureRequests;counts[4]=view.boundsDelivered;});
+        JSONObject row=new JSONObject().put("id",id).put("exact_synthetic_result",exact).put("body_getter_calls",counts[0]).put("cursor_requests",counts[1]).put("bounds_requests",counts[2]).put("gesture_requests",counts[3]).put("bounds_delivered",counts[4]).put("pass",exact && counts[0]==0);cases.put(row);return row;
+    }
+    private void cachedTap(String id,Shot frame,GuardedEditText view){
+        detail="cached-tap-"+id;
+        check(read(()->{WindowInsets i=activity.getWindow().getDecorView().getRootWindowInsets();return activity.editor==view && activity.hasWindowFocus() && !activity.imeAnimationRunning && i.isVisible(WindowInsets.Type.ime()) && i.getInsets(WindowInsets.Type.ime()).bottom==frame.bitmap.getHeight();}));
+        Rect box=frame.locate(id,fill(id));long now=SystemClock.uptimeMillis();physical(box,frame,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(box,frame,MotionEvent.ACTION_UP,now);taps++;
+    }
+    JSONObject runQueue()throws Exception{
+        JSONObject output=new JSONObject().put("transport","observed stable screen pixels + actual system touchscreen/structure; no IC or cursor bridge");
+        String[] kinds={"password","visible-password","web-password","number-password","no-learn"};
+        String[] clusters={"e\u0301","\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66"};
+        try{
+            for(String kind:kinds)for(int index=0;index<clusters.length;index++){
+                stage="guard-"+kind+"-g"+(index+1);String cluster=clusters[index];restoreChoose(kind,"A"+cluster+"B",1+cluster.length(),true);GuardedEditText view=(GuardedEditText)activity.editor;tap("delete");
+                queueResult(stage,await(()->read(()->"AB".contentEquals(view.getText()) && view.getSelectionStart()==1 && view.getSelectionEnd()==1),3000),view);
+            }
+            for(String kind:kinds){
+                stage="selection-"+kind;restoreChoose(kind,"ABCD",3,true);GuardedEditText view=(GuardedEditText)activity.editor;main(()->view.setSelection(1,3));automation.waitForIdle(100,3000);tap("delete");
+                queueResult(stage,await(()->read(()->"AD".contentEquals(view.getText()) && view.getSelectionStart()==1 && view.getSelectionEnd()==1),3000),view);
+            }
+            for(String kind:new String[]{"password","no-learn"}){
+                stage="queued-"+kind;main(()->activity.nextBoundsDelayMs=300);restoreChoose(kind,"AB",2,true);GuardedEditText view=(GuardedEditText)activity.editor;
+                boolean pending,secondPending;
+                try(Shot frame=stableShot()){
+                    frame.locate("delete",fill("delete"));frame.locate("text-10",fill("text-10"));frame.locate("text-23",fill("text-23"));
+                    cachedTap("delete",frame,view);pending=await(()->read(()->view.boundsRequests==1 && view.boundsDelivered==0),1000);cachedTap("text-10",frame,view);
+                    secondPending=read(()->view.boundsRequests==1 && view.boundsDelivered==0);cachedTap("text-23",frame,view);
+                }
+                boolean exact=await(()->read(()->"Aab".contentEquals(view.getText()) && view.getSelectionStart()==3 && view.getSelectionEnd()==3),3000);
+                queueResult(stage,pending && secondPending && exact,view).put("observed_query_pending_before_typing",pending).put("observed_pending_before_second_key",secondPending);
+            }
+            stage="normal-delete-typing";main(()->activity.nextBoundsDelayMs=0);restoreChoose("email","AB",2,false);tap("delete");tap("text-10");tap("text-23");result(stage,await(()->body("Aab") && read(()->activity.editor.getSelectionStart()==3),3000));
+            stage="held-private-delete";restoreChoose("password","ABCDEFGH",8,true);GuardedEditText held=(GuardedEditText)activity.editor;boolean empty;
+            try(Shot frame=stableShot()){
+                Rect box=frame.locate("delete",fill("delete"));long now=SystemClock.uptimeMillis();physical(box,frame,MotionEvent.ACTION_DOWN,now);
+                try{empty=await(()->read(()->held.length()==0),2500);}finally{physical(box,frame,MotionEvent.ACTION_UP,now);}taps++;
+            }
+            queueResult(stage,empty,held);
+            stage="pending-cross-field";main(()->activity.nextBoundsDelayMs=300);restoreChoose("password","AB",2,true);GuardedEditText previous=(GuardedEditText)activity.editor;
+            try(Shot frame=stableShot()){cachedTap("delete",frame,previous);}boolean pending=await(()->read(()->previous.boundsRequests==1 && previous.boundsDelivered==0),1000);
+            main(()->activity.nextBoundsDelayMs=0);restoreChoose("password","D",1,true);GuardedEditText next=(GuardedEditText)activity.editor;tap("text-21");
+            boolean delivered=await(()->read(()->previous.boundsDelivered==1),1500),unchanged=read(()->"AB".contentEquals(previous.getText()));
+            boolean exact=read(()->unchanged && "Dc".contentEquals(next.getText()) && next.getSelectionStart()==2 && previous.bodyReads==0);
+            queueResult(stage,pending && delivered && exact,next).put("observed_old_query_pending",pending).put("old_result_delivered",delivered).put("old_field_unchanged",unchanged);
+            boolean valid=cases.length()==20;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable failure){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_QUEUE_ASSERTION");}
+        finally{main(()->activity.nextBoundsDelayMs=0);}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",20);
+    }
+    JSONObject runPrivate()throws Exception{
+        JSONObject output=new JSONObject().put("transport","stable observed pixel frames + touchscreen; actual system structural deletion; all sensitive body getters rejected");
+        String[] clusters={"\uD83D\uDE80","e\u0301","\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66","\uD83C\uDDE8\uD83C\uDDF3","\uD83D\uDC4D\uD83C\uDFFD","a\u0301\u0327","\u05D0\u05B7","\u79B0\uDB40\uDD00","q"};
+        try{
+            for(String kind:new String[]{"password","visible-password","web-password","no-learn"})for(int i=0;i<clusters.length;i++){
+                stage=kind+"-g"+(i+1);String cluster=clusters[i];restoreChoose(kind,"A"+cluster+"B",1+cluster.length(),true);tap("delete");
+                boolean exact=await(()->body("AB") && read(()->activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);restoreResult(stage,exact,true);
+            }
+            boolean valid=cases.length()==36;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable e){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_PRIVATE_ASSERTION");}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",36);
     }
     JSONObject runRestore()throws Exception{
         JSONObject output=new JSONObject().put("transport","observed pixels + touchscreen + public host IMM hide/show; same EditText identity retained");
@@ -156,7 +236,7 @@ final class PixelReferenceProbe {
             stage="emoji-commit-delete";try(Shot s=shot()){Rect r=s.emojiCell(0);long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);physical(r,s,MotionEvent.ACTION_UP,now);}check(await(()->body("😀"),3000));tapPoint(560,1138);result(stage,await(()->body(""),3000));
             stage="emoji-return";tapPoint(40,1138);panel="chinese";ready();try(Shot s=shot()){s.locate("digit-6",70);}result(stage,body(""));
             output.put("pass",true);
-        }catch(Throwable e){output.put("pass",false).put("failure_stage",stage).put("error_code","E_PIXEL_REFERENCE_ASSERTION");}
+        }catch(Throwable e){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_REFERENCE_ASSERTION");}
         return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",9);
     }
 }

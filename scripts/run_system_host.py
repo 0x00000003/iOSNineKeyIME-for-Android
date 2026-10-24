@@ -9,7 +9,7 @@ from run_probe import ROOT,selected_apk,freeze_apk,streamed_result
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target',choices=['pixel','emulator-5580'],required=True)
-    parser.add_argument('--scope',choices=['readiness','core','private-delete','privacy-queue','reference-ui','reference-pixels','restore-pixels','lifecycle','lifecycle-diagnostic','lifecycle-sync-diagnostic'],required=True)
+    parser.add_argument('--scope',choices=['readiness','core','private-delete','privacy-queue','reference-ui','reference-pixels','restore-pixels','private-pixels','queue-pixels','lifecycle','lifecycle-diagnostic','lifecycle-sync-diagnostic'],required=True)
     parser.add_argument('--variant',choices=['debug','release'],default='debug')
     parser.add_argument('--record',required=True)
     args=parser.parse_args()

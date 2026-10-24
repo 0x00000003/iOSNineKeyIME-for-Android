@@ -1,5 +1,7 @@
 # 当前状态
 
+系统回归增量（2026-10-24，WIP）：同debug `179a24e7` 在独立稳定真实像素/触屏协议下五态9/9、敏感字素36/36、异步队列20/20 PASS，敏感正文getter0，第二续输键前确实pending；API36模拟器full28故障/敏感5/metadata6与controller PASS。优化非debuggable本地测试证书版 `b127fe87` 的联合构建/lint/50 JVM、实际APK静态及Pixel同字段5/5已通过，其余测试按独立记录；原a11y坐标仍FAIL，不能关闭整体M2/M5。
+
 2026-10-24 最新增量（WIP）：debug `179a24e7` 修复同一字段仅隐藏/重显后退格使用过期初始caret的问题。最终同host/test旧c51 1/5→新179a 5/5，另一次新179a 5/5；四敏感场景正文getter全0，隐藏期间外移光标也按真实位置删除。保留旧红测及早期no-learn定位中断；当前五态触控回归在number阶段FAIL，不能继承c51/a871的9/9。50 app/83 state/45工具、debug/testhost lint/build、实际APK静态通过。原无障碍与完整安全/性能/正式签收未关闭，见[同字段记录](testing/SAME_FIELD-20261024.md)。
 
 **最新生产检查点（WIP，2026-10-23）：** debug `831233e4` / 默认unsigned `f857df0c` 已补删除后真实caret确认，前次系统17/20红测保留。相同独立host/test在真实Pixel core10/10、敏感字素36/36、正文拒绝/异步续输/长按/切字段20/20均PASS，敏感正文getter0；同debug两设备full组件28结构故障PASS、敏感5/5和metadata6/6、bounds11/cursor22，controller两设备PASS。50app/77state/42工具、两套lint/构建/实际APK静态审计PASS；release尚未绑定本最终哈希运行，不称完整M2/R04/I05安全验收。系统测试的两个本项目IME均已启用；名称现已区分调试/优化测试版，已安装旧优化版尚未随本轮更新。见[系统宿主记录](testing/SYSTEM_HOST-20261023.md)。下列未启用/未授权等均为此前历史。
