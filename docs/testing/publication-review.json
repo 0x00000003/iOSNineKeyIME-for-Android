@@ -1,0 +1,66 @@
+{
+  "checked_on": "2026-10-24",
+  "stage": "PRE_PUSH_CHECKED",
+  "scope": "Public source repository readiness; not final APK acceptance or a legal certification",
+  "reviewed_revision": "3333ca119a89a7969c6f032bd0a46d7c8565d4e2",
+  "history": {
+    "commits_reviewed": 71,
+    "unique_blobs_reviewed": 4544,
+    "blob_bytes_reviewed": 66481470,
+    "branch": "main",
+    "tags": 0,
+    "forbidden_private_or_build_paths_found": 0,
+    "maintainer_author_and_committer_verified": true,
+    "one_linked_codex_coauthor_per_commit": true,
+    "historical_placeholder_attribution_docs_fixed": true,
+    "historical_tree_changes_limited_to": [
+      "AGENTS.md",
+      "docs/CONTRIBUTING.md"
+    ],
+    "runtime_source_trees_unchanged": true,
+    "current_complete_tree_unchanged_by_history_repair": true
+  },
+  "sensitive_content": {
+    "checks": [
+      "Personal names and absolute home paths",
+      "Known GitHub and OpenAI token formats",
+      "AWS access-key identifiers",
+      "PEM private-key headers",
+      "Credential-bearing HTTP URLs",
+      "Private screenshots and build/signing artifacts in historical paths"
+    ],
+    "confirmed_findings": 0,
+    "triaged_false_positives": [
+      "Upstream numeric 150 and test HTML matched a broad storage-size pattern",
+      "Generic home-directory prefix names in an ELF path-mapping test description"
+    ],
+    "limits": "Pattern and path review is not a proof that every possible secret format is absent"
+  },
+  "images": {
+    "comparison": "docs/images/android-ios-comparison.png",
+    "sha256": "643c08c34cf40fd63fa55bcfd4edef19079ba27fb8fbb083e9d3534304ce8222",
+    "complete_original_screenshot_pixels_preserved": true,
+    "labels_and_borders_outside_screenshots": true,
+    "historical_documentation_image_metadata_reviewed": true,
+    "personal_exif_or_location_metadata_found": false,
+    "metadata_check_note": "An initial no-metadata assertion rejected a standard Android sRGB ICC profile. Manual review confirmed color-only data; subsequent EXIF and personal-metadata checks passed. The source image was preserved."
+  },
+  "validation": {
+    "project_document_checks": "PASS",
+    "tooling_unit_tests": {
+      "result": "PASS",
+      "tests": 45
+    },
+    "host_inventory": "PASS; inventory only",
+    "diff_whitespace": "PASS",
+    "android_build": "NOT_RUN; documentation-only change",
+    "device_tests": "NOT_RUN; documentation-only change"
+  },
+  "distribution": {
+    "source_repository_only": true,
+    "apk_release_created": false,
+    "known_app_issues_retained": "docs/OPEN_ISSUES.md",
+    "license_and_attribution_records_retained": true,
+    "formal_apk_security_performance_and_resource_distribution_gates": "Remain open; see docs/STATUS.md and docs/COMPLIANCE.md"
+  }
+}

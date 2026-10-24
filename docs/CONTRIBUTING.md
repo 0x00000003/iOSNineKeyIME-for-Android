@@ -12,7 +12,7 @@ GitHub将该邮箱关联到[codex账号](https://github.com/codex)，以共同�
 
 这一格式也见于[OpenAI官方提交约定](https://github.com/openai/symphony/blob/main/.codex/skills/commit/SKILL.md)，[官方仓库实际双作者示例](https://github.com/openai/swarm/commit/6af0b4caf37dca4526dfd98e9fbd8ce36e7eeb22)已显示维护者与Codex。核验范围见[署名核验记录](testing/codex-attribution.json)。GitHub多作者机制见[官方文档](https://docs.github.com/en/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors)。
 
-不要给未使用Codex的贡献添加该署名，也不要覆盖其他贡献者或全局Git配置。共同作者归属不代表OpenAI官方审核本项目。仓库未推送时，本地只具备提交元数据，尚不存在本项目的GitHub在线展示页面。
+不要给未使用Codex的贡献添加该署名，也不要覆盖其他贡献者或全局Git配置。共同作者归属不代表OpenAI官方审核本项目。共同作者展示可在GitHub提交详情中核对。
 
 ## 开发与验证
 

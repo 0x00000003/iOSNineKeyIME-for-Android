@@ -5,7 +5,7 @@
 - 左侧：`android-fullscreen.png`，574×1280；绿色边框，标注“Android / 本项目输入法”。
 - 右侧：`ios-fullscreen.png`，591×1280；蓝色边框，标注“iOS / iPhone 原生键盘 · 参考”。
 - 标题、边框和间隔均位于截图外；截图本身不裁剪、不缩放、不调色、不重绘。
-- 发布输入为原JPEG解码后的无损PNG，不包含原文件的额外元数据。
+- 发布输入为原JPEG解码后的无损PNG，不包含EXIF、定位或个人元数据；Android输入保留标准sRGB色彩配置。
 - 标签使用本机字体渲染，字体文件不进入仓库或APK。
 
 复现（Pillow版本见根目录的`requirements-visual.lock`，`--font`可指定本机支持中文的字体）：

@@ -14,11 +14,12 @@
     "html_shows_human_and_codex": true
   },
   "official_convention": "https://github.com/openai/symphony/blob/main/.codex/skills/commit/SKILL.md",
-  "local_project_not_published": true,
   "local_history_verified": {
     "commits": 68,
     "all_tree_ids_unchanged": true,
     "maintainer_author_and_committer_preserved_or_resolved_from_placeholder": true,
     "each_commit_has_one_github_linked_codex_trailer": true
-  }
+  },
+  "project_not_published_at_this_check": true,
+  "scope": "Archived pre-publication attribution verification; publication is recorded separately."
 }
