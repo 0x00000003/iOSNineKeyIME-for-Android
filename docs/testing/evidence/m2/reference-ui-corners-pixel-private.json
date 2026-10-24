@@ -1,0 +1,762 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "private-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "stable observed pixel frames + touchscreen; actual system structural deletion; all sensitive body getters rejected",
+    "pass": true,
+    "cases": [
+      {
+        "id": "password-g1",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "password-g2",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "password-g3",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 6,
+        "pass": true
+      },
+      {
+        "id": "password-g4",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "password-g5",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "password-g6",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "password-g7",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "password-g8",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "password-g9",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g1",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g2",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g3",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 11,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g4",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 4,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g5",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 4,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g6",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 3,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g7",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g8",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 3,
+        "pass": true
+      },
+      {
+        "id": "visible-password-g9",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "web-password-g1",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "web-password-g2",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "web-password-g3",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 6,
+        "pass": true
+      },
+      {
+        "id": "web-password-g4",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "web-password-g5",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "web-password-g6",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "web-password-g7",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "web-password-g8",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "web-password-g9",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g1",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g2",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g3",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 11,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g4",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 4,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g5",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 4,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g6",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 3,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g7",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g8",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 3,
+        "pass": true
+      },
+      {
+        "id": "no-learn-g9",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      }
+    ],
+    "reference_captures": [],
+    "actual_pixel_targeted_taps": 36,
+    "planned_cases": 36
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 36,
+  "planned_cases": 36,
+  "status": "PASS",
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "password-g1",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "password-g2",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "password-g3",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 6,
+      "pass": true
+    },
+    {
+      "id": "password-g4",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "password-g5",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "password-g6",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "password-g7",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "password-g8",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "password-g9",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g1",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g2",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g3",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 11,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g4",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 4,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g5",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 4,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g6",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 3,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g7",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g8",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 3,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g9",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "web-password-g1",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "web-password-g2",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "web-password-g3",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 6,
+      "pass": true
+    },
+    {
+      "id": "web-password-g4",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "web-password-g5",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "web-password-g6",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "web-password-g7",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "web-password-g8",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "web-password-g9",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g1",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g2",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g3",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 11,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g4",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 4,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g5",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 4,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g6",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 3,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g7",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g8",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 3,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g9",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "d3057efb0da34f04b1137d0cba027b12",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+  "test_apk_sha256": "86bf1d34ecb0626998c42c0c7326a168ebff0d06b8040e295555a9af64cad639",
+  "ime_apk_sha256": "5c46ae95448aa09cc818291bca73035e999625488d8f669e449b6c2acf992411",
+  "ime_variant": "debug",
+  "requested_scope": "private-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

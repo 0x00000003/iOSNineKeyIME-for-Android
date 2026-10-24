@@ -1,0 +1,142 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "restore-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "observed pixels + touchscreen + public host IMM hide/show; same EditText identity retained",
+    "pass": true,
+    "cases": [
+      {
+        "id": "same-field-email",
+        "exact_synthetic_result": true,
+        "sensitive": false,
+        "body_getter_calls": 2,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "pass": true
+      },
+      {
+        "id": "same-field-password",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "same-field-no-learn",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "same-field-number-password",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      },
+      {
+        "id": "hidden-private-selection",
+        "exact_synthetic_result": true,
+        "sensitive": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "pass": true
+      }
+    ],
+    "reference_captures": [],
+    "actual_pixel_targeted_taps": 15,
+    "planned_cases": 5
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 5,
+  "planned_cases": 5,
+  "status": "PASS",
+  "ime_animation_starts": 13,
+  "ime_animation_ends": 13,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "same-field-email",
+      "exact_synthetic_result": true,
+      "sensitive": false,
+      "body_getter_calls": 2,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "same-field-password",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "same-field-no-learn",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "same-field-number-password",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "hidden-private-selection",
+      "exact_synthetic_result": true,
+      "sensitive": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "65f396c8d3c54a3397712c14c2320360",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+  "test_apk_sha256": "86bf1d34ecb0626998c42c0c7326a168ebff0d06b8040e295555a9af64cad639",
+  "ime_apk_sha256": "5c46ae95448aa09cc818291bca73035e999625488d8f669e449b6c2acf992411",
+  "ime_variant": "debug",
+  "requested_scope": "restore-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

@@ -337,7 +337,16 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
     }
     override fun onDraw(canvas:Canvas){
         val radius=40*(panel?.scale?:1f)*density;repaint.color=backgroundColor;repaint.style=Paint.Style.FILL
-        val path=Path().apply{moveTo(0f,radius);quadTo(0f,0f,radius,0f);lineTo(width-radius,0f);quadTo(width.toFloat(),0f,width.toFloat(),radius);lineTo(width.toFloat(),height.toFloat());lineTo(0f,height.toFloat());close()};canvas.drawPath(path,repaint)
+        // The five dark references share a larger lower curve. Keep it inside this
+        // keyboard's bounds; the transparent upper IME window still belongs to the host.
+        val lowerRadius=min(80*(panel?.scale?:1f)*density,min(width/2f,height/2f))
+        if(dark)canvas.drawColor(0xff1e1e1e.toInt())
+        val path=Path().apply{
+            moveTo(0f,radius);quadTo(0f,0f,radius,0f);lineTo(width-radius,0f)
+            quadTo(width.toFloat(),0f,width.toFloat(),radius)
+            lineTo(width.toFloat(),height-lowerRadius);quadTo(width.toFloat(),height.toFloat(),width-lowerRadius,height.toFloat())
+            lineTo(lowerRadius,height.toFloat());quadTo(0f,height.toFloat(),0f,height-lowerRadius);close()
+        };canvas.drawPath(path,repaint)
         if(state.layout==Layout.EMOJI && !emojiSearch && popup==Popup.NONE){panel?.let{p->geometry["emoji-category-$emojiCategory"]?.let{box->repaint.color=0xff55555b.toInt();canvas.drawCircle(safeLeft+(box.left+box.right)/2*density,(box.top+24*p.scale)*density,21.5f*p.scale*density,repaint)}}}
         panel?.takeIf{it.headerHeight>0}?.let{repaint.color=if(dark)0xff171717.toInt()else 0xffbec1c7.toInt();canvas.drawRect(0f,it.barTop*density,width.toFloat(),it.barTop*density+1,repaint)}
         if(state.layout==Layout.LATIN && !state.sensitive){panel?.let{p->repaint.color=if(dark)0xff363638.toInt()else 0xffb8bcc5.toInt();for(i in 1..2){val x=(safeLeft+currentWidth*density*i/3);canvas.drawRect(x,(p.barTop+12)*density,x+1,(p.barTop+p.barHeight-12)*density,repaint)}}}

@@ -32,7 +32,7 @@ internal class ReferenceKeyView(context:Context):FrameLayout(context) {
         val g=glyph
         if(g==null){super.onDraw(canvas);return}
         val visualHeight=(visualHeightPx?:height).coerceAtMost(height).toFloat()
-        val fraction=when{g in setOf(KeyGlyph.GLOBE,KeyGlyph.MICROPHONE)->0.72f;leadingGlyph->0.45f;tag?.toString()?.startsWith("emoji-category-")==true->0.80f;g==KeyGlyph.EMOJI->if(width<visualHeight*1.05f)0.525f else 0.54f;g==KeyGlyph.ENTER && visualHeight>width*1.25f->0.40f;else->0.55f}
+        val fraction=when{g in setOf(KeyGlyph.GLOBE,KeyGlyph.MICROPHONE)->0.68f;leadingGlyph->0.45f;tag?.toString()?.startsWith("emoji-category-")==true->0.80f;g==KeyGlyph.EMOJI->if(width<visualHeight*1.05f)0.525f else 0.54f;g==KeyGlyph.ENTER && visualHeight>width*1.25f->0.40f;else->0.55f}
         val size=minOf(width.toFloat(),visualHeight)*fraction
         val saved=canvas.save()
         try {

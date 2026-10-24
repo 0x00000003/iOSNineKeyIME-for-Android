@@ -1,5 +1,7 @@
 # 当前状态
 
+2026-10-24 当前五态检查点（WIP）：debug `5c46ae95` / 优化本地测试证书 `c37aa834` 已补底角和页脚原创图形尺寸。**两版本分别**在Pixel五态9/9、同字段重显5/5、敏感字素36/36、异步队列20/20 PASS，敏感正文getter0；debug两设备full28故障/敏感5/metadata6、controller和view20通过。83 state、50 debug/50 release app、45工具与构建/lint、三个实际APK静态PASS。原a11y窗口坐标/lifecycle、完整安全/性能/多宿主/正式签名仍未签收，字形/Emoji/导航/未知状态不同，非1:1。见[当前记录](testing/CORNERS-20261024.md)及[三SHA检查点](testing/evidence/m5/reference-ui-corners-checkpoint.json)。下列为历史增量，不替代当前制品证据。
+
 系统回归增量（2026-10-24，WIP）：同debug `179a24e7` 在独立稳定真实像素/触屏协议下五态9/9、敏感字素36/36、异步队列20/20 PASS，敏感正文getter0，第二续输键前确实pending；API36模拟器full28故障/敏感5/metadata6与controller PASS。优化非debuggable本地测试证书版 `b127fe87` 的联合构建/lint/50 JVM、实际APK静态及Pixel同字段5/5已通过，其余测试按独立记录；原a11y坐标仍FAIL，不能关闭整体M2/M5。
 
 2026-10-24 最新增量（WIP）：debug `179a24e7` 修复同一字段仅隐藏/重显后退格使用过期初始caret的问题。最终同host/test旧c51 1/5→新179a 5/5，另一次新179a 5/5；四敏感场景正文getter全0，隐藏期间外移光标也按真实位置删除。保留旧红测及早期no-learn定位中断；当前五态触控回归在number阶段FAIL，不能继承c51/a871的9/9。50 app/83 state/45工具、debug/testhost lint/build、实际APK静态通过。原无障碍与完整安全/性能/正式签收未关闭，见[同字段记录](testing/SAME_FIELD-20261024.md)。

@@ -1,0 +1,26 @@
+{
+  "scope": "new actual cropped screenshot grayscale samples; not pixel-exact approval",
+  "capture_record": "reference-ui-corners-pixel-targets",
+  "left_edge_samples": [
+    {
+      "source_y": 1240,
+      "capture_first_panel34_source_x": 6.772
+    },
+    {
+      "source_y": 1255,
+      "capture_first_panel34_source_x": 16.006
+    },
+    {
+      "source_y": 1265,
+      "capture_first_panel34_source_x": 25.856
+    },
+    {
+      "source_y": 1275,
+      "capture_first_panel34_source_x": 44.325
+    },
+    {
+      "source_y": 1279,
+      "capture_first_panel34_source_x": 64.641
+    }
+  ]
+}

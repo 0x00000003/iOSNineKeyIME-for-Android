@@ -1,0 +1,14 @@
+{
+  "scope": "optimized local debug-certificate non-debuggable WIP; NOT formal M6 signing",
+  "source_base": "df3b95a + bottom curve and footer authored vector scale",
+  "apk_sha256": "c37aa83434d7629ad26eb879ed05952b282d15738266e1644b0449d202c3803a",
+  "frozen_apk": "artifacts/m5/corners-optimized/app-release-local-test.apk",
+  "mapping_sha256": "1a2ca25b854df93f780d13ac29be253cfd7204e0c19986d5ec82e7daad8a5dbc",
+  "build": "PASS",
+  "lint": "PASS",
+  "source_hashes": {
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ui/NineKeyView.kt": "6d3b5638a4311abff154d59129c6c2a3ce85818d7e4e4b41c7acd67e9a0f42e6",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ui/ReferenceKeyView.kt": "261b30e9396178bea669ad6cb46bf9dea0482af2bf09473879b8a12af5aa92f3",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ime/NineKeyInputMethodService.kt": "aa75ff933633026f8d29a5a29baf4fc61e31acdca5722444f78e6e4608a8c7fd"
+  }
+}

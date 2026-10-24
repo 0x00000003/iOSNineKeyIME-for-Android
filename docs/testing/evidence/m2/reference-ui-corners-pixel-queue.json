@@ -1,0 +1,444 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "queue-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "observed stable screen pixels + actual system touchscreen/structure; no IC or cursor bridge",
+    "pass": true,
+    "cases": [
+      {
+        "id": "guard-password-g1",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-password-g2",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 6,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-visible-password-g1",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-visible-password-g2",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 11,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-web-password-g1",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-web-password-g2",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 6,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-number-password-g1",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-number-password-g2",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 6,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-no-learn-g1",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "guard-no-learn-g2",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 11,
+        "bounds_delivered": 1,
+        "pass": true
+      },
+      {
+        "id": "selection-password",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true
+      },
+      {
+        "id": "selection-visible-password",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true
+      },
+      {
+        "id": "selection-web-password",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true
+      },
+      {
+        "id": "selection-number-password",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true
+      },
+      {
+        "id": "selection-no-learn",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true
+      },
+      {
+        "id": "queued-password",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "bounds_delivered": 1,
+        "pass": true,
+        "observed_query_pending_before_typing": true,
+        "observed_pending_before_second_key": true
+      },
+      {
+        "id": "queued-no-learn",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 2,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "bounds_delivered": 1,
+        "pass": true,
+        "observed_query_pending_before_typing": true,
+        "observed_pending_before_second_key": true
+      },
+      {
+        "id": "normal-delete-typing",
+        "pass": true
+      },
+      {
+        "id": "held-private-delete",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 16,
+        "bounds_requests": 8,
+        "gesture_requests": 8,
+        "bounds_delivered": 8,
+        "pass": true
+      },
+      {
+        "id": "pending-cross-field",
+        "exact_synthetic_result": true,
+        "body_getter_calls": 0,
+        "cursor_requests": 0,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "bounds_delivered": 0,
+        "pass": true,
+        "observed_old_query_pending": true,
+        "old_result_delivered": true,
+        "old_field_unchanged": true
+      }
+    ],
+    "reference_captures": [],
+    "actual_pixel_targeted_taps": 27,
+    "planned_cases": 20
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 20,
+  "planned_cases": 20,
+  "status": "PASS",
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "guard-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 6,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-visible-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-visible-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 11,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-web-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-web-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 6,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-number-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-number-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 6,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-no-learn-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 2,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-no-learn-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 11,
+      "bounds_delivered": 1,
+      "pass": true
+    },
+    {
+      "id": "selection-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-visible-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-web-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-number-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-no-learn",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true
+    },
+    {
+      "id": "queued-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "bounds_delivered": 1,
+      "pass": true,
+      "observed_query_pending_before_typing": true,
+      "observed_pending_before_second_key": true
+    },
+    {
+      "id": "queued-no-learn",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "gesture_requests": 1,
+      "bounds_delivered": 1,
+      "pass": true,
+      "observed_query_pending_before_typing": true,
+      "observed_pending_before_second_key": true
+    },
+    {
+      "id": "normal-delete-typing",
+      "pass": true
+    },
+    {
+      "id": "held-private-delete",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 16,
+      "bounds_requests": 8,
+      "gesture_requests": 8,
+      "bounds_delivered": 8,
+      "pass": true
+    },
+    {
+      "id": "pending-cross-field",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "gesture_requests": 0,
+      "bounds_delivered": 0,
+      "pass": true,
+      "observed_old_query_pending": true,
+      "old_result_delivered": true,
+      "old_field_unchanged": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "f75f1fbb083347b7b9e7a1364da62109",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+  "test_apk_sha256": "86bf1d34ecb0626998c42c0c7326a168ebff0d06b8040e295555a9af64cad639",
+  "ime_apk_sha256": "5c46ae95448aa09cc818291bca73035e999625488d8f669e449b6c2acf992411",
+  "ime_variant": "debug",
+  "requested_scope": "queue-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}
