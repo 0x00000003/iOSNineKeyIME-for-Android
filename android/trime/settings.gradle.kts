@@ -27,6 +27,9 @@ include(":codegen")
 // Pure reducer validation is independent of the WIP runtime resource gate.
 include(":state")
 
+// Separate cross-UID synthetic host; never an IME runtime dependency.
+include(":testhost")
+
 // Lock every used project and plugin classpath, including the included convention build.
 // Missing or changed lock state fails, including a new configuration not yet reviewed.
 gradle.beforeProject {

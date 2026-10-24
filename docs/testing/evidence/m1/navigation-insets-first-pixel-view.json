@@ -1,0 +1,12 @@
+{
+  "scope": "runner transport failure after synthetic view instrumentation completed",
+  "pass": false,
+  "status": "FAIL",
+  "error_code": "E_RUNNER_NONCE_NAMEERROR",
+  "instrumentation_reported_pass": true,
+  "instrumentation_case_count": 16,
+  "tested_apk_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "device": "Pixel 9 Pro",
+  "requested_scope": "view-insets",
+  "raw_instrumentation_preserved": true
+}

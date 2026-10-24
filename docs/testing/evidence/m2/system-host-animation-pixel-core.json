@@ -1,0 +1,72 @@
+{
+  "scope": "core",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": true,
+  "passed_cases": 8,
+  "planned_cases": 10,
+  "status": "FAIL",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "native-nine-key",
+      "single_commit": true,
+      "idle_punctuation": true,
+      "pass": true
+    },
+    {
+      "id": "latin",
+      "pass": false
+    },
+    {
+      "id": "direct-number",
+      "pass": true
+    },
+    {
+      "id": "direct-phone",
+      "pass": true
+    },
+    {
+      "id": "action-send",
+      "pass": false
+    },
+    {
+      "id": "action-search",
+      "pass": true
+    },
+    {
+      "id": "action-next",
+      "pass": true
+    },
+    {
+      "id": "action-go",
+      "pass": true
+    },
+    {
+      "id": "action-plain",
+      "pass": true
+    },
+    {
+      "id": "composition-enter",
+      "confirm_only_first_enter": true,
+      "action_only_second_enter": true,
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "afb753eb6cb94833b68d8c1c995c8af5",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "c84cbd56dc81cf92b4d0419203874122db0cccdba75b439da27d00d822d78487",
+  "test_apk_sha256": "1c912c9765113acafaedb3283ac03d339296c5f7b211b6d337d7e72a9260e8d0",
+  "ime_apk_sha256": "77636c33c8016e47b46f57157c262fef49eddea4a6bc8dae9f0c3268d08a611b",
+  "ime_variant": "debug",
+  "requested_scope": "core",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

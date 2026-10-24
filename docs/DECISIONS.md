@@ -58,3 +58,13 @@
 依据ADR037隐私范围定义，接受API34+结构查询+宿主字符粒度删除作为生产候选路径。只取当前行内必要坐标、selection和matrix，最多32个尾部单元；不读正文、segment finder、composingText、不持久化元数据。引入Controller异步host屏障及session/selection/连接校验，未知结果不自动重试，无DEL fallback。非敏感ICU路径保留，敏感同步入口拒绝。
 
 这是为修复真实组合音标FAIL做的架构改变，新增平台API但没有新增依赖/网络权限；固定依赖锁不变。21故障合成案例（含begin/end同步重入）和原R04生产组件已有新版本成绩；系统onUpdateCursorAnchorInfo与多宿主仍待用户启用IME，不能据组件成绩宣称P0关闭。详细协议/结果/边界见testing/STRUCTURAL_DELETE-20261024.md。
+
+## ADR039 — 独立UID的真实系统IME合成宿主（WIP）
+
+新增仅debug的:testhost模块，与IME没有项目/native依赖，复用已有固定工具链。它通过真实系统IME窗口触控和宿主oracle验证，不再用同进程IC桥接代替系统门禁。无网络权限，WebView仅本地静态合成页并禁脚本/网络/file/content导航，Compose仍未覆盖。新模块的依赖锁单独生成/审查，默认STRICT不变；settings原始文件修改hash账同步。
+
+系统测试仅在已启用的本项目输入法之间切换，首次启用遵循系统警告流程。实际系统测试已开始但core失败未关闭；各scope、nonce/hash绑定与旧失败见testing/SYSTEM_HOST-20261023.md。协议/准备检查不替代验收。
+
+## ADR040 — View拥有收到的安全inset，系统宿主等待实际窗口稳定（WIP）
+
+NineKeyView只按框架传入的systemBars/displayCutout为自绘键区预留左右/底部，测量遵守父约束，绘制与触控使用同一偏移；不复制字体/图标或增加依赖。双设备16例实际View测试覆盖安全区无误触。系统IME导航控制区与普通宿主手势条不同，测试不得以宿主inset等值约束IME留白；固定方向下入口动画后的实际底排间距作为后续布局切换不变量，另核真实窗口显示底边和导航最低安全界。旧测试/旧制品失败保持记录，不把a11y注入成功当输入成功，不据组件声称1:1或完整M5通过。

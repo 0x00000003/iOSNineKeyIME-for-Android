@@ -16,6 +16,18 @@ class EditorPolicyTest : StringSpec({
             p.directLayout shouldBe DirectLayout.LATIN
         }
     }
+    "U05 API37 suggestion-selected flag cannot change password or no-learning classification" {
+        // Captured structural metadata on the authorized API37 Pixel; public InputType flag.
+        val added = 0x00200000
+        listOf(T.TYPE_TEXT_VARIATION_PASSWORD,T.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD,T.TYPE_TEXT_VARIATION_WEB_PASSWORD).forEach {variation ->
+            val p=EditorPolicy.from(T.TYPE_CLASS_TEXT or variation or added,I.IME_ACTION_DONE,false)
+            p.reason shouldBe PrivacyReason.PASSWORD;p.permitContextRead shouldBe false;p.permitLearning shouldBe false
+        }
+        val numeric=EditorPolicy.from(T.TYPE_CLASS_NUMBER or T.TYPE_NUMBER_VARIATION_PASSWORD or added,I.IME_ACTION_DONE,false)
+        numeric.reason shouldBe PrivacyReason.PASSWORD;numeric.directLayout shouldBe DirectLayout.NUMBER
+        val noLearn=EditorPolicy.from(T.TYPE_CLASS_TEXT or added,I.IME_FLAG_NO_PERSONALIZED_LEARNING,false)
+        noLearn.reason shouldBe PrivacyReason.NO_PERSONALIZED_LEARNING;noLearn.permitContextRead shouldBe false;noLearn.permitLearning shouldBe false
+    }
     "U05 numeric password keeps numeric direct keys and denies learning" {
         val p = EditorPolicy.from(T.TYPE_CLASS_NUMBER or T.TYPE_NUMBER_VARIATION_PASSWORD or T.TYPE_NUMBER_FLAG_SIGNED, I.IME_ACTION_DONE, false)
         p.reason shouldBe PrivacyReason.PASSWORD

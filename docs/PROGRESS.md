@@ -129,3 +129,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 收尾增量修复HostAdapter取消回调同步重入：先失效连接/清理，再取消，begin取消后重新核session。21案新test712e60e9配旧09f88435在模拟器真实红测reentrant_begin FAIL（前19 PASS）；同test配新77636c33两设备full 21/21 PASS，正文getter0，原R04字素5/5。默认unsigned02c7f870仅构建/lint/实际APK审计PASS，未签名运行。77 state/49 app/40工具与两套lint通过；系统IMS、多宿主、正式签收/原图仍不宣称完成。
 
 本轮生产结构删除WIP代码/记录已本地提交07cab95；磁盘回收2b71556、同APK记录单实体保存c8d89fe。最终再测项目占用仍28GiB量级、系统可用26GiB，未再次生成工具链副本。当前测试APK与源文件摘要均绑定该代码检查点，系统IME/视觉/完整发布门禁未关闭。
+
+继续开发：工作区初始干净df10d4c，唯一在用工具链，余量26GiB。两个本项目IME均已启用；查得选中旧582release，已切当前776debug并验证，无首次启用绕警告。增加独立UID:testhost，STRICT锁/既有依赖验证、debug宿主与test/lint构建通过；只新增约11MB构建输出，不复制SDK。两设备readiness16/16（保留API37附加flag导致旧预期FAIL与诊断）；真实Pixel core尚FAIL，5键已注入但图中仅26，正在定位served字段重启与触控交错；不称M2通过。原图仍缺。详见testing/SYSTEM_HOST-20261023.md。
+
+本轮系统核心最终befe66f4真实Pixel10/10、敏感字素删除36/36 PASS（独立UID，无坐标回调桥）；修复导航inset/父测量并用实际窗口稳定门控触控。IME导航控件高度不同于宿主手势条，错误等值断言的FAIL保留；最终协议保持上屏/动作次数原断言。两设备full组件PASS，四布局×四inset16/16，50app/77state/42工具、两套lint/实际APK静态审计PASS；新增testhost lint通过。未覆盖系统敏感正文getter拒绝、异步删除期间连续输入/生命周期/全安全和原图，继续WIP，按贡献流程提交。

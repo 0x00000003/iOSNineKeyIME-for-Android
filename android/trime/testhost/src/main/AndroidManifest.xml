@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <queries>
+        <package android:name="dev.local.iosninekeyime.probe.debug" />
+        <package android:name="dev.local.iosninekeyime.probe" />
+    </queries>
+    <application android:allowBackup="false" android:fullBackupContent="@xml/ime_backup_rules"
+        android:dataExtractionRules="@xml/ime_data_extraction_rules" android:usesCleartextTraffic="false"
+        android:label="离线九键 · 合成测试宿主" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity android:name=".HostActivity" android:exported="true" android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

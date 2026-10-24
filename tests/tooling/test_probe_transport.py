@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'scripts'))
-from run_probe import streamed_result, selected_apk, freeze_apk, ROOT
+from run_probe import streamed_result, private_result, selected_apk, freeze_apk, ROOT
 
 class ProbeTransport(unittest.TestCase):
     def test_nonce_rejects_previous_or_truncated_result(self):
@@ -38,3 +38,15 @@ class ProbeTransport(unittest.TestCase):
             folder=Path(temp);source=folder/'build.apk';source.write_bytes(b'synthetic-apk')
             with self.assertRaises(ValueError):freeze_apk(source,folder/'frozen.apk','0'*64,folder/'blobs')
             self.assertFalse((folder/'frozen.apk').exists());self.assertEqual(list((folder/'blobs').iterdir()),[])
+
+    def test_host_stream_is_bound_to_its_own_nonce_key(self):
+        output='INSTRUMENTATION_RESULT: stream={"host_run_id":"fresh","pass":true}\nINSTRUMENTATION_CODE: -1'
+        self.assertIsNone(streamed_result(output,'fresh'))
+        self.assertTrue(streamed_result(output,'fresh','host_run_id')['pass'])
+        self.assertIsNone(streamed_result(output,'stale','host_run_id'))
+
+    def test_private_file_result_must_be_an_object_with_the_current_probe_nonce(self):
+        self.assertIsNone(private_result('[]','fresh'))
+        self.assertIsNone(private_result('{','fresh'))
+        self.assertIsNone(private_result('{"probe_run_id":"old","pass":true}','fresh'))
+        self.assertTrue(private_result('{"probe_run_id":"fresh","pass":true}','fresh')['pass'])

@@ -1,0 +1,9 @@
+{
+  "scope": "user explicitly authorized selecting/launching own test IME; both own variants had already been manually enabled",
+  "device": "authorized Pixel 9 Pro",
+  "previously_selected": "own older release 582016c3",
+  "selected": "own current debug 77636c33",
+  "selected_verified": true,
+  "own_app_launched": true,
+  "no_enable_command_or_system_warning_bypass": true
+}

@@ -1,0 +1,88 @@
+{
+  "scope": "core",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": 122,
+  "host_minimum_bottom_margin": 68,
+  "passed_cases": 10,
+  "planned_cases": 10,
+  "status": "PASS",
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "native-nine-key",
+      "single_commit": true,
+      "idle_punctuation": true,
+      "pass": true
+    },
+    {
+      "id": "latin",
+      "pass": true
+    },
+    {
+      "id": "direct-number",
+      "pass": true
+    },
+    {
+      "id": "direct-phone",
+      "pass": true
+    },
+    {
+      "id": "action-send",
+      "action_count": 1,
+      "last_action": 4,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-search",
+      "action_count": 1,
+      "last_action": 3,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-next",
+      "action_count": 1,
+      "last_action": 5,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-go",
+      "action_count": 1,
+      "last_action": 2,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "action-plain",
+      "action_count": 1,
+      "last_action": 6,
+      "remaining_length": 0,
+      "pass": true
+    },
+    {
+      "id": "composition-enter",
+      "confirm_only_first_enter": true,
+      "action_only_second_enter": true,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "2fa65fd3b9c8402190a3691bccfc8e17",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "c84cbd56dc81cf92b4d0419203874122db0cccdba75b439da27d00d822d78487",
+  "test_apk_sha256": "f0181f7680ee3e710921c44e05ef751d3f1bfdefef0161fc03d02d8149d423e7",
+  "ime_apk_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "ime_variant": "debug",
+  "requested_scope": "core",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

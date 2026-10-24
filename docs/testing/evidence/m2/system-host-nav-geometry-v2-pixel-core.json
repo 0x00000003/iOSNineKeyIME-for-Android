@@ -1,0 +1,83 @@
+{
+  "scope": "core",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "status": "FAIL",
+  "failure_stage": "native-nine-key",
+  "failure_step": "ime-frame-coherent",
+  "tap_attempts": 0,
+  "injected_taps": 0,
+  "measured_bottom_gap": 122,
+  "expected_bottom_gap": 68,
+  "ime_window_root_geometry": [
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      2136,
+      960,
+      2948
+    ],
+    [
+      0,
+      1330,
+      960,
+      2142
+    ],
+    [
+      0,
+      1330,
+      960,
+      2142
+    ]
+  ],
+  "ime_windows": 1,
+  "own_ime_root": true,
+  "error_code": "E_SYSTEM_HOST_ASSERTION",
+  "debug_ime_crop_saved": true,
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [],
+  "pass": false,
+  "host_run_id": "02e7bfbfcce041008ecce33d5216741e",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "c84cbd56dc81cf92b4d0419203874122db0cccdba75b439da27d00d822d78487",
+  "test_apk_sha256": "aca9ce7f33191b66c282f05cb75a08a256d1965b33bc84467a05290da7388257",
+  "ime_apk_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "ime_variant": "debug",
+  "requested_scope": "core",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

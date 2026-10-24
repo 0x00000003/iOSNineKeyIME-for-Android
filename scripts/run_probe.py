@@ -51,12 +51,20 @@ def freeze_apk(source, destination, expected_sha, blob_folder=None):
     os.link(blob, destination)  # Fails if a prior/interrupted run already owns this path.
 
 
-def streamed_result(output, run_id):
+def private_result(raw, run_id):
+    try:
+        candidate = json.loads(raw)
+    except json.JSONDecodeError:
+        return None
+    return candidate if isinstance(candidate, dict) and candidate.get('probe_run_id') == run_id else None
+
+
+def streamed_result(output, run_id, nonce_key="probe_run_id"):
     marker = 'INSTRUMENTATION_RESULT: stream='
     for row in output.split(marker)[1:]:
         try:
             candidate, _ = json.JSONDecoder().raw_decode(row.lstrip())
-            if isinstance(candidate, dict) and candidate.get('probe_run_id') == run_id:
+            if isinstance(candidate, dict) and candidate.get(nonce_key) == run_id:
                 return candidate
         except json.JSONDecodeError:
             pass
@@ -67,7 +75,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
-    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'connection-faults', 'nolearn-restart', 'paging', 'gesture-research', 'gesture-metadata-research', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'connection-faults', 'nolearn-restart', 'paging', 'gesture-research', 'gesture-metadata-research', 'view-insets', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
     parser.add_argument('--variant', choices=['debug', 'release'], default='debug')
     parser.add_argument('--apk-root', type=Path, help='Frozen APK output tree inside this project; default current Gradle outputs')
     args = parser.parse_args()
@@ -143,10 +151,8 @@ def main():
     transport = 'private-file'
     if args.variant == 'debug':
         try:
-            candidate = json.loads(call('shell', 'run-as', package, 'cat', 'no_backup/m1/probe-result.json'))
-            if candidate.get('probe_run_id') == run_id:
-                result = candidate
-        except (RuntimeError, json.JSONDecodeError):
+            result = private_result(call('shell', 'run-as', package, 'cat', 'no_backup/m1/probe-result.json'), run_id)
+        except RuntimeError:
             pass
     if result is None:
         result = streamed_result(output, run_id)

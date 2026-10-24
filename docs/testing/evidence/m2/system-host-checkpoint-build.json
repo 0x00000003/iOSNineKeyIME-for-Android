@@ -1,0 +1,29 @@
+{
+  "status": "WIP",
+  "ime_debug_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "unsigned_release_sha256": "133666e81908484f72ab9a21a62afe77c802b7736c6024eef72a1f7d10222928",
+  "jvm": {
+    "app": {
+      "tests": 50,
+      "failures": 0
+    },
+    "state": {
+      "tests": 77,
+      "failures": 0
+    }
+  },
+  "tooling_tests": 42,
+  "debug_release_build_lint": "PASS",
+  "testhost_build_lint": "PASS",
+  "host_instrumentation_source_sha256": "65bba43f8d068d982ec587d32f67aeccd15f14742d95c3e37318a56bf194a043",
+  "system_pixel_core": "10/10 PASS",
+  "system_pixel_private_delete": "36/36 PASS; does not assert all IPC body getters rejected",
+  "component_full_and_controller": "both devices PASS",
+  "view_insets": "both devices16/16 PASS",
+  "limitations": [
+    "No iPhone originals or 1:1 acceptance",
+    "No system private async queue/body getter enforcement yet",
+    "No full release/security/performance acceptance"
+  ],
+  "remotes": "No push/publish"
+}

@@ -8,8 +8,8 @@
 | R04敏感预存组合音标 | 组件PASS / 系统WIP | 历史DEL路径两设备4/5 FAIL保留。用户允许必要结构信息后，生产77636c33在两设备普通6/6、敏感字素5/5、6类metadata6/6、正文getter0（结构请求11），21结构故障案例/完整探针/controller均PASS。cursor anchor仍由自有合成宿主桥接，真实IMS、Compose/WebView/跨行/复杂RTL与完整隐私路径未验收；不支持或未知结果失败关闭，不宣称R04整体PASS。见testing/STRUCTURAL_DELETE-20261024.md。 |
 | M5参考图/体验确认 | BLOCKED | 原对话无截图附件，未取得iOS版本/设置对应原图；临时UI不可能证明1:1。 |
 | M1冷部署与可重建 | WIP | 双profile debug探针耗时大，已验证构建时公共词典预编译并在Pixel/离线模拟器运行，大幅减少本轮debug探针观察耗时；历史2ad源码已用新SDK/JDK/初始空Gradle cache复现整包，完整当前制品分发对应源/许可闭包仍待收尾。 |
-| M2实际IME和多宿主 | NOT_RUN | reducer/触控/宿主组件已有测试，串行controller/临时视图/薄服务已接入并有真实JNI→EditText触控组件测试；系统IME尚未由用户在设置启用/切换，服务生命周期及Compose/WebView未测；未擅自切换。 |
+| M2实际IME和多宿主 | WIP / core FAIL | 两个本项目测试IME均已启用；独立UID宿主真实Pixel core已开始，最新befe66f4真实Pixel core10/10、private-delete36/36；完整门禁仍未关闭。两设备准备16/16、真实视图inset组件16/16；系统敏感删除/生命周期/Compose/WebView输入尚未验收。见SYSTEM_HOST记录，旧未启用描述为历史。 |
 | M3/M4完整功能与安全 | NOT_RUN | 固定100词20句、十词学习/重启/清合成库、十组上下文四格在两设备JNI组件PASS；全路径敏感/全部文件与日志/备份迁移仍未验收，组件不能替代完整安全。 |
 | M5/M6性能/发布 | NOT_RUN | 本地调试证书的优化release引擎可运行，许可界面/初步手册已接入；旧固定APK模型开/关30分钟JNI观察完成。正式签名、系统IME性能20次、触控/帧/宿主压力和同APK全门禁仍未完成。按发布流程提供制品。 |
 
-测试设备连接并保持唤醒；实查Awake、keyguard未显示。测试未启用/切换用户默认输入法，未更改Pixel网络、锁屏或其他应用数据。专用模拟器网络关闭由本项目隔离测试完成。
+测试前确认设备处于解锁状态；仅切换已启用的本项目debug/release。未更改Pixel网络、锁屏或其他应用数据。专用模拟器网络关闭由本项目隔离测试完成。

@@ -1,0 +1,180 @@
+{
+  "scope": "readiness",
+  "system_ime_selected": false,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": false,
+  "passed_cases": 16,
+  "planned_cases": 16,
+  "status": "PASS",
+  "cases": [
+    {
+      "id": "metadata-plain",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-password",
+      "connection_present": true,
+      "actual_input_type": 129,
+      "requested_input_type": 129,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-visible-password",
+      "connection_present": true,
+      "actual_input_type": 145,
+      "requested_input_type": 145,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-web-password",
+      "connection_present": true,
+      "actual_input_type": 225,
+      "requested_input_type": 225,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-number-password",
+      "connection_present": true,
+      "actual_input_type": 18,
+      "requested_input_type": 18,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-no-learn",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-number",
+      "connection_present": true,
+      "actual_input_type": 12290,
+      "requested_input_type": 12290,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-phone",
+      "connection_present": true,
+      "actual_input_type": 3,
+      "requested_input_type": 3,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-email",
+      "connection_present": true,
+      "actual_input_type": 33,
+      "requested_input_type": 33,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-url",
+      "connection_present": true,
+      "actual_input_type": 17,
+      "requested_input_type": 17,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": true
+    },
+    {
+      "id": "metadata-multiline",
+      "connection_present": true,
+      "actual_input_type": 131073,
+      "requested_input_type": 131073,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 1,
+      "requested_action": 1,
+      "pass": true
+    },
+    {
+      "id": "metadata-send",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 4,
+      "requested_action": 4,
+      "pass": true
+    },
+    {
+      "id": "metadata-search",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 3,
+      "requested_action": 3,
+      "pass": true
+    },
+    {
+      "id": "metadata-next",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 5,
+      "requested_action": 5,
+      "pass": true
+    },
+    {
+      "id": "metadata-go",
+      "connection_present": true,
+      "actual_input_type": 1,
+      "requested_input_type": 1,
+      "permitted_platform_added_flag": 0,
+      "actual_action": 2,
+      "requested_action": 2,
+      "pass": true
+    },
+    {
+      "id": "local-webview",
+      "local_page_loaded": true,
+      "isolated": true,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "dccd367b5c7f422792b25a06cd0f96b5",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "67e651104c2215270d3ae03695b8417befdbc45c0d4a63d7024bc4547877d1ca",
+  "test_apk_sha256": "2d28032da088f7cd1a20a6271016a05bff5ac4dd83f622aa4fd39ca5f163d803",
+  "ime_apk_sha256": "77636c33c8016e47b46f57157c262fef49eddea4a6bc8dae9f0c3268d08a611b",
+  "ime_variant": "debug",
+  "requested_scope": "readiness",
+  "target": "emulator-5580",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

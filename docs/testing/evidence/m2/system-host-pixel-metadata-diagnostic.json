@@ -1,0 +1,165 @@
+{
+  "scope": "readiness",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": false,
+  "passed_cases": 1,
+  "planned_cases": 16,
+  "status": "FAIL",
+  "cases": [
+    {
+      "id": "metadata-plain",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-password",
+      "connection_present": true,
+      "actual_input_type": 2097281,
+      "requested_input_type": 129,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-visible-password",
+      "connection_present": true,
+      "actual_input_type": 2097297,
+      "requested_input_type": 145,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-web-password",
+      "connection_present": true,
+      "actual_input_type": 2097377,
+      "requested_input_type": 225,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-number-password",
+      "connection_present": true,
+      "actual_input_type": 2097170,
+      "requested_input_type": 18,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-no-learn",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-number",
+      "connection_present": true,
+      "actual_input_type": 2109442,
+      "requested_input_type": 12290,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-phone",
+      "connection_present": true,
+      "actual_input_type": 2097155,
+      "requested_input_type": 3,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-email",
+      "connection_present": true,
+      "actual_input_type": 2097185,
+      "requested_input_type": 33,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-url",
+      "connection_present": true,
+      "actual_input_type": 2097169,
+      "requested_input_type": 17,
+      "actual_action": 6,
+      "requested_action": 6,
+      "pass": false
+    },
+    {
+      "id": "metadata-multiline",
+      "connection_present": true,
+      "actual_input_type": 2228225,
+      "requested_input_type": 131073,
+      "actual_action": 1,
+      "requested_action": 1,
+      "pass": false
+    },
+    {
+      "id": "metadata-send",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 4,
+      "requested_action": 4,
+      "pass": false
+    },
+    {
+      "id": "metadata-search",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 3,
+      "requested_action": 3,
+      "pass": false
+    },
+    {
+      "id": "metadata-next",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 5,
+      "requested_action": 5,
+      "pass": false
+    },
+    {
+      "id": "metadata-go",
+      "connection_present": true,
+      "actual_input_type": 2097153,
+      "requested_input_type": 1,
+      "actual_action": 2,
+      "requested_action": 2,
+      "pass": false
+    },
+    {
+      "id": "local-webview",
+      "local_page_loaded": true,
+      "isolated": true,
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_run_id": "cc138c9cc6644e7e95bb625be64dbeb3",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "67e651104c2215270d3ae03695b8417befdbc45c0d4a63d7024bc4547877d1ca",
+  "test_apk_sha256": "7f628e866760e407128245f2f0b9920d35ddbe49e31013f5818b7de3f4f5d802",
+  "ime_apk_sha256": "77636c33c8016e47b46f57157c262fef49eddea4a6bc8dae9f0c3268d08a611b",
+  "ime_variant": "debug",
+  "requested_scope": "readiness",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

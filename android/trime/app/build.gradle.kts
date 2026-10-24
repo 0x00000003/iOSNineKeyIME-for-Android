@@ -116,11 +116,13 @@ android {
             signingConfig = if (localReleaseProbe) signingConfigs.getByName("debug") else null
 
             resValue("string", "trime_app_name", "九键 M1 探针")
+            resValue("string", "ninekey_app_label", "离线九键（优化测试版）")
         }
         debug {
             applicationIdSuffix = ".debug"
 
             resValue("string", "trime_app_name", "九键 M1 探针")
+            resValue("string", "ninekey_app_label", "离线九键（调试测试版）")
         }
         all {
             // remove META-INF/version-control-info.textproto

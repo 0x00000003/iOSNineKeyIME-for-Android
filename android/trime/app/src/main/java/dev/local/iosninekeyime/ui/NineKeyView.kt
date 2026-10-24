@@ -12,6 +12,8 @@ import android.text.TextUtils
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowInsets
+import android.os.Build
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Button
 import android.widget.TextView
@@ -32,6 +34,9 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
     private var pointerDown=false
     private var contentHeight=310f
     private var currentWidth=0f
+    private var safeLeft=0
+    private var safeRight=0
+    private var safeBottom=0
     private val dark get()=resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK==Configuration.UI_MODE_NIGHT_YES
     private val repeater=object:Runnable {
         override fun run() {
@@ -70,7 +75,7 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
         addView(key,LayoutParams(width,height))
         // A second touch can arrive before the next layout frame after a state update.
         key.measure(MeasureSpec.makeMeasureSpec(width,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY))
-        key.layout((box.left*density).toInt(),(box.top*density).toInt(),(box.right*density).toInt(),(box.bottom*density).toInt())
+        key.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())
         if(action!=null && enabled)actions[id]=action
     }
     private fun buildKeys(width:Float) {
@@ -147,25 +152,43 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
         val next=HitMap(keys)
         touches.updateMap(next);map=next
     }
+    override fun onApplyWindowInsets(insets:WindowInsets):WindowInsets {
+        val left:Int;val right:Int;val bottom:Int
+        if(Build.VERSION.SDK_INT>=30){
+            val bars=insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.displayCutout())
+            left=bars.left;right=bars.right;bottom=bars.bottom
+        }else{
+            @Suppress("DEPRECATION")
+            left=insets.systemWindowInsetLeft
+            @Suppress("DEPRECATION")
+            right=insets.systemWindowInsetRight
+            @Suppress("DEPRECATION")
+            bottom=insets.systemWindowInsetBottom
+        }
+        if(left!=safeLeft || right!=safeRight || bottom!=safeBottom){
+            cancelTouches();safeLeft=left;safeRight=right;safeBottom=bottom;requestLayout()
+        }
+        return super.onApplyWindowInsets(insets)
+    }
     override fun onMeasure(widthMeasureSpec:Int,heightMeasureSpec:Int) {
         val w=MeasureSpec.getSize(widthMeasureSpec)
-        val dp=w/density
+        val dp=(w-safeLeft-safeRight).coerceAtLeast(0)/density
         if(dp!=currentWidth && dp>200){currentWidth=dp;cancelTouches();buildKeys(dp)}
         for(i in 0 until childCount){val v=getChildAt(i);v.measure(MeasureSpec.makeMeasureSpec(v.layoutParams.width,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(v.layoutParams.height,MeasureSpec.EXACTLY))}
-        setMeasuredDimension(w,(contentHeight*density).toInt())
+        setMeasuredDimension(w,resolveSize((contentHeight*density).toInt()+safeBottom,heightMeasureSpec))
     }
     override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int) {
         for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]
-            if(box!=null)v.layout((box.left*density).toInt(),(box.top*density).toInt(),(box.right*density).toInt(),(box.bottom*density).toInt())
-            else v.layout(0,0,width,(24*density).toInt())
+            if(box!=null)v.layout(safeLeft+(box.left*density).toInt(),(box.top*density).toInt(),safeLeft+(box.right*density).toInt(),(box.bottom*density).toInt())
+            else v.layout(safeLeft,0,width-safeRight,(24*density).toInt())
         }
     }
     override fun onInterceptTouchEvent(event:MotionEvent)=true
     override fun onTouchEvent(event:MotionEvent):Boolean {
-        val index=event.actionIndex;val pointer=event.getPointerId(index);val x=event.getX(index)/density;val y=event.getY(index)/density
+        val index=event.actionIndex;val pointer=event.getPointerId(index);val x=(event.getX(index)-safeLeft)/density;val y=event.getY(index)/density
         when(event.actionMasked) {
             MotionEvent.ACTION_DOWN->{touches.down(pointer,x,y,event.eventTime);pointerDown=true;handler.post(repeater)}
-            MotionEvent.ACTION_MOVE->{for(i in 0 until event.pointerCount)touches.move(event.getPointerId(i),event.getX(i)/density,event.getY(i)/density)}
+            MotionEvent.ACTION_MOVE->{for(i in 0 until event.pointerCount)touches.move(event.getPointerId(i),(event.getX(i)-safeLeft)/density,event.getY(i)/density)}
             MotionEvent.ACTION_UP->{stopRepeating();touches.up(pointer,x,y)?.let {activate(it)};performClick()}
             MotionEvent.ACTION_POINTER_UP->touches.up(pointer,x,y)?.let {activate(it)}
             MotionEvent.ACTION_CANCEL->cancelTouches()

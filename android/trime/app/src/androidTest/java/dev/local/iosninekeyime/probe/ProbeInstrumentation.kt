@@ -7,6 +7,7 @@ import android.os.Bundle
 
 /** Does not enable/select an IME, modify device settings or read host text. */
 class ProbeInstrumentation : Instrumentation() {
+    private var insetsOnly = false
     private var editorOnly = false
     private var engineOnly = false
     private var resourceOnly = false
@@ -23,6 +24,7 @@ class ProbeInstrumentation : Instrumentation() {
     private var runId: String? = null
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
+        insetsOnly = arguments?.getString("probe_scope") == "view-insets"
         editorOnly = arguments?.getString("probe_scope") == "editor"
         engineOnly = arguments?.getString("probe_scope") == "engine"
         resourceOnly = arguments?.getString("probe_scope") == "resources"
@@ -43,6 +45,7 @@ class ProbeInstrumentation : Instrumentation() {
         val output = Bundle()
         try {
             val result = when {
+                insetsOnly -> KeyboardInsetsProbe.run(this)
                 boundsResearchOnly -> {check(android.os.Build.VERSION.SDK_INT>=34){"E_GESTURE_API"};HostGestureResearchProbe.run(this,true)}
                 gestureResearchOnly -> {check(android.os.Build.VERSION.SDK_INT>=34){"E_GESTURE_API"};HostGestureResearchProbe.run(this)}
                 pagingOnly -> CandidatePagingBoundaryProbe.run(this)
@@ -58,8 +61,8 @@ class ProbeInstrumentation : Instrumentation() {
                 else -> ProbeRunner.run(targetContext)
             }
             check(android.os.Build.VERSION.SDK_INT >= 31) { "E_PROBE_TEST_API" }
-            if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly && !boundsResearchOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
-            if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly && !boundsResearchOnly) {
+            if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly && !boundsResearchOnly && !insetsOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
+            if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly && !boundsResearchOnly && !insetsOnly) {
                 val editor = EditorBoundaryProbe.run(this)
                 val faults = HostConnectionFailureProbe.run(this)
                 val structuralFaults = StructuralDeleteFailureProbe.run(this)

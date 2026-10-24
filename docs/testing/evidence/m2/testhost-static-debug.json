@@ -1,0 +1,11 @@
+{
+  "scope": "separate synthetic host APK only; NOT IME static audit",
+  "sha256": "67e651104c2215270d3ae03695b8417befdbc45c0d4a63d7024bc4547877d1ca",
+  "bytes": 2542943,
+  "permissions": [],
+  "shared_uid": false,
+  "allow_backup": false,
+  "release_variant": "disabled by androidComponents",
+  "no_native_or_rime_dependency": true,
+  "pass": true
+}

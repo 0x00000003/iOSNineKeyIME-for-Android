@@ -1,0 +1,11 @@
+{
+  "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+  "sha256": "133666e81908484f72ab9a21a62afe77c802b7736c6024eef72a1f7d10222928",
+  "bytes": 61732341,
+  "package": "dev.local.iosninekeyime.probe",
+  "packaged_fonts": [],
+  "errors": [],
+  "pass": true,
+  "variant": "release",
+  "signed_runtime": "unsigned; NOT RUN"
+}

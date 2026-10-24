@@ -1,0 +1,209 @@
+{
+  "scope": "private-delete",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": 121,
+  "host_minimum_bottom_margin": 68,
+  "passed_cases": 36,
+  "planned_cases": 36,
+  "status": "PASS",
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "password-g1",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g2",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g3",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g4",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g5",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g6",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g7",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g8",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "password-g9",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g1",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g2",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g3",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g4",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g5",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g6",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g7",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g8",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "visible-password-g9",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g1",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g2",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g3",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g4",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g5",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g6",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g7",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g8",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "web-password-g9",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g1",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g2",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g3",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g4",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g5",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g6",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g7",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g8",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    },
+    {
+      "id": "no-learn-g9",
+      "exact_synthetic_remaining": true,
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "2aba947bb19b4f02b88d7f24ce1d30c2",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "c84cbd56dc81cf92b4d0419203874122db0cccdba75b439da27d00d822d78487",
+  "test_apk_sha256": "f0181f7680ee3e710921c44e05ef751d3f1bfdefef0161fc03d02d8149d423e7",
+  "ime_apk_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "ime_variant": "debug",
+  "requested_scope": "private-delete",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

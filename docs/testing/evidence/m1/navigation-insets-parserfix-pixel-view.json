@@ -1,0 +1,158 @@
+{
+  "scope": "real view inset geometry/hit component; NOT system/reference acceptance",
+  "cases": [
+    {
+      "id": "chinese-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    }
+  ],
+  "planned_cases": 16,
+  "passed_cases": 16,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "046a32cdea06497b935c3c139f102225",
+  "tested_apk_sha256": "befe66f47dac633b31c79b8a88e8c78522dbba8e99e302647221b8394f90411b",
+  "tested_test_apk_sha256": "47e22b2ccabbc0650df7df5b2c7e81c46892c1d2dcb42dd4d059c19d55c75312",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "view-insets",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

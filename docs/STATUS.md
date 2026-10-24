@@ -1,5 +1,7 @@
 # 当前状态
 
+**2026-10-23系统IME接续（WIP）：** 两个本项目测试条目均已启用；已核选中旧优化版后切调试版，不再受“未启用”阻碍。独立UID `:testhost`已加入，复用唯一工具链；两设备15字段metadata+本地WebView准备16/16。真实Pixel core从首键丢失FAIL，经窗口动画屏障到8/10；导航inset修正后的debug `befe66f4`经实际窗口稳定协议到10/10，private-delete系统scope36/36。50 app/77 state/42工具、两套lint/构建/实际APK静态审计PASS；四布局×四inset实际视图组件两设备16/16。均不关闭完整M2/R04；新记录/原失败见[系统宿主记录](testing/SYSTEM_HOST-20261023.md)。下列“未启用/不得切换”均为授权前历史，当前以本段与AGENTS新授权为准。
+
 磁盘管理修正：2026-10-24回收历史隔离构建、未用模拟器及安装包缓存9处，实际释放24.10GiB；两交付包60文件SHA保持一致。只保留一套日常工具链与最多一个必要隔离目录，旧重建路径已清理，原结果保留。见[清理记录](testing/evidence/m1/storage-reclamation-20261024.json)。
 
 **最新生产组件检查点（WIP，本地提交07cab95）：** debug `77636c33` / test `712e60e9` 已接入结构信息异步删除。Pixel与API36模拟器同哈希 full探针及controller组件PASS：敏感原5字素5/5、6种敏感metadata6/6、正文getter0/结构请求11；21个结构故障案例均PASS，无key fallback。77 state/49 app JVM、40工具与debug lint/构建PASS，实际debug权限/备份/资产/零字体审计PASS。系统cursor-anchor由合成宿主桥接，真实系统IME与多宿主未运行，因此R04整体仍WIP；旧4/5 FAIL记录不改。见[本轮记录](testing/STRUCTURAL_DELETE-20261024.md)。下列738a365及release582016c3是此前已冻结制品，不包含此次生产修复，不能继承本轮结果。
