@@ -1,0 +1,11 @@
+{
+  "status": "TEST_ORACLE_DEFECT",
+  "scope": "fixed synthetic emoji cell visibility; not visual acceptance",
+  "ime_apk_sha256": "e3850fb5eeea44d467b1a7577320c4e4a18d9a28dcf633db88b58c5982e097e0",
+  "ignored_crop_sha256": "6a4883c43de2d53ff3cb982915d2b2fee404da22f184fd8f5a15c3bd7606939b",
+  "cell_index": 20,
+  "chromatic_pixel_count": 0,
+  "visible_bright_pixel_count": 904,
+  "minimum_required_visible_pixels": 20,
+  "amendment": "allow chromatic or visible grayscale foreground; retain every transport/geometry/visibility guard"
+}
