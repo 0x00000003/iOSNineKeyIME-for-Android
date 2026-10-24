@@ -110,3 +110,9 @@ onFinishInputView结束控制器和临时UI，不等于宿主字段结束；onSt
 ## ADR048 — 在原会话中按需消歧音节
 
 真实host探针证明固定Rime可改raw并保留已确认段后，才接Android。增加QueryPinyin/SelectPinyin语义事件及有界RAM选项；沿用session/revision屏障，worker核expected raw，JNI独立核数字尾段/编码/已确认边界。只改当前context.input，不用reset/重新提交前缀冒充保持；只有显式查询/续选取至多100注释，正常每键候选窗口仍20+1。私密原生隔离不变。没有新增依赖，严格锁和资源锁未变；两个修改的上游原文件SHA同步到修改账。页面没有iOS次页图，明确为项目实现而非参考等价；原a11y故障不在此补丁中假称修复。完整证据见PINYIN_ANDROID记录。
+
+## ADR049 — 配置重建保留同字段普通中文组合
+
+原旋转3/4失败及首候选失败后，诊断证明同步配置回调之外还有一次restarting。仅配置重建且普通中文composing/awaiting、无待提交host项可保留；异步后续一次重启额外核框架restarting、相同binding token、字段/策略/结构selection、session及一秒窗口。新敏感策略拒绝复用，敏感仍重建隔离会话并保留必要RAM光标；字段结束/隐藏正常清理。最终代码删除诊断trace，无正文读取/持久化/自动提交重放，无依赖或锁变化。e309/913两APK各自真实Pixel旋转7/7，仍不签任意宿主生命周期；细节与失败保留见CONFIGURATION记录。
+
+私密错误栏优先显示固定“编辑失败 · 点此重新连接”，不自动重试失败删除。错误可见性不降低WebView密码退格门槛；不能以提示通过替换删除FAIL。

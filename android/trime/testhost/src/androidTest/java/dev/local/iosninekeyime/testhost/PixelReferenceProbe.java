@@ -322,6 +322,13 @@ final class PixelReferenceProbe {
             stage="web-password-direct-delete";webFocus(true);tap("text-10");tap("text-23");tap("text-21");checkAt(await(()->webValue(true,"",3),3000),"web-password-length");tap("delete");
             boolean exact=await(()->webValue(true,"",2),5000);final int[] reads={0};main(()->reads[0]=activity.web.sensitiveBodyReads);output.put("sensitive_body_getter_calls",reads[0]);
             main(()->{try{output.put("text_bounds_requests",activity.web.boundsRequests).put("cursor_requests",activity.web.cursorRequests).put("last_cursor_request_supported",activity.web.lastCursorSupported).put("handwriting_requests",activity.web.gestureRequests).put("last_text_bounds_result_code",activity.web.lastBoundsCode).put("last_handwriting_result_code",activity.web.lastGestureCode);}catch(org.json.JSONException ignored){}});
+            boolean feedback=ownControl("bar-info","编辑失败 · 点此重新连接")!=null;
+            output.put("failure_feedback_visible",feedback);
+            if(!exact && feedback){
+                tapPoint(295,821);checkAt(await(()->webValue(true,"",3),3000),"reconnect-no-delete-replay");tap("text-21");
+                output.put("reconnect_resumes_without_replaying_failed_delete",await(()->webValue(true,"",4),3000));
+            }
+            main(()->{android.content.pm.PackageInfo provider=android.webkit.WebView.getCurrentWebViewPackage();try{output.put("web_provider_version",provider==null?"unavailable":provider.versionName);}catch(org.json.JSONException ignored){}});
             result(stage,exact && reads[0]==0);
             boolean valid=cases.length()==3;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
         }catch(Throwable error){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_WEB_ASSERTION");}
@@ -339,11 +346,14 @@ final class PixelReferenceProbe {
         checkAt(false,"compact-stable-timeout-"+detail);throw new IllegalStateException("E_UNREACHABLE");
     }
     private void compactTap(int digit,boolean space){
+        float[][] cols={{127,233},{243,348},{358,464}};int row=space?3:(digit-1)/3;int column=space?1:(digit-1)%3;
+        compactKey(space?243:cols[column][0],space?464:cols[column][1],row);
+    }
+    private void compactKey(float left,float right,int row){
         final int[] inset=new int[2];main(()->{android.graphics.Insets i=activity.getWindow().getDecorView().getRootWindowInsets().getInsets(WindowInsets.Type.systemBars()|WindowInsets.Type.displayCutout());inset[0]=i.left;inset[1]=i.right;});
         try(Shot frame=stableCompact()){
             float scale=(frame.bitmap.getWidth()-inset[0]-inset[1])/591f,d=activity.getResources().getDisplayMetrics().density;
-            float[][] cols={{127,233},{243,348},{358,464}};int row=space?3:(digit-1)/3;int column=space?1:(digit-1)%3;
-            Rect box=new Rect(Math.round(inset[0]+(space?243:cols[column][0])*scale),Math.round((54+row*54)*d),Math.round(inset[0]+(space?464:cols[column][1])*scale),Math.round((102+row*54)*d));
+            Rect box=new Rect(Math.round(inset[0]+left*scale),Math.round((54+row*54)*d),Math.round(inset[0]+right*scale),Math.round((102+row*54)*d));
             checkAt(box.left>=0 && box.right<=frame.bitmap.getWidth() && box.top>=0 && box.bottom<=frame.bitmap.getHeight(),"compact-key-screen-bounds");
             int fill=0;for(int y=box.top;y<box.bottom;y++)for(int x=box.left;x<box.right;x++)if(frame.neutral(frame.color(x,y),70))fill++;
             checkAt(fill>box.width()*box.height()/2,"compact-key-observed-fill");long now=SystemClock.uptimeMillis();physical(box,frame,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(box,frame,MotionEvent.ACTION_UP,now);taps++;
@@ -361,10 +371,16 @@ final class PixelReferenceProbe {
             stage="landscape-committed-and-input";rotate(true);checkAt(body("你好"),"landscape-committed-preserved");for(char c:"64426".toCharArray())compactTap(c-'0',false);compactTap(0,true);result(stage,await(()->body("你好你好"),3000));
             stage="portrait-return-and-input";rotate(false);panel="chinese";checkAt(body("你好你好"),"portrait-committed-preserved");for(char c:"64426".toCharArray())tap("digit-"+c);tapPoint(35,806);result(stage,await(()->body("你好你好你好"),3000));
             stage="unconfirmed-composition-survives-rotation";for(char c:"64426".toCharArray())tap("digit-"+c);rotate(true);compactTap(0,true);result(stage,await(()->body("你好你好你好你好"),3000));
-            boolean valid=cases.length()==4;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+            stage="private-caret-after-two-rotations";rotate(false);restoreChoose("password","AB",2,true);tap("text-10");checkAt(await(()->body("ABa"),3000),"private-before-rotation");rotate(true);rotate(false);panel="latin";tap("delete");
+            result(stage,await(()->body("AB") && read(()->((GuardedEditText)activity.editor).bodyReads==0),5000));
+            stage="partially-selected-prefix-survives-rotation";choose();for(char c:"64426744543".toCharArray())tap("digit-"+c);pinyinOpen();pinyinWord("你好");rotate(true);compactTap(0,true);result(stage,await(()->body("你好世界"),3000));
+            stage="field-cutover-during-configuration";rotate(false);choose();tap("digit-6");tap("digit-4");final android.widget.EditText previous=activity.editor;
+            main(()->activity.cutoverOnNextConfiguration=true);rotate(true);compactTap(0,true);
+            result(stage,await(()->body("Q ") && read(()->previous.getText().length()==0 && activity.editor!=previous),3000));
+            boolean valid=cases.length()==7;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
         }catch(Throwable error){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_ROTATION_ASSERTION");}
         finally{main(()->activity.setRequestedOrientation(original[0]));}
-        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",4).put("original_requested_orientation_restored",true);
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",7).put("original_requested_orientation_restored",true);
     }
     private interface FieldCheck { boolean execute() throws Exception; }
     private void fieldCase(String id,FieldCheck action)throws Exception{

@@ -1,0 +1,7 @@
+{
+  "scope": "bounded debug lifecycle metadata only; no input/candidate/caret/account payload",
+  "tested_apk_sha256": "59af714203e839607094b2adda1d7d444b9f5e62b8ec8d00378327167d980ed1",
+  "source_sha256": "ead9a856ee08bcb9d668873b485158cbe76233f018bb878df50632cde64d9639",
+  "record": "docs/testing/evidence/m2/configuration-debug-trace-rotation.json",
+  "conclusion": "synchronous same-EditorInfo resume succeeded; subsequent onStartInput outside configuration callback reset composition; rotation remains FAIL"
+}

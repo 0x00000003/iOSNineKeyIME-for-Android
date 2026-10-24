@@ -210,11 +210,11 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         if(state.layout!=Layout.EMOJI){
             val barRight=if(state.layout==Layout.LATIN)currentWidth else currentWidth-48;val t=p.barTop;val b=t+p.barHeight
             when{
-                state.sensitive->label("bar-private","私密 · 不学习",8f,t,barRight,b,14f)
                 state.errorCode!=null || state.bar==Bar.UNAVAILABLE->{
-                    val k=ReferenceKey(KeyBox("bar-info",8f,t,barRight,b),if(state.errorCode!=null)"点此重试"else"正在准备离线资源…",tone=KeyTone.CLEAR,textSize=14f)
+                    val k=ReferenceKey(KeyBox("bar-info",8f,t,barRight,b),if(state.sensitive)"编辑失败 · 点此重新连接"else if(state.errorCode!=null)"点此重试"else"正在准备离线资源…",tone=KeyTone.CLEAR,textSize=14f)
                     addKey(k,action={retry()})
                 }
+                state.sensitive->label("bar-private","私密 · 不学习",8f,t,barRight,b,14f)
                 state.composing || state.awaiting->{
                     if(state.candidates.isEmpty())label("bar-empty",if(state.awaiting)"正在生成候选…"else"无候选 · 修改或取消",8f,t,barRight,b,14f)
                     else if(!state.expanded){

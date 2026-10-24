@@ -1,5 +1,22 @@
 # 当前状态
 
+2026-10-24：**核心输入与选拼音已实现，正在兼容性与交付验收，整体仍WIP。** 不使用无依据完成百分比，不称可日用或1:1。
+
+| 范围 | 当前可核验结果 | 尚缺 |
+| --- | --- | --- |
+| 九键、数字/符号/英文/Emoji五态与选拼音 | 旧fdc/990两APK各自Pixel选拼音8/8、五态9/9、重显5/5、敏感删除36/36、队列20/20 | 新版本其余回归按独立记录，不能自动继承 |
+| 旋转组合丢失修复 | 当前debug e3097893 / 优化91350a65各自Pixel旋转7/7、选拼音8/8，覆盖部分已选词、密码光标及切字段 | 更广宿主/复杂生命周期仍WIP |
+| 私密错误可见性 | 当前debug两设备实际View20+错误2项、pinyin/full组件通过；优化版WebView实际错误可见且重连后继续输入、无失败退格重放 | WebView密码退格支持仍FAIL，不以提示代替成功 |
+| 已知未关闭异常 | WebView密码结构删除入口返回false；邮箱外部窗口抢焦点；原a11y窗口坐标异常 | 各自保留FAIL/未执行范围，干扰原因未定 |
+| 发布验收 | 104 state、50 debug/50 release app、45工具，构建/lint与实际APK静态审计PASS | P01—P04完整性能、全路径隐私/安全、许可闭包、正式签名与同APK全门禁 |
+
+最新实现、精确SHA和逐项范围见[旋转修复记录](testing/CONFIGURATION-20261024.md)，选拼音完整检查点见[PINYIN_ANDROID](testing/PINYIN_ANDROID-20261024.md)。所有提交仅本地。只复用一套SDK/NDK/Gradle缓存与原专用AVD；没有新增工具链副本。具体存储数值见本轮检查点。
+
+以下旧记录按历史保留；其中“当前/最新/待启用/缺图”等只代表当时条件，应以上表与相应APK的证据为准。
+
+<details>
+<summary>历史检查点与失败记录（保留原文）</summary>
+
 兼容增量：同优化990b62cc Pixel字段9/10（邮箱外部窗口抢焦点，断言未执行）、本地WebView2/3（密码退格结构更新返回false，正文getter0）、旋转3/4（未确认组合丢失）。[真实记录](testing/HOST_COMPAT-20261024.md)。当前正在修旋转与私密错误可见性；不把此前TextView或选拼音通过继承为这些场景已通过。
 
 2026-10-24 选拼音接入检查点（整体WIP）：debug `fdc658b2` / 优化本地测试证书版 `990b62cc` 已完整接入音节查询、逐音节消歧、部分选词续选和防陈旧。**两个实际APK各自**Pixel选拼音8/8、五态9/9、同字段重显5/5、敏感删除36/36、异步队列20/20通过，敏感正文getter0；debug真实JNI/视图组件与原生边界通过。104 state、50 debug/50 release app、45工具、构建/lint及两实际APK静态通过。[完整记录](testing/PINYIN_ANDROID-20261024.md)、[双SHA检查点](testing/evidence/m5/pinyin-integration-checkpoint.json)。未宣称M2/M5/M6全部完成；原a11y窗口坐标、完整多宿主、安全/性能/许可闭包/正式签名仍未关闭，选拼音二级页无iOS参考，不称1:1。
@@ -87,3 +104,5 @@ R04调查追加：[宿主委托](testing/HOST_GESTURE_RESEARCH_PROTOCOL.md)两�
 隔离重建修复已本地提交2ad1de3：从该commit归档、全新源码/build/.cxx重建62任务后，62444813字节unsigned APK整包SHA与bbd28866基线完全相同，实际资源/权限/备份审计PASS。仍共享已固定SDK/Gradle/公共table和model缓存，完整M6干净环境获取未验收；见REBUILD记录。性能v1/v2混入session冷启动的短测原始成绩保留，v3连续同字段协议已在测量前提交6ae38b3，尚不据此宣布性能通过。
 
 宿主异常边界追加WIP：专用模拟器真实EditText 11故障最终相同test d35ef8d9，从1/11红测到b0343481 debug 11/11绿测。开始batch/查询后重核字段，异常失败关闭、结束batch不撤销已接受commit；full继续包含此组件和原R04，native/故障组件PASS而R04 FAIL。controller/settings/resources/R08/R09/R10同b0343481模拟器PASS。当前Pixel仍冻结94b9d40f/ee19b44e作长期组件观察，未安装新宿主版，所以新宿主版本真机回归尚未运行。最终APK字体逐字节匹配已核字体许可，未知字体hash新增拒绝。详见HOST_FAILURE记录；不宣布完整安全或完成。
+
+</details>

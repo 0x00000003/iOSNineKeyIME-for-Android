@@ -1,0 +1,99 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "rotation-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "owned Activity orientation request, observed portrait/compact screen keys and actual system touch; no global rotation change",
+    "pass": true,
+    "cases": [
+      {
+        "id": "portrait-before-rotation",
+        "pass": true
+      },
+      {
+        "id": "landscape-committed-and-input",
+        "pass": true
+      },
+      {
+        "id": "portrait-return-and-input",
+        "pass": true
+      },
+      {
+        "id": "unconfirmed-composition-survives-rotation",
+        "pass": true
+      },
+      {
+        "id": "private-caret-after-two-rotations",
+        "pass": true
+      },
+      {
+        "id": "partially-selected-prefix-survives-rotation",
+        "pass": true
+      },
+      {
+        "id": "field-cutover-during-configuration",
+        "pass": true
+      }
+    ],
+    "reference_captures": [],
+    "actual_pixel_targeted_taps": 45,
+    "planned_cases": 7,
+    "original_requested_orientation_restored": true
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 7,
+  "planned_cases": 7,
+  "status": "PASS",
+  "ime_animation_starts": 10,
+  "ime_animation_ends": 10,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "portrait-before-rotation",
+      "pass": true
+    },
+    {
+      "id": "landscape-committed-and-input",
+      "pass": true
+    },
+    {
+      "id": "portrait-return-and-input",
+      "pass": true
+    },
+    {
+      "id": "unconfirmed-composition-survives-rotation",
+      "pass": true
+    },
+    {
+      "id": "private-caret-after-two-rotations",
+      "pass": true
+    },
+    {
+      "id": "partially-selected-prefix-survives-rotation",
+      "pass": true
+    },
+    {
+      "id": "field-cutover-during-configuration",
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "3a8ceaff90d547b1930eb913942b6d18",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "5c22220c29c333f66646e84e17d4116bae5e08d5c9e97bcbb722caed7f0e24f2",
+  "test_apk_sha256": "1dbb17bb209f6193cda9df33db33a1a636c9e934be4ee146e153b367afa2b7f6",
+  "ime_apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+  "ime_variant": "debug",
+  "requested_scope": "rotation-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

@@ -343,7 +343,7 @@ public final class HostInstrumentation extends Instrumentation {
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("rotation-pixels")?4:scope.equals("web-pixels")?3:scope.equals("fields-pixels")?10:scope.equals("pinyin-pixels")?8:scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:(scope.startsWith("lifecycle") || scope.equals("restore-pixels"))?5:(scope.equals("privacy-queue") || scope.equals("queue-pixels"))?20:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("rotation-pixels")?7:scope.equals("web-pixels")?3:scope.equals("fields-pixels")?10:scope.equals("pinyin-pixels")?8:scope.equals("readiness")?16:scope.equals("core")?10:(scope.equals("reference-ui") || scope.equals("reference-pixels"))?9:(scope.startsWith("lifecycle") || scope.equals("restore-pixels"))?5:(scope.equals("privacy-queue") || scope.equals("queue-pixels"))?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
             if(scope.equals("rotation-pixels") || scope.equals("web-pixels") || scope.equals("fields-pixels") || scope.equals("pinyin-pixels") || scope.equals("reference-pixels") || scope.equals("restore-pixels") || scope.equals("private-pixels") || scope.equals("queue-pixels"))passed&=output.getJSONObject("pixel_probe").getBoolean("pass");
             output.put("status",passed?"PASS":"FAIL");

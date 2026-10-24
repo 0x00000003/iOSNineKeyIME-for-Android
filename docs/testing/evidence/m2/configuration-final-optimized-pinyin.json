@@ -1,0 +1,161 @@
+{
+  "diagnostic_input_transaction_barrier": false,
+  "diagnostic_relaxed_frame_deadline": false,
+  "scope": "pinyin-pixels",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "pixel_probe": {
+    "transport": "actual stable screen pixels and touchscreen; own UI labels identify controls only, never node coordinates or service state",
+    "pass": true,
+    "cases": [
+      {
+        "id": "query-no-auto-commit",
+        "pass": true
+      },
+      {
+        "id": "first-syllable-no-auto-commit",
+        "pass": true
+      },
+      {
+        "id": "second-syllable-no-auto-commit",
+        "pass": true
+      },
+      {
+        "id": "full-word-once",
+        "pass": true
+      },
+      {
+        "id": "partial-first-syllable",
+        "pass": true
+      },
+      {
+        "id": "partial-second-syllable",
+        "pass": true
+      },
+      {
+        "id": "partial-final-exact-once",
+        "pass": true
+      },
+      {
+        "id": "hide-clears-phonetic-popup",
+        "pass": true
+      }
+    ],
+    "reference_captures": [
+      {
+        "id": "p01-pinyin",
+        "width": 960,
+        "height": 920,
+        "first_option_rect": [
+          14,
+          349,
+          237,
+          457
+        ],
+        "scope": "owned synthetic phonetic popup only; no iOS secondary-page reference"
+      },
+      {
+        "id": "p02-pinyin",
+        "width": 960,
+        "height": 920,
+        "first_option_rect": [
+          14,
+          349,
+          237,
+          457
+        ],
+        "scope": "owned synthetic phonetic popup only; no iOS secondary-page reference"
+      }
+    ],
+    "actual_pixel_targeted_taps": 35,
+    "planned_cases": 8
+  },
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": -1,
+  "host_minimum_bottom_margin": -1,
+  "passed_cases": 8,
+  "planned_cases": 8,
+  "status": "PASS",
+  "reference_captures": [
+    {
+      "id": "p01-pinyin",
+      "width": 960,
+      "height": 920,
+      "first_option_rect": [
+        14,
+        349,
+        237,
+        457
+      ],
+      "scope": "owned synthetic phonetic popup only; no iOS secondary-page reference",
+      "png_sha256": "523c984db1d984464e91c31e102ef8ef262fd505a7e5bfdff6be3c9d70556f68",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    },
+    {
+      "id": "p02-pinyin",
+      "width": 960,
+      "height": 920,
+      "first_option_rect": [
+        14,
+        349,
+        237,
+        457
+      ],
+      "scope": "owned synthetic phonetic popup only; no iOS secondary-page reference",
+      "png_sha256": "1b19ab48e92629f43168a3472d6dab1136bdc7c667cc206156144543f504a39e",
+      "pixel_storage": "ignored local artifacts/testhost; synthetic IME crop only"
+    }
+  ],
+  "ime_animation_starts": 4,
+  "ime_animation_ends": 4,
+  "ime_animation_running_at_finish": false,
+  "neutral_input_barriers": 0,
+  "neutral_input_fixture_preserved": false,
+  "cases": [
+    {
+      "id": "query-no-auto-commit",
+      "pass": true
+    },
+    {
+      "id": "first-syllable-no-auto-commit",
+      "pass": true
+    },
+    {
+      "id": "second-syllable-no-auto-commit",
+      "pass": true
+    },
+    {
+      "id": "full-word-once",
+      "pass": true
+    },
+    {
+      "id": "partial-first-syllable",
+      "pass": true
+    },
+    {
+      "id": "partial-second-syllable",
+      "pass": true
+    },
+    {
+      "id": "partial-final-exact-once",
+      "pass": true
+    },
+    {
+      "id": "hide-clears-phonetic-popup",
+      "pass": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "f4a4bc13e26b460299e67e6f4d730325",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "5c22220c29c333f66646e84e17d4116bae5e08d5c9e97bcbb722caed7f0e24f2",
+  "test_apk_sha256": "1dbb17bb209f6193cda9df33db33a1a636c9e934be4ee146e153b367afa2b7f6",
+  "ime_apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+  "ime_variant": "release",
+  "requested_scope": "pinyin-pixels",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

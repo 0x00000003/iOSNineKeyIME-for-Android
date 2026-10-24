@@ -1,6 +1,6 @@
 # 未解决项与接续边界
 
-新确认：优化990b62cc未确认拼音跨旋转丢失；本地WebView密码结构删除入口返回false而失败，正文getter0；私密Latin错误没有可见提示。邮箱出现非自有焦点窗口，未操作该窗口，原因未定。见[兼容红测](testing/HOST_COMPAT-20261024.md)，这些不能被旧TextView/物理scope成绩覆盖。
+当前更新：旋转组合丢失已在e309/913两APK各自真实Pixel7/7修复；私密错误提示已实现，最终debug模拟器View通过。WebView密码结构删除入口返回false仍FAIL，正文getter0；邮箱非自有焦点窗口未操作、原因未定；原a11y坐标仍FAIL。见[旋转修复](testing/CONFIGURATION-20261024.md)。旧失败不改写。见[兼容红测](testing/HOST_COMPAT-20261024.md)，这些不能被旧TextView/物理scope成绩覆盖。
 
 选拼音已接入并通过两个当前APK的Pixel真实组件/系统8项测试，当前debug fdc658b2 / 优化990b62cc。见[新检查点](testing/PINYIN_ANDROID-20261024.md)。不再把该按钮列为未实现；下列旧制品成绩为历史范围，剩余重点是多宿主/旋转、a11y、完整隐私与性能、视觉差异和M6交付收尾。
 

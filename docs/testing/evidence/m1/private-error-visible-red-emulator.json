@@ -1,0 +1,189 @@
+{
+  "scope": "real view inset geometry/hit component; NOT system/reference acceptance",
+  "failure_stage": "private-error-latin",
+  "cases": [
+    {
+      "id": "chinese-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "emoji-0",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "emoji-1",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "emoji-2",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "chinese-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "latin-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "number-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "symbols-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    },
+    {
+      "id": "emoji-3",
+      "height_includes_bottom_inset": true,
+      "children_inside_safe_area": true,
+      "safe_inset_does_not_activate": true,
+      "physical_hit_matches_view": true,
+      "pass": true
+    }
+  ],
+  "pass": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "fc52ce3a15214c4ba6a40195032cc8c0",
+  "tested_apk_sha256": "fdc658b2dfde58914c575770cde50cad2b71f14a9e517e4cced532459357df3d",
+  "tested_test_apk_sha256": "da1cc7d655b5b2f012e47c525430644b7cca1d97e823a301cfbb0f60d166e4ec",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "installed local frozen APK"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "view-insets",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

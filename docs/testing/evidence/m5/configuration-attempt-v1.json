@@ -1,0 +1,33 @@
+{
+  "scope": "configuration candidate WIP; rotation NOT fixed",
+  "debug_sha256": "4f066b1b110519cd9924412ff8a2a4035752edba8acb10904d7908d35370105a",
+  "optimized_sha256": "cb7d10db9c48e42541a7fa08babb4140d8f252a515994da202eff7d31616ce55",
+  "service_source_sha256": "f046e4444a2e1bbbd1287197ac808c77c58d90d46c70b8cae7e5632b7c550e36",
+  "rotation_record": "docs/testing/evidence/m2/configuration-optimized-v1-rotation.json",
+  "component_records": [
+    "docs/testing/evidence/m1/configuration-debug-pixel-view-insets.json",
+    "docs/testing/evidence/m1/configuration-debug-pixel-pinyin.json",
+    "docs/testing/evidence/m1/configuration-debug-pixel-full.json",
+    "docs/testing/evidence/m1/configuration-debug-emulator-view-insets.json",
+    "docs/testing/evidence/m1/configuration-debug-emulator-pinyin.json",
+    "docs/testing/evidence/m1/configuration-debug-emulator-full.json"
+  ],
+  "debug_static_apk_audit": {
+    "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+    "sha256": "4f066b1b110519cd9924412ff8a2a4035752edba8acb10904d7908d35370105a",
+    "bytes": 78246730,
+    "package": "dev.local.iosninekeyime.probe.debug",
+    "packaged_fonts": [],
+    "errors": [],
+    "pass": true
+  },
+  "release_static_apk_audit": {
+    "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+    "sha256": "cb7d10db9c48e42541a7fa08babb4140d8f252a515994da202eff7d31616ce55",
+    "bytes": 61769015,
+    "package": "dev.local.iosninekeyime.probe",
+    "packaged_fonts": [],
+    "errors": [],
+    "pass": true
+  }
+}

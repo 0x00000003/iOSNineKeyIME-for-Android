@@ -1,0 +1,39 @@
+{
+  "scope": "production view/controller/serial JNI pinyin component; NOT system IME/multi-host or all-path privacy acceptance",
+  "native_guards": {
+    "scope": "Android JNI stale raw/range/confirmed-prefix/session guards",
+    "no_implicit_session_creation": true,
+    "invalid_native_rewrites_leave_input_unchanged": true,
+    "confirmed_prefix_history_retained_and_final_commit_exact_once": true,
+    "ended_session_cannot_be_recreated_by_pinyin": true,
+    "pass": true
+  },
+  "two_syllables_exact_once_host_commit": true,
+  "alternative_prefix_changes_candidates_without_commit": true,
+  "cancel_clears_choices": true,
+  "selected_prefix_retained_without_duplicate_commit": true,
+  "field_end_clears_choices_and_sensitive_query_disabled": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "aaeb32bc8a144d178e306b26d559f2f0",
+  "tested_apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+  "tested_test_apk_sha256": "da1cc7d655b5b2f012e47c525430644b7cca1d97e823a301cfbb0f60d166e4ec",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "pinyin",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

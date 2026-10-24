@@ -1,0 +1,207 @@
+{
+  "status": "WIP",
+  "scope": "configuration and private error visibility; NOT full delivery acceptance",
+  "base_commit": "5fd79c19aa268fc4389f048c0aafda81775ba488",
+  "artifacts": [
+    {
+      "variant": "debug",
+      "sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "bytes": 78246730,
+      "review_file": "artifacts/review/configuration-20261024/app-debug-wip.apk",
+      "static_apk_audit": {
+        "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+        "sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+        "bytes": 78246730,
+        "package": "dev.local.iosninekeyime.probe.debug",
+        "packaged_fonts": [],
+        "errors": [],
+        "pass": true
+      }
+    },
+    {
+      "variant": "release",
+      "sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "bytes": 61769523,
+      "review_file": "artifacts/review/configuration-20261024/app-optimized-local-test-wip.apk",
+      "static_apk_audit": {
+        "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+        "sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+        "bytes": 61769523,
+        "package": "dev.local.iosninekeyime.probe",
+        "packaged_fonts": [],
+        "errors": [],
+        "pass": true
+      }
+    }
+  ],
+  "system_and_component_records": [
+    {
+      "record": "docs/testing/evidence/m2/configuration-final-debug-pinyin.json",
+      "record_sha256": "2dc80486591e5e19c5bee4be862926a87edec09f17b4a84fff6d795d5269c89c",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "pinyin-pixels",
+      "pass": true,
+      "passed_cases": 8,
+      "planned_cases": 8
+    },
+    {
+      "record": "docs/testing/evidence/m2/configuration-final-debug-rotation.json",
+      "record_sha256": "1d6e98d8f8f8a2b5495a793ed3fb0ec0554cb9e5867252f2168a7816120d3dc6",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "rotation-pixels",
+      "pass": true,
+      "passed_cases": 7,
+      "planned_cases": 7
+    },
+    {
+      "record": "docs/testing/evidence/m2/configuration-final-optimized-pinyin.json",
+      "record_sha256": "eb70634bce5e932c769f86e75fdd408eae1a753e454add20326f45ec2ab800e1",
+      "apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "scope": "pinyin-pixels",
+      "pass": true,
+      "passed_cases": 8,
+      "planned_cases": 8
+    },
+    {
+      "record": "docs/testing/evidence/m2/configuration-final-optimized-rotation.json",
+      "record_sha256": "21ba9e33f455f0f48f03e1c30acba034c15ba86cf915d92440060c86cacfcc74",
+      "apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "scope": "rotation-pixels",
+      "pass": true,
+      "passed_cases": 7,
+      "planned_cases": 7
+    },
+    {
+      "record": "docs/testing/evidence/m2/configuration-final-optimized-web.json",
+      "record_sha256": "aec2f0be3e52c59bbcd4bd95d878a87daa4ae4427f3c0e22a43b2b90d1151ec7",
+      "apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "scope": "web-pixels",
+      "pass": false,
+      "passed_cases": 2,
+      "planned_cases": 3
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-emulator-full.json",
+      "record_sha256": "e18ea04128b01b5e6414019295005960ac4bcf1ace38adc37b7303cb6d30071c",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "full",
+      "pass": true,
+      "passed_cases": null,
+      "planned_cases": null
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-emulator-pinyin.json",
+      "record_sha256": "66b1a50ebbbe80d31ef3f8f40ea3f4a9deadd0fc73619990b7fe1b3b6a2aacc7",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "pinyin",
+      "pass": true,
+      "passed_cases": null,
+      "planned_cases": null
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-emulator-view-insets.json",
+      "record_sha256": "ae4cc42be4095d03b269386131ef0e9ca992ae6160a4c12adb34748f4d4446f2",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "view-insets",
+      "pass": true,
+      "passed_cases": 20,
+      "planned_cases": 20
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-pixel-full.json",
+      "record_sha256": "446bad1f83d21000c912c2fa8ef8f4a5571696a0a3ef50db7da06e45a8cf031f",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "full",
+      "pass": true,
+      "passed_cases": null,
+      "planned_cases": null
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-pixel-pinyin.json",
+      "record_sha256": "9c7f3b0c65e9b0ef66ada8acd06053cb168be48ec0058fad4f0b053fc30d35fb",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "pinyin",
+      "pass": true,
+      "passed_cases": null,
+      "planned_cases": null
+    },
+    {
+      "record": "docs/testing/evidence/m1/configuration-final-pixel-view-insets.json",
+      "record_sha256": "aa8e450923e1ec85b59748c40b8f6ae8298976aa54de4758464810bd4d70f335",
+      "apk_sha256": "e30978937df0bedc0ae5c41625195981e3c6a6b41673ce5cb0ce000c88a9fd4f",
+      "scope": "view-insets",
+      "pass": true,
+      "passed_cases": 20,
+      "planned_cases": 20
+    }
+  ],
+  "jvm": {
+    "state": {
+      "tests": 104,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "debug_app": {
+      "tests": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "release_app": {
+      "tests": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "tooling_tests": 45,
+  "build_logs": {
+    "artifacts/configuration-final-debug-build.log": {
+      "sha256": "d2b58f79729fca5c8569e605237d343443f833e2e4506e8c1d4441d89ad4f8c7",
+      "pass": true
+    },
+    "artifacts/configuration-final-optimized-build.log": {
+      "sha256": "e049dcc4f6b512b0081e5186714ba943fb0ed003bb5b5d641a06afbec9a429f3",
+      "pass": true
+    },
+    "artifacts/configuration-final-host-build.log": {
+      "sha256": "1ae16788f1f3fdfca52d4e09501dea8f9ef39676f84e8240edc0c00a91271dca",
+      "pass": true
+    },
+    "artifacts/configuration-final-tooling.log": {
+      "sha256": "0c5899230d11ea961862c770baa8a3922f80649a0d3a6d7f19bb8c8014dbc180",
+      "pass": true
+    }
+  },
+  "source_sha256": {
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ime/NineKeyInputMethodService.kt": "0c2024861c05fd05c395350c77048b830b56558599bb9b5e296c2cc844f9cbd1",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ui/NineKeyView.kt": "2cb7a343b46747dc42d8d6969b83bb2aecd41e16a3efdc1f31511fa2d7682afc",
+    "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/KeyboardInsetsProbe.kt": "cf3301a9281eac88c6a47d49f8140d91d196b8f474b4cc0630264d7b9e09286c",
+    "android/trime/testhost/src/main/java/dev/local/iosninekeyime/testhost/HostActivity.java": "f816bff36cce8b8556023d6cede4850e43c1548457d1cf60edd6a296c6ac42b1",
+    "android/trime/testhost/src/androidTest/java/dev/local/iosninekeyime/testhost/PixelReferenceProbe.java": "d08abb7b7eb350b4b4a6f3eac3f35c6c6537705d75c7838af39cf7f119b1a223",
+    "android/trime/testhost/src/androidTest/java/dev/local/iosninekeyime/testhost/HostInstrumentation.java": "10745ac1baf61f833977338309ab5ca4fc8ebcb6f023cb326170e85f5a054972"
+  },
+  "storage_kib": {
+    "before_this_final_build": {
+      ".cache": 21067768,
+      "artifacts": 8413912,
+      "android/trime/app/build": 1466284
+    },
+    "after": {
+      ".cache": 21071268,
+      "artifacts": 8551080,
+      "android/trime/app/build": 1466620
+    },
+    "note": "one existing SDK/NDK/Gradle cache/AVD; unique APK blobs and hardlinks; no cleanup or new toolchain copy"
+  },
+  "remaining": [
+    "WebView sensitive deletion FAIL (visible error/reconnect pass)",
+    "email external focused window; input assertions NOT_RUN",
+    "original a11y coordinate/lifecycle FAIL",
+    "new APK baseline reference/restore/private/queue system regression NOT_RUN",
+    "P01-P04 full performance NOT_RUN",
+    "full runtime security/privacy/offline/backup and license/source closure",
+    "formal signing and same-artifact M6 gates"
+  ]
+}

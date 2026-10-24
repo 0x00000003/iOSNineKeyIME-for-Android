@@ -1,0 +1,520 @@
+{
+  "scope": "M1 pinned-resource JNI compatibility; not IME/visual/privacy/quality acceptance",
+  "model_bundled": true,
+  "model_sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+  "resource_deploy_ms": 223,
+  "compact_grammar_loaded": true,
+  "first_profile_engine_ready_ms": 2316,
+  "digits_handled": true,
+  "target_rank": 1,
+  "lua_offline_policy": true,
+  "lua_executed": true,
+  "jni_string_regression_calls": 100,
+  "single_commit": true,
+  "full_commit_empty": true,
+  "delete_to_empty": true,
+  "clear_composition_retains_history": true,
+  "session_reset_clears_history": true,
+  "session_reset_clears_property": true,
+  "session_reset_empty_raw_and_commit": true,
+  "multi_syllable_fixtures_passed": 3,
+  "partial_selection_preserves_composition": true,
+  "partial_drain_single_exact_commit": true,
+  "learning_repetitions": 20,
+  "learning_before_rank": 2,
+  "learning_rank_control": "fresh native session before/after, no prior field text",
+  "learning_baseline_history_count": 0,
+  "learning_after_history_count": 0,
+  "learning_contextual_after_rank": 2,
+  "learning_after_rank": 1,
+  "restart_rank": 1,
+  "user_database_created": true,
+  "normal_learning_probe": true,
+  "no_learning_before_rank": 2,
+  "no_learning_after_rank": 2,
+  "no_learning_userdb_absent_at_start": true,
+  "no_learning_profile_bytes_and_timestamps_unchanged": true,
+  "no_learning_userdb_absent": true,
+  "no_learning_probe": true,
+  "prebuilt_main_table_shared": true,
+  "static_resources_bytes_and_timestamps_unchanged": true,
+  "pass": true,
+  "elapsed_ms": 9300,
+  "native_engine_probe_pass": true,
+  "host_editor_component": {
+    "scope": "real EditText/InputConnection component test; NOT full IME/multi-host or I05 all-path acceptance",
+    "single_host_commit": true,
+    "composing_replacement": true,
+    "same_session_restore": true,
+    "old_field_not_replayed": true,
+    "grapheme_and_selection_deletion_passed": 6,
+    "deletion_fixture_count": 6,
+    "sensitive_metadata_cases_passed": 6,
+    "sensitive_context_reads": 0,
+    "sensitive_structural_bounds_requests": 11,
+    "cursor_anchor_delivery": "owned synthetic host bridge; system IMS callback NOT tested",
+    "sensitive_cursor_requests": 22,
+    "sensitive_metadata_results": [
+      {
+        "case": "text_password",
+        "pass": true
+      },
+      {
+        "case": "visible_password",
+        "pass": true
+      },
+      {
+        "case": "web_password",
+        "pass": true
+      },
+      {
+        "case": "number_password",
+        "pass": true
+      },
+      {
+        "case": "no_personalized_learning",
+        "pass": true
+      },
+      {
+        "case": "user_private",
+        "pass": true
+      }
+    ],
+    "sensitive_deletion_results": [
+      {
+        "case": "astral",
+        "pass": true
+      },
+      {
+        "case": "combining_accent",
+        "pass": true
+      },
+      {
+        "case": "zwj_family",
+        "pass": true
+      },
+      {
+        "case": "regional_flag",
+        "pass": true
+      },
+      {
+        "case": "skin_modifier",
+        "pass": true
+      }
+    ],
+    "sensitive_grapheme_deletion_passed": 5,
+    "sensitive_deletion_fixture_count": 5,
+    "normal_learning_tree_unchanged": true,
+    "pass": true
+  },
+  "host_connection_fault_component": {
+    "scope": "10 synthetic real-host exception/reentrant boundaries and 1 sensitive synchronous-path rejection; structural API faults are a separate required component",
+    "cases": [
+      {
+        "case_id": "h001",
+        "fault_point": "begin_commit",
+        "pass": true
+      },
+      {
+        "case_id": "h002",
+        "fault_point": "commit",
+        "pass": true
+      },
+      {
+        "case_id": "h003",
+        "fault_point": "end_commit",
+        "pass": true
+      },
+      {
+        "case_id": "h004",
+        "fault_point": "selected",
+        "pass": true
+      },
+      {
+        "case_id": "h005",
+        "fault_point": "before",
+        "pass": true
+      },
+      {
+        "case_id": "h006",
+        "fault_point": "delete",
+        "pass": true
+      },
+      {
+        "case_id": "h007",
+        "fault_point": "private_sync_rejected",
+        "pass": true
+      },
+      {
+        "case_id": "h008",
+        "fault_point": "action",
+        "pass": true
+      },
+      {
+        "case_id": "h009",
+        "fault_point": "reentrant_begin",
+        "pass": true
+      },
+      {
+        "case_id": "h010",
+        "fault_point": "begin_delete",
+        "pass": true
+      },
+      {
+        "case_id": "h011",
+        "fault_point": "end_delete",
+        "pass": true
+      }
+    ],
+    "private_context_reads": 0,
+    "pass": true
+  },
+  "structural_delete_fault_component": {
+    "scope": "production structural adapter faults with synthetic cursor bridge; NOT system IMS lifecycle",
+    "planned_cases": 28,
+    "passed_cases": 28,
+    "ic_body_getters": 0,
+    "cases": [
+      {
+        "id": "cursor_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "cursor_throw",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "anchor_timeout",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "anchor_wrong_selection",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_throw",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_timeout",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "field_switch_before_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "selection_move_before_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "gesture_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_throw_before",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_throw_after",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "gesture_timeout_before",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_timeout_after",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "duplicate_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "duplicate_gesture",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "duplicate_failed_gesture",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "selected_range",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "empty_cursor",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "reentrant_begin",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "reentrant_end",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_cursor_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_cursor_throw",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_anchor_timeout",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_anchor_old",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_anchor_wrong_selection",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_field_switch",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "post_selection_range",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "native_candidate_paging_component": {
+    "scope": "actual serial JNI bounded native pages and synthetic real-host oracle; NOT enabled IME/system lifecycle, visual or all-path privacy acceptance",
+    "disabled_previous_keeps_geometry_and_has_no_hit_target": true,
+    "late_old_page_candidate_rejected": true,
+    "global_index_120_exact_once_host_commit": true,
+    "native_forward_backward_pages": true,
+    "collapse_reloads_global_first_page": true,
+    "later_page_space_confirms_global_primary": true,
+    "native_page_fetches": 11,
+    "host_commit_calls": 2,
+    "max_resident_candidate_window": 20,
+    "pass": true
+  },
+  "probe_run_id": "4f124c8c07144e04873d7e46e0cea720",
+  "tested_apk_sha256": "4f066b1b110519cd9924412ff8a2a4035752edba8acb10904d7908d35370105a",
+  "tested_test_apk_sha256": "da1cc7d655b5b2f012e47c525430644b7cca1d97e823a301cfbb0f60d166e4ec",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "full",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

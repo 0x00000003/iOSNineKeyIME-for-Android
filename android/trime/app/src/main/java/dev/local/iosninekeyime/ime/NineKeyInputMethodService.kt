@@ -3,6 +3,7 @@ package dev.local.iosninekeyime.ime
 
 import android.os.Handler
 import android.os.Looper
+import android.content.res.Configuration
 import android.text.InputType
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -39,6 +40,24 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     private lateinit var engine:SerialRimeEngine
     private lateinit var controller:KeyboardController
     private var keyboard:NineKeyView?=null
+    private var configurationEditor:EditorInfo?=null
+    private var retainConfigurationSession=false
+    private var configurationRestartEditor:EditorInfo?=null
+    private var configurationRestartBinding:android.os.IBinder?=null
+    private var configurationRestartSession=0L
+    private var configurationRestartDeadline=0L
+    private fun clearConfigurationRestart(){configurationRestartEditor=null;configurationRestartBinding=null;configurationRestartSession=0;configurationRestartDeadline=0}
+    // The framework restart flag identifies the same editor. A short configuration
+    // window plus unchanged client, policy, field and caret prevents unrelated reuse.
+    private fun sameConfigurationRestart(attribute:EditorInfo,restarting:Boolean):Boolean {
+        val previous=configurationRestartEditor?:return false
+        return restarting && fieldActive && configurationRestartSession==session &&
+            android.os.SystemClock.uptimeMillis()<=configurationRestartDeadline &&
+            configurationRestartBinding!=null && configurationRestartBinding==currentInputBinding?.connectionToken &&
+            attribute.packageName==previous.packageName && attribute.fieldId==previous.fieldId && attribute.fieldName==previous.fieldName &&
+            attribute.inputType==previous.inputType && attribute.imeOptions==previous.imeOptions &&
+            selectionStart>=0 && selectionEnd>=0 && attribute.initialSelStart==selectionStart && attribute.initialSelEnd==selectionEnd
+    }
     private var session=0L
     private var fieldActive=false
     private var destroyed=false
@@ -107,7 +126,35 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     }
     override fun onStartInput(attribute:EditorInfo?,restarting:Boolean) {
         super.onStartInput(attribute,restarting)
-        if(attribute!=null)startField(attribute)
+        if(attribute!=null){
+            val followup=sameConfigurationRestart(attribute,restarting)
+            if(configurationEditor==null)clearConfigurationRestart()
+            val sameConfigurationField=(restarting && attribute===configurationEditor) || followup
+            val state=controller.state
+            val retain=retainConfigurationSession || (followup && !state.sensitive && state.layout==Layout.CHINESE && (state.composing || state.awaiting) && host.pendingCount==0)
+            val normalPolicy=!EditorPolicy.from(attribute.inputType,attribute.imeOptions,userPrivate).sensitive
+            if(sameConfigurationField && retain && normalPolicy && fieldActive && currentInputConnection!=null &&
+                host.reconnect(session,currentInputConnection)){
+                info=attribute
+                keyboard?.render(controller.state)
+            }else startField(attribute,retainCaret=sameConfigurationField)
+        }
+    }
+    override fun onConfigurationChanged(newConfig:Configuration){
+        clearConfigurationRestart()
+        configurationEditor=if(fieldActive)info else null
+        val state=controller.state
+        val originalSession=state.stamp.session
+        retainConfigurationSession=configurationEditor!=null && !state.sensitive && state.layout==Layout.CHINESE &&
+            (state.composing || state.awaiting) && host.pendingCount==0
+        try {super.onConfigurationChanged(newConfig)} finally {
+            if(retainConfigurationSession && fieldActive && controller.state.stamp.session==originalSession && !isInputViewShown)endField()
+            if(fieldActive && info!=null){
+                configurationRestartEditor=info;configurationRestartBinding=currentInputBinding?.connectionToken
+                configurationRestartSession=session;configurationRestartDeadline=android.os.SystemClock.uptimeMillis()+1000
+            }
+            retainConfigurationSession=false;configurationEditor=null
+        }
     }
     override fun onStartInputView(attribute:EditorInfo?,restarting:Boolean) {
         super.onStartInputView(attribute,restarting)
@@ -155,12 +202,16 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         if(fieldActive && cursorAnchorInfo!=null)host.updateCursorAnchor(session,cursorAnchorInfo)
     }
     private fun endField() {
+        clearConfigurationRestart()
         keyboard?.clearSessionUi()
         if(fieldActive){fieldActive=false;controller.end(session)}
         expectedSelections.clear()
     }
-    override fun onFinishInputView(finishingInput:Boolean){endField();super.onFinishInputView(finishingInput)}
-    override fun onFinishInput(){endField();info=null;super.onFinishInput()}
+    override fun onFinishInputView(finishingInput:Boolean){
+        if(retainConfigurationSession && !finishingInput){keyboard?.clearSessionUi()}else endField()
+        super.onFinishInputView(finishingInput)
+    }
+    override fun onFinishInput(){retainConfigurationSession=false;configurationEditor=null;endField();info=null;super.onFinishInput()}
     override fun onEvaluateFullscreenMode()=false
     override fun dump(fd:java.io.FileDescriptor,writer:java.io.PrintWriter,args:Array<out String>?){
         // Deliberately do not call the framework dump, which includes EditorInfo/context metadata.

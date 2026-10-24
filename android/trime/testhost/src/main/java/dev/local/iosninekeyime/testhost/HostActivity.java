@@ -31,6 +31,7 @@ public final class HostActivity extends Activity {
     private LinearLayout panel;
     private TextView status;
     private String currentCase = "plain";
+    public boolean cutoverOnNextConfiguration;
     public boolean guardConnections;
     public int nextBoundsDelayMs;
     @Override public void onCreate(Bundle state) {
@@ -117,6 +118,10 @@ public final class HostActivity extends Activity {
             web.loadDataWithBaseURL(null,"<!doctype html><title>Synthetic offline host</title><meta name='viewport' content='width=device-width'><meta http-equiv='Content-Security-Policy' content=\"default-src 'none'; style-src 'unsafe-inline'; form-action 'none'\"><style>input{font-size:20px;width:85%;margin:8px}</style><label>synthetic plain<input aria-label='synthetic web plain'></label><label>synthetic password<input type='password' aria-label='synthetic web password' autocomplete='off'></label>","text/html","UTF-8",null);
         }
         web.setVisibility(View.VISIBLE);status.setText("合成本地WebView；无脚本、无网络、无文件访问");
+    }
+    @Override public void onConfigurationChanged(android.content.res.Configuration config){
+        super.onConfigurationChanged(config);
+        if(cutoverOnNextConfiguration && config.orientation==android.content.res.Configuration.ORIENTATION_LANDSCAPE){cutoverOnNextConfiguration=false;selectCase("plain","Q",1,true);}
     }
     public String caseId(){return currentCase;}
     @Override public void onDestroy(){if(web!=null){web.destroy();web=null;}super.onDestroy();}

@@ -15,7 +15,7 @@ import org.json.JSONObject
 object KeyboardInsetsProbe {
     @androidx.annotation.RequiresApi(30)
     fun run(instrumentation:Instrumentation):JSONObject {
-        val rows=JSONArray();var stage="setup"
+        val rows=JSONArray();var stage="setup";var privateErrorCases=0
         fun main(task:()->Unit){var error:Throwable?=null;instrumentation.runOnMainSync {try{task()}catch(t:Throwable){error=t}};error?.let {throw it}}
         try {
             for((index,padding)in listOf(Insets.NONE,Insets.of(0,0,0,54),Insets.of(54,0,0,54),Insets.of(0,0,72,54)).withIndex()){
@@ -57,8 +57,21 @@ object KeyboardInsetsProbe {
                 hit("emoji-search");hit("search-letter-a");check(query()=="a" && sent.isEmpty())
                 view.clearSessionUi();check(query()=="Search Emoji" && sent.isEmpty());view.cancelTouches()
             }
+            for(layout in listOf(Layout.LATIN,Layout.NUMBER)){
+                stage="private-error-${layout.name.lowercase()}"
+                main {
+                    var reconnects=0;val sent=mutableListOf<Event>()
+                    val view=NineKeyView(instrumentation.targetContext,send={event,_->sent+=event},retry={reconnects++})
+                    view.render(KeyboardState(stamp=Stamp(101,0),layout=layout,sensitive=true,errorCode="E_HOST_DELETE"))
+                    view.measure(View.MeasureSpec.makeMeasureSpec(960,View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(1600,View.MeasureSpec.AT_MOST));view.layout(0,0,view.measuredWidth,view.measuredHeight)
+                    val key=checkNotNull(view.findViewWithTag<View>("bar-info"));check(key.isEnabled && key.isClickable && key.bottom<=view.height)
+                    val now=android.os.SystemClock.uptimeMillis()
+                    for(action in listOf(MotionEvent.ACTION_DOWN,MotionEvent.ACTION_UP)){val e=MotionEvent.obtain(now,now,action,(key.left+key.right)/2f,(key.top+key.bottom)/2f,0);try{view.dispatchTouchEvent(e)}finally{e.recycle()}}
+                    check(reconnects==1 && sent.isEmpty());view.cancelTouches();privateErrorCases++
+                }
+            }
         }catch(_:Throwable){return JSONObject().put("scope","real view inset geometry/hit component; NOT system/reference acceptance").put("failure_stage",stage).put("cases",rows).put("pass",false)}
         val passed=(0 until rows.length()).count {rows.getJSONObject(it).getBoolean("pass")}
-        return JSONObject().put("scope","real view inset geometry/hit component; NOT system/reference acceptance").put("cases",rows).put("planned_cases",20).put("passed_cases",passed).put("local_search_session_clear",true).put("pass",passed==20)
+        return JSONObject().put("scope","real view inset geometry/hit component; NOT system/reference acceptance").put("cases",rows).put("planned_cases",20).put("passed_cases",passed).put("local_search_session_clear",true).put("private_error_reconnect_cases",privateErrorCases).put("pass",passed==20 && privateErrorCases==2)
     }
 }
