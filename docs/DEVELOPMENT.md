@@ -54,3 +54,8 @@ python3 scripts/run_system_host.py --target pixel --variant release --scope refe
 测试记录中的源码修订与文档提交可以不同；以源码哈希、APK SHA256、测试包和执行范围关联证据。历史修订索引见[source-revisions.json](testing/source-revisions.json)。
 
 主机参考测量使用 `requirements-visual.lock` 中固定的 Pillow；该依赖不进入 APK。测量输入保持只读，输出几何与色块差异不自动产生视觉验收结论。
+
+
+## 预发布源码与公共输入
+
+[v0.1.0-preview.1 Release](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/tag/v0.1.0-preview.1)同时提供标签源码和`build-inputs.tar.gz`。后者的`public-inputs/upstream/`对应源码树`.cache/upstream/`，`public-inputs/probe-prebuilt/`对应`.cache/probe-prebuilt/`；先核对SHA256SUMS及包内INPUTS.json，已有不同文件时先调查，不覆盖用户数据。该包只含8个固定公开输入及来源说明，不含SDK/NDK/Gradle安装或签名密钥。其余工具链仍按上述锁准备，Boost按固定CMake URL和SHA获取。默认release仍未签名；本地测试签名命令不会获得已发布APK的私钥，不能据此保证签名或整包字节一致。完整分发审查仍按COMPLIANCE记录，不因资料包存在而自动关闭。

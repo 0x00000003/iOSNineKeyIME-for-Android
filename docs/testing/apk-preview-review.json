@@ -1,0 +1,115 @@
+{
+  "checked_on": "2026-10-24",
+  "release_tag": "v0.1.0-preview.1",
+  "stage": "PREPARED",
+  "kind": "prerelease development checkpoint; not M6 acceptance",
+  "runtime_source_revision": "503904db60b8a5fb737033bc2aee7c608d953785",
+  "runtime_source_and_resource_locks_unchanged": true,
+  "apk": {
+    "file": "iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk",
+    "sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+    "bytes": 61769523,
+    "package": "dev.local.iosninekeyime.probe",
+    "version_name": "0.1.0-m1-wip",
+    "version_code": "20261023",
+    "abi": "arm64-v8a",
+    "app_label": "\u79bb\u7ebf\u4e5d\u952e\uff08\u4f18\u5316\u6d4b\u8bd5\u7248\uff09",
+    "min_sdk_declared": 21,
+    "target_sdk": 36,
+    "tested_os": "Android 16 / API 36; not a guarantee for other devices",
+    "signing": "existing local Android Debug certificate; NOT formal release signing",
+    "certificate_sha256": "279a60b4774a7b2ed80c443845cf44a7733b52e09184b7719990d577a2d28041",
+    "signature_schemes_verified": [
+      "v1",
+      "v2"
+    ],
+    "debuggable": false,
+    "permissions": [],
+    "allow_backup": false,
+    "font_entries": [],
+    "personal_build_path_scan_hits": 0,
+    "was_rebuilt_or_resigned": false
+  },
+  "checks": {
+    "static_actual_apk": {
+      "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+      "sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "bytes": 61769523,
+      "package": "dev.local.iosninekeyime.probe",
+      "packaged_fonts": [],
+      "errors": [],
+      "pass": true
+    },
+    "signature_verification": "PASS",
+    "public_build_inputs_hashes": "PASS; 8 pinned inputs, verified again after archive creation",
+    "apk_source_tree_matches_recorded_runtime_revision": "PASS",
+    "project_docs": "PASS; 5921 files, zero errors; document checks only",
+    "tooling_tests": {
+      "result": "PASS",
+      "tests": 45
+    },
+    "new_android_build": "NOT_RUN; unchanged tested APK reused",
+    "new_device_tests": "NOT_RUN; existing same-SHA evidence linked",
+    "new_first_install_offline_test": "NOT_RUN",
+    "diff_whitespace": "PASS"
+  },
+  "existing_same_apk_evidence": {
+    "pinyin": "docs/testing/evidence/m2/configuration-final-optimized-pinyin.json",
+    "rotation": "docs/testing/evidence/m2/configuration-final-optimized-rotation.json",
+    "reference": "docs/testing/evidence/m2/readme-android-reference-ready.json",
+    "webview_failure": "docs/testing/evidence/m2/configuration-final-optimized-web.json"
+  },
+  "known_issues": "docs/OPEN_ISSUES.md",
+  "release_notes": "docs/releases/v0.1.0-preview.1.md",
+  "build_inputs": {
+    "file": "iOSNineKeyIME-v0.1.0-preview.1-build-inputs.tar.gz",
+    "sha256": "785340857b39c8f8dbdc55b6bbfa599537d88f2f386f3dd207661b98639dbbe0",
+    "bytes": 82809154,
+    "inputs": [
+      {
+        "path": "public-inputs/upstream/wanxiang-lite.zip",
+        "sha256": "4f76c49b70f711c10b6abdf142249d4f0e88dd5b00ffe380fd45b0cd1b39d42a",
+        "bytes": 23403719
+      },
+      {
+        "path": "public-inputs/upstream/zh-hans-t-essay-bgw-compact.gram",
+        "sha256": "d3cb2438c1fdcd6a855dd6ca8f5c1060a29273c6b64c2c2c69af67cd71b6aa7e",
+        "bytes": 40925228
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/custom_phrase.table.bin",
+        "sha256": "bde6f9703c6ead09e3a8153a21a1ca18dc595fa66ef13972775297f0be6b2be5",
+        "bytes": 4396
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/custom_phrase.reverse.bin",
+        "sha256": "972b406b7138eb781242d314137166a711df0fd1aa502aaab04e7090fe6592f9",
+        "bytes": 8376
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/wanxiang_abbrev_t9.table.bin",
+        "sha256": "a2cef394d92eef466dd122675983a59fb70097d188a5bc168ef7c7b25b5151a1",
+        "bytes": 851052
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/wanxiang_abbrev_t9.reverse.bin",
+        "sha256": "59c1b741f254eca1e66635d73f2b4582c97f7325f4f2dd83b57dfecf326caeeb",
+        "bytes": 366208
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/wanxiang_lite.table.bin",
+        "sha256": "3bb6cb0e7cb9c2d98fbe75fe9812dce0a54d3455a2e8404e48330e8a9c20445d",
+        "bytes": 50615112
+      },
+      {
+        "path": "public-inputs/probe-prebuilt/wanxiang_lite.reverse.bin",
+        "sha256": "f84fb2d09e56a597db8a6f604a8d6faaef24d5801f3b60af609be2364fc9f057",
+        "bytes": 263796
+      }
+    ],
+    "includes_private_or_learned_data": false,
+    "includes_signing_keys_or_toolchain_cache": false
+  },
+  "source_distribution_review": "Known pending scope retained in docs/COMPLIANCE.md; materials are not a legal certification",
+  "storage": "APK hard-linked to existing verified artifact; one build-inputs archive, no new SDK/NDK/cache/build copies"
+}

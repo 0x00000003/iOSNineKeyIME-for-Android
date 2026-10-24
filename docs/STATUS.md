@@ -2,6 +2,10 @@
 
 当前为可安装的开发版本，已实现中文九键、逐音节选拼音、候选分页、空闲标点，以及数字/符号/英文/Emoji面板。完整发布验收仍在进行。源码已公开至[GitHub](https://github.com/0x00000003/iOSNineKeyIME-for-Android)，公开前检查及线上共同作者核验见[发布复核记录](testing/publication-review.json)。
 
+## APK 下载
+
+[v0.1.0-preview.1 预发布测试版](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/tag/v0.1.0-preview.1)提供当前优化91350a65原始APK，ARM64、约61.8MB，使用本地调试证书且非debuggable。当前包与既有真机记录SHA一致，本次再次核对签名及静态权限/备份XML/固定资源/零字体，不重新构建或重新签名。安装方式见[使用指南](USER_GUIDE.md)，本次检查见[APK发布记录](testing/apk-preview-review.json)。这是公开测试包，不关闭M6或正式签名稳定版门禁。
+
 ## 已验证范围
 
 | 制品与范围 | 结果 | 记录 |

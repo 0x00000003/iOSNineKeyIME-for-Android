@@ -2,7 +2,15 @@
 
 ## 安装和选择
 
-当前为开发版本；构建、签名与兼容范围见[README](../README.md)和[开发手册](DEVELOPMENT.md)。安装 APK 后，通过 Android 的系统输入法设置启用本项目，并在输入法切换器中选择。首次启用会显示 Android 系统警告；切回其他输入法使用同一系统流程，无需修改锁屏安全或解锁 bootloader。
+当前提供 [v0.1.0-preview.1 预发布测试版](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/tag/v0.1.0-preview.1)。[直接下载 ARM64 APK](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk)，包约61.8MB，当前验证环境为Android 16/API36，其他系统与设备未完整验证。已知兼容限制见[已知问题](OPEN_ISSUES.md)。
+
+1. 在手机上点击下载的APK，按系统提示安装；如需授权，只为本次使用的浏览器或文件管理器允许安装该文件，安装后可关闭该来源的权限。
+2. 打开“离线九键（优化测试版）”，点击“系统键盘设置（由你启用/切换）”，启用本输入法。首次启用会显示Android系统输入法警告，由你阅读并确认。
+3. 打开文本输入框，在系统键盘切换器中选择“离线九键（优化测试版）／简体中文九键（开发检查点）”。第一次等待内置资源部署；不需要点击“运行合成探针”。
+
+厂商设置入口名称不同，一般为“设置 → 系统／更多设置 → 语言和输入法 → 屏幕键盘／管理键盘”。切回其他输入法使用同一系统流程，无需修改锁屏安全或解锁bootloader。资源部署失败可回主应用按提示“重建内置资源（保留学习库）”，不要误点“清空学习”。
+
+当前包使用本地Android Debug证书且非debuggable，内部版本仍为0.1.0-m1-wip、versionCode 20261023。Release标签是发布编号，未改动原APK。安装提示签名冲突时先切回其他键盘；卸载会删除本地学习数据，确认可以丢弃后再卸载重装。后续正式签名版可能无法覆盖安装，不保证学习数据迁移。APK与证书的SHA256见[发布说明](releases/v0.1.0-preview.1.md)。
 
 ## 输入
 

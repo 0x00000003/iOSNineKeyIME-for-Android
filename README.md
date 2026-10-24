@@ -12,6 +12,18 @@
 
 <p align="center"><b>左：Android · 本项目输入法　｜　右：iOS · 原生键盘参考</b></p>
 
+## 下载与安装（预发布测试版）
+
+**[下载 Android APK · ARM64 · 约 61.8 MB](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk)** · [发布说明与 SHA256 校验](https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/tag/v0.1.0-preview.1)
+
+当前是 `v0.1.0-preview.1` 测试版，使用本地调试证书，完整发布验收尚未完成。仅提供 ARM64 包，目前已验证环境为 Android 16（API 36），其他系统与设备未完整验证，尤其 Android 14 以下的敏感输入能力仍有限制。
+
+1. 下载 APK 并安装；若系统询问，允许本次使用的浏览器或文件管理器安装此文件，安装后可关闭该来源的安装权限。
+2. 打开“**离线九键（优化测试版）**” → “**系统键盘设置（由你启用/切换）**”，在系统设置中启用，并阅读确认系统输入法警告。
+3. 打开输入框，使用系统键盘切换器选择本输入法。首次显示等待内置资源部署即可，无需运行“合成探针”。
+
+**已知问题：部分 WebView 密码框退格失败、无障碍及部分宿主兼容未完成验收；浅色和字体缩放覆盖有限，当前无语音输入。** 密码／私密字段目前只支持直接英文或数字；遇到编辑失败请切换其他键盘。[完整已知问题](docs/OPEN_ISSUES.md) · [安装、签名冲突与切回方法](docs/USER_GUIDE.md)
+
 ## 功能
 
 - **中文九宫格**：数字编码输入、候选选词、部分选词和逐音节选拼音。
@@ -29,7 +41,7 @@
 
 ## 当前版本
 
-当前提供开发版本，尚无正式签名发布包。现有检查包为 ARM64；测试设备和 Android 版本范围见[测试记录](docs/testing/CONFIGURATION-20261024.md)，其他设备兼容性待验证。
+当前提供可下载安装的预发布测试版，尚无正式签名稳定版。安装包为 ARM64；测试设备和 Android 版本范围见[测试记录](docs/testing/CONFIGURATION-20261024.md)，其他设备兼容性待验证。
 
 已知问题包括部分 WebView 密码框退格不受支持、无障碍窗口坐标异常，以及部分宿主焦点兼容问题。完整性能与安全验收仍在进行。外观使用 Android 系统字体、系统 Emoji 和原创图形，与 iOS 的字形、动画和部分交互存在差异。详见[当前状态](docs/STATUS.md)与[已知问题](docs/OPEN_ISSUES.md)。
 
