@@ -1,0 +1,24 @@
+{
+  "scope": "VISIBLE vs custom REGION strategy diagnostic, not accepted production repair",
+  "candidate_apk_sha256": "efc975b9942c44e32f720b9b4bab62e8dd670e61d2330929a5f5733421cfc451",
+  "candidate_record_sha256": "88a8a43f390d8cf8284429581d6bb30ba10909f49f29da70d8c8c985379e8107",
+  "status": "FAIL",
+  "failure_stage": "hide-show-1",
+  "failure_step": "ime-frame-coherent",
+  "geometry": [
+    [
+      0,
+      2133,
+      960,
+      3053
+    ],
+    [
+      0,
+      1064,
+      960,
+      3053
+    ]
+  ],
+  "source_restored_to_corners_checkpoint": true,
+  "system_settings_changed": false
+}

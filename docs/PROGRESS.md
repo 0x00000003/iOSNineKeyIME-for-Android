@@ -151,3 +151,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 2026-10-24 179a系统触屏增量：冻结三帧屏障协议后同主APK五态9/9、private-pixels36/36、queue-pixels20/20 PASS，所有敏感正文getter0；两异步续输实际第二键前仍pending、长按8手势、跨字段旧正文不变。179a模拟器full28故障/敏感5/metadata6和controller PASS。优化版b127构建/lint/50 JVM/实际静态及Pixel同字段5/5通过；实际任务生成关系缺失的FAIL已保存并用TaskProvider修复，不跳过lint。原a11y坐标仍FAIL、其他发布门禁不继承。
 
 2026-10-24 五态底角检查点WIP：debug5c46/优化c37各自真实Pixel9/5/36/20全部PASS，敏感正文getter0；debug两设备full28结构故障/敏感5/metadata6、controller、view20+搜索清除PASS。页脚39.4×39.4对参考40×40，底角最大采样差约2.3px，未宣称字形/1:1或全安全。83state、50debug/50release app、45工具、三实际APK静态通过；默认unsigned710a未安装。仅复用一套工具链；检查包为硬链接、实拍缩小图和SHA清单，见testing/CORNERS-20261024.md。原无障碍坐标继续诊断。
+
+2026-10-24 同c37优化APK/test2fcb双设备engine/resources/quality/learning/context十条记录全部PASS，Top5 99/100词与19/20句，十词学习重启清合成库10/10、上下文9/10改善/on5110/off0；不是系统全部质量或隐私门禁。test2fcb仍含旧R04状态文案的元数据缺陷已单列，不改写原结果。原5c46 a11y lifecycle基线FAIL，单独关闭自有窗口动画的9ebeed候选也FAIL，已恢复该调用；不据此归因系统。可见inset策略对照已先冻结54e1dfb，尚未签收。
+
+2026-10-24 对照收尾：9ebeed关闭自有窗口动画、efc975改VISIBLE可触区域均原lifecycle FAIL，源码全部撤销并校验回检查点service SHA，Pixel恢复5c46。保留两个候选和原基线反例，不再将这些猜测带入交付。release-test元数据旧R04文案改为明确NOT_RUN，新f7b2测试包配同c37两设备engine PASS；旧2fcb十条引擎记录不改写。剩余工作及APK/实拍已记录，后续优先补功能缺口及日常兼容/压力验收。

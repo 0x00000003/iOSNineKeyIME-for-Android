@@ -1,0 +1,72 @@
+{
+  "scope": "same optimized c37 native component regression on two devices; NOT full IME/privacy/performance",
+  "main_apk_sha256": "c37aa83434d7629ad26eb879ed05952b282d15738266e1644b0449d202c3803a",
+  "test_apk_sha256": "2fcb8fdd479e822d977a9b0c433c0f23848746a7fcb16d4f4a7cc0b6a62308a3",
+  "targets": {
+    "pixel": [
+      {
+        "scope": "engine",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-pixel-engine.json",
+        "record_sha256": "101fc36b09eaa38576c67aa7dbb8436396c5503bfa44bc838e0d21b783b43b2b",
+        "pass": true
+      },
+      {
+        "scope": "resources",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-pixel-resources.json",
+        "record_sha256": "230fa90c3a2641cfe6976809fc56420d981841b011fb4aa09ecba04b5a1353bc",
+        "pass": true
+      },
+      {
+        "scope": "quality",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-pixel-quality.json",
+        "record_sha256": "4afd87cb9c2d774e504f32f489e615f7e7181358a87afd748a9116d5b4bd706c",
+        "pass": true
+      },
+      {
+        "scope": "learning",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-pixel-learning.json",
+        "record_sha256": "72bdd9cd257c12db98ea3717d8be27848ed07cce94da39baf10d27a262ce57f5",
+        "pass": true
+      },
+      {
+        "scope": "context",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-pixel-context.json",
+        "record_sha256": "44565817311b5ba514435ecbe418d253e5877ff9900e5fd2508183c4fc9c9b73",
+        "pass": true
+      }
+    ],
+    "emulator": [
+      {
+        "scope": "engine",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-emulator-engine.json",
+        "record_sha256": "9f625f9ec65407affb2068061ea9c2ee2eea9db5254c7d14334b260c28e6e6dc",
+        "pass": true
+      },
+      {
+        "scope": "resources",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-emulator-resources.json",
+        "record_sha256": "a6fdb76e3ca0c48af4efa3fdbe649fb512a7e38d89c3e3e1850a6e57ae0c669e",
+        "pass": true
+      },
+      {
+        "scope": "quality",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-emulator-quality.json",
+        "record_sha256": "7e4bd380ffa32e6f31f4a9cf518def36755e627c59e7fdd0fa690449494f4424",
+        "pass": true
+      },
+      {
+        "scope": "learning",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-emulator-learning.json",
+        "record_sha256": "4c6d5546e8c62723a5b0e4253ce32ce2fa49788ab21d8b91f8efe229da0c9a98",
+        "pass": true
+      },
+      {
+        "scope": "context",
+        "record": "docs/testing/evidence/m1/reference-ui-corners-optimized-emulator-context.json",
+        "record_sha256": "93c0486066a414f290547858969a2029cf52bf4fbb11cfed582c96835b1aee87",
+        "pass": true
+      }
+    ]
+  },
+  "known_test_metadata_defect": "test2fcb host_editor_component reason contains stale historical R04 FAIL wording; actual host_editor_component status is NOT_RUN in these engine-only scopes; no host regression performed here"
+}

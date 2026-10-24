@@ -1,0 +1,54 @@
+{
+  "scope": "own setWindowAnimations(0) diagnostic comparison; NOT fix or system cause proof",
+  "rows": [
+    {
+      "record": "reference-ui-corners-pixel-lifecycle-baseline",
+      "record_sha256": "e872e848debb95740236ab0f7a696b82abc3956a8353a5a7b266116df03eb35e",
+      "ime_sha256": "5c46ae95448aa09cc818291bca73035e999625488d8f669e449b6c2acf992411",
+      "host_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+      "test_sha256": "86bf1d34ecb0626998c42c0c7326a168ebff0d06b8040e295555a9af64cad639",
+      "status": "FAIL",
+      "failure_stage": "hide-show-1",
+      "failure_step": "ime-frame-coherent",
+      "ime_window_root_geometry": [
+        [
+          0,
+          2133,
+          960,
+          3053
+        ],
+        [
+          0,
+          1064,
+          960,
+          3053
+        ]
+      ]
+    },
+    {
+      "record": "reference-ui-own-noanimation-pixel-lifecycle",
+      "record_sha256": "e74d714cf39677d4f4f3eda8a9bbc19b4666708bb0434212321c9ff9882da79d",
+      "ime_sha256": "9ebeed76fb01cc474656a28a7b2a0a9a7431c701525e99deb15bb01701e0a963",
+      "host_sha256": "306227bac17c9d8661393c2ed625f778792452f4ffc353dc3c0acbc425ebe293",
+      "test_sha256": "86bf1d34ecb0626998c42c0c7326a168ebff0d06b8040e295555a9af64cad639",
+      "status": "FAIL",
+      "failure_stage": "hide-show-1",
+      "failure_step": "ime-frame-coherent",
+      "ime_window_root_geometry": [
+        [
+          0,
+          2135,
+          960,
+          3055
+        ],
+        [
+          0,
+          1066,
+          960,
+          3055
+        ]
+      ]
+    }
+  ],
+  "result": "both FAIL; remove candidate animation call; no global setting changed"
+}

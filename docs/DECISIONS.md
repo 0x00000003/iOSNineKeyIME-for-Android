@@ -102,3 +102,7 @@ onFinishInputView结束控制器和临时UI，不等于宿主字段结束；onSt
 ## ADR046 — 生成 release 测试源码的生产者依赖
 
 真实联合release构建/lint失败：generateReleaseAndroidTestLintModel消费prepareReleaseEngineTests输出却无依赖；先前仅按compile/ksp任务名dependsOn漏掉lint。SourceSet改为直接接收Sync的TaskProvider，由文件集合携带生产者关系，删除任务名匹配补丁。原失败保留，完整联合assembleRelease/assembleReleaseAndroidTest/testReleaseUnitTest/lintRelease已通过；无新依赖/版本，STRICT不改，修改来源账同步。b127fe87含ADR045修复，本地调试证书非debuggable，50 release JVM及实际APK静态通过；并非正式发布签名。
+
+## ADR047 — 拒绝未通过原窗口门禁的两个诊断候选
+
+7e82/debug5c46原lifecycle继续入口frame FAIL；相同host/test的自有Window.setWindowAnimations(0)候选9ebeed、仅touchableInsets改VISIBLE候选efc975均FAIL，全部保存实际APK/nonce及失败几何。两项已撤销，生产服务SHA恢复5c46/c37检查点，不拿它们声称修复或系统缺陷。没有修改全局动画/缩放/导航、没有新依赖或锁变更。

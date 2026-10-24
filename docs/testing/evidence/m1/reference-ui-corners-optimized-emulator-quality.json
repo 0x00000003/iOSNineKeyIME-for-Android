@@ -1,0 +1,533 @@
+{
+  "scope": "R08 fixed synthetic corpus, clean no-personalization JNI session per fixture; NOT full IME or release performance",
+  "corpus_sha256": "6d44fe6d9e9c1e8f9c40ffe535ccefd71c0943845bd1b45cde1d4f6452512566",
+  "corpus_frozen_commit": "13208fe",
+  "candidate_limit": 100,
+  "compact_grammar_loaded": true,
+  "words": {
+    "count": 100,
+    "top1": 89,
+    "top5": 99,
+    "ranks": [
+      {
+        "id": "w001",
+        "rank": 1
+      },
+      {
+        "id": "w002",
+        "rank": 1
+      },
+      {
+        "id": "w003",
+        "rank": 1
+      },
+      {
+        "id": "w004",
+        "rank": 1
+      },
+      {
+        "id": "w005",
+        "rank": 1
+      },
+      {
+        "id": "w006",
+        "rank": 1
+      },
+      {
+        "id": "w007",
+        "rank": 1
+      },
+      {
+        "id": "w008",
+        "rank": 1
+      },
+      {
+        "id": "w009",
+        "rank": 1
+      },
+      {
+        "id": "w010",
+        "rank": 2
+      },
+      {
+        "id": "w011",
+        "rank": 1
+      },
+      {
+        "id": "w012",
+        "rank": 1
+      },
+      {
+        "id": "w013",
+        "rank": 13
+      },
+      {
+        "id": "w014",
+        "rank": 1
+      },
+      {
+        "id": "w015",
+        "rank": 1
+      },
+      {
+        "id": "w016",
+        "rank": 1
+      },
+      {
+        "id": "w017",
+        "rank": 1
+      },
+      {
+        "id": "w018",
+        "rank": 1
+      },
+      {
+        "id": "w019",
+        "rank": 1
+      },
+      {
+        "id": "w020",
+        "rank": 3
+      },
+      {
+        "id": "w021",
+        "rank": 1
+      },
+      {
+        "id": "w022",
+        "rank": 1
+      },
+      {
+        "id": "w023",
+        "rank": 1
+      },
+      {
+        "id": "w024",
+        "rank": 1
+      },
+      {
+        "id": "w025",
+        "rank": 1
+      },
+      {
+        "id": "w026",
+        "rank": 1
+      },
+      {
+        "id": "w027",
+        "rank": 1
+      },
+      {
+        "id": "w028",
+        "rank": 1
+      },
+      {
+        "id": "w029",
+        "rank": 1
+      },
+      {
+        "id": "w030",
+        "rank": 1
+      },
+      {
+        "id": "w031",
+        "rank": 2
+      },
+      {
+        "id": "w032",
+        "rank": 1
+      },
+      {
+        "id": "w033",
+        "rank": 1
+      },
+      {
+        "id": "w034",
+        "rank": 1
+      },
+      {
+        "id": "w035",
+        "rank": 1
+      },
+      {
+        "id": "w036",
+        "rank": 1
+      },
+      {
+        "id": "w037",
+        "rank": 2
+      },
+      {
+        "id": "w038",
+        "rank": 1
+      },
+      {
+        "id": "w039",
+        "rank": 1
+      },
+      {
+        "id": "w040",
+        "rank": 1
+      },
+      {
+        "id": "w041",
+        "rank": 1
+      },
+      {
+        "id": "w042",
+        "rank": 1
+      },
+      {
+        "id": "w043",
+        "rank": 1
+      },
+      {
+        "id": "w044",
+        "rank": 1
+      },
+      {
+        "id": "w045",
+        "rank": 1
+      },
+      {
+        "id": "w046",
+        "rank": 1
+      },
+      {
+        "id": "w047",
+        "rank": 1
+      },
+      {
+        "id": "w048",
+        "rank": 1
+      },
+      {
+        "id": "w049",
+        "rank": 1
+      },
+      {
+        "id": "w050",
+        "rank": 1
+      },
+      {
+        "id": "w051",
+        "rank": 1
+      },
+      {
+        "id": "w052",
+        "rank": 1
+      },
+      {
+        "id": "w053",
+        "rank": 1
+      },
+      {
+        "id": "w054",
+        "rank": 1
+      },
+      {
+        "id": "w055",
+        "rank": 1
+      },
+      {
+        "id": "w056",
+        "rank": 1
+      },
+      {
+        "id": "w057",
+        "rank": 1
+      },
+      {
+        "id": "w058",
+        "rank": 1
+      },
+      {
+        "id": "w059",
+        "rank": 2
+      },
+      {
+        "id": "w060",
+        "rank": 2
+      },
+      {
+        "id": "w061",
+        "rank": 1
+      },
+      {
+        "id": "w062",
+        "rank": 1
+      },
+      {
+        "id": "w063",
+        "rank": 1
+      },
+      {
+        "id": "w064",
+        "rank": 1
+      },
+      {
+        "id": "w065",
+        "rank": 2
+      },
+      {
+        "id": "w066",
+        "rank": 1
+      },
+      {
+        "id": "w067",
+        "rank": 1
+      },
+      {
+        "id": "w068",
+        "rank": 1
+      },
+      {
+        "id": "w069",
+        "rank": 1
+      },
+      {
+        "id": "w070",
+        "rank": 1
+      },
+      {
+        "id": "w071",
+        "rank": 1
+      },
+      {
+        "id": "w072",
+        "rank": 1
+      },
+      {
+        "id": "w073",
+        "rank": 2
+      },
+      {
+        "id": "w074",
+        "rank": 1
+      },
+      {
+        "id": "w075",
+        "rank": 1
+      },
+      {
+        "id": "w076",
+        "rank": 1
+      },
+      {
+        "id": "w077",
+        "rank": 1
+      },
+      {
+        "id": "w078",
+        "rank": 1
+      },
+      {
+        "id": "w079",
+        "rank": 1
+      },
+      {
+        "id": "w080",
+        "rank": 1
+      },
+      {
+        "id": "w081",
+        "rank": 1
+      },
+      {
+        "id": "w082",
+        "rank": 1
+      },
+      {
+        "id": "w083",
+        "rank": 1
+      },
+      {
+        "id": "w084",
+        "rank": 1
+      },
+      {
+        "id": "w085",
+        "rank": 1
+      },
+      {
+        "id": "w086",
+        "rank": 1
+      },
+      {
+        "id": "w087",
+        "rank": 2
+      },
+      {
+        "id": "w088",
+        "rank": 1
+      },
+      {
+        "id": "w089",
+        "rank": 1
+      },
+      {
+        "id": "w090",
+        "rank": 1
+      },
+      {
+        "id": "w091",
+        "rank": 1
+      },
+      {
+        "id": "w092",
+        "rank": 1
+      },
+      {
+        "id": "w093",
+        "rank": 1
+      },
+      {
+        "id": "w094",
+        "rank": 1
+      },
+      {
+        "id": "w095",
+        "rank": 1
+      },
+      {
+        "id": "w096",
+        "rank": 1
+      },
+      {
+        "id": "w097",
+        "rank": 1
+      },
+      {
+        "id": "w098",
+        "rank": 1
+      },
+      {
+        "id": "w099",
+        "rank": 2
+      },
+      {
+        "id": "w100",
+        "rank": 1
+      }
+    ]
+  },
+  "sentences": {
+    "count": 20,
+    "top1": 19,
+    "top5": 19,
+    "ranks": [
+      {
+        "id": "s001",
+        "rank": 1
+      },
+      {
+        "id": "s002",
+        "rank": 1
+      },
+      {
+        "id": "s003",
+        "rank": 1
+      },
+      {
+        "id": "s004",
+        "rank": -1
+      },
+      {
+        "id": "s005",
+        "rank": 1
+      },
+      {
+        "id": "s006",
+        "rank": 1
+      },
+      {
+        "id": "s007",
+        "rank": 1
+      },
+      {
+        "id": "s008",
+        "rank": 1
+      },
+      {
+        "id": "s009",
+        "rank": 1
+      },
+      {
+        "id": "s010",
+        "rank": 1
+      },
+      {
+        "id": "s011",
+        "rank": 1
+      },
+      {
+        "id": "s012",
+        "rank": 1
+      },
+      {
+        "id": "s013",
+        "rank": 1
+      },
+      {
+        "id": "s014",
+        "rank": 1
+      },
+      {
+        "id": "s015",
+        "rank": 1
+      },
+      {
+        "id": "s016",
+        "rank": 1
+      },
+      {
+        "id": "s017",
+        "rank": 1
+      },
+      {
+        "id": "s018",
+        "rank": 1
+      },
+      {
+        "id": "s019",
+        "rank": 1
+      },
+      {
+        "id": "s020",
+        "rank": 1
+      }
+    ]
+  },
+  "no_learning_profile_bytes_and_timestamps_unchanged": true,
+  "no_userdb": true,
+  "history_zero_each_fixture": true,
+  "no_automatic_host_commit": true,
+  "all_digit_keys_handled": true,
+  "static_resources_unchanged": true,
+  "elapsed_ms": 1728,
+  "controls_pass": true,
+  "pass": true,
+  "probe_run_id": "eaf93ab2674741ea9ebb1103fe8b66cb",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "c37aa83434d7629ad26eb879ed05952b282d15738266e1644b0449d202c3803a",
+  "tested_test_apk_sha256": "2fcb8fdd479e822d977a9b0c433c0f23848746a7fcb16d4f4a7cc0b6a62308a3",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "quality",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

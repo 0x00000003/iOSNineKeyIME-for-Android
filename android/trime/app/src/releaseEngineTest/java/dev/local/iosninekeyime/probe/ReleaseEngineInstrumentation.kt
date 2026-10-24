@@ -34,7 +34,7 @@ class ReleaseEngineInstrumentation : Instrumentation() {
                 else -> error("E_UNSUPPORTED_RELEASE_SCOPE")
             }
             result.put("probe_run_id", runId).put("target_debuggable", BuildConfig.DEBUG)
-                .put("host_editor_component", JSONObject().put("status", "NOT_RUN").put("reason", "release engine-only runner; R04 remains FAIL in debug component tests"))
+                .put("host_editor_component", JSONObject().put("status", "NOT_RUN").put("reason", "release engine-only runner; host/editor not executed; consult separate hash-bound host records"))
             output.putString("stream", result.toString(2) + "\n")
             output.putBoolean("m1_probe_pass", result.getBoolean("pass"))
             finish(if (result.getBoolean("pass")) Activity.RESULT_OK else Activity.RESULT_CANCELED, output)
