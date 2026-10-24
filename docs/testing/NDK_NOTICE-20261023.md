@@ -1,0 +1,9 @@
+# NDK静态运行库归属补充（WIP）
+
+构建约定明确传入-DANDROID_STL=c++_static。原43份离线正文包含Trime/Rime/Boost/数据/模型及Maven原文，但没有固定NDK所携LLVM runtime/toolchain NOTICE；因此不把96d627a或其重建成功写成完整SEC05。
+
+从固定android-ndk-r28-darwin.zip（SHA19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9）提取android-ndk-r28/toolchains/llvm/prebuilt/darwin-x86_64/NOTICE，与现有固定NDK副本字节一致。原文130424字节/SHA f96f763beb66a7ba7a667647fc64c0226ace875e590c831fdd9579ec1c1d91e1，未删改，包括LLVM exceptions及其他第三方版权/条件。源文件及reference SHA新增登记，third_party/ndk-runtime-license.json保留准确路径、归档、用途与限制。
+
+将完整原文加入离线列表，44份正文/445099字节/SHA595154365cbd04239545db40fda4f301627f4e207d8b5ead918db6bcb1c116ad。该NOTICE是广义toolchain/runtime原文，并不声称每个列出的宿主工具都链接进APK；不从聚合文本推断每个实际符号的许可证。实际Maven清单仍122项，NDK记录独立，其他模型/词库/对应源义务继续WIP。
+
+Settings组件原43项数量断言更新为准确44项，保留正文哈希校验、开页验证、取消清学习/零写等全部控制断言。由于资产与BuildConfig哈希变化，必须新构建并以新APK/Test SHA运行；不能继承96d627a制品分项或旧94b9d40f的30分钟性能成绩。默认/优化构建、49 app/73 state、两套lint、38工具与实际三APK静态审计PASS；新debug b0ca3dd5/test1f988fd6，优化release582016c3/testb1948467。两设备settings已PASS44项、完整NDK正文显示及原取消控制；其余回归还在进行。

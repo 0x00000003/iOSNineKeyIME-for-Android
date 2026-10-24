@@ -1,0 +1,12 @@
+{
+  "scope": "owned API36 emulator, removed only own synthetic release; no setting or other app altered; full IME not enabled",
+  "network_flags": {
+    "airplane_mode_on": "1",
+    "wifi_on": "0",
+    "mobile_data": "0"
+  },
+  "active_default_network_none": true,
+  "own_ime_was_default": false,
+  "own_release_uninstall_succeeded": true,
+  "next_result": "m4-ndk-emulator-release-engine.json"
+}

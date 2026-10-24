@@ -17,3 +17,5 @@
 负测fixture已纳入tests/fixtures/strict-lock-negative.init.gradle，并按此Git文件再次实跑两条任务，evidence保存fixture/log SHA：`./scripts/gradle.sh --init-script "$PWD/tests/fixtures/strict-lock-negative.init.gradle" :app:codexMissingLockProbe` 及 `:app:codexUnexpectedFontProbe`（第二条同一init参数）。都必须非零退出且分别匹配缺lock state/不在lock state，不能把一般Gradle报错当预期拒绝。
 
 最终debug dd8f688f、unsigned9cdd4df2、本地签名dedeee3c实际APK均零字体、权限/备份/锁定资源静态PASS；122项运行时清单已由实际APK资产回写third_party/runtime-inventory-release.json。完整分项回归见CHECKPOINT记录，不包含系统IME全门禁。复用bootstrap工具增加了逐文件JDK post-check与每个新目标独立日志；原始首次环境构建和手工复核记录不改写为新版脚本全流程重跑。
+
+96d627a代码检查点再做独立完整获取路径：新源码/SDK/JDK/初始空Gradle cache首次构建62/62任务成功，12m34s。unsigned整包61720617字节/SHA9cdd4df28cd25e1fb19ebd2438f4078d99c1890514b5dda0ac1bdb97c3bff0c1，与冻结基线完全一致；同源auditor实际静态零字体/权限/备份/资源PASS。[完整收据](evidence/m1/m6-source-96d-clean-toolchain.json)、[实际APK审计](evidence/m1/m6-source-96d-audit/audit.json)。SDK/JDK新安装并逐文件核归档、JDK459文件，现有SDK同条款接受marker及固定公开table/model仍复用。此包43正文，不能将它归给后续新增NDK notice的44正文补丁或完整M6签收。

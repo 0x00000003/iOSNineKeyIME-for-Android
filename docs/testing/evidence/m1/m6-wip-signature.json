@@ -1,0 +1,9 @@
+{
+  "scope": "public signature verification of local WIP optimized APK; project Android Debug certificate, NOT formal release signing",
+  "apk_sha256": "dedeee3c9f43e69ef608e01f33db1b6e7382bca89096fa6aabff48a29c9a1642",
+  "certificate_sha256": "279a60b4774a7b2ed80c443845cf44a7733b52e09184b7719990d577a2d28041",
+  "signature_v1_verified": true,
+  "signature_v2_verified": true,
+  "formal_release": false,
+  "pass": true
+}

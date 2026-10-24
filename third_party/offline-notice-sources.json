@@ -283,8 +283,16 @@
       "path": "docs/reference/upstream/wanxiang/LICENSE",
       "title": "Wanxiang data/config CC-BY-4.0",
       "sha256": "9e5f1b3c610b9c2da5c313bf81d577a7d1acec686bdb0384edefa6df0f90cd94"
+    },
+    {
+      "path": "docs/reference/upstream/ndk-r28/LLVM-NOTICE",
+      "title": "Android NDK r28 LLVM runtime/toolchain notices (static C++ selected)",
+      "source": "https://dl.google.com/android/repository/android-ndk-r28-darwin.zip",
+      "archive_sha256": "19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9",
+      "archive_member": "android-ndk-r28/toolchains/llvm/prebuilt/darwin-x86_64/NOTICE",
+      "sha256": "f96f763beb66a7ba7a667647fc64c0226ace875e590c831fdd9579ec1c1d91e1"
     }
   ],
-  "sha256": "5d876b6c757b9da3f089ec722f1ac8de0869566f165353577d963038cc3cd087",
-  "bytes": 311586
+  "sha256": "595154365cbd04239545db40fda4f301627f4e207d8b5ead918db6bcb1c116ad",
+  "bytes": 445099
 }

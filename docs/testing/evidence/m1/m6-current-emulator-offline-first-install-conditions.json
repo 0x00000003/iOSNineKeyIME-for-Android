@@ -1,0 +1,11 @@
+{
+  "scope": "owned API36 emulator only; uninstalled own synthetic release package, no other apps/device settings altered; target IME not default",
+  "airplane_mode_on": true,
+  "wifi_off": true,
+  "mobile_data_off": true,
+  "own_ime_was_default": false,
+  "own_release_uninstall_succeeded": true,
+  "next_test": "m6-current-emulator-offline-fresh-engine.json",
+  "active_default_network_none_observed": true,
+  "network_observation_scope": "airplane/wifi/data flags and dumpsys default-network absence, no packet capture"
+}

@@ -38,3 +38,5 @@
 本检查点只供本地审查和继续开发，不能称应用完成、可日用、安全全通过或像素一致。
 
 执行备注：首次静态audit命令手写APK basename错误，只产生缺文件报错、没有审计结果；后按各output-metadata.json选取实际文件名重跑，最终三份audit均绑定上表哈希。原错误输出保留在忽略artifacts，不计作Android断言失败或通过。
+
+追加当前制品离线新装组件：专用API36模拟器确认airplane=1/wifi=0/data=0且无默认网络，卸载的只有本项目合成release包，用户Pixel未清除。重新安装同dedeee3c后engine组件PASS（完整协议1058ms、公共资源部署472ms、首profile ready175ms）。[条件](evidence/m1/m6-current-emulator-offline-first-install-conditions.json)及[结果](evidence/m1/m6-current-emulator-offline-fresh-engine.json)；未启用系统IME，不是完整D05或P02二十次测量。00:54UTC重新查Pixel仍Awake、own IME未启用/未默认，只保留[本项目布尔元数据](evidence/m1/m6-current-selected-device-metadata.json)，其他输入法ID/设备序列号未落记录。

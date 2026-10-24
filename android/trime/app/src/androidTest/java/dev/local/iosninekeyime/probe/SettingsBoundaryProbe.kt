@@ -41,6 +41,12 @@ object SettingsBoundaryProbe {
                 val text=checkNotNull(dialog.window?.decorView?.findViewWithTag<TextView>("offline-notice-body"))
                 result.put("plain_text_dialog_visible",dialog.isShowing && text.text.length>500)
                 dialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick()
+                val ndkIndex=(0 until entries.length()).single {entries.getJSONObject(it).getString("source_path")=="docs/reference/upstream/ndk-r28/LLVM-NOTICE"}
+                list.performItemClick(list.getChildAt(0),ndkIndex,ndkIndex.toLong())
+                val ndkDialog=checkNotNull(activity.sourceNoticeDialog)
+                val ndkText=checkNotNull(ndkDialog.window?.decorView?.findViewWithTag<TextView>("offline-notice-body"))
+                result.put("ndk_runtime_notice_visible",ndkDialog.isShowing && ndkText.text.toString().endsWith(entries.getJSONObject(ndkIndex).getString("text")))
+                ndkDialog.getButton(AlertDialog.BUTTON_POSITIVE).performClick()
                 activity.finish();notice=null
             }
             probe=instrumentation.startActivitySync(Intent(context,ProbeActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)) as ProbeActivity
@@ -57,8 +63,8 @@ object SettingsBoundaryProbe {
             instrumentation.waitForIdleSync()
             main {result.put("clear_dialog_cancelled",cancelledDialog?.isShowing==false);probe?.finish();probe=null}
             result.put("production_clear_not_executed",true).put("system_ime_settings_not_opened",true)
-            val controls=listOf("bundle_sha_matches_pin","all_notice_text_hashes_match","plain_text_dialog_visible","explicit_clear_confirmation_present","clear_dialog_cancelled")
-            result.put("pass",controls.all {result.getBoolean(it)} && result.getInt("notice_count")==43 && result.getInt("dependency_count")>100)
+            val controls=listOf("bundle_sha_matches_pin","all_notice_text_hashes_match","plain_text_dialog_visible","ndk_runtime_notice_visible","explicit_clear_confirmation_present","clear_dialog_cancelled")
+            result.put("pass",controls.all {result.getBoolean(it)} && result.getInt("notice_count")==44 && result.getInt("dependency_count")>100)
             return result
         }finally{main{notice?.finish();probe?.finish()}}
     }

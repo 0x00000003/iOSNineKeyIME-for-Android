@@ -1,0 +1,39 @@
+{
+  "scope": "owned public-resource/model faults and restoration with native lease; NOT general privacy/backup acceptance",
+  "public_corruption_rejected": true,
+  "unknown_public_lua_rejected": true,
+  "public_symlink_rejected": true,
+  "public_sentinel_preserved": true,
+  "model_corruption_rejected": true,
+  "model_bundled": true,
+  "recovered_public_resources": true,
+  "profiles_bytes_and_timestamps_unchanged": true,
+  "preservation_scope": "all existing synthetic profiles immediately after repair and after reopening with fresh synthetic profiles",
+  "existing_profiles_unchanged_after_engine_reopen": true,
+  "engine_reopened_with_repaired_resources": true,
+  "positive_existing_profile_count": 2,
+  "pass": true,
+  "probe_run_id": "9ad2665f3b4f4b29a59b0160d4a9d88d",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "582016c31af26f824d2e3739edbdbda38028ee31fbd5a3416312be2fa88fa235",
+  "tested_test_apk_sha256": "b1948467aa0bcabd94388591123adb45c2f36b5dcab2704e7b139431e0470f74",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "resources",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

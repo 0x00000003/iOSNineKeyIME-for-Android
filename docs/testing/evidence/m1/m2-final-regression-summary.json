@@ -1,7 +1,7 @@
 {
   "scope": "frozen current component regression; NOT full IME/visual/security/performance release acceptance",
   "source_base_commit": "615a477",
-  "source_patch": "tracked code and build-lock delta in following local WIP commit",
+  "source_patch": "included in source_commit; later documentation-only receipts do not change APK sources",
   "debug_apk_sha256": "dd8f688f6c8bdc1cb3384e5e9a023b63384a1083641d23bde60af7a1a37dcb7c",
   "debug_test_sha256": "68bc0af2f9d03b6f995346c51ae0b2903797d5e61134ad227f2435a188f918c1",
   "optimized_local_signed_release_apk_sha256": "dedeee3c9f43e69ef608e01f33db1b6e7382bca89096fa6aabff48a29c9a1642",
@@ -144,5 +144,6 @@
   "component_regressions_match_expectations": true,
   "known_full_fail": "R04 private preexisting combining grapheme deletion 4/5 on both targets",
   "release_gate": "NOT_ACCEPTED",
-  "pass": false
+  "pass": false,
+  "source_commit": "96d627a2d258393f36278b44cd15070ca62b13a5"
 }

@@ -1,0 +1,36 @@
+{
+  "scope": "own offline notice UI and cancel-only clear confirmation; NOT full license audit or production learning erase",
+  "bundle_sha_matches_pin": true,
+  "all_notice_text_hashes_match": true,
+  "notice_count": 44,
+  "dependency_count": 136,
+  "plain_text_dialog_visible": true,
+  "ndk_runtime_notice_visible": true,
+  "explicit_clear_confirmation_present": true,
+  "clear_dialog_cancelled": true,
+  "production_clear_not_executed": true,
+  "system_ime_settings_not_opened": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "b8b338c70ba04809b3363cbe54d43fb9",
+  "tested_apk_sha256": "b0ca3dd5ae0365d71c76c1f6a543d14eb51af5ccb76e239e2dab503b53f28a65",
+  "tested_test_apk_sha256": "1f988fd6b3c765a01e3bc91b35ba6f8a00fc5133b95f59b566a6eb37ae827a7c",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "settings",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

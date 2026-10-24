@@ -1,0 +1,14 @@
+{
+  "scope": "exact notice carried by fixed NDK archive; broad LLVM runtime/toolchain text, NOT proof every listed tool component is linked or complete distribution acceptance",
+  "component": "NDK static C++ runtime and associated compiler/runtime notices",
+  "ndk_version": "28.0.13004108",
+  "archive_url": "https://dl.google.com/android/repository/android-ndk-r28-darwin.zip",
+  "archive_sha256": "19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9",
+  "archive_member": "android-ndk-r28/toolchains/llvm/prebuilt/darwin-x86_64/NOTICE",
+  "notice_path": "docs/reference/upstream/ndk-r28/LLVM-NOTICE",
+  "notice_sha256": "f96f763beb66a7ba7a667647fc64c0226ace875e590c831fdd9579ec1c1d91e1",
+  "notice_bytes": 130424,
+  "linkage_evidence": "android/trime/build-logic/convention/src/main/kotlin/NativeBaseConventionPlugin.kt sets -DANDROID_STL=c++_static",
+  "llvm_license_title": "Apache License v2.0 with LLVM Exceptions; all additional notices/exceptions retained in original text",
+  "modified": false
+}

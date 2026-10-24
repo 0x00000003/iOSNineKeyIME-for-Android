@@ -99,3 +99,9 @@ M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，
 候选分页原100上限正在改真正原生20项窗口+lookahead，全局ID/offset+epoch约束，不消费commit，当前71 state/49 app及lint/构建PASS但Android跨100测试仍待测；M2继续WIP。字体依赖移除与严格锁模式一并复核，完成前不归到旧哈希。
 
 最新WIP收尾：debug dd8f688f/test68bc0af2两设备full强制包含跨120分页与11连接故障，两组件PASS、R04仍4/5导致FAIL。settings/resources/R08/R09/R10/no-learning-restart/canary-controller两设备同哈希PASS，UID canary前后0。optimized dedeee3c/testee19b44e两设备五引擎scope PASS；unsigned9cdd4df2与signed23个非签名ZIP entry相同，三APK实际零字体/权限/备份/资产审计PASS。49 app/73 state、38工具、两套lint及构建PASS。历史新SDK整包重建和两次30分钟旧APKJNI观察独立记录；不继承性能/安全成绩。详见CHECKPOINT-20261023；M1—M6未完成门禁保持未勾选，本地WIP提交。
+
+96d627a代码检查点后：再次实查Pixel仍Awake，own IME未启用/未默认（仅保存布尔，无原始IME列表）；专用离线API36模拟器只卸载本项目合成release，断网无默认network，重装同dedeee3c引擎组件PASS。系统IME/D05/P02整体不因此勾选。当前96d源码新SDK/JDK/初始空Gradle cache已完成7个包逐文件核验（JDK459文件），正在构建，尚不预报整包一致。
+
+后续M4许可复核发现NativeBaseConvention显式静态C++，原43正文缺固定NDK的LLVM runtime/toolchain NOTICE；已从已核归档提取原文、比对SDK字节并登记source/archive/member/SHA，准备44项离线正文。Settings数量断言相应更新，其他断言不改，新APK尚未构建/回归。当前96d新工具链重建仍在独立目录运行，不将它误归到新增正文版本。
+
+96d627a全新源码/SDK/JDK/初始空Gradle cache首次实际重建结束：62/62任务、12m34s，unsigned整包9cdd4df2与冻结当前基线完全相同；同历史source43正文auditor复核PASS。该目录与后续NDK44正文补丁分开，后者正在本项目根构建；未把历史结果归到改资产后的包。
