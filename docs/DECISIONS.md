@@ -48,3 +48,7 @@
 
 | 034 | 2026-10-23 | Accepted WIP build policy | 默认LockMode.DEFAULT不能拒绝缺状态；settings早期对root/included projects及plugin classpath设STRICT，补实际构建/test/lint配置锁。移除未用Material品牌图标集合，实际所有APK只允许系统字体、零打包字体 | 缺状态/重新加入旧依赖两实际Gradle负测拒绝；不用verification拒绝代替锁证据。依赖约束变化与124→122清单见TOOLCHAIN记录 |
 | 035 | 2026-10-23 | Accepted WIP native paging | 以20候选+1 lookahead的原生窗口替代前100本地缓存；全局index、独立Fetch及匹配offset/revision，翻页不消费getCommit；空格确认global0，收起重取第一页 | 原单键6只有4候选，保留测试前提FAIL后使用完整音节64，在双设备跨120实际选择仅上屏一次；禁用键保留绘制几何，触控集合排除 |
+
+| 036 | 2026-10-23 | Research only / production scope unresolved | 原私密DEL保留R04 4/5 FAIL。先冻结并在自有合成宿主测试字符级委托36例与Parcel结构坐标18例，分别记录正文getter0及结构查询次数；不将结构查询暗作“不取上下文” | 两设备分项通过，生产HostEditorAdapter/EditorPolicy未改；上下文边界在ADR037定义，在此之前按严格策略，不关闭R04。最小区域/异步/字段epoch/多宿主需另实现实测 |
+
+| 037 | 2026-10-23 | Accepted scope clarification; supersedes036待定部分 | 隐私策略定义为“禁止文字正文读取，允许必要结构信息”。私密不得取正文/学习/持久化；允许必要字符坐标/边界等结构元数据按当前会话在内存最小使用，并单独计数 | AGENTS约束4补充定义；允许继续生产删除路径实现，不代表R04/I05自动通过。必须覆盖最小区域、异步队列、字段epoch、超时、不支持宿主和真实系统IME |

@@ -113,3 +113,9 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 宿主删除委托第一阶段实际两设备36/36，通过真实密码遮罩、组合音标/多个mark/ZWJ/RTL等合成案例，IC正文getter0；只用test Layout几何，不是生产修复。原editor同test仍R04 4/5 FAIL。下一步单独冻结结构元数据（非正文）坐标调查，明确不是零结构信息请求或生产私密策略验收。
 
 第二阶段冻结HOST_BOUNDS_RESEARCH_PROTOCOL：仅自有合成字段用TextBoundsInfo结构坐标（一次请求并Parcel往返）代替字符Layout oracle，正文getter仍拒绝；明确结构查询非零，生产私密策略/R04不改。先测18案例，再判断最小生产请求区域与跨字段异步是否可做。
+
+第二阶段两设备各18/18 PASS（testc6c6e8bf/mainb0ca不变）：通过一次结构坐标请求/Parcel往返而非字符Layout oracle完成每个合成删除，正文getter0，结构请求18，已知marker未观察到。同test第一阶段各36/36；原editor仍4/5 FAIL。生产HostAdapter及严格私密策略未改，下一步需明确“不得读上下文”是否包括这类不含正文的结构信息，并在系统设置启用IME后验证最小区域/异步/多宿主。
+
+合成prototype完成后，结构信息隐私边界进入ADR037评估；生产路径尚未接入新API，原R04两设备仍FAIL。其他系统IME/原图/目标OS门禁和WIP制品/源码/测试记录已分别保存。
+
+隐私策略规定：仅禁止文字正文，必要结构信息可以使用。已将定义写入AGENTS及ADR037，采用该隐私边界；继续生产HostAdapter/Controller异步删除及字段/超时/不支持处理。R04原失败继续保留，待实际新路径与系统测试，不将18例研究当作完成。

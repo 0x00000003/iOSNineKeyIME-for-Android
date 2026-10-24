@@ -6,6 +6,8 @@
 
 738a365隔离新源码/build/.cxx、warm固定SDK/JDK/Gradle输入重建整包22f2f226一致；96d源码另有新SDK/JDK/初始空Gradle cache整包复现证据。旧94b9d40f的各30分钟JNI观察独立记录，不继承为当前完整性能成绩。系统IME未由用户启用、iPhone原图缺失、R04未修复、完整安全/性能/正式签收未通过。[逐需求验收账](ACCEPTANCE.md)与[阻碍](OPEN_ISSUES.md)保留具体未交付项。
 
+R04调查追加：[宿主委托](testing/HOST_GESTURE_RESEARCH_PROTOCOL.md)两设备各36/36、[结构坐标](testing/HOST_BOUNDS_RESEARCH_PROTOCOL.md)各18/18合成案例通过，IC正文getter0；第二类确实新增结构请求，未接生产私密路径。原editor保持4/5 FAIL；这不是R04修复或完整隐私通过。隐私策略规定“仅禁止文字正文，必要结构信息可以使用”；已记录该定义，下一步接入生产异步删除与会话/超时防护，尚未关闭R04。
+
 以下是历史检查点及追加结果，最新制品不可继承旧哈希成绩。
 
 日期：2026-10-23（America/New_York）。M1兼容性与M2独立纯组件开发检查点，**不是应用完成或可日用输入法**。本地前一提交`d9a8466`，本轮补丁见Git与下列记录；开发记录。

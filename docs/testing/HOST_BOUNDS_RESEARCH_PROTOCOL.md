@@ -9,3 +9,9 @@
 这是自有合成宿主的额外数据接口调查。生产如何获取最小请求区域（而非test提供）、异步队列/字段变更/过期快照/超时/不支持宿主、RTL/多行/屏外/超长簇、当前“不得读上下文”约束下可用结构数据边界尚未实现和验收。没有把结构查询加入生产私密路径，R04仍保留FAIL；不能将研究pass归给系统IME或全部密码/隐私场景。
 
 接口来源：[TextBoundsInfo](https://developer.android.com/reference/android/view/inputmethod/TextBoundsInfo)、[InputConnection](https://developer.android.com/reference/android/view/inputmethod/InputConnection)。固定本机SDK36公开签名与AOSP fe2cff的实现路径已检查，必须另测Pixel/API36实际行为。
+
+## 实测结果
+
+主APK b0ca3dd5不变，test c6c6e8bf72b3d415d40fd6085817b5c54609ce801a5fee6f4555a4048d27c709。[Pixel](evidence/m1/m1-bounds-pixel-gesture-metadata-research.json)、[API36模拟器](evidence/m1/m1-bounds-emulator-gesture-metadata-research.json)均18/18 PASS：普通/真实password各9，结构坐标请求各18次、IC正文/上下文getter0；Parcel往返后的坐标可委托宿主正确删除，全部已知合成字节marker未观察到。该marker检查仅该序列/该parcel，不推断任意数据完全不泄露。
+
+同test再跑第一阶段两设备各36/36，结构请求0；原editor两设备仍4/5 FAIL，host生产代码未改。坐标Snapshot虽然不读文字，但确实是新增结构元数据读取，来源/flags/边界集合由框架提供；算法只取范围/matrix/char bounds，不能把它写成“不取任何额外上下文”。生产最小区域/服务回调/异步队列/字段epoch/超时/多宿主等尚未实现或验证，当前R04不关闭。

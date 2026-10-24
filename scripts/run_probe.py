@@ -39,7 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--target', choices=['pixel', 'emulator-5580'], required=True)
     parser.add_argument('--record', required=True, help='New evidence name, e.g. extended-pixel')
-    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'connection-faults', 'nolearn-restart', 'paging', 'gesture-research', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
+    parser.add_argument('--scope', choices=['full', 'editor', 'engine', 'resources', 'controller', 'quality', 'learning', 'context', 'settings', 'connection-faults', 'nolearn-restart', 'paging', 'gesture-research', 'gesture-metadata-research', 'perf-smoke', 'perf-model-off-smoke', 'perf-model-on-long', 'perf-model-off-long'], default='full')
     parser.add_argument('--variant', choices=['debug', 'release'], default='debug')
     parser.add_argument('--apk-root', type=Path, help='Frozen APK output tree inside this project; default current Gradle outputs')
     args = parser.parse_args()
