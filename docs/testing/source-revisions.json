@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "description": "Source revision identifiers in archived test records and their repository revisions. Runtime source trees, dependency locks and license files are unchanged. APK and source-file SHA256 remain the artifact identity.",
+  "revisions": [
+    {
+      "recorded_revision": "0274f6d120bde1b3768163c4ff7c779dca0740f1",
+      "repository_revision": "37b7f034ff9eb6fc41f578a8e494c79285dcd051"
+    },
+    {
+      "recorded_revision": "065f5be2cfe22c12b2a3ca55b516a4588551e961",
+      "repository_revision": "d1762ec7826aadb143507b2328216fa8e3de680c"
+    },
+    {
+      "recorded_revision": "07cab95ad06c0d17d314aadff055447d1f43e7af",
+      "repository_revision": "167b1c4f02160a4cd26d39c53f20ee6d47a8dbe5"
+    },
+    {
+      "recorded_revision": "085f7caf3f799b4e61dc3445cb914a28d2a738f0",
+      "repository_revision": "20d355a92df5b2c5f607aae6f5126194cc4dc26f"
+    },
+    {
+      "recorded_revision": "0cfc1eaaeeba27af4fd27f7151ad86f15d5aa9ed",
+      "repository_revision": "9fcaf7dbbb63eca161748f75d6f86cd2d4cb4084"
+    },
+    {
+      "recorded_revision": "0d68eb4136167c0b8be47f5bf811bb249d55d57e",
+      "repository_revision": "3b62886f05e80ae1baa90d0e91b9fc1da8a9a900"
+    },
+    {
+      "recorded_revision": "0da82a5aefd1bcde4f7f101f8e4d21b47dbc6b47",
+      "repository_revision": "d536a6ab0b8fb112662ee5ed9019ec7d7b0297d6"
+    },
+    {
+      "recorded_revision": "13208fe2209409fb2fd172b7c58e4731091884d6",
+      "repository_revision": "ee5e0eb7db40a85759ba4d915e28bf53946da307"
+    },
+    {
+      "recorded_revision": "1747b14e0271454071c91cedde1a7e6a77d8c547",
+      "repository_revision": "09b1c06ba43901f756f423018cf3eb64e0a8a956"
+    },
+    {
+      "recorded_revision": "1cf603d3f5e74961467a08d962de39ab26a7cc3a",
+      "repository_revision": "454e0286e3e175b104b97e1e3946c5e46ff84e66"
+    },
+    {
+      "recorded_revision": "1e903c0b75a91de323f15561c83c204272aace57",
+      "repository_revision": "1b8e978dea0f29af6113265755538d39f508ce53"
+    },
+    {
+      "recorded_revision": "28fabd5e193d4179aac5df59b7878d73c6172adb",
+      "repository_revision": "40a3a24d01c9c02caea638e961579d312e036b7f"
+    },
+    {
+      "recorded_revision": "2ad1de34a82e825b30cec463af884026557b200f",
+      "repository_revision": "a6b44d80f99ccb92178c1a45848ae9ef52d74589"
+    },
+    {
+      "recorded_revision": "2b71556cbcebee49b3d3f37f28824ca5843cb8af",
+      "repository_revision": "e2c7e4c4058a751e476bd9de1866cdfcf4f83c2f"
+    },
+    {
+      "recorded_revision": "307e5592738045534fb2d023f215805d8e68f5f1",
+      "repository_revision": "668ab7d08d733f8df0e3c4001a7dde0753a91561"
+    },
+    {
+      "recorded_revision": "36535222176f18736712db92a4cf7b50c9b2f042",
+      "repository_revision": "76ed019f73e13da74f5528f81d5f0463547935fd"
+    },
+    {
+      "recorded_revision": "3d565e7d82881eb8ab799291f35052ede7d46b91",
+      "repository_revision": "12d676ee2e520a7c83698240d052eb011bee3003"
+    },
+    {
+      "recorded_revision": "41d679516d8a55151be3f5faf9ecfd65ef2f2168",
+      "repository_revision": "0b585d52521989fae3f814cebd6ad776a1a3608b"
+    },
+    {
+      "recorded_revision": "44e149c495d9d9f88212e6390e307cb0927c343e",
+      "repository_revision": "03f1d286c980641c77b22d56224c229cf6042953"
+    },
+    {
+      "recorded_revision": "4e2a70033af2eae949de36f12a6a149dabe7cca2",
+      "repository_revision": "926ae59245773b67f611944b179ed7523680cde0"
+    },
+    {
+      "recorded_revision": "50d9e8b6780f33d5518694e0d7bfed92195644c7",
+      "repository_revision": "1f72dd55bfe3c41771193e0370c7529d16458e41"
+    },
+    {
+      "recorded_revision": "54e1dfb5554dbf901835b8a7872eedd1f3af34bd",
+      "repository_revision": "14d518a1322e6959f3161cfb839cbfd2bd292fb6"
+    },
+    {
+      "recorded_revision": "5ae5845e6d4423d970467a0f4993c7983a6dfeb8",
+      "repository_revision": "bc14f9aec261da967ec5e3f89c220c59ca31ac56"
+    },
+    {
+      "recorded_revision": "5cfed97d7a56e5a6566ac306abba41b7f8a654d7",
+      "repository_revision": "be7be82d32414452cdd4f61a38d6d6593531a807"
+    },
+    {
+      "recorded_revision": "5d5670a40573d740ff782c3892d8f0a49e532d48",
+      "repository_revision": "0f66fb43dfe026d2faae8f029df34bc55ec43e31"
+    },
+    {
+      "recorded_revision": "5eec11e0e5e084870ad0f26fd3daafa348daaffa",
+      "repository_revision": "cac252718d122e381d04b496f48f739cd163da2d"
+    },
+    {
+      "recorded_revision": "5fb84de8cf499b68e1ef698a8f735d69aed2c645",
+      "repository_revision": "174c5fbdbe756dd22dedf28dce1b4b4c674918f3"
+    },
+    {
+      "recorded_revision": "5fd79c19aa268fc4389f048c0aafda81775ba488",
+      "repository_revision": "a9f53a173b9f7800a50077e017a7e70ddb6a0d99"
+    },
+    {
+      "recorded_revision": "615a47728914133e77da79dd6405c7234ffb8274",
+      "repository_revision": "cad198d8f763fc71d078af3443e275a8aaf3e7d4"
+    },
+    {
+      "recorded_revision": "643f1d4a7232e01d2a0fed457b9eff156b8ab544",
+      "repository_revision": "f3abb0645618aa7cf608e739d7fac98bb83e51b5"
+    },
+    {
+      "recorded_revision": "6ae38b386d941e1205d824458f2c8bd3a46a4984",
+      "repository_revision": "15183a6bbadc700f69aad1eb860d28af88baa19a"
+    },
+    {
+      "recorded_revision": "738a3652bd99c70dae9bea1725bcfa9f1b63c9ab",
+      "repository_revision": "8b9f3769a4e689ee30318ebe9e90bb3354ec48a8"
+    },
+    {
+      "recorded_revision": "7e82da6622f775f9aea96e28d6cf6a41ad051f72",
+      "repository_revision": "f79344d001ec35c286adc65b1591f8390fa962f8"
+    },
+    {
+      "recorded_revision": "8a2c4fb1ceffd5bfa894133c460b205609843713",
+      "repository_revision": "24991fc307d1db17053bee0b4b1e79140c639ef6"
+    },
+    {
+      "recorded_revision": "95e283cd0aaf429a5ba8052f0b7fe25444f6762d",
+      "repository_revision": "8648db55ca43456b967c6903b4c78e838548abbe"
+    },
+    {
+      "recorded_revision": "96d627a2d258393f36278b44cd15070ca62b13a5",
+      "repository_revision": "69a97aa69e5fd9323c02fcadb64d1f1af8228994"
+    },
+    {
+      "recorded_revision": "9865aa7bdeb77afe5c4cc479f85794b2fdedaea2",
+      "repository_revision": "e8d4fe375df70978e768a0017783d3f40d93e893"
+    },
+    {
+      "recorded_revision": "a21c87336f3fe06c214fce920b19d191ca9440f9",
+      "repository_revision": "e163774969089c41c01290d5da6d7fa19ed38031"
+    },
+    {
+      "recorded_revision": "a260bbe119a28291d07d1cb230a723edf26b9ff8",
+      "repository_revision": "f463c2717af33a4c787e178eb2f435a5f6ca38f4"
+    },
+    {
+      "recorded_revision": "aa2b4847c311b8444532cfa02e4e43c7e66e3579",
+      "repository_revision": "dba371e83fe92801a5a2ece1627a89e502b9719c"
+    },
+    {
+      "recorded_revision": "b2ded533411b483c44b6c259529071e51113a8ce",
+      "repository_revision": "f8d19de9c3400781504b58d163262a56a6241d6a"
+    },
+    {
+      "recorded_revision": "b4fb49d3df1da86b0655348f40dc6ac3415a0ed4",
+      "repository_revision": "35bca5fdad7d93ed3debaa52ed69edc26f914ed0"
+    },
+    {
+      "recorded_revision": "b94c7aebaaffd7d701acd2dd69f1cb9f453773c3",
+      "repository_revision": "2b708fbcaa1c8d10cd6bfe9acbc718c879934b3f"
+    },
+    {
+      "recorded_revision": "bc342b0160c38e00b3c164c0b4a792cafdf955d0",
+      "repository_revision": "457c9e035bc0aa4355511a23d80eda02a9ff2d65"
+    },
+    {
+      "recorded_revision": "bd7ed9a7d2083943727689b694e359434ed77fd4",
+      "repository_revision": "1d40484b8a2a33a17b2bdfb09b7a1a5b87932774"
+    },
+    {
+      "recorded_revision": "bd86be53f67bea42a8f288cee7d69f5feb713be7",
+      "repository_revision": "bb104786ce21cf604754272e29ee68d6dbaa76b4"
+    },
+    {
+      "recorded_revision": "bde02ac7a003ea9b72fbccd3870ea9b028fa23a6",
+      "repository_revision": "a430cf7018f6ec8971a3f75f2296f5a21458829f"
+    },
+    {
+      "recorded_revision": "c788a0bd2749525cb66406e5722baaa1b9e5642a",
+      "repository_revision": "f3862b52a8d8bb138646c37dc90311da0717968a"
+    },
+    {
+      "recorded_revision": "c8d89fe265c6a453c017e5da48be577617ff399e",
+      "repository_revision": "672a41fd961a2578afc3122e934a0d4a1c84db38"
+    },
+    {
+      "recorded_revision": "ce25ee11dc8b857b47dabf719d5e992f51c751ec",
+      "repository_revision": "605dacd2ec90f5bddb64a8ff45328930c35eb629"
+    },
+    {
+      "recorded_revision": "d2ddb37591e250c2de08bd5f4ddfb49dd2e40c8e",
+      "repository_revision": "f422b79bcb1d08024c4d593c69b26779b3c6704c"
+    },
+    {
+      "recorded_revision": "d48a75f766338135c59e716900007b88112fcddf",
+      "repository_revision": "601e320c61550228cd28b957f886b6aee8d7cc27"
+    },
+    {
+      "recorded_revision": "d8cc7f1914164e3d8a17eaec248544b253b38bc5",
+      "repository_revision": "d4b581e6165d519b01fabd2e77a88a16b3b50723"
+    },
+    {
+      "recorded_revision": "d9a846636187831101b1061d36518fce3d85e389",
+      "repository_revision": "e500da314808e25eec65f6731b883ef1cb5c8561"
+    },
+    {
+      "recorded_revision": "dae4134963525c03f2dd8a78112bc49e18c03154",
+      "repository_revision": "c00be65e07fb9854868fa4e6ff7342b0136c675b"
+    },
+    {
+      "recorded_revision": "de7b9199227885a3d02b07667261226c01704178",
+      "repository_revision": "6c1b9b069abba93ebeabafb0fd40ec9318452839"
+    },
+    {
+      "recorded_revision": "df10d4caa289a7f1ebf0b0939c970a1b83bf2ed2",
+      "repository_revision": "4be1b7fe739c46759d179e2619cf74c64bbd0b5e"
+    },
+    {
+      "recorded_revision": "df3b95a72913215a05a2e7e4a41684a5e8bce10f",
+      "repository_revision": "1154b4e2e11824526ae312dc652a8295b1ba81e6"
+    },
+    {
+      "recorded_revision": "e67210a361045a844721935ae249ca1413d21367",
+      "repository_revision": "98eb99c9eb77699f1929b9facf3499a1182b7f49"
+    },
+    {
+      "recorded_revision": "ed6b2cf2d0cc83c9f13bc96e505a0fc251419362",
+      "repository_revision": "d094bbe7c0c42b2bfb819ed041e8ea1ba1534a7f"
+    },
+    {
+      "recorded_revision": "f0eaeb0b79aa3afb822913bb471aec9b9d634817",
+      "repository_revision": "25b59ba58f7590ea5e677695d47f41c6b57c3f0e"
+    },
+    {
+      "recorded_revision": "fec1870a53a5fbad96e2965e68eacc1b1fc36053",
+      "repository_revision": "92df3768fd149e767313f5fce9c1f6f772aeda0e"
+    },
+    {
+      "recorded_revision": "ff31b811526e2e137d539885fe7c76d3f7a3fa97",
+      "repository_revision": "90a67ea43278c8e3b96b73b17a587ba1b7bbab04"
+    }
+  ]
+}

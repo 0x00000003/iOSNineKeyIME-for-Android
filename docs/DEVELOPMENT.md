@@ -51,6 +51,6 @@ python3 scripts/run_system_host.py --target pixel --variant release --scope refe
 
 提交前审查差异及暂存路径，运行受影响的测试。不要清除未提交源码、学习库、密钥或测试记录来排错。新增或修改的第三方文件更新 `third_party/trime-modifications.json`，新依赖同步许可证、锁和验证记录。
 
-测试记录中的源码修订与文档提交可以不同；以源码哈希、APK SHA256、测试包和执行范围关联证据。历史修订索引见 `docs/testing/source-revisions.json`。
+测试记录中的源码修订与文档提交可以不同；以源码哈希、APK SHA256、测试包和执行范围关联证据。历史修订索引见[source-revisions.json](testing/source-revisions.json)。
 
 主机参考测量使用 `requirements-visual.lock` 中固定的 Pillow；该依赖不进入 APK。测量输入保持只读，输出几何与色块差异不自动产生视觉验收结论。
