@@ -68,3 +68,5 @@ prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/
 主应用debug组件测试与系统IME同UID时可能争用native租约，组件运行前仅选已启用的本项目优化版，随后系统runner可切回debug；不改第三方输入法。`-PlocalReleaseProbe=true`把testBuildType切到release，所以此配置没有assembleDebugAndroidTest任务；debug及默认unsigned构建和显式本地签名release需分开命令运行，无需复制工具链或新隔离目录。本轮误把两类任务合并的配置失败已纠正，不算Android测试失败或成功。
 
 主机参考测量使用Pillow11.3.0，非APK/运行时依赖；`requirements-visual.lock`从该固定版本的官方PyPI元数据记录wheel SHA，禁止sdist动态构建。当前复用本机已有同版本库，未声称已核验其原始安装wheel。独立重建测量环境时可只在项目内执行 `python3 -m pip install --require-hashes --no-deps --target .cache/python-visual -r requirements-visual.lock`，再以 `PYTHONPATH="$PWD/.cache/python-visual" python3 -m unittest discover -s tests/tooling -v` 验证；不全局安装或复制Android工具链。测量输出不是Android/视觉验收PASS，输入图片始终私有只读。
+
+主机原生探针复用.cache/native-stage和.cache/native-build。上游Boost.cmake按进程cwd查找boost-1.89.0.tar.xz；configure必须以.cache/native-build为工作目录，执行 ../android-sdk/cmake/3.31.6/bin/cmake -S ../native-stage -B .，再cmake --build . --target明确探针，不能从项目根直接configure。本轮错误cwd曾新下载102078704字节重复包，核对与原native-build archive同固定SHA后只删除这个新副本，修正cwd后重配0.4秒且不再下载；来源收据pinyin-host-cache-cwd-correction.json。没有第二套SDK/NDK/Gradle或host构建树。

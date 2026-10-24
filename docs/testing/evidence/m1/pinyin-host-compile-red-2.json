@@ -1,0 +1,7 @@
+{
+  "scope": "host target compile only",
+  "status": "FAIL",
+  "source_sha256": "0233ac0c3cdd3b2656c5618921ba3d84dfceb5dee7351112a0c101a7444e5622",
+  "error": "Candidate forward declaration requires rime/candidate.h before c->text()",
+  "warnings_as_errors_unchanged": true
+}

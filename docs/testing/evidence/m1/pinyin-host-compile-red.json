@@ -1,0 +1,10 @@
+{
+  "scope": "new host compatibility target compile only; no Android/pinyin result",
+  "status": "FAIL",
+  "source_sha256": "4eca164bda8ccb4a02496ed382d8f8e07db946e3285ad00a2af0a161b07ac0f2",
+  "errors": [
+    "composition() returns Composition reference; indirection requires pointer operand at line59",
+    "Composition reference needs .GetConfirmedPosition() at line100"
+  ],
+  "warnings_as_errors_unchanged": true
+}

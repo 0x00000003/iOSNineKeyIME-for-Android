@@ -1,0 +1,20 @@
+{
+  "api_available": true,
+  "schema_selected": true,
+  "original_fixture": true,
+  "phonetic_comments_usable": true,
+  "nonempty_comments": 100,
+  "mixed_rewrite_no_commit": true,
+  "explicit_syllables_single_commit": true,
+  "alternative_excludes_original": true,
+  "partial_tail_range_matches": true,
+  "selected_segments_retained": true,
+  "partial_commit_exact_once": true,
+  "pass": true,
+  "scope": "Mac host-only real API compatibility; NOT Android/IME acceptance",
+  "exit_code": 0,
+  "source_sha256": "f99bd75200dca78812ca43cf6be406c516a5018babca72e8c334782b755194f5",
+  "binary_sha256": "c0c773655a9b695d957bd5c638283c3587733a0d91c637b38f319e930027a747",
+  "protocol_commit": "5ae5845",
+  "librime_source_version": "1.17.0 pinned host source; runtime version not emitted"
+}

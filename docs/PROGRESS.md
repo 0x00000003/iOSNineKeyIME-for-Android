@@ -155,3 +155,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 2026-10-24 同c37优化APK/test2fcb双设备engine/resources/quality/learning/context十条记录全部PASS，Top5 99/100词与19/20句，十词学习重启清合成库10/10、上下文9/10改善/on5110/off0；不是系统全部质量或隐私门禁。test2fcb仍含旧R04状态文案的元数据缺陷已单列，不改写原结果。原5c46 a11y lifecycle基线FAIL，单独关闭自有窗口动画的9ebeed候选也FAIL，已恢复该调用；不据此归因系统。可见inset策略对照已先冻结54e1dfb，尚未签收。
 
 2026-10-24 对照收尾：9ebeed关闭自有窗口动画、efc975改VISIBLE可触区域均原lifecycle FAIL，源码全部撤销并校验回检查点service SHA，Pixel恢复5c46。保留两个候选和原基线反例，不再将这些猜测带入交付。release-test元数据旧R04文案改为明确NOT_RUN，新f7b2测试包配同c37两设备engine PASS；旧2fcb十条引擎记录不改写。剩余工作及APK/实拍已记录，后续优先补功能缺口及日常兼容/压力验收。
+
+2026-10-24 选拼音兼容性：预冻结5ae5845，复用现有host librime/固定数据，新pinyin_probe全部原断言PASS：真实候选注释可用、数字→明确拼音不自动提交、替代前缀排除原目标、保留部分已选段、最终只提交一次。两个编译红记录保留，Android JNI/状态/UI尚未接入；不能将主机证明当功能完成。主机CMake错误cwd产生的102MB重复下载已核SHA回收，并固定复用原构建目录，实际新增探针约5.5MiB/profile约700KiB。

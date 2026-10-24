@@ -1,0 +1,9 @@
+{
+  "scope": "host probe cache correction only; not Android or feature test",
+  "cause": "upstream Boost helper checks archive relative to process cwd; configuring from project root redownloaded an existing pinned archive",
+  "new_duplicate_bytes_removed": 102078704,
+  "sha256": "67acec02d0d118b5de9eb441f5fb707b3a1cdd884be00ca24b9a73c995511f74",
+  "preserved_original": ".cache/native-build/boost-1.89.0.tar.xz",
+  "correction": "configure with cwd=.cache/native-build; no second SDK/NDK/Gradle or host build tree",
+  "native_libraries_not_rebuilt_yet": true
+}
