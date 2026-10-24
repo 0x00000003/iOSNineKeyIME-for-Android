@@ -111,3 +111,5 @@ M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，
 R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API字符级删除委托在自有普通/真实密码遮罩EditText测36个案例；几何仅test oracle提供，不接生产私密路径、不读IC正文、不替换原R04门槛。先看宿主实际行为，再评估是否有可行路径。
 
 宿主删除委托第一阶段实际两设备36/36，通过真实密码遮罩、组合音标/多个mark/ZWJ/RTL等合成案例，IC正文getter0；只用test Layout几何，不是生产修复。原editor同test仍R04 4/5 FAIL。下一步单独冻结结构元数据（非正文）坐标调查，明确不是零结构信息请求或生产私密策略验收。
+
+第二阶段冻结HOST_BOUNDS_RESEARCH_PROTOCOL：仅自有合成字段用TextBoundsInfo结构坐标（一次请求并Parcel往返）代替字符Layout oracle，正文getter仍拒绝；明确结构查询非零，生产私密策略/R04不改。先测18案例，再判断最小生产请求区域与跨字段异步是否可做。
