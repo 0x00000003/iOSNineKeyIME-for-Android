@@ -1,0 +1,62 @@
+{
+  "scope": "optimized non-debuggable local debug-certificate release WIP; NOT formal M6 signing or device validation",
+  "source_base": "b94c7ae UI/main source + reviewed release-unit-only lock scope additions",
+  "apk_sha256": "a871fae34a4764f384f7efb232f000171b48dee66adaebdf73cf82113eecce80",
+  "mapping_sha256": "a61ca28eb889de6662f6eabd4cd49d7406c4b42ab3e38271b76f56329290c2db",
+  "release_unit_tests": {
+    "tests": 50,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "reports": [
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-dev.local.iosninekeyime.engine.NativeEngineLeaseTest.xml",
+      "sha256": "917ce29bef10c210685b0f5fe3bfc8a735d5a0f818871dcdfefe406e3be1de0b"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.OrphanCleanerTest.xml",
+      "sha256": "a51c491d231a222e6e8025bcf328a451ef764abaf0523383c12279a83169ac65"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.AtomicLocalFileCopyTest.xml",
+      "sha256": "7a3cb812d17ea3eacfb16789d203ba1cbe46e68a735ef1ca5781192cead65af9"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-dev.local.iosninekeyime.probe.ProbeFailureCodeTest.xml",
+      "sha256": "992ede79e8e746272d20f62f56cedf4b9bda2fe1405c3f2f5a874150bc7e0453"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-dev.local.iosninekeyime.privacy.EditorPolicyTest.xml",
+      "sha256": "db714451a687fc2dce885247dcf4c329cc5af09da6311346139a7b20e4da8779"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.theme.GeneralStyleTest.xml",
+      "sha256": "d4408bc352b12ee8273eb96a1a78512a837186a45983b837ff5b957ff3efcd93"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.util.WeakHashSetTest.xml",
+      "sha256": "b8c12a91a2ea21f8edd359ae9fbd8f2bc6ec61c1137561b654b6486b5a08d24b"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.SafTreeWalkerTest.xml",
+      "sha256": "2b41d65722482219c4330cccd8308cd7ec3b84c4358296c251df3c94bdbf9fc8"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.SafDisplayPathTest.xml",
+      "sha256": "0f665402f69cbac6b2627902f4ca73b090f1ca5a1b5d30a4f77553867d478a7b"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.BoundedCopyPoolTest.xml",
+      "sha256": "d5108cfbd71325b8e5cf9448447ab21d15b62851e04f43ba3fc3f92ad3798097"
+    },
+    {
+      "path": "android/trime/app/build/test-results/testReleaseUnitTest/TEST-com.osfans.trime.data.sync.SyncRelativePathTest.xml",
+      "sha256": "50553c8ea98f7f7c2db900bfe275c8858f282c441cf79040f24047b9df8231f5"
+    }
+  ],
+  "release_build": "PASS",
+  "release_lint": "PASS",
+  "testhost_build_lint": "PASS",
+  "frozen_apk": "artifacts/m5/calibration2-optimized-source-b94/app-release-local-test.apk"
+}

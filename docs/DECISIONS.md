@@ -88,3 +88,9 @@ ADR042追加：固定高度、背景不透明、caption时机、clearCache等A/B
 尝试透明全尺寸IME窗口、底部ReferenceInputContainer，onComputeInsets只报告实际键盘上沿与触控region；上部内容保持可见且应由宿主接收触控，未开启extract fullscreen。无障碍坐标仍FAIL，该策略未认定修复；独立像素对照6/9与宿主上部物理按钮通过，仅是有限范围证据。原lifecycle/reference-ui门禁不改，15秒lifecycle-diagnostic仅诊断，不签收性能。像素scope仅依屏幕/OS inset/参考色块定位，无内部事件或IC/候选桥，不替代TalkBack。
 
 绘图与触控框分离：参考65/60来源px键面在Pixel下可能小于48dp，保留触控48dp，visualHeight单独控制填充/文字/原创图形。不得删测试或缩小触控范围换视觉PASS。字体只调整系统字形大小/字距/轻微缩放，不打包Apple字体；其他显示设置仍需实测。
+
+## ADR044 — 优化构建的严格 release 单测锁补全
+
+首次 release lint 暴露 releaseUnitTestCompileClasspath 无锁，实际 release 单测又发现 KSP processor 无锁。先检查可解析配置，再以 graph-only 方式解析八个明确的 releaseUnitTest 配置并写锁；避免 AGP 测试自身项目制品的 resolve() 歧义。完整差异审核没有新增/移除 module-version，也未移除配置项，仅已有257项扩展测试配置。STRICT 和制品验证保持启用；不跳过测试或降低锁门槛。新构建的50项 release JVM、release lint/构建和实际优化 APK 静态检查通过。
+
+本地优化测试制品 a871fae3 使用本项目调试证书、非 debuggable；独立 Pixel 五态实际触控9/9通过。该制品是 b94 UI 源码检查点，**不含随后同字段 caret 修复**，不继承其测试，不是 M6 正式签名。失败、差异审核、三SHA真机结果分别见 evidence/m5/reference-ui-release-lock-red.json、reference-ui-release-unit-lock-final-review.json、reference-ui-optimized-build.json 和 evidence/m2/reference-ui-optimized-pixel-targets.json。

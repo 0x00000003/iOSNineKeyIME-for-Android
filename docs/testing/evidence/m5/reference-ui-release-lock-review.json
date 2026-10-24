@@ -1,0 +1,16 @@
+{
+  "scope": "intentional release unit-test graph lock expansion; not an APK/device pass",
+  "source_base": "b94c7ae",
+  "before_sha256": "9e21592cd16f0785cd42401129850d237652a338eb6475ba78042a088490e689",
+  "after_sha256": "69f905b2043657076308d470c57a2972aa4038eb109363aff588f4d3612cb40a",
+  "new_module_versions": 0,
+  "removed_module_versions": 0,
+  "removed_configuration_entries": 0,
+  "added_configurations": [
+    "releaseUnitTestCompileClasspath",
+    "releaseUnitTestRuntimeClasspath"
+  ],
+  "existing_module_versions_extended": 214,
+  "strict_dependency_verification_unchanged": true,
+  "temporary_resolution_note": "raw Configuration.resolve failed on AGP same-project artifact variant ambiguity; graph-only resolution then succeeded; actual lint/test artifact resolution remains mandatory"
+}

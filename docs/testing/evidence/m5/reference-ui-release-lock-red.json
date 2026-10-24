@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "scope": "optimized local-test release build configuration; NOT Android execution",
+  "source_commit": "b94c7ae",
+  "command": "./scripts/gradle.sh -PlocalReleaseProbe=true :app:assembleRelease :app:lintRelease",
+  "failed_task": ":app:generateReleaseUnitTestLintModel",
+  "reason": "strict locking: releaseUnitTestCompileClasspath is locked but has no lock state",
+  "before_app_lock_sha256": "9e21592cd16f0785cd42401129850d237652a338eb6475ba78042a088490e689",
+  "dependency_review": "release has no releaseImplementation addition; unit tests inherit the same fixed JUnit/Kotest testImplementation as debug; intend to resolve and compare exactly two missing unit configurations, retaining strict verification"
+}

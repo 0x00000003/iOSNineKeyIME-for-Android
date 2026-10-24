@@ -70,3 +70,5 @@ WIP检查点复核：3ec3702c恢复初始窗口/caption配置仍lifecycle入口F
 新增标准窗口状态可访问性事件只填静态模式名，防止遍历候选正文；官方自定义View事件说明见 https://developer.android.com/guide/topics/ui/accessibility/views/custom-views 。该通知未解决实际坐标问题，不当修复报告。当前透明整窗的上部宿主物理按钮通过，但多宿主/旋转/性能等仍未完整验收。
 
 测量仍只MEASUREMENTS_ONLY：R01/R02/R03/R04/R05总高差+0.375/+0.375/+0.525/+0.425/+0.306来源px；四种主键最大边差0.578/0.578/1.197/1.297px。R05无中性背景主键，不伪造主键矩形分数。常用列表固定且系统Emoji外形/顺序有明显平台差异；原生导航条和其余未知状态保留，不能宣称五张图完全一致。结果、实际三包SHA和图hash见calibration2相关JSON，个人/合成图片均ignored不入Git。
+
+2026-10-24 优化制品增量：b94 UI/main 源码加已审查的 release 单测锁范围，优化且非 debuggable 本地制品 a871fae3 实际 Pixel reference-pixels 9/9 PASS，宿主上部按钮和五态/按下6图通过。release 50 JVM/lint/build 与实际 APK 静态通过，R8 mapping 已冻结并单独绑定 SHA。详见 reference-ui-optimized-build.json 与 reference-ui-optimized-pixel-targets.json；并非 M6 正式签名，未覆盖新同字段 caret 修复/完整系统隐私/性能。原无障碍 lifecycle 在组件回归后仍FAIL，公开 KEYCODE_UNKNOWN 中性输入事务屏障也FAIL，不能用此诊断替换门禁。

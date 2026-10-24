@@ -1,0 +1,29 @@
+{
+  "scope": "release unit-test classpath + processors + lint configuration lock review, not APK/device execution",
+  "source_base": "b94c7ae",
+  "before_sha256": "9e21592cd16f0785cd42401129850d237652a338eb6475ba78042a088490e689",
+  "after_sha256": "fe6c9182d5655a665cfbb5deab780130821c6838355c96150195c5f720e83e8e",
+  "new_module_versions": 0,
+  "removed_module_versions": 0,
+  "removed_configuration_entries": 0,
+  "added_nonempty_configurations": [
+    "kotlinCompilerPluginClasspathReleaseUnitTest",
+    "kspReleaseUnitTestKotlinProcessorClasspath",
+    "releaseUnitTestCompileClasspath",
+    "releaseUnitTestLintChecksClasspath",
+    "releaseUnitTestRuntimeClasspath"
+  ],
+  "allowed_targeted_configurations": [
+    "_agp_internal_releaseUnitTest_kspClasspath",
+    "kotlinCompilerPluginClasspathReleaseUnitTest",
+    "kspReleaseUnitTestKotlinProcessorClasspath",
+    "releaseUnitTestAnnotationProcessorClasspath",
+    "releaseUnitTestCompileClasspath",
+    "releaseUnitTestImplementationDependenciesMetadata",
+    "releaseUnitTestLintChecksClasspath",
+    "releaseUnitTestRuntimeClasspath"
+  ],
+  "existing_module_versions_extended": 257,
+  "strict_verification_unchanged": true,
+  "note": "second attempt exposed missing KSP release-unit processor lock; expanded to the eight inspected resolvable release-unit configurations, without adding versions or ignoring tests"
+}
