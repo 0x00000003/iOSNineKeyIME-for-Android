@@ -89,3 +89,11 @@ M5探索短测保留：v2总P95约162ms，分段processKey约161ms，候选读�
 宿主异常修复专用模拟器绿测：同最终red测试d35ef8d9，主APK b0343481，11/11通过、敏感上下文0；49 app/61 state及debug lint PASS。批次begin/查询后重核字段，捕获连接异常，endBatch不撤销accepted commit。原R04不改，11组组件继续加入完整scope必测；Pixel仍运行冻结性能长测，本轮未在Pixel安装新宿主版，不冒称真机回归已通过。
 
 宿主修复完整模拟器回归完成：b0343481的native/11故障组件/controller/settings/resources/R08/R09/R10 PASS，full继续原R04 FAIL。实际font由最终APK提取hash核对固定MaterialDesign-Webfont许可，debug/release均匹配，未知字体新增静态拒绝；工具35项PASS。Pixel长期组件尚在冻结旧版94b9d40f，未冒称新宿主修复已真机通过。
+
+M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，所有路径/字节/证据保留，释放约9.3GiB，余量约24GiB；无外部目录清理。固定官方SDK/JDK归档重新下载并核原publisher SHA1或SHA256，追加本地SHA256锁，独立SDK各文件/内部symlink核归档并新建Gradle cache进行2ad1de3隔离构建。共享仍仅公开词库/table/model缓存和同固定条款的既有SDK许可接受标记；未用签名key或adb。此时构建尚在进行，不提前宣称通过。
+
+字体许可hash核对后进一步检查实际AAR枚举，存在品牌命名常量（不是原始Apple作品的证明）；自有前端本就只用系统TextView，因此准备删除未用字体依赖，并收紧实际APK审计为零打包字体。保留历史字体许可证据，待真实构建和新依赖锁复核后再写已移除；长测仍绑定原94b9d40f历史版本，不能作为未来字体移除版本的全门禁成绩。
+
+固定94b9d40f/ee19b44e的model on/off各30分钟JNI组件均实际结束：on14340键2264次exact-once，off14353键2266次；合计P95/P99分别12.096/15.613ms、11.128/14.681ms，31×2内存样本、thermal全0、own UID流量0、profile不变；未替代UI/完整P01—P04或后续代码版本成绩。新SDK/JDK/空Gradle-cache历史2ad源码重建经历真实TLS失败后原规则重试成功，整包bbd28866再现。当前在补齐所有用到的variants/包含build锁，保持verification，未白名单被拒绝的UTP。
+
+候选分页原100上限正在改真正原生20项窗口+lookahead，全局ID/offset+epoch约束，不消费commit，当前71 state/49 app及lint/构建PASS但Android跨100测试仍待测；M2继续WIP。字体依赖移除与严格锁模式一并复核，完成前不归到旧哈希。

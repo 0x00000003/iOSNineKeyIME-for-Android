@@ -1,0 +1,335 @@
+{
+  "scope": "optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle",
+  "candidate_limit": 100,
+  "protocol_revision": 3,
+  "session_reset_per_commit": false,
+  "component_candidate_budget_p95_80_p99_150_met": true,
+  "full_product_performance_acceptance": "NOT_RUN",
+  "model_enabled": true,
+  "grammar_queries": 1793472,
+  "requested_duration_seconds": 1800,
+  "elapsed_ms": 1800371,
+  "keys": 14340,
+  "paced_keys_per_second": 8,
+  "warmup_keys": 120,
+  "warmup_commits": 19,
+  "measured_exact_once_commits": 2264,
+  "jni_key_context_candidates_p50_ms": 8.494059,
+  "jni_key_context_candidates_p95_ms": 12.095988,
+  "jni_key_context_candidates_p99_ms": 15.612997,
+  "phase_p95_ms": {
+    "process_key": 6.815552,
+    "get_context": 0.639648,
+    "get_candidates": 5.61499
+  },
+  "samples": [
+    {
+      "elapsed_ms": 42,
+      "keys": 0,
+      "total_pss_kib": 57646,
+      "total_private_dirty_kib": 19792,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 60159,
+      "keys": 479,
+      "total_pss_kib": 66149,
+      "total_private_dirty_kib": 17916,
+      "thermal_status": 0,
+      "gc_count": 1,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 120236,
+      "keys": 958,
+      "total_pss_kib": 66063,
+      "total_private_dirty_kib": 17812,
+      "thermal_status": 0,
+      "gc_count": 2,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 180331,
+      "keys": 1437,
+      "total_pss_kib": 65711,
+      "total_private_dirty_kib": 17460,
+      "thermal_status": 0,
+      "gc_count": 3,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 240388,
+      "keys": 1916,
+      "total_pss_kib": 65789,
+      "total_private_dirty_kib": 17516,
+      "thermal_status": 0,
+      "gc_count": 4,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 300397,
+      "keys": 2382,
+      "total_pss_kib": 64673,
+      "total_private_dirty_kib": 16108,
+      "thermal_status": 0,
+      "gc_count": 6,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 360483,
+      "keys": 2861,
+      "total_pss_kib": 65510,
+      "total_private_dirty_kib": 16936,
+      "thermal_status": 0,
+      "gc_count": 7,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 420538,
+      "keys": 3340,
+      "total_pss_kib": 65338,
+      "total_private_dirty_kib": 16772,
+      "thermal_status": 0,
+      "gc_count": 8,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 480614,
+      "keys": 3819,
+      "total_pss_kib": 65252,
+      "total_private_dirty_kib": 16672,
+      "thermal_status": 0,
+      "gc_count": 9,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 540695,
+      "keys": 4298,
+      "total_pss_kib": 65484,
+      "total_private_dirty_kib": 16904,
+      "thermal_status": 0,
+      "gc_count": 10,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 600804,
+      "keys": 4777,
+      "total_pss_kib": 65948,
+      "total_private_dirty_kib": 17368,
+      "thermal_status": 0,
+      "gc_count": 11,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 660865,
+      "keys": 5256,
+      "total_pss_kib": 66248,
+      "total_private_dirty_kib": 17668,
+      "thermal_status": 0,
+      "gc_count": 12,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 720936,
+      "keys": 5735,
+      "total_pss_kib": 66268,
+      "total_private_dirty_kib": 17688,
+      "thermal_status": 0,
+      "gc_count": 13,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 781010,
+      "keys": 6214,
+      "total_pss_kib": 66510,
+      "total_private_dirty_kib": 17960,
+      "thermal_status": 0,
+      "gc_count": 14,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 841058,
+      "keys": 6693,
+      "total_pss_kib": 67434,
+      "total_private_dirty_kib": 18884,
+      "thermal_status": 0,
+      "gc_count": 15,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 901051,
+      "keys": 7171,
+      "total_pss_kib": 67450,
+      "total_private_dirty_kib": 18900,
+      "thermal_status": 0,
+      "gc_count": 16,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 961153,
+      "keys": 7650,
+      "total_pss_kib": 67046,
+      "total_private_dirty_kib": 18496,
+      "thermal_status": 0,
+      "gc_count": 17,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1021191,
+      "keys": 8129,
+      "total_pss_kib": 67234,
+      "total_private_dirty_kib": 18684,
+      "thermal_status": 0,
+      "gc_count": 18,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1081300,
+      "keys": 8608,
+      "total_pss_kib": 67305,
+      "total_private_dirty_kib": 18748,
+      "thermal_status": 0,
+      "gc_count": 19,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1141357,
+      "keys": 9087,
+      "total_pss_kib": 63901,
+      "total_private_dirty_kib": 15344,
+      "thermal_status": 0,
+      "gc_count": 21,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1201422,
+      "keys": 9566,
+      "total_pss_kib": 64973,
+      "total_private_dirty_kib": 16416,
+      "thermal_status": 0,
+      "gc_count": 22,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1261479,
+      "keys": 10045,
+      "total_pss_kib": 65773,
+      "total_private_dirty_kib": 17216,
+      "thermal_status": 0,
+      "gc_count": 23,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1321529,
+      "keys": 10524,
+      "total_pss_kib": 66357,
+      "total_private_dirty_kib": 17800,
+      "thermal_status": 0,
+      "gc_count": 24,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1381631,
+      "keys": 11003,
+      "total_pss_kib": 66253,
+      "total_private_dirty_kib": 17696,
+      "thermal_status": 0,
+      "gc_count": 25,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1441719,
+      "keys": 11482,
+      "total_pss_kib": 66197,
+      "total_private_dirty_kib": 17640,
+      "thermal_status": 0,
+      "gc_count": 26,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1501779,
+      "keys": 11961,
+      "total_pss_kib": 66237,
+      "total_private_dirty_kib": 17680,
+      "thermal_status": 0,
+      "gc_count": 27,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1561839,
+      "keys": 12440,
+      "total_pss_kib": 66785,
+      "total_private_dirty_kib": 18228,
+      "thermal_status": 0,
+      "gc_count": 28,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1621974,
+      "keys": 12919,
+      "total_pss_kib": 67141,
+      "total_private_dirty_kib": 18584,
+      "thermal_status": 0,
+      "gc_count": 29,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1682041,
+      "keys": 13398,
+      "total_pss_kib": 67737,
+      "total_private_dirty_kib": 19180,
+      "thermal_status": 0,
+      "gc_count": 30,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1742130,
+      "keys": 13877,
+      "total_pss_kib": 64241,
+      "total_private_dirty_kib": 15684,
+      "thermal_status": 0,
+      "gc_count": 32,
+      "model_mapped_address_bytes_not_rss": 40927232
+    },
+    {
+      "elapsed_ms": 1800215,
+      "keys": 14340,
+      "total_pss_kib": 64698,
+      "total_private_dirty_kib": 16160,
+      "thermal_status": 0,
+      "gc_count": 33,
+      "model_mapped_address_bytes_not_rss": 40927232
+    }
+  ],
+  "profile_unchanged_before_native_close": true,
+  "shared_bytes_and_timestamps_unchanged": true,
+  "own_uid_traffic_supported": true,
+  "own_uid_tx_bytes_delta": 0,
+  "own_uid_rx_bytes_delta": 0,
+  "pass": true,
+  "probe_run_id": "1514b8f8248149d49c134ddb8d07348e",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "tested_test_apk_sha256": "ee19b44e393fd2f8507a53c90301b1355ed5b76e2a05e731e35e6a3da93965f3",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "perf-model-on-long",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

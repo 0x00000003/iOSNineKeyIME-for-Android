@@ -1,0 +1,335 @@
+{
+  "scope": "optimized JNI/process component ONLY; instrumentation overhead included; NOT P01 touch/frame, P02 keyboard startup, P03 full IME/model-on-off long-run acceptance or P04 host/rotation oracle",
+  "candidate_limit": 100,
+  "protocol_revision": 3,
+  "session_reset_per_commit": false,
+  "component_candidate_budget_p95_80_p99_150_met": true,
+  "full_product_performance_acceptance": "NOT_RUN",
+  "model_enabled": false,
+  "grammar_queries": 0,
+  "requested_duration_seconds": 1800,
+  "elapsed_ms": 1800296,
+  "keys": 14353,
+  "paced_keys_per_second": 8,
+  "warmup_keys": 120,
+  "warmup_commits": 19,
+  "measured_exact_once_commits": 2266,
+  "jni_key_context_candidates_p50_ms": 7.672771,
+  "jni_key_context_candidates_p95_ms": 11.127726,
+  "jni_key_context_candidates_p99_ms": 14.681438,
+  "phase_p95_ms": {
+    "process_key": 6.442464,
+    "get_context": 0.628743,
+    "get_candidates": 4.843018
+  },
+  "samples": [
+    {
+      "elapsed_ms": 35,
+      "keys": 0,
+      "total_pss_kib": 37557,
+      "total_private_dirty_kib": 19748,
+      "thermal_status": 0,
+      "gc_count": 0,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 60153,
+      "keys": 479,
+      "total_pss_kib": 36486,
+      "total_private_dirty_kib": 17848,
+      "thermal_status": 0,
+      "gc_count": 1,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 120230,
+      "keys": 958,
+      "total_pss_kib": 37696,
+      "total_private_dirty_kib": 19040,
+      "thermal_status": 0,
+      "gc_count": 2,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 180288,
+      "keys": 1437,
+      "total_pss_kib": 37476,
+      "total_private_dirty_kib": 18820,
+      "thermal_status": 0,
+      "gc_count": 3,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 240344,
+      "keys": 1916,
+      "total_pss_kib": 37508,
+      "total_private_dirty_kib": 18768,
+      "thermal_status": 0,
+      "gc_count": 4,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 300433,
+      "keys": 2395,
+      "total_pss_kib": 37308,
+      "total_private_dirty_kib": 18568,
+      "thermal_status": 0,
+      "gc_count": 5,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 360504,
+      "keys": 2874,
+      "total_pss_kib": 37508,
+      "total_private_dirty_kib": 18768,
+      "thermal_status": 0,
+      "gc_count": 6,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 420585,
+      "keys": 3353,
+      "total_pss_kib": 37088,
+      "total_private_dirty_kib": 18348,
+      "thermal_status": 0,
+      "gc_count": 7,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 480658,
+      "keys": 3832,
+      "total_pss_kib": 36976,
+      "total_private_dirty_kib": 18236,
+      "thermal_status": 0,
+      "gc_count": 8,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 540723,
+      "keys": 4311,
+      "total_pss_kib": 36955,
+      "total_private_dirty_kib": 18200,
+      "thermal_status": 0,
+      "gc_count": 9,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 600792,
+      "keys": 4790,
+      "total_pss_kib": 36843,
+      "total_private_dirty_kib": 18088,
+      "thermal_status": 0,
+      "gc_count": 10,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 660870,
+      "keys": 5269,
+      "total_pss_kib": 36595,
+      "total_private_dirty_kib": 17840,
+      "thermal_status": 0,
+      "gc_count": 11,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 720927,
+      "keys": 5748,
+      "total_pss_kib": 36639,
+      "total_private_dirty_kib": 17884,
+      "thermal_status": 0,
+      "gc_count": 12,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 781005,
+      "keys": 6227,
+      "total_pss_kib": 36407,
+      "total_private_dirty_kib": 17652,
+      "thermal_status": 0,
+      "gc_count": 13,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 841095,
+      "keys": 6706,
+      "total_pss_kib": 36947,
+      "total_private_dirty_kib": 18192,
+      "thermal_status": 0,
+      "gc_count": 14,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 901139,
+      "keys": 7185,
+      "total_pss_kib": 37179,
+      "total_private_dirty_kib": 18424,
+      "thermal_status": 0,
+      "gc_count": 15,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 961241,
+      "keys": 7664,
+      "total_pss_kib": 36931,
+      "total_private_dirty_kib": 18176,
+      "thermal_status": 0,
+      "gc_count": 16,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1021313,
+      "keys": 8143,
+      "total_pss_kib": 36575,
+      "total_private_dirty_kib": 17820,
+      "thermal_status": 0,
+      "gc_count": 17,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1081366,
+      "keys": 8622,
+      "total_pss_kib": 36507,
+      "total_private_dirty_kib": 17752,
+      "thermal_status": 0,
+      "gc_count": 18,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1141458,
+      "keys": 9101,
+      "total_pss_kib": 36429,
+      "total_private_dirty_kib": 17668,
+      "thermal_status": 0,
+      "gc_count": 19,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1201541,
+      "keys": 9580,
+      "total_pss_kib": 36497,
+      "total_private_dirty_kib": 17736,
+      "thermal_status": 0,
+      "gc_count": 20,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1261632,
+      "keys": 10059,
+      "total_pss_kib": 36409,
+      "total_private_dirty_kib": 17648,
+      "thermal_status": 0,
+      "gc_count": 21,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1321704,
+      "keys": 10538,
+      "total_pss_kib": 36473,
+      "total_private_dirty_kib": 17712,
+      "thermal_status": 0,
+      "gc_count": 22,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1381750,
+      "keys": 11017,
+      "total_pss_kib": 36629,
+      "total_private_dirty_kib": 17868,
+      "thermal_status": 0,
+      "gc_count": 23,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1441837,
+      "keys": 11496,
+      "total_pss_kib": 37025,
+      "total_private_dirty_kib": 18264,
+      "thermal_status": 0,
+      "gc_count": 24,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1501882,
+      "keys": 11975,
+      "total_pss_kib": 37401,
+      "total_private_dirty_kib": 18640,
+      "thermal_status": 0,
+      "gc_count": 25,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1561959,
+      "keys": 12454,
+      "total_pss_kib": 37353,
+      "total_private_dirty_kib": 18592,
+      "thermal_status": 0,
+      "gc_count": 26,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1622046,
+      "keys": 12933,
+      "total_pss_kib": 37021,
+      "total_private_dirty_kib": 18260,
+      "thermal_status": 0,
+      "gc_count": 27,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1682120,
+      "keys": 13412,
+      "total_pss_kib": 36649,
+      "total_private_dirty_kib": 17888,
+      "thermal_status": 0,
+      "gc_count": 28,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1742209,
+      "keys": 13891,
+      "total_pss_kib": 36709,
+      "total_private_dirty_kib": 17948,
+      "thermal_status": 0,
+      "gc_count": 29,
+      "model_mapped_address_bytes_not_rss": 0
+    },
+    {
+      "elapsed_ms": 1800149,
+      "keys": 14353,
+      "total_pss_kib": 36585,
+      "total_private_dirty_kib": 17820,
+      "thermal_status": 0,
+      "gc_count": 30,
+      "model_mapped_address_bytes_not_rss": 0
+    }
+  ],
+  "profile_unchanged_before_native_close": true,
+  "shared_bytes_and_timestamps_unchanged": true,
+  "own_uid_traffic_supported": true,
+  "own_uid_tx_bytes_delta": 0,
+  "own_uid_rx_bytes_delta": 0,
+  "pass": true,
+  "probe_run_id": "48114480d8924370b540e7bd8f6b1b7e",
+  "target_debuggable": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "release engine-only runner; R04 remains FAIL in debug component tests"
+  },
+  "tested_apk_sha256": "94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162",
+  "tested_test_apk_sha256": "ee19b44e393fd2f8507a53c90301b1355ed5b76e2a05e731e35e6a3da93965f3",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "perf-model-off-long",
+  "variant": "release",
+  "result_transport": "instrumentation-result-stream",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}
