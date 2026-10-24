@@ -1,0 +1,11 @@
+{
+  "scope": "synthetic private direct-text fixture, app UID main/system logcat only; raw lines NEVER persisted; NOT system-UID/other-host/all-path SEC04 acceptance",
+  "fixture_id": "p001",
+  "target": "pixel",
+  "canary_matches_before": 0,
+  "canary_matches_after": 0,
+  "synthetic_controller_pass": true,
+  "tested_apk_sha256": "b0ca3dd5ae0365d71c76c1f6a543d14eb51af5ccb76e239e2dab503b53f28a65",
+  "tested_test_apk_sha256": "1f988fd6b3c765a01e3bc91b35ba6f8a00fc5133b95f59b566a6eb37ae827a7c",
+  "pass": true
+}

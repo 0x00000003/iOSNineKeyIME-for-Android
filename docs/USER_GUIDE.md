@@ -12,4 +12,4 @@
 
 隐藏/系统切换按钮通过正常系统流程。停用键盘使用系统设置；卸载仅移除本项目包。不会自动清空其他应用、重置手机、云备份或上传数据。完整安装/卸载、备份迁移和常用App测试仍待M4/M6记录。
 
-M4主界面提供离线来源与许可：43份固定许可正文、122个确切依赖制品（移除未用图标字体后）及原生/数据/模型来源。查看不打开网页、不接受外部文件。显式本地优化release验证可用`./scripts/gradle.sh -PlocalReleaseProbe=true :app:assembleRelease :app:assembleReleaseAndroidTest`，只用本项目调试证书；默认release仍未签名。两包包名不同，均不得由代理启用/切换默认IME。它不是正式交付签名，不应与debug组件成绩混用。
+M4主界面提供离线来源与许可：44份固定许可正文（包括固定NDK的LLVM runtime/toolchain原文）、122个确切依赖制品（移除未用图标字体后）及原生/数据/模型来源。查看不打开网页、不接受外部文件。显式本地优化release验证可用`./scripts/gradle.sh -PlocalReleaseProbe=true :app:assembleRelease :app:assembleReleaseAndroidTest`，只用本项目调试证书；默认release仍未签名。两包包名不同，均不得由代理启用/切换默认IME。它不是正式交付签名，不应与debug组件成绩混用。

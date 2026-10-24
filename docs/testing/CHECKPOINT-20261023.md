@@ -1,4 +1,26 @@
-# 本地开发检查点：未达到发布门禁
+# 当前本地开发检查点：44份离线正文，仍未签收
+
+源码代码提交 `738a3652bd99c70dae9bea1725bcfa9f1b63c9ab`。补入固定NDK静态C++ runtime/toolchain NOTICE后，对新哈希全部重跑，未继承43正文旧包成绩。[26条新记录汇总](evidence/m1/m4-ndk-regression-summary.json)整体pass=false/release_gate=NOT_ACCEPTED。
+
+| 制品 | SHA256 | 字节 |
+| --- | --- | --- |
+| debug | b0ca3dd5ae0365d71c76c1f6a543d14eb51af5ccb76e239e2dab503b53f28a65 | 73313796 |
+| debug test | 1f988fd6b3c765a01e3bc91b35ba6f8a00fc5133b95f59b566a6eb37ae827a7c | 359658 |
+| optimized local signed release | 582016c31af26f824d2e3739edbdbda38028ee31fbd5a3416312be2fa88fa235 | 61735540 |
+| release test | b1948467aa0bcabd94388591123adb45c2f36b5dcab2704e7b139431e0470f74 | 150084 |
+| default unsigned release | 22f2f22646df6299d93aded9f2226b893feb54a22869a38f2e3d6afc629e18c7 | 61727549 |
+
+49 app/73 state JVM、38工具及debug/release lint/构建PASS。三实际APK零字体/权限/备份/资源静态PASS，122项实际Maven/project清单与包内一致；NDK notice44项均逐文hash通过且两设备真实打开完整原文。debug两设备full仍因R04私密预存组合音标4/5而FAIL，native/11宿主异常/跨120分页PASS；settings/resources/R08/R09/R10/no-learning restart/canary-controller分项PASS，自己UID canary前后0。release两设备engine/resources/R08/R09/R10 PASS；专用离线模拟器清除的只有本项目合成release，airplane/wifi/data与无默认网络已确认，新装同包engine PASS。未启用系统IME，不是完整D05。
+
+同738a365新源码/build/.cxx重建62/62任务、3m22s，unsigned整包22f2f226与基线完全相同；复用已核SDK/JDK（新root物理hardlink）及96d的warm Gradle/公共输入缓存，不写成第二次完全新获取。[重建](evidence/m1/m6-source-738-rebuild.json)、[实际审计](evidence/m1/m6-source-738-audit/audit.json)。此前96d源码使用新SDK/JDK/初始空Gradle cache整包复现证据仍独立保留。signed/unsigned23个非签名entry一致、native66ae8921不变、旧前端roots缺席和本地Android Debug证书签名通过，见[制品对照](evidence/m1/m4-ndk-artifact-comparison.json)。不是正式发布签名。
+
+制品冻结在忽略artifacts/m4/ndk-notice-debug-apk-set与ndk-notice-release-apk-set；本地审查包在artifacts/delivery/wip-738a365（含4个APK、源码归档、SHA256和合成证据）。不含密钥/设备序列号/个人截图/输入，按贡献流程提交。
+
+尚未交付：R04 P0仍FAIL；系统IME尚未由用户启用/切换，多宿主/生命周期/完整P01—P04等未运行；iPhone原图/设置/体验确认缺失使M5视觉BLOCKED；敏感中文、目标OS备份迁移、全部SEC/模型数据对应源等未验收。旧94b9d40f两次30分钟JNI观测不归给新APK。详见[逐需求验收账](../ACCEPTANCE.md)及[未解决项](../OPEN_ISSUES.md)，不能称开发完成、安全全通过、可日用或1:1。
+
+---
+
+# 历史43正文检查点（96d627a）
 
 本轮基于615a477及随后WIP提交的代码/构建锁补丁；最终源版本以本地Git提交为准，测试用APK/Test APK完整SHA锁定。日期2026-10-23（纽约）；部分原始UTC时间跨到24日。没有远端、push或公开发布。
 

@@ -30,3 +30,6 @@ source inclusion or successful compilation does not close that gate.
 
 
 后续WIP：删除未用community-material-typeface及其字体，当前debug/unsigned/本地签名release实际APK字体数均0；历史字体原文来源仍保留而不作为运行时许可。实际运行时清单现122项，父POM链/制品SHA及明确版本变化见TOOLCHAIN记录；离线许可正文仍43份，包含保留的上游源码归属，不能将它等同全量分发义务已关闭。
+
+
+738a365增量：固定Android NDK r28 (28.0.13004108)明确选择静态C++；加入其LLVM runtime/toolchain完整原文与其他版权/例外，离线正文现44项。源自SHA19b16241的官方归档，原文SHAf96f763b，位置/完整哈希见third_party/ndk-runtime-license.json；不是断言该广义notice中每个宿主工具都链接进APK。全部实际数据来源/对应源分发义务仍须逐项收尾。

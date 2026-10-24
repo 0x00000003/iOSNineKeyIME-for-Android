@@ -1,12 +1,10 @@
 # 当前状态
 
-正在补充固定NDK静态C++运行库原文：44份离线正文版本已构建（debug b0ca3dd5 / optimized release 582016c3），两设备44项哈希/NDK完整正文显示与清学习取消控制PASS；其余新哈希回归正在进行。下段是上一轮完整记录的96d627a检查点，不能继承到新正文版本。
+**M1—M4 WIP，未达到发布门禁。** 最新代码本地提交738a365，已补齐固定NDK LLVM runtime/toolchain原文：44份离线正文，实际运行时122项。当前debug `b0ca3dd5`，优化且非debuggable本地调试证书release `582016c3`，默认unsigned `22f2f226`；完整SHA与制品/26条分项记录见[当前检查点](testing/CHECKPOINT-20261023.md)。开发记录。
 
-最新：**M1—M4 开发 WIP，未达到发布门禁。** 当前debug `dd8f688f`、优化且非debuggable本地调试证书release `dedeee3c`，默认unsigned `9cdd4df2`。49 app/73 state JVM、38工具测试、两套lint与实际三APK零字体/权限/备份/资源静态审计PASS。完整哈希、制品路径、26条最终记录与范围见[当前检查点](testing/CHECKPOINT-20261023.md)。
+49 app/73 state JVM、38工具、两套lint/构建和三APK实际零字体/权限/备份/资产审计PASS。两设备44项许可hash/NDK完整正文显示PASS；同debug原生跨120分页/11宿主故障、controller/settings/resources/R08/R09/R10/预准备无学习重启分项PASS，**full仍因R04敏感预存组合音标4/5而FAIL**。同release两设备五引擎scope PASS，专用离线模拟器新装引擎组件PASS，不是完整系统IME D05。
 
-同debug两设备原生跨120分页/11宿主异常、controller及settings/resources/R08/R09/R10/预准备无学习重启分项PASS；**full两设备仍R04敏感预存组合音标4/5导致FAIL**。同release两设备engine/resources/R08/R09/R10 PASS，未运行完整release系统IME/宿主门禁。严格锁缺状态/意外依赖实际负测按预期拒绝，字体依赖已删除，运行时清单122项。
-
-[旧固定APK各30分钟JNI观测](testing/NATIVE_PERF-20261023.md)、[历史源码新SDK/JDK/初始空Gradle cache整包重建](testing/TOOLCHAIN-20261023.md)独立记录，不能继承到当前完整产品验收。用户尚未启用/切换IME；原图缺失使M5视觉BLOCKED；敏感中文、完整安全/性能/发布仍未交付。继续开发的具体阻碍见[OPEN_ISSUES](OPEN_ISSUES.md)。[需求逐项验收账](ACCEPTANCE.md)保留所有未交付项。没有远端推送。
+738a365隔离新源码/build/.cxx、warm固定SDK/JDK/Gradle输入重建整包22f2f226一致；96d源码另有新SDK/JDK/初始空Gradle cache整包复现证据。旧94b9d40f的各30分钟JNI观察独立记录，不继承为当前完整性能成绩。系统IME未由用户启用、iPhone原图缺失、R04未修复、完整安全/性能/正式签收未通过。[逐需求验收账](ACCEPTANCE.md)与[阻碍](OPEN_ISSUES.md)保留具体未交付项。
 
 以下是历史检查点及追加结果，最新制品不可继承旧哈希成绩。
 

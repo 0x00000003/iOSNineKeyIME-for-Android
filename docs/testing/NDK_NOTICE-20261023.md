@@ -7,3 +7,5 @@
 将完整原文加入离线列表，44份正文/445099字节/SHA595154365cbd04239545db40fda4f301627f4e207d8b5ead918db6bcb1c116ad。该NOTICE是广义toolchain/runtime原文，并不声称每个列出的宿主工具都链接进APK；不从聚合文本推断每个实际符号的许可证。实际Maven清单仍122项，NDK记录独立，其他模型/词库/对应源义务继续WIP。
 
 Settings组件原43项数量断言更新为准确44项，保留正文哈希校验、开页验证、取消清学习/零写等全部控制断言。由于资产与BuildConfig哈希变化，必须新构建并以新APK/Test SHA运行；不能继承96d627a制品分项或旧94b9d40f的30分钟性能成绩。默认/优化构建、49 app/73 state、两套lint、38工具与实际三APK静态审计PASS；新debug b0ca3dd5/test1f988fd6，优化release582016c3/testb1948467。两设备settings已PASS44项、完整NDK正文显示及原取消控制；其余回归还在进行。
+
+最终新哈希两设备完整分项回归已结束，26记录见m4-ndk-regression-summary.json。44项哈希/完整NDK正文、原清学习取消及所有原控制PASS；full仍保留R04 FAIL。三APK实际静态审计PASS，signed/unsigned23非签名entry一致，native不变；738a365源码warm固定输入隔离62任务重建3m22s，unsigned22f2整包一致。原96d冷工具链证据不变，不继承旧长测为新App性能验收。

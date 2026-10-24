@@ -19,3 +19,5 @@
 最终debug dd8f688f、unsigned9cdd4df2、本地签名dedeee3c实际APK均零字体、权限/备份/锁定资源静态PASS；122项运行时清单已由实际APK资产回写third_party/runtime-inventory-release.json。完整分项回归见CHECKPOINT记录，不包含系统IME全门禁。复用bootstrap工具增加了逐文件JDK post-check与每个新目标独立日志；原始首次环境构建和手工复核记录不改写为新版脚本全流程重跑。
 
 96d627a代码检查点再做独立完整获取路径：新源码/SDK/JDK/初始空Gradle cache首次构建62/62任务成功，12m34s。unsigned整包61720617字节/SHA9cdd4df28cd25e1fb19ebd2438f4078d99c1890514b5dda0ac1bdb97c3bff0c1，与冻结基线完全一致；同源auditor实际静态零字体/权限/备份/资源PASS。[完整收据](evidence/m1/m6-source-96d-clean-toolchain.json)、[实际APK审计](evidence/m1/m6-source-96d-audit/audit.json)。SDK/JDK新安装并逐文件核归档、JDK459文件，现有SDK同条款接受marker及固定公开table/model仍复用。此包43正文，不能将它归给后续新增NDK notice的44正文补丁或完整M6签收。
+
+738a365新增44正文后再次隔离源码/build/.cxx，SDK/JDK复用已核安装的物理hardlink（避免越出prefix-map），Gradle/public输入复用96d成功构建的warm缓存，无签名key/ADB/并发Gradle。62/62任务3m22s，新unsigned22f2f226整包与基线一致，实际审计PASS；m6-source-738-rebuild.json明确标出warm条件，不能写成又一次首次获取或M6整体验收。

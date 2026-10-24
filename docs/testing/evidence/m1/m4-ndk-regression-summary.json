@@ -1,0 +1,147 @@
+{
+  "scope": "final 44-notice component regression, NOT full IME/privacy/security/performance release acceptance",
+  "source_commit": "738a3652bd99c70dae9bea1725bcfa9f1b63c9ab",
+  "debug_apk_sha256": "b0ca3dd5ae0365d71c76c1f6a543d14eb51af5ccb76e239e2dab503b53f28a65",
+  "debug_test_sha256": "1f988fd6b3c765a01e3bc91b35ba6f8a00fc5133b95f59b566a6eb37ae827a7c",
+  "optimized_local_signed_release_apk_sha256": "582016c31af26f824d2e3739edbdbda38028ee31fbd5a3416312be2fa88fa235",
+  "release_test_sha256": "b1948467aa0bcabd94388591123adb45c2f36b5dcab2704e7b139431e0470f74",
+  "app_jvm_tests": 49,
+  "state_jvm_tests": 73,
+  "tooling_tests": 38,
+  "records": [
+    {
+      "file": "m4-ndk-pixel-full.json",
+      "sha256": "94366079e0c0c065edc56f74a627bf8bfdd4bb6b8f7c529b4e6b22e4a41932af",
+      "pass": false
+    },
+    {
+      "file": "m4-ndk-pixel-settings.json",
+      "sha256": "ae94a120e5420d2f01eab40f1c7746fcb00501bec2ce9c4f1d8b6060d3337ad7",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-resources.json",
+      "sha256": "7546f1a4130d13dc9fcec035d5357ef2cb3318bd599e5b75df127cdc78117f61",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-quality.json",
+      "sha256": "f540f02701fd3c351cacff2fca17c20483a56ec17f8ed852503ca08a04ec64a0",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-learning.json",
+      "sha256": "5e462f1945c570b8c8daf171f5173b2a29845bf4a34dda24bdefc664b7ef0728",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-context.json",
+      "sha256": "6c1ef53732fea923356d271fc5f10c926f349ae19de1ea6612354007e75e564b",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-nolearn-restart.json",
+      "sha256": "6f869ebe9e9e04d0c17dbf13a036580731aafe1be7884c68c26f5b696f124a83",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-canary-controller.json",
+      "sha256": "31c3e23d996caf337972ec97dd099234863cada28a1515ccfbbdb8fa27ea17f1",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-release-engine.json",
+      "sha256": "cdaea6ac9916d9804ce6963b57c53d9b37efd988667940652b5729c1a1e00453",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-release-quality.json",
+      "sha256": "7b362d69bec848ca0ec863a58505096db1646eb96a8517392cfe2f5e8cff9ea9",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-release-learning.json",
+      "sha256": "5d02010200fa1c2b1bab90ab8f850cd02f245cf111cc34de641b0ec760bc9317",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-release-context.json",
+      "sha256": "c066eb74303954acab8448aaac25c92554b6c0bd97aab02ba707aa6dfebd9873",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-pixel-release-resources.json",
+      "sha256": "ea2a773759160e29978154cf5ce1c6ec1bf1fecdc69a75669d91713af08be1de",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-full.json",
+      "sha256": "0a5639ce97e771eb43d32ecdff93eef00880a86d80efa991e5c2e45b2943c3d9",
+      "pass": false
+    },
+    {
+      "file": "m4-ndk-emulator-settings.json",
+      "sha256": "491899c183dd0fcc5ca95802f57236cc96ffe8bbca3d13ff64a280215e08114b",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-resources.json",
+      "sha256": "c5cabd93f07d21998de819ab59c8b81cf58b93adb0f53db062e64fcc6562583b",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-quality.json",
+      "sha256": "0d47717934de7ec01e545a03c453a8668b6793d909f420a7f54d690ef32cd28d",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-learning.json",
+      "sha256": "bb957025f4b7fc24589dc2d8214ffeb70bba9e9e7478973e0ec59081ecc0cf35",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-context.json",
+      "sha256": "63a4ff8c7ba0a2d04a9cb2e43afd4884e80980da38d7f506b5e192336dada807",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-nolearn-restart.json",
+      "sha256": "34e956440fce1efac12e9b1c9e1626aebb2a75ba6d4567522580c576427931f6",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-canary-controller.json",
+      "sha256": "aee6c850780fafb10a7dfd3ccc1a539986ef43a8c77aa96081ac476f0d1f843d",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-release-engine.json",
+      "sha256": "7adb8ad70c377e7d343017371c8cf0b5fb1afd4d2e8484a0f4015f60661d8c2e",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-release-quality.json",
+      "sha256": "ede51cec78299a1607f327b019caee08925977a4b072b8bfe64c862a0ac48982",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-release-learning.json",
+      "sha256": "b6632931baba000d72c63fe85bb711e8a51d6633366321a8386564ea10b915b4",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-release-context.json",
+      "sha256": "ee657d15b3ba37b7b311d77b42f9e85a838652ac41fd6f56b6b60e9f6fd7bcf1",
+      "pass": true
+    },
+    {
+      "file": "m4-ndk-emulator-release-resources.json",
+      "sha256": "551fb8c3c0c2168f3187a4e54ce877a4bd731dc5f27a41f99f72b99b5078fea5",
+      "pass": true
+    }
+  ],
+  "component_regressions_match_expectations": true,
+  "known_full_fail": "R04 private preexisting combining grapheme deletion remains4/5 on both targets",
+  "release_gate": "NOT_ACCEPTED",
+  "pass": false
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "fresh source/build/.cxx for 738a365; reuses verified SDK/JDK bytes through physical hardlinks and warmed Gradle cache/public data; NOT fresh independent toolchain acquisition",
+  "source_commit": "738a3652bd99c70dae9bea1725bcfa9f1b63c9ab",
+  "build": "PASS",
+  "sdk_jdk": "hardlinked verified install inside new source root to preserve prefix-map scope",
+  "gradle_cache": "warm from successful 96d fresh-toolchain run; no parallel Gradle process",
+  "signing": "default unsigned, no private key copied",
+  "source_archive_sha256": "607a8cfef51449dae58bf20eb79df75524ba7d1af9faa5b5de2284b0c3cd8e30",
+  "build_exit_code": 0,
+  "apk_sha256": "22f2f22646df6299d93aded9f2226b893feb54a22869a38f2e3d6afc629e18c7",
+  "apk_bytes": 61727549,
+  "baseline_unsigned_apk_sha256": "22f2f22646df6299d93aded9f2226b893feb54a22869a38f2e3d6afc629e18c7",
+  "whole_apk_identical": true,
+  "build_observed": "62/62 tasks, 3m22s",
+  "pass": true
+}

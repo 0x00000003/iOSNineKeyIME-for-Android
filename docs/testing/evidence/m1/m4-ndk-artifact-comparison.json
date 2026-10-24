@@ -1,0 +1,21 @@
+{
+  "scope": "actual current APK entries, static DEX class definitions, native identity and local debug-certificate signature; NOT full security/performance/M6 acceptance",
+  "signed_apk_sha256": "582016c31af26f824d2e3739edbdbda38028ee31fbd5a3416312be2fa88fa235",
+  "unsigned_apk_sha256": "22f2f22646df6299d93aded9f2226b893feb54a22869a38f2e3d6afc629e18c7",
+  "non_signature_zip_entries": 23,
+  "all_non_signature_entries_equal": true,
+  "native_sha256": "66ae89210f5f8421726ee16250ec688d78fcda49bf9e6f6d4fcd14580752c722",
+  "absent_legacy_classes": [
+    "com.osfans.trime.ime.core.TrimeInputMethodService",
+    "com.osfans.trime.daemon.RimeDaemon",
+    "com.osfans.trime.data.base.DataManager",
+    "com.osfans.trime.data.db.ClipboardHelper",
+    "com.osfans.trime.data.sync.RimeDataSync"
+  ],
+  "current_ime_class_defined": true,
+  "local_debug_certificate_sha256": "279a60b4774a7b2ed80c443845cf44a7733b52e09184b7719990d577a2d28041",
+  "signature_v1_verified": true,
+  "signature_v2_verified": true,
+  "formal_release": false,
+  "pass": true
+}
