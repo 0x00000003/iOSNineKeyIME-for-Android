@@ -28,6 +28,8 @@ public final class HostActivity extends Activity {
     private LinearLayout panel;
     private TextView status;
     private String currentCase = "plain";
+    public boolean guardConnections;
+    public int nextBoundsDelayMs;
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         panel = new LinearLayout(this);
@@ -66,7 +68,8 @@ public final class HostActivity extends Activity {
         // Prepare a new field before it is attached/served. Mutating the already served view's
         // type several times schedules multiple legitimate restartInput calls during typing.
         EditText previous=editor;
-        editor=new EditText(this);editor.setId(View.generateViewId());editor.setTextSize(20);
+        GuardedEditText guarded=new GuardedEditText(this);guarded.rejectBody=guardConnections && !kind.equals("email");guarded.boundsDelayMs=nextBoundsDelayMs;
+        editor=guarded;editor.setId(View.generateViewId());editor.setTextSize(20);
         editor.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO_EXCLUDE_DESCENDANTS);
         editor.setOnEditorActionListener((v,id,event)->{actionCount++;lastAction=id;return true;});
         editor.setSingleLine(true);

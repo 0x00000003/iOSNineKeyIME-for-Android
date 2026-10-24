@@ -37,3 +37,7 @@ frame协议首版错误地要求IME底排间距等于普通宿主的导航inset+
 同befe66f4真实Pixel private-delete36/36 PASS（system-host-first-pixel-private-delete）：四敏感类型×九字素，由系统onUpdateCursorAnchorInfo/真实跨UID结构查询与字符删除，不含手工坐标桥接。该scope未给所有IC文字getter设置拒绝/计数器，不能把组件正文getter0直接归到本系统scope；数字密码/选区/连续异步输入/复杂多行/Compose/WebView仍待测。befe两设备full组件PASS（原敏感5/5、21故障），controller两设备PASS；不关闭全部R04/I05。
 
 当前仅一套工具链，testhost/build 11116KiB。新增记录均共享按SHA单实体APK，不按记录复制大包；本轮测.cache 20643268KiB、app/build1444308KiB、artifacts5899236KiB、系统可用24958912KiB。与上轮空间浮动须区分系统其他活动，不做全局清理。debug APK相比776约多0.9MB，ZIP逐项核查实际条目变化约1.5KB，其余是增量打包padding，未多打包词库/工具链；release61732341字节。
+
+## IPC正文拒绝/队列红测
+
+协议5eec11e提前冻结20例。新增GuardedEditText仅在真实TextView IC外计数/拒绝before/after/selected/extracted/surrounding/caps/takeSnapshot，并延迟真实TextBoundsInfo结果，无坐标/anchor桥。befe66f4 +hostea3e5216/test32d0b1f0真实Pixel privacy-queue17/20 FAIL（system-host-privacy-queue-red-pixel）：五敏感类型字素10例、选区5例、普通删除续输和pending跨字段均PASS，敏感正文getter全部0。password/no-learn延迟查询期间a/b续输FAIL，实际观察到已请求未交付；长按八ASCII只发一次结构/手势而FAIL。不能用此前36/36关闭R04全行为。源检查对应服务onUpdateSelection把自己删除引发的光标变化当外移，取消队列/触控；拟增加删除后cursor anchor确认与同操作selection归属，再跑相同20例。

@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.BooleanSupplier;
 
-/** Real system IME/host boundary. No bridge, InputConnection wrapper, text logs or automatic IME selection. */
+/** Real system IME/host boundary. No coordinate bridge, text logs or in-app IME selection. */
 @SuppressWarnings("deprecation")
 public final class HostInstrumentation extends Instrumentation {
     private String IME="dev.local.iosninekeyime.probe.debug";
@@ -133,6 +133,11 @@ public final class HostInstrumentation extends Instrumentation {
         SystemClock.sleep(55);
     }
     private void word(){for(String label:new String[]{"MNO","GHI","GHI","ABC","MNO"})tap(label);}
+    private GuardedEditText guarded(){final GuardedEditText[] view={null};main(()->view[0]=(GuardedEditText)activity.editor);return view[0];}
+    private JSONObject privacyCase(String id,boolean exact,GuardedEditText view)throws JSONException{
+        final int[] n=new int[5];main(()->{n[0]=view.bodyReads;n[1]=view.cursorRequests;n[2]=view.boundsRequests;n[3]=view.boundsDelivered;n[4]=view.gestureRequests;});
+        return new JSONObject().put("id",id).put("exact_synthetic_result",exact).put("body_getter_calls",n[0]).put("cursor_requests",n[1]).put("bounds_requests",n[2]).put("bounds_delivered",n[3]).put("gesture_requests",n[4]).put("pass",exact && n[0]==0);
+    }
     @Override public void onStart(){
         JSONObject output=new JSONObject();JSONArray cases=new JSONArray();boolean passed=false;
         try{
@@ -197,13 +202,49 @@ public final class HostInstrumentation extends Instrumentation {
                         tap("退格");boolean exact=await(()->read(()->activity.editor.getText().toString().equals("AB") && activity.editor.getSelectionStart()==1 && activity.editor.getSelectionEnd()==1),3000);
                         cases.put(new JSONObject().put("id",stage).put("exact_synthetic_remaining",exact).put("pass",exact));
                     }
+                }else if(scope.equals("privacy-queue")){
+                    main(()->activity.guardConnections=true);
+                    String[] kinds={"password","visible-password","web-password","number-password","no-learn"};
+                    String[] clusters={"e\u0301","\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67\u200D\uD83D\uDC66"};
+                    for(String kind:kinds)for(int i=0;i<clusters.length;i++){
+                        stage="guard-"+kind+"-g"+(i+1);String cluster=clusters[i];choose(kind,"A"+cluster+"B",1+cluster.length());GuardedEditText view=guarded();tap("退格");
+                        boolean exact=await(()->read(()->view.getText().toString().equals("AB") && view.getSelectionStart()==1 && view.getSelectionEnd()==1),3000);
+                        cases.put(privacyCase(stage,exact,view));
+                    }
+                    for(String kind:kinds){
+                        stage="selection-"+kind;choose(kind,"ABCD",3);GuardedEditText view=guarded();main(()->view.setSelection(1,3));
+                        check(await(()->read(()->view.getSelectionStart()==1 && view.getSelectionEnd()==3),1000));
+                        // Let the actual selection callback be dispatched before the physical key.
+                        automation.waitForIdle(100,3000);tap("退格");
+                        cases.put(privacyCase(stage,await(()->read(()->view.getText().toString().equals("AD") && view.getSelectionStart()==1 && view.getSelectionEnd()==1),3000),view));
+                    }
+                    for(String kind:new String[]{"password","no-learn"}){
+                        stage="queued-"+kind;main(()->activity.nextBoundsDelayMs=300);choose(kind,"AB",2);GuardedEditText view=guarded();tap("退格");
+                        boolean pending=await(()->read(()->view.boundsRequests==1 && view.boundsDelivered==0),1000);tap("a");tap("b");
+                        boolean exact=await(()->read(()->view.getText().toString().equals("Aab") && view.getSelectionStart()==3 && view.getSelectionEnd()==3),3000);
+                        JSONObject result=privacyCase(stage,pending && exact,view);result.put("observed_query_pending_before_typing",pending);cases.put(result);
+                    }
+                    stage="normal-delete-typing";main(()->activity.nextBoundsDelayMs=0);choose("email","AB",2);GuardedEditText normal=guarded();tap("退格");tap("a");tap("b");
+                    cases.put(new JSONObject().put("id",stage).put("normal_body_reads_permitted",true).put("pass",await(()->read(()->normal.getText().toString().equals("Aab") && normal.getSelectionStart()==3),3000)));
+                    stage="held-private-delete";choose("password","ABCDEFGH",8);GuardedEditText held=guarded();Rect box=key("退格",false);check(box!=null);long now=SystemClock.uptimeMillis();
+                    MotionEvent down=MotionEvent.obtain(now,now,MotionEvent.ACTION_DOWN,box.centerX(),box.centerY(),0);down.setSource(InputDevice.SOURCE_TOUCHSCREEN);
+                    boolean empty=false;
+                    try{check(automation.injectInputEvent(down,true));empty=await(()->read(()->held.length()==0),2500);}
+                    finally{MotionEvent up=MotionEvent.obtain(now,SystemClock.uptimeMillis(),MotionEvent.ACTION_UP,box.centerX(),box.centerY(),0);up.setSource(InputDevice.SOURCE_TOUCHSCREEN);try{automation.injectInputEvent(up,true);}finally{up.recycle();down.recycle();}}
+                    cases.put(privacyCase(stage,empty,held));
+                    stage="pending-cross-field";main(()->activity.nextBoundsDelayMs=300);choose("password","AB",2);GuardedEditText previous=guarded();tap("退格");
+                    boolean pending=await(()->read(()->previous.boundsRequests==1 && previous.boundsDelivered==0),1000);
+                    main(()->activity.nextBoundsDelayMs=0);choose("password","D",1);GuardedEditText next=guarded();tap("c");
+                    boolean delivered=await(()->read(()->previous.boundsDelivered==1),1500);
+                    boolean isolated=read(()->previous.getText().toString().equals("AB") && next.getText().toString().equals("Dc") && next.getSelectionStart()==2);
+                    JSONObject result=privacyCase(stage,pending && delivered && isolated && previous.bodyReads==0,next);result.put("observed_old_query_pending",pending).put("old_result_delivered",delivered).put("old_field_unchanged",read(()->previous.getText().toString().equals("AB")));cases.put(result);
                 }else throw new IllegalStateException("E_HOST_SCOPE");
                 output.put("system_ime_path_exercised",true);
             output.put("actual_ime_bottom_margin",navigationGap).put("host_minimum_bottom_margin",expectedGap);
             }
             passed=cases.length()>0;
             int success=0;for(int i=0;i<cases.length();i++){boolean ok=cases.getJSONObject(i).getBoolean("pass");passed&=ok;if(ok)success++;}
-            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:36);
+            output.put("passed_cases",success).put("planned_cases",scope.equals("readiness")?16:scope.equals("core")?10:scope.equals("privacy-queue")?20:36);
             passed&=cases.length()==output.getInt("planned_cases");
             output.put("status",passed?"PASS":"FAIL");
         }catch(Throwable failure){try{output.put("status","FAIL").put("failure_stage",stage).put("failure_step",step).put("tap_attempts",taps).put("injected_taps",injected).put("measured_bottom_gap",measuredGap).put("expected_bottom_gap",expectedGap).put("ime_window_root_geometry",ownFrameGeometry).put("ime_windows",imeWindows).put("own_ime_root",ownImeRoot).put("error_code","E_SYSTEM_HOST_ASSERTION");}catch(JSONException ignored){}}
