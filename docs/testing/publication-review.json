@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-24",
   "stage": "PUBLIC_SOURCE_VERIFIED",
-  "scope": "Public source repository readiness; not final APK acceptance or a legal certification",
+  "scope": "Archived initial source-only publication review; subsequent APK prerelease publication is recorded in apk-preview-review.json.",
   "reviewed_revision": "3333ca119a89a7969c6f032bd0a46d7c8565d4e2",
   "history": {
     "commits_reviewed": 71,
@@ -75,5 +75,6 @@
       "refs/heads/main"
     ],
     "apk_release_created": false
-  }
+  },
+  "subsequent_apk_release_review": "docs/testing/apk-preview-review.json"
 }

@@ -1,7 +1,7 @@
 {
   "checked_on": "2026-10-24",
   "release_tag": "v0.1.0-preview.1",
-  "stage": "PREPARED",
+  "stage": "PUBLISHED_PRERELEASE",
   "kind": "prerelease development checkpoint; not M6 acceptance",
   "runtime_source_revision": "503904db60b8a5fb737033bc2aee7c608d953785",
   "runtime_source_and_resource_locks_unchanged": true,
@@ -111,5 +111,72 @@
     "includes_signing_keys_or_toolchain_cache": false
   },
   "source_distribution_review": "Known pending scope retained in docs/COMPLIANCE.md; materials are not a legal certification",
-  "storage": "APK hard-linked to existing verified artifact; one build-inputs archive, no new SDK/NDK/cache/build copies"
+  "storage": "APK hard-linked to existing verified artifact; one build-inputs archive, no new SDK/NDK/cache/build copies",
+  "publication": {
+    "url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/tag/v0.1.0-preview.1",
+    "tag": "v0.1.0-preview.1",
+    "release_id": 422794541,
+    "published_at": "2026-10-24T14:58:13Z",
+    "draft": false,
+    "prerelease": true,
+    "assets": [
+      {
+        "id": 672534097,
+        "name": "iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk",
+        "size": 61769523,
+        "digest": "sha256:91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk"
+      },
+      {
+        "id": 672534086,
+        "name": "iOSNineKeyIME-v0.1.0-preview.1-build-inputs.tar.gz",
+        "size": 82809154,
+        "digest": "sha256:785340857b39c8f8dbdc55b6bbfa599537d88f2f386f3dd207661b98639dbbe0",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-build-inputs.tar.gz"
+      },
+      {
+        "id": 672534141,
+        "name": "iOSNineKeyIME-v0.1.0-preview.1-source.tar.gz",
+        "size": 25885798,
+        "digest": "sha256:1d08a6fd20d7182173d879ac37735cd5cd50fa308718045bc7bcf54d8d40571e",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-source.tar.gz"
+      },
+      {
+        "id": 672534091,
+        "name": "RELEASE-METADATA.json",
+        "size": 4882,
+        "digest": "sha256:fd39c40efedf5e85fc9a5cd0d2672b6aa5c6e16343429b7d4d4f59cf5f3a7d73",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/RELEASE-METADATA.json"
+      },
+      {
+        "id": 672534092,
+        "name": "SHA256SUMS",
+        "size": 518,
+        "digest": "sha256:480fcb16f5001e202bc864289be64fcacff5a7c12c5560e25a345708659a6405",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/SHA256SUMS"
+      },
+      {
+        "id": 672534085,
+        "name": "THIRD-PARTY-NOTICES.json",
+        "size": 445099,
+        "digest": "sha256:595154365cbd04239545db40fda4f301627f4e207d8b5ead918db6bcb1c116ad",
+        "browser_download_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/THIRD-PARTY-NOTICES.json"
+      }
+    ],
+    "all_server_asset_hashes_match": true,
+    "download": {
+      "public_url": "https://github.com/0x00000003/iOSNineKeyIME-for-Android/releases/download/v0.1.0-preview.1/iOSNineKeyIME-v0.1.0-preview.1-arm64-v8a.apk",
+      "request": {
+        "status": 200,
+        "transport": "unauthenticated public asset URL"
+      },
+      "bytes": 61769523,
+      "sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+      "matches_tested_apk": true,
+      "written_duplicate_apk": false
+    },
+    "source_tag_revision": "0c109e19dc750b656804b402a25bfb9a230760ea",
+    "release_metadata_asset_scope": "Frozen pre-publication verification snapshot; current published status recorded in this document on main",
+    "draft_lookup_note": "REST tag lookup returned 404 while draft; owner release list was used to verify draft assets before publication. Public tag lookup succeeds after publishing."
+  }
 }
