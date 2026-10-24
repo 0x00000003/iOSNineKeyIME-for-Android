@@ -2,7 +2,7 @@
 
 ## 完整截图对照图
 
-[android-ios-comparison.png](android-ios-comparison.png)为README首图，直接拼接此次提供的两张完整截图：左为[Android](android-fullscreen.png)，右为[iOS](ios-fullscreen.png)。不裁剪、不缩放、不添加内容，不生成机身或编辑区。输出左右两半已逐像素核对完整输入，原文件保持只读。
+[android-ios-comparison.png](android-ios-comparison.png)为README首图，直接拼接此次提供的两张完整截图：左为[Android](android-fullscreen.png)，右为[iOS](ios-fullscreen.png)。截图外增加平台标题和边框：绿色为Android本项目输入法，蓝色为iOS原生键盘参考。截图本身不裁剪、不缩放、不调色、不重绘；输出中两个截图区域已逐像素核对完整输入，原文件保持只读。
 
 复现方式见[comparison-layout.md](comparison-layout.md)，来源尺寸与哈希见[comparison.json](comparison.json)。这些截图用于文档展示，不随APK打包，不由根GPL许可证重新授权，也不代表全部状态已验收。
 

@@ -5,10 +5,10 @@
 一款基于 Trime/Rime 与万象的开源 Android 输入法。支持九键拼音、选拼音、英文、数字、符号和 Emoji，词库与输入引擎在本机离线运行。
 
 <p align="center">
-  <img src="docs/images/android-ios-comparison.png" width="1000" alt="两张完整截图直接左右拼接：左侧 Android，右侧 iOS；未裁剪、未缩放、未重绘" />
+  <img src="docs/images/android-ios-comparison.png" width="1000" alt="真实截图对照：绿色边框为 Android 本项目输入法，蓝色边框为 iOS 原生键盘参考；截图未裁剪、未缩放、未重绘" />
 </p>
 
-<p align="center"><b>左：Android　｜　右：iOS</b></p>
+<p align="center"><b>左：Android · 本项目输入法　｜　右：iOS · 原生键盘参考</b></p>
 
 ## 功能
 

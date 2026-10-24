@@ -12,7 +12,7 @@
 | 前一fdc658b2 / 990b62cc制品，各自Pixel系统触屏 | 选拼音8/8、五态9/9、重显5/5、敏感删除36/36、异步队列20/20 PASS | [选拼音检查点](testing/PINYIN_ANDROID-20261024.md) |
 | 当前源码的主机验证 | 104 state、50 debug app、50 release app、45工具测试；构建/lint及两实际APK静态审计PASS | [版本检查点](testing/evidence/m5/configuration-final-checkpoint.json) |
 
-以上结果绑定各自APK、测试包与执行范围，不将旧制品成绩直接转移到新制品。README首图为两张完整Android/iOS截图直接拼接，没有裁剪、缩放或重绘，详见[图片来源](images/README.md)。
+以上结果绑定各自APK、测试包与执行范围，不将旧制品成绩直接转移到新制品。README首图为两张完整Android/iOS截图并排展示，截图外有平台标注与绿色/蓝色边框，截图本身没有裁剪、缩放或重绘，详见[图片来源](images/README.md)。
 
 ## 已知限制
 

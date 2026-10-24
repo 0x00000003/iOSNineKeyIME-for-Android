@@ -1,12 +1,12 @@
 {
-  "kind": "two complete original screenshots joined side by side",
+  "kind": "two complete original screenshots with external platform labels and borders",
   "generator": "Pillow; no generative model",
   "output": {
     "file": "android-ios-comparison.png",
-    "width": 1165,
-    "height": 1280,
-    "bytes": 275867,
-    "sha256": "015593e096740e0ed016573af33764053e7fb0a8b8f7b4d609e4b83247a926be"
+    "width": 1277,
+    "height": 1468,
+    "bytes": 298247,
+    "sha256": "643c08c34cf40fd63fa55bcfd4edef19079ba27fb8fbb083e9d3534304ce8222"
   },
   "left": {
     "platform": "Android",
@@ -18,10 +18,10 @@
     ],
     "original_attachment_sha256": "8023ac4f55be7304f5a7a990efefdac231d30e79c17c7a61896822d44ab73dbc",
     "output_box": [
-      0,
-      0,
-      574,
-      1280
+      36,
+      152,
+      610,
+      1432
     ]
   },
   "right": {
@@ -34,16 +34,27 @@
     ],
     "original_attachment_sha256": "7940553c771e275872c1cfd51d151e90d77a5982abe484f18dc4d48c77b684e5",
     "output_box": [
-      574,
-      0,
-      1165,
-      1280
+      650,
+      152,
+      1241,
+      1432
     ]
   },
   "cropped": false,
   "resized": false,
-  "labels_added": false,
+  "labels_added": true,
   "ui_redrawn": false,
+  "layout": {
+    "margin": 32,
+    "gap": 32,
+    "border": 4,
+    "header": 116,
+    "left_label": "Android / \u672c\u9879\u76ee\u8f93\u5165\u6cd5",
+    "right_label": "iOS / iPhone \u539f\u751f\u952e\u76d8 \u00b7 \u53c2\u8003",
+    "left_border": "#148650",
+    "right_border": "#2764c5",
+    "font_name": "STHeiti Medium.ttc"
+  },
   "pixel_checks": {
     "saved_halves_equal_original_pixels": true,
     "sources_unchanged": true
