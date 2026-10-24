@@ -1,0 +1,367 @@
+{
+  "scope": "real host editor component ONLY; native engine not rerun",
+  "pass": true,
+  "host_editor_component": {
+    "scope": "real EditText/InputConnection component test; NOT full IME/multi-host or I05 all-path acceptance",
+    "single_host_commit": true,
+    "composing_replacement": true,
+    "same_session_restore": true,
+    "old_field_not_replayed": true,
+    "grapheme_and_selection_deletion_passed": 6,
+    "deletion_fixture_count": 6,
+    "sensitive_metadata_cases_passed": 6,
+    "sensitive_context_reads": 0,
+    "sensitive_structural_bounds_requests": 11,
+    "cursor_anchor_delivery": "owned synthetic host bridge; system IMS callback NOT tested",
+    "sensitive_metadata_results": [
+      {
+        "case": "text_password",
+        "pass": true
+      },
+      {
+        "case": "visible_password",
+        "pass": true
+      },
+      {
+        "case": "web_password",
+        "pass": true
+      },
+      {
+        "case": "number_password",
+        "pass": true
+      },
+      {
+        "case": "no_personalized_learning",
+        "pass": true
+      },
+      {
+        "case": "user_private",
+        "pass": true
+      }
+    ],
+    "sensitive_deletion_results": [
+      {
+        "case": "astral",
+        "pass": true
+      },
+      {
+        "case": "combining_accent",
+        "pass": true
+      },
+      {
+        "case": "zwj_family",
+        "pass": true
+      },
+      {
+        "case": "regional_flag",
+        "pass": true
+      },
+      {
+        "case": "skin_modifier",
+        "pass": true
+      }
+    ],
+    "sensitive_grapheme_deletion_passed": 5,
+    "sensitive_deletion_fixture_count": 5,
+    "normal_learning_tree_unchanged": true,
+    "pass": true
+  },
+  "host_connection_fault_component": {
+    "scope": "10 synthetic real-host exception/reentrant boundaries and 1 sensitive synchronous-path rejection; structural API faults are a separate required component",
+    "cases": [
+      {
+        "case_id": "h001",
+        "fault_point": "begin_commit",
+        "pass": true
+      },
+      {
+        "case_id": "h002",
+        "fault_point": "commit",
+        "pass": true
+      },
+      {
+        "case_id": "h003",
+        "fault_point": "end_commit",
+        "pass": true
+      },
+      {
+        "case_id": "h004",
+        "fault_point": "selected",
+        "pass": true
+      },
+      {
+        "case_id": "h005",
+        "fault_point": "before",
+        "pass": true
+      },
+      {
+        "case_id": "h006",
+        "fault_point": "delete",
+        "pass": true
+      },
+      {
+        "case_id": "h007",
+        "fault_point": "private_sync_rejected",
+        "pass": true
+      },
+      {
+        "case_id": "h008",
+        "fault_point": "action",
+        "pass": true
+      },
+      {
+        "case_id": "h009",
+        "fault_point": "reentrant_begin",
+        "pass": true
+      },
+      {
+        "case_id": "h010",
+        "fault_point": "begin_delete",
+        "pass": true
+      },
+      {
+        "case_id": "h011",
+        "fault_point": "end_delete",
+        "pass": true
+      }
+    ],
+    "private_context_reads": 0,
+    "pass": true
+  },
+  "structural_delete_fault_component": {
+    "scope": "production structural adapter faults with synthetic cursor bridge; NOT system IMS lifecycle",
+    "planned_cases": 19,
+    "passed_cases": 19,
+    "ic_body_getters": 0,
+    "cases": [
+      {
+        "id": "cursor_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "cursor_throw",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "anchor_timeout",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "anchor_wrong_selection",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_throw",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "bounds_timeout",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "field_switch_before_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "selection_move_before_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "gesture_unsupported",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_throw_before",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_throw_after",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "gesture_timeout_before",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "gesture_timeout_after",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": true,
+        "pass": true
+      },
+      {
+        "id": "duplicate_bounds",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "duplicate_gesture",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 1,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "duplicate_failed_gesture",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 1,
+        "gesture_requests": 2,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "selected_range",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      },
+      {
+        "id": "empty_cursor",
+        "result_matches": true,
+        "exact_synthetic_remaining": true,
+        "reply_count": 1,
+        "bounds_requests": 0,
+        "gesture_requests": 0,
+        "no_key_fallback": true,
+        "fault_injected": false,
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "probe_run_id": "b30203d1109a4d58aef537dff94f29ac",
+  "tested_apk_sha256": "c2f1c8f0f52f0a1d5488628e0a3236ae4c41971b14acae6b3df09bf6e56f15e8",
+  "tested_test_apk_sha256": "f5652c744fe70f90abb15ef120a86c3e7198ace3b21ea317ae2f20a48b021c7a",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "editor",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

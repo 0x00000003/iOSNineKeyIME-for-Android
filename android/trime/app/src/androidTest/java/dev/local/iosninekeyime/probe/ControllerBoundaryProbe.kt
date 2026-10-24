@@ -75,6 +75,9 @@ object ControllerBoundaryProbe {
                 activity.editor.requestFocus()
                 connection=checkNotNull(activity.editor.onCreateInputConnection(EditorInfo()))
                 val guarded=object:InputConnectionWrapper(connection,false) {
+                    override fun requestCursorUpdates(mode:Int,filter:Int):Boolean {
+                        android.os.Handler(Looper.getMainLooper()).post {host.updateCursorAnchor(controller.state.stamp.session,SyntheticCursorMetadata.anchor(activity.editor))};return true
+                    }
                     override fun getSelectedText(flags:Int):CharSequence? {if(privateField)reads++;return super.getSelectedText(flags)}
                     override fun getTextBeforeCursor(n:Int,flags:Int):CharSequence? {if(privateField)reads++;return super.getTextBeforeCursor(n,flags)}
                     override fun getTextAfterCursor(n:Int,flags:Int):CharSequence? {if(privateField)reads++;return super.getTextAfterCursor(n,flags)}
@@ -87,11 +90,12 @@ object ControllerBoundaryProbe {
                     override val pendingCount get()=host.pendingCount
                     override fun begin(session:Long,sensitive:Boolean) {
                         privateField=sensitive
-                        host.begin(session,guarded,EditorPolicy.from(InputType.TYPE_CLASS_TEXT,if(sensitive)EditorInfo.IME_FLAG_NO_PERSONALIZED_LEARNING else 0,false))
+                        val info=EditorInfo().apply {initialSelStart=activity.editor.selectionStart;initialSelEnd=activity.editor.selectionEnd}
+                        host.begin(session,guarded,EditorPolicy.from(InputType.TYPE_CLASS_TEXT,if(sensitive)EditorInfo.IME_FLAG_NO_PERSONALIZED_LEARNING else 0,false),info)
                     }
                     override fun commit(effect:Effect.Commit)=host.commit(effect)
                     override fun retry(session:Long)=host.retry(session)
-                    override fun delete(session:Long,sensitive:Boolean) {host.delete(session)}
+                    override fun deleteAsync(session:Long,sensitive:Boolean,reply:(Boolean)->Unit){host.deleteAsync(session){reply(it==dev.local.iosninekeyime.editor.EditResult.ACCEPTED)}}
                     override fun action(session:Long,action:EditorAction) {host.action(session,action)}
                     override fun end(session:Long) {host.end(session)}
                 }
@@ -147,6 +151,7 @@ object ControllerBoundaryProbe {
             val before=ProbeFileSnapshot.fingerprint(profile)
             val busy=try { ProbeRunner.run(context);false } catch(t:IllegalStateException){t.message=="E_ENGINE_BUSY"}
             main {controller.submit(Event.Text("a"));controller.submit(Event.Digit(2));controller.submit(Event.Backspace)}
+            waitFor {activity.editor.text.toString()=="你好。你好世界。a"}
             main {
                 result.put("new_private_field_rejects_old_candidate",activity.editor.text.toString()=="你好。你好世界。a")
                 result.put("sensitive_context_reads",reads)
@@ -158,7 +163,7 @@ object ControllerBoundaryProbe {
             stage="held-delete-field-change"
             main {
                 controller.start(3,true,Layout.LATIN,EditorAction.DONE)
-                activity.editor.setText("AB");activity.editor.setSelection(2)
+                activity.editor.setText("AB");activity.editor.setSelection(2);host.updateSelection(3,2,2)
                 touch("delete",MotionEvent.ACTION_DOWN)
             }
             waitFor {activity.editor.text.toString()=="A"}

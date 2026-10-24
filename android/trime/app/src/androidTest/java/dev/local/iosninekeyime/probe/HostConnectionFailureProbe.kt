@@ -29,7 +29,7 @@ object HostConnectionFailureProbe {
             failure?.let {throw it}
         }
         try {
-            val points=listOf("begin_commit","commit","end_commit","selected","before","delete","private_key","action","reentrant_begin","begin_delete","end_delete")
+            val points=listOf("begin_commit","commit","end_commit","selected","before","delete","private_sync_rejected","action","reentrant_begin","begin_delete","end_delete")
             for((index,point)in points.withIndex()) {
                 var passed=false
                 main {
@@ -38,7 +38,7 @@ object HostConnectionFailureProbe {
                     val normal=EditorPolicy.from(InputType.TYPE_CLASS_TEXT,0,false)
                     val host=HostEditorAdapter()
                     val actual=checkNotNull(activity.editor.onCreateInputConnection(EditorInfo()))
-                    var commitCalls=0
+                    var commitCalls=0;var keyCalls=0
                     val wrapped=object:InputConnectionWrapper(actual,false) {
                         fun fail():Nothing=throw IllegalStateException("E_SYNTHETIC_HOST_CONNECTION")
                         override fun beginBatchEdit():Boolean {
@@ -48,13 +48,13 @@ object HostConnectionFailureProbe {
                         }
                         override fun endBatchEdit():Boolean {if(point in listOf("end_commit","end_delete")){super.endBatchEdit();fail()};return super.endBatchEdit()}
                         override fun commitText(text:CharSequence?,newCursorPosition:Int):Boolean {commitCalls++;if(point=="commit")fail();return super.commitText(text,newCursorPosition)}
-                        override fun getSelectedText(flags:Int):CharSequence? {if(point=="private_key")privacyReads++;if(point=="selected")fail();return super.getSelectedText(flags)}
-                        override fun getTextBeforeCursor(n:Int,flags:Int):CharSequence? {if(point=="private_key")privacyReads++;if(point=="before")fail();return super.getTextBeforeCursor(n,flags)}
+                        override fun getSelectedText(flags:Int):CharSequence? {if(point=="private_sync_rejected")privacyReads++;if(point=="selected")fail();return super.getSelectedText(flags)}
+                        override fun getTextBeforeCursor(n:Int,flags:Int):CharSequence? {if(point=="private_sync_rejected")privacyReads++;if(point=="before")fail();return super.getTextBeforeCursor(n,flags)}
                         override fun deleteSurroundingText(beforeLength:Int,afterLength:Int):Boolean {if(point=="delete")fail();return super.deleteSurroundingText(beforeLength,afterLength)}
-                        override fun sendKeyEvent(event:KeyEvent?):Boolean {if(point=="private_key")fail();return super.sendKeyEvent(event)}
+                        override fun sendKeyEvent(event:KeyEvent?):Boolean {keyCalls++;if(point=="private_sync_rejected")fail();return super.sendKeyEvent(event)}
                         override fun performEditorAction(actionCode:Int):Boolean {if(point=="action")fail();return super.performEditorAction(actionCode)}
                     }
-                    host.begin(1,wrapped,if(point=="private_key")EditorPolicy.from(InputType.TYPE_CLASS_TEXT,0,true)else normal)
+                    host.begin(1,wrapped,if(point=="private_sync_rejected")EditorPolicy.from(InputType.TYPE_CLASS_TEXT,0,true)else normal)
                     try {
                         val effect=Effect.Commit(Stamp(1,1),0,"C")
                         passed=when(point) {
@@ -62,6 +62,7 @@ object HostConnectionFailureProbe {
                             "end_commit" -> host.commit(effect)==Delivery.ACCEPTED && host.commit(effect)==Delivery.DUPLICATE && activity.editor.text.toString()=="ABC" && commitCalls==1
                             "reentrant_begin" -> host.commit(effect)==Delivery.STALE && activity.editor.text.toString()=="AB" && commitCalls==0
                             "action" -> !host.action(1,EditorAction.DONE) && activity.editor.text.toString()=="AB"
+                            "private_sync_rejected" -> host.delete(1)==EditResult.UNAVAILABLE && activity.editor.text.toString()=="AB" && keyCalls==0
                             "end_delete" -> host.delete(1)==EditResult.ACCEPTED && activity.editor.text.toString()=="A"
                             else -> host.delete(1)==EditResult.UNAVAILABLE && activity.editor.text.toString()=="AB"
                         }
@@ -71,7 +72,7 @@ object HostConnectionFailureProbe {
                 results.put(JSONObject().put("case_id","h%03d".format(index+1)).put("fault_point",point).put("pass",passed))
             }
             val all=(0 until results.length()).all {results.getJSONObject(it).getBoolean("pass")}
-            return JSONObject().put("scope","synthetic real-host exception/reentrant batch boundaries only; no after-apply ambiguous commit recovery guarantee or R04 waiver")
+            return JSONObject().put("scope","10 synthetic real-host exception/reentrant boundaries and 1 sensitive synchronous-path rejection; structural API faults are a separate required component")
                 .put("cases",results).put("private_context_reads",privacyReads).put("pass",all&&privacyReads==0)
         }finally{main{activity.finish()}}
     }

@@ -1,0 +1,54 @@
+{
+  "baseline_commit": "c8d89fe",
+  "scope": "exact changed/new production and instrumentation/state Kotlin files; committed in subsequent WIP checkpoint",
+  "files": [
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/CandidatePagingBoundaryProbe.kt",
+      "sha256": "9d36c765d14cd21416b65c6ba91a7b213c679e4f2069eaa091c699a3d48d4021"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/ControllerBoundaryProbe.kt",
+      "sha256": "dffa3544747377577a8cad13e3035ded1cb7aad16074a821b2403c2becd89e44"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/EditorBoundaryProbe.kt",
+      "sha256": "28b5b2507df9ec8edd54089b7a7ed5e55a2ff09c01caa4beddb64ef52c8d260f"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/HostConnectionFailureProbe.kt",
+      "sha256": "6a29362de329ea9de75c2d4c53bbb2cbae502001b2f40881b7ca4914e825c1bd"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/ProbeInstrumentation.kt",
+      "sha256": "f3733ffc819f40750f1b164860ead4f01d72578cd367c076e4f8c7eec176f040"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/StructuralDeleteFailureProbe.kt",
+      "sha256": "8d5c032e79554bf12d21e54c73eb976a28568bea2ff24835359cc617f38dbc11"
+    },
+    {
+      "path": "android/trime/app/src/androidTest/java/dev/local/iosninekeyime/probe/SyntheticCursorMetadata.kt",
+      "sha256": "d383f362e8b1c7d9497c928fa0905d5af3edacdedc9acba5595326b0f1787a7e"
+    },
+    {
+      "path": "android/trime/app/src/main/java/dev/local/iosninekeyime/editor/HostEditorAdapter.kt",
+      "sha256": "b82485b16c355fc5518d38fc8b8b4d6f76d06d1031959f1ed4558037e8457dc1"
+    },
+    {
+      "path": "android/trime/app/src/main/java/dev/local/iosninekeyime/editor/StructuralDelete.kt",
+      "sha256": "17f9bf4ec757a665f01eeff852729d617c2803159cdd5fe129e64ab687002667"
+    },
+    {
+      "path": "android/trime/app/src/main/java/dev/local/iosninekeyime/ime/NineKeyInputMethodService.kt",
+      "sha256": "047916a2615bbb9b429a8b34556bb9cfb57bcb7e762f8dd957d03bc6844e58c4"
+    },
+    {
+      "path": "android/trime/state/src/main/kotlin/dev/local/iosninekeyime/state/KeyboardController.kt",
+      "sha256": "b4933697d75ce25cb0b3c7795dbd8c696eafa66bf7871594ce2bead1d6c9d451"
+    },
+    {
+      "path": "android/trime/state/src/test/kotlin/dev/local/iosninekeyime/state/KeyboardControllerTest.kt",
+      "sha256": "3d93555028d497d06827c9a2702ecdabd572d464acbc0ee8bfe32003884c6234"
+    }
+  ]
+}

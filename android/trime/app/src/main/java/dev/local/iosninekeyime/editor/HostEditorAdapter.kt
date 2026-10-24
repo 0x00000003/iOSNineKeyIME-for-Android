@@ -2,6 +2,9 @@
 package dev.local.iosninekeyime.editor
 
 import android.os.Build
+import android.os.Handler
+import android.os.Looper
+import android.view.inputmethod.CursorAnchorInfo
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputConnection
@@ -11,7 +14,7 @@ import dev.local.iosninekeyime.state.EditorAction
 import dev.local.iosninekeyime.state.Effect
 import dev.local.iosninekeyime.state.HostCommitGate
 
-enum class EditResult { ACCEPTED, DELEGATED, UNAVAILABLE, STALE, CONTEXT_LIMIT }
+enum class EditResult { ACCEPTED, DELEGATED, UNAVAILABLE, STALE, CONTEXT_LIMIT, AMBIGUOUS }
 
 /** Owner-thread adapter; the service must pass only its current field's connection. No logging/IO. */
 class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit) = { { } }) {
@@ -20,10 +23,19 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
     private var connection: InputConnection? = null
     private var sensitive = true
     private val commits = HostCommitGate(::commitToConnection)
+    private var selectionStart=-1
+    private var selectionEnd=-1
+    private var selectionVersion=0L
+    private var structural:StructuralDelete?=null
+    private var deleting=false
 
-    fun begin(value: Long, editor: InputConnection?, policy: EditorPolicy) {
+    fun begin(value: Long, editor: InputConnection?, policy: EditorPolicy, info:EditorInfo?=null) {
         require(value > session)
-        session = value
+        session = value; active = false; connection = null; deleting=false
+        selectionStart=info?.initialSelStart?:-1;selectionEnd=info?.initialSelEnd?:-1;selectionVersion++
+        if(Build.VERSION.SDK_INT>=34)structural?.cancel()
+        // Cancellation may synchronously begin a newer field through its callback.
+        if(session!=value)return
         active = true
         connection = editor
         sensitive = policy.sensitive
@@ -32,8 +44,10 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
 
     fun reconnect(expectedSession: Long, editor: InputConnection?): Boolean {
         if (!active || expectedSession != session) return false
-        connection = editor
-        return true // Deliberately does not replay pending text automatically.
+        connection = editor; deleting=false
+        selectionVersion++;selectionStart=-1;selectionEnd=-1
+        if(Build.VERSION.SDK_INT>=34)structural?.cancel()
+        return active && session==expectedSession && connection===editor // Never replay pending text automatically.
     }
 
     fun commit(effect: Effect.Commit): Delivery = commits.deliver(effect)
@@ -41,6 +55,7 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
     val pendingCount get() = commits.pendingCount
 
     private fun commitToConnection(text: String): Boolean {
+        if(deleting)return false
         val editor = connection ?: return false
         val expectedSession = session
         var batchStarted = false
@@ -52,7 +67,13 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
             if (!current(expectedSession, editor)) return false
             val finish = onCommitAttempt(text.length)
             finishAttempt = finish
-            editor.commitText(text, 1).also { finish(it) }
+            editor.commitText(text, 1).also {
+                if(it && current(expectedSession,editor) && sensitive){
+                    if(selectionStart>=0 && selectionEnd>=0){selectionStart=minOf(selectionStart,selectionEnd)+text.length;selectionEnd=selectionStart}
+                    selectionVersion++
+                }
+                finish(it)
+            }
         } catch (_:RuntimeException) {
             finishAttempt?.invoke(false)
             false
@@ -62,8 +83,9 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
     fun delete(expectedSession: Long): EditResult {
         if (!active || expectedSession != session) return EditResult.STALE
         val editor = connection ?: return EditResult.UNAVAILABLE
-        // Sensitive fields: delegate deletion to the host; never request selected/surrounding text.
-        if (sensitive || Build.VERSION.SDK_INT < 24) return deleteKey(editor)
+        // Sensitive deletion is asynchronous and must use the structural path below.
+        if (sensitive) return EditResult.UNAVAILABLE
+        if (Build.VERSION.SDK_INT < 24) return deleteKey(editor)
         var batchStarted = false
         return try {
             editor.beginBatchEdit()
@@ -84,6 +106,38 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
             if (editor.deleteSurroundingText(before.length - boundary, 0)) EditResult.ACCEPTED else EditResult.UNAVAILABLE
         } catch (_:RuntimeException) { EditResult.UNAVAILABLE }
         finally { if (batchStarted) endBatchQuietly(editor) }
+    }
+
+    fun updateSelection(expectedSession:Long,start:Int,end:Int) {
+        if(!active || session!=expectedSession)return
+        if(start!=selectionStart || end!=selectionEnd){selectionVersion++;selectionStart=start;selectionEnd=end}
+    }
+
+    fun updateCursorAnchor(expectedSession:Long,info:CursorAnchorInfo) {
+        if(active && session==expectedSession && sensitive && Build.VERSION.SDK_INT>=34)structural?.anchor(info)
+    }
+
+    fun deleteAsync(expectedSession:Long,reply:(EditResult)->Unit) {
+        if(!active || session!=expectedSession){reply(EditResult.STALE);return}
+        val editor=connection
+        if(editor==null || deleting){reply(EditResult.UNAVAILABLE);return}
+        if(!sensitive){reply(delete(expectedSession));return}
+        if(selectionStart>=0 && selectionEnd>=0 && selectionStart!=selectionEnd){
+            reply(if(commitToConnection(""))EditResult.ACCEPTED else EditResult.UNAVAILABLE);return
+        }
+        if(Build.VERSION.SDK_INT<34){reply(EditResult.UNAVAILABLE);return}
+        val version=selectionVersion
+        val worker=structural?:StructuralDelete(Handler(Looper.getMainLooper())).also {structural=it}
+        deleting=true
+        worker.start(editor,selectionStart,selectionEnd,
+            valid={current(expectedSession,editor)},selectionCurrent={selectionVersion==version}) { result ->
+            deleting=false
+            // A successful gesture may precede its selection callback. Do not guess its UTF-16 size.
+            if(result==EditResult.ACCEPTED && current(expectedSession,editor)){
+                selectionStart=-1;selectionEnd=-1;selectionVersion++
+            }
+            reply(result)
+        }
     }
 
     private fun deleteKey(editor: InputConnection): EditResult {
@@ -119,8 +173,9 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
 
     fun end(expectedSession: Long) {
         if (expectedSession != session) return
+        active = false; connection = null; deleting=false
+        selectionStart=-1;selectionEnd=-1;selectionVersion++
         commits.endSession(expectedSession)
-        active = false
-        connection = null
+        if(Build.VERSION.SDK_INT>=34)structural?.cancel() // All old-field cleanup precedes callbacks.
     }
 }

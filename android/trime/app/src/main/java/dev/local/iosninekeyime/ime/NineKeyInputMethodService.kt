@@ -6,6 +6,7 @@ import android.os.Looper
 import android.text.InputType
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.CursorAnchorInfo
 import com.osfans.trime.ime.core.LifecycleInputMethodService
 import dev.local.iosninekeyime.editor.HostEditorAdapter
 import dev.local.iosninekeyime.engine.SerialRimeEngine
@@ -44,11 +45,11 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
             override val pendingCount get()=host.pendingCount
             override fun begin(session:Long,sensitive:Boolean) {
                 val current=checkNotNull(info)
-                host.begin(session,currentInputConnection,EditorPolicy.from(current.inputType,current.imeOptions,userPrivate))
+                host.begin(session,currentInputConnection,EditorPolicy.from(current.inputType,current.imeOptions,userPrivate),current)
             }
             override fun commit(effect:Effect.Commit)=host.commit(effect)
             override fun retry(session:Long)=host.retry(session)
-            override fun delete(session:Long,sensitive:Boolean){host.delete(session)}
+            override fun deleteAsync(session:Long,sensitive:Boolean,reply:(Boolean)->Unit){host.deleteAsync(session){reply(it==dev.local.iosninekeyime.editor.EditResult.ACCEPTED)}}
             override fun action(session:Long,action:EditorAction){host.action(session,action)}
             override fun end(session:Long){host.end(session)}
         }
@@ -100,6 +101,11 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         if(own>=0){repeat(own+1){expectedSelections.removeFirst()}}
         else if(newSelStart!=selectionStart || newSelEnd!=selectionEnd){expectedSelections.clear();keyboard?.cancelTouches();controller.submit(Event.Cancel)}
         selectionStart=newSelStart;selectionEnd=newSelEnd
+        host.updateSelection(session,newSelStart,newSelEnd)
+    }
+    override fun onUpdateCursorAnchorInfo(cursorAnchorInfo:CursorAnchorInfo?) {
+        super.onUpdateCursorAnchorInfo(cursorAnchorInfo)
+        if(fieldActive && cursorAnchorInfo!=null)host.updateCursorAnchor(session,cursorAnchorInfo)
     }
     private fun endField() {
         keyboard?.cancelTouches()

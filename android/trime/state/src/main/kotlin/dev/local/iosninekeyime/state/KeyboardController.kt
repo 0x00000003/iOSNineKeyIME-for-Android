@@ -12,7 +12,7 @@ interface KeyboardHostPort {
     fun begin(session: Long, sensitive: Boolean)
     fun commit(effect: Effect.Commit): Delivery
     fun retry(session: Long): Delivery
-    fun delete(session: Long, sensitive: Boolean)
+    fun deleteAsync(session: Long, sensitive: Boolean, reply: (Boolean) -> Unit)
     fun action(session: Long, action: EditorAction)
     fun end(session: Long)
 }
@@ -33,6 +33,7 @@ class KeyboardController(
     private var failed = false
     private var readyReceived = false
     private var hostBlocked = false
+    private var deleteWaiting = false
     private val events = ArrayDeque<Event>()
     private val responses = ArrayDeque<Pair<Long, () -> Unit>>()
     private val remaining = ArrayDeque<Effect>()
@@ -42,13 +43,16 @@ class KeyboardController(
     fun start(session: Long, sensitive: Boolean, layout: Layout, action: EditorAction) {
         checkOwner()
         if (session <= state.stamp.session) return
-        if (active) {
-            host.end(state.stamp.session)
-            engine.end(state.stamp.session)
-        }
-        epoch++
+        val previous = if (active) state.stamp.session else null
+        active = false; epoch++
         val generation = epoch
-        active = true; failed = false; readyReceived = false; hostBlocked = false
+        // Invalidate before ending ports: cancellation may reply synchronously.
+        if (previous != null) {
+            host.end(previous)
+            engine.end(previous)
+        }
+        if (generation != epoch) return
+        active = true; failed = false; readyReceived = false; hostBlocked = false; deleteWaiting = false
         events.clear(); responses.clear(); remaining.clear()
         state = KeyboardReducer.reduce(state, Event.Start(session,sensitive,layout,action)).state
         host.begin(session,sensitive)
@@ -71,7 +75,7 @@ class KeyboardController(
         checkOwner()
         if (!active || session != state.stamp.session) return
         active = false; epoch++
-        events.clear(); responses.clear(); remaining.clear(); hostBlocked = false
+        events.clear(); responses.clear(); remaining.clear(); hostBlocked = false; deleteWaiting = false
         host.end(session); engine.end(session)
         state = state.copy(ready=false,input="",preedit="",compositionLength=0,candidates=emptyList(),awaiting=false,tail=null,expanded=false,
             candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null)
@@ -81,14 +85,13 @@ class KeyboardController(
     fun submit(event: Event) {
         checkOwner()
         require(event !is Event.Start && event !is Event.Ready && event !is Event.Snapshot)
-        if (!active) return
+        if (!active || failed) return
         if (event == Event.Cancel && !hostBlocked) {
             events.clear()
             transition(event)
             pump()
             return
         }
-        if (failed && state.layout == Layout.CHINESE && !state.sensitive) return
         if (events.size >= capacity) { fault("E_QUEUE_CAPACITY"); return }
         events += event
         pump()
@@ -98,7 +101,7 @@ class KeyboardController(
     fun submitRepeat(event: Event) {
         checkOwner()
         require(event == Event.Backspace)
-        if (active && !state.awaiting && !hostBlocked && events.isEmpty() && !failed && (state.ready || state.sensitive || state.layout != Layout.CHINESE)) submit(event)
+        if (active && !state.awaiting && !hostBlocked && !deleteWaiting && events.isEmpty() && !failed && (state.ready || state.sensitive || state.layout != Layout.CHINESE)) submit(event)
     }
 
     /** Reconnect alone never calls this; the host must explicitly authorize same-session retry. */
@@ -136,7 +139,7 @@ class KeyboardController(
                     if (generation == epoch) response()
                     continue
                 }
-                if (hostBlocked || state.awaiting || failed || events.isEmpty()) break
+                if (hostBlocked || deleteWaiting || state.awaiting || failed || events.isEmpty()) break
                 // All events retain arrival order while deployment/first key is outstanding.
                 if (!state.sensitive && state.layout == Layout.CHINESE && !state.ready) break
                 transition(events.removeFirst())
@@ -181,7 +184,18 @@ class KeyboardController(
                         failed = true; events.clear(); fault("E_HOST_DELIVERY"); return
                     }
                 }
-                is Effect.Delete -> host.delete(effect.session,effect.sensitive)
+                is Effect.Delete -> {
+                    deleteWaiting = true
+                    var received = false
+                    host.deleteAsync(effect.session,effect.sensitive) { success -> receive(generation) {
+                        if (!received) {
+                            received = true; deleteWaiting = false
+                            if (success) perform(effects.drop(index+1),generation)
+                            else { failed = true; events.clear(); remaining.clear(); fault("E_HOST_DELETE") }
+                        }
+                    } }
+                    return
+                }
                 is Effect.Action -> host.action(effect.session,effect.action)
                 is Effect.Defer -> {
                     if (events.size < capacity) events.addFirst(effect.event) else fault("E_QUEUE_CAPACITY")

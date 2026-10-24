@@ -123,3 +123,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 构建缓存去重检查发现重复隔离目录、未使用模拟器和安装归档。回收9处本项目忽略的可再生成目录，可用空间实际增加24.10GiB；保存各重建receipt/log，所有已冻结APK/测试/源码/未提交编辑保留，两份交付包60文件SHA逐项复核PASS。不将缓存清理当Android测试或R04修复。
 
 磁盘后续修正：run_probe改为已核SHA的单实体APK池与每记录硬链接，Gradle输出隔离inode、既有路径不覆盖、失败无partial遗留；40项tooling通过。后续同APK分项测试不会再按record复制大包。
+
+采用正文禁读、必要结构可用的隐私策略后，生产HostAdapter/Controller/薄服务接入结构异步删除：当前09f88435/f5652c74两设备full探针/controller PASS，原敏感5字素5/5、metadata6/6、正文getter0/结构请求11、19故障全部PASS。3个顺序红测真实失败后barrier修复，追加end同步回调epoch保护，77 state/49 app/40工具、debug lint/build/实际APK审计PASS。旧DEL4/5 FAIL保留，结构桥接不算系统IMS验证，真实IME/多宿主/全安全及参考图仍未通过。默认unsigned release构建/lint正在进行，不提前报告结果。
+
+收尾增量修复HostAdapter取消回调同步重入：先失效连接/清理，再取消，begin取消后重新核session。21案新test712e60e9配旧09f88435在模拟器真实红测reentrant_begin FAIL（前19 PASS）；同test配新77636c33两设备full 21/21 PASS，正文getter0，原R04字素5/5。默认unsigned02c7f870仅构建/lint/实际APK审计PASS，未签名运行。77 state/49 app/40工具与两套lint通过；系统IMS、多宿主、正式签收/原图仍不宣称完成。

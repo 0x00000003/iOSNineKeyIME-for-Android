@@ -2,13 +2,15 @@
 
 磁盘管理修正：2026-10-24回收历史隔离构建、未用模拟器及安装包缓存9处，实际释放24.10GiB；两交付包60文件SHA保持一致。只保留一套日常工具链与最多一个必要隔离目录，旧重建路径已清理，原结果保留。见[清理记录](testing/evidence/m1/storage-reclamation-20261024.json)。
 
+**最新生产组件检查点（WIP）：** debug `77636c33` / test `712e60e9` 已接入结构信息异步删除。Pixel与API36模拟器同哈希 full探针及controller组件PASS：敏感原5字素5/5、6种敏感metadata6/6、正文getter0/结构请求11；21个结构故障案例均PASS，无key fallback。77 state/49 app JVM、40工具与debug lint/构建PASS，实际debug权限/备份/资产/零字体审计PASS。系统cursor-anchor由合成宿主桥接，真实系统IME与多宿主未运行，因此R04整体仍WIP；旧4/5 FAIL记录不改。见[本轮记录](testing/STRUCTURAL_DELETE-20261024.md)。下列738a365及release582016c3是此前已冻结制品，不包含此次生产修复，不能继承本轮结果。
+
 **M1—M4 WIP，未达到发布门禁。** 最新代码本地提交738a365，已补齐固定NDK LLVM runtime/toolchain原文：44份离线正文，实际运行时122项。当前debug `b0ca3dd5`，优化且非debuggable本地调试证书release `582016c3`，默认unsigned `22f2f226`；完整SHA与制品/26条分项记录见[当前检查点](testing/CHECKPOINT-20261023.md)。开发记录。
 
 49 app/73 state JVM、38工具、两套lint/构建和三APK实际零字体/权限/备份/资产审计PASS。两设备44项许可hash/NDK完整正文显示PASS；同debug原生跨120分页/11宿主故障、controller/settings/resources/R08/R09/R10/预准备无学习重启分项PASS，**full仍因R04敏感预存组合音标4/5而FAIL**。同release两设备五引擎scope PASS，专用离线模拟器新装引擎组件PASS，不是完整系统IME D05。
 
 738a365隔离新源码/build/.cxx、warm固定SDK/JDK/Gradle输入重建整包22f2f226一致；96d源码另有新SDK/JDK/初始空Gradle cache整包复现证据。旧94b9d40f的各30分钟JNI观察独立记录，不继承为当前完整性能成绩。系统IME未由用户启用、iPhone原图缺失、R04未修复、完整安全/性能/正式签收未通过。[逐需求验收账](ACCEPTANCE.md)与[阻碍](OPEN_ISSUES.md)保留具体未交付项。
 
-R04调查追加：[宿主委托](testing/HOST_GESTURE_RESEARCH_PROTOCOL.md)两设备各36/36、[结构坐标](testing/HOST_BOUNDS_RESEARCH_PROTOCOL.md)各18/18合成案例通过，IC正文getter0；第二类确实新增结构请求，未接生产私密路径。原editor保持4/5 FAIL；这不是R04修复或完整隐私通过。隐私策略规定“仅禁止文字正文，必要结构信息可以使用”；已记录该定义，下一步接入生产异步删除与会话/超时防护，尚未关闭R04。
+R04调查追加：[宿主委托](testing/HOST_GESTURE_RESEARCH_PROTOCOL.md)两设备各36/36、[结构坐标](testing/HOST_BOUNDS_RESEARCH_PROTOCOL.md)各18/18合成案例通过，IC正文getter0；第二类确实新增结构请求，未接生产私密路径。原editor保持4/5 FAIL；这不是R04修复或完整隐私通过。隐私策略规定“仅禁止文字正文，必要结构信息可以使用”；已记录该定义，生产异步删除与会话/超时防护已通过上述组件测试，尚未关闭系统R04。
 
 以下是历史检查点及追加结果，最新制品不可继承旧哈希成绩。
 

@@ -1,0 +1,10 @@
+{
+  "stage": "behavior red: no delete barrier",
+  "tests": "16",
+  "failures": "3",
+  "failed_cases": [
+    "host deletion blocks following input and held repeats until one reply",
+    "failed or ambiguous host deletion drops deferred input and cannot be retried as a commit",
+    "late deletion response cannot unblock a different field deletion"
+  ]
+}

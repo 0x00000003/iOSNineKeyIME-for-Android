@@ -52,3 +52,9 @@
 | 036 | 2026-10-23 | Research only / production scope unresolved | 原私密DEL保留R04 4/5 FAIL。先冻结并在自有合成宿主测试字符级委托36例与Parcel结构坐标18例，分别记录正文getter0及结构查询次数；不将结构查询暗作“不取上下文” | 两设备分项通过，生产HostEditorAdapter/EditorPolicy未改；上下文边界在ADR037定义，在此之前按严格策略，不关闭R04。最小区域/异步/字段epoch/多宿主需另实现实测 |
 
 | 037 | 2026-10-23 | Accepted scope clarification; supersedes036待定部分 | 隐私策略定义为“禁止文字正文读取，允许必要结构信息”。私密不得取正文/学习/持久化；允许必要字符坐标/边界等结构元数据按当前会话在内存最小使用，并单独计数 | AGENTS约束4补充定义；允许继续生产删除路径实现，不代表R04/I05自动通过。必须覆盖最小区域、异步队列、字段epoch、超时、不支持宿主和真实系统IME |
+
+## ADR038 — 必要结构信息驱动的异步敏感删除（WIP）
+
+依据ADR037隐私范围定义，接受API34+结构查询+宿主字符粒度删除作为生产候选路径。只取当前行内必要坐标、selection和matrix，最多32个尾部单元；不读正文、segment finder、composingText、不持久化元数据。引入Controller异步host屏障及session/selection/连接校验，未知结果不自动重试，无DEL fallback。非敏感ICU路径保留，敏感同步入口拒绝。
+
+这是为修复真实组合音标FAIL做的架构改变，新增平台API但没有新增依赖/网络权限；固定依赖锁不变。21故障合成案例（含begin/end同步重入）和原R04生产组件已有新版本成绩；系统onUpdateCursorAnchorInfo与多宿主仍待用户启用IME，不能据组件成绩宣称P0关闭。详细协议/结果/边界见testing/STRUCTURAL_DELETE-20261024.md。

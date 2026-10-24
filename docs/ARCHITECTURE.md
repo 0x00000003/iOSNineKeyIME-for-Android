@@ -38,3 +38,5 @@ Trime 3.3.12 固定 librime 子模块正好是 1.17.0 对应 commit，同时带 
 ## M2薄服务实现偏离（ADR024）
 
 实际TrimeInputMethodService.onCreate直接依赖全局AppPrefs/RimeDaemon/主题/剪贴板和旧外部路径链路；为保留受测离线边界，薄服务继承同源LifecycleInputMethodService，复用Rime JNI和librime而不注册旧复杂前端。SerialRimeEngine单worker+全进程租约，KeyboardController连接真实HostEditorAdapter与临时NineKeyView。敏感field不调用引擎且保留租约防探针进入；field/end/hide失效回调。完整系统生命周期与多宿主测试仍未跑，不等于已适用日用。界面暂只取前100候选，显示分页不等于完整native分页协议。
+
+结构删除WIP补充（ADR038）：KeyboardHostPort的deleteAsync显式回调是controller顺序屏障；旧会话epoch先失效再结束port，避免同步取消回调排空旧队列。敏感HostEditorAdapter通过薄服务转发的CursorAnchorInfo获取必要坐标、一次TextBoundsInfo及有界宿主CHARACTER手势；不读文字正文，不读composing/segment finder，不持久化元数据，不发DEL后备。结果不明失败关闭并停止队列。系统回调/多宿主仍未验证；详细边界见testing/STRUCTURAL_DELETE-20261024.md。

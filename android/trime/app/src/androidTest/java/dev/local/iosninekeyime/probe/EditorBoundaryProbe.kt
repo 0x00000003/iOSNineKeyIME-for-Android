@@ -20,7 +20,7 @@ import org.json.JSONObject
 
 /** Real Android EditText/InputConnection, isolated debug host, fixed synthetic text only. */
 object EditorBoundaryProbe {
-    @androidx.annotation.RequiresApi(31)
+    @androidx.annotation.RequiresApi(34)
     fun run(instrumentation: Instrumentation): JSONObject {
         val context = instrumentation.targetContext
         val activity = instrumentation.startActivitySync(Intent(context, EditorHarnessActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) as EditorHarnessActivity
@@ -34,6 +34,8 @@ object EditorBoundaryProbe {
         var stale = false
         var deletionFixtures = 0
         var privacyReads = 0
+        var structuralRequests=0
+        val handler=android.os.Handler(android.os.Looper.getMainLooper())
         var sensitiveCases = 0
         var sensitiveDeletionFixtures = 0
         val metadataResults = org.json.JSONArray()
@@ -44,7 +46,13 @@ object EditorBoundaryProbe {
             instrumentation.waitForIdleSync()
             failure?.let { throw it } // Fail on the instrumentation worker, not by crashing the UI thread.
         }
-        fun fixture(value: String, cursor: Int = value.length) = main { activity.editor.setText(value); activity.editor.setSelection(cursor) }
+        fun fixture(value: String, cursor: Int = value.length) = main { activity.editor.setText(value); activity.editor.setSelection(cursor);host.updateSelection(session,cursor,cursor) }
+        fun privateDelete():EditResult {
+            val latch=java.util.concurrent.CountDownLatch(1);var result=EditResult.UNAVAILABLE
+            main {host.deleteAsync(session){result=it;latch.countDown()}}
+            check(latch.await(3,java.util.concurrent.TimeUnit.SECONDS)){"E_PRIVATE_DELETE_TIMEOUT"}
+            return result
+        }
         try {
             main {
                 connection = checkNotNull(activity.editor.onCreateInputConnection(EditorInfo()))
@@ -91,6 +99,11 @@ object EditorBoundaryProbe {
                     val actualInfo = EditorInfo()
                     connection = checkNotNull(activity.editor.onCreateInputConnection(actualInfo))
                     val guarded = object : InputConnectionWrapper(connection, false) {
+                        override fun requestCursorUpdates(mode:Int,filter:Int):Boolean {
+                            check(filter==(InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER or InputConnection.CURSOR_UPDATE_FILTER_EDITOR_BOUNDS)){"E_STRUCTURAL_FILTER"}
+                            handler.post {host.updateCursorAnchor(session,SyntheticCursorMetadata.anchor(activity.editor))};return true
+                        }
+                        override fun requestTextBoundsInfo(bounds:android.graphics.RectF,executor:java.util.concurrent.Executor,consumer:java.util.function.Consumer<android.view.inputmethod.TextBoundsInfoResult>){structuralRequests++;super.requestTextBoundsInfo(bounds,executor,consumer)}
                         override fun getSelectedText(flags: Int): CharSequence? { privacyReads++; return super.getSelectedText(flags) }
                         override fun getTextBeforeCursor(n: Int, flags: Int): CharSequence? { privacyReads++; return super.getTextBeforeCursor(n, flags) }
                         override fun getTextAfterCursor(n: Int, flags: Int): CharSequence? { privacyReads++; return super.getTextAfterCursor(n, flags) }
@@ -99,9 +112,9 @@ object EditorBoundaryProbe {
                         override fun getCursorCapsMode(reqModes: Int): Int { privacyReads++; return super.getCursorCapsMode(reqModes) }
                     }
                     session++
-                    host.begin(session, guarded, EditorPolicy.from(actualInfo.inputType, actualInfo.imeOptions, userPrivate))
-                    check(host.delete(session) == EditResult.DELEGATED) { "E_PRIVATE_DELETE" }
+                    host.begin(session, guarded, EditorPolicy.from(actualInfo.inputType, actualInfo.imeOptions, userPrivate),actualInfo)
                 }
+                check(privateDelete()==EditResult.ACCEPTED){"E_PRIVATE_DELETE"}
                 main {
                     val passed = activity.editor.text.toString() == "1" && privacyReads == 0
                     if (passed) sensitiveCases++
@@ -110,7 +123,7 @@ object EditorBoundaryProbe {
             }
             for ((index, cluster) in clusters.withIndex()) {
                 fixture("A${cluster}B", 1 + cluster.length)
-                main { check(host.delete(session) == EditResult.DELEGATED) { "E_PRIVATE_CLUSTER_DELETE" } }
+                check(privateDelete()==EditResult.ACCEPTED){"E_PRIVATE_CLUSTER_DELETE"}
                 main {
                     val passed = activity.editor.text.toString() == "AB"
                     if (passed) sensitiveDeletionFixtures++
@@ -123,6 +136,7 @@ object EditorBoundaryProbe {
                 .put("same_session_restore", restored).put("old_field_not_replayed", stale)
                 .put("grapheme_and_selection_deletion_passed", deletionFixtures).put("deletion_fixture_count", 6)
                 .put("sensitive_metadata_cases_passed", sensitiveCases).put("sensitive_context_reads", privacyReads)
+                .put("sensitive_structural_bounds_requests",structuralRequests).put("cursor_anchor_delivery","owned synthetic host bridge; system IMS callback NOT tested")
                 .put("sensitive_metadata_results", metadataResults).put("sensitive_deletion_results", privateDeletionResults)
                 .put("sensitive_grapheme_deletion_passed", sensitiveDeletionFixtures).put("sensitive_deletion_fixture_count", 5)
                 .put("normal_learning_tree_unchanged", treeUnchanged)

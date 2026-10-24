@@ -68,7 +68,7 @@ object CandidatePagingBoundaryProbe {
                     override fun begin(session:Long,sensitive:Boolean){host.begin(session,connection,EditorPolicy.from(info.inputType,info.imeOptions,false))}
                     override fun commit(effect:Effect.Commit)=host.commit(effect)
                     override fun retry(session:Long)=host.retry(session)
-                    override fun delete(session:Long,sensitive:Boolean){host.delete(session)}
+                    override fun deleteAsync(session:Long,sensitive:Boolean,reply:(Boolean)->Unit){host.deleteAsync(session){reply(it==dev.local.iosninekeyime.editor.EditResult.ACCEPTED)}}
                     override fun action(session:Long,action:EditorAction){host.action(session,action)}
                     override fun end(session:Long){host.end(session)}
                 }

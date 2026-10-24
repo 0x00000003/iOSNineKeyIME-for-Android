@@ -62,9 +62,11 @@ class ProbeInstrumentation : Instrumentation() {
             if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly && !boundsResearchOnly) {
                 val editor = EditorBoundaryProbe.run(this)
                 val faults = HostConnectionFailureProbe.run(this)
+                val structuralFaults = StructuralDeleteFailureProbe.run(this)
                 result.put("host_editor_component", editor)
                 result.put("host_connection_fault_component", faults)
-                result.put("pass", result.getBoolean("pass") && editor.getBoolean("pass") && faults.getBoolean("pass"))
+                result.put("structural_delete_fault_component",structuralFaults)
+                result.put("pass", result.getBoolean("pass") && editor.getBoolean("pass") && faults.getBoolean("pass") && structuralFaults.getBoolean("pass"))
                 if(!editorOnly){
                     val paging=CandidatePagingBoundaryProbe.run(this)
                     result.put("native_candidate_paging_component",paging)

@@ -1,0 +1,114 @@
+{
+  "scope": "production adapter/controller synthetic component checkpoint; NOT full IME/all-path privacy/release",
+  "debug_apk_sha256": "77636c33c8016e47b46f57157c262fef49eddea4a6bc8dae9f0c3268d08a611b",
+  "test_apk_sha256": "712e60e98f1110bfd3e691fa918d46aba069ba4749e3fff6e5e47bee409c4436",
+  "unsigned_release_sha256": "02c7f87080273f13bd6ffd0a1afe6e77d2ce7ee8295816ed0bf10d2e3d64458f",
+  "unsigned_release_bytes": 61731337,
+  "state_tests": 77,
+  "app_jvm_tests": 49,
+  "tooling_tests": 40,
+  "records": [
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-controller-red.json",
+      "sha256": "b7aa279090ddfa86f15e3505c56bc550916e3fa5a866778e78682e5330c579e2",
+      "pass": null
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-debug-audit.json",
+      "sha256": "96e61af0905a00a93f7860cc0a2c1a63c91fcacfc92f29a489db5244bf506ef9",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-fault-emulator-editor.json",
+      "sha256": "af097b246058a99ebbe032bacae70549924cb47552d8d6d0bc813ce39e6023ab",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-fault-pixel-editor.json",
+      "sha256": "53a4857716a27c09fbcce49df3444a176be5c019b6ff4e67e0b5004c9dc9f229",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-final-emulator-controller.json",
+      "sha256": "73f2733bcaf87befeea72d593694ab9c623b02d1632f8c7b3884b45f94eef440",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-final-emulator-full.json",
+      "sha256": "026a5b6cacf8e99f17ebec02d1d5e14a23dbcf4acfb2950bf196d815423fe907",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-final-pixel-controller.json",
+      "sha256": "94b53337b7389293ec4f831d97749b86c78d66d9da7a03ccc4f772275e345c7e",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-final-pixel-full.json",
+      "sha256": "9493b67f78bfca7d6dc548ba97f144a57c137106ff7a865fa6f04a7e39541683",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-first-emulator-editor.json",
+      "sha256": "322b6b9b6eb61c19bae83a88c6325387d6a1a8469204690fefe5043c5757f76e",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-first-pixel-editor.json",
+      "sha256": "8af73ebe01fcaa1a8f8b28fcec60b6cdc658ae173327964c22038bdb00b93272",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-debug-audit.json",
+      "sha256": "1dfa2db697e73dda86ce75e2e78a54e6a99c19aeccdddab93e09abcd6a5f8d46",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-emulator-controller.json",
+      "sha256": "398d450d6a5afa8bbb450d0260d63b2aeb1d57c7bea370b896a55b0da7cb7afa",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-emulator-full.json",
+      "sha256": "4a33e6f50be19a7661f6c1ee693df0a152bf4b84b237577a8ac9729029ad4c22",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-pixel-controller.json",
+      "sha256": "670023cc2d918ecd91bbb25699da16a29e8275bab5b69a6e2766a9bec084eb14",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-pixel-full.json",
+      "sha256": "0987275fab03d0add97bdb72ab59bc58db14c4441a85c5992edac671faf6fcf5",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-red-emulator-editor.json",
+      "sha256": "278c954387e66562f84af56775a3f935ac7c5a042228498917bdfaee0ff74252",
+      "pass": false
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-reentry-release-audit.json",
+      "sha256": "514c02b179567634ce5c5033aa4df9dbe3b90de6096d4a88cc140c7197a7d742",
+      "pass": true
+    },
+    {
+      "path": "docs/testing/evidence/m1/structural-delete-source-files.json",
+      "sha256": "9bbac870a60d830a4a31fb95c450f15d6845d8bb25355db7e9325f2e0322aeb2",
+      "pass": null
+    }
+  ],
+  "debug_and_release_lint": "PASS",
+  "production_sensitive_graphemes_each_device": {
+    "passed": 5,
+    "planned": 5
+  },
+  "structural_faults_each_device": {
+    "passed": 21,
+    "planned": 21
+  },
+  "system_ime_lifecycle": "NOT_RUN",
+  "visual_reference": "BLOCKED",
+  "release_gates_complete": false
+}

@@ -17,6 +17,9 @@ class KeyboardControllerTest : StringSpec({
     }
     class Host : KeyboardHostPort {
         var available = true
+        var deferredDelete = false
+        var onEnd: (() -> Unit)? = null
+        val deletes = mutableListOf<(Boolean) -> Unit>()
         val text = mutableListOf<String>()
         var reenter: (() -> Unit)? = null
         val gate = HostCommitGate(commit = { value ->
@@ -26,13 +29,46 @@ class KeyboardControllerTest : StringSpec({
         override fun begin(session: Long, sensitive: Boolean) { gate.startSession(session) }
         override fun commit(effect: Effect.Commit) = gate.deliver(effect)
         override fun retry(session: Long) = gate.retry(session)
-        override fun delete(session: Long, sensitive: Boolean) {}
+        override fun deleteAsync(session: Long, sensitive: Boolean, reply: (Boolean) -> Unit) {
+            deletes += reply
+            if (!deferredDelete) reply(true)
+        }
         override fun action(session: Long, action: EditorAction) {}
-        override fun end(session: Long) { gate.endSession(session) }
+        override fun end(session: Long) { gate.endSession(session); onEnd?.invoke() }
     }
     fun Engine.answer(index: Int, input: String, commit: String? = null, candidates: List<String> = if (input.isEmpty()) emptyList() else listOf("synthetic"), offset:Int=0, more:Boolean=false) {
         val stamp = when (val c = commands[index]) { is Effect.Key -> c.stamp; is Effect.Select -> c.stamp; is Effect.Clear -> c.stamp; is Effect.FetchCandidates -> c.stamp; else -> error("fixture") }
         replies[index](Event.Snapshot(stamp, input, input, candidates, commit,candidateOffset=offset,hasMoreCandidates=more))
+    }
+    "host deletion blocks following input and held repeats until one reply" {
+        val e=Engine();val h=Host();h.deferredDelete=true;val c=KeyboardController(e,h)
+        c.start(1,true,Layout.LATIN,EditorAction.DONE)
+        c.submit(Event.Backspace);repeat(30){c.submitRepeat(Event.Backspace)};c.submit(Event.Text("a"))
+        h.deletes.size shouldBe 1;h.text shouldBe emptyList()
+        h.deletes[0](true);h.text shouldBe listOf("a")
+        h.deletes[0](false);c.state.errorCode shouldBe null
+    }
+    "failed or ambiguous host deletion drops deferred input and cannot be retried as a commit" {
+        val e=Engine();val h=Host();h.deferredDelete=true;val c=KeyboardController(e,h)
+        c.start(1,true,Layout.LATIN,EditorAction.DONE)
+        c.submit(Event.Backspace);c.submit(Event.Text("a"));h.deletes[0](false)
+        c.state.errorCode shouldBe "E_HOST_DELETE";h.text shouldBe emptyList()
+        c.retryHost(1);c.submit(Event.Cancel);c.state.errorCode shouldBe "E_HOST_DELETE";c.submit(Event.Text("b"));h.text shouldBe emptyList()
+        c.start(2,true,Layout.LATIN,EditorAction.DONE);c.submit(Event.Text("c"));h.text shouldBe listOf("c")
+        h.deletes[0](true);h.text shouldBe listOf("c")
+    }
+    "synchronous delete completion from end cannot drain old field input" {
+        val e=Engine();val h=Host();h.deferredDelete=true;val c=KeyboardController(e,h)
+        c.start(1,true,Layout.LATIN,EditorAction.DONE);c.submit(Event.Backspace);c.submit(Event.Text("old"))
+        h.onEnd={h.deletes[0](true)}
+        c.start(2,true,Layout.LATIN,EditorAction.DONE);c.submit(Event.Text("new"))
+        h.text shouldBe listOf("new");c.state.stamp.session shouldBe 2L
+    }
+    "late deletion response cannot unblock a different field deletion" {
+        val e=Engine();val h=Host();h.deferredDelete=true;val c=KeyboardController(e,h)
+        c.start(1,true,Layout.LATIN,EditorAction.DONE);c.submit(Event.Backspace)
+        c.start(2,true,Layout.LATIN,EditorAction.DONE);c.submit(Event.Backspace);c.submit(Event.Text("a"))
+        h.deletes[0](true);h.text shouldBe emptyList();h.deletes[1](true);h.text shouldBe listOf("a")
     }
     "native page is an ordering barrier before the next digit" {
         val e=Engine();val h=Host();val c=KeyboardController(e,h)

@@ -1,6 +1,6 @@
 # 当前需求验收账：未签收
 
-本表针对代码检查点738a365，制品完整SHA与26条分项记录见[CHECKPOINT](testing/CHECKPOINT-20261023.md)。`组件PASS`不是相应需求整体PASS；系统IME尚未由用户启用，测试只在自有合成宿主中运行。不得据表内任一分项宣布应用完成。
+原表针对代码检查点738a365，制品完整SHA与26条分项记录见[CHECKPOINT](testing/CHECKPOINT-20261023.md)。`组件PASS`不是相应需求整体PASS；系统IME尚未由用户启用，测试只在自有合成宿主中运行。不得据表内任一分项宣布应用完成。
 
 | 需求 | 当前可复查证据 | 整体尚缺 / 状态 |
 | --- | --- | --- |
@@ -23,3 +23,5 @@
 | R17 P2触感/动画 | 临时UI；未声称iOS算法/素材相同 | 非首次P0/P1签收替代项，待参考后调校 |
 
 M1/M2/M3/M4/M6当前均是WIP，M5视觉BLOCKED；没有勾选任何尚缺证据的阶段完成框。代码738a365/96d627a与性能记录615a477等均按版本提交。后续先由用户按系统设置启用测试IME并提供原图，才可补相应系统/视觉门禁；R04失败需继续定位/设计，不以用户启用或原图到位自动视为解决。
+
+最新增量：生产debug77636c33/test712e60e9在两设备full探针及controller组件PASS，原R04敏感字素5/5、metadata6/6、正文getter0/结构请求11，21故障均PASS。77 state/49 app/40工具及debug lint/实际APK审计PASS。旧表4/5是已冻结旧DEL路径事实，不覆盖；系统IMS cursor anchor仍经合成桥接，因此R04与M2全门禁保持WIP。详见testing/STRUCTURAL_DELETE-20261024.md及structural-delete-summary.json，旧release不包含此修复，当前release成绩另列。
