@@ -1,3 +1,5 @@
+**背景：用惯了 iPhone 原生输入法，也希望输入内容只留在本机，于是为 Android 开发了这款离线输入法，延续熟悉的九宫格体验，并通过本地学习，根据输入习惯逐步优化候选词推荐。**
+
 # iOSNineKeyIME for Android
 
 **把熟悉的 iPhone 风格中文九宫格，带到 Android。**
