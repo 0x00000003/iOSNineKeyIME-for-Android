@@ -1,0 +1,28 @@
+{
+  "scope": "only enumerated project-owned ignored rebuild/install caches; tracked files and all APK/evidence paths retained",
+  "directories_removed": [
+    ".cache/m4-source-rebuild",
+    ".cache/m4-source-rebuild-assets-fixed",
+    ".cache/m6-clean-toolchain",
+    ".cache/m6-current-clean-toolchain",
+    ".cache/m6-ndk-notice-rebuild",
+    ".cache/emulator-x64-unused",
+    ".cache/clean-toolchain-downloads",
+    ".cache/upstream/trime/app/build",
+    ".cache/upstream/trime/app/.cxx"
+  ],
+  "disk_free_increase_bytes": 25879736320,
+  "delivery_hash_verification": [
+    {
+      "packet": "wip-738a365",
+      "files": 55,
+      "pass": true
+    },
+    {
+      "packet": "wip-96d627a",
+      "files": 5,
+      "pass": true
+    }
+  ],
+  "limitations": "APFS measured free-space delta; historical isolated working directories removed, original public PASS/FAIL evidence remains. No Android tests run for cache cleanup."
+}

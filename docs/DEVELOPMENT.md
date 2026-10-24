@@ -60,3 +60,4 @@ prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/
 实际项目与included convention build使用STRICT依赖锁及严格verification；新增配置无lock state、意外依赖均失败关闭。常规构建不要加--write-locks绕过失败，应先定位、核来源/许可与差异，再审查锁的有意更新。未用UTP配置没有为报告任务额外白名单。
 
 独立工具链命令：`python3 scripts/bootstrap_clean_toolchain.py --destination .cache/rebuild-new --source-commit 2ad1de3 --fetch-archives`。目标必须新建，使用固定HTTPS归档/哈希，约需12GiB以上余量；沿用已接受同条款SDK marker与公共table/model输入，创建新SDK/JDK/Gradle cache，不调用adb。脚本输出目标内bootstrap-receipt.json及gradle-build.txt，网络失败保留原状态，不改TLS/哈希或自动宣布成功。实际历史2ad源码首次TLS失败、同规则重试整包复现条件见TOOLCHAIN记录；这不替代当前版本同哈希回归或完整M6。
+

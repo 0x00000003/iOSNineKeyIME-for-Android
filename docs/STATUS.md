@@ -1,5 +1,7 @@
 # 当前状态
 
+磁盘管理修正：2026-10-24回收历史隔离构建、未用模拟器及安装包缓存9处，实际释放24.10GiB；两交付包60文件SHA保持一致。只保留一套日常工具链与最多一个必要隔离目录，旧重建路径已清理，原结果保留。见[清理记录](testing/evidence/m1/storage-reclamation-20261024.json)。
+
 **M1—M4 WIP，未达到发布门禁。** 最新代码本地提交738a365，已补齐固定NDK LLVM runtime/toolchain原文：44份离线正文，实际运行时122项。当前debug `b0ca3dd5`，优化且非debuggable本地调试证书release `582016c3`，默认unsigned `22f2f226`；完整SHA与制品/26条分项记录见[当前检查点](testing/CHECKPOINT-20261023.md)。开发记录。
 
 49 app/73 state JVM、38工具、两套lint/构建和三APK实际零字体/权限/备份/资产审计PASS。两设备44项许可hash/NDK完整正文显示PASS；同debug原生跨120分页/11宿主故障、controller/settings/resources/R08/R09/R10/预准备无学习重启分项PASS，**full仍因R04敏感预存组合音标4/5而FAIL**。同release两设备五引擎scope PASS，专用离线模拟器新装引擎组件PASS，不是完整系统IME D05。
