@@ -1,0 +1,21 @@
+{
+  "status": "WIP",
+  "debug_sha256": "831233e43724728b72ddcbbe78c7e9ef715ee41cfa469f585caa6ef6ab164ca1",
+  "unsigned_sha256": "f857df0c50277e0a6a005b22d6ef56eb269a9e925373dc0f03681692ff2c3a80",
+  "production_sources": {
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/editor/StructuralDelete.kt": "97ee90c4bd0995d08a5a9179c2c5d88912cc28c1909797b30308f6c26406cead",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/editor/HostEditorAdapter.kt": "1ab949b3a0cb9e9fc4def3f2a0f9ff0dcc017223dd3a4c76f9ddceccde945738",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ime/NineKeyInputMethodService.kt": "0a9abc642f9eb3b988843b1caf08cabc5999378d795e6823440dff8317386829"
+  },
+  "real_pixel_scopes": {
+    "core": "10/10 PASS",
+    "private-delete": "36/36 PASS",
+    "privacy-queue": "20/20 PASS; sensitive body getters0"
+  },
+  "full_component": "Pixel/API36 28/28 structural faults; metadata6/6; private5/5; cursor22/bounds11",
+  "jvm": "app50/state77 PASS",
+  "tooling": "42 PASS",
+  "debug_release_build_lint_static_apk": "PASS",
+  "full_security_visual_release_acceptance": "NOT COMPLETE",
+  "controller_component": "Pixel/API36 PASS"
+}

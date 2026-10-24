@@ -33,6 +33,7 @@ object StructuralDeleteFailureProbe {
             "bounds_unsupported","bounds_throw","bounds_timeout","field_switch_before_bounds","selection_move_before_bounds",
             "gesture_unsupported","gesture_throw_before","gesture_throw_after","gesture_timeout_before","gesture_timeout_after",
             "duplicate_bounds","duplicate_gesture","duplicate_failed_gesture","selected_range","empty_cursor","reentrant_begin","reentrant_end",
+            "post_cursor_unsupported","post_cursor_throw","post_anchor_timeout","post_anchor_old","post_anchor_wrong_selection","post_field_switch","post_selection_range",
         )
         try {
             for(id in plans){
@@ -57,11 +58,25 @@ object StructuralDeleteFailureProbe {
                         override fun sendKeyEvent(event:android.view.KeyEvent):Boolean {keyCalls++;return super.sendKeyEvent(event)}
                         override fun requestCursorUpdates(mode:Int,filter:Int):Boolean {
                             anchorCalls++
-                            check(mode==InputConnection.CURSOR_UPDATE_IMMEDIATE && filter==(InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER or InputConnection.CURSOR_UPDATE_FILTER_EDITOR_BOUNDS)){"E_STRUCTURAL_FILTER"}
+                            val expectedFilter=if(anchorCalls==1)InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER or InputConnection.CURSOR_UPDATE_FILTER_EDITOR_BOUNDS else InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER
+                            check(mode==InputConnection.CURSOR_UPDATE_IMMEDIATE && filter==expectedFilter){"E_STRUCTURAL_FILTER"}
+                            if(anchorCalls>1){
+                                when(id){
+                                    "post_cursor_unsupported" -> {faultApplied=true;return false}
+                                    "post_cursor_throw" -> {faultApplied=true;throw IllegalStateException()}
+                                    "post_anchor_timeout" -> {faultApplied=true;return true}
+                                    "post_field_switch" -> {session++;host.begin(session,guarded,policy,info);faultApplied=true;return true}
+                                    "post_selection_range" -> {activity.editor.setSelection(0,1);host.updateSelection(session,0,1);faultApplied=true;return true}
+                                }
+                            }
                             if(id=="cursor_unsupported")return false
                             if(id=="cursor_throw")throw IllegalStateException()
                             if(id!="anchor_timeout")handler.post {
-                                if(id=="anchor_wrong_selection"){
+                                if(anchorCalls>1 && id in setOf("post_anchor_old","post_anchor_wrong_selection")){
+                                    faultApplied=true
+                                    val caret=if(id=="post_anchor_old")2 else 3
+                                    host.updateCursorAnchor(session,CursorAnchorInfo.Builder().setSelectionRange(caret,caret).setMatrix(android.graphics.Matrix()).build())
+                                }else if(id=="anchor_wrong_selection"){
                                     val original=SyntheticCursorMetadata.anchor(activity.editor)
                                     host.updateCursorAnchor(session,CursorAnchorInfo.Builder().setSelectionRange(0,0).setMatrix(original.matrix).build())
                                 }else host.updateCursorAnchor(session,SyntheticCursorMetadata.anchor(activity.editor))
@@ -120,19 +135,21 @@ object StructuralDeleteFailureProbe {
                 instrumentation.waitForIdleSync()
                 main {
                     val expected=when(id){
-                        "field_switch_before_bounds","selection_move_before_bounds","anchor_wrong_selection","reentrant_begin","reentrant_end" -> EditResult.STALE
+                        "field_switch_before_bounds","selection_move_before_bounds","anchor_wrong_selection","reentrant_begin","reentrant_end","post_field_switch" -> EditResult.STALE
+                        "post_cursor_unsupported","post_cursor_throw","post_anchor_timeout","post_anchor_old","post_anchor_wrong_selection","post_selection_range" -> EditResult.AMBIGUOUS
                         "gesture_throw_before","gesture_throw_after","gesture_timeout_before","gesture_timeout_after" -> EditResult.AMBIGUOUS
                         "duplicate_bounds","duplicate_gesture","duplicate_failed_gesture","selected_range","empty_cursor" -> EditResult.ACCEPTED
                         else -> EditResult.UNAVAILABLE
                     }
                     val expectedBody=when(id){
-                        "duplicate_bounds","duplicate_gesture","duplicate_failed_gesture","gesture_throw_after","gesture_timeout_after" -> "A"
+                        "duplicate_bounds","duplicate_gesture","duplicate_failed_gesture","gesture_throw_after","gesture_timeout_after",
+                        "post_cursor_unsupported","post_cursor_throw","post_anchor_timeout","post_anchor_old","post_anchor_wrong_selection","post_field_switch","post_selection_range" -> "A"
                         "reentrant_begin","reentrant_end" -> "ABQ"
                         "selected_range" -> ""
                         else -> "AB"
                     }
                     val exact=activity.editor.text.toString()==expectedBody
-                    val faultRequired=id in setOf("field_switch_before_bounds","selection_move_before_bounds","gesture_throw_after","gesture_timeout_after","reentrant_begin","reentrant_end")
+                    val faultRequired=id.startsWith("post_") || id in setOf("field_switch_before_bounds","selection_move_before_bounds","gesture_throw_after","gesture_timeout_after","reentrant_begin","reentrant_end")
                     val callsCorrect=when(id){
                         "duplicate_bounds","duplicate_gesture" -> boundsCalls==1 && gestureCalls==1
                         "duplicate_failed_gesture" -> boundsCalls==1 && gestureCalls==2

@@ -135,3 +135,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 本轮系统核心最终befe66f4真实Pixel10/10、敏感字素删除36/36 PASS（独立UID，无坐标回调桥）；修复导航inset/父测量并用实际窗口稳定门控触控。IME导航控件高度不同于宿主手势条，错误等值断言的FAIL保留；最终协议保持上屏/动作次数原断言。两设备full组件PASS，四布局×四inset16/16，50app/77state/42工具、两套lint/实际APK静态审计PASS；新增testhost lint通过。未覆盖系统敏感正文getter拒绝、异步删除期间连续输入/生命周期/全安全和原图，继续WIP，按贡献流程提交。
 
 系统privacy-queue协议先提交5eec11e后运行，befe真实Pixel17/20红测：10字素/5选区、普通续输/跨字段PASS，敏感正文getter全0；延迟删除期间两续输和长按均FAIL。源定位服务将自身删除selection当外移清队列，拟补删除后确认；原FAIL保存，不改预期、不关闭R04。
+
+删除确认最终debug831233e4/unsignedf857df0c：真实Pixel core10/10、敏感字素36/36、同host/test privacy-queue20/20，正文getter0；两设备full28故障PASS、敏感5/5、metadata6/6、bounds11/cursor22。删除前旧预测队列在确认后清理；默认unsigned仅构建/lint/静态，正式release/全安全未签收。用户随后补5张深色参考，先保存只读私有原件与独立键盘裁图、公开非正文测量，再推进图示布局；原缺图历史保持，不沿用旧BLOCKED描述新状态。

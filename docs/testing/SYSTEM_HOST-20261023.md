@@ -41,3 +41,13 @@ frame协议首版错误地要求IME底排间距等于普通宿主的导航inset+
 ## IPC正文拒绝/队列红测
 
 协议5eec11e提前冻结20例。新增GuardedEditText仅在真实TextView IC外计数/拒绝before/after/selected/extracted/surrounding/caps/takeSnapshot，并延迟真实TextBoundsInfo结果，无坐标/anchor桥。befe66f4 +hostea3e5216/test32d0b1f0真实Pixel privacy-queue17/20 FAIL（system-host-privacy-queue-red-pixel）：五敏感类型字素10例、选区5例、普通删除续输和pending跨字段均PASS，敏感正文getter全部0。password/no-learn延迟查询期间a/b续输FAIL，实际观察到已请求未交付；长按八ASCII只发一次结构/手势而FAIL。不能用此前36/36关闭R04全行为。源检查对应服务onUpdateSelection把自己删除引发的光标变化当外移，取消队列/触控；拟增加删除后cursor anchor确认与同操作selection归属，再跑相同20例。
+
+## 删除后光标确认首轮结果
+
+生产dfa8f7a5增加SUCCESS后的仅insertion-marker确认，caret确认前不解队列，自身向前collapsed selection不触发触控/队列取消。与红测完全相同hostea3e5216/test32d0b1f0在真实Pixel privacy-queue20/20 PASS：两延迟续输、长按八字符和跨字段均原预期通过；敏感正文getter0，长按8 bounds/8 gestures/16 cursor requests。未知结果无fallback/replay。
+
+首轮两设备full为FAIL：旧EditorBoundary夹具仅接受删除前combined filter，遇新增最小确认filter抛错而中止（E_PROBE_EXECUTION），未误报部分PASS。更新夹具严格交替initial combined/post insertion-only，新增总cursor22/bounds11断言后，同dfa两设备full PASS，原R04敏感5/5、metadata6/6、正文0、28结构故障全部PASS。新增七例覆盖已执行后cursor不支持/抛异常/超时/旧anchor/错误selection/切字段/选区冲突，均不得第二次删除。
+
+复核时补一处清理：确认后caret取代删除前尚留的预测selection队列，避免旧预测被将来的用户外移误认。该微调产生新的制品，必须绑定新SHA回归，不能沿用dfa成绩。50app/77state、两套lint/默认unsigned构建已在dfa通过；本地优化签名构建也成功但尚未运行，不写正式签收。
+
+删除确认最终831233e4（三scope均绑定本SHA）：真实Pixel core10/10、private-delete36/36、privacy-queue20/20 PASS；两设备full28故障PASS、bounds11/cursor22且敏感正文getter0。默认unsignedf857df0c实际APK静态PASS，未签名运行；此前本地优化构建是dfa代码，不能归到831。参考图已纳入测量，下一步改UI后须再次回归实际点击/切换，不把旧几何测试继承到新布局。

@@ -1,6 +1,8 @@
 # 当前状态
 
-**2026-10-23系统IME接续（WIP）：** 两个本项目测试条目均已启用；已核选中旧优化版后切调试版，不再受“未启用”阻碍。独立UID `:testhost`已加入，复用唯一工具链；两设备15字段metadata+本地WebView准备16/16。真实Pixel core从首键丢失FAIL，经窗口动画屏障到8/10；导航inset修正后的debug `befe66f4`经实际窗口稳定协议到10/10，private-delete系统scope36/36。50 app/77 state/42工具、两套lint/构建/实际APK静态审计PASS；四布局×四inset实际视图组件两设备16/16。新增privacy-queue20例为17/20 FAIL：敏感getter0，但异步续输/长按删除失败，正在补自身selection归属/确认屏障。均不关闭完整M2/R04；新记录/原失败见[系统宿主记录](testing/SYSTEM_HOST-20261023.md)。下列“未启用/不得切换”均为授权前历史，当前以本段与AGENTS新授权为准。
+**最新生产检查点（WIP，2026-10-23）：** debug `831233e4` / 默认unsigned `f857df0c` 已补删除后真实caret确认，前次系统17/20红测保留。相同独立host/test在真实Pixel core10/10、敏感字素36/36、正文拒绝/异步续输/长按/切字段20/20均PASS，敏感正文getter0；同debug两设备full组件28结构故障PASS、敏感5/5和metadata6/6、bounds11/cursor22，controller两设备PASS。50app/77state/42工具、两套lint/构建/实际APK静态审计PASS；release尚未绑定本最终哈希运行，不称完整M2/R04/I05安全验收。系统测试的两个本项目IME均已启用；名称现已区分调试/优化测试版，已安装旧优化版尚未随本轮更新。见[系统宿主记录](testing/SYSTEM_HOST-20261023.md)。下列未启用/未授权等均为此前历史。
+
+**M5参考已补到一部分：** 用户现已提供5张深色JPEG，包含中文九键、数字、符号、英文、Emoji。原件只读并留在ignored私有参考目录，键盘裁图/5张SHA/矩形测量已保存；聊天/候选正文不入Git。正在按宽度归一化重做布局与切换，尚无新UI实现或对照PASS。iOS版本/机型/显示缩放/文字大小待答复，浅色/按下高亮/其他状态仍缺；不再把这五种布局统一标作无图BLOCKED，更不宣称1:1。见spec/reference/ios-dark-v1.json。
 
 磁盘管理修正：2026-10-24回收历史隔离构建、未用模拟器及安装包缓存9处，实际释放24.10GiB；两交付包60文件SHA保持一致。只保留一套日常工具链与最多一个必要隔离目录，旧重建路径已清理，原结果保留。见[清理记录](testing/evidence/m1/storage-reclamation-20261024.json)。
 

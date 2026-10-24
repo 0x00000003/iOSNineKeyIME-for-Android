@@ -17,7 +17,8 @@ import dev.local.iosninekeyime.state.HostCommitGate
 enum class EditResult { ACCEPTED, DELEGATED, UNAVAILABLE, STALE, CONTEXT_LIMIT, AMBIGUOUS }
 
 /** Owner-thread adapter; the service must pass only its current field's connection. No logging/IO. */
-class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit) = { { } }) {
+class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit) = { { } },
+                        private val onDeleteSelectionSettled:(Long,Int)->Unit={_,_->}) {
     private var session = 0L
     private var active = false
     private var connection: InputConnection? = null
@@ -110,8 +111,14 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
 
     fun updateSelection(expectedSession:Long,start:Int,end:Int) {
         if(!active || session!=expectedSession)return
-        if(start!=selectionStart || end!=selectionEnd){selectionVersion++;selectionStart=start;selectionEnd=end}
+        if(start!=selectionStart || end!=selectionEnd){
+            selectionVersion++;selectionStart=start;selectionEnd=end
+            if(Build.VERSION.SDK_INT>=34)structural?.selection(start,end)
+        }
     }
+
+    fun ownsSelectionUpdate(expectedSession:Long,start:Int,end:Int):Boolean =
+        active && session==expectedSession && Build.VERSION.SDK_INT>=34 && structural?.ownsSelection(start,end)==true
 
     fun updateCursorAnchor(expectedSession:Long,info:CursorAnchorInfo) {
         if(active && session==expectedSession && sensitive && Build.VERSION.SDK_INT>=34)structural?.anchor(info)
@@ -130,12 +137,13 @@ class HostEditorAdapter(private val onCommitAttempt: (Int) -> ((Boolean) -> Unit
         val worker=structural?:StructuralDelete(Handler(Looper.getMainLooper())).also {structural=it}
         deleting=true
         worker.start(editor,selectionStart,selectionEnd,
-            valid={current(expectedSession,editor)},selectionCurrent={selectionVersion==version}) { result ->
-            deleting=false
-            // A successful gesture may precede its selection callback. Do not guess its UTF-16 size.
-            if(result==EditResult.ACCEPTED && current(expectedSession,editor)){
-                selectionStart=-1;selectionEnd=-1;selectionVersion++
-            }
+            valid={current(expectedSession,editor)},selectionCurrent={selectionVersion==version},settled={caret->
+                if(current(expectedSession,editor)){
+                    selectionStart=caret;selectionEnd=caret;selectionVersion++
+                    onDeleteSelectionSettled(expectedSession,caret)
+                }
+            }) { result ->
+            if(current(expectedSession,editor))deleting=false
             reply(result)
         }
     }

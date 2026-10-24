@@ -26,6 +26,15 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         if(position>=0){expectedSelections.addLast(position);while(expectedSelections.size>64)expectedSelections.removeFirst();selectionStart=position;selectionEnd=position}
         val finish:(Boolean)->Unit={accepted -> if(!accepted && expectedSession==session){expectedSelections.clear();expectedSelections.addAll(oldQueue);selectionStart=oldStart;selectionEnd=oldEnd}}
         finish
+    },onDeleteSelectionSettled={expectedSession,caret->
+        if(fieldActive && expectedSession==session){
+            // The confirmed caret supersedes predictions from edits preceding this deletion.
+            expectedSelections.clear()
+            if(observedSelectionStart!=caret || observedSelectionEnd!=caret){
+                expectedSelections.addLast(caret);while(expectedSelections.size>64)expectedSelections.removeFirst()
+            }
+            selectionStart=caret;selectionEnd=caret
+        }
     })
     private lateinit var engine:SerialRimeEngine
     private lateinit var controller:KeyboardController
@@ -36,6 +45,8 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
     private var info:EditorInfo?=null
     private var selectionStart=-1
     private var selectionEnd=-1
+    private var observedSelectionStart=-1
+    private var observedSelectionEnd=-1
     private val expectedSelections=ArrayDeque<Int>()
 
     override fun onCreate() {
@@ -80,6 +91,7 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         keyboard?.cancelTouches()
         info=attribute;fieldActive=true;session++
         selectionStart=attribute.initialSelStart;selectionEnd=attribute.initialSelEnd;expectedSelections.clear()
+        observedSelectionStart=selectionStart;observedSelectionEnd=selectionEnd
         val policy=EditorPolicy.from(attribute.inputType,attribute.imeOptions,userPrivate)
         val variation=attribute.inputType and InputType.TYPE_MASK_VARIATION
         val latin=policy.sensitive || variation in setOf(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS,InputType.TYPE_TEXT_VARIATION_WEB_EMAIL_ADDRESS,InputType.TYPE_TEXT_VARIATION_URI)
@@ -98,9 +110,11 @@ class NineKeyInputMethodService : LifecycleInputMethodService() {
         super.onUpdateSelection(oldSelStart,oldSelEnd,newSelStart,newSelEnd,candidatesStart,candidatesEnd)
         if(!fieldActive)return
         val own=if(newSelStart==newSelEnd)expectedSelections.indexOf(newSelStart)else -1
+        val ownDelete=host.ownsSelectionUpdate(session,newSelStart,newSelEnd)
         if(own>=0){repeat(own+1){expectedSelections.removeFirst()}}
-        else if(newSelStart!=selectionStart || newSelEnd!=selectionEnd){expectedSelections.clear();keyboard?.cancelTouches();controller.submit(Event.Cancel)}
+        else if(!ownDelete && (newSelStart!=selectionStart || newSelEnd!=selectionEnd)){expectedSelections.clear();keyboard?.cancelTouches();controller.submit(Event.Cancel)}
         selectionStart=newSelStart;selectionEnd=newSelEnd
+        observedSelectionStart=newSelStart;observedSelectionEnd=newSelEnd
         host.updateSelection(session,newSelStart,newSelEnd)
     }
     override fun onUpdateCursorAnchorInfo(cursorAnchorInfo:CursorAnchorInfo?) {

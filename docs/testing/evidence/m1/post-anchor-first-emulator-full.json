@@ -1,0 +1,8 @@
+{
+  "pass": false,
+  "scope": "instrumentation assertions failed; no stale result consumed",
+  "tested_apk_sha256": "dfa8f7a524db265b39eb90c34036218c57430d9030691c36875e9680850bd394",
+  "tested_test_apk_sha256": "9614c861b45463534417308b56ba84d6b761594df29f9203e5555f1dd61c63bb",
+  "requested_scope": "full",
+  "variant": "debug"
+}

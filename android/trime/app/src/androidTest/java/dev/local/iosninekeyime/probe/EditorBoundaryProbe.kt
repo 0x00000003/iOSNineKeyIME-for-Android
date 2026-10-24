@@ -35,6 +35,7 @@ object EditorBoundaryProbe {
         var deletionFixtures = 0
         var privacyReads = 0
         var structuralRequests=0
+        var structuralCursorRequests=0
         val handler=android.os.Handler(android.os.Looper.getMainLooper())
         var sensitiveCases = 0
         var sensitiveDeletionFixtures = 0
@@ -99,8 +100,11 @@ object EditorBoundaryProbe {
                     val actualInfo = EditorInfo()
                     connection = checkNotNull(activity.editor.onCreateInputConnection(actualInfo))
                     val guarded = object : InputConnectionWrapper(connection, false) {
+                        private var anchorRequests=0
                         override fun requestCursorUpdates(mode:Int,filter:Int):Boolean {
-                            check(filter==(InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER or InputConnection.CURSOR_UPDATE_FILTER_EDITOR_BOUNDS)){"E_STRUCTURAL_FILTER"}
+                            anchorRequests++;structuralCursorRequests++
+                            val expected=if(anchorRequests%2==1)InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER or InputConnection.CURSOR_UPDATE_FILTER_EDITOR_BOUNDS else InputConnection.CURSOR_UPDATE_FILTER_INSERTION_MARKER
+                            check(mode==InputConnection.CURSOR_UPDATE_IMMEDIATE && filter==expected){"E_STRUCTURAL_FILTER"}
                             handler.post {host.updateCursorAnchor(session,SyntheticCursorMetadata.anchor(activity.editor))};return true
                         }
                         override fun requestTextBoundsInfo(bounds:android.graphics.RectF,executor:java.util.concurrent.Executor,consumer:java.util.function.Consumer<android.view.inputmethod.TextBoundsInfoResult>){structuralRequests++;super.requestTextBoundsInfo(bounds,executor,consumer)}
@@ -137,10 +141,11 @@ object EditorBoundaryProbe {
                 .put("grapheme_and_selection_deletion_passed", deletionFixtures).put("deletion_fixture_count", 6)
                 .put("sensitive_metadata_cases_passed", sensitiveCases).put("sensitive_context_reads", privacyReads)
                 .put("sensitive_structural_bounds_requests",structuralRequests).put("cursor_anchor_delivery","owned synthetic host bridge; system IMS callback NOT tested")
+                .put("sensitive_cursor_requests",structuralCursorRequests)
                 .put("sensitive_metadata_results", metadataResults).put("sensitive_deletion_results", privateDeletionResults)
                 .put("sensitive_grapheme_deletion_passed", sensitiveDeletionFixtures).put("sensitive_deletion_fixture_count", 5)
                 .put("normal_learning_tree_unchanged", treeUnchanged)
-                .put("pass", unique && composingReplacement && restored && stale && deletionFixtures == 6 && sensitiveCases == 6 && sensitiveDeletionFixtures == 5 && privacyReads == 0 && treeUnchanged)
+                .put("pass", unique && composingReplacement && restored && stale && deletionFixtures == 6 && sensitiveCases == 6 && sensitiveDeletionFixtures == 5 && privacyReads == 0 && structuralRequests==11 && structuralCursorRequests==22 && treeUnchanged)
         } finally {
             main { host.end(session); activity.finish() }
         }

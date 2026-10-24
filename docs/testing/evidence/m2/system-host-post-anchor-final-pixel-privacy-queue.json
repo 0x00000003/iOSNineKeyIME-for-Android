@@ -1,0 +1,229 @@
+{
+  "scope": "privacy-queue",
+  "system_ime_selected": true,
+  "cursor_metadata_bridge": false,
+  "separate_host_uid": true,
+  "system_ime_path_exercised": true,
+  "actual_ime_bottom_margin": 121,
+  "host_minimum_bottom_margin": 68,
+  "passed_cases": 20,
+  "planned_cases": 20,
+  "status": "PASS",
+  "ime_animation_starts": 1,
+  "ime_animation_ends": 1,
+  "ime_animation_running_at_finish": false,
+  "cases": [
+    {
+      "id": "guard-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 6,
+      "pass": true
+    },
+    {
+      "id": "guard-visible-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "guard-visible-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 11,
+      "pass": true
+    },
+    {
+      "id": "guard-web-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-web-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 6,
+      "pass": true
+    },
+    {
+      "id": "guard-number-password-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 1,
+      "pass": true
+    },
+    {
+      "id": "guard-number-password-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 6,
+      "pass": true
+    },
+    {
+      "id": "guard-no-learn-g1",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 2,
+      "pass": true
+    },
+    {
+      "id": "guard-no-learn-g2",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 11,
+      "pass": true
+    },
+    {
+      "id": "selection-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-visible-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-web-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-number-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "selection-no-learn",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true
+    },
+    {
+      "id": "queued-password",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 1,
+      "pass": true,
+      "observed_query_pending_before_typing": true
+    },
+    {
+      "id": "queued-no-learn",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 2,
+      "bounds_requests": 1,
+      "bounds_delivered": 1,
+      "gesture_requests": 1,
+      "pass": true,
+      "observed_query_pending_before_typing": true
+    },
+    {
+      "id": "normal-delete-typing",
+      "normal_body_reads_permitted": true,
+      "pass": true
+    },
+    {
+      "id": "held-private-delete",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 16,
+      "bounds_requests": 8,
+      "bounds_delivered": 8,
+      "gesture_requests": 8,
+      "pass": true
+    },
+    {
+      "id": "pending-cross-field",
+      "exact_synthetic_result": true,
+      "body_getter_calls": 0,
+      "cursor_requests": 0,
+      "bounds_requests": 0,
+      "bounds_delivered": 0,
+      "gesture_requests": 0,
+      "pass": true,
+      "observed_old_query_pending": true,
+      "old_result_delivered": true,
+      "old_field_unchanged": true
+    }
+  ],
+  "pass": true,
+  "host_run_id": "17d61b2d458d462a8776de524b4a5f63",
+  "fixture_source": "fixed synthetic values only; no body/candidate dumps",
+  "host_apk_sha256": "ea3e5216ec71c91a705391706cc94e5474ff51ca2e0b731ba5eaafa109538dab",
+  "test_apk_sha256": "32d0b1f0618990cd007f62fa0115400fd857fc0745cf1833258fcfaba722d2dd",
+  "ime_apk_sha256": "831233e43724728b72ddcbbe78c7e9ef715ee41cfa469f585caa6ef6ab164ca1",
+  "ime_variant": "debug",
+  "requested_scope": "privacy-queue",
+  "target": "pixel",
+  "selection": "unchanged",
+  "transport": "instrumentation stream + fresh host_run_id + success flag/code",
+  "scope_note": "actual selected system IME in a separate synthetic host UID; metadata readiness alone is NOT system IME acceptance"
+}

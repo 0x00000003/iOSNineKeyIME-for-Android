@@ -1,0 +1,1459 @@
+{
+  "source": "user supplied 2026-10-23 five JPEG attachments",
+  "ios_version": "PENDING",
+  "iphone_model": "PENDING (project target reference iPhone13; not inferred as fact)",
+  "display_zoom": "PENDING",
+  "text_size": "PENDING",
+  "pressed_state": "NOT_SHOWN",
+  "transition_timing": "NOT_SHOWN; five static resulting states only",
+  "reference_rows": [
+    {
+      "id": "R01",
+      "state": "chinese9",
+      "source_sha256": "0d3c1c9efe184706850958e930435816bc5b78c2b9f96c7467abae272f01db50",
+      "source_dimensions": [
+        591,
+        1280
+      ],
+      "keyboard_crop": [
+        0,
+        714,
+        591,
+        1280
+      ],
+      "crop_sha256": "d5648611a34372f35ef9a9c130bd1fe26e8ca942de1f6bed5a60d269bea4ec80",
+      "theme": "dark",
+      "status": "user supplied; crop boundary provisional manual measurement",
+      "source_storage": "ignored private reference originals/crops only; never packaged",
+      "color_measurements": {
+        "panel": {
+          "median_rgb": [
+            34,
+            34,
+            34
+          ],
+          "sample_center_source_px": [
+            300,
+            750
+          ],
+          "patch_px": 5
+        },
+        "key": {
+          "median_rgb": [
+            70,
+            70,
+            70
+          ],
+          "sample_center_source_px": [
+            30,
+            870
+          ],
+          "patch_px": 5
+        },
+        "enter": {
+          "median_rgb": [
+            144,
+            144,
+            144
+          ],
+          "sample_center_source_px": [
+            490,
+            1040
+          ],
+          "patch_px": 5
+        }
+      },
+      "color_limitation": "JPEG patch medians; no pressed-state or light-theme pixels supplied",
+      "detected_key_rectangles": [
+        {
+          "box_source_px": [
+            12,
+            854,
+            118,
+            925
+          ],
+          "neutral_fill_component_pixels": 7089
+        },
+        {
+          "box_source_px": [
+            127,
+            854,
+            233,
+            925
+          ],
+          "neutral_fill_component_pixels": 7195
+        },
+        {
+          "box_source_px": [
+            243,
+            854,
+            348,
+            925
+          ],
+          "neutral_fill_component_pixels": 6926
+        },
+        {
+          "box_source_px": [
+            358,
+            854,
+            464,
+            925
+          ],
+          "neutral_fill_component_pixels": 7008
+        },
+        {
+          "box_source_px": [
+            473,
+            854,
+            580,
+            925
+          ],
+          "neutral_fill_component_pixels": 6517
+        },
+        {
+          "box_source_px": [
+            12,
+            936,
+            118,
+            1007
+          ],
+          "neutral_fill_component_pixels": 6948
+        },
+        {
+          "box_source_px": [
+            127,
+            936,
+            233,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7103
+        },
+        {
+          "box_source_px": [
+            243,
+            936,
+            348,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7078
+        },
+        {
+          "box_source_px": [
+            358,
+            936,
+            464,
+            1007
+          ],
+          "neutral_fill_component_pixels": 6896
+        },
+        {
+          "box_source_px": [
+            473,
+            936,
+            580,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7243
+        },
+        {
+          "box_source_px": [
+            473,
+            1017,
+            580,
+            1171
+          ],
+          "neutral_fill_component_pixels": 16260
+        },
+        {
+          "box_source_px": [
+            12,
+            1018,
+            118,
+            1089
+          ],
+          "neutral_fill_component_pixels": 6950
+        },
+        {
+          "box_source_px": [
+            127,
+            1018,
+            233,
+            1089
+          ],
+          "neutral_fill_component_pixels": 6788
+        },
+        {
+          "box_source_px": [
+            243,
+            1018,
+            348,
+            1089
+          ],
+          "neutral_fill_component_pixels": 7058
+        },
+        {
+          "box_source_px": [
+            358,
+            1018,
+            464,
+            1089
+          ],
+          "neutral_fill_component_pixels": 6938
+        },
+        {
+          "box_source_px": [
+            12,
+            1100,
+            118,
+            1171
+          ],
+          "neutral_fill_component_pixels": 6448
+        },
+        {
+          "box_source_px": [
+            127,
+            1100,
+            233,
+            1171
+          ],
+          "neutral_fill_component_pixels": 6587
+        },
+        {
+          "box_source_px": [
+            243,
+            1100,
+            464,
+            1171
+          ],
+          "neutral_fill_component_pixels": 15090
+        }
+      ],
+      "key_detection_method": "4-connected neutral JPEG fill RGB55..160, channel spread<=6; keyboard key area only; >1000px component; manual labels/semantic mapping separate",
+      "embedded_icc_profile_present": false
+    },
+    {
+      "id": "R02",
+      "state": "number9",
+      "source_sha256": "b2b1886e8dd194f5d403ad557c2313f0ee42b4b22d649cb3a05a5e8ca5cac0ce",
+      "source_dimensions": [
+        591,
+        1280
+      ],
+      "keyboard_crop": [
+        0,
+        714,
+        591,
+        1280
+      ],
+      "crop_sha256": "e68546786d7e1b23efa13fcb2171fc7f5febbe051ea5de39e4b93361c8649d99",
+      "theme": "dark",
+      "status": "user supplied; crop boundary provisional manual measurement",
+      "source_storage": "ignored private reference originals/crops only; never packaged",
+      "color_measurements": {
+        "panel": {
+          "median_rgb": [
+            34,
+            34,
+            34
+          ],
+          "sample_center_source_px": [
+            300,
+            750
+          ],
+          "patch_px": 5
+        },
+        "key": {
+          "median_rgb": [
+            70,
+            70,
+            70
+          ],
+          "sample_center_source_px": [
+            30,
+            870
+          ],
+          "patch_px": 5
+        },
+        "enter": {
+          "median_rgb": [
+            144,
+            144,
+            144
+          ],
+          "sample_center_source_px": [
+            490,
+            1040
+          ],
+          "patch_px": 5
+        }
+      },
+      "color_limitation": "JPEG patch medians; no pressed-state or light-theme pixels supplied",
+      "detected_key_rectangles": [
+        {
+          "box_source_px": [
+            12,
+            854,
+            118,
+            925
+          ],
+          "neutral_fill_component_pixels": 6819
+        },
+        {
+          "box_source_px": [
+            127,
+            854,
+            233,
+            925
+          ],
+          "neutral_fill_component_pixels": 7247
+        },
+        {
+          "box_source_px": [
+            243,
+            854,
+            348,
+            925
+          ],
+          "neutral_fill_component_pixels": 7132
+        },
+        {
+          "box_source_px": [
+            358,
+            854,
+            464,
+            925
+          ],
+          "neutral_fill_component_pixels": 7179
+        },
+        {
+          "box_source_px": [
+            473,
+            854,
+            580,
+            925
+          ],
+          "neutral_fill_component_pixels": 6517
+        },
+        {
+          "box_source_px": [
+            12,
+            936,
+            118,
+            1007
+          ],
+          "neutral_fill_component_pixels": 6948
+        },
+        {
+          "box_source_px": [
+            127,
+            936,
+            233,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7122
+        },
+        {
+          "box_source_px": [
+            243,
+            936,
+            348,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7097
+        },
+        {
+          "box_source_px": [
+            358,
+            936,
+            464,
+            1007
+          ],
+          "neutral_fill_component_pixels": 7087
+        },
+        {
+          "box_source_px": [
+            473,
+            936,
+            580,
+            1007
+          ],
+          "neutral_fill_component_pixels": 6908
+        },
+        {
+          "box_source_px": [
+            473,
+            1017,
+            580,
+            1171
+          ],
+          "neutral_fill_component_pixels": 16260
+        },
+        {
+          "box_source_px": [
+            12,
+            1018,
+            118,
+            1089
+          ],
+          "neutral_fill_component_pixels": 6950
+        },
+        {
+          "box_source_px": [
+            127,
+            1018,
+            233,
+            1089
+          ],
+          "neutral_fill_component_pixels": 7227
+        },
+        {
+          "box_source_px": [
+            243,
+            1018,
+            348,
+            1089
+          ],
+          "neutral_fill_component_pixels": 6988
+        },
+        {
+          "box_source_px": [
+            358,
+            1018,
+            464,
+            1089
+          ],
+          "neutral_fill_component_pixels": 7072
+        },
+        {
+          "box_source_px": [
+            12,
+            1100,
+            118,
+            1171
+          ],
+          "neutral_fill_component_pixels": 6448
+        },
+        {
+          "box_source_px": [
+            127,
+            1100,
+            233,
+            1171
+          ],
+          "neutral_fill_component_pixels": 7291
+        },
+        {
+          "box_source_px": [
+            243,
+            1100,
+            348,
+            1171
+          ],
+          "neutral_fill_component_pixels": 6962
+        },
+        {
+          "box_source_px": [
+            358,
+            1100,
+            464,
+            1171
+          ],
+          "neutral_fill_component_pixels": 6850
+        }
+      ],
+      "key_detection_method": "4-connected neutral JPEG fill RGB55..160, channel spread<=6; keyboard key area only; >1000px component; manual labels/semantic mapping separate",
+      "embedded_icc_profile_present": false
+    },
+    {
+      "id": "R03",
+      "state": "symbols",
+      "source_sha256": "2bf282aa2bef9432f6bf739a47ddd5795e9fbaf207e47e8ad688da68bad04683",
+      "source_dimensions": [
+        591,
+        1280
+      ],
+      "keyboard_crop": [
+        0,
+        724,
+        591,
+        1280
+      ],
+      "crop_sha256": "34c74cc2c22696ddcc0c2a8212af69d84f26739d85fcfcbd8c2eb3cf9f306da0",
+      "theme": "dark",
+      "status": "user supplied; crop boundary provisional manual measurement",
+      "source_storage": "ignored private reference originals/crops only; never packaged",
+      "color_measurements": {
+        "panel": {
+          "median_rgb": [
+            34,
+            34,
+            34
+          ],
+          "sample_center_source_px": [
+            300,
+            760
+          ],
+          "patch_px": 5
+        },
+        "key": {
+          "median_rgb": [
+            70,
+            70,
+            70
+          ],
+          "sample_center_source_px": [
+            20,
+            875
+          ],
+          "patch_px": 5
+        },
+        "enter": {
+          "median_rgb": [
+            122,
+            122,
+            122
+          ],
+          "sample_center_source_px": [
+            465,
+            1130
+          ],
+          "patch_px": 5
+        }
+      },
+      "color_limitation": "JPEG patch medians; no pressed-state or light-theme pixels supplied",
+      "detected_key_rectangles": [
+        {
+          "box_source_px": [
+            10,
+            861,
+            59,
+            927
+          ],
+          "neutral_fill_component_pixels": 2949
+        },
+        {
+          "box_source_px": [
+            68,
+            861,
+            117,
+            927
+          ],
+          "neutral_fill_component_pixels": 2902
+        },
+        {
+          "box_source_px": [
+            126,
+            861,
+            175,
+            927
+          ],
+          "neutral_fill_component_pixels": 2882
+        },
+        {
+          "box_source_px": [
+            184,
+            861,
+            233,
+            927
+          ],
+          "neutral_fill_component_pixels": 2843
+        },
+        {
+          "box_source_px": [
+            242,
+            861,
+            291,
+            927
+          ],
+          "neutral_fill_component_pixels": 2867
+        },
+        {
+          "box_source_px": [
+            300,
+            861,
+            349,
+            927
+          ],
+          "neutral_fill_component_pixels": 2763
+        },
+        {
+          "box_source_px": [
+            358,
+            861,
+            407,
+            927
+          ],
+          "neutral_fill_component_pixels": 2941
+        },
+        {
+          "box_source_px": [
+            416,
+            861,
+            465,
+            927
+          ],
+          "neutral_fill_component_pixels": 2749
+        },
+        {
+          "box_source_px": [
+            474,
+            861,
+            523,
+            927
+          ],
+          "neutral_fill_component_pixels": 2762
+        },
+        {
+          "box_source_px": [
+            532,
+            861,
+            581,
+            927
+          ],
+          "neutral_fill_component_pixels": 2707
+        },
+        {
+          "box_source_px": [
+            10,
+            943,
+            59,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2999
+        },
+        {
+          "box_source_px": [
+            68,
+            943,
+            117,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2955
+        },
+        {
+          "box_source_px": [
+            126,
+            943,
+            175,
+            1008
+          ],
+          "neutral_fill_component_pixels": 3019
+        },
+        {
+          "box_source_px": [
+            184,
+            943,
+            233,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2997
+        },
+        {
+          "box_source_px": [
+            242,
+            943,
+            291,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2950
+        },
+        {
+          "box_source_px": [
+            300,
+            943,
+            349,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2958
+        },
+        {
+          "box_source_px": [
+            358,
+            943,
+            407,
+            1009
+          ],
+          "neutral_fill_component_pixels": 2793
+        },
+        {
+          "box_source_px": [
+            416,
+            943,
+            465,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2742
+        },
+        {
+          "box_source_px": [
+            474,
+            943,
+            523,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2989
+        },
+        {
+          "box_source_px": [
+            532,
+            943,
+            581,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2988
+        },
+        {
+          "box_source_px": [
+            10,
+            1025,
+            76,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3996
+        },
+        {
+          "box_source_px": [
+            91,
+            1025,
+            151,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3706
+        },
+        {
+          "box_source_px": [
+            161,
+            1025,
+            221,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3751
+        },
+        {
+          "box_source_px": [
+            231,
+            1025,
+            291,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3748
+        },
+        {
+          "box_source_px": [
+            300,
+            1025,
+            361,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3706
+        },
+        {
+          "box_source_px": [
+            370,
+            1025,
+            430,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3722
+        },
+        {
+          "box_source_px": [
+            440,
+            1025,
+            500,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3761
+        },
+        {
+          "box_source_px": [
+            515,
+            1025,
+            581,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3504
+        },
+        {
+          "box_source_px": [
+            10,
+            1107,
+            146,
+            1172
+          ],
+          "neutral_fill_component_pixels": 8204
+        },
+        {
+          "box_source_px": [
+            155,
+            1107,
+            436,
+            1172
+          ],
+          "neutral_fill_component_pixels": 18126
+        },
+        {
+          "box_source_px": [
+            445,
+            1107,
+            582,
+            1173
+          ],
+          "neutral_fill_component_pixels": 8899
+        }
+      ],
+      "key_detection_method": "4-connected neutral JPEG fill RGB55..160, channel spread<=6; keyboard key area only; >1000px component; manual labels/semantic mapping separate",
+      "embedded_icc_profile_present": false
+    },
+    {
+      "id": "R04",
+      "state": "latin",
+      "source_sha256": "08cefffbed0cd8c4ebb1cb5d6344cc597f5a59f91a338c16df2e914e58b058a6",
+      "source_dimensions": [
+        591,
+        1280
+      ],
+      "keyboard_crop": [
+        0,
+        783,
+        591,
+        1280
+      ],
+      "crop_sha256": "f625bfbb43e6a8f1d67b6ff982662b1de3403ea679e4e1cebcf22a3d3403005f",
+      "theme": "dark",
+      "status": "user supplied; crop boundary provisional manual measurement",
+      "source_storage": "ignored private reference originals/crops only; never packaged",
+      "color_measurements": {
+        "panel": {
+          "median_rgb": [
+            34,
+            34,
+            34
+          ],
+          "sample_center_source_px": [
+            300,
+            800
+          ],
+          "patch_px": 5
+        },
+        "key": {
+          "median_rgb": [
+            70,
+            70,
+            70
+          ],
+          "sample_center_source_px": [
+            15,
+            875
+          ],
+          "patch_px": 5
+        },
+        "enter": {
+          "median_rgb": [
+            122,
+            122,
+            122
+          ],
+          "sample_center_source_px": [
+            455,
+            1120
+          ],
+          "patch_px": 5
+        }
+      },
+      "color_limitation": "JPEG patch medians; no pressed-state or light-theme pixels supplied",
+      "detected_key_rectangles": [
+        {
+          "box_source_px": [
+            10,
+            861,
+            59,
+            927
+          ],
+          "neutral_fill_component_pixels": 2632
+        },
+        {
+          "box_source_px": [
+            68,
+            861,
+            117,
+            927
+          ],
+          "neutral_fill_component_pixels": 2789
+        },
+        {
+          "box_source_px": [
+            126,
+            861,
+            175,
+            927
+          ],
+          "neutral_fill_component_pixels": 2899
+        },
+        {
+          "box_source_px": [
+            184,
+            861,
+            233,
+            927
+          ],
+          "neutral_fill_component_pixels": 2770
+        },
+        {
+          "box_source_px": [
+            242,
+            861,
+            291,
+            927
+          ],
+          "neutral_fill_component_pixels": 2923
+        },
+        {
+          "box_source_px": [
+            300,
+            861,
+            349,
+            927
+          ],
+          "neutral_fill_component_pixels": 2937
+        },
+        {
+          "box_source_px": [
+            358,
+            861,
+            407,
+            927
+          ],
+          "neutral_fill_component_pixels": 2889
+        },
+        {
+          "box_source_px": [
+            416,
+            861,
+            465,
+            927
+          ],
+          "neutral_fill_component_pixels": 2995
+        },
+        {
+          "box_source_px": [
+            474,
+            861,
+            523,
+            927
+          ],
+          "neutral_fill_component_pixels": 2667
+        },
+        {
+          "box_source_px": [
+            532,
+            861,
+            581,
+            927
+          ],
+          "neutral_fill_component_pixels": 2794
+        },
+        {
+          "box_source_px": [
+            39,
+            943,
+            88,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2843
+        },
+        {
+          "box_source_px": [
+            97,
+            943,
+            146,
+            1009
+          ],
+          "neutral_fill_component_pixels": 2831
+        },
+        {
+          "box_source_px": [
+            155,
+            943,
+            204,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2660
+        },
+        {
+          "box_source_px": [
+            213,
+            943,
+            262,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2903
+        },
+        {
+          "box_source_px": [
+            271,
+            943,
+            320,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2813
+        },
+        {
+          "box_source_px": [
+            329,
+            943,
+            378,
+            1009
+          ],
+          "neutral_fill_component_pixels": 2860
+        },
+        {
+          "box_source_px": [
+            387,
+            943,
+            436,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2921
+        },
+        {
+          "box_source_px": [
+            445,
+            943,
+            494,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2843
+        },
+        {
+          "box_source_px": [
+            503,
+            943,
+            552,
+            1008
+          ],
+          "neutral_fill_component_pixels": 2928
+        },
+        {
+          "box_source_px": [
+            10,
+            1025,
+            76,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3706
+        },
+        {
+          "box_source_px": [
+            97,
+            1025,
+            146,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2852
+        },
+        {
+          "box_source_px": [
+            155,
+            1025,
+            204,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2847
+        },
+        {
+          "box_source_px": [
+            213,
+            1025,
+            262,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2857
+        },
+        {
+          "box_source_px": [
+            271,
+            1025,
+            320,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2873
+        },
+        {
+          "box_source_px": [
+            329,
+            1025,
+            378,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2683
+        },
+        {
+          "box_source_px": [
+            387,
+            1025,
+            436,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2808
+        },
+        {
+          "box_source_px": [
+            445,
+            1025,
+            494,
+            1090
+          ],
+          "neutral_fill_component_pixels": 2774
+        },
+        {
+          "box_source_px": [
+            515,
+            1025,
+            581,
+            1090
+          ],
+          "neutral_fill_component_pixels": 3504
+        },
+        {
+          "box_source_px": [
+            10,
+            1107,
+            73,
+            1172
+          ],
+          "neutral_fill_component_pixels": 3673
+        },
+        {
+          "box_source_px": [
+            82,
+            1107,
+            146,
+            1172
+          ],
+          "neutral_fill_component_pixels": 3359
+        },
+        {
+          "box_source_px": [
+            155,
+            1107,
+            436,
+            1172
+          ],
+          "neutral_fill_component_pixels": 17318
+        },
+        {
+          "box_source_px": [
+            445,
+            1107,
+            582,
+            1173
+          ],
+          "neutral_fill_component_pixels": 8899
+        }
+      ],
+      "key_detection_method": "4-connected neutral JPEG fill RGB55..160, channel spread<=6; keyboard key area only; >1000px component; manual labels/semantic mapping separate",
+      "embedded_icc_profile_present": false
+    },
+    {
+      "id": "R05",
+      "state": "emoji",
+      "source_sha256": "e0ad2df656631147cd359e7c7306c34b87babbf44a75e6774a974330dd186a64",
+      "source_dimensions": [
+        591,
+        1280
+      ],
+      "keyboard_crop": [
+        0,
+        693,
+        591,
+        1280
+      ],
+      "crop_sha256": "7093b854721ed77eda09331e054a85c42e9c667a28545baa156b8073071f5949",
+      "theme": "dark",
+      "status": "user supplied; crop boundary provisional manual measurement",
+      "source_storage": "ignored private reference originals/crops only; never packaged",
+      "color_measurements": {
+        "panel": {
+          "median_rgb": [
+            34,
+            34,
+            34
+          ],
+          "sample_center_source_px": [
+            300,
+            780
+          ],
+          "patch_px": 5
+        },
+        "search": {
+          "median_rgb": [
+            59,
+            59,
+            59
+          ],
+          "sample_center_source_px": [
+            300,
+            740
+          ],
+          "patch_px": 5
+        }
+      },
+      "color_limitation": "JPEG patch medians; no pressed-state or light-theme pixels supplied"
+    }
+  ],
+  "privacy": "No chat/body/candidate text extracted; original pixels remain ignored private. Public measurements only.",
+  "geometry": {
+    "coordinate_basis": "591px source width; y relative to each keyboard crop top; provisional manual edge measurement",
+    "chinese_number": {
+      "columns": [
+        [
+          11,
+          117
+        ],
+        [
+          127,
+          233
+        ],
+        [
+          243,
+          349
+        ],
+        [
+          358,
+          465
+        ],
+        [
+          474,
+          580
+        ]
+      ],
+      "rows_source_y": [
+        [
+          854,
+          925
+        ],
+        [
+          936,
+          1007
+        ],
+        [
+          1018,
+          1089
+        ],
+        [
+          1100,
+          1171
+        ]
+      ],
+      "row_gap_px": [
+        11,
+        11,
+        11
+      ],
+      "corner_radius_px": 15,
+      "enter_spans_rows": [
+        2,
+        3
+      ],
+      "chinese_space_spans_columns": [
+        2,
+        3
+      ],
+      "candidate_bar_source_y": [
+        770,
+        843
+      ],
+      "header_blank_source_y": [
+        714,
+        769
+      ],
+      "footer_source_y": [
+        1172,
+        1280
+      ]
+    },
+    "symbols": {
+      "ten_columns": [
+        [
+          10,
+          58
+        ],
+        [
+          68,
+          116
+        ],
+        [
+          126,
+          174
+        ],
+        [
+          184,
+          232
+        ],
+        [
+          242,
+          290
+        ],
+        [
+          300,
+          348
+        ],
+        [
+          358,
+          406
+        ],
+        [
+          416,
+          464
+        ],
+        [
+          474,
+          522
+        ],
+        [
+          532,
+          580
+        ]
+      ],
+      "row_source_y": [
+        [
+          862,
+          926
+        ],
+        [
+          944,
+          1008
+        ],
+        [
+          1026,
+          1090
+        ],
+        [
+          1108,
+          1172
+        ]
+      ],
+      "bottom_pinyin_source_x": [
+        10,
+        145
+      ],
+      "bottom_space_source_x": [
+        155,
+        435
+      ],
+      "bottom_enter_source_x": [
+        445,
+        580
+      ]
+    },
+    "latin": {
+      "qwerty_row_source_y": [
+        [
+          862,
+          926
+        ],
+        [
+          944,
+          1008
+        ],
+        [
+          1026,
+          1090
+        ],
+        [
+          1108,
+          1172
+        ]
+      ],
+      "row1_source_x": [
+        [
+          10,
+          58
+        ],
+        [
+          68,
+          116
+        ],
+        [
+          126,
+          174
+        ],
+        [
+          184,
+          232
+        ],
+        [
+          242,
+          290
+        ],
+        [
+          300,
+          348
+        ],
+        [
+          358,
+          406
+        ],
+        [
+          416,
+          464
+        ],
+        [
+          474,
+          522
+        ],
+        [
+          532,
+          580
+        ]
+      ],
+      "row2_first_last_source_x": [
+        39,
+        552
+      ],
+      "row3_shift_source_x": [
+        10,
+        76
+      ],
+      "row3_delete_source_x": [
+        514,
+        580
+      ],
+      "bottom_space_source_x": [
+        155,
+        435
+      ],
+      "bottom_enter_source_x": [
+        445,
+        580
+      ]
+    },
+    "emoji": {
+      "columns": 7,
+      "visible_rows": 4,
+      "search_source_box": [
+        14,
+        707,
+        577,
+        767
+      ],
+      "category_bar_source_y": [
+        1114,
+        1162
+      ],
+      "footer_source_y": [
+        1173,
+        1280
+      ]
+    },
+    "uncertainty_px": 2,
+    "not_measured": [
+      "pressed highlight",
+      "long-press popup",
+      "symbol second page",
+      "emoji scrolling/transition timing",
+      "light theme"
+    ]
+  }
+}

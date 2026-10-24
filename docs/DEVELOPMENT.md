@@ -26,7 +26,7 @@
 这些命令是未来执行清单，**当前无 Gradle 工程，未运行、未通过**。上游 `checkReleaseBuilds=false` 不得当作 lint 通过，release lint 必须显式执行。native ABI 配置及 arm64-only 选项从实际 convention 读取，不能虚构一个 Gradle property。使用项目内 `GRADLE_USER_HOME`、独立测试输出目录，依赖锁/verification 和 Wrapper checksum 纳入Git；SDK 路径放忽略的 local.properties，密钥只在项目外安全位置，签名配置从明确的本地环境读取且日志不输出值。
 
 ## 设备流程
-用 `adb devices` 选择用户授权的测试设备，不记录序列号到项目；多设备一律指定 `-s`。只读取测试需要的系统版本/ABI/显示参数，不扫描相册、短信、账号、剪贴板或其他应用。debug 测试 APK 可在选定测试设备进行常规安装，不替换他人包；用户亲自按 Android 设置流程启用/选择键盘。仅在测试应用输入合成文本，保留其他输入法以便恢复。无设备：先执行 emulator/host 测试并记录真实阻碍；不可标注真机PASS。
+用 `adb devices` 选择用户授权的测试设备，不记录序列号到项目；多设备一律指定 `-s`。只读取测试需要的系统版本/ABI/显示参数，不扫描相册、短信、账号、剪贴板或其他应用。debug 测试 APK 可在选定测试设备进行常规安装，不替换他人包；首次启用由设备操作者确认Android系统警告；测试仅在已启用的本项目debug/release之间切换。仅在测试应用输入合成文本，保留其他输入法以便恢复。无设备：先执行 emulator/host 测试并记录真实阻碍；不可标注真机PASS。
 
 ## 文档与提交
 每轮记录目标、修改文件、命令/环境、状态、证据和下一步；测试记录区分 PASS/FAIL/BLOCKED/NOT_RUN，不以退出码0概括未覆盖测试。测试记录的 tested_commit 和最终 docs commit 可不同；记录测试时工作区补丁或本地基线，并对 APK 保存哈希。不要试图把“当前提交自己的哈希”写在该提交内形成循环；初始化commit ID见Git/final，后续日志在下一提交引用前一哈希。
@@ -61,3 +61,8 @@ prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/
 
 独立工具链命令：`python3 scripts/bootstrap_clean_toolchain.py --destination .cache/rebuild-new --source-commit 2ad1de3 --fetch-archives`。目标必须新建，使用固定HTTPS归档/哈希，约需12GiB以上余量；沿用已接受同条款SDK marker与公共table/model输入，创建新SDK/JDK/Gradle cache，不调用adb。脚本输出目标内bootstrap-receipt.json及gradle-build.txt，网络失败保留原状态，不改TLS/哈希或自动宣布成功。实际历史2ad源码首次TLS失败、同规则重试整包复现条件见TOOLCHAIN记录；这不替代当前版本同哈希回归或完整M6。
 
+## 独立系统宿主（2026-10-23）
+
+`:testhost`复用现有工具链，独立UID、debug-only，无native/Rime依赖。先构建`./scripts/gradle.sh :testhost:assembleDebug :testhost:assembleDebugAndroidTest :testhost:lintDebug`，再运行`python3 scripts/run_system_host.py --target pixel --scope core --record 新的英文小写记录名`；scope还含readiness/private-delete/privacy-queue，精确定义见SYSTEM_HOST与SYSTEM_PRIVATE_QUEUE_PROTOCOL。runner核实际三APK/hash/nonce，只在明确用户授权下选已经启用的本项目测试条目；未启用标BLOCKED，不调用ime enable。
+
+主应用debug组件测试与系统IME同UID时可能争用native租约，组件运行前仅选已启用的本项目优化版，随后系统runner可切回debug；不改第三方输入法。`-PlocalReleaseProbe=true`把testBuildType切到release，所以此配置没有assembleDebugAndroidTest任务；debug及默认unsigned构建和显式本地签名release需分开命令运行，无需复制工具链或新隔离目录。本轮误把两类任务合并的配置失败已纠正，不算Android测试失败或成功。

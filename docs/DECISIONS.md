@@ -68,3 +68,9 @@
 ## ADR040 — View拥有收到的安全inset，系统宿主等待实际窗口稳定（WIP）
 
 NineKeyView只按框架传入的systemBars/displayCutout为自绘键区预留左右/底部，测量遵守父约束，绘制与触控使用同一偏移；不复制字体/图标或增加依赖。双设备16例实际View测试覆盖安全区无误触。系统IME导航控制区与普通宿主手势条不同，测试不得以宿主inset等值约束IME留白；固定方向下入口动画后的实际底排间距作为后续布局切换不变量，另核真实窗口显示底边和导航最低安全界。旧测试/旧制品失败保持记录，不把a11y注入成功当输入成功，不据组件声称1:1或完整M5通过。
+
+## ADR041 — 结构删除完成后确认实际caret，再解队列（WIP）
+
+系统privacy-queue红测17/20表明原SUCCESS立即解屏障会与onUpdateSelection外移取消冲突。新方案在手势SUCCESS后请求仅insertion-marker的IMMEDIATE cursor anchor，获得实际新caret后才解屏障，不猜删除UTF16长度；已执行后不支持/抛异常/超时/异常selection均AMBIGUOUS，不重试手势或回退DEL。查询阶段外移仍按selection版本拒绝，字段/session切换仍失效。只在正在执行/确认的操作内暂认32位置内的collapsed向前selection为自身编辑；以额外anchor与已观察selection交叉核对。selection回调未提供来源标签，不能据此声称任意宿主并发外移绝对可区分；复杂宿主继续验收。
+
+HostAdapter确认caret到薄服务的内存回调，在后续提交前同步预测位置；服务区分最后实际观察selection与预测selection，避免将已收通知重复留在预期队列。无新依赖/持久数据/正文读取。组件原21故障保留并增加7例删除已执行但后置确认失败；实际系统同20例必须重测，未跑前不报告修复成功。
