@@ -1,6 +1,10 @@
 # 当前状态
 
-最新：M4 WIP，优化且非debuggable的本地签名release引擎及R08/R09/R10/资源恢复两设备PASS，静态权限/实际备份XML PASS。release SHA256 `94b9d40f9462fd428442ccff4fa249c5873105c99156971e41cbb15490a4f162`；这是本项目调试证书签名的验证制品，非正式M6发布。49 app/61 state JVM通过。R04依然FAIL，系统IME尚未由用户启用/切换，参考图BLOCKED，不能宣布应用完成、安全全通过或1:1。当前记录：[M4](testing/M4-20261023.md)。
+最新：**M1—M4 开发 WIP，未达到发布门禁。** 当前debug `dd8f688f`、优化且非debuggable本地调试证书release `dedeee3c`，默认unsigned `9cdd4df2`。49 app/73 state JVM、38工具测试、两套lint与实际三APK零字体/权限/备份/资源静态审计PASS。完整哈希、制品路径、26条最终记录与范围见[当前检查点](testing/CHECKPOINT-20261023.md)。
+
+同debug两设备原生跨120分页/11宿主异常、controller及settings/resources/R08/R09/R10/预准备无学习重启分项PASS；**full两设备仍R04敏感预存组合音标4/5导致FAIL**。同release两设备engine/resources/R08/R09/R10 PASS，未运行完整release系统IME/宿主门禁。严格锁缺状态/意外依赖实际负测按预期拒绝，字体依赖已删除，运行时清单122项。
+
+[旧固定APK各30分钟JNI观测](testing/NATIVE_PERF-20261023.md)、[历史源码新SDK/JDK/初始空Gradle cache整包重建](testing/TOOLCHAIN-20261023.md)独立记录，不能继承到当前完整产品验收。用户尚未启用/切换IME；原图缺失使M5视觉BLOCKED；敏感中文、完整安全/性能/发布仍未交付。继续开发的具体阻碍见[OPEN_ISSUES](OPEN_ISSUES.md)。没有远端推送。
 
 以下是历史检查点及追加结果，最新制品不可继承旧哈希成绩。
 

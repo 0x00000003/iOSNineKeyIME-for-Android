@@ -1,0 +1,14 @@
+{
+  "scope": "actual optimized release DEX class definitions and native library hash only, NOT whole security/privacy acceptance",
+  "apk_sha256": "dedeee3c9f43e69ef608e01f33db1b6e7382bca89096fa6aabff48a29c9a1642",
+  "absent_legacy_classes": {
+    "com.osfans.trime.ime.core.TrimeInputMethodService": true,
+    "com.osfans.trime.daemon.RimeDaemon": true,
+    "com.osfans.trime.data.base.DataManager": true,
+    "com.osfans.trime.data.db.ClipboardHelper": true,
+    "com.osfans.trime.data.sync.RimeDataSync": true
+  },
+  "current_ime_defined": true,
+  "native_sha256": "66ae89210f5f8421726ee16250ec688d78fcda49bf9e6f6d4fcd14580752c722",
+  "defined_dex_log_sha256": "98af93400daca30d221f666be7ee35b4ccdf6934634b077e2b59db80736d58b7"
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "preprepared no-learning profile reopen/input/close investigation ONLY; initial preparation excluded and no host/IME privacy acceptance",
+  "initial_preparation_outside_baseline": true,
+  "metadata_clock_separation_ms": 1100,
+  "reopen_maintenance_full_check": false,
+  "profile_unchanged_immediately_after_restart": true,
+  "default_no_learning_schema": true,
+  "initial_history_empty": true,
+  "twenty_commits_exact_once": true,
+  "profile_bytes_mtimes_unchanged_after_restart_input_close": true,
+  "no_userdb": true,
+  "shared_bytes_mtimes_unchanged": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "2cc4722299074c488fa48563efcc398c",
+  "tested_apk_sha256": "dd8f688f6c8bdc1cb3384e5e9a023b63384a1083641d23bde60af7a1a37dcb7c",
+  "tested_test_apk_sha256": "68bc0af2f9d03b6f995346c51ae0b2903797d5e61134ad227f2435a188f918c1",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "nolearn-restart",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

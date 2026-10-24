@@ -1,0 +1,96 @@
+{
+  "scope": "fresh SDK/JDK executable payloads checked against pinned downloaded archives; empty Gradle cache; public data/table/model cache and existing fixed-term SDK acceptance reused; host OS unchanged; no adb or signing key used",
+  "source_commit": "2ad1de3",
+  "packages": [
+    {
+      "files_verified": 11342,
+      "symlinks_verified": 0,
+      "payload_manifest_sha256": "ff545128a67a1e33b44c4858482248cea5b04374e102b578b65f8ab72dd635ab",
+      "id": "platforms;android-36",
+      "archive_sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e"
+    },
+    {
+      "files_verified": 8341,
+      "symlinks_verified": 23,
+      "payload_manifest_sha256": "284deb12642f0fa0cfe1790ad05a160e62ce91033e08fda8610f043076f85de7",
+      "id": "ndk;28.0.13004108",
+      "archive_sha256": "19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9"
+    },
+    {
+      "files_verified": 169,
+      "symlinks_verified": 0,
+      "payload_manifest_sha256": "bbd4b6d68daad516f012b63069539e147cdc34eeb750f133a25275f9504b5af5",
+      "id": "build-tools;36.0.0",
+      "archive_sha256": "04e7f3a72044de4926fa038fa0e251a37bba1e1c3fb8beab6f8401bfd9eb4bf3"
+    },
+    {
+      "files_verified": 3788,
+      "symlinks_verified": 0,
+      "payload_manifest_sha256": "d872678bc711d39ee44a30cbfb869f195f39fa01fcb46bdbd03984235c57648f",
+      "id": "cmake;3.31.6",
+      "archive_sha256": "861a219b872cd0d9aee282b617fe3bd32f83925db3a0d28fd45d0553452e903a"
+    },
+    {
+      "files_verified": 12,
+      "symlinks_verified": 0,
+      "payload_manifest_sha256": "ac5ea678d2f38325d14b3bffaecd64022792df5b8da60fe5582e3943cc0e7ed0",
+      "id": "platform-tools",
+      "archive_sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d"
+    },
+    {
+      "files_verified": 108,
+      "symlinks_verified": 0,
+      "payload_manifest_sha256": "db780707fc850efafceff1b694522c2c702b11bc47c3551428c4087df3f02736",
+      "id": "cmdline-tools;19.0",
+      "archive_sha256": "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e"
+    },
+    {
+      "id": "jdk;21.0.7+6",
+      "archive_sha256": "6fcb25f3f71a5ff245dec4ebe8bd5c643f179a5cd0a61c08e58a8c65914d2f97",
+      "archive_members": 550
+    }
+  ],
+  "license_acceptance_markers": [
+    {
+      "file": "android-googletv-license",
+      "sha256": "bf71f76846c291bd5b06faea6946279bbf07d257fca68d8be4e634540e24bed5"
+    },
+    {
+      "file": "android-googlexr-license",
+      "sha256": "315d89d7d8648ae07a4b1d304dcd3b76fac16a01fea0927545ed4f97204d2a79"
+    },
+    {
+      "file": "android-sdk-arm-dbt-license",
+      "sha256": "9dce0be88e239ee0d4fad023badcfaf4b8d6c54cedd45139dd463875229a4a15"
+    },
+    {
+      "file": "android-sdk-license",
+      "sha256": "c43fa37686457c3f18caa3607945f4ec52a9d1beaaad8117e50dc4e863270c85"
+    },
+    {
+      "file": "android-sdk-preview-license",
+      "sha256": "c6cc28fe55c00a86dbe57488393190915403695044e1173c4a28105e2db84407"
+    },
+    {
+      "file": "google-gdk-license",
+      "sha256": "62a7bc9d8641aa16c5510babdbe4bceabd061030d45dde463b3cc1b7ea480e92"
+    },
+    {
+      "file": "microxr-sysimage-license",
+      "sha256": "0f090bd5e73cf18cf91f7131b563d70a859dbe54b3d5f931e0ee01ee6706d802"
+    },
+    {
+      "file": "mips-android-sysimage-license",
+      "sha256": "1ed4c83beca7c3c2523c6c1e836d32f62cd6240aa5478ed42d5dba8bbfa7a860"
+    }
+  ],
+  "gradle_cache_initially_empty": true,
+  "java_version": [
+    "openjdk version \"21.0.7\" 2025-04-15 LTS",
+    "OpenJDK Runtime Environment Temurin-21.0.7+6 (build 21.0.7+6-LTS)",
+    "OpenJDK 64-Bit Server VM Temurin-21.0.7+6 (build 21.0.7+6-LTS, mixed mode, sharing)"
+  ],
+  "build": "FAIL",
+  "build_exit_code": 1,
+  "failure_summary": "one Maven Central AAR TLS handshake terminated; no checksum verification or TLS security settings relaxed"
+}

@@ -218,9 +218,7 @@ dependencies {
     implementation(libs.splitties.views.recyclerview)
     implementation(libs.aboutlibraries.core)
     implementation(libs.iconics.core)
-    implementation(libs.community.material.typeface) {
-        artifact { type = "aar" }
-    }
+    // This front end uses system TextViews; do not bundle the unused brand-icon font.
 
     // Testing
     testImplementation(libs.junit)

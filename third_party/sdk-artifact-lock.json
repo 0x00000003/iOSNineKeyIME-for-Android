@@ -1,5 +1,5 @@
 {
-  "scope": "fixed official SDK installer metadata; existing sdkmanager installation observed, clean bootstrap/byte-for-byte installed payload validation still pending",
+  "scope": "Fixed official installer/archive locks; fresh SDK payload and JDK files verified against archives, historical source2ad1de3 rebuild byte-identical after transient Maven TLS retry. Not current app/M6 acceptance.",
   "source": "https://dl.google.com/android/repository/repository2-3.xml",
   "source_snapshot_sha256": "f2bc624c8e1dc14c320fdf17e49a5501c35934948e46a444df8b36a138a03e1e",
   "packages": [
@@ -14,7 +14,9 @@
         "publisher_checksum": {
           "algorithm": "sha1",
           "value": "2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576"
-        }
+        },
+        "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+        "sha256_source": "local bytes after pinned publisher SHA1 validation; executable payload checked during fresh bootstrap"
       }
     },
     {
@@ -28,7 +30,9 @@
         "publisher_checksum": {
           "algorithm": "sha1",
           "value": "da6bbb3d007095658ae61d9d85da8fcc5c0dfb66"
-        }
+        },
+        "sha256": "19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9",
+        "sha256_source": "local bytes after pinned publisher SHA1 validation; executable payload checked during fresh bootstrap"
       }
     },
     {
@@ -42,7 +46,9 @@
         "publisher_checksum": {
           "algorithm": "sha1",
           "value": "199ae0047ee61e842f8ee0c6d3918e44fb9a1f83"
-        }
+        },
+        "sha256": "04e7f3a72044de4926fa038fa0e251a37bba1e1c3fb8beab6f8401bfd9eb4bf3",
+        "sha256_source": "local bytes after pinned publisher SHA1 validation; executable payload checked during fresh bootstrap"
       }
     },
     {
@@ -56,7 +62,9 @@
         "publisher_checksum": {
           "algorithm": "sha1",
           "value": "78c3bf819d7bf6144783aeef06c5f9cbd3f8f5a9"
-        }
+        },
+        "sha256": "861a219b872cd0d9aee282b617fe3bd32f83925db3a0d28fd45d0553452e903a",
+        "sha256_source": "local bytes after pinned publisher SHA1 validation; executable payload checked during fresh bootstrap"
       }
     },
     {
@@ -70,7 +78,9 @@
         "publisher_checksum": {
           "algorithm": "sha1",
           "value": "6ae73f4de6452dc57e62ec02b68eed92a4c21661"
-        }
+        },
+        "sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d",
+        "sha256_source": "local bytes after pinned publisher SHA1 validation; executable payload checked during fresh bootstrap"
       }
     }
   ],
@@ -83,6 +93,7 @@
     "checksum_url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.7_6.tar.gz.sha256.txt",
     "checksum_document_sha256": "8d607510a3f7b347b81a89fdf2b1b6618e74c694c803e289571ccebe8ce354cc",
     "installed_runtime_version_checked": true,
-    "archive_downloaded_by_this_task": false
+    "archive_downloaded_by_this_task": true,
+    "download_record": "third_party/toolchain-payloads.json"
   }
 }

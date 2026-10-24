@@ -1,0 +1,7 @@
+{
+  "scope": "same current optimized signed/unsigned APK non-signature ZIP bytes; NOT device or release acceptance",
+  "signed_sha256": "dedeee3c9f43e69ef608e01f33db1b6e7382bca89096fa6aabff48a29c9a1642",
+  "unsigned_sha256": "9cdd4df28cd25e1fb19ebd2438f4078d99c1890514b5dda0ac1bdb97c3bff0c1",
+  "non_signature_entries": 23,
+  "all_equal": true
+}

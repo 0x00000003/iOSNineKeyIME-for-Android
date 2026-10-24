@@ -52,3 +52,11 @@
 prepare_prebuilt_tables.py仅允许6个固定公共table/reverse，要求.cache/host-compat-profile-1/build与profile-2/build字节一致；输出third_party/prebuilt-tables.json和忽略的.cache/probe-prebuilt。绝不递归复制整个profile或userdb。然后在新的.cache/android-probe-resources staging运行`python3 scripts/package_android_probe.py --prebuilt`；当前脚本拒绝覆盖已存在stage，保留旧stage后才重建，勿用全局清理。原始source词典在已核验lite ZIP/host准备目录，runtime只用prebuilt fallback，不能删构建来源或许可。
 
 两个fresh staging重建的ZIP与manifest字节一致；当前APK13e97020对应资源daec81fe。尚无完整一键干净SDK/JDK重建证明，不能以同缓存重建称M6 REL01。设备测试命令`python3 scripts/run_probe.py --target pixel --scope engine --record 新名称`；editor/full会保留私密组合音标FAIL，不能为得到退出0静默跳过。Pixel目标只能来自忽略的.private/test-device；不打印serial、不启用/切换IME。专用emulator-5580以同脚本显式选择，始终检查qemu。原始输出和APK留artifacts，脱敏记录留docs/testing/evidence。
+
+## 当前 WIP 构建补充（优先于历史M0/probe段落）
+
+已有薄IME服务，仍未由用户启用，实际功能范围及制品以STATUS首段和对应哈希记录为准。Gradle preBuild现在自动生成并核验五项固定运行时资产（包括NOTICE），不再要求手工保留build目录。默认release unsigned；显式localReleaseProbe才用本项目调试证书签优化非debuggable测试制品。禁止把该证书当正式发布。
+
+实际项目与included convention build使用STRICT依赖锁及严格verification；新增配置无lock state、意外依赖均失败关闭。常规构建不要加--write-locks绕过失败，应先定位、核来源/许可与差异，再审查锁的有意更新。未用UTP配置没有为报告任务额外白名单。
+
+独立工具链命令：`python3 scripts/bootstrap_clean_toolchain.py --destination .cache/rebuild-new --source-commit 2ad1de3 --fetch-archives`。目标必须新建，使用固定HTTPS归档/哈希，约需12GiB以上余量；沿用已接受同条款SDK marker与公共table/model输入，创建新SDK/JDK/Gradle cache，不调用adb。脚本输出目标内bootstrap-receipt.json及gradle-build.txt，网络失败保留原状态，不改TLS/哈希或自动宣布成功。实际历史2ad源码首次TLS失败、同规则重试整包复现条件见TOOLCHAIN记录；这不替代当前版本同哈希回归或完整M6。

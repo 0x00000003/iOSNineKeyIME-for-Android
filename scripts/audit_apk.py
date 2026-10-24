@@ -92,7 +92,7 @@ def font_errors(apk, allowed_hashes):
                 continue
             sha=hashlib.sha256(archive.read(info)).hexdigest()
             observed.append(dict(apk_entry=info.filename,bytes=info.file_size,sha256=sha))
-            if sha not in allowed_hashes:errors.append('unreviewed packaged font: '+info.filename)
+            if sha not in allowed_hashes:errors.append('font not permitted by current policy: '+info.filename)
     return errors,observed
 
 
@@ -110,8 +110,8 @@ def main():
     notice=json.loads((ROOT/'third_party/offline-notice-sources.json').read_text())
     expected['offline-notices.json']=(notice['sha256'],notice['bytes'])
     errors.extend(asset_errors(apk,expected))
-    font=json.loads((ROOT/'third_party/material-font-license.json').read_text())
-    font_problems,fonts=font_errors(apk,{font['font_sha256']})
+    # Product front end uses system typefaces. Historical reviewed icon fonts are not a runtime allowance.
+    font_problems,fonts=font_errors(apk,set())
     errors.extend(font_problems)
     app=E.fromstring(manifest).find('application')
     aapt=tool.parents[3]/'build-tools/36.0.0/aapt2'
@@ -123,7 +123,7 @@ def main():
             content=run('resources','xml','--file',path)
             (destination/(attr+'-'+str(index)+'.xml')).write_text(content)
             errors.extend(backup_errors(content,modern))
-    result={'scope':'static APK manifest/packaged backup XML/locked runtime assets/reviewed font hashes, NOT target-OS backup/network/learning acceptance',
+    result={'scope':'static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance',
             'sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'bytes':apk.stat().st_size,
             'package':E.fromstring(manifest).get('package'),'packaged_fonts':fonts,'errors':errors,'pass':not errors}
     (destination/'audit.json').write_text(json.dumps(result,indent=2)+'\n')

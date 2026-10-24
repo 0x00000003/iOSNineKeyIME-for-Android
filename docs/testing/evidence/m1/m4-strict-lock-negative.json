@@ -1,0 +1,19 @@
+{
+  "scope": "actual Gradle strict-lock negative resolution tasks; no APK built or installed",
+  "fixture_initial_attempt": "FAIL: init fixture addressed included build without :app; guarded findProject and repeated",
+  "cases": [
+    {
+      "case": "missing_config_state",
+      "expected_rejection_observed": true,
+      "log_sha256": "6ee3fc7d843f3fa9512817a5afbd8830a97f91c780a3d27c1742f72f4c32f9be"
+    },
+    {
+      "case": "removed_dependency_reintroduced",
+      "expected_rejection_observed": true,
+      "log_sha256": "0826e177ecaeb6fd2274910ea60c0f43d7569085aa4bc1b3c49f6c3388821042"
+    }
+  ],
+  "pass": true,
+  "fixture_path": "tests/fixtures/strict-lock-negative.init.gradle",
+  "fixture_sha256": "ae1bf056552b560c1027e3df3cfcc82f497f8e3b3cbc292a2fe34ab5362ca8f3"
+}

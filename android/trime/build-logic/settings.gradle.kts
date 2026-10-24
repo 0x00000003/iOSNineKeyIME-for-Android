@@ -17,3 +17,15 @@ dependencyResolutionManagement {
 
 rootProject.name = "build-logic"
 include(":convention")
+
+// Lock every used project and plugin classpath, including the included convention build.
+// Missing or changed lock state fails, including a new configuration not yet reviewed.
+gradle.beforeProject {
+    dependencyLocking {
+        lockAllConfigurations()
+        lockMode.set(org.gradle.api.artifacts.dsl.LockMode.STRICT)
+    }
+    buildscript.configurations.configureEach {
+        if (name == "classpath") resolutionStrategy.activateDependencyLocking()
+    }
+}

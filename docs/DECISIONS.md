@@ -45,3 +45,6 @@
 | 031 | 2026-10-23 | Local validation only | 显式localReleaseProbe用本项目调试key签非debuggable优化release，默认仍不签；独立引擎runner拒绝完整IME/editor gate | 不是M6正式签名/发布；复用原协议/语料、双APK哈希与nonce，release实际执行后才能报告该制品成绩 |
 | 032 | 2026-10-23 | Build fix required by actual FAIL | b4fb49d隔离源码Gradle成功但3MB APK缺四个运行时资源；把fresh固定资产生成/哈希核验接入preBuild，任何缺失/漂移失败，不复用未核验旧生成目录 | 独立源码构建必须核对实际APK资源闭包，manifest/备份静态PASS不能代替可运行。固定缓存输入可复用，仍不称SDK/cache全干净重建 |
 | 033 | 2026-10-23 | Host boundary fix | 宿主beginBatch及普通查询后重核session/connection，旧字段重入在commit前拒绝；可判定host RuntimeException失败关闭且不日志payload，endBatch错误不撤销已被host接受的commit | 相同测试APK 1/11红→11/11绿，真实EditText oracle；不承诺host提交本身after-apply抛异常可无歧义重试，不读取敏感正文补偿 |
+
+| 034 | 2026-10-23 | Accepted WIP build policy | 默认LockMode.DEFAULT不能拒绝缺状态；settings早期对root/included projects及plugin classpath设STRICT，补实际构建/test/lint配置锁。移除未用Material品牌图标集合，实际所有APK只允许系统字体、零打包字体 | 缺状态/重新加入旧依赖两实际Gradle负测拒绝；不用verification拒绝代替锁证据。依赖约束变化与124→122清单见TOOLCHAIN记录 |
+| 035 | 2026-10-23 | Accepted WIP native paging | 以20候选+1 lookahead的原生窗口替代前100本地缓存；全局index、独立Fetch及匹配offset/revision，翻页不消费getCommit；空格确认global0，收起重取第一页 | 原单键6只有4候选，保留测试前提FAIL后使用完整音节64，在双设备跨120实际选择仅上屏一次；禁用键保留绘制几何，触控集合排除 |

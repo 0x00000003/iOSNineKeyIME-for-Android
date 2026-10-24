@@ -22,12 +22,12 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
                   private val hide:()->Unit={}, private val togglePrivacy:()->Unit={}, private val retry:()->Unit={}, private val switchIme:()->Unit={}) : ViewGroup(context) {
     private val density=resources.displayMetrics.density
     private var state=KeyboardState()
-    private var page=0
     private var shift=false
     private var lastStamp=Stamp(0,0)
     private var map=HitMap(emptyList())
     private val touches=TouchProtocol(map)
     private val actions=mutableMapOf<String,()->Unit>()
+    private val geometry=mutableMapOf<String,KeyBox>()
     private val handler=Handler(Looper.getMainLooper())
     private var pointerDown=false
     private var contentHeight=310f
@@ -43,7 +43,6 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
     init { importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_YES;setWillNotDraw(false) }
     fun render(value:KeyboardState) {
         if(value.stamp.session>lastStamp.session) {touches.startSession(value.stamp.session);stopRepeating();shift=false}
-        if(value.stamp!=lastStamp)page=0
         lastStamp=value.stamp;state=value
         if(currentWidth>0)buildKeys(currentWidth)
         requestLayout()
@@ -54,16 +53,16 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
         if(a.session!=state.stamp.session)return
         if(a.key=="delete")send(Event.Backspace,a.repeated) else actions[a.key]?.invoke()
     }
-    private fun addLabel(id:String,label:String,box:KeyBox,action:(()->Unit)?=null,small:Boolean=false) {
+    private fun addLabel(id:String,label:String,box:KeyBox,action:(()->Unit)?=null,small:Boolean=false,enabled:Boolean=true) {
         val key=TextView(context).apply {
             tag=id;text=label;textSize=if(small)14f else 18f
             gravity=android.view.Gravity.CENTER;maxLines=1;ellipsize=TextUtils.TruncateAt.END
             setTextColor(if(dark)Color.WHITE else Color.BLACK)
             if(action!=null) {
-                isFocusable=true;isClickable=true
+                isEnabled=enabled;isFocusable=enabled;isClickable=enabled;alpha=if(enabled)1f else 0.45f
                 contentDescription=label
                 accessibilityDelegate=object:View.AccessibilityDelegate(){override fun onInitializeAccessibilityNodeInfo(host:View,info:AccessibilityNodeInfo){super.onInitializeAccessibilityNodeInfo(host,info);info.className=Button::class.java.name}}
-                setOnClickListener {touches.accessibilityActivate(id,state.stamp.session)?.let {activate(it)}}
+                if(enabled)setOnClickListener {touches.accessibilityActivate(id,state.stamp.session)?.let {activate(it)}}
             }
             background=GradientDrawable().apply {setColor(if(dark)0xff515155.toInt() else Color.WHITE);cornerRadius=6*density}
         }
@@ -72,14 +71,14 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
         // A second touch can arrive before the next layout frame after a state update.
         key.measure(MeasureSpec.makeMeasureSpec(width,MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(height,MeasureSpec.EXACTLY))
         key.layout((box.left*density).toInt(),(box.top*density).toInt(),(box.right*density).toInt(),(box.bottom*density).toInt())
-        if(action!=null)actions[id]=action
+        if(action!=null && enabled)actions[id]=action
     }
     private fun buildKeys(width:Float) {
-        removeAllViews();actions.clear()
+        removeAllViews();actions.clear();geometry.clear()
         setBackgroundColor(if(dark)0xff2c2c2e.toInt() else 0xffd2d5db.toInt())
         val keys=mutableListOf<KeyBox>()
-        fun key(id:String,label:String,l:Float,t:Float,r:Float,b:Float,small:Boolean=false,repeats:Boolean=false,action:()->Unit) {
-            val box=KeyBox(id,l,t,r,b,repeats);keys+=box;addLabel(id,label,box,action,small)
+        fun key(id:String,label:String,l:Float,t:Float,r:Float,b:Float,small:Boolean=false,repeats:Boolean=false,enabled:Boolean=true,action:()->Unit) {
+            val box=KeyBox(id,l,t,r,b,repeats);geometry[id]=box;if(enabled)keys+=box;addLabel(id,label,box,action,small,enabled)
         }
         val status=when {
             state.errorCode!=null -> when(state.errorCode){"E_HOST_PENDING"->"宿主未接收，请恢复连接后重试";"E_NO_CANDIDATE"->"无可用候选，可修改或取消";else->"输入暂不可用（${state.errorCode}）"}
@@ -95,23 +94,23 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
             val cell=(width-12)/KeyboardReducer.punctuation.size
             KeyboardReducer.punctuation.forEachIndexed {i,p->key("punct-$i",p,6+i*cell,27f,6+(i+1)*cell-2,75f){send(Event.Punctuation(p),false)}}
         } else if(state.bar==Bar.CANDIDATES && state.candidates.isNotEmpty()) {
-            val count=if(state.expanded)20 else 3
-            val candidates=state.candidates.drop(page*count).take(count)
+            val count=if(state.expanded)KeyboardReducer.CANDIDATE_PAGE_SIZE else 3
+            val candidates=state.candidates.take(count)
             val cols=if(state.expanded)4 else 3
             val usable=if(state.expanded)width-12 else width-66
             val cell=usable/cols
             candidates.forEachIndexed {i,c->
-                key("candidate-${c.id.stamp.session}-${c.id.stamp.revision}-${c.id.index}",c.text,6+(i%cols)*cell,27f+(i/cols)*50,6+(i%cols+1)*cell-4,75f+(i/cols)*50,true){send(Event.Choose(c.id),false)}
+                key("candidate-${c.id.stamp.session}-${c.id.stamp.revision}-${c.id.index}",c.text,6+(i%cols)*cell,27f+(i/cols)*50,6+(i%cols+1)*cell-4,75f+(i/cols)*50,true,enabled=!state.awaiting){send(Event.Choose(c.id),false)}
             }
             if(!state.expanded)key("expand","展开",width-54,27f,width-6,75f,true){send(Event.Expand,false)}
         } else {
             key("bar-info",when(state.bar){Bar.NO_CANDIDATES->"无候选 · 修改或取消";Bar.PRIVATE->"不读取周围文字";Bar.UNAVAILABLE->if(state.errorCode!=null)"引擎未就绪 · 点此重试" else "正在部署离线数据";else->"英文 / 数字 / 符号"},6f,27f,width-6,75f,true){if(state.errorCode!=null)retry()}
         }
-        if(state.expanded && state.candidates.isNotEmpty()) {
+        if(state.expanded) {
             val top=282f;val cell=(width-30)/4
-            key("previous","上一页",6f,top,6+cell,top+48,true){if(page>0){page--;buildKeys(width);requestLayout()}}
-            key("next","下一页",12+cell,top,12+2*cell,top+48,true){if((page+1)*20<state.candidates.size){page++;buildKeys(width);requestLayout()}}
-            key("collapse","收起",18+2*cell,top,18+3*cell,top+48,true){send(Event.Expand,false)}
+            key("previous","上一页",6f,top,6+cell,top+48,true,enabled=!state.awaiting&&state.candidateOffset>0){send(Event.CandidatePage(-1),false)}
+            key("next","下一页",12+cell,top,12+2*cell,top+48,true,enabled=!state.awaiting&&state.hasMoreCandidates){send(Event.CandidatePage(1),false)}
+            key("collapse","收起",18+2*cell,top,18+3*cell,top+48,true,enabled=!state.awaiting){send(Event.Expand,false)}
             key("cancel","取消",24+3*cell,top,width-6,top+48,true){send(Event.Cancel,false)}
             contentHeight=336f
         } else {
@@ -156,7 +155,7 @@ class NineKeyView(context:Context, private val send:(Event,Boolean)->Unit,
         setMeasuredDimension(w,(contentHeight*density).toInt())
     }
     override fun onLayout(changed:Boolean,l:Int,t:Int,r:Int,b:Int) {
-        for(i in 0 until childCount){val v=getChildAt(i);val box=map.keys.firstOrNull {it.id==v.tag}
+        for(i in 0 until childCount){val v=getChildAt(i);val box=geometry[v.tag]
             if(box!=null)v.layout((box.left*density).toInt(),(box.top*density).toInt(),(box.right*density).toInt(),(box.bottom*density).toInt())
             else v.layout(0,0,width,(24*density).toInt())
         }

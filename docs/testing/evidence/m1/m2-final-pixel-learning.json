@@ -1,0 +1,113 @@
+{
+  "scope": "R09 deterministic ten-query JNI/erase component; NOT system IME or complete privacy/security acceptance",
+  "protocol_sha256": "3c43d871220a5e8952ca77f862f6526b63bfb88da66eef3fbd14799727d88a6b",
+  "protocol_frozen_commit": "28fabd5",
+  "repetitions_per_target": 20,
+  "clear_rejected_while_native_reserved": true,
+  "positive_normal_userdb": true,
+  "old_profile_absent_after_clear": true,
+  "sibling_sentinel_unchanged": true,
+  "target_count": 10,
+  "nonfirst_baselines": 10,
+  "improved": 10,
+  "persisted_exact_rank": 10,
+  "clear_restored_baseline": 10,
+  "ranks": [
+    {
+      "id": "l001",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l002",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l003",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l004",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l005",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l006",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l007",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l008",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l009",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    },
+    {
+      "id": "l010",
+      "before": 2,
+      "after": 1,
+      "restart": 1,
+      "clear": 2
+    }
+  ],
+  "all_commits_exact_once": true,
+  "fresh_history_each_measurement": true,
+  "elapsed_ms": 89404,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "9aa86193dcd64489964d3243a8d711e6",
+  "tested_apk_sha256": "dd8f688f6c8bdc1cb3384e5e9a023b63384a1083641d23bde60af7a1a37dcb7c",
+  "tested_test_apk_sha256": "68bc0af2f9d03b6f995346c51ae0b2903797d5e61134ad227f2435a188f918c1",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "learning",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

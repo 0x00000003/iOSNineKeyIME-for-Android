@@ -1,0 +1,34 @@
+{
+  "scope": "actual serial JNI bounded native pages and synthetic real-host oracle; NOT enabled IME/system lifecycle, visual or all-path privacy acceptance",
+  "late_old_page_candidate_rejected": true,
+  "global_index_120_exact_once_host_commit": true,
+  "native_forward_backward_pages": true,
+  "collapse_reloads_global_first_page": true,
+  "later_page_space_confirms_global_primary": true,
+  "native_page_fetches": 11,
+  "host_commit_calls": 2,
+  "max_resident_candidate_window": 20,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "15d5c30609874da9b4181e70d2301760",
+  "tested_apk_sha256": "338bb5becadc221a229ef9904ab5c188aff990b96fce3bf0122fac60926d85f0",
+  "tested_test_apk_sha256": "bb06acbb51d3c73385ecb226a8a6430c87f56c3144d648cfd2d06929c5274669",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "paging",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

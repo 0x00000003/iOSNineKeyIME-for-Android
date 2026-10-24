@@ -252,27 +252,6 @@
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
     },
     {
-        "component": "androidx.compose.runtime:runtime-android:1.6.7",
-        "file": "runtime-release.aar",
-        "bytes": 2429479,
-        "sha256": "096fc94de01f27bc783bb0b8984b49aeda688f6329f8393d42d4b6754beae7da",
-        "pom_file": "runtime-android-1.6.7.pom",
-        "pom_sha256": "8b09aed734890c6c6ae301876de5988a679b0c820c12eb4d14c20543571050a4",
-        "pom_license_sources": [
-            {
-                "file": "runtime-android-1.6.7.pom",
-                "sha256": "8b09aed734890c6c6ae301876de5988a679b0c820c12eb4d14c20543571050a4"
-            }
-        ],
-        "pom_licenses": [
-            {
-                "name": "The Apache Software License, Version 2.0",
-                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
-            }
-        ],
-        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
-    },
-    {
         "component": "androidx.concurrent:concurrent-futures:1.0.0",
         "file": "concurrent-futures-1.0.0.jar",
         "bytes": 25895,
@@ -2230,27 +2209,6 @@
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
     },
     {
-        "component": "com.mikepenz:community-material-typeface:7.0.96.1-kotlin",
-        "file": "community-material-typeface-7.0.96.1-kotlin.aar",
-        "bytes": 807108,
-        "sha256": "b363d060c4f7e173f9fba3af76c82df6bca2bdd2be3c6a9edeb41a724f294c21",
-        "pom_file": "community-material-typeface-7.0.96.1-kotlin.pom",
-        "pom_sha256": "d336187fb4ad30834b336fbe1771781ab9a915787092f12591aa32d13505d589",
-        "pom_license_sources": [
-            {
-                "file": "community-material-typeface-7.0.96.1-kotlin.pom",
-                "sha256": "d336187fb4ad30834b336fbe1771781ab9a915787092f12591aa32d13505d589"
-            }
-        ],
-        "pom_licenses": [
-            {
-                "name": "Apache-2.0",
-                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
-            }
-        ],
-        "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
-    },
-    {
         "component": "com.mikepenz:iconics-core:5.4.0",
         "file": "iconics-core-5.4.0.aar",
         "bytes": 185732,
@@ -2272,22 +2230,22 @@
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
     },
     {
-        "component": "com.mikepenz:iconics-typeface-api:5.5.0-b01",
-        "file": "iconics-typeface-api-5.5.0-b01.aar",
-        "bytes": 11404,
-        "sha256": "258b2b1daee3fc1ea3d114ae48fb2005c8e58f5b6e61c1d91daf0c2ce654fc0d",
-        "pom_file": "iconics-typeface-api-5.5.0-b01.pom",
-        "pom_sha256": "ff13485e8524339bcc5f2a6e8136cb899d1cc36269433b150068c0b1cc97748e",
+        "component": "com.mikepenz:iconics-typeface-api:5.4.0",
+        "file": "iconics-typeface-api-5.4.0.aar",
+        "bytes": 11122,
+        "sha256": "2c359993e0999ab1d5727a81a8bf0aecb1176ff6b9cfaf4cecfa02abf816b4be",
+        "pom_file": "iconics-typeface-api-5.4.0.pom",
+        "pom_sha256": "33622c7f9affbd594369d556c6add7938cd6b08b8f408473e1154f648d78e2ba",
         "pom_license_sources": [
             {
-                "file": "iconics-typeface-api-5.5.0-b01.pom",
-                "sha256": "ff13485e8524339bcc5f2a6e8136cb899d1cc36269433b150068c0b1cc97748e"
+                "file": "iconics-typeface-api-5.4.0.pom",
+                "sha256": "33622c7f9affbd594369d556c6add7938cd6b08b8f408473e1154f648d78e2ba"
             }
         ],
         "pom_licenses": [
             {
                 "name": "Apache-2.0",
-                "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
             }
         ],
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
@@ -2335,16 +2293,16 @@
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
     },
     {
-        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.0",
-        "file": "kotlin-stdlib-jdk7-2.0.0.jar",
-        "bytes": 961,
-        "sha256": "dd958064f946b01f745365c2efa11e4c5812a22e26b6caa4433f207fb5b4a5c5",
-        "pom_file": "kotlin-stdlib-jdk7-2.0.0.pom",
-        "pom_sha256": "1ea14bf50d37b24cee99b3bbeca0e24a07ff361d906bb20067cf41606e143096",
+        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0",
+        "file": "kotlin-stdlib-jdk7-1.8.0.jar",
+        "bytes": 963,
+        "sha256": "4c889d1d9803f5f2eb6c1592a6b7e62369ac7660c9eee15aba16fec059163666",
+        "pom_file": "kotlin-stdlib-jdk7-1.8.0.pom",
+        "pom_sha256": "dfa9644a6ae5b898ee475bb1f57e830ba1f770aee6c9c15f8112aa381180184a",
         "pom_license_sources": [
             {
-                "file": "kotlin-stdlib-jdk7-2.0.0.pom",
-                "sha256": "1ea14bf50d37b24cee99b3bbeca0e24a07ff361d906bb20067cf41606e143096"
+                "file": "kotlin-stdlib-jdk7-1.8.0.pom",
+                "sha256": "dfa9644a6ae5b898ee475bb1f57e830ba1f770aee6c9c15f8112aa381180184a"
             }
         ],
         "pom_licenses": [
@@ -2356,16 +2314,16 @@
         "scope": "exact selected Maven artifact/POM with explicit parent inheritance; publisher declaration, not independent legal approval"
     },
     {
-        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0",
-        "file": "kotlin-stdlib-jdk8-2.0.0.jar",
-        "bytes": 967,
-        "sha256": "92035a0fa8b97a97bb430d30ba03e5ad51f4cfa839cf1559e55245cba735aa94",
-        "pom_file": "kotlin-stdlib-jdk8-2.0.0.pom",
-        "pom_sha256": "afe5006f9d2bb7a26a1f1b92b007a871be26dd82fadbbb2cca9f3757534c5b83",
+        "component": "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0",
+        "file": "kotlin-stdlib-jdk8-1.8.0.jar",
+        "bytes": 968,
+        "sha256": "05b62804441b0c9a1920b6b7d5cf7329a4e24b6258478e32b1f046ca01900946",
+        "pom_file": "kotlin-stdlib-jdk8-1.8.0.pom",
+        "pom_sha256": "2bb6c7551b97c7ba029f9866582e7aa19d63abfd4cd53da3fc0c462f3ab5fc26",
         "pom_license_sources": [
             {
-                "file": "kotlin-stdlib-jdk8-2.0.0.pom",
-                "sha256": "afe5006f9d2bb7a26a1f1b92b007a871be26dd82fadbbb2cca9f3757534c5b83"
+                "file": "kotlin-stdlib-jdk8-1.8.0.pom",
+                "sha256": "2bb6c7551b97c7ba029f9866582e7aa19d63abfd4cd53da3fc0c462f3ab5fc26"
             }
         ],
         "pom_licenses": [
@@ -2589,16 +2547,12 @@
     {
         "component": "project :state",
         "file": "state.jar",
-        "bytes": 91377,
-        "sha256": "bbf6fe5ce529a65a9df1f14b6408fb5c55e67a266672f8f37b0d805daccccd52",
+        "bytes": 96518,
+        "sha256": "edf0a444b4143f002e4ee9d31f23dba17a225fff4c2918236d60bd4ff9db15dd",
         "pom_file": null,
         "pom_sha256": null,
-        "pom_license_sources": [
-
-        ],
-        "pom_licenses": [
-
-        ],
+        "pom_license_sources": [],
+        "pom_licenses": [],
         "scope": "local project code"
     }
 ]

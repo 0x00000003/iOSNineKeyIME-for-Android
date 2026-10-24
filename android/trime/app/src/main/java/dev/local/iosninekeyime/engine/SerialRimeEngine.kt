@@ -61,6 +61,7 @@ class SerialRimeEngine(
             is Effect.Key -> effect.stamp
             is Effect.Select -> effect.stamp
             is Effect.Clear -> effect.stamp
+            is Effect.FetchCandidates -> effect.stamp
             else -> error("E_NATIVE_COMMAND")
         }
         if (closed.get()) { postOwner { reply(null) }; return }
@@ -73,13 +74,17 @@ class SerialRimeEngine(
                     is Effect.Key -> check(Rime.processRimeKey(effect.key,0)) { "E_NATIVE_KEY" }
                     is Effect.Select -> check(Rime.selectRimeCandidate(effect.index,true)) { "E_NATIVE_SELECT" }
                     is Effect.Clear -> { Rime.resetRimeSession(); check(Rime.selectRimeSchema("wanxiang_t9")) { "E_SCHEMA" } }
+                    is Effect.FetchCandidates -> check(effect.offset>=0 && effect.limit==KeyboardReducer.CANDIDATE_PAGE_SIZE) { "E_NATIVE_PAGE" }
                     else -> error("E_NATIVE_COMMAND")
                 }
-                val commit = Rime.getRimeCommit().text // Exactly one consuming getter per command.
+                // Read-only paging never drains a host commit or changes composition.
+                val commit = if(effect is Effect.FetchCandidates)null else Rime.getRimeCommit().text
                 val current = Rime.getRimeContext()
+                val offset=(effect as? Effect.FetchCandidates)?.offset?:0
+                val limit=KeyboardReducer.CANDIDATE_PAGE_SIZE
+                val candidates=if(current.composition.length>0 || current.input.isNotEmpty())Rime.getRimeCandidates(offset,limit+1).map{it.text}else emptyList()
                 response = Event.Snapshot(stamp,current.input,current.composition.preedit.orEmpty(),
-                    if(current.composition.length > 0 || current.input.isNotEmpty()) Rime.getRimeCandidates(0,100).map { it.text } else emptyList(),
-                    commit,current.composition.length)
+                    candidates.take(limit),commit,current.composition.length,offset,candidates.size>limit)
             } catch (_: Exception) { stopNative() }
             val result = response
             postOwner { reply(result) }

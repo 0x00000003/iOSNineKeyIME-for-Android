@@ -1,0 +1,10 @@
+{
+  "scope": "only own ignored artifacts/*.apk duplicate bytes converted to hardlinks; all names/bytes/evidence preserved; no external directories touched",
+  "apk_paths_seen": 233,
+  "duplicate_paths_hardlinked": 188,
+  "estimated_duplicate_allocations_released_bytes": 10020671488,
+  "free_bytes_before": 15693443072,
+  "free_bytes_after": 25715986432,
+  "free_gib_after": 23.95,
+  "pass": true
+}

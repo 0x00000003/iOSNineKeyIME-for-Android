@@ -1,0 +1,27 @@
+{
+  "scope": "actual serial JNI bounded native pages and synthetic real-host oracle; NOT enabled IME/system lifecycle, visual or all-path privacy acceptance",
+  "failure_stage": "forward",
+  "pass": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "f2c94f55d712420dba55c1851b1cdeeb",
+  "tested_apk_sha256": "338bb5becadc221a229ef9904ab5c188aff990b96fce3bf0122fac60926d85f0",
+  "tested_test_apk_sha256": "e0090c9ebf67fed506f859d012b7d3fbfb9e81c1b4425ed57c76bc0a866849de",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "installed local frozen APK"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "paging",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

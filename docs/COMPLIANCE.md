@@ -31,3 +31,5 @@
 M1/M2已有实际APK；早期“没有APK/只研究”保留为初始化历史。当前模型为固定lotem compact LGPL数据、Lua仅自写marker，原Wanxiang LTS gram不打包。原生插件/嵌入Lua/字体授权及逐文件SHA增量见third_party和M1 probe-4记录。AboutLibraries自动JSON有136依赖和许可ID，不能替代逐项传递版权/对应源审计；完整M4/M6分发检查仍未通过，现不对外发布。薄服务/状态/视图修改继续GPL-3.0-or-later，来源补丁账更新；没有Apple素材。
 
 M4补充：固定43份正文、额外三个确切版本MIT来源、124个releaseRuntimeClasspath制品与全部POM/显式parent链SHA已落third_party清单；离线界面138条来源。原始Maven POM发布者许可声明与独立审查分开。Lua仅自写内置marker，用户/共享脚本及IO/OS/package/debug不加载；资源hash/白名单拒绝未知文件和symlink。上述进展未关闭全部词库二次来源、模型数据对应源和最终分发义务，仍禁止宣称完整合规或发布。
+
+最新检查点：运行时字体依赖已移除（122个确切制品，相关传递约束变化已记录），三种实际APK零打包字体。历史SDK/JDK新下载且初始空Gradle cache整包复现是限定重建证据，不能解除上述词库二次来源/模型对应源条件；当前仍开发版WIP，不作完整分发合规声明。完整哈希及测试范围见[CHECKPOINT](testing/CHECKPOINT-20261023.md)。

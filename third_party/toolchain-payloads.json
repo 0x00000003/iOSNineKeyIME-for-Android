@@ -1,0 +1,100 @@
+{
+  "scope": "Pinned fresh official archive bytes and package metadata for project-local bootstrap; SDK SHA256 observed after matching previously pinned publisher SHA1, JDK/CLI publisher SHA256. Not a build/runtime acceptance report.",
+  "artifacts": [
+    {
+      "id": "platforms;android-36",
+      "url": "https://dl.google.com/android/repository/platform-36_r02.zip",
+      "archive_file": "platform-36_r02.zip",
+      "bytes": 65878410,
+      "publisher_algorithm": "sha1",
+      "publisher_checksum": "2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576",
+      "sha256": "37607369a28c5b640b3a7998868d45898ebcb777565a0e85f9acf36f29631d2e",
+      "sdk_path": "platforms/android-36",
+      "local_package_metadata": {
+        "path": "third_party/sdk-package-metadata/platforms_android-36.xml",
+        "sha256": "9c54aa15c2f4680941a780ad238bc9cdf6e2a9a72cfd15d5ba24d8dc0d33495d",
+        "scope": "public sdkmanager-generated package metadata from same pinned prior project install; not an executable payload"
+      }
+    },
+    {
+      "id": "ndk;28.0.13004108",
+      "url": "https://dl.google.com/android/repository/android-ndk-r28-darwin.zip",
+      "archive_file": "android-ndk-r28-darwin.zip",
+      "bytes": 950413046,
+      "publisher_algorithm": "sha1",
+      "publisher_checksum": "da6bbb3d007095658ae61d9d85da8fcc5c0dfb66",
+      "sha256": "19b16241e8e8d4c8e4f3729b8a0a625dd240394e1f1cd072596df891317e22a9",
+      "sdk_path": "ndk/28.0.13004108",
+      "local_package_metadata": {
+        "path": "third_party/sdk-package-metadata/ndk_28_0_13004108.xml",
+        "sha256": "b9ffbd4357f4e58c8506ad48e73908cc2187580715686ddf84b168e2c8405fe9",
+        "scope": "public sdkmanager-generated package metadata from same pinned prior project install; not an executable payload"
+      }
+    },
+    {
+      "id": "build-tools;36.0.0",
+      "url": "https://dl.google.com/android/repository/build-tools_r36_macosx.zip",
+      "archive_file": "build-tools_r36_macosx.zip",
+      "bytes": 79121749,
+      "publisher_algorithm": "sha1",
+      "publisher_checksum": "199ae0047ee61e842f8ee0c6d3918e44fb9a1f83",
+      "sha256": "04e7f3a72044de4926fa038fa0e251a37bba1e1c3fb8beab6f8401bfd9eb4bf3",
+      "sdk_path": "build-tools/36.0.0",
+      "local_package_metadata": {
+        "path": "third_party/sdk-package-metadata/build-tools_36_0_0.xml",
+        "sha256": "6834eed4a3e3abf1fdf725adee726f9f7931cbaaaa58b5e92cc028024422b1e9",
+        "scope": "public sdkmanager-generated package metadata from same pinned prior project install; not an executable payload"
+      }
+    },
+    {
+      "id": "cmake;3.31.6",
+      "url": "https://dl.google.com/android/repository/cmake-3.31.6-darwin.zip",
+      "archive_file": "cmake-3.31.6-darwin.zip",
+      "bytes": 42861179,
+      "publisher_algorithm": "sha1",
+      "publisher_checksum": "78c3bf819d7bf6144783aeef06c5f9cbd3f8f5a9",
+      "sha256": "861a219b872cd0d9aee282b617fe3bd32f83925db3a0d28fd45d0553452e903a",
+      "sdk_path": "cmake/3.31.6",
+      "local_package_metadata": {
+        "path": "third_party/sdk-package-metadata/cmake_3_31_6.xml",
+        "sha256": "2167852e3f36b596055b59a2d63afe444498ac1f1eda2edad7dfd4ba3d089ed1",
+        "scope": "public sdkmanager-generated package metadata from same pinned prior project install; not an executable payload"
+      }
+    },
+    {
+      "id": "platform-tools",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-darwin.zip",
+      "archive_file": "platform-tools_r37.0.1-darwin.zip",
+      "bytes": 16110554,
+      "publisher_algorithm": "sha1",
+      "publisher_checksum": "6ae73f4de6452dc57e62ec02b68eed92a4c21661",
+      "sha256": "ee39ad5967e95c2a07f04dbcbde96b1a0c916ba376096db5d2f498b7727a5d1d",
+      "sdk_path": "platform-tools",
+      "local_package_metadata": {
+        "path": "third_party/sdk-package-metadata/platform-tools.xml",
+        "sha256": "55d46ccebf3bba4ad4349d3747643bb0ed38aac843ce6c87782b009328f73e1e",
+        "scope": "public sdkmanager-generated package metadata from same pinned prior project install; not an executable payload"
+      }
+    },
+    {
+      "id": "cmdline-tools;19.0",
+      "url": "https://dl.google.com/android/repository/commandlinetools-mac-13114758_latest.zip",
+      "archive_file": "commandlinetools-mac-13114758_latest.zip",
+      "bytes": 143250852,
+      "publisher_algorithm": "sha256",
+      "publisher_checksum": "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e",
+      "sha256": "5673201e6f3869f418eeed3b5cb6c4be7401502bd0aae1b12a29d164d647a54e",
+      "sdk_path": "cmdline-tools/19.0",
+      "local_package_metadata": null
+    },
+    {
+      "id": "jdk;21.0.7+6",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.7_6.tar.gz",
+      "archive_file": "OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.7_6.tar.gz",
+      "bytes": 199692905,
+      "publisher_algorithm": "sha256",
+      "publisher_checksum": "6fcb25f3f71a5ff245dec4ebe8bd5c643f179a5cd0a61c08e58a8c65914d2f97",
+      "sha256": "6fcb25f3f71a5ff245dec4ebe8bd5c643f179a5cd0a61c08e58a8c65914d2f97"
+    }
+  ]
+}

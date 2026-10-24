@@ -27,3 +27,6 @@ source inclusion or successful compilation does not close that gate.
 ## M4 本地派生增量（2026-10-23）
 
 离线许可bundle由third_party/offline-notice-sources.json固定43个原文及SHA，来源文本保留原版权；实际运行时制品清单在third_party/runtime-inventory-release.json（POM/parent SHA与发布者许可声明）。BRAVH/Kodein/Kaverit精确版本MIT原文见docs/reference/upstream/maven-mit，Boost正文同目录boost。新设置/测试/生成器/严格公共资源验证沿用GPL-3.0-or-later。对Trime/Lua子模块修改：关闭旧同步worker，缩小R8旧前端roots，限制Lua标准库与固定内置模块，native编译去本地路径；完整逐文件变更SHA见third_party/trime-modifications.json。没有复制万象数据仓库未授权工具，没有打包Apple素材。完整对应源与分发审查仍WIP。
+
+
+后续WIP：删除未用community-material-typeface及其字体，当前debug/unsigned/本地签名release实际APK字体数均0；历史字体原文来源仍保留而不作为运行时许可。实际运行时清单现122项，父POM链/制品SHA及明确版本变化见TOOLCHAIN记录；离线许可正文仍43份，包含保留的上游源码归属，不能将它等同全量分发义务已关闭。

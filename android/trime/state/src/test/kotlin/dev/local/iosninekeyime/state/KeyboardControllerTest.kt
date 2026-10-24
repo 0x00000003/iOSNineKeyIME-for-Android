@@ -30,9 +30,32 @@ class KeyboardControllerTest : StringSpec({
         override fun action(session: Long, action: EditorAction) {}
         override fun end(session: Long) { gate.endSession(session) }
     }
-    fun Engine.answer(index: Int, input: String, commit: String? = null, candidates: List<String> = if (input.isEmpty()) emptyList() else listOf("synthetic")) {
-        val stamp = when (val c = commands[index]) { is Effect.Key -> c.stamp; is Effect.Select -> c.stamp; is Effect.Clear -> c.stamp; else -> error("fixture") }
-        replies[index](Event.Snapshot(stamp, input, input, candidates, commit))
+    fun Engine.answer(index: Int, input: String, commit: String? = null, candidates: List<String> = if (input.isEmpty()) emptyList() else listOf("synthetic"), offset:Int=0, more:Boolean=false) {
+        val stamp = when (val c = commands[index]) { is Effect.Key -> c.stamp; is Effect.Select -> c.stamp; is Effect.Clear -> c.stamp; is Effect.FetchCandidates -> c.stamp; else -> error("fixture") }
+        replies[index](Event.Snapshot(stamp, input, input, candidates, commit,candidateOffset=offset,hasMoreCandidates=more))
+    }
+    "native page is an ordering barrier before the next digit" {
+        val e=Engine();val h=Host();val c=KeyboardController(e,h)
+        c.start(1,false,Layout.CHINESE,EditorAction.DONE);e.ready[0](true)
+        c.submit(Event.Digit(6));e.answer(0,"6",candidates=List(20){"synthetic-$it"},more=true)
+        c.submit(Event.Expand);c.submit(Event.CandidatePage(1));c.submit(Event.Digit(4))
+        e.commands.size shouldBe 2
+        (e.commands[1]as Effect.FetchCandidates).offset shouldBe 20
+        e.answer(1,"6",candidates=List(20){"synthetic-${20+it}"},offset=20,more=true)
+        e.commands.size shouldBe 3
+        (e.commands[2]as Effect.Key).key shouldBe '4'.code
+        e.answer(2,"64");c.state.candidateOffset shouldBe 0;h.text shouldBe emptyList()
+        c.end(1);c.state.primaryCandidateText shouldBe null;c.state.hasMoreCandidates shouldBe false
+    }
+    "field switch invalidates delayed native page including an injected commit" {
+        val e=Engine();val h=Host();val c=KeyboardController(e,h)
+        c.start(1,false,Layout.CHINESE,EditorAction.DONE);e.ready[0](true)
+        c.submit(Event.Digit(6));e.answer(0,"6",more=true)
+        c.submit(Event.Expand);c.submit(Event.CandidatePage(1))
+        c.start(2,true,Layout.LATIN,EditorAction.DONE)
+        e.answer(1,"6",commit="stale",offset=20)
+        c.state.stamp.session shouldBe 2L;c.state.primaryCandidateText shouldBe null
+        c.submit(Event.CandidatePage(1));e.commands.size shouldBe 2;h.text shouldBe emptyList()
     }
     "fast keys wait for readiness and then one native response at a time" {
         val e = Engine(); val h = Host(); val c = KeyboardController(e,h)

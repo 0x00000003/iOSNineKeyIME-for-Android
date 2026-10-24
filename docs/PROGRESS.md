@@ -97,3 +97,5 @@ M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，
 固定94b9d40f/ee19b44e的model on/off各30分钟JNI组件均实际结束：on14340键2264次exact-once，off14353键2266次；合计P95/P99分别12.096/15.613ms、11.128/14.681ms，31×2内存样本、thermal全0、own UID流量0、profile不变；未替代UI/完整P01—P04或后续代码版本成绩。新SDK/JDK/空Gradle-cache历史2ad源码重建经历真实TLS失败后原规则重试成功，整包bbd28866再现。当前在补齐所有用到的variants/包含build锁，保持verification，未白名单被拒绝的UTP。
 
 候选分页原100上限正在改真正原生20项窗口+lookahead，全局ID/offset+epoch约束，不消费commit，当前71 state/49 app及lint/构建PASS但Android跨100测试仍待测；M2继续WIP。字体依赖移除与严格锁模式一并复核，完成前不归到旧哈希。
+
+最新WIP收尾：debug dd8f688f/test68bc0af2两设备full强制包含跨120分页与11连接故障，两组件PASS、R04仍4/5导致FAIL。settings/resources/R08/R09/R10/no-learning-restart/canary-controller两设备同哈希PASS，UID canary前后0。optimized dedeee3c/testee19b44e两设备五引擎scope PASS；unsigned9cdd4df2与signed23个非签名ZIP entry相同，三APK实际零字体/权限/备份/资产审计PASS。49 app/73 state、38工具、两套lint及构建PASS。历史新SDK整包重建和两次30分钟旧APKJNI观察独立记录；不继承性能/安全成绩。详见CHECKPOINT-20261023；M1—M6未完成门禁保持未勾选，本地WIP提交。

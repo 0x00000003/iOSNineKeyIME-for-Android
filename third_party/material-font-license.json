@@ -12,5 +12,6 @@
     "sha256": "3bae6305bcaa6d10219b999f65c342034c2d40b1c0e8567fa08605e73ccba829"
   },
   "declared_font_license": "Apache-2.0; pinned license explicitly names fonts separately from MIT code",
-  "limitation": "AAR repackaging and font source attribution reviewed; no Apple assets; complete distribution notice/source audit remains open"
+  "limitation": "M1 reviewed font copyright license. Public AAR enumeration includes brand names; that did not establish absence of brand glyphs or original artwork. Remove the collection under the project no-brand-asset constraint; retain this historical source/license evidence.",
+  "runtime_status": "removed from implementation dependencies; final debug dd8f688f / unsigned release 9cdd4df2 / local signed optimized release dedeee3c actual APK audits all have zero packaged fonts; historical license evidence only"
 }

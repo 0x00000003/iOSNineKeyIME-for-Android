@@ -73,7 +73,8 @@ class KeyboardController(
         active = false; epoch++
         events.clear(); responses.clear(); remaining.clear(); hostBlocked = false
         host.end(session); engine.end(session)
-        state = state.copy(ready=false,input="",preedit="",compositionLength=0,candidates=emptyList(),awaiting=false,tail=null,expanded=false)
+        state = state.copy(ready=false,input="",preedit="",compositionLength=0,candidates=emptyList(),awaiting=false,tail=null,expanded=false,
+            candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null)
         onState(state)
     }
 
@@ -155,8 +156,8 @@ class KeyboardController(
         for ((index,effect) in effects.withIndex()) {
             if (!active || generation != epoch) return
             when (effect) {
-                is Effect.Key, is Effect.Select, is Effect.Clear -> {
-                    val stamp = when(effect) { is Effect.Key -> effect.stamp; is Effect.Select -> effect.stamp; is Effect.Clear -> effect.stamp; else -> error("E_COMMAND") }
+                is Effect.Key, is Effect.Select, is Effect.Clear, is Effect.FetchCandidates -> {
+                    val stamp = when(effect) { is Effect.Key -> effect.stamp; is Effect.Select -> effect.stamp; is Effect.Clear -> effect.stamp; is Effect.FetchCandidates -> effect.stamp; else -> error("E_COMMAND") }
                     engine.execute(effect) { snapshot -> receive(generation) {
                         if (state.awaiting && stamp == state.stamp) {
                             if (snapshot == null || snapshot.stamp != stamp) {

@@ -1,0 +1,41 @@
+{
+  "scope": "serial JNI/controller/real EditText component; NOT enabled IME, system lifecycle or all-path privacy acceptance",
+  "fast_keys_preserved": true,
+  "single_commit_and_idle_punctuation": true,
+  "view_touches_drive_jni": true,
+  "view_slide_out_cancel": true,
+  "confirm_then_single_punctuation": true,
+  "cancel_drops_queued_input": true,
+  "new_private_field_rejects_old_candidate": true,
+  "sensitive_context_reads": 0,
+  "probe_excluded_during_private_session": true,
+  "normal_profile_positive_userdb": true,
+  "normal_profile_unchanged_after_privacy_barrier": true,
+  "ended_field_ignores_input": true,
+  "view_hold_cancelled_on_new_field": true,
+  "private_canary_reached_synthetic_host": true,
+  "normal_profile_unchanged_after_private_canary": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "7802a0712eb948cbae1d40c830e69011",
+  "tested_apk_sha256": "dd8f688f6c8bdc1cb3384e5e9a023b63384a1083641d23bde60af7a1a37dcb7c",
+  "tested_test_apk_sha256": "68bc0af2f9d03b6f995346c51ae0b2903797d5e61134ad227f2435a188f918c1",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "existing APK bytes verified by SHA256"
+    }
+  ],
+  "device": "dedicated AOSP API36 ARM64 emulator",
+  "requested_scope": "controller",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

@@ -1,0 +1,148 @@
+{
+  "scope": "frozen current component regression; NOT full IME/visual/security/performance release acceptance",
+  "source_base_commit": "615a477",
+  "source_patch": "tracked code and build-lock delta in following local WIP commit",
+  "debug_apk_sha256": "dd8f688f6c8bdc1cb3384e5e9a023b63384a1083641d23bde60af7a1a37dcb7c",
+  "debug_test_sha256": "68bc0af2f9d03b6f995346c51ae0b2903797d5e61134ad227f2435a188f918c1",
+  "optimized_local_signed_release_apk_sha256": "dedeee3c9f43e69ef608e01f33db1b6e7382bca89096fa6aabff48a29c9a1642",
+  "release_test_sha256": "ee19b44e393fd2f8507a53c90301b1355ed5b76e2a05e731e35e6a3da93965f3",
+  "app_jvm_tests": 49,
+  "state_jvm_tests": 73,
+  "tooling_tests": 38,
+  "records": [
+    {
+      "file": "m2-final-pixel-full.json",
+      "pass": false,
+      "sha256": "78cacb3858cde722f1003296b10870ed73d5357ad948a40d1f7bc808b36f5e73"
+    },
+    {
+      "file": "m2-final-pixel-settings.json",
+      "pass": true,
+      "sha256": "6ce3a4437b76cee23b187b673ba8205fc995293d76bc987a2aff05d111a5ba0d"
+    },
+    {
+      "file": "m2-final-pixel-resources.json",
+      "pass": true,
+      "sha256": "d1c5741ab169775c5aeef6f64a1e5b792c7f7cc206db3ee4de9d95ed3dabcc45"
+    },
+    {
+      "file": "m2-final-pixel-quality.json",
+      "pass": true,
+      "sha256": "102c13551be2469adefeb6ba414bedfc384c8195d474c91addc8c7a9fe8fe4ee"
+    },
+    {
+      "file": "m2-final-pixel-learning.json",
+      "pass": true,
+      "sha256": "f40607cff0af4279f7b3e0bcde4072debe30b129725be8f5e20ce04a5b9de1ac"
+    },
+    {
+      "file": "m2-final-pixel-context.json",
+      "pass": true,
+      "sha256": "6cb951b47514cf9103fac3a6159143e60bd5057821c5e6a1612de1fe94def0d1"
+    },
+    {
+      "file": "m2-final-pixel-nolearn-restart.json",
+      "pass": true,
+      "sha256": "062c929201ffb5020bf84b261a2c7b00e99cd3c58ac0f272f3e9aabc9aca783f"
+    },
+    {
+      "file": "m2-final-pixel-canary-controller.json",
+      "pass": true,
+      "sha256": "e434bf46a2a5644c8e8e848b738167f5b971e139770e44765d5ecd0c6ae19eb2"
+    },
+    {
+      "file": "m2-final-pixel-release-engine.json",
+      "pass": true,
+      "sha256": "92e4faccd24b37f2fa57ace60052bcfdb7d71edbdd7eb5dd9f8583777ea3ea4d"
+    },
+    {
+      "file": "m2-final-pixel-release-quality.json",
+      "pass": true,
+      "sha256": "c749ca249ac70245dbf40c5f29045cb95bc87673c79af3a7bec5d8043f1f0014"
+    },
+    {
+      "file": "m2-final-pixel-release-learning.json",
+      "pass": true,
+      "sha256": "70e9fc11f5dcb5ff212d46a68ae4b4d2fe6b5bb5cf3dd24e2e5aebe0e3db51e8"
+    },
+    {
+      "file": "m2-final-pixel-release-context.json",
+      "pass": true,
+      "sha256": "c4098cd0436f6c25c5df7be05763292741c74b15afee1cf61ced3cb76ce772c9"
+    },
+    {
+      "file": "m2-final-pixel-release-resources.json",
+      "pass": true,
+      "sha256": "f27235fbaff9c1a56c3a1940405d2df18aebe7b181e338644a39b668ec5ba2fa"
+    },
+    {
+      "file": "m2-final-emulator-full.json",
+      "pass": false,
+      "sha256": "cb881990c39a3149ec386952b22aa0dca8dd208b6dc6de0caf8e449d62080d1f"
+    },
+    {
+      "file": "m2-final-emulator-settings.json",
+      "pass": true,
+      "sha256": "1a16f1bce79291a3a22742949872670968f1150f2ee281b1df7d80df283f06e1"
+    },
+    {
+      "file": "m2-final-emulator-resources.json",
+      "pass": true,
+      "sha256": "16b3be1617b9be1734cae7f60d0cb1dcf6d25b35a10c2e1d25c92227c819bbd2"
+    },
+    {
+      "file": "m2-final-emulator-quality.json",
+      "pass": true,
+      "sha256": "81c5bae94346e271c47340c1b721170c8c1136cc785c35e24c00f1c8ce89c136"
+    },
+    {
+      "file": "m2-final-emulator-learning.json",
+      "pass": true,
+      "sha256": "5c17de1d4841829798ce641c37abeb4f2432b10370c1ed63f0dada12832b8b6d"
+    },
+    {
+      "file": "m2-final-emulator-context.json",
+      "pass": true,
+      "sha256": "9a7170f9069d388e53be526b8aafcc55e6d224e840d25106f106a47e4821a3fc"
+    },
+    {
+      "file": "m2-final-emulator-nolearn-restart.json",
+      "pass": true,
+      "sha256": "ebaaacc46617eb4681cb298c141bb6bb7b602428457aefce7d2e04a7d4f1fa91"
+    },
+    {
+      "file": "m2-final-emulator-canary-controller.json",
+      "pass": true,
+      "sha256": "b2659880d6ac3de0dbe7b499f058df06ff8adbd53cafcc536d85763cd03c12d1"
+    },
+    {
+      "file": "m2-final-emulator-release-engine.json",
+      "pass": true,
+      "sha256": "d5ab6dac888c574ffc2c53db7f5719079ec7f015946b0ed2a53b6ae22eb2d182"
+    },
+    {
+      "file": "m2-final-emulator-release-quality.json",
+      "pass": true,
+      "sha256": "14c96c7d09e407db8e8dc9ec54ba0de1424e4bdbbce9a073bfab81080e51fa50"
+    },
+    {
+      "file": "m2-final-emulator-release-learning.json",
+      "pass": true,
+      "sha256": "08585203f98d749b620d49cbf9b4dd2dd3bede1d1fbe9b582cbd95503765624c"
+    },
+    {
+      "file": "m2-final-emulator-release-context.json",
+      "pass": true,
+      "sha256": "272d56e13a266c4868443233b7e22bc5dec56fa78c8921d4298b9fe97502fc73"
+    },
+    {
+      "file": "m2-final-emulator-release-resources.json",
+      "pass": true,
+      "sha256": "ca6922427be28234e683287404339ffde92a2f8865c803e701c690535be0ae33"
+    }
+  ],
+  "component_regressions_match_expectations": true,
+  "known_full_fail": "R04 private preexisting combining grapheme deletion 4/5 on both targets",
+  "release_gate": "NOT_ACCEPTED",
+  "pass": false
+}
