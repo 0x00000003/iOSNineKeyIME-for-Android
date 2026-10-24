@@ -1,0 +1,28 @@
+{
+  "kind": "actual Android system IME keyboard crops",
+  "ime_apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1",
+  "record": "../testing/evidence/m2/readme-android-reference-ready.json",
+  "record_sha256": "437c2619dce0685e30cc4c5ff3de51c8f10d46d3e9c6aec6ee7a4600d266428d",
+  "synthetic_fixture_only": true,
+  "pixel_edits": false,
+  "captures": [
+    {
+      "file": "android-nine-key.png",
+      "sha256": "8b8563de44d81bb9a722563f9a31bf0fbc3a3f809ad57cd01ee5b944a6ae5beb",
+      "width": 960,
+      "height": 920
+    },
+    {
+      "file": "android-latin.png",
+      "sha256": "32c4adcca635f0fb8c20e89231f29574b4a51fd52bed9a4f33473307459dc8dd",
+      "width": 960,
+      "height": 808
+    },
+    {
+      "file": "android-symbols.png",
+      "sha256": "7ee3fa1e99a7bb213ccbd891085a52b789e50ec331d9ed1a862d2eb6d92308ed",
+      "width": 960,
+      "height": 904
+    }
+  ]
+}

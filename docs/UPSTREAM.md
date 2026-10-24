@@ -1,13 +1,13 @@
 # 上游核验、版本选择和Android九键集成
 
-核验日期：2026-10-23。通过GitHub API读取release/tag commit/tree，再读取对应SHA的原始文件；每个快照的来源、字节数和SHA256见 [upstream-lock.json](../upstream-lock.json)。研究锁固定可复查资料；`runtime_assets=[]`表示没有词库/模型制品已被认定可用于应用。
+核验日期：2026-10-23。通过GitHub API读取release/tag commit/tree，再读取对应SHA的原始文件；每个快照的来源、字节数和SHA256见 [upstream-lock.json](../upstream-lock.json)。研究锁与runtime_assets分别记录研究资料和当前打包资源；实际集成与来源闭包以当前清单为准。
 
 ## 固定研究基线
 | 项目 | 本次选择 | 完整commit | 授权证据 | 状态 |
 | --- | --- | --- | --- | --- |
-| osfans/trime | v3.3.12，2026-09-01发布；API本次latest稳定版 | e09ac7114fa067904ed358e82d499516cb423ff4 | [GPLv3正文](reference/upstream/trime/LICENSE)；manifest/build SPDX为GPL-3.0-or-later | 可作为派生候选，未构建 |
-| rime/librime | 1.17.0，2026-06-06发布；与所选Trime子模块一致 | 33e78140250125871856cdc5b42ddc6a5fcd3cd4 | [BSD-3-Clause](reference/upstream/librime/LICENSE) | 已核对gitlink，未运行 |
-| amzxyz/rime-wanxiang | v18.1.7，2026-10-20发布 | 89075fe7b870dcf80249dfa0ece7474f1a960d91 | [CC-BY-4.0](reference/upstream/wanxiang/LICENSE) | schema已读；资源包兼容未测 |
+| osfans/trime | v3.3.12，2026-09-01发布；API本次latest稳定版 | e09ac7114fa067904ed358e82d499516cb423ff4 | [GPLv3正文](reference/upstream/trime/LICENSE)；manifest/build SPDX为GPL-3.0-or-later | 已作为派生底座构建；测试范围见STATUS |
+| rime/librime | 1.17.0，2026-06-06发布；与所选Trime子模块一致 | 33e78140250125871856cdc5b42ddc6a5fcd3cd4 | [BSD-3-Clause](reference/upstream/librime/LICENSE) | 已核对gitlink并运行组件测试 |
+| amzxyz/rime-wanxiang | v18.1.7，2026-10-20发布 | 89075fe7b870dcf80249dfa0ece7474f1a960d91 | [CC-BY-4.0](reference/upstream/wanxiang/LICENSE) | 九键资源已集成；验证范围见STATUS |
 | amzxyz/rime-wanxiang-data | 原amzxyz/RIME-LMDG地址重定向；研究固定当日HEAD | 52328d36137a68ea9f9b6855a895ac0417b6b6a1 | [根许可](reference/upstream/wanxiang-data/LICENSE)及[LICENSE-SCOPE](reference/upstream/wanxiang-data/LICENSE-SCOPE.md) | 仅数据/模型来源研究，不集成工具代码 |
 
 不要把data仓库latest release `tool`当作语法模型版本；同一仓库有工具、nightly词库与LTS模型不同release。网页README与默认分支随时间变化，以这里固定SHA和独立制品哈希为准。

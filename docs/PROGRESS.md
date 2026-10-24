@@ -165,3 +165,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 2026-10-24 兼容WIP：仅独立宿主新增真实fields/WebView/rotation scopes，优化990b62cc实测字段9/10、WebView2/3、旋转3/4。保留早期受焦点影响零执行/8项记录；焦点干扰原因未定，失败记录保留。邮箱外部窗口不操作；Web密码requestCursorUpdates确实false、正文getter0、后续结构请求0；未确认组合在旋转时丢失是生产问题。私密Latin还隐藏错误，准备补可见重连。复用唯一现存.cache/avd/IME_API36启动无窗口/无快照模拟器，未建副本、未启用IME；旧本轮离线NOT_RUN记录保留。
 
 2026-10-24 configuration WIP: e309/913 Pixel rotation 7/7 and pinyin 8/8 each PASS; final debug Pixel/emulator view20+private-error2, pinyin and full components PASS. WebView optimized 2/3 FAIL, body getters 0; visible error and reconnect without delete replay PASS. 104 state/50 debug app/50 release app/45 tooling, builds/lints/static APK checks PASS. No new dependencies/toolchain copies. Old failed candidates preserved. Detailed source hashes, scope and storage: testing/CONFIGURATION-20261024.md and evidence/m5/configuration-final-checkpoint.json. Full baseline system regression on these new APKs remains NOT_RUN; old SHA results are not inherited. Overall WIP, development checkpoint.
+
+## 2026-10-24 — 项目展示与贡献文档
+
+展示名称为iOSNineKeyIME for Android。README首屏说明Android离线九宫格用途，加入优化91350a65的实际Android中文/英文/符号截图与独立来源清单。采图回归9/9通过，45项工具测试及文档检查通过；应用源码、依赖和APK未改动。当前状态、架构、使用及构建入口按实际实现整理，已知兼容和完整发布门禁仍保留。
