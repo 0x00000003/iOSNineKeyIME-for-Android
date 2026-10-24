@@ -18,6 +18,7 @@ class ProbeInstrumentation : Instrumentation() {
     private var faultsOnly = false
     private var noLearnRestartOnly = false
     private var pagingOnly = false
+    private var gestureResearchOnly = false
     private var runId: String? = null
     override fun onCreate(arguments: Bundle?) {
         super.onCreate(arguments)
@@ -28,6 +29,7 @@ class ProbeInstrumentation : Instrumentation() {
         qualityOnly = arguments?.getString("probe_scope") == "quality"
         learningOnly = arguments?.getString("probe_scope") == "learning"
         contextOnly = arguments?.getString("probe_scope") == "context"
+        gestureResearchOnly = arguments?.getString("probe_scope") == "gesture-research"
         pagingOnly = arguments?.getString("probe_scope") == "paging"
         noLearnRestartOnly = arguments?.getString("probe_scope") == "nolearn-restart"
         faultsOnly = arguments?.getString("probe_scope") == "connection-faults"
@@ -39,6 +41,7 @@ class ProbeInstrumentation : Instrumentation() {
         val output = Bundle()
         try {
             val result = when {
+                gestureResearchOnly -> {check(android.os.Build.VERSION.SDK_INT>=34){"E_GESTURE_API"};HostGestureResearchProbe.run(this)}
                 pagingOnly -> CandidatePagingBoundaryProbe.run(this)
                 noLearnRestartOnly -> NoLearnRestartProbe.run(targetContext)
                 faultsOnly -> HostConnectionFailureProbe.run(this)
@@ -52,8 +55,8 @@ class ProbeInstrumentation : Instrumentation() {
                 else -> ProbeRunner.run(targetContext)
             }
             check(android.os.Build.VERSION.SDK_INT >= 31) { "E_PROBE_TEST_API" }
-            if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
-            if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly) {
+            if (!editorOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly) result.put("native_engine_probe_pass", result.getBoolean("pass"))
+            if (!engineOnly && !resourceOnly && !controllerOnly && !qualityOnly && !learningOnly && !contextOnly && !settingsOnly && !faultsOnly && !noLearnRestartOnly && !pagingOnly && !gestureResearchOnly) {
                 val editor = EditorBoundaryProbe.run(this)
                 val faults = HostConnectionFailureProbe.run(this)
                 result.put("host_editor_component", editor)

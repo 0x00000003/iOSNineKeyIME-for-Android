@@ -11,3 +11,9 @@
 API与来源：[DeleteGesture](https://developer.android.com/reference/android/view/inputmethod/DeleteGesture)、[HandwritingGesture](https://developer.android.com/reference/android/view/inputmethod/HandwritingGesture)。已读固定AOSP TextView fe2cff11d37cb1b20bfb9d998b426e12a07130b8：getRangeForRect使用mText GraphemeClusterSegmentFinder及CONTAINS_CENTER；requestTextBoundsInfo的layout text路径不同。该源码是线索，Pixel/API36实际结果必须单独记录，不能泛化到Compose/WebView/所有版本。
 
 即便36案例通过，也只是有oracle几何的宿主委托调查；生产如何以最小结构元数据取得正确坐标、RTL/换行/重入/异步屏障/不支持的宿主/零上下文约束仍未实现/验证。整体R04保持FAIL，不能把此scope替换到完整发布门禁来“变绿”。
+
+## 第一阶段实测
+
+主APK仍b0ca3dd5，test b8612681abeb0d5d28f08fe2334e471ba23c1016e1cece4c7997087524ad66fd，两设备各36/36通过，plain/password×whole-cluster-oracle/unit-range-scan四格各9/9，全部实际PasswordTransformationMethod状态核验、失败时文本/选区不变、成功后恰好前缀且光标正确，IC正文/上下文getter0。原结果native_calls=0字段指探针未调用Rime JNI，不指Android绘制等内部native实现。测量前复核修正setSingleLine/inputType调用顺序避免遮罩被重置，并用Layout selection path处理bidi逻辑范围；未借修改生产代码得到成绩。
+
+[evidence Pixel](evidence/m1/m1-gesture-pixel-research.json)、[emulator](evidence/m1/m1-gesture-emulator-research.json)。同新test两设备editor原断言仍R04 4/5 FAIL（m1-gesture-*-editor-regression），研究没有替换完整门禁。坐标取自test Layout oracle，生产坐标/异步/宿主支持/隐私全路径仍未解决。

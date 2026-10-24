@@ -109,3 +109,5 @@ M6独立环境准备：项目内233个APK中188份同哈希副本改硬链接，
 738a365补齐NDK原文后新哈希收尾：debug b0ca3dd5/test1f988fd6，release582016c3/testb1948467，unsigned22f2f226。26项记录已核：两设备debug full仍R04 FAIL、其余分项/44项完整原文显示/UID canary0通过；两设备release五scope通过，专用断网新装组件PASS。49 app/73 state、38工具、双lint与三实际APK审计PASS。新源码warm输入62任务3m22s整包22f2复现。代码/文档本地WIP，不关闭外部图/系统IME与R04等门禁；正式交付未完成。
 
 R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API字符级删除委托在自有普通/真实密码遮罩EditText测36个案例；几何仅test oracle提供，不接生产私密路径、不读IC正文、不替换原R04门槛。先看宿主实际行为，再评估是否有可行路径。
+
+宿主删除委托第一阶段实际两设备36/36，通过真实密码遮罩、组合音标/多个mark/ZWJ/RTL等合成案例，IC正文getter0；只用test Layout几何，不是生产修复。原editor同test仍R04 4/5 FAIL。下一步单独冻结结构元数据（非正文）坐标调查，明确不是零结构信息请求或生产私密策略验收。
