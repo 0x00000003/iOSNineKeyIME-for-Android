@@ -1,3 +1,5 @@
-# Android 源码位置预留
+# Android 工程
 
-当前没有 Android 应用工程。M1 将固定 Trime 源码及必要依赖导入 `android/trime/`，作为根 Git 仓库的一部分；不得把docs/reference里的研究片段拼成“已可构建”应用。导入前读 ARCHITECTURE / UPSTREAM / COMPLIANCE，先记录原始commit与递归子模块；后续在这里运行Wrapper构建。此文件只是位置说明，不是Android构建脚手架。
+`trime/`为Android构建根，包含固定Trime派生源码、项目输入法、纯状态组件与合成测试宿主，作为同一Git仓库的一部分管理。
+
+在仓库根目录执行 `./scripts/gradle.sh :app:assembleDebug`。工具链、签名和测试流程见[开发手册](../docs/DEVELOPMENT.md)，功能及兼容范围见[当前状态](../docs/STATUS.md)，第三方来源见[NOTICE](../NOTICE.md)。
