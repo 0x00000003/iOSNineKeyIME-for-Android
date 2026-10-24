@@ -169,3 +169,7 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 ## 2026-10-24 — 项目展示与贡献文档
 
 展示名称为iOSNineKeyIME for Android。README首屏说明Android离线九宫格用途，加入优化91350a65的实际Android中文/英文/符号截图与独立来源清单。采图回归9/9通过，45项工具测试及文档检查通过；应用源码、依赖和APK未改动。当前状态、架构、使用及构建入口按实际实现整理，已知兼容和完整发布门禁仍保留。
+
+## 2026-10-24 — 双机对照与共创署名
+
+README首屏改为Android/iOS双机对照，使用Android实机键盘及iOS键区参考制作；机身与编辑区为生成示意，原始Android图片仍单独可查。左右顺序、文字和私人内容排除已人工检查，生成模式、提示与SHA登记在images/。补充维护者与GPT/Codex的共创说明及实际AI协助提交的Co-authored-by约定，采用维护者公开noreply身份；历史Codex作者保持原样。文档检查、45项工具测试通过；未改变应用源码、依赖或APK，未新增Android构建。

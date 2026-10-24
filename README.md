@@ -2,13 +2,15 @@
 
 **把熟悉的 iPhone 风格中文九宫格，带到 Android。**
 
+🤝 **与 GPT 共创 · 通过 OpenAI Codex 协作开发**
+
 一款基于 Trime/Rime 与万象的开源 Android 输入法。支持九键拼音、选拼音、英文、数字、符号和 Emoji，词库与输入引擎在本机离线运行。
 
 <p align="center">
-  <img src="docs/images/android-nine-key.png" width="420" alt="iOSNineKeyIME 在 Android 上运行的深色中文九宫格：空闲标点栏、123、符号、ABC、选拼音和空格键" />
+  <img src="docs/images/android-ios-comparison.png" width="1000" alt="左右双机对照：左侧 Android 展示本项目九宫格，右侧 iOS 展示参考键盘；机身与编辑区为示意" />
 </p>
 
-<p align="center"><b>Android 实机截图 · iPhone 风格九宫格</b><br />上图为本项目实际运行界面，非 iOS 截图。</p>
+<p align="center"><b>左：Android 上的本项目输入法　｜　右：iOS 键盘参考</b><br />对照图依据截图制作，机身与编辑区为示意；<a href="docs/images/android-nine-key.png">查看 Android 原始实机键盘截图</a>。</p>
 
 ## 功能
 
@@ -42,6 +44,8 @@
 APK 位于 `android/trime/app/build/outputs/apk/debug/`。安装后通过 Android 系统设置启用本输入法，再在输入法切换器中选择。完整说明见[开发手册](docs/DEVELOPMENT.md)和[使用指南](docs/USER_GUIDE.md)。
 
 ## 参与开发
+
+本项目由[维护者](https://github.com/0x00000003)与 GPT（通过 OpenAI Codex）共创：维护者提出产品方向、提供交互参考与反馈，GPT/Codex 协助实现代码、排错、执行测试和编写文档。AI 协助的提交使用 `Co-authored-by` 记录，详见[共创与提交署名](docs/CONTRIBUTING.md)。
 
 提交问题时请提供 Android 版本、设备显示设置、宿主应用和可复现步骤；请勿附带密码、聊天正文、用户词库或其他个人数据。
 

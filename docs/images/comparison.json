@@ -1,0 +1,31 @@
+{
+  "kind": "AI-generated side-by-side visual illustration based on keyboard references",
+  "generator": "built-in imagegen",
+  "output": {
+    "file": "android-ios-comparison.png",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1573062,
+    "sha256": "cf7cadd97125016a4d935c1d898adad3b54727788af0f26cc1b5a6924f66d022"
+  },
+  "left": {
+    "platform": "Android",
+    "reference_file": "android-nine-key.png",
+    "reference_sha256": "8b8563de44d81bb9a722563f9a31bf0fbc3a3f809ad57cd01ee5b944a6ae5beb",
+    "ime_apk_sha256": "91350a65112bebb3d7a92db11d1d3830fdefe2bc71da831fb1e59ab83b6d7ec1"
+  },
+  "right": {
+    "platform": "iOS",
+    "reference_sha256": "d5648611a34372f35ef9a9c130bd1fe26e8ca942de1f6bed5a60d269bea4ec80",
+    "reference_dimensions": [
+      591,
+      566
+    ],
+    "private_original_in_git": false,
+    "prediction_row_omitted": true
+  },
+  "phone_frames_and_editor": "illustrative",
+  "pixels_may_be_redrawn": true,
+  "not_pixel_parity_evidence": true,
+  "prompt_file": "comparison-prompt.md"
+}
