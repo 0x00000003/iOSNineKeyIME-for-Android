@@ -127,3 +127,5 @@ R04继续独立调查：冻结HOST_GESTURE_RESEARCH_PROTOCOL，拟用公开API�
 采用正文禁读、必要结构可用的隐私策略后，生产HostAdapter/Controller/薄服务接入结构异步删除：当前09f88435/f5652c74两设备full探针/controller PASS，原敏感5字素5/5、metadata6/6、正文getter0/结构请求11、19故障全部PASS。3个顺序红测真实失败后barrier修复，追加end同步回调epoch保护，77 state/49 app/40工具、debug lint/build/实际APK审计PASS。旧DEL4/5 FAIL保留，结构桥接不算系统IMS验证，真实IME/多宿主/全安全及参考图仍未通过。默认unsigned release构建/lint正在进行，不提前报告结果。
 
 收尾增量修复HostAdapter取消回调同步重入：先失效连接/清理，再取消，begin取消后重新核session。21案新test712e60e9配旧09f88435在模拟器真实红测reentrant_begin FAIL（前19 PASS）；同test配新77636c33两设备full 21/21 PASS，正文getter0，原R04字素5/5。默认unsigned02c7f870仅构建/lint/实际APK审计PASS，未签名运行。77 state/49 app/40工具与两套lint通过；系统IMS、多宿主、正式签收/原图仍不宣称完成。
+
+本轮生产结构删除WIP代码/记录已本地提交07cab95；磁盘回收2b71556、同APK记录单实体保存c8d89fe。最终再测项目占用仍28GiB量级、系统可用26GiB，未再次生成工具链副本。当前测试APK与源文件摘要均绑定该代码检查点，系统IME/视觉/完整发布门禁未关闭。
