@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-10-24",
-  "stage": "PRE_PUSH_CHECKED",
+  "stage": "PUBLIC_SOURCE_VERIFIED",
   "scope": "Public source repository readiness; not final APK acceptance or a legal certification",
   "reviewed_revision": "3333ca119a89a7969c6f032bd0a46d7c8565d4e2",
   "history": {
@@ -62,5 +62,18 @@
     "known_app_issues_retained": "docs/OPEN_ISSUES.md",
     "license_and_attribution_records_retained": true,
     "formal_apk_security_performance_and_resource_distribution_gates": "Remain open; see docs/STATUS.md and docs/COMPLIANCE.md"
+  },
+  "remote_verification": {
+    "repository": "https://github.com/0x00000003/iOSNineKeyIME-for-Android",
+    "visibility": "public",
+    "branch": "main",
+    "checked_revision": "21baebeed9f60f2af1abb4bf62e18b53d6931fd4",
+    "all_published_commits_checked": 72,
+    "each_commit_mapped_to_maintainer_and_codex": true,
+    "readme_comparison_agents_and_contribution_files_match_local_bytes": true,
+    "pushed_refs": [
+      "refs/heads/main"
+    ],
+    "apk_release_created": false
   }
 }

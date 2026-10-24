@@ -198,3 +198,6 @@ README最顶部增加项目背景，以熟悉的iPhone九宫格体验、离线�
 ## 2026-10-24 — 源码公开前复核
 
 复核main的71个提交、4544个唯一blob、README及全部文档图片历史。敏感格式与历史路径检查没有确认的泄露项；宽泛模式命中的上游测试数字/HTML和通用路径前缀已复核排除。修正两个历史提交中贡献文档的Codex占位邮箱，逐提交核对树差异仅限AGENTS与贡献说明，应用源码和当前完整文件树未改。71个提交均保留维护者作者及codex@openai.com共同作者。完整截图像素与来源哈希一致，无个人EXIF，Android输入保留标准sRGB配置；修正对应说明。45项工具测试、文档检查与doctor通过；未执行Android构建或设备测试。此次准备公开源码，不创建APK正式发布；现有缺陷及许可/安全/性能未关闭项保持公开，范围见testing/publication-review.json。
+
+
+源码仓库已创建为public并首次推送main（21baebe）。GitHub API核对全部72个提交均关联维护者与codex账号；README、对照图、AGENTS和贡献说明的线上字节与本地一致，仅main分支已上传，没有发布APK或上传私有恢复包。记录见testing/publication-review.json。
