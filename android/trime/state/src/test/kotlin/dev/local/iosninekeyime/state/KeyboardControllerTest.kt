@@ -40,6 +40,38 @@ class KeyboardControllerTest : StringSpec({
         val stamp = when (val c = commands[index]) { is Effect.Key -> c.stamp; is Effect.Select -> c.stamp; is Effect.Clear -> c.stamp; is Effect.FetchCandidates -> c.stamp; else -> error("fixture") }
         replies[index](Event.Snapshot(stamp, input, input, candidates, commit,candidateOffset=offset,hasMoreCandidates=more))
     }
+    "pinyin query serializes a following digit and invalidates old option selections" {
+        val e=Engine();val h=Host();val c=KeyboardController(e,h)
+        c.start(1,false,Layout.CHINESE,EditorAction.DONE);e.ready[0](true)
+        c.submit(Event.Digit(6));e.answer(0,"6")
+        c.submit(Event.RequestPinyin)
+        val q=e.commands[1]as Effect.QueryPinyin
+        c.submit(Event.Digit(4));c.submit(Event.ChoosePinyin(q.stamp,0))
+        e.commands.size shouldBe 2
+        e.replies[1](Event.Snapshot(q.stamp,"6","6",listOf("synthetic"),pinyinChoices=listOf(PinyinChoice("ni",0,1))))
+        e.commands.size shouldBe 3
+        (e.commands[2]as Effect.Key).key shouldBe '4'.code
+        e.answer(2,"64")
+        e.commands.size shouldBe 3;c.state.pinyinChoices shouldBe emptyList();h.text shouldBe emptyList()
+    }
+    "pinyin query callback after field cutover cannot commit or repopulate options" {
+        val e=Engine();val h=Host();val c=KeyboardController(e,h)
+        c.start(1,false,Layout.CHINESE,EditorAction.DONE);e.ready[0](true)
+        c.submit(Event.Digit(6));e.answer(0,"6");c.submit(Event.RequestPinyin)
+        val q=e.commands[1]as Effect.QueryPinyin
+        c.start(2,true,Layout.LATIN,EditorAction.DONE)
+        e.replies[1](Event.Snapshot(q.stamp,"6","6",listOf("synthetic"),commit="synthetic",pinyinChoices=listOf(PinyinChoice("ni",0,1))))
+        c.state.pinyinChoices shouldBe emptyList();h.text shouldBe emptyList();c.state.stamp.session shouldBe 2L
+    }
+    "failed pinyin operation clears options and drops queued continuation" {
+        val e=Engine();val h=Host();val c=KeyboardController(e,h)
+        c.start(1,false,Layout.CHINESE,EditorAction.DONE);e.ready[0](true)
+        c.submit(Event.Digit(6));e.answer(0,"6");c.submit(Event.RequestPinyin)
+        val q=e.commands[1]as Effect.QueryPinyin
+        e.replies[1](Event.Snapshot(q.stamp,"6","6",listOf("synthetic"),pinyinChoices=listOf(PinyinChoice("ni",0,1))))
+        c.submit(Event.ChoosePinyin(c.state.stamp,0));c.submit(Event.Digit(4));e.replies[2](null)
+        c.state.errorCode shouldBe "E_ENGINE";c.state.pinyinChoices shouldBe emptyList();e.commands.size shouldBe 3;h.text shouldBe emptyList()
+    }
     "host deletion blocks following input and held repeats until one reply" {
         val e=Engine();val h=Host();h.deferredDelete=true;val c=KeyboardController(e,h)
         c.start(1,true,Layout.LATIN,EditorAction.DONE)

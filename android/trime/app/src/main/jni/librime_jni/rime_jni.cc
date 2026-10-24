@@ -7,6 +7,7 @@
 #include <rime/service.h>
 #include "../librime-octagram/src/octagram.h"
 
+#include <algorithm>
 #include <memory>
 #include <string>
 #include <vector>
@@ -148,6 +149,48 @@ class Rime {
   std::string rawInput() {
     auto cStr = rime->get_input(session());
     return cStr ? cStr : "";
+  }
+
+  int confirmedInputPosition() {
+    if (!session_) return -1;
+    auto handle = rime::Service::instance().GetSession(session(false));
+    return handle ? static_cast<int>(handle->context()->composition().GetConfirmedPosition()) : -1;
+  }
+
+  // Only unconfirmed numeric input can be rewritten; never starts a native session.
+  bool rewritePinyin(const std::string& expected, int start, int end,
+                     const std::string& syllable) {
+    if (!session_ || expected.empty() || expected.size() > 128 ||
+        syllable.empty() || syllable.size() > 6 || start < 0 || end <= start ||
+        static_cast<size_t>(end) > expected.size()) return false;
+    const int confirmed = confirmedInputPosition();
+    if (confirmed < 0 || start < confirmed || rawInput() != expected) return false;
+    if (!std::all_of(expected.begin(), expected.end(), [](char c) {
+          return (c >= 'a' && c <= 'z') || (c >= '2' && c <= '9') || c == '\'';
+        })) return false;
+    auto first = expected.find_first_of("23456789", confirmed);
+    if (first != static_cast<size_t>(start) ||
+        !std::all_of(expected.begin() + start, expected.end(), [](char c) {
+          return c >= '2' && c <= '9';
+        })) return false;
+    std::string code;
+    for (char c : syllable) {
+      if (c < 'a' || c > 'z') return false;
+      code += c <= 'c' ? '2' : c <= 'f' ? '3' : c <= 'i' ? '4' : c <= 'l' ? '5' :
+              c <= 'o' ? '6' : c <= 's' ? '7' : c <= 'v' ? '8' : '9';
+    }
+    auto consumed = std::min(code.size(), expected.size() - start);
+    if (static_cast<size_t>(end - start) != consumed ||
+        code.compare(0, consumed, expected, start, consumed) != 0) return false;
+    auto rewritten = expected.substr(0, start);
+    if (!rewritten.empty() && rewritten.back() != '\'') rewritten += '\'';
+    rewritten += syllable;
+    if (static_cast<size_t>(end) < expected.size()) rewritten += "'" + expected.substr(end);
+    if (rewritten.size() > 128) return false;
+    auto handle = rime::Service::instance().GetSession(session(false));
+    if (!handle) return false;
+    handle->context()->set_input(rewritten);
+    return rawInput() == rewritten;
   }
 
   size_t caretPosition() { return rime->get_caret_pos(session()); }
@@ -424,6 +467,20 @@ extern "C" JNIEXPORT jint JNICALL
 Java_com_osfans_trime_core_Rime_getRimeCaretPos(JNIEnv* env,
                                                 jclass /* thiz */) {
   return static_cast<jint>(Rime::Instance().caretPosition());
+}
+
+extern "C" JNIEXPORT jint JNICALL
+Java_com_osfans_trime_core_Rime_getRimeConfirmedInputPosition(JNIEnv*, jclass) {
+  return Rime::Instance().confirmedInputPosition();
+}
+
+extern "C" JNIEXPORT jboolean JNICALL
+Java_com_osfans_trime_core_Rime_rewriteRimePinyin(JNIEnv* env, jclass,
+    jstring expected, jint start, jint end, jstring syllable) {
+  if (!expected || !syllable || env->GetStringLength(expected) > 128 ||
+      env->GetStringLength(syllable) > 6) return false;
+  return Rime::Instance().rewritePinyin(std::string(CString(env, expected)), start, end,
+                                       std::string(CString(env, syllable)));
 }
 
 extern "C" JNIEXPORT void JNICALL

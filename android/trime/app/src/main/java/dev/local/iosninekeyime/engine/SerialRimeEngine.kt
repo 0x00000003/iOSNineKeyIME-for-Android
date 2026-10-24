@@ -62,6 +62,8 @@ class SerialRimeEngine(
             is Effect.Select -> effect.stamp
             is Effect.Clear -> effect.stamp
             is Effect.FetchCandidates -> effect.stamp
+            is Effect.QueryPinyin -> effect.stamp
+            is Effect.SelectPinyin -> effect.stamp
             else -> error("E_NATIVE_COMMAND")
         }
         if (closed.get()) { postOwner { reply(null) }; return }
@@ -75,16 +77,25 @@ class SerialRimeEngine(
                     is Effect.Select -> check(Rime.selectRimeCandidate(effect.index,true)) { "E_NATIVE_SELECT" }
                     is Effect.Clear -> { Rime.resetRimeSession(); check(Rime.selectRimeSchema("wanxiang_t9")) { "E_SCHEMA" } }
                     is Effect.FetchCandidates -> check(effect.offset>=0 && effect.limit==KeyboardReducer.CANDIDATE_PAGE_SIZE) { "E_NATIVE_PAGE" }
+                    is Effect.QueryPinyin -> check(Rime.getRimeRawInput()==effect.expectedInput && effect.offset>=0) { "E_NATIVE_PINYIN_STALE" }
+                    is Effect.SelectPinyin -> {
+                        val expected=PinyinDisambiguation.rewrite(effect.expectedInput,Rime.getRimeConfirmedInputPosition(),effect.choice)
+                        check(expected!=null && Rime.rewriteRimePinyin(effect.expectedInput,effect.choice.start,effect.choice.end,effect.choice.syllable)) { "E_NATIVE_PINYIN_RANGE" }
+                        check(Rime.getRimeRawInput()==expected) { "E_NATIVE_PINYIN_RESULT" }
+                    }
                     else -> error("E_NATIVE_COMMAND")
                 }
                 // Read-only paging never drains a host commit or changes composition.
-                val commit = if(effect is Effect.FetchCandidates)null else Rime.getRimeCommit().text
+                val commit = if(effect is Effect.FetchCandidates || effect is Effect.QueryPinyin)null else Rime.getRimeCommit().text
+                if(effect is Effect.SelectPinyin)check(commit.isNullOrEmpty()) { "E_NATIVE_PINYIN_COMMIT" }
                 val current = Rime.getRimeContext()
-                val offset=(effect as? Effect.FetchCandidates)?.offset?:0
+                val offset=when(effect){is Effect.FetchCandidates->effect.offset;is Effect.QueryPinyin->effect.offset;else->0}
                 val limit=KeyboardReducer.CANDIDATE_PAGE_SIZE
                 val candidates=if(current.composition.length>0 || current.input.isNotEmpty())Rime.getRimeCandidates(offset,limit+1).map{it.text}else emptyList()
+                val pinyin=if(effect is Effect.QueryPinyin || effect is Effect.SelectPinyin)
+                    PinyinDisambiguation.choices(current.input,Rime.getRimeConfirmedInputPosition(),Rime.getRimeCandidates(0,100).map{it.comment.orEmpty()})else emptyList()
                 response = Event.Snapshot(stamp,current.input,current.composition.preedit.orEmpty(),
-                    candidates.take(limit),commit,current.composition.length,offset,candidates.size>limit)
+                    candidates.take(limit),commit,current.composition.length,offset,candidates.size>limit,pinyin)
             } catch (_: Exception) { stopNative() }
             val result = response
             postOwner { reply(result) }

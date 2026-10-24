@@ -15,13 +15,15 @@ import java.util.function.IntConsumer;
 public final class GuardedEditText extends EditText {
     public boolean rejectBody;
     public int boundsDelayMs;
-    public int bodyReads,cursorRequests,boundsRequests,boundsDelivered,gestureRequests;
+    public int commitCalls,bodyReads,cursorRequests,boundsRequests,boundsDelivered,gestureRequests;
     private final Handler owner=new Handler(Looper.getMainLooper());
     public GuardedEditText(Context context){super(context);}
     private void body(){bodyReads++;if(rejectBody)throw new IllegalStateException("E_SYNTHETIC_BODY_REQUEST");}
     @Override public InputConnection onCreateInputConnection(EditorInfo info){
         InputConnection base=super.onCreateInputConnection(info);if(base==null)return null;
         return new InputConnectionWrapper(base,false){
+            @Override public boolean commitText(CharSequence text,int cursor){commitCalls++;return super.commitText(text,cursor);}
+            @Override public boolean commitText(CharSequence text,int cursor,TextAttribute attribute){commitCalls++;return super.commitText(text,cursor,attribute);}
             @Override public CharSequence getTextBeforeCursor(int n,int f){body();return super.getTextBeforeCursor(n,f);}
             @Override public CharSequence getTextAfterCursor(int n,int f){body();return super.getTextAfterCursor(n,f);}
             @Override public CharSequence getSelectedText(int f){body();return super.getSelectedText(f);}

@@ -41,6 +41,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
     private var emojiQuery=""
     private var emojiSearch=false
     private var popup=Popup.NONE
+    private var pinyinPage=0
     private var lastStamp=Stamp(0,0)
     private var map=HitMap(emptyList())
     private val touches=TouchProtocol(map)
@@ -75,7 +76,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         if(value.stamp.session!=state.stamp.session || value.layout!=state.layout || value.expanded!=state.expanded)pendingPanelAccessibility=true
         if(value.stamp.session>lastStamp.session){
             touches.startSession(value.stamp.session);stopRepeating();clearPressed();shift=false;symbolPage=false;numberMore=false
-            emojiCategory=0;emojiPage=0;emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE
+            emojiCategory=0;emojiPage=0;emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE;pinyinPage=0
         }else if(value.layout!=state.layout || value.expanded!=state.expanded){cancelTouches();popup=Popup.NONE}
         if(value.layout==Layout.EMOJI && state.layout!=Layout.EMOJI){pendingEmojiCategory?.let{emojiCategory=it;pendingEmojiCategory=null};emojiPage=0}
         if(value.layout!=Layout.EMOJI){emojiQuery="";emojiSearch=false}
@@ -85,7 +86,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         super.onInitializeAccessibilityNodeInfo(info)
         info.extras.putBoolean("dev.local.iosninekeyime.keyboard_root",true)
     }
-    fun clearSessionUi(){cancelTouches();emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE;rebuild()}
+    fun clearSessionUi(){cancelTouches();emojiQuery="";emojiSearch=false;pendingEmojiCategory=null;popup=Popup.NONE;pinyinPage=0;rebuild()}
     fun cancelTouches(){touches.cancel();stopRepeating();clearPressed()}
     fun layoutMetadata():org.json.JSONObject {
         val ancestors=org.json.JSONArray()
@@ -264,7 +265,7 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
         KeyCommand.SYMBOL_PAGE->local{symbolPage=!symbolPage}
         KeyCommand.NUMBER_MORE->local{numberMore=!numberMore}
         KeyCommand.PUNCTUATION->local{popup=Popup.PUNCTUATION}
-        KeyCommand.PINYIN->local{popup=Popup.PINYIN}
+        KeyCommand.PINYIN->{local{popup=Popup.PINYIN;pinyinPage=0};send(Event.RequestPinyin,false)}
         KeyCommand.IME_SWITCH->switchIme()
         KeyCommand.MICROPHONE->local{popup=Popup.VOICE}
         KeyCommand.EMOJI_SEARCH->local{emojiSearch=true}
@@ -289,9 +290,23 @@ class NineKeyView(context:Context,private val send:(Event,Boolean)->Unit,
                 values.forEachIndexed{i,text->val x=6+(i%4)*(cell+6);val y=top+(i/4)*54;button("popup-punct-$i",text,x,y,x+cell,y+48){local{popup=Popup.NONE};emit(if(state.layout==Layout.NUMBER)Event.Text(text)else Event.Punctuation(text))}}
             }
             Popup.PINYIN->{
-                label("pinyin-info",if(state.composing)"当前拼音：${state.preedit.ifEmpty{state.input}}"else"请先输入拼音",8f,top,w-8,top+48,17f)
-                button("pinyin-expand","展开候选",6f,top+54,w/2-3,top+102,state.composing && state.candidates.isNotEmpty()){local{popup=Popup.NONE};emit(Event.Expand)}
-                button("pinyin-cancel","取消组合",w/2+3,top+54,w-6,top+102,state.composing){local{popup=Popup.NONE};emit(Event.Cancel)}
+                val pages=max(1,(state.pinyinChoices.size+7)/8)
+                pinyinPage=pinyinPage.coerceIn(0,pages-1)
+                val info=when{state.awaiting->"正在读取音节…";!state.composing->"请先输入拼音";state.pinyinChoices.isEmpty()->"没有可选音节 · 返回选词";else->"选择下一音节"}
+                label("pinyin-info",info,8f,top,w-88,top+48,15f)
+                button("pinyin-more","更多",w-84,top,w-6,top+48,!state.awaiting && pages>1){local{pinyinPage=(pinyinPage+1)%pages}}
+                val cell=(w-30)/4
+                val stamp=state.stamp
+                state.pinyinChoices.drop(pinyinPage*8).take(8).forEachIndexed{i,choice->
+                    val index=pinyinPage*8+i;val x=6+(i%4)*(cell+6);val y=top+54+(i/4)*54
+                    button("pinyin-${stamp.session}-${stamp.revision}-$index",choice.syllable,x,y,x+cell,y+48,!state.awaiting){
+                        cancelTouches();pinyinPage=0;send(Event.ChoosePinyin(stamp,index),false)
+                    }
+                }
+                val bottom=max(top+162,p.bodyBottom-48)
+                button("pinyin-cancel","取消组合",6f,bottom,w/2-3,p.bodyBottom,state.composing){emit(Event.Cancel)}
+                button("popup-close","返回键盘",w/2+3,bottom,w-6,p.bodyBottom){local{popup=Popup.NONE}}
+                return
             }
             Popup.VOICE->label("voice-info","当前离线版本未提供语音输入",8f,top,w-8,top+96,16f)
             Popup.NONE->Unit

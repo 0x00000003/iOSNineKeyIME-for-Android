@@ -1,6 +1,6 @@
 # 当前状态
 
-正在补齐选拼音：预冻结5ae5845的真实host Rime探针已通过混合/明确音节、已选前缀保持和提交一次性，证据[pinyin-host-compat-v1](testing/evidence/m1/pinyin-host-compat-v1.json)。纯音节解析/范围重写组件已完成真实红绿测试（10项：6失败→10通过，全state 93/93）；Android JNI/事件状态/UI尚未接入，仍未完成，不能把纯组件算作按钮已可用。见[记录](testing/PINYIN_STATE-20261024.md)；现有可检查APK继续为下述5c46/c37。
+2026-10-24 选拼音接入检查点（整体WIP）：debug `fdc658b2` / 优化本地测试证书版 `990b62cc` 已完整接入音节查询、逐音节消歧、部分选词续选和防陈旧。**两个实际APK各自**Pixel选拼音8/8、五态9/9、同字段重显5/5、敏感删除36/36、异步队列20/20通过，敏感正文getter0；debug真实JNI/视图组件与原生边界通过。104 state、50 debug/50 release app、45工具、构建/lint及两实际APK静态通过。[完整记录](testing/PINYIN_ANDROID-20261024.md)、[双SHA检查点](testing/evidence/m5/pinyin-integration-checkpoint.json)。未宣称M2/M5/M6全部完成；原a11y窗口坐标、完整多宿主、安全/性能/许可闭包/正式签名仍未关闭，选拼音二级页无iOS参考，不称1:1。
 
 同优化c37的双设备engine/resources/quality/learning/context十条记录已全部通过（词Top5 99/100、句19/20、十词学习/重启/清合成库10/10、上下文9/10）。[当前引擎记录](testing/CORNERS_RELEASE_ENGINE-20261024.md)同时说明旧测试元数据文案与新f7b2测试包两设备复测；不是完整系统质量/隐私或性能验收。两个窗口诊断候选已失败撤销，生产服务恢复已验证检查点。
 

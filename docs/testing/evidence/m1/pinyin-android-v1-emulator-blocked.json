@@ -1,0 +1,9 @@
+{
+  "scope": "pinyin Android component; assertions NOT_RUN",
+  "target": "owned emulator-5580",
+  "status": "BLOCKED",
+  "pass": false,
+  "phase": "read-only model/qemu guard before install",
+  "error_code": "E_ADB_STEP",
+  "note": "Owned emulator not reachable in this run; continue actual authorized Pixel. No emulator IME was enabled."
+}

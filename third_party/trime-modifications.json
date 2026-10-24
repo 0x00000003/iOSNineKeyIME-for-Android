@@ -35,7 +35,7 @@
     {
       "path": "app/src/main/java/com/osfans/trime/core/Rime.kt",
       "upstream_sha256": "783b64a7a96d6941c1fe20ace6e8984995e7d2317a2b820f3145f0665cd2f9ca",
-      "modified_sha256": "898414b5193bd735fa275b3344c098ea620938a09bff36e5ddaa444280ff467b"
+      "modified_sha256": "3e202882e1ac90be3fac9742c523f979a93faad8e06c8c8195d1d88349107110"
     },
     {
       "path": "app/src/main/java/com/osfans/trime/daemon/RimeDaemon.kt",
@@ -130,7 +130,7 @@
     {
       "path": "app/src/main/jni/librime_jni/rime_jni.cc",
       "upstream_sha256": "5b0d097a610fd8084fa50a2488ad32836035a92e087a10de00d459f5c1a068f5",
-      "modified_sha256": "c01bcc378311a768626b675a93f89e97e7295dc34ad9b5b9ea078a68ec83c9e4"
+      "modified_sha256": "61320506829579780511b6c419f351450f2e83637ac09002e032cafa7f71f57d"
     },
     {
       "path": "app/src/test/java/com/osfans/trime/data/sync/AtomicLocalFileCopyTest.kt",

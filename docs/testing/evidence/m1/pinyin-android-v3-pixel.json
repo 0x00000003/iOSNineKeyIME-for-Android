@@ -1,0 +1,39 @@
+{
+  "scope": "production view/controller/serial JNI pinyin component; NOT system IME/multi-host or all-path privacy acceptance",
+  "native_guards": {
+    "scope": "Android JNI stale raw/range/confirmed-prefix/session guards",
+    "no_implicit_session_creation": true,
+    "invalid_raw_and_six_range_guards_leave_input_unchanged": true,
+    "confirmed_prefix_history_retained_and_final_commit_exact_once": true,
+    "ended_session_cannot_be_recreated_by_pinyin": true,
+    "pass": true
+  },
+  "two_syllables_exact_once_host_commit": true,
+  "alternative_prefix_changes_candidates_without_commit": true,
+  "cancel_clears_choices": true,
+  "selected_prefix_retained_without_duplicate_commit": true,
+  "field_end_clears_choices_and_sensitive_query_disabled": true,
+  "pass": true,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "de941f3c54864ba1b88c25e98c532b37",
+  "tested_apk_sha256": "fdc658b2dfde58914c575770cde50cad2b71f14a9e517e4cced532459357df3d",
+  "tested_test_apk_sha256": "1f2208921427c31a61cfa477d5de88d2f78cf51e3b7a3e06eff11e9a13e5e123",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "installed local frozen APK"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "pinyin",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

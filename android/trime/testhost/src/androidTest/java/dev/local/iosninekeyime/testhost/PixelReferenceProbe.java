@@ -28,6 +28,7 @@ final class PixelReferenceProbe {
     private final JSONArray cases=new JSONArray(),captures=new JSONArray();
     private String stage="setup",panel="chinese",detail="setup";
     private int taps;
+    private boolean expandedPinyinGrid;
     PixelReferenceProbe(Instrumentation i,UiAutomation u,HostActivity a,String p,String n){instrumentation=i;automation=u;activity=a;ime=p;nonce=n;}
     private void check(boolean valid){if(!valid)throw new IllegalStateException("E_PIXEL_ASSERTION");}
     private void checkAt(boolean valid,String point){if(!valid){detail=point;check(false);}}
@@ -67,7 +68,8 @@ final class PixelReferenceProbe {
             Shot current=null;
             try{
                 current=shot();float sourceHeight=current.bitmap.getHeight()/current.scale;
-                checkAt(Math.abs(sourceHeight-(1280-top()))<=2,"shot-reference-height");
+                if(!expandedPinyinGrid)checkAt(Math.abs(sourceHeight-(1280-top()))<=2,"shot-reference-height");
+                else {observedGrid(current,19,5,0);}
                 long signature=17;int y0=Math.round((panel.equals("emoji")?92:861-top())*current.scale),y1=Math.min(current.bitmap.getHeight(),Math.round((1172-top())*current.scale));
                 for(int y=Math.max(0,y0);y<y1;y+=3)for(int x=0;x<current.bitmap.getWidth();x+=3)signature=31*signature+current.color(x,y);
                 if(current.bitmap.getHeight()==lastHeight && signature==last)repeats++;else repeats=1;
@@ -103,7 +105,7 @@ final class PixelReferenceProbe {
     private void tapPoint(float x,float absoluteY){try(Shot s=stableShot()){Rect r=new Rect(Math.round(x*s.scale)-1,Math.round((absoluteY-top())*s.scale)-1,Math.round(x*s.scale)+1,Math.round((absoluteY-top())*s.scale)+1);long now=SystemClock.uptimeMillis();physical(r,s,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(r,s,MotionEvent.ACTION_UP,now);taps++;}SystemClock.sleep(80);}
     private boolean body(String expected){return read(()->expected.contentEquals(activity.editor.getText()));}
     private void ready(){check(await(()->{try(Shot s=shot()){return s.emptyHeader();}catch(IllegalStateException e){return false;}},15000));}
-    private void choose(){main(()->activity.selectCase("send","",0,true));check(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.editor) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));panel="chinese";ready();}
+    private void choose(){main(()->activity.selectCase("send","",0,true));check(await(()->read(()->activity.getSystemService(InputMethodManager.class).isActive(activity.editor) && activity.getWindow().getDecorView().getRootWindowInsets().isVisible(WindowInsets.Type.ime()) && !activity.imeAnimationRunning),5000));panel="chinese";expandedPinyinGrid=false;ready();}
     private void capture(String id,String pressed)throws Exception{
         try(Shot s=stableShot()){
             JSONObject keys=new JSONObject();for(String key:boxes().keySet()){Rect r=s.locate(key,key.equals(pressed)?133:fill(key));keys.put(key,new JSONArray().put(r.left).put(r.top).put(r.right).put(r.bottom));}
@@ -219,6 +221,77 @@ final class PixelReferenceProbe {
             boolean valid=cases.length()==5;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
         }catch(Throwable e){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_RESTORE_ASSERTION");}
         return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",5);
+    }
+    // Own accessibility labels identify controls only; no reported node/window coordinates
+    // or production state/event bridge is used to inject a touch.
+    private String ownControl(String prefix,String label){
+        for(AccessibilityWindowInfo window:automation.getWindows()){
+            if(window.getType()!=AccessibilityWindowInfo.TYPE_INPUT_METHOD)continue;
+            AccessibilityNodeInfo root=window.getRoot();if(root==null)continue;
+            if(!ime.equals(String.valueOf(root.getPackageName()))){root.recycle();continue;}
+            java.util.ArrayDeque<AccessibilityNodeInfo> queue=new java.util.ArrayDeque<>();queue.add(root);String found=null;
+            while(!queue.isEmpty()){
+                AccessibilityNodeInfo node=queue.removeFirst();
+                try{
+                    String id=node.getExtras().getString("dev.local.iosninekeyime.key_id","");
+                    if(node.isEnabled() && id.startsWith(prefix) && label.contentEquals(node.getContentDescription()==null?"":node.getContentDescription()))found=id;
+                    for(int i=0;i<node.getChildCount();i++){AccessibilityNodeInfo child=node.getChild(i);if(child!=null)queue.addLast(child);}
+                }finally{node.recycle();}
+            }
+            if(found!=null)return found;
+        }
+        return null;
+    }
+    private Rect observedGrid(Shot shot,int index,int columns,int offset){
+        float d=activity.getResources().getDisplayMetrics().density;
+        float width=shot.bitmap.getWidth()/d,cell=(width-6*(columns+1))/columns;
+        int x=Math.round((6+(index%columns)*(cell+6))*d),y=Math.round((854-714)*shot.scale+(offset+(index/columns)*54)*d);
+        Rect expected=new Rect(x,y,Math.round(x+cell*d),Math.round(y+48*d));
+        checkAt(expected.left>=0 && expected.right<=shot.bitmap.getWidth() && expected.top>=0 && expected.bottom<=shot.bitmap.getHeight(),"grid-screen-bounds");
+        int count=0;for(int row=expected.top;row<expected.bottom;row++)for(int col=expected.left;col<expected.right;col++)if(shot.neutral(shot.color(col,row),70))count++;
+        checkAt(count>expected.width()*expected.height()/2,"grid-observed-fill");
+        return expected;
+    }
+    private void gridTap(int index,int columns,int offset){
+        try(Shot shot=stableShot()){Rect box=observedGrid(shot,index,columns,offset);long now=SystemClock.uptimeMillis();physical(box,shot,MotionEvent.ACTION_DOWN,now);SystemClock.sleep(20);physical(box,shot,MotionEvent.ACTION_UP,now);taps++;}
+        SystemClock.sleep(80);
+    }
+    private void pinyinChoice(String syllable){
+        final String[] id={null};checkAt(await(()->{id[0]=ownControl("pinyin-",syllable);return id[0]!=null;},5000),"phonetic-option-visible");
+        int index=Integer.parseInt(id[0].substring(id[0].lastIndexOf('-')+1));checkAt(index<8,"phonetic-option-first-page");gridTap(index,4,54);
+    }
+    private void pinyinOpen(){tap("pinyin");checkAt(await(()->ownControl("popup-close","返回键盘")!=null,3000),"phonetic-panel-visible");}
+    private void pinyinWord(String word){
+        tapPoint(450,1140);tapPoint(555,806);expandedPinyinGrid=true;
+        final String[] id={null};checkAt(await(()->{id[0]=ownControl("candidate-",word);return id[0]!=null;},5000),"expanded-word-visible");
+        int index=Integer.parseInt(id[0].substring(id[0].lastIndexOf('-')+1));checkAt(index<20,"word-first-page");gridTap(index,5,0);expandedPinyinGrid=false;
+    }
+    private int commitCalls(){final int[] calls={0};main(()->calls[0]=((GuardedEditText)activity.editor).commitCalls);return calls[0];}
+    private void capturePinyin(String id)throws Exception{
+        try(Shot shot=stableShot()){
+            Rect first=observedGrid(shot,0,4,54);
+            try(FileOutputStream stream=new FileOutputStream(new File(instrumentation.getTargetContext().getCacheDir(),"host-"+nonce+"-"+id+".png"))){check(shot.bitmap.compress(Bitmap.CompressFormat.PNG,100,stream));}
+            captures.put(new JSONObject().put("id",id).put("width",shot.bitmap.getWidth()).put("height",shot.bitmap.getHeight()).put("first_option_rect",new JSONArray().put(first.left).put(first.top).put(first.right).put(first.bottom)).put("scope","owned synthetic phonetic popup only; no iOS secondary-page reference"));
+        }
+    }
+    JSONObject runPinyin()throws Exception{
+        JSONObject output=new JSONObject().put("transport","actual stable screen pixels and touchscreen; own UI labels identify controls only, never node coordinates or service state");
+        try{
+            choose();stage="query-no-auto-commit";
+            for(String id:new String[]{"digit-6","digit-4","digit-4","digit-2","digit-6"})tap(id);
+            pinyinOpen();checkAt(await(()->ownControl("pinyin-","ni")!=null,5000),"initial-syllable-loaded");result(stage,body("") && commitCalls()==0);capturePinyin("p01-pinyin");
+            stage="first-syllable-no-auto-commit";pinyinChoice("ni");checkAt(await(()->ownControl("pinyin-","hao")!=null,5000),"second-syllable-loaded");result(stage,body("") && commitCalls()==0);capturePinyin("p02-pinyin");
+            stage="second-syllable-no-auto-commit";pinyinChoice("hao");SystemClock.sleep(300);result(stage,body("") && commitCalls()==0);
+            stage="full-word-once";pinyinWord("你好");result(stage,await(()->body("你好") && commitCalls()==1,3000));
+            stage="partial-prefix";choose();for(char c:"64426744543".toCharArray())tap("digit-"+c);
+            pinyinOpen();pinyinWord("你好");SystemClock.sleep(300);int calls=commitCalls();
+            pinyinOpen();stage="partial-first-syllable";pinyinChoice("shi");checkAt(await(()->ownControl("pinyin-","jie")!=null,5000),"partial-next-syllable-loaded");result(stage,commitCalls()==calls);
+            stage="partial-second-syllable";pinyinChoice("jie");SystemClock.sleep(300);result(stage,commitCalls()==calls);
+            stage="partial-final-exact-once";pinyinWord("世界");result(stage,await(()->body("你好世界") && commitCalls()==calls+1,3000));
+            stage="hide-clears-phonetic-popup";tap("digit-6");tap("digit-4");pinyinOpen();checkAt(await(()->ownControl("pinyin-","ni")!=null,5000),"hide-active-phonetic-panel");hideSameField();showSameField();panel="chinese";ready();result(stage,ownControl("pinyin-more","更多")==null && ownControl("pinyin","选拼音")!=null);
+            boolean valid=cases.length()==8;for(int i=0;i<cases.length();i++)valid&=cases.getJSONObject(i).getBoolean("pass");output.put("pass",valid);
+        }catch(Throwable error){output.put("pass",false).put("failure_stage",stage).put("failure_detail",detail).put("error_code","E_PIXEL_PINYIN_ASSERTION");}
+        return output.put("cases",cases).put("reference_captures",captures).put("actual_pixel_targeted_taps",taps).put("planned_cases",8);
     }
     JSONObject run()throws Exception{
         JSONObject output=new JSONObject().put("transport","observed screen pixels + actual touchscreen; no accessibility-coordinate or service-state bridge");

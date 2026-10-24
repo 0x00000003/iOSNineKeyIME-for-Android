@@ -33,6 +33,7 @@ data class KeyboardState(
     val requestedCandidateOffset: Int? = null,
     val returnLayout: Layout = Layout.CHINESE,
     val emojiReturnLayout: Layout = Layout.CHINESE,
+    val pinyinChoices: List<PinyinChoice> = emptyList(),
 ) {
     val composing get() = input.isNotEmpty() || compositionLength > 0
     val bar: Bar get() = when {
@@ -50,10 +51,13 @@ sealed interface Event {
     data class Digit(val value: Int) : Event
     data class Text(val value: String) : Event { override fun toString() = "Text(length=${value.length})" }
     data class Choose(val id: CandidateId) : Event
+    data object RequestPinyin : Event
+    data class ChoosePinyin(val stamp: Stamp, val index: Int) : Event
     data class Punctuation(val value: String) : Event
     data class ChangeLayout(val layout: Layout) : Event
     data class Snapshot(val stamp: Stamp, val input: String, val preedit: String, val candidates: List<String>, val commit: String? = null, val compositionLength: Int = input.length,
-                        val candidateOffset: Int = 0, val hasMoreCandidates: Boolean = false) : Event {
+                        val candidateOffset: Int = 0, val hasMoreCandidates: Boolean = false,
+                        val pinyinChoices: List<PinyinChoice> = emptyList()) : Event {
         override fun toString() = "Snapshot(stamp=$stamp, inputLength=${input.length}, candidates=${candidates.size})"
     }
     data object Space : Event
@@ -69,6 +73,12 @@ sealed interface Effect {
     data class Select(val stamp: Stamp, val index: Int) : Effect
     data class Clear(val stamp: Stamp) : Effect
     data class FetchCandidates(val stamp: Stamp, val offset: Int, val limit: Int) : Effect
+    data class QueryPinyin(val stamp: Stamp, val expectedInput: String, val offset: Int) : Effect {
+        override fun toString() = "QueryPinyin(stamp=$stamp, inputLength=${expectedInput.length}, offset=$offset)"
+    }
+    data class SelectPinyin(val stamp: Stamp, val expectedInput: String, val choice: PinyinChoice) : Effect {
+        override fun toString() = "SelectPinyin(stamp=$stamp, inputLength=${expectedInput.length}, choice=$choice)"
+    }
     data class Commit(val stamp: Stamp, val part: Int, val text: String) : Effect {
         override fun toString() = "Commit(stamp=$stamp, part=$part, length=${text.length})"
     }
@@ -84,7 +94,7 @@ object KeyboardReducer {
     val punctuation = listOf("，", "。", "？", "！", "、", "：", "；", "……")
     val mapping = linkedMapOf(2 to "ABC", 3 to "DEF", 4 to "GHI", 5 to "JKL", 6 to "MNO", 7 to "PQRS", 8 to "TUV", 9 to "WXYZ")
     private fun changeLayout(s:KeyboardState,layout:Layout):KeyboardState = s.copy(
-        layout=layout,expanded=false,
+        layout=layout,expanded=false,pinyinChoices=emptyList(),
         returnLayout=if(layout in setOf(Layout.NUMBER,Layout.SYMBOLS) && s.layout in setOf(Layout.CHINESE,Layout.LATIN))s.layout else s.returnLayout,
         emojiReturnLayout=if(layout==Layout.EMOJI && s.layout!=Layout.EMOJI)s.layout else s.emojiReturnLayout,
     )
@@ -95,7 +105,7 @@ object KeyboardReducer {
     private fun issue(s: KeyboardState, tail: Tail? = null, command: (Stamp) -> Effect): Transition {
         val stamp = s.stamp.copy(revision = s.stamp.revision + 1)
         return Transition(s.copy(stamp = stamp, awaiting = true, candidates = emptyList(), expanded = false, tail = tail, errorCode = null,
-            candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null), listOf(command(stamp)))
+            candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null,pinyinChoices=emptyList()), listOf(command(stamp)))
     }
     private fun commit(s: KeyboardState, text: String): Transition {
         val next = s.copy(stamp = s.stamp.copy(revision = s.stamp.revision + 1), errorCode = null)
@@ -107,7 +117,7 @@ object KeyboardReducer {
 
     private fun fetchPage(s:KeyboardState,offset:Int,expanded:Boolean):Transition {
         val stamp=s.stamp.copy(revision=s.stamp.revision+1)
-        return Transition(s.copy(stamp=stamp,awaiting=true,expanded=expanded,requestedCandidateOffset=offset,errorCode=null),
+        return Transition(s.copy(stamp=stamp,awaiting=true,expanded=expanded,requestedCandidateOffset=offset,errorCode=null,pinyinChoices=emptyList()),
             listOf(Effect.FetchCandidates(stamp,offset,CANDIDATE_PAGE_SIZE)))
     }
 
@@ -125,14 +135,14 @@ object KeyboardReducer {
             if(e.candidateOffset!=(page?:0) || e.candidateOffset<0 || e.candidateOffset>Int.MAX_VALUE-e.candidates.size ||
                 (page!=null && (e.input!=s.input || e.preedit!=s.preedit || e.compositionLength!=s.compositionLength || !e.commit.isNullOrEmpty() || e.candidates.size>CANDIDATE_PAGE_SIZE))) {
                 return Transition(s.copy(ready=false,awaiting=false,candidates=emptyList(),hasMoreCandidates=false,
-                    primaryCandidateText=null,requestedCandidateOffset=null,errorCode="E_CANDIDATE_PAGE"))
+                    primaryCandidateText=null,requestedCandidateOffset=null,pinyinChoices=emptyList(),errorCode="E_CANDIDATE_PAGE"))
             }
             val active = e.input.isNotEmpty() || e.compositionLength > 0
             val choices = if (active) e.candidates.mapIndexed { i, text -> Candidate(CandidateId(e.stamp, e.candidateOffset+i), text) } else emptyList()
             val primary=if(!active)null else if(e.candidateOffset==0)e.candidates.firstOrNull() else s.primaryCandidateText
             var next = s.copy(input = e.input, compositionLength = e.compositionLength, preedit = if (active) e.preedit else "", candidates = choices, awaiting = false, expanded = s.expanded && active,
                 candidateOffset=if(active)e.candidateOffset else 0,hasMoreCandidates=active&&e.hasMoreCandidates,
-                primaryCandidateText=primary,requestedCandidateOffset=null)
+                primaryCandidateText=primary,requestedCandidateOffset=null,pinyinChoices=if(active)e.pinyinChoices.take(32)else emptyList())
             val effects = mutableListOf<Effect>()
             if (!e.commit.isNullOrEmpty()) effects += Effect.Commit(e.stamp, 0, e.commit)
             if (active && s.tail != null) {
@@ -157,12 +167,20 @@ object KeyboardReducer {
                 stamp = s.stamp.copy(revision = s.stamp.revision + 1),
                 input = "", preedit = "", compositionLength = 0,
                 candidates = emptyList(), awaiting = false, expanded = false, tail = null,
-                candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null,
+                candidateOffset=0,hasMoreCandidates=false,primaryCandidateText=null,requestedCandidateOffset=null,pinyinChoices=emptyList(),
             ))
             return issue(s.copy(tail = null)) { Effect.Clear(it) }
         }
         if (s.awaiting) return Transition(s, listOf(Effect.Defer(s.stamp.session, e)))
         return when (e) {
+            Event.RequestPinyin -> if(s.sensitive || !s.ready || !s.composing || s.layout!=Layout.CHINESE) Transition(s)
+                else {
+                    val stamp=s.stamp.copy(revision=s.stamp.revision+1)
+                    Transition(s.copy(stamp=stamp,awaiting=true,pinyinChoices=emptyList(),requestedCandidateOffset=s.candidateOffset,errorCode=null),
+                        listOf(Effect.QueryPinyin(stamp,s.input,s.candidateOffset)))
+                }
+            is Event.ChoosePinyin -> if(s.sensitive || !s.ready || !s.composing || s.layout!=Layout.CHINESE || e.stamp!=s.stamp || e.index !in s.pinyinChoices.indices) Transition(s)
+                else issue(s) { Effect.SelectPinyin(it,s.input,s.pinyinChoices[e.index]) }
             is Event.Digit -> when {
                 e.value !in 2..9 -> Transition(s.copy(errorCode = "E_DIGIT"))
                 s.sensitive || s.layout != Layout.CHINESE -> commit(s, e.value.toString())

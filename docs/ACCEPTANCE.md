@@ -1,5 +1,7 @@
 # 当前需求验收账：未签收
 
+2026-10-24 选拼音接入检查点（整体WIP）：debug `fdc658b2` / 优化本地测试证书版 `990b62cc` 已完整接入音节查询、逐音节消歧、部分选词续选和防陈旧。**两个实际APK各自**Pixel选拼音8/8、五态9/9、同字段重显5/5、敏感删除36/36、异步队列20/20通过，敏感正文getter0；debug真实JNI/视图组件与原生边界通过。104 state、50 debug/50 release app、45工具、构建/lint及两实际APK静态通过。[完整记录](testing/PINYIN_ANDROID-20261024.md)、[双SHA检查点](testing/evidence/m5/pinyin-integration-checkpoint.json)。未宣称M2/M5/M6全部完成；原a11y窗口坐标、完整多宿主、安全/性能/许可闭包/正式签名仍未关闭，选拼音二级页无iOS参考，不称1:1。
+
 同优化c37的双设备engine/resources/quality/learning/context十条记录已全部通过（词Top5 99/100、句19/20、十词学习/重启/清合成库10/10、上下文9/10）。[当前引擎记录](testing/CORNERS_RELEASE_ENGINE-20261024.md)同时说明旧测试元数据文案与新f7b2测试包两设备复测；不是完整系统质量/隐私或性能验收。两个窗口诊断候选已失败撤销，生产服务恢复已验证检查点。
 
 2026-10-24 当前五态检查点（WIP）：debug `5c46ae95` / 优化本地测试证书 `c37aa834` 已补底角和页脚原创图形尺寸。**两版本分别**在Pixel五态9/9、同字段重显5/5、敏感字素36/36、异步队列20/20 PASS，敏感正文getter0；debug两设备full28故障/敏感5/metadata6、controller和view20通过。83 state、50 debug/50 release app、45工具与构建/lint、三个实际APK静态PASS。原a11y窗口坐标/lifecycle、完整安全/性能/多宿主/正式签名仍未签收，字形/Emoji/导航/未知状态不同，非1:1。见[当前记录](testing/CORNERS-20261024.md)及[三SHA检查点](testing/evidence/m5/reference-ui-corners-checkpoint.json)。下列为历史增量，不替代当前制品证据。

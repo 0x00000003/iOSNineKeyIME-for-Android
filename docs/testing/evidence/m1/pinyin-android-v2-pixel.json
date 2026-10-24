@@ -1,0 +1,35 @@
+{
+  "scope": "production view/controller/serial JNI pinyin component; NOT system IME/multi-host or all-path privacy acceptance",
+  "two_syllables_exact_once_host_commit": true,
+  "alternative_prefix_changes_candidates_without_commit": true,
+  "cancel_clears_choices": true,
+  "failure_code": "E_PINYIN_KEY",
+  "raw_length": 11,
+  "awaiting": false,
+  "ready": true,
+  "option_count": 1,
+  "failure_stage": "partial-word",
+  "pass": false,
+  "host_editor_component": {
+    "status": "NOT_RUN",
+    "reason": "explicit separate component scope; R04 remains open"
+  },
+  "probe_run_id": "d9887d6d976149f4bb8cd7b777c64e44",
+  "tested_apk_sha256": "4686206af9fcc66a7850fc73dcfc32a3b6ff5e303a6a38475091d6d71d14a5d0",
+  "tested_test_apk_sha256": "a6eeb997880cbf8178f4ad9e33b9347644195a39d5329b76d7fcf2c1af5388b6",
+  "installation": [
+    {
+      "package": "dev.local.iosninekeyime.probe.debug",
+      "state": "existing APK bytes verified by SHA256"
+    },
+    {
+      "package": "dev.local.iosninekeyime.probe.debug.test",
+      "state": "installed local frozen APK"
+    }
+  ],
+  "device": "Pixel 9 Pro / Android 17 API 37",
+  "requested_scope": "pinyin",
+  "variant": "debug",
+  "result_transport": "private-file",
+  "scope_note": "synthetic component integration; NOT full IME, first install or all-path privacy/performance acceptance"
+}

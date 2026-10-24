@@ -106,3 +106,7 @@ onFinishInputView结束控制器和临时UI，不等于宿主字段结束；onSt
 ## ADR047 — 拒绝未通过原窗口门禁的两个诊断候选
 
 7e82/debug5c46原lifecycle继续入口frame FAIL；相同host/test的自有Window.setWindowAnimations(0)候选9ebeed、仅touchableInsets改VISIBLE候选efc975均FAIL，全部保存实际APK/nonce及失败几何。两项已撤销，生产服务SHA恢复5c46/c37检查点，不拿它们声称修复或系统缺陷。没有修改全局动画/缩放/导航、没有新依赖或锁变更。
+
+## ADR048 — 在原会话中按需消歧音节
+
+真实host探针证明固定Rime可改raw并保留已确认段后，才接Android。增加QueryPinyin/SelectPinyin语义事件及有界RAM选项；沿用session/revision屏障，worker核expected raw，JNI独立核数字尾段/编码/已确认边界。只改当前context.input，不用reset/重新提交前缀冒充保持；只有显式查询/续选取至多100注释，正常每键候选窗口仍20+1。私密原生隔离不变。没有新增依赖，严格锁和资源锁未变；两个修改的上游原文件SHA同步到修改账。页面没有iOS次页图，明确为项目实现而非参考等价；原a11y故障不在此补丁中假称修复。完整证据见PINYIN_ANDROID记录。

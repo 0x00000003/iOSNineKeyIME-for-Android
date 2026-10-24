@@ -1,0 +1,205 @@
+{
+  "scope": "pinyin integration WIP; not overall M2/M5/M6 completion",
+  "protocol_commits": [
+    "0d68eb4",
+    "dae4134"
+  ],
+  "variants": {
+    "debug": {
+      "sha256": "fdc658b2dfde58914c575770cde50cad2b71f14a9e517e4cced532459357df3d",
+      "bytes": 78246730,
+      "static_apk_audit": {
+        "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+        "sha256": "fdc658b2dfde58914c575770cde50cad2b71f14a9e517e4cced532459357df3d",
+        "bytes": 78246730,
+        "package": "dev.local.iosninekeyime.probe.debug",
+        "packaged_fonts": [],
+        "errors": [],
+        "pass": true
+      },
+      "system_records": {
+        "pinyin-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-debug-final-pinyin-pixels.json",
+          "passed_cases": 8,
+          "planned_cases": 8,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "reference-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-debug-final-reference-pixels.json",
+          "passed_cases": 9,
+          "planned_cases": 9,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "restore-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-debug-final-restore-pixels.json",
+          "passed_cases": 5,
+          "planned_cases": 5,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "private-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-debug-final-private-pixels.json",
+          "passed_cases": 36,
+          "planned_cases": 36,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "queue-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-debug-final-queue-pixels.json",
+          "passed_cases": 20,
+          "planned_cases": 20,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        }
+      },
+      "formal_signing": false
+    },
+    "release": {
+      "sha256": "990b62cccf28f89eb66866b67b4ac1a04853ced85f624eac6b1c3da435f551a5",
+      "bytes": 61768551,
+      "static_apk_audit": {
+        "scope": "static APK manifest/packaged backup XML/locked runtime assets/zero packaged fonts, NOT target-OS backup/network/learning acceptance",
+        "sha256": "990b62cccf28f89eb66866b67b4ac1a04853ced85f624eac6b1c3da435f551a5",
+        "bytes": 61768551,
+        "package": "dev.local.iosninekeyime.probe",
+        "packaged_fonts": [],
+        "errors": [],
+        "pass": true
+      },
+      "system_records": {
+        "pinyin-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-optimized-final-pinyin-pixels.json",
+          "passed_cases": 8,
+          "planned_cases": 8,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "reference-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-optimized-final-reference-pixels.json",
+          "passed_cases": 9,
+          "planned_cases": 9,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "restore-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-optimized-final-restore-pixels.json",
+          "passed_cases": 5,
+          "planned_cases": 5,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "private-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-optimized-final-private-pixels.json",
+          "passed_cases": 36,
+          "planned_cases": 36,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        },
+        "queue-pixels": {
+          "record": "docs/testing/evidence/m2/pinyin-optimized-final-queue-pixels.json",
+          "passed_cases": 20,
+          "planned_cases": 20,
+          "host_apk_sha256": "2541c43db7132ae54f9923590cf1f48d0fb84a147535e02c4ed38f05fbfab675",
+          "test_apk_sha256": "df80387bb74891696337384f85e472f209c3ca717408a278f648bf429a756de7"
+        }
+      },
+      "formal_signing": false
+    }
+  },
+  "unit_tests": {
+    "state": {
+      "counts": {
+        "tests": 104,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "xml_sha256": {
+        "TEST-dev.local.iosninekeyime.state.CandidatePagingTest.xml": "d06c636fd8c04a9af26eeae86905d0f77d94d872e7ad5f013c5b14aee4c1e7b0",
+        "TEST-dev.local.iosninekeyime.state.HostCommitGateTest.xml": "a8320868b7f961d43f71956dab688d5a5bd55f41614fbe78d8c39bd7784023d3",
+        "TEST-dev.local.iosninekeyime.state.KeyboardControllerTest.xml": "2f4b16507e1ae0a3b5dee2581d8e7368a285c5dd44f9f172e1fb8991ef0656c3",
+        "TEST-dev.local.iosninekeyime.state.KeyboardReducerTest.xml": "f5fd9c1b14de898e11683d85470955f18f6e2e2a3f8d25b6eb8aa1d490626a2f",
+        "TEST-dev.local.iosninekeyime.state.PinyinDisambiguationTest.xml": "3a0c5b1f67455b7cd0462204cd3a5d4a0b59db127c4452fb40dedc01528ef3e5",
+        "TEST-dev.local.iosninekeyime.state.PinyinReducerTest.xml": "e980886d5b70b44718bb7777cbd556ab02988f2d579a6998a29657468a3e2825",
+        "TEST-dev.local.iosninekeyime.state.ReferenceGeometryTest.xml": "d457a15acecc3c95f98d930c2f5d23f3c4479a49fc37fd3e32589cf467f5129e",
+        "TEST-dev.local.iosninekeyime.state.TouchProtocolTest.xml": "721d34514173d347cdd7a56da246d4c756cfc85a3506022ac1e26cfd3caa7d27"
+      }
+    },
+    "debug_app": {
+      "counts": {
+        "tests": 50,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "xml_sha256": {
+        "TEST-com.osfans.trime.data.sync.AtomicLocalFileCopyTest.xml": "01ccf35b45549ef57dadf19e39f70e4491099149078ee4d376cfefbb3fc27706",
+        "TEST-com.osfans.trime.data.sync.BoundedCopyPoolTest.xml": "7e6da843c4bfcb77d31d6bdbb27181489420e12fa6b849b44110b65195d09df6",
+        "TEST-com.osfans.trime.data.sync.OrphanCleanerTest.xml": "475cbf858ff456456a08a9f763636cbfe7f6644682e34b22e1ad81742f0b7af2",
+        "TEST-com.osfans.trime.data.sync.SafDisplayPathTest.xml": "ca44ac5d0586f0686eb56a4b18d1c1b17156a7bae12ae75b8d6c454f0ff399f4",
+        "TEST-com.osfans.trime.data.sync.SafTreeWalkerTest.xml": "08ac3c2f02b6332fec39ec9e992ad40bc77ac02e4ec685f9c1f5474ed361f5ee",
+        "TEST-com.osfans.trime.data.sync.SyncRelativePathTest.xml": "10f92d9110f2c5c90b99cae6c29aea1b8e3bfa04b72079848475d4de4295b6ef",
+        "TEST-com.osfans.trime.data.theme.GeneralStyleTest.xml": "5b3a91c75e81c5f886fec2a4a84d481488a6d4bd1af7a716adecd05e741302cc",
+        "TEST-com.osfans.trime.util.WeakHashSetTest.xml": "d2c69b92d4808f64094246a6ed4d9eda30fa4dd59f9c35ab41e6671e340a1ced",
+        "TEST-dev.local.iosninekeyime.engine.NativeEngineLeaseTest.xml": "3eb7c44eecbdc2fc0be6d0c810ea6a360dd119baa71d6d4c3945b2d238e12969",
+        "TEST-dev.local.iosninekeyime.privacy.EditorPolicyTest.xml": "887fbd7fe9d38d7724a325822a073d482f777b8d201c5a0a95a1ef372434beb7",
+        "TEST-dev.local.iosninekeyime.probe.ProbeFailureCodeTest.xml": "fd45fac7fc2c02ff1f4b4fa7768710a33b72d0cdc5a7fe923faf4080cab2b37d"
+      }
+    },
+    "release_app": {
+      "counts": {
+        "tests": 50,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "xml_sha256": {
+        "TEST-com.osfans.trime.data.sync.AtomicLocalFileCopyTest.xml": "1f2aa26edb3d1977364486e2587722a87b3bede0b1565fb10c91df9873f33817",
+        "TEST-com.osfans.trime.data.sync.BoundedCopyPoolTest.xml": "6b24c9d5609b6666061e734b94a4e8ff317f1baba57719afe3a00ee917e83fe3",
+        "TEST-com.osfans.trime.data.sync.OrphanCleanerTest.xml": "0c8a1725d25236575b3dbb8317b445b330b19fd3cad26c382d75bb7fa5aed595",
+        "TEST-com.osfans.trime.data.sync.SafDisplayPathTest.xml": "3ffc5bb8956f05eab2196a6bd501d9f912637333f9309d2d4c20f222abb678f6",
+        "TEST-com.osfans.trime.data.sync.SafTreeWalkerTest.xml": "992f40fdbc363475cd36247bc94a43ae361cd5a2739d465febdba05eb4a89295",
+        "TEST-com.osfans.trime.data.sync.SyncRelativePathTest.xml": "077be7b615b5a1942d73a0b9d29651bc481e456476afb09bf1cb0725aa5c88be",
+        "TEST-com.osfans.trime.data.theme.GeneralStyleTest.xml": "fdced1c9c6b292628a9d051c74cbb04f9669e904effc409828c2fc42f740f500",
+        "TEST-com.osfans.trime.util.WeakHashSetTest.xml": "12a0a0bbeb6dc1a602af7c75b10dc8277ba0d5e9a19ac3efa230f6914758da5c",
+        "TEST-dev.local.iosninekeyime.engine.NativeEngineLeaseTest.xml": "f8048210463c37e78e9a9b25503f928bbf880a37a7ebe29fa81a2b2b25dc399f",
+        "TEST-dev.local.iosninekeyime.privacy.EditorPolicyTest.xml": "8e96c4aa4f2e9dc6dae3a8212179279c64bfd759d02d347bc7d935990607487c",
+        "TEST-dev.local.iosninekeyime.probe.ProbeFailureCodeTest.xml": "284ed81d456cdb5d9a5b526f93d9f19a4993782b1ac037141e185c488a7fef16"
+      }
+    }
+  },
+  "tooling_tests": {
+    "tests": 45,
+    "failures": 0
+  },
+  "storage_kib": {
+    "before": {
+      "cache": 21059492,
+      "artifacts": 7888808,
+      "app_build": 1460504
+    },
+    "after": {
+      "cache": 21050488,
+      "artifacts": 8108048,
+      "app_build": 1449428
+    },
+    "note": "Same single environment; unique APK hashes pooled with hardlinks. Whole-volume free space is not attributed to this project."
+  },
+  "source_sha256": {
+    "android/trime/state/src/main/kotlin/dev/local/iosninekeyime/state/KeyboardReducer.kt": "82190f7f41fe45768b0fd419231b31651babfdcb48b3ea8334af5bcdd9897fd2",
+    "android/trime/state/src/main/kotlin/dev/local/iosninekeyime/state/KeyboardController.kt": "3f0bd461cfbf94cdd7d26f4032e2928dc8fe2a184bf1386df99afb9de9a8aba8",
+    "android/trime/state/src/main/kotlin/dev/local/iosninekeyime/state/PinyinDisambiguation.kt": "0f0bc7be60685af5cffc63952ac97ff22703bd455bb7b2918d63987a830b93cd",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/engine/SerialRimeEngine.kt": "3b374380b88eb7819010717b34785011167b0f85c023bf5afcb514678276ec79",
+    "android/trime/app/src/main/java/dev/local/iosninekeyime/ui/NineKeyView.kt": "17a51513c83e7cf47a6f7ecbe903d199f50ec39dd889f4ed80ecaf63ce09582f",
+    "android/trime/app/src/main/java/com/osfans/trime/core/Rime.kt": "3e202882e1ac90be3fac9742c523f979a93faad8e06c8c8195d1d88349107110",
+    "android/trime/app/src/main/jni/librime_jni/rime_jni.cc": "61320506829579780511b6c419f351450f2e83637ac09002e032cafa7f71f57d"
+  },
+  "component_record": "docs/testing/evidence/m1/pinyin-android-final-pixel.json",
+  "build_logs_sha256": {
+    "pinyin-android-build-v3.log": "0c709f7b7cfd6a0c975ed2267f0c602de5b096abf96e2f73f3e3f8982c35c3a0",
+    "pinyin-optimized-build-v1.log": "180d7970267ab01b4586b2ce1598213bac22ccbe43df410eac76e8affedb693e",
+    "pinyin-system-build-final.log": "c3738bfe83c7cb1c07b4854e9b7fbfc10d4765335059fa3d46c421affa10e58f"
+  }
+}

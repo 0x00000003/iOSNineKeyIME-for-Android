@@ -580,6 +580,13 @@ class Rime :
         external fun getRimeCaretPos(): Int
 
         @JvmStatic
+        external fun getRimeConfirmedInputPosition(): Int
+
+        @JvmStatic
+        external fun rewriteRimePinyin(expectedInput: String, start: Int, end: Int, syllable: String): Boolean
+
+
+        @JvmStatic
         external fun setRimeCaretPos(caretPos: Int)
 
         @JvmStatic
